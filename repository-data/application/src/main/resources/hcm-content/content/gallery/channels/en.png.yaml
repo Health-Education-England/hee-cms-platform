@@ -1,0 +1,28 @@
+/content/gallery/channels/en.png:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: d400f728-6d77-4ee8-a017-d527753d1d05
+  /en.png:
+    jcr:primaryType: hippogallery:imageset
+    hippo:availability: [live, preview]
+    hippogallery:description: ''
+    hippogallery:filename: en.png
+    /hippogallery:thumbnail:
+      jcr:primaryType: hippogallery:image
+      hippo:filename: en.png
+      hippogallery:height: 16
+      hippogallery:width: 16
+      jcr:data:
+        type: binary
+        resource: /content/gallery/channels/en.png/en_thumbnail.png
+      jcr:lastModified: 2020-12-06T19:13:34.957Z
+      jcr:mimeType: image/png
+    /hippogallery:original:
+      jcr:primaryType: hippogallery:image
+      hippogallery:height: 16
+      hippogallery:width: 16
+      jcr:data:
+        type: binary
+        resource: /content/gallery/channels/en.png/en_original.png
+      jcr:lastModified: 2020-12-06T19:13:34.957Z
+      jcr:mimeType: image/png
