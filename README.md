@@ -4,7 +4,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Continuous Integration/Continuous Deployment Status (CI/CD)
 
-![](https://github.com/Manifesto-Digital/hee-content-management-system/workflows/CI/badge.svg)
+![](https://github.com/Manifesto-Digital/hee-cms-platform/workflows/CI/badge.svg)
 
 ## Built With
 
@@ -186,7 +186,7 @@ TODO: Update this section when Github Actions have been updated to deploy the pa
 
 ## Releases and Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the releases available, see the [Releases/Tags on this repository](https://github.com/Manifesto-Digital/hee-content-management-system/releases).
+We use [SemVer](http://semver.org/) for versioning. For the releases available, see the [Releases/Tags on this repository](https://github.com/Manifesto-Digital/hee-cms-platform/releases).
 
 ## Authors
 
