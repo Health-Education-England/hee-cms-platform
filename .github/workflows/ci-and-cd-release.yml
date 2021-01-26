@@ -2,7 +2,11 @@ name: CI & CD [DEV]
 
 on:
   push:
-    branches: [ setup/HEE-134-cicd ]
+    # Temporarily disabled as update [to deploy with config file(s)] is required to Github Actions which uploads and deploys the package to brCloud
+    branches-ignore:
+      - '**'
+    # branches: [master]
+    # branches: [develop] # can be enabled when ready
 
 jobs:
   buildAndTest:
@@ -44,8 +48,9 @@ jobs:
     needs: buildAndTest
 
     env:
-      BRC_STACK_NAME: hee
-      BRC_ENV_NAME: development
+      STACK_NAME: hee
+      BRC_USERNAME: ${{ secrets.BRC_USERNAME }}
+      BRC_PASSWORD: ${{ secrets.BRC_PASSWORD }}
 
     runs-on: ubuntu-latest
 
@@ -73,27 +78,28 @@ jobs:
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
+        # run: mvn -B verify && mvn deploy -Pdist --file pom.xml
         run: mvn -B verify && mvn -Pdist --file pom.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
         run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-*.tar.gz)"
 
       - name: Upload distribution to Bloomreach Cloud
-        uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
+        uses: ./.github/workflows/actions/upload/
         id: upload
         with:
-          brcStack: env.BRC_STACK_NAME
-          username: ${{ secrets.BRC_USERNAME }}
-          password: ${{ secrets.BRC_PASSWORD }}
+          accessToken: ${{ steps.login.outputs.accessToken }}
+          refreshToken: ${{ steps.login.outputs.refreshToken }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'development' env
-        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
+        uses: ./.github/workflows/actions/deploy/
         id: deploy
         with:
-          brcStack: env.BRC_STACK_NAME
-          username: ${{ secrets.BRC_USERNAME }}
-          password: ${{ secrets.BRC_PASSWORD }}
-          distId: ${{ steps.upload.outputs.distId }}
-          envName: env.BRC_ENV_NAME
+          accessToken: ${{ steps.upload.outputs.accessToken }}
+          refreshToken: ${{ steps.login.outputs.refreshToken }}
+          distId: ${{ steps.upload.outputs.distributionId }}
+          environmentName: development
