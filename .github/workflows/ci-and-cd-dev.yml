@@ -83,7 +83,7 @@ jobs:
         uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
         id: upload
         with:
-          brcStack: hee
+          brcStack: ${{ env.BRC_STACK_NAME }}
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
@@ -92,8 +92,8 @@ jobs:
         uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
         id: deploy
         with:
-          brcStack: env.BRC_STACK_NAME
+          brcStack: ${{ env.BRC_STACK_NAME }}
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
-          envName: env.BRC_ENV_NAME
+          envName: ${{ env.BRC_ENV_NAME }}
