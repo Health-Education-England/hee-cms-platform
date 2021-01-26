@@ -83,7 +83,7 @@ jobs:
         uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
         id: upload
         with:
-          brcStack: env.BRC_STACK_NAME
+          brcStack: hee
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
