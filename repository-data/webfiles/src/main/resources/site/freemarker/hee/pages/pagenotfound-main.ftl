@@ -1,4 +1,4 @@
-<#include "../include/imports.ftl">
+<#include "../../include/imports.ftl">
 
 <@hst.setBundle basename="essentials.pagenotfound"/>
 <div>
