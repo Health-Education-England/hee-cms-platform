@@ -2,8 +2,8 @@ name: CI & CD [DEV]
 
 on:
   push:
-    branches: [ setup/HEE-134-cicd ]
-
+    branches:
+      - setup/HEE-134-cicd
 jobs:
   buildAndTest:
     name: Build & Test
@@ -37,10 +37,8 @@ jobs:
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
-
-  deploy:
-    name: Deploy to Dev. Env. [on brCloud]
-
+  deploy-to-dev:
+    name: Deploy to Dev Env. [on brCloud]
     needs: buildAndTest
 
     env:
@@ -87,8 +85,125 @@ jobs:
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
-
       - name: Deploy distribution to 'development' env
+        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
+        id: deploy
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distId: ${{ steps.upload.outputs.distId }}
+          envName: ${{ env.BRC_ENV_NAME }}
+
+  deploy-to-test:
+    name: Deploy to Test Env. [on brCloud]
+    needs: buildAndTest
+    environment: test
+
+    env:
+      BRC_STACK_NAME: hee
+      BRC_ENV_NAME: test
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo.
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Cache maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Configure maven settings
+        uses: whelk-io/maven-settings-xml-action@v4
+        with:
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
+
+      - name: Package
+        run: mvn -B verify && mvn -Pdist --file pom.xml
+
+      - name: Setting distribution path (distPath) as an output parameter
+        id: dist
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-*.tar.gz)"
+
+      - name: Upload distribution to Bloomreach Cloud
+        uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
+        id: upload
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distPath: ${{ steps.dist.outputs.distPath }}
+      - name: Deploy distribution to 'test' env
+        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
+        id: deploy
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distId: ${{ steps.upload.outputs.distId }}
+          envName: ${{ env.BRC_ENV_NAME }}
+
+  deploy-to-staging:
+    name: Deploy to Staging Env. [on brCloud]
+    needs: buildAndTest
+    environment: staging
+
+    env:
+      BRC_STACK_NAME: hee
+      BRC_ENV_NAME: staging
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo.
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Cache maven packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Configure maven settings
+        uses: whelk-io/maven-settings-xml-action@v4
+        with:
+          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.onehippo.com/maven2-enterprise/" }]'
+          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
+
+      - name: Package
+        run: mvn -B verify && mvn -Pdist --file pom.xml
+
+      - name: Setting distribution path (distPath) as an output parameter
+        id: dist
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-*.tar.gz)"
+
+      - name: Upload distribution to Bloomreach Cloud
+        uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
+        id: upload
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distPath: ${{ steps.dist.outputs.distPath }}
+      - name: Deploy distribution to 'staging' env
         uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
         id: deploy
         with:
