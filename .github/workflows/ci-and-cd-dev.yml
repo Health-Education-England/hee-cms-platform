@@ -75,7 +75,7 @@ jobs:
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
-        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
 
       - name: Upload distribution to Bloomreach Cloud
         uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
@@ -134,7 +134,7 @@ jobs:
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
-        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
 
       - name: Upload distribution to Bloomreach Cloud
         uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
@@ -193,7 +193,7 @@ jobs:
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
-        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
 
       - name: Upload distribution to Bloomreach Cloud
         uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
