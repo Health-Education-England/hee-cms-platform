@@ -1,13 +1,15 @@
-name: CI & CD [DEV]
+name: CI & CD [MASTER]
 
 on:
   push:
     branches:
       - setup/HEE-134-cicd
+env:
+  BRC_STACK_NAME: hee
+
 jobs:
   buildAndTest:
     name: Build & Test
-
     runs-on: ubuntu-latest
 
     steps:
@@ -37,12 +39,13 @@ jobs:
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
+
   deploy-to-dev:
     name: Deploy to Dev Env. [on brCloud]
     needs: buildAndTest
+    environment: development
 
     env:
-      BRC_STACK_NAME: hee
       BRC_ENV_NAME: development
 
     runs-on: ubuntu-latest
@@ -97,11 +100,10 @@ jobs:
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
-    needs: buildAndTest
+    needs: [buildAndTest, deploy-to-dev]
     environment: test
 
     env:
-      BRC_STACK_NAME: hee
       BRC_ENV_NAME: test
 
     runs-on: ubuntu-latest
@@ -156,11 +158,10 @@ jobs:
 
   deploy-to-staging:
     name: Deploy to Staging Env. [on brCloud]
-    needs: buildAndTest
+    needs: [buildAndTest, deploy-to-dev, deploy-to-test]
     environment: staging
 
     env:
-      BRC_STACK_NAME: hee
       BRC_ENV_NAME: staging
 
     runs-on: ubuntu-latest
