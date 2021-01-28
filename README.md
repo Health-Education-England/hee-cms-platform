@@ -43,6 +43,8 @@ First install the project:
 mvn clean install
 ```
 
+Note: Ensure you have an account for the Bloomreach brXM enterprise code repository and [configure](https://documentation.bloomreach.com/14/library/enterprise/enterprise-developer-information/hippo-maven-enterprise-repository-manual.html) it in your `~/.m2/settings.xml`
+
 Then build the brXM docker image:
 
 ```
