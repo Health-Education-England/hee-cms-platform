@@ -1,0 +1,9 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/guidance-page:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:template: guidance-main
+        hst:componentclassname: uk.nhs.hee.web.components.GenericComponent

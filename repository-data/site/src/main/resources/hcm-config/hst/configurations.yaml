@@ -34,12 +34,23 @@ definitions:
           /base-menu:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-menu.ftl
+          /guidance-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/guidance-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
           jcr:primaryType: hst:sitemapitemhandlers
         /hst:catalog:
           jcr:primaryType: hst:catalog
+          /common-catalog:
+            jcr:primaryType: hst:containeritempackage
+            /guidance:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.GuidanceComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Guidance
+              hst:template: guidance-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

@@ -15,3 +15,10 @@ definitions:
         hst:componentconfigurationid: hst:pages/pagenotfound
         hst:pagetitle: Not Found Page
         hst:refId: pagenotfound
+      /guidance:
+        jcr:primaryType: hst:sitemapitem
+        hst:hiddeninchannelmanager: true
+        /_any_:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/guidance-page
+          hst:relativecontentpath: guidance/${1}
