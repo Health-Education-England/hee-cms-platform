@@ -30,9 +30,8 @@ public class Guidance extends BaseDocument {
         return getSingleProperty("hee:nextReviewed");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:body")
-    public HippoHtml getBody() {
-        return getHippoHtml("hee:body");
+    public List<?> getContentBlocks() {
+        return getChildBeansByName("hee:contentBlocks");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:quickLinks")

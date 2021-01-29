@@ -35,7 +35,19 @@
           </#if>
 
           <#--  Body  -->
-          <@hst.html hippohtml=document.body/>
+          <#if document.contentBlocks??>
+            <#list document.contentBlocks as block>
+              <#if hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
+                <@hst.link var="img" hippobean=block/>
+                <img src="${img}" alt="" />
+                <!-- render image -->
+              <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoHtml')>
+                  <@hst.html hippohtml=block/>
+                <!-- render bean -->
+              </#if>
+            </#list>
+          </#if>
+
         </div>
       </section>
     </div>

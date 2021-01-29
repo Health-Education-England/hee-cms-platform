@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a038628e-1009-4e15-8e80-20903a157921
+          jcr:uuid: 10326608-3909-4570-a74b-4f46d602ee5c
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -33,14 +33,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Text
             hipposysedit:validators: [required]
-          /body:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:body
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
           /quickLinks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -65,6 +57,13 @@ definitions:
             hipposysedit:path: hee:nextReviewed
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -80,12 +79,9 @@ definitions:
           hee:summary: ''
           hee:lastReviewed: 0001-01-01T12:00:00Z
           hee:nextReviewed: 0001-01-01T12:00:00Z
-          jcr:uuid: 72309548-e3bc-4f5a-afe8-7896982643d0
+          jcr:uuid: 11214d94-93da-4417-9ea5-a1b288de5625
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
-          /hee:body:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
           /hee:quickLinks:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -129,14 +125,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /body:
-            jcr:primaryType: frontend:plugin
-            caption: Body Content
-            field: body
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /lastReviewed:
             jcr:primaryType: frontend:plugin
             caption: Last Reviewed
@@ -161,5 +149,16 @@ definitions:
             field: calendardate_
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Content Blocks
+            compoundList: hippostd:html,hippogallerypicker:imagelink
+            contentPickerType: links
+            field: contentBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
