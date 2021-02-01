@@ -17,27 +17,27 @@
           <#--  Summary  -->
           <p>${document.summary}</p>
 
-          <#--  Last and/or Next Reviewed  -->
-          <#if document.lastReviewed?? || document.nextReviewed??>
-            <div class="nhsuk-review-date">
-              <p class="nhsuk-body-s">
-                <#if document.lastReviewed??>
-                  Page last reviewed: ${document.lastReviewed.getTime()?date?string["dd MMM yyyy"]}
-                </#if>
-                <#if document.nextReviewed??>
-                  <#if document.lastReviewed??>
-                    <br/>
-                  </#if>
-                  Next review due: ${document.nextReviewed.getTime()?date?string["dd MMM yyyy"]}
-                </#if>
-              </p>
-            </div>
-          </#if>
-
           <#--  Body  -->
           <#if document.contentBlocks??>
             <#list document.contentBlocks as block>
-              <#if hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
+              <#if hst.isBeanType(block, 'uk.nhs.hee.web.beans.PageLastNextReview')>
+                <#--  Last and/or Next Reviewed  -->
+                  <#if block.lastReviewed?? || block.nextReviewed??>
+                    <div class="nhsuk-review-date">
+                      <p class="nhsuk-body-s">
+                        <#if block.lastReviewed??>
+                          Page last reviewed: ${block.lastReviewed.getTime()?date?string["dd MMM yyyy"]}
+                        </#if>
+                        <#if block.nextReviewed??>
+                          <#if block.lastReviewed??>
+                            <br/>
+                          </#if>
+                          Next review due: ${block.nextReviewed.getTime()?date?string["dd MMM yyyy"]}
+                        </#if>
+                      </p>
+                    </div>
+                  </#if>
+              <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
                 <@hst.link var="img" hippobean=block/>
                 <img src="${img}" alt="" />
                 <!-- render image -->

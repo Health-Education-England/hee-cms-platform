@@ -20,16 +20,6 @@ public class Guidance extends BaseDocument {
         return getSingleProperty("hee:summary");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:lastReviewed")
-    public Calendar getLastReviewed() {
-        return getSingleProperty("hee:lastReviewed");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:nextReviewed")
-    public Calendar getNextReviewed() {
-        return getSingleProperty("hee:nextReviewed");
-    }
-
     public List<?> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
     }

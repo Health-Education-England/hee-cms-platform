@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 10326608-3909-4570-a74b-4f46d602ee5c
+          jcr:uuid: c9261083-9f81-4fc6-9d40-bbd5d60d3645
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -41,22 +41,6 @@ definitions:
             hipposysedit:path: hee:quickLinks
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-          /calendardate:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:lastReviewed
-            hipposysedit:primary: false
-            hipposysedit:type: CalendarDate
-          /calendardate_:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:nextReviewed
-            hipposysedit:primary: false
-            hipposysedit:type: CalendarDate
           /contentBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -77,9 +61,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          hee:lastReviewed: 0001-01-01T12:00:00Z
-          hee:nextReviewed: 0001-01-01T12:00:00Z
-          jcr:uuid: 11214d94-93da-4417-9ea5-a1b288de5625
+          jcr:uuid: 60cf14df-00c1-4316-9996-2b59d9e9e3fc
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:quickLinks:
@@ -125,14 +107,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /lastReviewed:
-            jcr:primaryType: frontend:plugin
-            caption: Last Reviewed
-            field: calendardate
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /quickLinks:
             jcr:primaryType: frontend:plugin
             caption: Quick Links
@@ -143,18 +117,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:link']
-          /nextReviewed:
-            jcr:primaryType: frontend:plugin
-            caption: Next Reviewed
-            field: calendardate_
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hippostd:html,hippogallerypicker:imagelink
+            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:pageLastNextReview
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
