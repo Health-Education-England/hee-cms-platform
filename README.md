@@ -123,39 +123,7 @@ You can if you wish run the code style checks independently using the following 
 mvn checkstyle:checkstyle
 ```
 
-## Development Workflow
-
-Development workflows are implemented using [Github Actions](https://github.com/features/actions). Find below workflows that are implemented so far for CI/CD.
-
-### Continuous Integration (CI) Workflow
-
-When a commit had been made to any branch except `develop`/`release/**` or a PR has been made, then Continuous Integration workflow (`.github/workflows/ci.yml`) would be triggered which would essentially compile & test the project.
-
-### Continuous Deployment (CD) Workflows
-#### Development Environment [`master` should be replaced with `develop` when ready]
-When a commit (essentially merge commits) had been made to `master`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-dev.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `development` environment.
-
-#### Test Environment (disabled temporarily) [TODO: yet to be tested & verified]
-When a commit (essentially merge commits) had been made to `release/**`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-tst.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `test` environment. This would also deploy the release package onto Github Packages artefact repo.
-
-The above workflow(s) requires the following secrets to be setup on Github:
-    - Secrets for `hippo-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
-        - BLOOMREACH_MVN_USERNAME - brXM Maven Repository username
-        - BLOOMREACH_MVN_PASSWORD - brXM Maven Repository password
-    Contact Bloomreach ([Get Bloomreach Experience Manager Developer Accounts](https://documentation.bloomreach.com/14/about/get-bloomreach-experience-developer-accounts.html)) in order to setup a developer account.
-    - Secrets to upload and deploy the distribution onto a brCloud environment
-        - BRC_USERNAME - brCloud username
-        - BRC_PASSWORD - brCloud password
-
-TODO: Update above Github Workflows in incorporate changes required to update the configurations indicated in `Update the following` section under `Deployment` so as to automate deployment to brCloud.
-
-Add notes describing:
-
-- states and transitions
-- source control workflow (Git Flow, etc )
-- ticket management (JIRA) ?
-
-## Deployment
+## Building a project distribution
 
 To build Tomcat distribution tarballs:
 
@@ -176,13 +144,48 @@ The `dist-with-development-data` profile will produce a distribution-with-develo
 
 See also src/main/assembly/*.xml if you need to customize the distributions.
 
-### Deploy on brCloud
+## Deployment
 
-#### Manual deployment
-Deploy the distribution built from the previous section via brCloud mission control dashboard.
+Code is deployed automatically to Bloomreach Cloud (brCloud) by the CICD process defined using github workflow actions (./github/workflows/). 
 
-#### Deployment via Github Actions
-TODO: Update this section when Github Actions have been updated to deploy the package with configuration file(s).
+The github workflow actions are based on the following custom-made github actions:
+- https://github.com/Manifesto-Digital/upload-distribution-to-BR-Cloud-action 
+- https://github.com/Manifesto-Digital/deploy-distribution-to-BR-Cloud-action
+
+You can deploy to the following environments:
+
+- **development** by merging a PR into the **master** branch
+- **test** by manually promoting the code from development environment to test environment, using the github action workflow 
+- **staging** by manually promoting the code from test environment to staging environment, using the github action workflow  
+- **production** by creating a release tag **release-{version}** inside the **master** branch
+
+Please check the following diagram for a better understanding of the development and delivery process:
+
+![](./.github/workflows/cicd-process.jpg)
+
+#### GitHub Secrets
+
+The GitHub action workflows that handle the CICD process require the following secrets to be setup on Github:
+  
+ - Secrets for `hippo-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
+   - BLOOMREACH_MVN_USERNAME - brXM Maven Repository username
+   - BLOOMREACH_MVN_PASSWORD - brXM Maven Repository password
+   
+    Contact Bloomreach ([Get Bloomreach Experience Manager Developer Accounts](https://documentation.bloomreach.com/14/about/get-bloomreach-experience-developer-accounts.html)) in order to setup a developer account.
+ - Secrets to upload and deploy the distribution onto a brCloud environment
+   - BRC_USERNAME - brCloud username
+   - BRC_PASSWORD - brCloud password
+
+## Environments
+
+You can find deployments of this application in the following environments inside Bloomreach Cloud Platform(https://missioncontrol-hee.onehippo.io/#/login) 
+
+| Name           | Platform  |
+| -------------- | --------- |
+| Development    | brCloud   |
+| Test           | brCloud   |
+| Staging        | brCloud   |
+| Production     | brCloud   |
 
 ## Releases and Versioning
 
