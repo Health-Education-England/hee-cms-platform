@@ -1,0 +1,20 @@
+definitions:
+  config:
+    /hst:hst/hst:hosts/prd-brcloud/io:
+      .meta:residual-child-node-category: content
+      jcr:primaryType: hst:virtualhost
+      hst:scheme: https
+      hst:showcontextpath: true
+      hst:showport: false
+      /onehippo:
+        .meta:residual-child-node-category: content
+        jcr:primaryType: hst:virtualhost
+        /production-hee:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:virtualhost
+          /hst:root:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:homepage: root
+            hst:locale: en
+            hst:mountpoint: /hst:hee/hst:sites/lks
