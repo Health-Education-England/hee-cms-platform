@@ -1,12 +1,11 @@
-name: CI & CD [DEV]
+name: CI & CD [RELEASE]
 
 on:
   push:
-    # Temporarily disabled as update [to deploy with config file(s)] is required to Github Actions which uploads and deploys the package to brCloud
-    branches-ignore:
-      - '**'
-    # branches: [master]
-    # branches: [develop] # can be enabled when ready
+    tags:
+      - release-**
+env:
+  BRC_STACK_NAME: hee
 
 jobs:
   buildAndTest:
@@ -41,16 +40,14 @@ jobs:
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
-
   deploy:
-    name: Deploy to Dev. Env. [on brCloud]
+    name: Deploy to Production Env. [on brCloud]
+    environment: production
 
     needs: buildAndTest
 
     env:
-      STACK_NAME: hee
-      BRC_USERNAME: ${{ secrets.BRC_USERNAME }}
-      BRC_PASSWORD: ${{ secrets.BRC_PASSWORD }}
+      BRC_ENV_NAME: production
 
     runs-on: ubuntu-latest
 
@@ -78,35 +75,29 @@ jobs:
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
-        # run: mvn -B verify && mvn deploy -Pdist --file pom.xml
-        run: mvn -B verify && mvn -Pdist --file pom.xml
+        run: mvn -B verify && mvn deploy -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
-        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-*.tar.gz)"
-
-      - name: Install Deployment Script dependencies
-        run: cd $GITHUB_WORKSPACE/.github/workflows/scripts/bloomreach-deployment; npm install
-
-      - name: Login to Bloomreach Cloud
-        uses: ./.github/workflows/actions/login/
-        id: login
+        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
 
       - name: Upload distribution to Bloomreach Cloud
-        uses: ./.github/workflows/actions/upload/
+        uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
         id: upload
         with:
-          accessToken: ${{ steps.login.outputs.accessToken }}
-          refreshToken: ${{ steps.login.outputs.refreshToken }}
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to 'development' env
-        uses: ./.github/workflows/actions/deploy/
+      - name: Deploy distribution to 'production' env
+        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
         id: deploy
         with:
-          accessToken: ${{ steps.upload.outputs.accessToken }}
-          refreshToken: ${{ steps.login.outputs.refreshToken }}
-          distId: ${{ steps.upload.outputs.distributionId }}
-          environmentName: development
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distId: ${{ steps.upload.outputs.distId }}
+          envName: ${{ env.BRC_ENV_NAME }}

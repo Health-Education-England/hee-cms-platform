@@ -59,6 +59,7 @@
   <properties>
     <!-- Maven CI Friendly Version -->
     <revision>0.1.0-SNAPSHOT</revision>
+    <env>local</env>
 
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
@@ -473,7 +474,7 @@
                 </goals>
                 <configuration>
                   <!-- `git.commit.id.describe` could be replaced with `git.commit.id.abbrev` if we are interested in only the CommitId -->
-                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}</finalName>
+                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}-${env}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution.xml</descriptor>
                   </descriptors>
