@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4b57095f-653c-45e7-b6f4-1bf1f2b33609
+          jcr:uuid: 4ce03344-e1b5-49c4-b10c-54c4eb6187d0
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -48,6 +48,14 @@ definitions:
             hipposysedit:path: hee:quickLinks
             hipposysedit:primary: false
             hipposysedit:type: hee:link
+          /relatedContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:relatedContent
+            hipposysedit:primary: false
+            hipposysedit:type: hee:contentCards
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -61,7 +69,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 164df199-cc24-4758-a296-942bc64e6979
+          jcr:uuid: 3d918214-b9fc-43fb-889e-c231d04f4ecf
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:quickLinks:
@@ -72,7 +80,7 @@ definitions:
             hippotranslation:locale: document-type-locale
             hippostd:holder: holder
             hippostd:state: draft
-            jcr:uuid: ed81937f-7c45-4bdb-ae45-b602261e6fff
+            jcr:uuid: a6a9451d-f638-48a0-9641-5f48328850da
             hippotranslation:id: document-type-locale-id
             hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
             hee:text: ''
@@ -81,6 +89,29 @@ definitions:
             /hee:document:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:header: ''
+            /hee:items:
+              jcr:primaryType: hee:contentCardItem
+              hee:description: ''
+              /hee:header:
+                jcr:primaryType: hee:link
+                jcr:mixinTypes: ['mix:referenceable']
+                jcr:uuid: 2cdaa06e-a0ba-4981-a039-57b2f08f64d5
+                hee:text: ''
+                hee:url: ''
+                hippostd:holder: holder
+                hippostd:state: draft
+                hippostdpubwf:createdBy: ''
+                hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+                hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+                hippostdpubwf:lastModifiedBy: ''
+                hippotranslation:id: document-type-locale-id
+                hippotranslation:locale: document-type-locale
+                /hee:document:
+                  jcr:primaryType: hippo:mirror
+                  hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -132,6 +163,7 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /quickLinks:
             jcr:primaryType: frontend:plugin
             caption: Quick Links
@@ -139,5 +171,13 @@ definitions:
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /relatedContent:
+            jcr:primaryType: frontend:plugin
+            caption: Related Content
+            field: relatedContent
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
