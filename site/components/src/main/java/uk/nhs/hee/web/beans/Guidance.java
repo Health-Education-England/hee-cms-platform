@@ -25,7 +25,7 @@ public class Guidance extends BaseDocument {
     }
 
     @HippoEssentialsGenerated(internalName = "hee:quickLinks")
-    public List<HippoBean> getQuickLinks() {
-        return getLinkedBeans("hee:quickLinks", HippoBean.class);
+    public List<Link> getQuickLinks() {
+        return getChildBeansByName("hee:quickLinks", Link.class);
     }
 }

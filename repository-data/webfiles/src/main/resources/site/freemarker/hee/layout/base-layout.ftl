@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="<@hst.link path='/static/css/nhsuk-4.1.0.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-4.1.0.min.css'/>" type="text/css"/>
     <#if hstRequest.requestContext.channelManagerPreviewRequest>
       <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
     </#if>

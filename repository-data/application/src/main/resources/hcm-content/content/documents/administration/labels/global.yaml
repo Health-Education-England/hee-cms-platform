@@ -1,20 +1,55 @@
 /content/documents/administration/labels/global:
   jcr:primaryType: hippo:handle
-  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ddea0877-7b8c-47f3-8780-e2b0065519d4
   hippo:name: Global
-  /global:
+  hippo:versionHistory: d7f57cbe-668b-471c-bb45-00a193bed092
+  /global[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: bebd6a4d-30dc-452c-a5af-48d3dc69dabd
-    hippo:availability: [live, preview]
+    hippo:availability: [live]
+    hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2014-08-21T22:10:52.812+02:00
+    hippostdpubwf:lastModificationDate: 2021-02-03T16:52:48.338+07:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2014-08-21T22:10:54.657+02:00
-    resourcebundle:descriptions: [Text shown in the global page footer.]
+    hippostdpubwf:publicationDate: 2021-02-03T16:52:50.546+07:00
+    resourcebundle:descriptions: [Text shown in the global page footer., '', '', '']
     resourcebundle:id: essentials.global
-    resourcebundle:keys: [footer.text]
-    resourcebundle:messages: [©2021]
+    resourcebundle:keys: [footer.text, quicklinks.header, page-last-reviewed, page-next-review]
+    resourcebundle:messages: [©2021, Related posts, Page last reviewed, Next review
+        due]
+  /global[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: c0831bf4-c141-4622-a206-d71caef05101
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+    hippostdpubwf:lastModificationDate: 2021-02-03T16:52:48.338+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Text shown in the global page footer., '', '', '']
+    resourcebundle:id: essentials.global
+    resourcebundle:keys: [footer.text, quicklinks.header, page-last-reviewed, page-next-review]
+    resourcebundle:messages: [©2021, Related posts, Page last reviewed, Next review
+        due]
+  /global[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 19aa068d-7375-43f5-be42-ce1919302d03
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+    hippostdpubwf:lastModificationDate: 2021-02-03T16:54:01.696+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Text shown in the global page footer., '', '', '']
+    resourcebundle:id: essentials.global
+    resourcebundle:keys: [footer.text, quicklinks.header, page-last-reviewed, page-next-review]
+    resourcebundle:messages: [©2021, Related posts, Page last reviewed, Next review
+        due]
