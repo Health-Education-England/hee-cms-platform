@@ -1,5 +1,5 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
-<@hst.setBundle basename="essentials.global"/>
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
 <#assign datePattern = "d MMMM yyyy">
 <#macro lastNextReviewedDate lastNextReviewedDate>

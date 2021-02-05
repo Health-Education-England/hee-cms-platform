@@ -7,11 +7,11 @@
         </div>
         <ul class="nhsuk-grid-row nhsuk-card-group">
             <#list contentCards.items as contentCard>
-                <#if link.document??>
-                    <@hst.link hippobean=link.document var="linkURL"/>
+                <#if contentCard.header.document??>
+                    <@hst.link hippobean=contentCard.header.document var="linkURL"/>
                 <#else>
                     <#assign openInANewWindow=true />
-                    <#assign linkURL="${link.url}" />
+                    <#assign linkURL="${contentCard.header.url}" />
                 </#if>
                 <#if !(linkURL?has_content)>
                     <#continue>

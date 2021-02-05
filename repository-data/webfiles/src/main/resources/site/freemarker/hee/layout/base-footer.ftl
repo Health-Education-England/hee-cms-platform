@@ -1,5 +1,5 @@
 <#include "../../include/imports.ftl">
-
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
 <#-- @ftlvariable name="menu" type="org.hippoecm.hst.core.sitemenu.HstSiteMenu" -->
 <#if menu??>
     <footer>
@@ -22,7 +22,7 @@
                         </#list>
                     </ul>
                 </#if>
-                <p class="nhsuk-footer__copyright">© Crown copyright</p></div>
+                <p class="nhsuk-footer__copyright"><@fmt.message key="footer.copyright"/></p></div>
             <@hst.cmseditmenu menu=menu/>
         </div>
     </footer>
