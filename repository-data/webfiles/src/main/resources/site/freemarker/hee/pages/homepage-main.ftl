@@ -1,6 +1,6 @@
 <#include "../../include/imports.ftl">
 
-<@hst.setBundle basename="essentials.homepage"/>
+<@hst.setBundle basename="uk.nhs.hee.web.homepage"/>
 <section class="nhsuk-section">
   <div class="nhsuk-width-container">
     <h1><@fmt.message key="homepage.title" var="title"/>${title?html}</h1>

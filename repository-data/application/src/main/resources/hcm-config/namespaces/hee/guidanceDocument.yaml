@@ -1,0 +1,183 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/guidance:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 75f31343-4f4b-4aa6-8e80-28067c96ae65
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4ee4631b-efde-4f48-bcfa-f85feb78d3f3
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 4ce03344-e1b5-49c4-b10c-54c4eb6187d0
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /summary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:summary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [required]
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
+          /link:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:quickLinks
+            hipposysedit:primary: false
+            hipposysedit:type: hee:link
+          /relatedContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:relatedContent
+            hipposysedit:primary: false
+            hipposysedit:type: hee:contentCards
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:guidance
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:title: ''
+          hee:summary: ''
+          jcr:uuid: 3d918214-b9fc-43fb-889e-c231d04f4ecf
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
+          hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
+          /hee:quickLinks:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            hee:url: ''
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:locale: document-type-locale
+            hippostd:holder: holder
+            hippostd:state: draft
+            jcr:uuid: a6a9451d-f638-48a0-9641-5f48328850da
+            hippotranslation:id: document-type-locale-id
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hee:text: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:header: ''
+            /hee:items:
+              jcr:primaryType: hee:contentCardItem
+              hee:description: ''
+              /hee:header:
+                jcr:primaryType: hee:link
+                jcr:mixinTypes: ['mix:referenceable']
+                jcr:uuid: 2cdaa06e-a0ba-4981-a039-57b2f08f64d5
+                hee:text: ''
+                hee:url: ''
+                hippostd:holder: holder
+                hippostd:state: draft
+                hippostdpubwf:createdBy: ''
+                hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+                hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+                hippostdpubwf:lastModifiedBy: ''
+                hippotranslation:id: document-type-locale-id
+                hippotranslation:locale: document-type-locale
+                /hee:document:
+                  jcr:primaryType: hippo:mirror
+                  hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            extension.left: ${cluster.id}.left
+            extension.right: ${cluster.id}.right
+            plugin.class: org.hippoecm.frontend.editor.layout.TwoColumn
+            wicket.extensions: [extension.left, extension.right]
+          /left:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.left.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.left
+          /right:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.right.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.right
+          /title:
+            jcr:primaryType: frontend:plugin
+            caption: Page Title
+            field: title
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /summary:
+            jcr:primaryType: frontend:plugin
+            caption: Summary
+            field: summary
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Content Blocks
+            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:pageLastNextReview
+            contentPickerType: links
+            field: contentBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
+          /quickLinks:
+            jcr:primaryType: frontend:plugin
+            caption: Quick Links
+            field: link
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /relatedContent:
+            jcr:primaryType: frontend:plugin
+            caption: Related Content
+            field: relatedContent
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

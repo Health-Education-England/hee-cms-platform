@@ -1,0 +1,84 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/contentCardItem:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: e1e909e3-d929-4f63-9db5-3d24a9b1b3f7
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: cb5d172b-ee9f-4faf-8831-d5e7a33cdec0
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 71f096ec-2bab-4fad-adb3-fbbef61d679a
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+          /header:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:header
+            hipposysedit:primary: false
+            hipposysedit:type: hee:link
+            hipposysedit:validators: [required]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:contentCardItem
+          hee:description: ''
+          /hee:header:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 972f44c6-8b95-468d-b55c-61482f1d17ec
+            hee:text: ''
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /header:
+            jcr:primaryType: frontend:plugin
+            caption: Header
+            field: header
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /description:
+            jcr:primaryType: frontend:plugin
+            caption: Description
+            field: description
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

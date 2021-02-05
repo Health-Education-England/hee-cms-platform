@@ -1,20 +1,58 @@
 /content/documents/administration/labels/global:
   jcr:primaryType: hippo:handle
-  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ddea0877-7b8c-47f3-8780-e2b0065519d4
   hippo:name: Global
-  /global:
+  hippo:versionHistory: da371ed9-e681-43de-be80-b09d6bcf98c8
+  /global[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: bebd6a4d-30dc-452c-a5af-48d3dc69dabd
-    hippo:availability: [live, preview]
+    hippo:availability: [live]
+    hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2014-08-21T22:10:52.812+02:00
+    hippostdpubwf:lastModificationDate: 2021-02-05T08:59:18.541+07:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2014-08-21T22:10:54.657+02:00
-    resourcebundle:descriptions: [Text shown in the global page footer.]
-    resourcebundle:id: essentials.global
-    resourcebundle:keys: [footer.text]
-    resourcebundle:messages: [©2021]
+    hippostdpubwf:publicationDate: 2021-02-05T08:59:21.510+07:00
+    resourcebundle:descriptions: ['', '', '', '']
+    resourcebundle:id: uk.nhs.hee.web.global
+    resourcebundle:keys: [quicklinks.header, page-last-reviewed, page-next-review,
+      footer.copyright]
+    resourcebundle:messages: [Related posts, Page last reviewed, Next review due,
+      © Crown copyright]
+  /global[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: c0831bf4-c141-4622-a206-d71caef05101
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+    hippostdpubwf:lastModificationDate: 2021-02-05T08:59:18.541+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '', '', '']
+    resourcebundle:id: uk.nhs.hee.web.global
+    resourcebundle:keys: [quicklinks.header, page-last-reviewed, page-next-review,
+      footer.copyright]
+    resourcebundle:messages: [Related posts, Page last reviewed, Next review due,
+      © Crown copyright]
+  /global[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 19aa068d-7375-43f5-be42-ce1919302d03
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+    hippostdpubwf:lastModificationDate: 2021-02-05T08:58:52.556+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '', '', '']
+    resourcebundle:id: uk.nhs.hee.web.global
+    resourcebundle:keys: [quicklinks.header, page-last-reviewed, page-next-review,
+      footer.copyright]
+    resourcebundle:messages: [Related posts, Page last reviewed, Next review due,
+      © Crown copyright]
