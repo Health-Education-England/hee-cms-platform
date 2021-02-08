@@ -37,6 +37,9 @@ definitions:
           /guidance-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/guidance-main.ftl
+          /listingpage-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/listingpage-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -51,6 +54,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Guidance
               hst:template: guidance-main
+            /lisingpage:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Listing Page
+              hst:template: listingpage-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

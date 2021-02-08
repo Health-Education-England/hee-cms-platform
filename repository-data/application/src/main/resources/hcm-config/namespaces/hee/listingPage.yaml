@@ -1,0 +1,137 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/listingPage:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 597d30b4-0792-4b18-bb01-07f87ee62a2e
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ed824232-b8f0-4217-b2cb-dda8b404a65c
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 8b1b6c79-1712-4a6c-9f1f-83b8c35079f3
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /summary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:summary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+          /contentCards:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:contentCards
+            hipposysedit:primary: false
+            hipposysedit:type: hee:contentCards
+          /HeroSection:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:HeroSection
+            hipposysedit:primary: false
+            hipposysedit:type: hee:HeroSection
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:listingPage
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:title: ''
+          hee:summary: ''
+          jcr:uuid: 67616e60-49e3-4804-886f-0b983f41b3e6
+          hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
+          hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
+          /hee:contentCards:
+            jcr:primaryType: hee:contentCards
+            hee:header: ''
+            /hee:items:
+              jcr:primaryType: hee:contentCardItem
+              hee:description: ''
+              /hee:header:
+                jcr:primaryType: hee:link
+                jcr:mixinTypes: ['mix:referenceable']
+                jcr:uuid: 8cdc4040-73c6-48a8-a034-91489e25ddd1
+                hee:text: ''
+                hee:url: ''
+                hippostd:holder: holder
+                hippostd:state: draft
+                hippostdpubwf:createdBy: ''
+                hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+                hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+                hippostdpubwf:lastModifiedBy: ''
+                hippotranslation:id: document-type-locale-id
+                hippotranslation:locale: document-type-locale
+                /hee:document:
+                  jcr:primaryType: hippo:mirror
+                  hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:HeroSection:
+            jcr:primaryType: hee:HeroSection
+            hee:header: ''
+            hee:text: ''
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /title:
+            jcr:primaryType: frontend:plugin
+            caption: Page Title
+            field: title
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /summary:
+            jcr:primaryType: frontend:plugin
+            caption: Summary
+            field: summary
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /HeroSection:
+            jcr:primaryType: frontend:plugin
+            caption: HeroSection
+            field: HeroSection
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /contentCards:
+            jcr:primaryType: frontend:plugin
+            caption: Content Cards
+            field: contentCards
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
