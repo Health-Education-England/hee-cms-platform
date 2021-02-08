@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4ce03344-e1b5-49c4-b10c-54c4eb6187d0
+          jcr:uuid: 426aaf15-7647-48b8-af9b-7514ece4ce0c
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -56,6 +56,14 @@ definitions:
             hipposysedit:path: hee:relatedContent
             hipposysedit:primary: false
             hipposysedit:type: hee:contentCards
+          /pageLastNextReview:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:pageLastNextReview
+            hipposysedit:primary: false
+            hipposysedit:type: hee:pageLastNextReview
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -69,7 +77,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 3d918214-b9fc-43fb-889e-c231d04f4ecf
+          jcr:uuid: 62748a02-2ec6-40fb-ad89-f1903800df5e
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:quickLinks:
@@ -80,7 +88,7 @@ definitions:
             hippotranslation:locale: document-type-locale
             hippostd:holder: holder
             hippostd:state: draft
-            jcr:uuid: a6a9451d-f638-48a0-9641-5f48328850da
+            jcr:uuid: 81b23011-37a5-482b-8ab7-e21b952d7f6a
             hippotranslation:id: document-type-locale-id
             hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
             hee:text: ''
@@ -98,7 +106,7 @@ definitions:
               /hee:header:
                 jcr:primaryType: hee:link
                 jcr:mixinTypes: ['mix:referenceable']
-                jcr:uuid: 2cdaa06e-a0ba-4981-a039-57b2f08f64d5
+                jcr:uuid: 54ae9637-00a7-4bc9-aa2b-f5c215416355
                 hee:text: ''
                 hee:url: ''
                 hippostd:holder: holder
@@ -112,6 +120,10 @@ definitions:
                 /hee:document:
                   jcr:primaryType: hippo:mirror
                   hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -155,7 +167,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:pageLastNextReview
+            compoundList: hippostd:html,hippogallerypicker:imagelink
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -171,6 +183,15 @@ definitions:
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /pageLastNextReview:
+            jcr:primaryType: frontend:plugin
+            caption: Page Last Next Review Date
+            field: pageLastNextReview
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /relatedContent:

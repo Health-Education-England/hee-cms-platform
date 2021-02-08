@@ -5,39 +5,44 @@
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
 <#if document??>
-    <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-two-thirds">
-            <h1>${document.title}</h1>
-        </div>
-    </div>
-
-    <article>
-        <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-two-thirds">
-                <section class="nhsuk-page-content__section-one">
-                    <div class="nhsuk-page-content">
-                        <p>${document.summary}</p>
-
-                        <#if document.contentBlocks??>
-                            <#list document.contentBlocks as block>
-                                <#if hst.isBeanType(block, 'uk.nhs.hee.web.beans.PageLastNextReview')>
-                                    <@lastNextReviewedDate lastNextReviewedDate=block/>
-                                <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
-                                    <@hst.link var="img" hippobean=block/>
-                                    <img src="${img}" alt=""/>
-                                <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoHtml')>
-                                    <@hst.html hippohtml=block/>
-                                </#if>
-                            </#list>
-                        </#if>
-
-                    </div>
-                </section>
+    <main id="maincontent" role="main" class="nhsuk-main-wrapper">
+        <div class="nhsuk-width-container">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <h1>${document.title}</h1>
+                </div>
             </div>
 
-            <@quickLinks quickLinks=document.quickLinks/>
+            <article>
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                        <section class="nhsuk-page-content__section-one">
+                            <div class="nhsuk-page-content">
+                                <p>${document.summary}</p>
 
-            <@contentCards contentCards=document.relatedContent/>
+                                <#if document.contentBlocks??>
+                                    <#list document.contentBlocks as block>
+                                        <#if hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
+                                            <@hst.link var="img" hippobean=block/>
+                                            <img src="${img}" alt=""/>
+                                        <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoHtml')>
+                                            <@hst.html hippohtml=block/>
+                                        </#if>
+                                    </#list>
+                                </#if>
+
+                                <@lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
+                            </div>
+                        </section>
+                    </div>
+
+                    <@quickLinks quickLinks=document.quickLinks/>
+
+                    <div class="nhsuk-grid-column-full nhsuk-section__content">
+                        <@contentCards contentCards=document.relatedContent/>
+                    </div>
+                </div>
+            </article>
         </div>
-    </article>
+    </main>
 </#if>
