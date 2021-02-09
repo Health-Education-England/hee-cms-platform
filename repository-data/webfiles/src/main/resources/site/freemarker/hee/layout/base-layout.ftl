@@ -32,11 +32,9 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <@hst.include ref="header"/>
-    <div class="nhsuk-width-container ">
-      <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-          <@hst.include ref="main"/>
-      </main>
-    </div>
+
+    <@hst.include ref="main"/>
+
     <@hst.include ref="footer"/>
 
     <!-- Scripts -->
