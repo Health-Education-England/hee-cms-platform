@@ -3,15 +3,9 @@
 <#macro link link cssClassName>
     <#if link??>
         <#if link.document??>
-            <@hst.link hippobean=link.document var="linkURL"/>
-            <#assign openInANewWindow=false />
+            <a class="${cssClassName}" href="<@hst.link hippobean=link.document/>">${link.text}</a>
         <#else>
-            <#assign openInANewWindow=true />
-            <#assign linkURL="${link.url}" />
-        </#if>
-
-        <#if linkURL?has_content>
-            <a class="nhsuk-related-links-card__link" href="${linkURL}" ${openInANewWindow?then('target="_blank"', '')}>${link.text}</a>
+            <a class="${cssClassName}" href="${link.url}" target="_blank">${link.text}</a>
         </#if>
     </#if>
 </#macro>
