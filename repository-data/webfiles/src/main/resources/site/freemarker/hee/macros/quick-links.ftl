@@ -1,4 +1,6 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "./link.ftl">
+
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
 <#macro quickLinks quickLinks>
@@ -8,21 +10,9 @@
                 <div class="nhsuk-card__content">
                     <h3 class="nhsuk-card__heading"><@fmt.message key="quicklinks.header"/></h3>
                     <ul class="nhsuk-related-links-card__list">
-                        <#list document.quickLinks as link>
-                            <#if link.document??>
-                                <@hst.link hippobean=link.document var="linkURL"/>
-                            <#else>
-                                <#assign openInANewWindow=true />
-                                <#assign linkURL="${link.url}" />
-                            </#if>
-
-                            <#if !(linkURL?has_content)>
-                                <#continue>
-                            </#if>
-
+                        <#list quickLinks as quickLink>
                             <li>
-                                <a class="nhsuk-related-links-card__link"
-                                   href="${linkURL}" ${openInANewWindow?then('target="_blank"', '')}>${link.text}</a>
+                                <@link link=quickLink cssClassName="nhsuk-related-links-card__link"/>
                             </li>
                         </#list>
                     </ul>
