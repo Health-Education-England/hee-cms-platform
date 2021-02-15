@@ -34,4 +34,9 @@ public class Guidance extends BaseDocument {
     public ContentCards getRelatedContent() {
         return getBean("hee:relatedContent", ContentCards.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
+    public PageLastNextReview getPageLastNextReview() {
+        return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    }
 }

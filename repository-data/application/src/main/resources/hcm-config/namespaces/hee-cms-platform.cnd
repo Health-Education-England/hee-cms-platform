@@ -4,6 +4,9 @@
 <'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
 
+[hee:HeroSection] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
@@ -20,6 +23,9 @@
   orderable
 
 [hee:link] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:listingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed

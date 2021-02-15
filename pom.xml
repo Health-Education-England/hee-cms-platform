@@ -523,6 +523,8 @@
                   <goal>single</goal>
                 </goals>
                 <configuration>
+                  <!-- `git.commit.id.describe` could be replaced with `git.commit.id.abbrev` if we are interested in only the CommitId -->
+                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}-${env}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution-with-development-data.xml</descriptor>
                   </descriptors>
