@@ -1,6 +1,7 @@
 <#include "../../include/imports.ftl">
 
 <#macro statementBlock block>
+    <#if block.title?? && block.richStatement?? >
     <div class="nhsuk-care-card nhsuk-care-card--non-urgent">
         <div class="nhsuk-care-card__heading-container">
             <h3 class="nhsuk-care-card__heading">
@@ -15,4 +16,5 @@
             <@hst.html hippohtml=block.richStatement/>
         </div>
     </div>
+    </#if>
 </#macro>
