@@ -2,6 +2,7 @@
 <#include "../macros/quick-links.ftl">
 <#include "../macros/last-next-reviewed-date.ftl">
 <#include "../macros/content-cards.ftl">
+<#include "../macros/statement-block.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
 <#if document??>
@@ -19,7 +20,6 @@
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
                                 <p>${document.summary}</p>
-
                                 <#if document.contentBlocks??>
                                     <#list document.contentBlocks as block>
                                         <#if hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
@@ -27,6 +27,8 @@
                                             <img src="${img}" alt=""/>
                                         <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoHtml')>
                                             <@hst.html hippohtml=block/>
+                                        <#elseif hst.isBeanType(block, 'uk.nhs.hee.web.beans.StatementBlock')>
+                                            <@statementBlock block=block/>
                                         </#if>
                                     </#list>
                                 </#if>

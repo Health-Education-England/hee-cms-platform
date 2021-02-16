@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 426aaf15-7647-48b8-af9b-7514ece4ce0c
+          jcr:uuid: 5faba496-6bc5-4e8c-a07b-bf802eb33949
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -77,7 +77,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 62748a02-2ec6-40fb-ad89-f1903800df5e
+          jcr:uuid: 39ed0760-620b-420c-a6f3-acb56c84799b
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:quickLinks:
@@ -88,7 +88,7 @@ definitions:
             hippotranslation:locale: document-type-locale
             hippostd:holder: holder
             hippostd:state: draft
-            jcr:uuid: 81b23011-37a5-482b-8ab7-e21b952d7f6a
+            jcr:uuid: 1478c518-f749-4833-b77c-d325144c3824
             hippotranslation:id: document-type-locale-id
             hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
             hee:text: ''
@@ -106,7 +106,7 @@ definitions:
               /hee:header:
                 jcr:primaryType: hee:link
                 jcr:mixinTypes: ['mix:referenceable']
-                jcr:uuid: 54ae9637-00a7-4bc9-aa2b-f5c215416355
+                jcr:uuid: 343a042d-df54-495e-ae69-89c500e124d1
                 hee:text: ''
                 hee:url: ''
                 hippostd:holder: holder
@@ -124,6 +124,15 @@ definitions:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks[1]:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:contentBlocks[2]:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -167,7 +176,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hippostd:html,hippogallerypicker:imagelink
+            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
