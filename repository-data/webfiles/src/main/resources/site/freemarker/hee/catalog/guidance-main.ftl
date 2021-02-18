@@ -23,7 +23,6 @@
                                 <p>${document.summary}</p>
                                 <#if document.contentBlocks??>
                                     <#list document.contentBlocks as block>
-                                        className = ${block.getClass().getName()}
                                         <#if hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoMirror')>
                                             <@hst.link var="img" hippobean=block/>
                                             <img src="${img}" alt=""/>
