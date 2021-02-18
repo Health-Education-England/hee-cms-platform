@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 
 <#macro yellowAlertBlock block>
-    <#if block.title?? && block.richStatement?? >
+    <#if block.title?? && block.richAlertText?? >
         <div class="nhsuk-warning-callout">
             <h3 class="nhsuk-warning-callout__label">
             <span role="text">
@@ -9,7 +9,7 @@
               ${block.title}
             </span>
             </h3>
-            <@hst.html hippohtml=${block.richAlertText}>
+            <@hst.html hippohtml=block.richAlertText/>
         </div>
     </#if>
 </#macro>
