@@ -3,6 +3,7 @@
 <'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
 <'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
+<'hippogallery'='http://www.onehippo.org/jcr/hippogallery/nt/2.0'>
 
 [hee:HeroSection] > hippo:compound, hippostd:relaxed
   orderable
@@ -21,6 +22,8 @@
 
 [hee:guidance] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
+
+[hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
 [hee:link] > hippo:compound, hippostd:relaxed
   orderable

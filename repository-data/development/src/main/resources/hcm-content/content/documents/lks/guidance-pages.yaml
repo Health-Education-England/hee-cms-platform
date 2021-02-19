@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: b46c252b-fd27-40eb-9a69-30a7ac614c2d
     hippo:name: Copyright
-    hippo:versionHistory: b24a28d4-de2d-4441-97ff-83bd4fb8dafa
+    hippo:versionHistory: 0c74a907-691d-4117-8ac9-534f4119b584
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -20,18 +20,17 @@
         printed and digital work in the following ways.
       hee:title: Copyright
       hippo:availability: []
-      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-02-15T17:28:09.537Z
+      hippostdpubwf:lastModificationDate: 2021-02-18T16:52:35.107+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 32b1400a-f9d3-407f-b282-737a025fac8a
       hippotranslation:locale: en
       /hee:quickLinks[1]:
         jcr:primaryType: hee:link
-        hee:text: Listing page
+        hee:text: Listing Page
         hee:url: /
         hippostdpubwf:createdBy: ''
         hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -103,11 +102,12 @@
         hee:header: Related content
         /hee:items[1]:
           jcr:primaryType: hee:contentCardItem
-          hee:description: take me to the listing page
+          hee:description: Bulletins, search bank, OpenAthens and ways to collaborate
+            with other libraries.
           /hee:header:
             jcr:primaryType: hee:link
-            hee:text: Listing page
-            hee:url: ''
+            hee:text: Evidence and resources
+            hee:url: '#'
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
             hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -123,7 +123,7 @@
             searching, using trusted sources like OpenAthens and collaboration.
           /hee:header:
             jcr:primaryType: hee:link
-            hee:text: Knowledge Management
+            hee:text: Listing Page
             hee:url: '#'
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -133,7 +133,7 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: b46c252b-fd27-40eb-9a69-30a7ac614c2d
+              hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
         /hee:items[3]:
           jcr:primaryType: hee:contentCardItem
           hee:description: Finding the latest evidence through bulletins, literature
@@ -153,56 +153,14 @@
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00Z
-        hee:nextReviewed: 2021-02-02T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
+        hee:lastReviewed: 2017-02-12T00:00:00+07:00
+        hee:nextReviewed: 2021-02-03T00:00:00+07:00
       /hee:contentBlocks[2]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[3]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[4]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: ''
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /copyright[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -215,13 +173,13 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-02-15T17:00:09.862Z
+      hippostdpubwf:lastModificationDate: 2021-02-18T16:52:52.538+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 32b1400a-f9d3-407f-b282-737a025fac8a
       hippotranslation:locale: en
       /hee:quickLinks[1]:
         jcr:primaryType: hee:link
-        hee:text: Listing page
+        hee:text: Listing Page
         hee:url: /
         hippostdpubwf:createdBy: ''
         hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -293,11 +251,12 @@
         hee:header: Related content
         /hee:items[1]:
           jcr:primaryType: hee:contentCardItem
-          hee:description: take me to the listing page
+          hee:description: Bulletins, search bank, OpenAthens and ways to collaborate
+            with other libraries.
           /hee:header:
             jcr:primaryType: hee:link
-            hee:text: Listing page
-            hee:url: ''
+            hee:text: Evidence and resources
+            hee:url: '#'
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
             hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -313,7 +272,7 @@
             searching, using trusted sources like OpenAthens and collaboration.
           /hee:header:
             jcr:primaryType: hee:link
-            hee:text: Knowledge Management
+            hee:text: Listing Page
             hee:url: '#'
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -323,7 +282,7 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: b46c252b-fd27-40eb-9a69-30a7ac614c2d
+              hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
         /hee:items[3]:
           jcr:primaryType: hee:contentCardItem
           hee:description: Finding the latest evidence through bulletins, literature
@@ -343,56 +302,14 @@
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00Z
-        hee:nextReviewed: 2021-02-02T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
+        hee:lastReviewed: 2017-02-12T00:00:00+07:00
+        hee:nextReviewed: 2021-02-03T00:00:00+07:00
       /hee:contentBlocks[2]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[3]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[4]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>hi <strong>bold</strong> world</p>
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /copyright[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -405,14 +322,14 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-02-15T17:00:09.862Z
+      hippostdpubwf:lastModificationDate: 2021-02-18T16:52:52.538+07:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-02-15T17:00:12.564Z
+      hippostdpubwf:publicationDate: 2021-02-18T16:52:56.147+07:00
       hippotranslation:id: 32b1400a-f9d3-407f-b282-737a025fac8a
       hippotranslation:locale: en
       /hee:quickLinks[1]:
         jcr:primaryType: hee:link
-        hee:text: Listing page
+        hee:text: Listing Page
         hee:url: /
         hippostdpubwf:createdBy: ''
         hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -484,11 +401,12 @@
         hee:header: Related content
         /hee:items[1]:
           jcr:primaryType: hee:contentCardItem
-          hee:description: take me to the listing page
+          hee:description: Bulletins, search bank, OpenAthens and ways to collaborate
+            with other libraries.
           /hee:header:
             jcr:primaryType: hee:link
-            hee:text: Listing page
-            hee:url: ''
+            hee:text: Evidence and resources
+            hee:url: '#'
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
             hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -504,7 +422,7 @@
             searching, using trusted sources like OpenAthens and collaboration.
           /hee:header:
             jcr:primaryType: hee:link
-            hee:text: Knowledge Management
+            hee:text: Listing Page
             hee:url: '#'
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -514,7 +432,7 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: b46c252b-fd27-40eb-9a69-30a7ac614c2d
+              hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
         /hee:items[3]:
           jcr:primaryType: hee:contentCardItem
           hee:description: Finding the latest evidence through bulletins, literature
@@ -534,53 +452,11 @@
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00Z
-        hee:nextReviewed: 2021-02-02T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
+        hee:lastReviewed: 2017-02-12T00:00:00+07:00
+        hee:nextReviewed: 2021-02-03T00:00:00+07:00
       /hee:contentBlocks[2]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[3]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[4]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>hi <strong>bold</strong> world</p>
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
