@@ -23,13 +23,23 @@
                                 <p>${document.summary}</p>
                                 <#if document.contentBlocks??>
                                     <#list document.contentBlocks as block>
-                                        <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
-                                            <@imageWithCaption imageWithCaption=block.referencedBean/>
-                                        <#elseif hst.isBeanType(block, 'org.hippoecm.hst.content.beans.standard.HippoHtml')>
-                                            <@hst.html hippohtml=block/>
-                                        <#elseif hst.isBeanType(block, 'uk.nhs.hee.web.beans.StatementBlock')>
-                                            <@statementBlock block=block/>
-                                        </#if>
+                                        <#switch block.getClass().getName()>
+                                            <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
+                                                <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
+                                                    <@imageWithCaption imageWithCaption=block.referencedBean/>
+                                                </#if>
+                                                <#break>
+                                            <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                                                <@hst.html hippohtml=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.StatementBlock">
+                                                <@statementBlock block=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
+                                                <@yellowAlertBlock block=block/>
+                                                <#break>
+                                            <#default>
+                                        </#switch>
                                     </#list>
                                 </#if>
 
