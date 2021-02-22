@@ -4,6 +4,7 @@
 <#include "../macros/content-cards.ftl">
 <#include "../macros/statement-block.ftl">
 <#include "../macros/image-with-caption.ftl">
+<#include "../macros/yellow-alert-block.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
 <#if document??>
