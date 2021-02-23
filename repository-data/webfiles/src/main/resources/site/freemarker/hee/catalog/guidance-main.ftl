@@ -3,6 +3,7 @@
 <#include "../macros/last-next-reviewed-date.ftl">
 <#include "../macros/content-cards.ftl">
 <#include "../macros/statement-block.ftl">
+<#include "../macros/image-with-caption.ftl">
 <#include "../macros/yellow-alert-block.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
@@ -24,9 +25,10 @@
                                 <#if document.contentBlocks??>
                                     <#list document.contentBlocks as block>
                                         <#switch block.getClass().getName()>
-                                            <#case "org.hippoecm.hst.content.beans.standard.HippoMirror">
-                                                <@hst.link var="img" hippobean=block/>
-                                                <img src="${img}" alt=""/>
+                                            <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
+                                                <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
+                                                    <@imageWithCaption imageWithCaption=block.referencedBean/>
+                                                </#if>
                                                 <#break>
                                             <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
                                                 <@hst.html hippohtml=block/>
