@@ -5,6 +5,7 @@
 <#include "../macros/statement-block.ftl">
 <#include "../macros/image-with-caption.ftl">
 <#include "../macros/yellow-alert-block.ftl">
+<#include "../macros/action-link.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
 <#if document??>
@@ -35,6 +36,9 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.StatementBlock">
                                                 <@statementBlock block=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.ActionLink">
+                                                <@actionLink actionLink=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
                                                 <@yellowAlertBlock block=block/>
