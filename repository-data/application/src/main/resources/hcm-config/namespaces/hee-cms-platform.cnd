@@ -8,6 +8,12 @@
 [hee:ActionLink] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
+  orderable
+
+[hee:ContentCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:HeroSection] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -15,12 +21,6 @@
   orderable
 
 [hee:YellowAlertBlock] > hippo:compound, hippostd:relaxed
-  orderable
-
-[hee:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
-  orderable
-
-[hee:contentCardItem] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:contentCards] > hippo:compound, hippostd:relaxed

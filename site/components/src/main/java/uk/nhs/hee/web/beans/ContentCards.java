@@ -4,7 +4,6 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoCompound;
 import java.util.List;
-import uk.nhs.hee.web.beans.ContentCardItem;
 
 @HippoEssentialsGenerated(internalName = "hee:contentCards")
 @Node(jcrType = "hee:contentCards")
@@ -14,8 +13,8 @@ public class ContentCards extends HippoCompound {
         return getSingleProperty("hee:header");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:items")
-    public List<ContentCardItem> getItems() {
-        return getChildBeansByName("hee:items", ContentCardItem.class);
+    @HippoEssentialsGenerated(internalName = "hee:cards")
+    public List<ContentCard> getCards() {
+        return getLinkedBeans("hee:cards", ContentCard.class);
     }
 }

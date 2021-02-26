@@ -1,28 +1,20 @@
 definitions:
   config:
-    /hippo:namespaces/hee/contentCardItem:
+    /hippo:namespaces/hee/ContentCard:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: e1e909e3-d929-4f63-9db5-3d24a9b1b3f7
+      jcr:uuid: c72435d5-5102-4baf-bc7d-0eaeb12a6ce4
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: cb5d172b-ee9f-4faf-8831-d5e7a33cdec0
+        jcr:uuid: 25493a23-1714-4e07-a413-b8b0c344e1d8
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 71f096ec-2bab-4fad-adb3-fbbef61d679a
+          jcr:uuid: 5686583d-9015-409f-953c-25da5f47b70d
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: Text
           /header:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -31,16 +23,33 @@ definitions:
             hipposysedit:path: hee:header
             hipposysedit:primary: false
             hipposysedit:type: hee:link
-            hipposysedit:validators: [required]
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:contentCardItem
+          jcr:primaryType: hee:ContentCard
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
+          jcr:uuid: f2195e47-5bc6-483f-a557-db3adb807bf8
+          hippostdpubwf:lastModificationDate: 2021-02-25T15:31:01.327+07:00
+          hippostdpubwf:creationDate: 2021-02-25T15:31:01.327+07:00
           /hee:header:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 972f44c6-8b95-468d-b55c-61482f1d17ec
+            jcr:uuid: 902badcb-ce14-45ce-bf7a-8d9d9e6bd1d3
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -69,7 +78,6 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Header
             field: header
-            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -78,6 +86,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Description
             field: description
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

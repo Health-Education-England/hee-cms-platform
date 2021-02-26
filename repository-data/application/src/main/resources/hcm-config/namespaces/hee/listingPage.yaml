@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8b1b6c79-1712-4a6c-9f1f-83b8c35079f3
+          jcr:uuid: b56055a9-7a7b-4e7e-b2ae-e37292ab3071
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -60,32 +60,15 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 67616e60-49e3-4804-886f-0b983f41b3e6
+          jcr:uuid: 0622f450-00c0-43a4-bea3-3132d3280d63
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           /hee:contentCards:
             jcr:primaryType: hee:contentCards
             hee:header: ''
-            /hee:items:
-              jcr:primaryType: hee:contentCardItem
-              hee:description: ''
-              /hee:header:
-                jcr:primaryType: hee:link
-                jcr:mixinTypes: ['mix:referenceable']
-                jcr:uuid: 8cdc4040-73c6-48a8-a034-91489e25ddd1
-                hee:text: ''
-                hee:url: ''
-                hippostd:holder: holder
-                hippostd:state: draft
-                hippostdpubwf:createdBy: ''
-                hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-                hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-                hippostdpubwf:lastModifiedBy: ''
-                hippotranslation:id: document-type-locale-id
-                hippotranslation:locale: document-type-locale
-                /hee:document:
-                  jcr:primaryType: hippo:mirror
-                  hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:HeroSection:
             jcr:primaryType: hee:HeroSection
             hee:header: ''
