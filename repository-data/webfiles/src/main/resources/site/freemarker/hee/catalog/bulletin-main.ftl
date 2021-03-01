@@ -1,56 +1,42 @@
 <#include "../../include/imports.ftl">
-<#include "../macros/last-next-reviewed-date.ftl">
+<#include "../macros/bulletin-item.ftl">
+
 <#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
 <#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.Bulletin" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 
+<div class="nhsuk-listing__summary o-flex@tablet">
+    <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
+        ${pageable.total} results
+    </h2>
+
+    <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center">
+        <div class="o-flex__grow">
+            <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="select-1">
+                    Sort By
+                </label>
+                <select class="nhsuk-select" id="select-1" name="select-1">
+                    <option value="1">Newest</option>
+                    <option value="2" selected>Relevance</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
 <#if pageable??>
     <#list pageable.items as item>
-        <!-- TODO check if we can't put a getter inside the uk.nhs.hee.web.beans.Link to get the linkUrl,
-         so that we don't have to check if the link is internal or external -->
-        <#if item.link??>
-            <#if item.link.document??>
-                <@hst.link hippobean=item.link.document var="linkURL"/>
-                <#assign openInANewWindow=false />
-            <#else>
-                <#assign openInANewWindow=true />
-                <#assign linkURL="${item.link.url}" />
-            </#if>
-        </#if>
-
-        <dl class="nhsuk-summary-list">
-            <h3><a href="${linkURL}"> ${item.title}</a></h3>
-            <#if item.category??>
-                <@bulletinItemRow key="Category" value="${categoriesMap[item.category]}" />
-            </#if>
-            <#if item.overview??>
-                <@bulletinItemRow key="Overview" value="${item.overview}" />
-            </#if>
-            <#if item.link??>
-                <#if item.link.document??>
-                    <!-- TODO display internal link something like "Read more .." css is missing-->
-                <#elseif item.link.url??>
-                    <#assign hyperlink>
-                        <a href="${linkURL}"> ${item.link.text}</a>
-                    </#assign>
-                    <@bulletinItemRow key="Website" value="${hyperlink}" />
-                </#if>
-            </#if>
-            <#if item.pageLastNextReview??>
-                <@lastNextReviewedDate lastNextReviewedDate=item.pageLastNextReview/>
-            </#if>
-        </dl>
+        <@bulletinItem
+          title="${item.title}"
+          category="${categoriesMap[item.category]}"
+          overview="${item.overview}"
+          websiteURL="${item.websiteUrl}"
+          websiteText="${item.websiteTitle}"
+        />
     </#list>
-    <#include "../../include/pagination-nhs.ftl">
+    <#if cparam.showPagination>
+        <#include "../../include/pagination-nhs.ftl">
+    </#if>
 </#if>
 
-<#macro bulletinItemRow key value>
-    <div class="nhsuk-summary-list__row">
-        <dt class="nhsuk-summary-list__key">
-            ${key}
-        </dt>
-        <dd class="nhsuk-summary-list__value">
-            ${value}
-        </dd>
-    </div>
-</#macro>

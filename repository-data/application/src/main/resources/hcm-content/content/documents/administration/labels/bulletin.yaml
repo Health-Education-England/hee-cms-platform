@@ -1,0 +1,58 @@
+/content/documents/administration/labels/bulletin:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 03cc6eaf-ca38-4874-a8a5-22ae5ea2c643
+  hippo:name: Bulletin
+  hippo:versionHistory: f975e097-9034-4080-a51b-4dc24ad49d2f
+  /bulletin[1]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 0702ce80-f86a-4e7d-89fe-1fb7efcc2013
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+    hippostdpubwf:lastModificationDate: 2021-02-24T17:55:01.538Z
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+        item category., Used in a Bulletin component to show a bulletin item overview.,
+      Used in a Bulletin component to show a bulletin item website.]
+    resourcebundle:id: uk.nhs.hee.web.bulletin
+    resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website]
+    resourcebundle:messages: [Category, Overview, Website]
+  /bulletin[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 3cde13e7-4274-4637-904c-a68eecbfe36f
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+    hippostdpubwf:lastModificationDate: 2021-02-24T17:55:01.475Z
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+        item category., Used in a Bulletin component to show a bulletin item overview.,
+      Used in a Bulletin component to show a bulletin item website.]
+    resourcebundle:id: uk.nhs.hee.web.bulletin
+    resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website]
+    resourcebundle:messages: [Category, Overview, Website]
+  /bulletin[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: b0d5b27c-b22c-48b3-b0d5-0dabdbd405db
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+    hippostdpubwf:lastModificationDate: 2021-02-24T17:55:01.475Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-02-24T17:55:07.633Z
+    resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+        item category., Used in a Bulletin component to show a bulletin item overview.,
+      Used in a Bulletin component to show a bulletin item website.]
+    resourcebundle:id: uk.nhs.hee.web.bulletin
+    resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website]
+    resourcebundle:messages: [Category, Overview, Website]

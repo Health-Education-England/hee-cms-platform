@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c60ae644-4fce-4da1-b8dd-973dc531ce17
+          jcr:uuid: cb380fab-eba4-48d4-8c0a-207b165e5b3f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -32,22 +32,6 @@ definitions:
             hipposysedit:path: hee:overview
             hipposysedit:primary: false
             hipposysedit:type: String
-          /pageLastNextReview:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:pageLastNextReview
-            hipposysedit:primary: false
-            hipposysedit:type: hee:pageLastNextReview
-          /link:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:link
-            hipposysedit:primary: false
-            hipposysedit:type: hee:link
           /category:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -56,6 +40,22 @@ definitions:
             hipposysedit:path: hee:category
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
+          /websiteText:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:websiteTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /websiteUrl:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:websiteUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -69,31 +69,12 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:overview: ''
-          jcr:uuid: 9d5af0d2-51a6-4148-a6a1-1eb6edeff2c5
+          jcr:uuid: 33267dff-c0d2-4173-9c2a-4c22ed2792ac
           hippostdpubwf:lastModificationDate: 2021-02-07T19:04:36.287Z
           hippostdpubwf:creationDate: 2021-02-07T19:04:36.287Z
           hee:category: ''
-          /hee:pageLastNextReview:
-            jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 0001-01-01T12:00:00Z
-            hee:nextReviewed: 0001-01-01T12:00:00Z
-          /hee:link:
-            jcr:primaryType: hee:link
-            jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 83576892-422c-49f1-a2ad-ac32820e1095
-            hee:text: ''
-            hee:url: ''
-            hippostd:holder: holder
-            hippostd:state: draft
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hee:websiteUrl: ''
+          hee:websiteTitle: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -132,19 +113,21 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /link:
+          /websiteTitle:
             jcr:primaryType: frontend:plugin
-            caption: Link
-            field: link
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Website Title
+            field: websiteText
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /pageLastNextReview:
+          /websiteUrl:
             jcr:primaryType: frontend:plugin
-            caption: Last Reviewed Next Review
-            field: pageLastNextReview
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Website URL
+            field: websiteUrl
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

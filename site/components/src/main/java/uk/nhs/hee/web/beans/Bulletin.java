@@ -21,13 +21,13 @@ public class Bulletin extends BaseDocument {
         return getSingleProperty("hee:category");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
-    public PageLastNextReview getPageLastNextReview() {
-        return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    @HippoEssentialsGenerated(internalName = "hee:websiteUrl")
+    public String getWebsiteUrl() {
+        return getSingleProperty("hee:websiteUrl");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:link")
-    public Link getLink() {
-        return getBean("hee:link", Link.class);
+    @HippoEssentialsGenerated(internalName = "hee:websiteTitle")
+    public String getWebsiteTitle() {
+        return getSingleProperty("hee:websiteTitle");
     }
 }
