@@ -1,6 +1,7 @@
 <#include "../../include/imports.ftl">
 
 <#assign organizationName = "${hstRequestContext.resolvedMount.mount.channelInfo.organizationName}">
+
 <div class="nhsuk-width-container nhsuk-header__container">
     <div class="nhsuk-header__logo">
         <a class="nhsuk-header__link" href="/" aria-label="NHS homepage">
