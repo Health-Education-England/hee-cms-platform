@@ -1,11 +1,5 @@
 <#include "../../include/imports.ftl">
-<#include "../macros/quick-links.ftl">
-<#include "../macros/last-next-reviewed-date.ftl">
-<#include "../macros/content-cards.ftl">
-<#include "../macros/statement-block.ftl">
-<#include "../macros/image-with-caption.ftl">
-<#include "../macros/yellow-alert-block.ftl">
-<#include "../macros/action-link.ftl">
+<#import "../macros/components.ftl" as hee>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
 <#if document??>
@@ -28,35 +22,35 @@
                                         <#switch block.getClass().getName()>
                                             <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
                                                 <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
-                                                    <@imageWithCaption imageWithCaption=block.referencedBean/>
+                                                    <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
                                                 </#if>
                                                 <#break>
                                             <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
                                                 <@hst.html hippohtml=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.StatementBlock">
-                                                <@statementBlock block=block/>
+                                                <@hee.statementBlock block=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.ActionLink">
-                                                <@actionLink actionLink=block/>
+                                                <@hee.actionLink actionLink=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
-                                                <@yellowAlertBlock block=block/>
+                                                <@hee.yellowAlertBlock block=block/>
                                                 <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
                                 </#if>
 
-                                <@lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
+                                <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
                             </div>
                         </section>
                     </div>
 
-                    <@quickLinks quickLinks=document.quickLinks/>
+                    <@hee.quickLinks quickLinks=document.quickLinks/>
 
                     <div class="nhsuk-grid-column-full nhsuk-section__content">
-                        <@contentCards contentCards=document.relatedContent/>
+                        <@hee.contentCards contentCards=document.relatedContent/>
                     </div>
                 </div>
             </article>

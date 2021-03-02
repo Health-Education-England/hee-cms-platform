@@ -1,5 +1,5 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
-<#import "./link.ftl" as hee>
+<#import "./link.ftl" as hlink>
 
 <#macro contentCards contentCards>
     <#if contentCards.header?has_content>
@@ -13,7 +13,7 @@
                 <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
                         <h3 class="nhsuk-card__heading nhsuk-heading-m">
-                            <@hee.link link=contentCard.header cssClassName="nhsuk-card__link"/>
+                            <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link"/>
                         </h3>
                         <p class="nhsuk-card__description">${contentCard.description}</p>
                     </div>

@@ -1,4 +1,4 @@
-<#include "../../include/imports.ftl">
+<#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 
 <#macro yellowAlertBlock block>
     <#if block.title?? && block.richAlertText?? >

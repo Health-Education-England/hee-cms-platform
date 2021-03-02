@@ -1,5 +1,6 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
-<#import "./link.ftl" as hee>
+<#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
+<#import "./link.ftl" as hlink>
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -12,7 +13,7 @@
                     <ul class="nhsuk-related-links-card__list">
                         <#list quickLinks as quickLink>
                             <li>
-                                <@hee.link link=quickLink cssClassName="nhsuk-related-links-card__link"/>
+                                <@hlink.link link=quickLink cssClassName="nhsuk-related-links-card__link"/>
                             </li>
                         </#list>
                     </ul>
