@@ -1,0 +1,1340 @@
+/content/documents/lks/common:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: bace2536-0ecc-4fde-b30e-2947e5e29300
+  hippo:name: Common
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 5c454ded-acfc-4f4b-8b53-2569e160b5c9
+  hippotranslation:locale: en
+  /content-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 2662c3d6-4f25-48d1-82b0-339489c61b0b
+    hippo:name: Content Cards
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: fea0ba83-e268-4df7-bdf7-86dd1eedda6c
+    hippotranslation:locale: en
+    /search-bank:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
+      hippo:name: Search Bank
+      hippo:versionHistory: bedb5b30-c9e2-4640-adf0-2e97930bd18a
+      /search-bank[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 57c17be0-47a3-480f-9dfa-a46c44ad22d0
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: e365e11b-3d11-4b7a-ba05-6c370845ebcd
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 6c813269-cbb9-4536-b82a-d0571c633fec
+          hee:text: Search bank
+          hee:url: /
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /search-bank[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 61f03595-18d6-4b43-86ea-6cbe2ed65c13
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-25T15:36:37.596+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: e365e11b-3d11-4b7a-ba05-6c370845ebcd
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Search bank
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /search-bank[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 6aaab82e-2adf-4bc2-a49d-856228745b78
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-25T15:36:37.596+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:14:44.969+07:00
+        hippotranslation:id: e365e11b-3d11-4b7a-ba05-6c370845ebcd
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Search bank
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /content-procurement:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c39788f5-a6b7-434c-9561-ab95c29a08f0
+      hippo:name: Content procurement
+      hippo:versionHistory: 50333e89-3e17-4dda-a9b0-ccba4af993a0
+      /content-procurement[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: d1f62a21-c7d9-4c34-9781-cba4720401fc
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:08.017+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 008b6761-1ee5-4d24-864a-17ffea746e75
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Content procurement
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /content-procurement[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 89854064-101d-44dd-bb6e-0b1fbb216558
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:04.089+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 008b6761-1ee5-4d24-864a-17ffea746e75
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Content procurement
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /content-procurement[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2b67fc31-1507-436b-9cfc-672f9fc5614d
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:08.017+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:10:09.451+07:00
+        hippotranslation:id: 008b6761-1ee5-4d24-864a-17ffea746e75
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Content procurement
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /expert-searching:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+      hippo:name: Expert searching
+      hippo:versionHistory: c74940ee-cdd6-4efa-a8b4-327edcc35672
+      /expert-searching[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: e1d0c246-57c3-46b8-bebc-4e320b22d5d8
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:09:59.368+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7443de36-c088-4eaf-9a1b-5a88d5b2543e
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Expert searching
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /expert-searching[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 008d654b-fa6c-4192-aefd-95cd064d3422
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:09:54.895+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7443de36-c088-4eaf-9a1b-5a88d5b2543e
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Expert searching
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /expert-searching[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 886f5783-84ed-4090-9501-3af1cfe6c60a
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:09:59.368+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:10:02.364+07:00
+        hippotranslation:id: 7443de36-c088-4eaf-9a1b-5a88d5b2543e
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Expert searching
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /discovery-and-delivery-infrastructure:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: ed76a6f3-7178-4c5e-9940-717d53c284fd
+      hippo:name: Discovery and delivery infrastructure
+      hippo:versionHistory: a16ffee2-b28e-42cf-a13c-f547b29391b5
+      /discovery-and-delivery-infrastructure[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 8393d4b6-c058-455a-9b63-c08d50f003d4
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:25.955+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 5c9825ab-32f8-40ec-8e96-911e93eedcf9
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Discovery and delivery infrastructure
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /discovery-and-delivery-infrastructure[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: bf672309-9358-4849-864b-87d9f274baff
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:23.145+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 5c9825ab-32f8-40ec-8e96-911e93eedcf9
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Discovery and delivery infrastructure
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /discovery-and-delivery-infrastructure[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4b5c99fd-d62d-4a7b-b6cb-5481e8ff4658
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:25.955+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:10:27.318+07:00
+        hippotranslation:id: 5c9825ab-32f8-40ec-8e96-911e93eedcf9
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Discovery and delivery infrastructure
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /essential-sites-update:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 997a56a9-77e9-4895-a0ac-810ed12f5293
+      hippo:name: Essential Sites Update
+      hippo:versionHistory: 0ca1b0e4-ba16-4499-84d6-9af04997f862
+      /essential-sites-update[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 82bb9dbe-378f-4279-a2f6-305cb6c22507
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:41.437+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: fdc3d7ff-aa78-452e-a186-934c8ebd3138
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Essential Sites Update
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /essential-sites-update[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 48c40690-3bab-479b-bada-2c421dea9e2a
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:39.169+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: fdc3d7ff-aa78-452e-a186-934c8ebd3138
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Essential Sites Update
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /essential-sites-update[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a084a616-d41c-4fad-b7bd-031d5b673960
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:41.437+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:10:42.980+07:00
+        hippotranslation:id: fdc3d7ff-aa78-452e-a186-934c8ebd3138
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Essential Sites Update
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /openathens:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
+      hippo:name: OpenAthens
+      hippo:versionHistory: 42f47863-c1bd-4e76-907a-ea7585440429
+      /openathens[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 46b0917b-ff69-4670-bac9-2cda08bb1f23
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:59.675+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 0d4cf8cb-1496-4ac6-acfc-447deb04fafd
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: OpenAthens
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /openathens[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1df75d0a-6324-42f7-b1d9-11b6d49b9be3
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:56.476+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 0d4cf8cb-1496-4ac6-acfc-447deb04fafd
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: OpenAthens
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /openathens[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 19f95551-aeab-4086-af41-2ea2845631aa
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:10:59.675+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:11:01.197+07:00
+        hippotranslation:id: 0d4cf8cb-1496-4ac6-acfc-447deb04fafd
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: OpenAthens
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /inter-lending-and-document-supply-ilds:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 5d795439-58f0-491e-92e3-df3aaecc48c7
+      hippo:name: Inter–lending and document supply (ILDS)
+      hippo:versionHistory: 7a14c7c0-ca32-4c72-80d8-7a1fc618295b
+      /inter-lending-and-document-supply-ilds[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 03f1f037-133a-406b-b4b1-5317b576dd1b
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:14.484+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: fafaa45e-4189-4fca-a2d9-ec77ee91f820
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Inter–lending and document supply (ILDS)
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /inter-lending-and-document-supply-ilds[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 45061fac-2bae-4193-8aab-0513597a34ef
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:12.442+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: fafaa45e-4189-4fca-a2d9-ec77ee91f820
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Inter–lending and document supply (ILDS)
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /inter-lending-and-document-supply-ilds[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4b0d8eff-a479-4b6a-af60-bc957fd17ed8
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:14.484+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:11:15.887+07:00
+        hippotranslation:id: fafaa45e-4189-4fca-a2d9-ec77ee91f820
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Inter–lending and document supply (ILDS)
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /evidence-sources-guidance:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+      hippo:name: Evidence sources (Guidance)
+      hippo:versionHistory: 3b7afb3f-8282-4d5a-9746-5af0823cdd47
+      /evidence-sources-guidance[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 5813440f-9259-4dfa-bdee-530555063bee
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:35.929+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 971e3e32-5f5b-4dd7-8075-fc8a73cb1635
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Evidence sources (Guidance)
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /evidence-sources-guidance[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 21316d3a-8182-4634-96e3-b18c9df8ab12
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:32.666+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 971e3e32-5f5b-4dd7-8075-fc8a73cb1635
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Evidence sources (Guidance)
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /evidence-sources-guidance[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2abed059-36e5-40d3-b273-60b6e096ce0d
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:35.929+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:11:37.364+07:00
+        hippotranslation:id: 971e3e32-5f5b-4dd7-8075-fc8a73cb1635
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Evidence sources (Guidance)
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /open-access-and-repositories:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 2532e41b-bb5c-42b6-9379-432cc418aa82
+      hippo:name: Open access and repositories
+      hippo:versionHistory: 3c390e77-def9-44b4-8822-a401ca13f50e
+      /open-access-and-repositories[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 13ca1191-d4e6-422d-b8a2-a1c2be72c01c
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:52.386+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3f3f9f48-1b74-4f54-8c0f-4594c5eeb77a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Open access and repositories
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /open-access-and-repositories[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 5232bdeb-891e-4744-9fc4-65524c6b2ea2
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:50.119+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3f3f9f48-1b74-4f54-8c0f-4594c5eeb77a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Open access and repositories
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /open-access-and-repositories[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ea6e06b5-4682-4af7-b3bc-04ed5b315f2a
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:11:52.386+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:11:53.917+07:00
+        hippotranslation:id: 3f3f9f48-1b74-4f54-8c0f-4594c5eeb77a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Open access and repositories
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hlisd:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 67eb3c62-7094-43ca-a42c-2aa8874c9668
+      hippo:name: HLISD
+      hippo:versionHistory: 435cfcc8-71d5-42cf-ab3f-59df7c1591d3
+      /hlisd[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 32a4806a-25fd-4d6d-a52d-fea872876770
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:04.885+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4028167f-f3e5-4189-908f-9fa3bffdf9c4
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: HLISD
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hlisd[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ce8c0aa1-2b33-4e58-8959-980e785425c8
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:02.928+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4028167f-f3e5-4189-908f-9fa3bffdf9c4
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: HLISD
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hlisd[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: cc34e385-df92-4011-b2a0-7e70217238cf
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:04.885+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:12:06.105+07:00
+        hippotranslation:id: 4028167f-f3e5-4189-908f-9fa3bffdf9c4
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: HLISD
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /websites-for-library-staff:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: d52750b5-9d64-45f5-954c-d3e81bce2976
+      hippo:name: Websites for library staff
+      hippo:versionHistory: 864f0650-34d3-4752-ac0a-103b0e551899
+      /websites-for-library-staff[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: f9c3b195-5cbc-4483-93d7-057c90e5a907
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:18.516+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 68cf1fdd-2b23-402f-85e7-8ef3e3c7242e
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Websites for library staff
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /websites-for-library-staff[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d689dde7-06d6-41ed-b7fc-6e8db4e15211
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:16.577+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 68cf1fdd-2b23-402f-85e7-8ef3e3c7242e
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Websites for library staff
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /websites-for-library-staff[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b3eb15b2-7122-4d1b-84ba-a59ad68bad28
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:18.516+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:12:20.084+07:00
+        hippotranslation:id: 68cf1fdd-2b23-402f-85e7-8ef3e3c7242e
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Websites for library staff
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /search-skills-training:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: d53bd083-c132-4db4-888c-dacf5314b9af
+      hippo:name: Search skills training
+      hippo:versionHistory: e3c2e859-1de3-424e-bc1c-0b9e82a966a3
+      /search-skills-training[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: f5f00722-4c34-41c3-adbc-7a8af99954a7
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:31.658+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a80626ac-cd8a-41a0-8110-c2f6a0839a0a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Search skills training
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /search-skills-training[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 78e80cdc-5f34-4e73-bb8f-84daa325f7a9
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:29.312+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a80626ac-cd8a-41a0-8110-c2f6a0839a0a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Search skills training
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /search-skills-training[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 17217bf6-7b91-4e8d-943f-c1801201957b
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:31.658+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:12:33.022+07:00
+        hippotranslation:id: a80626ac-cd8a-41a0-8110-c2f6a0839a0a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Search skills training
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /resource-discovery-groups:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 7a7e7415-aad8-42e3-babe-6d1d37dae132
+      hippo:name: Resource Discovery Groups
+      hippo:versionHistory: d74849e5-0cb5-4ad9-9efe-2138e342cbcb
+      /resource-discovery-groups[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: b826ba76-295c-4969-83c1-0f1fa8132ac5
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:43.252+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7f739caf-e788-4cb3-96de-d77a7db094f1
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Resource Discovery Groups
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /resource-discovery-groups[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 87be5878-5d83-4725-82f8-5ebdaaaea51a
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:41.517+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7f739caf-e788-4cb3-96de-d77a7db094f1
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Resource Discovery Groups
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /resource-discovery-groups[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 67978d2c-c802-4784-8327-545a50a792c5
+        hee:description: Duis aute irure dolor in reprehenderit in voluptate.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:12:43.252+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:12:44.875+07:00
+        hippotranslation:id: 7f739caf-e788-4cb3-96de-d77a7db094f1
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Resource Discovery Groups
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /bulletins:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 600320ec-ddf0-4a29-b76b-1250c598a907
+      hippo:name: Bulletins
+      hippo:versionHistory: c953e4e6-7d4c-4bcd-8a9b-0ac513f41606
+      /bulletins[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 9d2701de-dff7-4888-bbcc-365b6900b364
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:01.155+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1405d377-7eb1-4ba2-9913-927fce025d02
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Bulletins
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /bulletins[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 5ee645e8-8ffe-452f-9a4e-86688e9e7fe5
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:20:59.043+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1405d377-7eb1-4ba2-9913-927fce025d02
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Bulletins
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /bulletins[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 804558de-5e89-4d3c-b9c9-326b2dafe23d
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:01.155+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:21:02.789+07:00
+        hippotranslation:id: 1405d377-7eb1-4ba2-9913-927fce025d02
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Bulletins
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /adapting-the-workplace:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: f9fc8ccd-07d7-447b-8450-d99006459fb4
+      hippo:name: Adapting the workplace
+      hippo:versionHistory: 56bf902e-1762-4b58-ab89-7263ce53596b
+      /adapting-the-workplace[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 3c17477c-1c50-4fa4-9834-91fcc350351c
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:14.287+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: b25acfa1-4708-4820-9b1e-97e18c506f7a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Adapting the workplace
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /adapting-the-workplace[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: cd733474-e634-4f4a-8814-f545400b8406
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:12.272+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: b25acfa1-4708-4820-9b1e-97e18c506f7a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Adapting the workplace
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /adapting-the-workplace[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 827ad124-f073-4718-ae39-3a97d157f90e
+        hee:description: Guidance on finding evidence sources from external sites.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:14.287+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-02-26T09:21:15.888+07:00
+        hippotranslation:id: b25acfa1-4708-4820-9b1e-97e18c506f7a
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Adapting the workplace
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

@@ -1,4 +1,5 @@
 /content/documents/lks/landing-pages:
+  .meta:order-before: common
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: d6dc815e-94f5-4d61-a730-f05535c9dddd
@@ -11,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: dee51778-a61b-42f1-be47-76627658d0a2
     hippo:name: Knowledge management
-    hippo:versionHistory: 4c93ed8c-7212-47b7-a4ff-4d01f725683a
+    hippo:versionHistory: 70f4f030-48b1-4d87-a8f1-71fd81f58494
     /knowledge-management[1]:
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -23,109 +24,49 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-02-08T17:28:10.408+07:00
+      hippostdpubwf:lastModificationDate: 2021-02-26T09:12:57.430+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
       /hee:contentCards:
         jcr:primaryType: hee:contentCards
         hee:header: ''
-        /hee:items[1]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Content procurement
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[2]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Expert searching
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[3]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Discovery and delivery infrastructure
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[4]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Essential Sites Update
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[5]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: OpenAthens
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[6]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Inter–lending and document supply (ILDS)
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
+        /hee:cards[4]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
+        /hee:cards[5]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
+        /hee:cards[6]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5d795439-58f0-491e-92e3-df3aaecc48c7
+        /hee:cards[7]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+        /hee:cards[8]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 2532e41b-bb5c-42b6-9379-432cc418aa82
+        /hee:cards[9]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
+        /hee:cards[10]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: d52750b5-9d64-45f5-954c-d3e81bce2976
+        /hee:cards[11]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
+        /hee:cards[12]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7a7e7415-aad8-42e3-babe-6d1d37dae132
       /hee:HeroSection:
         jcr:primaryType: hee:HeroSection
         hee:header: Knowledge management
@@ -141,109 +82,49 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-02-08T17:28:13.750+07:00
+      hippostdpubwf:lastModificationDate: 2021-02-26T09:14:17.108+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
       /hee:contentCards:
         jcr:primaryType: hee:contentCards
         hee:header: ''
-        /hee:items[1]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Content procurement
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[2]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Expert searching
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[3]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Discovery and delivery infrastructure
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[4]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Essential Sites Update
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[5]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: OpenAthens
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[6]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Inter–lending and document supply (ILDS)
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
+        /hee:cards[4]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
+        /hee:cards[5]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
+        /hee:cards[6]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5d795439-58f0-491e-92e3-df3aaecc48c7
+        /hee:cards[7]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+        /hee:cards[8]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 2532e41b-bb5c-42b6-9379-432cc418aa82
+        /hee:cards[9]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
+        /hee:cards[10]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: d52750b5-9d64-45f5-954c-d3e81bce2976
+        /hee:cards[11]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
+        /hee:cards[12]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7a7e7415-aad8-42e3-babe-6d1d37dae132
       /hee:HeroSection:
         jcr:primaryType: hee:HeroSection
         hee:header: Knowledge management
@@ -259,110 +140,50 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-02-08T17:28:13.750+07:00
+      hippostdpubwf:lastModificationDate: 2021-02-26T09:14:17.108+07:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-02-08T17:28:15.464+07:00
+      hippostdpubwf:publicationDate: 2021-02-26T09:14:18.637+07:00
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
       /hee:contentCards:
         jcr:primaryType: hee:contentCards
         hee:header: ''
-        /hee:items[1]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Content procurement
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[2]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Expert searching
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[3]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Discovery and delivery infrastructure
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[4]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Essential Sites Update
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[5]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: OpenAthens
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:items[6]:
-          jcr:primaryType: hee:contentCardItem
-          hee:description: Duis aute irure dolor in reprehenderit in voluptate.
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:text: Inter–lending and document supply (ILDS)
-            hee:url: '#'
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
+        /hee:cards[4]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
+        /hee:cards[5]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
+        /hee:cards[6]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5d795439-58f0-491e-92e3-df3aaecc48c7
+        /hee:cards[7]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+        /hee:cards[8]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 2532e41b-bb5c-42b6-9379-432cc418aa82
+        /hee:cards[9]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
+        /hee:cards[10]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: d52750b5-9d64-45f5-954c-d3e81bce2976
+        /hee:cards[11]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
+        /hee:cards[12]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7a7e7415-aad8-42e3-babe-6d1d37dae132
       /hee:HeroSection:
         jcr:primaryType: hee:HeroSection
         hee:header: Knowledge management
