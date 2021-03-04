@@ -33,6 +33,8 @@
 
     <@hst.include ref="header"/>
 
+    <@hst.include ref="breadcrumb"/>
+
     <@hst.include ref="main"/>
 
     <@hst.include ref="footer"/>
