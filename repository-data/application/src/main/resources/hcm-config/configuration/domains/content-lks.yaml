@@ -1,0 +1,44 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-lks:
+      jcr:primaryType: hipposys:domain
+      /document-domain:
+        jcr:primaryType: hipposys:domainrule
+        /lks-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/lks
+      /author:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [lks-author]
+        hipposys:role: author
+      /editor:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [lks-editor]
+        hipposys:role: editor
+      /gallery-domain:
+        jcr:primaryType: hipposys:domainrule
+        /lks-gallery-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/gallery/lks
+      /assets-domain:
+        jcr:primaryType: hipposys:domainrule
+        /lks-assets-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/assets/lks
