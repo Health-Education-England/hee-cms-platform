@@ -1,0 +1,81 @@
+/content/documents/lks/minihubs:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 247a6abe-af98-4e25-ba6d-017f6c9b93b3
+  hippo:name: MiniHubs
+  hippostd:foldertype: [new-minihub-document, new-minihub-folder]
+  hippotranslation:id: 8e9a1107-f130-4d48-985a-bf4fd0c4875f
+  hippotranslation:locale: en
+  /test:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 97382d63-4ebb-4a77-9d37-bf3873b871dd
+    hippo:name: Test
+    hippo:versionHistory: 614d015c-a74e-4003-bc0d-128c970abf02
+    /test[1]:
+      jcr:primaryType: hee:MiniHub
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 9f3e339a-2a38-4e10-aa3c-a343bf4ab505
+      hee:summary: Advice and support on patient and public information and general
+        guidelines.
+      hee:title: Patient and public information
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-04T09:04:15.357+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
+      hippotranslation:locale: en
+      /hee:guidances[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 045dc802-5e92-4edc-99c3-dd18819ac0b7
+      /hee:guidances[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+    /test[2]:
+      jcr:primaryType: hee:MiniHub
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 3710f949-a31e-4d9f-839b-ecda26621471
+      hee:summary: Advice and support on patient and public information and general
+        guidelines.
+      hee:title: Patient and public information
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-04T09:04:25.457+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
+      hippotranslation:locale: en
+      /hee:guidances[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 045dc802-5e92-4edc-99c3-dd18819ac0b7
+      /hee:guidances[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+    /test[3]:
+      jcr:primaryType: hee:MiniHub
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 4db45efb-7fa3-4091-bcd3-211582574ff9
+      hee:summary: Advice and support on patient and public information and general
+        guidelines.
+      hee:title: Patient and public information
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-04T09:04:25.457+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-03-04T09:04:29.432+07:00
+      hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
+      hippotranslation:locale: en
+      /hee:guidances[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 045dc802-5e92-4edc-99c3-dd18819ac0b7
+      /hee:guidances[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
