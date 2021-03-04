@@ -1,6 +1,8 @@
 <#include "../../include/imports.ftl">
 <#include "../macros/guidance-content.ftl"/>
 
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
+
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.MiniHub" -->
 <#-- @ftlvariable name="currentGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="previousGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
@@ -49,7 +51,7 @@
                             <li class="nhsuk-pagination-item--previous">
                                 <a class="nhsuk-pagination__link nhsuk-pagination__link--prev"
                                    href="${previousGuidance.name}">
-                                    <span class="nhsuk-pagination__title">Previous</span>
+                                    <span class="nhsuk-pagination__title"><@fmt.message key="previous"/></span>
                                     <span class="nhsuk-u-visually-hidden">:</span>
                                     <span class="nhsuk-pagination__page">${previousGuidance.title}</span>
                                     <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +66,7 @@
                             <li class="nhsuk-pagination-item--next">
                                 <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
                                    href="${nextGuidance.name}">
-                                    <span class="nhsuk-pagination__title">Next</span>
+                                    <span class="nhsuk-pagination__title"><@fmt.message key="next"/></span>
                                     <span class="nhsuk-u-visually-hidden">:</span>
                                     <span class="nhsuk-pagination__page">${nextGuidance.title}</span>
                                     <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg"
