@@ -7,6 +7,7 @@
 <#-- @ftlvariable name="currentGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="previousGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="nextGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
+<#-- @ftlvariable name="accessFromRootHub" type="java.lang.Boolean" -->
 <#if document??>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
@@ -64,8 +65,11 @@
 
                         <#if nextGuidance??>
                             <li class="nhsuk-pagination-item--next">
-                                <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
-                                   href="${nextGuidance.name}">
+                                <#assign nextURL>
+                                    <#if accessFromRootHub>${document.name + "/" + nextGuidance.name}
+                                    <#else>${nextGuidance.name}</#if>
+                                </#assign>
+                                <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="${nextURL}">
                                     <span class="nhsuk-pagination__title"><@fmt.message key="next"/></span>
                                     <span class="nhsuk-u-visually-hidden">:</span>
                                     <span class="nhsuk-pagination__page">${nextGuidance.title}</span>
