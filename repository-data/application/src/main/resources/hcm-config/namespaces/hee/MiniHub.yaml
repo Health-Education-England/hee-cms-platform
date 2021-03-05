@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 406d6fa5-2427-4342-a313-8dc8035348ec
+          jcr:uuid: 942dd3a1-4759-4129-957f-9ba58025b6c6
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -33,12 +33,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /guidances:
+          /guidancePages:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: true
-            hipposysedit:path: hee:guidances
+            hipposysedit:path: hee:guidancePages
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
@@ -55,10 +55,10 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: a966153c-2690-4916-b1ed-29ff00571683
+          jcr:uuid: cf6ac64d-259a-4924-a346-f8d9a69b5d46
           hippostdpubwf:lastModificationDate: 2021-03-03T10:42:34.081+07:00
           hippostdpubwf:creationDate: 2021-03-03T10:42:34.081+07:00
-          /hee:guidances:
+          /hee:guidancePages:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -89,13 +89,12 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /guidances:
+          /guidancePages:
             jcr:primaryType: frontend:plugin
-            caption: Guidances
-            field: guidances
+            caption: Guidance Pages
+            field: guidancePages
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:guidance']

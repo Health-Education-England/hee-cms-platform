@@ -7,6 +7,8 @@ import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.MiniHub;
 
+import java.util.List;
+
 public class MiniHubComponent extends EssentialsContentComponent {
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -17,16 +19,17 @@ public class MiniHubComponent extends EssentialsContentComponent {
             String guidanceName = getComponentParameter("guidance");
             Guidance previousGuidance = null, nextGuidance = null, currentGuidance = null;
             boolean accessFromRootHub = false;
+            List<Guidance> guidancePages = miniHub.getGuidancePages();
             if (StringUtils.isNotEmpty(guidanceName)) {
-                for (int i = 0; i < miniHub.getGuidances().size(); i++) {
-                    Guidance guidance = miniHub.getGuidances().get(i);
+                for (int i = 0; i < guidancePages.size(); i++) {
+                    Guidance guidance = guidancePages.get(i);
                     if (guidance.getName().equalsIgnoreCase(guidanceName)) {
                         currentGuidance = guidance;
                         if (i > 0) {
-                            previousGuidance = miniHub.getGuidances().get(i - 1);
+                            previousGuidance = guidancePages.get(i - 1);
                         }
-                        if (i < miniHub.getGuidances().size() - 1) {
-                            nextGuidance = miniHub.getGuidances().get(i + 1);
+                        if (i < guidancePages.size() - 1) {
+                            nextGuidance = guidancePages.get(i + 1);
                         }
                         break;
                     }
@@ -34,9 +37,9 @@ public class MiniHubComponent extends EssentialsContentComponent {
             } else {
                 accessFromRootHub = true;
                 // There is restriction in the CMS to make sure having at least one guidance on hub
-                currentGuidance = miniHub.getGuidances().get(0);
-                if (miniHub.getGuidances().size() > 1) {
-                    nextGuidance = miniHub.getGuidances().get(1);
+                currentGuidance = guidancePages.get(0);
+                if (guidancePages.size() > 1) {
+                    nextGuidance = guidancePages.get(1);
                 }
             }
 

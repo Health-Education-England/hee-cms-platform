@@ -18,8 +18,8 @@ public class MiniHub extends BaseDocument {
         return getSingleProperty("hee:summary");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:guidances")
-    public List<Guidance> getGuidances() {
-        return getLinkedBeans("hee:guidances", Guidance.class);
+    @HippoEssentialsGenerated(internalName = "hee:guidancePages")
+    public List<Guidance> getGuidancePages() {
+        return getLinkedBeans("hee:guidancePages", Guidance.class);
     }
 }

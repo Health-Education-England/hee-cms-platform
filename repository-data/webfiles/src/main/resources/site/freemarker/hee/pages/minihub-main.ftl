@@ -25,7 +25,7 @@
                     <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
                         <h2>Contents</h2>
                         <ol class="nhsuk-contents-list__list">
-                            <#list document.guidances as guidance>
+                            <#list document.guidancePages as guidance>
                                 <#if guidance == currentGuidance>
                                     <li class="nhsuk-contents-list__item" aria-current="page">
                                         <span class="nhsuk-contents-list__current">${guidance.title}</span>
