@@ -1,4 +1,5 @@
 <#include "../../include/imports.ftl">
+<@hst.defineObjects />
 
 <@hst.setBundle basename="uk.nhs.hee.web.homepage"/>
 <section class="nhsuk-section">

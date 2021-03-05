@@ -1,5 +1,6 @@
 <!doctype html>
 <#include "../../include/imports.ftl">
+<@hst.defineObjects />
 <#assign organizationName = "${hstRequestContext.resolvedMount.mount.channelInfo.organizationName}">
 <html lang="en">
   <head>
