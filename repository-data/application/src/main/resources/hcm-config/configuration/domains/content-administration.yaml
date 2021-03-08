@@ -1,0 +1,24 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-administration:
+      jcr:primaryType: hipposys:domain
+      /content-domain:
+        jcr:primaryType: hipposys:domainrule
+        /administration-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/administration
+      /readonly:
+        jcr:primaryType: hipposys:authrole
+        hipposys:role: readonly
+        hipposys:userrole:
+          .meta:category: system
+          type: string
+          value: xm.content.user
+        hipposys:users:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: []
