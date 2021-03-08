@@ -17,6 +17,7 @@ definitions:
         hst:refId: pagenotfound
       /minihub:
         jcr:primaryType: hst:sitemapitem
+        hst:hiddeninchannelmanager: true
         /_default_:
           jcr:primaryType: hst:sitemapitem
           hst:componentconfigurationid: hst:pages/minihub
@@ -25,5 +26,3 @@ definitions:
             jcr:primaryType: hst:sitemapitem
             hst:componentconfigurationid: hst:pages/minihub
             hst:relativecontentpath: minihubs/${1}
-            hst:parameternames: [abc]
-            hst:parametervalues: [abc]

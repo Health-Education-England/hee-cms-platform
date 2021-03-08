@@ -33,7 +33,7 @@
                                 <#else>
                                     <li class="nhsuk-contents-list__item">
                                         <a class="nhsuk-contents-list__link"
-                                           href="${guidance.name}">${guidance.title}</a>
+                                           href="${accessFromRootHub?then(document.name + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
                                     </li>
                                 </#if>
                             </#list>
@@ -65,11 +65,8 @@
 
                         <#if nextGuidance??>
                             <li class="nhsuk-pagination-item--next">
-                                <#assign nextURL>
-                                    <#if accessFromRootHub>${document.name + "/" + nextGuidance.name}
-                                    <#else>${nextGuidance.name}</#if>
-                                </#assign>
-                                <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="${nextURL}">
+                                <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
+                                   href="${accessFromRootHub?then(document.name + '/' + nextGuidance.name, nextGuidance.name)}">
                                     <span class="nhsuk-pagination__title"><@fmt.message key="next"/></span>
                                     <span class="nhsuk-u-visually-hidden">:</span>
                                     <span class="nhsuk-pagination__page">${nextGuidance.title}</span>
