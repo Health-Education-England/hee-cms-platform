@@ -1,5 +1,5 @@
 <#include "../../include/imports.ftl">
-
+<@hst.defineObjects />
 <#assign organizationName = "${hstRequestContext.resolvedMount.mount.channelInfo.organizationName}">
 
 <div class="nhsuk-width-container nhsuk-header__container">
