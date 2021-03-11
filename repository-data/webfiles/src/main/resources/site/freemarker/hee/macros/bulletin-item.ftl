@@ -1,4 +1,4 @@
-<@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>
+<#--<@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>-->
 
 <#macro bulletinItem title category overview websiteURL websiteText>
     <dl class="nhsuk-summary-list">
