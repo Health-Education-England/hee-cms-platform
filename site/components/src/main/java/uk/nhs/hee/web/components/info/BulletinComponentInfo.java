@@ -7,11 +7,11 @@ import org.hippoecm.hst.core.parameters.Parameter;
 import org.onehippo.cms7.essentials.components.info.EssentialsPageable;
 
 @FieldGroupList({
-        @FieldGroup(value = {"pageSize"}, titleKey = "pagination.group"),
-        @FieldGroup(value = {"path", "documentTypes"}, titleKey = "list.group")
+        @FieldGroup(value = {"pageSize"}, titleKey = "Pagination"),
+        @FieldGroup(value = {"path", "documentTypes"}, titleKey = "Documents")
 
 })
-public interface BulletinComponentInfo extends EssentialsPageable {
+public interface BulletinComponentInfo {
 
     @Parameter(
             name = "documentTypes",
