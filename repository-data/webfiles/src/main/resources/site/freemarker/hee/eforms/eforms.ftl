@@ -16,119 +16,113 @@
     <p>${afterProcessSuccessText!}</p>
 </#if>
 <#if form??>
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-        <div class="nhsuk-width-container">
-            <#if form.title?has_content>
-                <h2>${form.title}</h2>
+    <#if form.title?has_content>
+        <h2>${form.title}</h2>
+    </#if>
+
+    <#if formIntro?has_content>
+        <p>${formIntro}</p>
+    </#if>
+
+    <#assign style="display:none;">
+    <#if eforms_error?? && (eforms_error?size > 0)>
+        <#assign style="">
+    </#if>
+
+    <#if maxFormSubmissionsReached?has_content>
+
+        <#if maxFormSubmissionsReachedText?has_content>
+            <p>${maxFormSubmissionsReachedText}</p>
+        <#else>
+            <p>The maximum number of submission for this form has been reached</p>
+        </#if>
+
+    <#else>
+
+        <form class="form" action="<@hst.actionURL />" method="post" name="${form.name!}"
+              <#if form.multipart>enctype="multipart/form-data"</#if>>
+
+            <#assign formPages = form.pages>
+
+            <#if formPages?? && (formPages?size > 1)>
+
+                <ul id="pagesTab" class="eforms-pagetab" style="DISPLAY: none">
+                    <#list formPages as page>
+                        <#if page_index == 0>
+                            <li class="conditionally-visible selected">${page.label}</li>
+                        <#else>
+                            <li class="conditionally-visible">${page.label}</li>
+                        </#if>
+                    </#list>
+                </ul>
             </#if>
 
-            <#if formIntro?has_content>
-                <p>${formIntro}</p>
-            </#if>
+            <#if formPages?? && (formPages?size > 0)>
 
-            <#assign style="display:none;">
-            <#if eforms_error?? && (eforms_error?size > 0)>
-                <#assign style="">
-            </#if>
+                <#list formPages as page>
 
-            <#if maxFormSubmissionsReached?has_content>
+                    <div id="page${page_index}" class="eforms-page conditionally-visible">
 
-                <#if maxFormSubmissionsReachedText?has_content>
-                    <p>${maxFormSubmissionsReachedText}</p>
-                <#else>
-                    <p>The maximum number of submission for this form has been reached</p>
-                </#if>
+                        <#list page.fields as fieldItem>
 
-            <#else>
-
-                <form class="form" action="<@hst.actionURL />" method="post" name="${form.name!}"
-                      <#if form.multipart>enctype="multipart/form-data"</#if>>
-
-                    <#assign formPages = form.pages>
-
-                    <#if formPages?? && (formPages?size > 1)>
-
-                        <ul id="pagesTab" class="eforms-pagetab" style="DISPLAY: none">
-                            <#list formPages as page>
-                                <#if page_index == 0>
-                                    <li class="conditionally-visible selected">${page.label}</li>
-                                <#else>
-                                    <li class="conditionally-visible">${page.label}</li>
+                            <#if fieldItem.type == "fieldgroup">
+                                <#assign groupCssClassName = "eforms-fieldgroup">
+                                <#if fieldItem.oneline>
+                                    <#assign groupCssClassName = "eforms-fieldgroup oneline">
                                 </#if>
-                            </#list>
-                        </ul>
-                    </#if>
 
-                    <#if formPages?? && (formPages?size > 0)>
-
-                        <#list formPages as page>
-
-                            <div id="page${page_index}" class="eforms-page conditionally-visible">
-
-                                <#list page.fields as fieldItem>
-
-                                    <#if fieldItem.type == "fieldgroup">
-                                        <#assign groupCssClassName = "eforms-fieldgroup">
-                                        <#if fieldItem.oneline>
-                                            <#assign groupCssClassName = "eforms-fieldgroup oneline">
-                                        </#if>
-
-                                        <fieldset name="${fieldItem.fieldNamePrefix!}" class="${groupCssClassName!}">
-                                            <#if fieldItem.label?has_content>
-                                                <legend class="eforms-fieldgroupname">${fieldItem.label}</legend>
-                                            </#if>
-                                            <#list fieldItem.fields as fieldItemInGroup>
-                                                <@fieldRenderer.renderField field=fieldItemInGroup/>
-                                            </#list>
-                                            <#if fieldItem.hint??>
-                                                <span class="eforms-hint">${fieldItem.hint}</span>
-                                            </#if>
-                                        </fieldset>
-
-                                    <#else>
-                                        <@fieldRenderer.renderField field=fieldItem/>
+                                <fieldset name="${fieldItem.fieldNamePrefix!}" class="${groupCssClassName!}">
+                                    <#if fieldItem.label?has_content>
+                                        <legend class="eforms-fieldgroupname">${fieldItem.label}</legend>
                                     </#if>
+                                    <#list fieldItem.fields as fieldItemInGroup>
+                                        <@fieldRenderer.renderField field=fieldItemInGroup/>
+                                    </#list>
+                                    <#if fieldItem.hint??>
+                                        <span class="eforms-hint">${fieldItem.hint}</span>
+                                    </#if>
+                                </fieldset>
 
-                                </#list>
-
-                            </div>
-
-                        </#list>
-
-                    </#if>
-
-                    <div class="eforms-buttons">
-                        <#list form.buttons as button>
-                            <#if button.type == "nextbutton">
-                                <input id="nextPageButton" type="button" name="nextPageButton"
-                                       class="${button.styleClass!}" style="display: none"
-                                       value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
-                            <#elseif button.type == "previousbutton">
-                                <input id="previousPageButton" type="button" name="previousPageButton"
-                                       class="${button.styleClass!}" style="display: none"
-                                       value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
-                            <#elseif button.type == "resetbutton">
-                                <input type="reset" name="${button.formRelativeUniqueName}"
-                                       class="${button.styleClass!}"
-                                       value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
-                            <#elseif button.type == "submitbutton">
-
-                                <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
-                                    <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
-                                </button>
                             <#else>
-                                <input type="button" name="${button.formRelativeUniqueName}"
-                                       class="${button.styleClass!}"
-                                       value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                                <@fieldRenderer.renderField field=fieldItem/>
                             </#if>
+
                         </#list>
+
                     </div>
-                </form>
+
+                </#list>
+
             </#if>
-        </div>
-    </main>
 
+            <div class="eforms-buttons">
+                <#list form.buttons as button>
+                    <#if button.type == "nextbutton">
+                        <input id="nextPageButton" type="button" name="nextPageButton"
+                               class="${button.styleClass!}" style="display: none"
+                               value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                    <#elseif button.type == "previousbutton">
+                        <input id="previousPageButton" type="button" name="previousPageButton"
+                               class="${button.styleClass!}" style="display: none"
+                               value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                    <#elseif button.type == "resetbutton">
+                        <input type="reset" name="${button.formRelativeUniqueName}"
+                               class="${button.styleClass!}"
+                               value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                    <#elseif button.type == "submitbutton">
 
+                        <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
+                            <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
+                        </button>
+                    <#else>
+                        <input type="button" name="${button.formRelativeUniqueName}"
+                               class="${button.styleClass!}"
+                               value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                    </#if>
+                </#list>
+            </div>
+        </form>
+    </#if>
 </#if>
 
 <#--
