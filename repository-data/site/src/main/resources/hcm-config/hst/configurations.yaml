@@ -49,6 +49,9 @@ definitions:
           /minihub-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/pages/minihub-main.ftl
+          /formpage-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/formpage-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -69,6 +72,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Landing Page
               hst:template: listingpage-main
+            /formpage:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: org.onehippo.cms7.essentials.components.FormPageComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Form Page
+              hst:template: form-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
