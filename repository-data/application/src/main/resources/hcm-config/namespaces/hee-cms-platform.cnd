@@ -3,17 +3,30 @@
 <'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
 <'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
+<'hippogallery'='http://www.onehippo.org/jcr/hippogallery/nt/2.0'>
 
-[hee:HeroSection] > hippo:compound, hippostd:relaxed
+[hee:ActionLink] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
-[hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+[hee:ContentCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:contentCardItem] > hippo:compound, hippostd:relaxed
+[hee:HeroSection] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:MiniHub] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:StatementBlock] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:YellowAlertBlock] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:contentCards] > hippo:compound, hippostd:relaxed
@@ -21,6 +34,8 @@
 
 [hee:guidance] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
+
+[hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
 [hee:link] > hippo:compound, hippostd:relaxed
   orderable

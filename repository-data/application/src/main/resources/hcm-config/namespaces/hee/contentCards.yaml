@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 10a10456-15cb-49b1-bb08-ebaf751b3fa7
+          jcr:uuid: b197bc1b-c597-4b04-b681-9e99581ffd19
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,39 +23,22 @@ definitions:
             hipposysedit:path: hee:header
             hipposysedit:primary: false
             hipposysedit:type: String
-          /items:
+          /mirror:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: true
-            hipposysedit:path: hee:items
+            hipposysedit:path: hee:cards
             hipposysedit:primary: false
-            hipposysedit:type: hee:contentCardItem
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:contentCards
           hee:header: ''
-          /hee:items:
-            jcr:primaryType: hee:contentCardItem
-            hee:description: ''
-            /hee:header:
-              jcr:primaryType: hee:link
-              jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: cbb88f06-4d00-4e86-ba35-9c7e011f6c5f
-              hee:text: ''
-              hee:url: ''
-              hippostd:holder: holder
-              hippostd:state: draft
-              hippostdpubwf:createdBy: ''
-              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-              hippostdpubwf:lastModifiedBy: ''
-              hippotranslation:id: document-type-locale-id
-              hippotranslation:locale: document-type-locale
-              /hee:document:
-                jcr:primaryType: hippo:mirror
-                hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -76,12 +59,13 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /items:
+          /cards:
             jcr:primaryType: frontend:plugin
             caption: Items
-            field: items
+            field: mirror
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:ContentCard']

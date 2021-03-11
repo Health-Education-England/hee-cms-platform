@@ -1,0 +1,60 @@
+<#include "../../include/imports.ftl">
+<#import "../macros/components.ftl" as hee>
+
+<#macro guidance guidanceDocument>
+<#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
+    <#if guidanceDocument??>
+        <div class="nhsuk-width-container">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-two-thirds">
+                    <h1>${guidanceDocument.title}</h1>
+                </div>
+            </div>
+
+            <article>
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                        <section class="nhsuk-page-content__section-one">
+                            <div class="nhsuk-page-content">
+                                <p>${guidanceDocument.summary}</p>
+                                <#if guidanceDocument.contentBlocks??>
+                                    <#list guidanceDocument.contentBlocks as block>
+                                        <#switch block.getClass().getName()>
+                                            <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
+                                                <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
+                                                    <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
+                                                </#if>
+                                                <#break>
+                                            <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                                                <@hst.html hippohtml=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.StatementBlock">
+                                                <@hee.statementBlock block=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.ActionLink">
+                                                <@hee.actionLink actionLink=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
+                                                <@hee.yellowAlertBlock block=block/>
+                                                <#break>
+                                            <#default>
+                                        </#switch>
+                                    </#list>
+                                </#if>
+
+                                <@hee.lastNextReviewedDate lastNextReviewedDate=guidanceDocument.pageLastNextReview/>
+                            </div>
+                        </section>
+                    </div>
+
+                    <@hee.quickLinks quickLinks=guidanceDocument.quickLinks/>
+
+                    <div class="nhsuk-grid-column-full nhsuk-section__content">
+                        <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </main>
+    </#if>
+</#macro>

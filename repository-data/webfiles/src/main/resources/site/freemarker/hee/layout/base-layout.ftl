@@ -1,5 +1,6 @@
 <!doctype html>
 <#include "../../include/imports.ftl">
+<@hst.defineObjects />
 <#assign organizationName = "${hstRequestContext.resolvedMount.mount.channelInfo.organizationName}">
 <html lang="en">
   <head>
@@ -32,6 +33,8 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <@hst.include ref="header"/>
+
+    <@hst.include ref="breadcrumb"/>
 
     <@hst.include ref="main"/>
 

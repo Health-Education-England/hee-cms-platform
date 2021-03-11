@@ -5,7 +5,7 @@ definitions:
       /root:
         jcr:primaryType: hst:sitemapitem
         hst:componentconfigurationid: hst:pages/homepage
-        hst:pagetitle: Home Page
+        hst:pagetitle: Home
         hst:refId: root
       /_any_:
         jcr:primaryType: hst:sitemapitem
@@ -15,3 +15,14 @@ definitions:
         hst:componentconfigurationid: hst:pages/pagenotfound
         hst:pagetitle: Not Found Page
         hst:refId: pagenotfound
+      /minihub:
+        jcr:primaryType: hst:sitemapitem
+        hst:hiddeninchannelmanager: true
+        /_default_:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/minihub
+          hst:relativecontentpath: minihubs/${1}
+          /_any_:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/minihub
+            hst:relativecontentpath: minihubs/${1}           

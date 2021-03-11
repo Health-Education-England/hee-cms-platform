@@ -1,0 +1,16 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:queries/hippo:templates/new-minihub-folder:
+      jcr:primaryType: hippostd:templatequery
+      hippostd:modify: [./_name, $name, './hippotranslation:id', $uuid, './hippotranslation:locale',
+        $inherited]
+      jcr:language: xpath
+      jcr:statement: /jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-minihub-folder/hippostd:templates/node()
+      /hippostd:templates:
+        jcr:primaryType: hippostd:templates
+        /hippostd:folder:
+          jcr:primaryType: hippostd:folder
+          jcr:mixinTypes: ['hippotranslation:translated']
+          hippostd:foldertype: [new-minihub-document, new-minihub-folder]
+          hippotranslation:id: d01196fb-5b5b-4327-a591-92497a8e4a8a
+          hippotranslation:locale: inherited locale
