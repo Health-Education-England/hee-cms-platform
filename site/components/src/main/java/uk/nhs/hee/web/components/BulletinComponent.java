@@ -99,23 +99,10 @@ public class BulletinComponent extends CommonComponent {
         return builder.ofTypes(documentTypes).build();
     }
 
-    /**
-     * Determine the current page of the list query.
-     *
-     * @param request the current request
-     * @return the current page of the query
-     */
     protected int getCurrentPage(final HstRequest request) {
         return getAnyIntParameter(request, REQUEST_PARAM_PAGE, 1);
     }
 
-    /**
-     * Create a list of filters and apply them to the query, using AND logic.
-     *
-     * @param request current HST request
-     * @param query   query under construction
-     * @throws FilterException
-     */
     protected Filter createQueryFilters(final HstRequest request, final HstQuery query) {
         Filter baseFilter = query.createFilter();
         baseFilter.addOrFilter(getCategoryFilter(request, query));
@@ -154,7 +141,7 @@ public class BulletinComponent extends CommonComponent {
         return baseFilter;
     }
 
-    protected HstQuery applySortOrdering(final HstRequest request, final HstQuery query) {
+    protected void applySortOrdering(final HstRequest request, final HstQuery query) {
         String sortOrder = DESCENDING_SORT_ORDER;
 
         final List<String> sortByDateQueryParamValues = getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
@@ -167,8 +154,6 @@ public class BulletinComponent extends CommonComponent {
         } else {
             query.addOrderByDescending(LAST_MODIFICATION_DATE_BEAN_ATTRIBUTE);
         }
-
-        return query;
     }
 
     private Map<String, String> getCategoryValueListMap() {

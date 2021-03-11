@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 68d4c59c-ae99-4228-bf6a-dd5a3bc1f064
+          jcr:uuid: e4e53c53-3d5e-42c3-b7c7-e6270805b173
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -32,14 +32,6 @@ definitions:
             hipposysedit:path: hee:overview
             hipposysedit:primary: false
             hipposysedit:type: String
-          /category:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:category
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
           /websiteText:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -56,6 +48,14 @@ definitions:
             hipposysedit:path: hee:websiteUrl
             hipposysedit:primary: false
             hipposysedit:type: String
+          /category:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:category
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -69,12 +69,12 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:overview: ''
-          jcr:uuid: 08a91326-02ed-45bc-8c6f-71e3b36d8a6f
+          jcr:uuid: 77b44284-7e8f-4149-8122-539b017923ed
           hippostdpubwf:lastModificationDate: 2021-02-07T19:04:36.287Z
           hippostdpubwf:creationDate: 2021-02-07T19:04:36.287Z
-          hee:category: ''
           hee:websiteUrl: ''
           hee:websiteTitle: ''
+          hee:category: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -104,7 +104,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
-              source: /content/documents/administration/value-lists/categories
+              source: /content/documents/administration/lks/value-lists/categories
           /overview:
             jcr:primaryType: frontend:plugin
             caption: Overview

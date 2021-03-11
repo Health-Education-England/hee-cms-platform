@@ -16,11 +16,6 @@ public class Bulletin extends BaseDocument {
         return getSingleProperty("hee:overview");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:category")
-    public String getCategory() {
-        return getSingleProperty("hee:category");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:websiteUrl")
     public String getWebsiteUrl() {
         return getSingleProperty("hee:websiteUrl");
@@ -29,5 +24,10 @@ public class Bulletin extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:websiteTitle")
     public String getWebsiteTitle() {
         return getSingleProperty("hee:websiteTitle");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:category")
+    public String getCategory() {
+        return getSingleProperty("hee:category");
     }
 }
