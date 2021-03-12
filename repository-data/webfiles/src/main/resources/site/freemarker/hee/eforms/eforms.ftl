@@ -46,7 +46,7 @@
 
             <#if formPages?? && (formPages?size > 1)>
 
-                <ul id="pagesTab" class="eforms-pagetab" style="DISPLAY: none">
+                <ul id="pagesTab" class="forms-pagetab" style="DISPLAY: none">
                     <#list formPages as page>
                         <#if page_index == 0>
                             <li class="conditionally-visible selected">${page.label}</li>
@@ -61,25 +61,25 @@
 
                 <#list formPages as page>
 
-                    <div id="page${page_index}" class="eforms-page conditionally-visible">
+                    <div id="page${page_index}" class="forms-page conditionally-visible">
 
                         <#list page.fields as fieldItem>
 
                             <#if fieldItem.type == "fieldgroup">
-                                <#assign groupCssClassName = "eforms-fieldgroup">
+                                <#assign groupCssClassName = "forms-fieldgroup">
                                 <#if fieldItem.oneline>
-                                    <#assign groupCssClassName = "eforms-fieldgroup oneline">
+                                    <#assign groupCssClassName = "forms-fieldgroup oneline">
                                 </#if>
 
                                 <fieldset name="${fieldItem.fieldNamePrefix!}" class="${groupCssClassName!}">
                                     <#if fieldItem.label?has_content>
-                                        <legend class="eforms-fieldgroupname">${fieldItem.label}</legend>
+                                        <legend class="forms-fieldgroupname">${fieldItem.label}</legend>
                                     </#if>
                                     <#list fieldItem.fields as fieldItemInGroup>
                                         <@fieldRenderer.renderField field=fieldItemInGroup/>
                                     </#list>
                                     <#if fieldItem.hint??>
-                                        <span class="eforms-hint">${fieldItem.hint}</span>
+                                        <span class="forms-hint">${fieldItem.hint}</span>
                                     </#if>
                                 </fieldset>
 
@@ -95,7 +95,7 @@
 
             </#if>
 
-            <div class="eforms-buttons">
+            <div class="forms-buttons">
                 <#list form.buttons as button>
                     <#if button.type == "nextbutton">
                         <input id="nextPageButton" type="button" name="nextPageButton"
@@ -111,16 +111,15 @@
                                value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
                     <#elseif button.type == "submitbutton">
 
-                        <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
-                            <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
-                        </button>
-                    <#else>
-                        <input type="button" name="${button.formRelativeUniqueName}"
-                               class="${button.styleClass!}"
-                               value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
-                    </#if>
-                </#list>
-            </div>
+                    <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
+                        <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
+                    </button>
+                <#else>
+                    <input type="button" name="${button.formRelativeUniqueName}"
+                           class="${button.styleClass!}"
+                           value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                </#if>
+            </#list>
         </form>
     </#if>
 </#if>
@@ -195,8 +194,8 @@
             $('form[name="${form.name}"]').validate({errorElement: 'div'});
 
             var resetPagesVisible = function () {
-                var allPages = $('.eforms-page.conditionally-visible');
-                var curPage = $('.eforms-page.conditionally-visible:visible:first');
+                var allPages = $('.forms-page.conditionally-visible');
+                var curPage = $('.forms-page.conditionally-visible:visible:first');
                 var curIndex = -1;
 
                 for (var i = 0; i < allPages.length; i++) {
@@ -211,12 +210,12 @@
 
                 if (curIndex < allPages.length - 1) {
                     $('#nextPageButton').show();
-                    $('.eforms-buttons input[type="submit"]').each(function () {
+                    $('.forms-buttons input[type="submit"]').each(function () {
                         $(this).hide();
                     });
                 } else if (curIndex == allPages.length - 1) {
                     $('#nextPageButton').hide();
-                    $('.eforms-buttons input[type="submit"]').each(function () {
+                    $('.forms-buttons input[type="submit"]').each(function () {
                         $(this).show();
                     });
                 }
@@ -237,7 +236,7 @@
                     var fieldType = field.attr('type');
                     var fieldName = field.attr('name');
                     var checked = [];
-                    var checkedSelector = '.eforms-page.conditionally-visible:visible .form-field *:input[name="' + fieldName + '"]:checked';
+                    var checkedSelector = '.forms-page.conditionally-visible:visible .form-field *:input[name="' + fieldName + '"]:checked';
 
                     if (fieldType == 'checkbox') {
                         if (!params[fieldName]) {
@@ -398,7 +397,7 @@
                                 targetField = $('.form-fieldgroup[name="' + name + '"]');
                             }
                             if (targetField.length == 0) {
-                                targetField = $('.eforms-text[name="' + name + '"]');
+                                targetField = $('.forms-text[name="' + name + '"]');
                             }
                             if (targetField.length == 0) continue;
 
@@ -462,18 +461,18 @@
                 $('#pagesTab').show();
             }
             <#-- Hide all the pages except of the first page -->
-            $('.eforms-page').each(function () {
+            $('.forms-page').each(function () {
                 $(this).hide();
             });
-            if ($('.eforms-page.conditionally-visible').length) {
-                $('.eforms-page.conditionally-visible:first').show();
+            if ($('.forms-page.conditionally-visible').length) {
+                $('.forms-page.conditionally-visible:first').show();
             }
 
             resetPagesVisible();
 
             $('#previousPageButton').click(function () {
-                var curPage = $('.eforms-page.conditionally-visible:visible');
-                var prevPage = curPage.prevAll('.eforms-page.conditionally-visible:first');
+                var curPage = $('.forms-page.conditionally-visible:visible');
+                var prevPage = curPage.prevAll('.forms-page.conditionally-visible:first');
                 prevPage.show();
                 curPage.hide();
 
@@ -482,26 +481,26 @@
                 $('#pagesTab li:nth-child(' + (curIndex + 1) + ')').removeClass('selected');
                 $('#pagesTab li:nth-child(' + (prevIndex + 1) + ')').addClass('selected');
 
-                if (prevPage.prevAll('.eforms-page.conditionally-visible:first').length == 0) {
+                if (prevPage.prevAll('.forms-page.conditionally-visible:first').length == 0) {
                     $('#previousPageButton').hide();
                 }
                 $('#nextPageButton').show();
-                $('.eforms-buttons input[type="submit"]').each(function () {
+                $('.forms-buttons input[type="submit"]').each(function () {
                     $(this).hide();
                 });
             });
 
             $('#nextPageButton').click(function () {
-                var curPage = $('.eforms-page.conditionally-visible:visible');
+                var curPage = $('.forms-page.conditionally-visible:visible');
 
                 // ajax based validation
                 // validate all fields on current page before going to the next
                 var params = {};
-                var fieldsOnPage = $('.eforms-page.conditionally-visible:visible .form-field:visible *:input');
+                var fieldsOnPage = $('.forms-page.conditionally-visible:visible .form-field:visible *:input');
                 addFormFieldsToParameters(fieldsOnPage, params);
 
                 // add an empty parameter for any group on the current page
-                var groupsOnPage = $('.eforms-page.conditionally-visible:visible .form-fieldgroup:visible');
+                var groupsOnPage = $('.forms-page.conditionally-visible:visible .form-fieldgroup:visible');
                 groupsOnPage.each(function () {
                     params[$(this).attr('name')] = '';
                 });
@@ -516,7 +515,7 @@
             // ajax page validation in case of last (or only) page
             $('form[name="${form.name}"]').submit(function (event) {
 
-                var curPage = $('.eforms-page.conditionally-visible:visible');
+                var curPage = $('.forms-page.conditionally-visible:visible');
 
                 // if valid flag is set, page was validated and form can be submitted
                 if (valid) {
@@ -524,11 +523,11 @@
                 }
 
                 var params = {};
-                var fieldsOnPage = $('.eforms-page.conditionally-visible:visible .form-field:visible *:input');
+                var fieldsOnPage = $('.forms-page.conditionally-visible:visible .form-field:visible *:input');
                 addFormFieldsToParameters(fieldsOnPage, params);
 
                 // add an empty parameter for any visible group on the current page
-                var groupsOnPage = $('.eforms-page.conditionally-visible:visible .form-fieldgroup:visible');
+                var groupsOnPage = $('.forms-page.conditionally-visible:visible .form-fieldgroup:visible');
                 groupsOnPage.each(function () {
                     params[$(this).attr('name')] = '';
                 });
