@@ -67,6 +67,7 @@
     <essentials.version>14.4.0</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
     <taglibs.version>1.2.5</taglibs.version>
+    <brut.version>3.0.1</brut.version>
 
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
 
@@ -90,6 +91,11 @@
       <id>hippo-maven2-enterprise</id>
       <name>Hippo Enterprise Maven 2</name>
       <url>https://maven.onehippo.com/maven2-enterprise</url>
+    </repository>
+    <repository>
+      <id>hippo-forge</id>
+      <name>Hippo maven 2 forge repository.</name>
+      <url>https://maven.onehippo.com/maven2-forge/</url>
     </repository>
   </repositories>
 

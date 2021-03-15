@@ -142,12 +142,7 @@ public class BulletinComponent extends CommonComponent {
     }
 
     protected void applySortOrdering(final HstRequest request, final HstQuery query) {
-        String sortOrder = DESCENDING_SORT_ORDER;
-
-        final List<String> sortByDateQueryParamValues = getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
-        if (!sortByDateQueryParamValues.isEmpty()) {
-            sortOrder = sortByDateQueryParamValues.get(0);
-        }
+        String sortOrder = getSelectedSortOrder(request);
 
         if (sortOrder.equals(ASCENDING_SORT_ORDER)) {
             query.addOrderByAscending(LAST_MODIFICATION_DATE_BEAN_ATTRIBUTE);
