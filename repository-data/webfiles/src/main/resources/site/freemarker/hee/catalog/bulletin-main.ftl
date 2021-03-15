@@ -1,9 +1,12 @@
+<#ftl output_format="HTML">
+
 <#include "../../include/imports.ftl">
 <#include "../macros/bulletin-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>
+
 <#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
 <#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.Bulletin" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
@@ -24,7 +27,7 @@
                         <div class="nhsuk-filter__groups">
                             <@fmt.message key="filter.category.label" var="categoryLabel"/>
                             <div class="nhsuk-filter__group">
-                                <@checkboxGroup title=categoryLabel?html name="category" itemsMap=categoriesMap selectedItemsList=selectedCategories />
+                                <@checkboxGroup title=categoryLabel name="category" itemsMap=categoriesMap selectedItemsList=selectedCategories />
                             </div>
                         </div>
                         <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
@@ -54,14 +57,14 @@
                                 <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
                                 <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}"} />
 
-                                <@select label="${sortLabel?html}" name="sortByDate" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+                                <@select label="${sortLabel}" name="sortByDate" optionsMap=selectOptions selectedValue=selectedSortOrder/>
                             </div>
                         </form>
                         <#-- End Sort DropDown -->
                     </div>
 
                     <#-- Active Filters -->
-                    <#if selectedCategories?? && selectedCategories?has_content>
+                    <#if selectedCategories?has_content>
                         <div class="nhsuk-listing__active-filters">
                             <#list selectedCategories as categoryValue>
                                 <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${categoryValue}">

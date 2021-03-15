@@ -19,7 +19,7 @@
                                value="${value}" ${isSelected}>
                         <label class="nhsuk-label nhsuk-checkboxes__label"
                                for="${name}">
-                            ${text?html}
+                            ${text}
                         </label>
                     </div>
                 </#list>
