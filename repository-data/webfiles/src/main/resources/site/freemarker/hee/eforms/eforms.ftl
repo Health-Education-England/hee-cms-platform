@@ -111,15 +111,16 @@
                                value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
                     <#elseif button.type == "submitbutton">
 
-                    <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
-                        <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
-                    </button>
-                <#else>
-                    <input type="button" name="${button.formRelativeUniqueName}"
-                           class="${button.styleClass!}"
-                           value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
-                </#if>
-            </#list>
+                        <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
+                            <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
+                        </button>
+                    <#else>
+                        <input type="button" name="${button.formRelativeUniqueName}"
+                               class="${button.styleClass!}"
+                               value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
+                    </#if>
+                </#list>
+            </div>
         </form>
     </#if>
 </#if>
