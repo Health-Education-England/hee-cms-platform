@@ -1,0 +1,189 @@
+/content/documents/lks/forms:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 910d84ba-56fd-45fb-a6de-ad69d9157bcc
+  hippo:name: Forms
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 21f1b749-3d57-4061-98bd-8439fcc9551e
+  hippotranslation:locale: en
+  /newsletter:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 6924cb92-5572-4c1b-8898-b8f868a3f88c
+    hippo:name: Newsletter
+    hippo:versionHistory: 7d8cb7ec-6470-4e14-aa18-d982bd2654be
+    /newsletter[1]:
+      jcr:primaryType: eforms:form
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 4bcd25be-eafd-4d6b-a9e1-0a116b9bfa93
+      eforms:action: mail
+      eforms:actionurl: http://test.com/action.do
+      eforms:afterprocesssuccessmode: url
+      eforms:afterprocesssuccessurl: /newsletter-subscription-succeed
+      eforms:buttonlabel: Continue
+      eforms:formname: Subscribe to our newsletter
+      eforms:notificationemail: test@example.com
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-09T09:47:19.822+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-15T14:15:01.717+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 58c29110-3105-428a-9d38-515bb35a57a3
+      hippotranslation:locale: en
+      /page0:
+        jcr:primaryType: eforms:page
+        jcr:uuid: 30a3f3e9-db2c-4df7-802d-ad656c1509a4
+        eforms:conditional: false
+        eforms:conditionnegate: false
+        eforms:label: Page 1
+        /field0:
+          jcr:primaryType: eforms:textfield
+          jcr:uuid: 35405ffd-ce40-45b8-9392-b80fedeb6a00
+          eforms:autocomplete: name
+          eforms:conditional: false
+          eforms:conditionnegate: false
+          eforms:fieldid: idbf93440305a8f110
+          eforms:fieldname: fullName
+          eforms:hint: ''
+          eforms:label: Full name
+          eforms:length: 40
+          eforms:mandatory: true
+          eforms:validcasesensitive: 'false'
+          eforms:validexpression: ''
+        /field1:
+          jcr:primaryType: eforms:textfield
+          jcr:uuid: 65f436e2-f7b1-4af4-aaf6-fc383cc08942
+          eforms:autocomplete: email
+          eforms:conditional: false
+          eforms:conditionnegate: false
+          eforms:expandhint: false
+          eforms:fieldid: ida0f9d67b53ed74ce
+          eforms:fieldname: email
+          eforms:hint: ''
+          eforms:label: Email address
+          eforms:length: 40
+          eforms:mandatory: true
+          eforms:validationruleclass: com.onehippo.cms7.eforms.hst.validation.rules.EmailAddressRule
+          eforms:validationruleid: email
+          eforms:validationrulelabel: E-mail Address
+          eforms:validcasesensitive: 'false'
+          eforms:validexpression: ''
+    /newsletter[2]:
+      jcr:primaryType: eforms:form
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: d6521726-6e7e-4d9e-a22b-f7a8ce97a84d
+      eforms:action: mail
+      eforms:actionurl: http://test.com/action.do
+      eforms:afterprocesssuccessmode: url
+      eforms:afterprocesssuccessurl: /newsletter-subscription-succeed
+      eforms:buttonlabel: Continue
+      eforms:formname: Subscribe to our newsletter
+      eforms:notificationemail: test@example.com
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-09T09:47:19.822+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-15T14:15:16.749+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 58c29110-3105-428a-9d38-515bb35a57a3
+      hippotranslation:locale: en
+      /page0:
+        jcr:primaryType: eforms:page
+        jcr:uuid: 56188853-d44c-4c29-9454-7259d21d0f7a
+        eforms:conditional: false
+        eforms:conditionnegate: false
+        eforms:label: Page 1
+        /field0:
+          jcr:primaryType: eforms:textfield
+          jcr:uuid: a1bf5e6c-2689-4b12-9ad0-138222f2b9bb
+          eforms:autocomplete: name
+          eforms:conditional: false
+          eforms:conditionnegate: false
+          eforms:fieldid: idbf93440305a8f110
+          eforms:fieldname: fullName
+          eforms:hint: ''
+          eforms:label: Full name
+          eforms:length: 40
+          eforms:mandatory: true
+          eforms:validcasesensitive: 'false'
+          eforms:validexpression: ''
+        /field1:
+          jcr:primaryType: eforms:textfield
+          jcr:uuid: 4532c648-9d22-4164-9b3a-bcf71c032997
+          eforms:autocomplete: email
+          eforms:conditional: false
+          eforms:conditionnegate: false
+          eforms:expandhint: false
+          eforms:fieldid: ida0f9d67b53ed74ce
+          eforms:fieldname: email
+          eforms:hint: ''
+          eforms:label: Email address
+          eforms:length: 40
+          eforms:mandatory: true
+          eforms:validationruleclass: com.onehippo.cms7.eforms.hst.validation.rules.EmailAddressRule
+          eforms:validationruleid: email
+          eforms:validationrulelabel: E-mail Address
+          eforms:validcasesensitive: 'false'
+          eforms:validexpression: ''
+    /newsletter[3]:
+      jcr:primaryType: eforms:form
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 16405fb8-627e-4f88-8781-835d865da9e7
+      eforms:action: mail
+      eforms:actionurl: http://test.com/action.do
+      eforms:afterprocesssuccessmode: url
+      eforms:afterprocesssuccessurl: /newsletter-subscription-succeed
+      eforms:buttonlabel: Continue
+      eforms:formname: Subscribe to our newsletter
+      eforms:notificationemail: test@example.com
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-09T09:47:19.822+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-15T14:15:16.749+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-03-15T14:15:19.780+07:00
+      hippotranslation:id: 58c29110-3105-428a-9d38-515bb35a57a3
+      hippotranslation:locale: en
+      /page0:
+        jcr:primaryType: eforms:page
+        jcr:uuid: 17e79830-d0fc-4d27-b6f5-9eea7637e258
+        eforms:conditional: false
+        eforms:conditionnegate: false
+        eforms:label: Page 1
+        /field0:
+          jcr:primaryType: eforms:textfield
+          jcr:uuid: 0f782a7e-6f6a-4e48-acb0-be915a9771f6
+          eforms:autocomplete: name
+          eforms:conditional: false
+          eforms:conditionnegate: false
+          eforms:fieldid: idbf93440305a8f110
+          eforms:fieldname: fullName
+          eforms:hint: ''
+          eforms:label: Full name
+          eforms:length: 40
+          eforms:mandatory: true
+          eforms:validcasesensitive: 'false'
+          eforms:validexpression: ''
+        /field1:
+          jcr:primaryType: eforms:textfield
+          jcr:uuid: 4362de73-218e-457e-9c2d-15f34e6c448f
+          eforms:autocomplete: email
+          eforms:conditional: false
+          eforms:conditionnegate: false
+          eforms:expandhint: false
+          eforms:fieldid: ida0f9d67b53ed74ce
+          eforms:fieldname: email
+          eforms:hint: ''
+          eforms:label: Email address
+          eforms:length: 40
+          eforms:mandatory: true
+          eforms:validationruleclass: com.onehippo.cms7.eforms.hst.validation.rules.EmailAddressRule
+          eforms:validationruleid: email
+          eforms:validationrulelabel: E-mail Address
+          eforms:validcasesensitive: 'false'
+          eforms:validexpression: ''

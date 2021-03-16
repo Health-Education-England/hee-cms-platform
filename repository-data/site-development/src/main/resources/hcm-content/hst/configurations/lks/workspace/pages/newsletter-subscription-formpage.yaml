@@ -1,0 +1,25 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/newsletter-subscription-formpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-03-12T09:39:24.469+07:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+    hst:template: formpage-main
+    /form:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 8a3a0041-c2d8-42db-b03e-1fb8fe51e333
+      hst:label: Main Form
+      hst:lastmodified: 2021-03-12T09:39:45.243+07:00
+      hst:xtype: hst.vbox
+      /form:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent
+        hst:iconpath: resources/addon/eforms/images/icons/form.svg
+        hst:label: Enterprise Form
+        hst:parameternames: [form, eforms-from-email, eforms-from-name]
+        hst:parametervalues: [/content/documents/lks/forms/newsletter, changeit@example.com,
+          ChangeIt]
+        hst:resourcetemplate: eforms.validation.default
+        hst:template: eforms.default
+        hst:xtype: HST.Item
