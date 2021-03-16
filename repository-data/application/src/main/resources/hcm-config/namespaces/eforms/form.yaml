@@ -1,0 +1,8 @@
+definitions:
+  config:
+    /hippo:namespaces/eforms/form/editor:templates/_default_/afterprocess:
+      jcr:primaryType: frontend:plugin
+      mode: ${mode}
+      wicket.id: ${cluster.id}.extensions.item
+      wicket.model: ${wicket.model}
+      plugin.class: com.onehippo.cms7.eforms.cms.extensions.AfterProcessPlugin
