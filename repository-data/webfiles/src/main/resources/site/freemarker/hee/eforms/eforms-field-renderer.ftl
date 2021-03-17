@@ -9,9 +9,9 @@
 
 <#macro renderCss field>
     <#compress>
-        <#assign cssClass="form-field">
+        <#assign cssClass="nhsuk-form-group">
         <#if field.extraCssClass?has_content>
-            <#assign cssClass="eforms-field ${field.extraCssClass}">
+            <#assign cssClass="nhsuk-form-group ${field.extraCssClass}">
         </#if>${cssClass}
     </#compress>
 </#macro>
@@ -21,75 +21,75 @@
 
     <div class="eforms-text<#if field.extraCssClass?has_content> ${field.extraCssClass!}</#if>" name="${field.formRelativeUniqueName}">
       <div class="${field.styleClass!}">${field.label!?html}</div>
-      <span class="field-hint">${field.hint!?html}</span>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
     </div>
 
   <#elseif field.type == "textfield">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
-      <input type="text" name="${field.formRelativeUniqueName}" class="${field.styleClass!}" value="${field.value!}"
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
+      <input type="text" id="${field.formRelativeUniqueName}" name="${field.formRelativeUniqueName}" class="nhsuk-input ${field.styleClass!}" value="${field.value!}"
              <#if (field.length > 0)>size="${field.length}"</#if> <#if (field.maxLength > 0)>maxlength="${field.maxLength}"</#if>
              <#if (field.autocomplete??)> autocomplete="${field.autocomplete}"</#if> />
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "passwordfield">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
-      <input type="password" name="${field.formRelativeUniqueName}" class="${field.styleClass!}"
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
+      <input type="password" id="${field.formRelativeUniqueName}" name="${field.formRelativeUniqueName}" class="${field.styleClass!}"
              <#if (field.length > 0)>size="${field.length}"</#if> <#if (field.maxLength > 0)>maxlength="${field.maxLength}"</#if> />
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "textarea">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
-      <textarea name="${field.formRelativeUniqueName}" class="${field.styleClass!}"
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
+      <textarea name="${field.formRelativeUniqueName}" class="nhsuk-textarea ${field.styleClass!}"
                 cols="${field.cols}" rows="${field.rows}"
                 <#if (field.autocomplete??)> autocomplete="${field.autocomplete}"</#if>
                 <#if (field.minLength > 0)>minlength="${field.minLength}"</#if> <#if (field.maxLength > 0)>maxlength="${field.maxLength}"</#if>>${field.value!}</textarea>
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "dropdown">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
       <select name="${field.formRelativeUniqueName}" class="${field.styleClass!}"<#if (field.autocomplete??)> autocomplete="${field.autocomplete}"</#if>>
         <#list field.options as option>
           <option value="${option.value!?html}" <#if option.selected>selected="selected"</#if>>${option.text!?html}</option>
         </#list>
       </select>
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "fileuploadfield">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
       <input type="file" name="${field.formRelativeUniqueName}" class="${field.styleClass!}"
              data-validate="fileSizeAndExtension" data-max-size="${field.maxUploadSize}"
              data-allowed-extensions="<#if field.fileExtensions?? && (field.fileExtensions?size > 0)>${field.fileExtensions?join(",")}</#if>" />
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "datefield">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
       <input type="text" name="${field.formRelativeUniqueName}" class="date ${field.styleClass!}" value="${field.value!}"
               <#if (field.autocomplete??)> autocomplete="${field.autocomplete}"</#if>/>
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
     <script>
       $(document).ready(function() {
@@ -110,8 +110,8 @@
   <#elseif field.type == "radiogroup">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
       <ul class="radiogroup">
         <#list field.fields as radio>
           <li>
@@ -132,14 +132,14 @@
           </li>
         </#if>
       </ul>
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "checkboxgroup">
 
     <div class="<@renderCss field=field />">
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
       <#list field.fields as checkbox>
         <p>
           <input type="checkbox" name="${checkbox.formRelativeUniqueName}" class="${checkbox.styleClass!}" value="${checkbox.value!?html}"
@@ -156,15 +156,15 @@
                  <#if (field.length > 0)>size="${field.length}"</#if> <#if (field.maxLength > 0)>maxlength="${field.maxLength}"</#if> />
         </span>
       </#if>
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "likert">
 
     <div class="<@renderCss field=field />">
       <input type="hidden" name="${field.formRelativeUniqueName}"/>
-      <label>${field.label!?html}</label>
-      <span class="field-error" id="field-${field.formRelativeUniqueName}"></span>
+      <label class="nhsuk-label">${field.label!?html}</label>
+      <span class="nhsuk-error-message" id="field-${field.formRelativeUniqueName}"></span>
       <table class="eforms-likert-table">
         <tr>
           <td>&nbsp;</td>
@@ -186,7 +186,7 @@
           </tr>
         </#list>
       </table>
-      <span class="field-hint">${field.hint!?html}</span>
+      <span class="nhsuk-hint">${field.hint!?html}</span>
     </div>
 
   <#elseif field.type == "antispam">
@@ -194,8 +194,8 @@
     <#if field.honeyPot>
 
       <div class=""<@renderCss field=field />"<#if !field.extraCssClass?has_content> style="display:none"</#if>>
-      <label>${field.label?html}<span class="eforms-req">${field.requiredMarker?html}</span></label>
-        <input type="text" name="${field.formRelativeUniqueName}" class="${field.styleClass!}" value="${field.value!}"/>
+      <label class="nhsuk-label">${field.label?html}<span class="eforms-req">${field.requiredMarker?html}</span></label>
+        <input type="text" name="${field.formRelativeUniqueName}" class="nhsuk-input ${field.styleClass!}" value="${field.value!}"/>
       </div>
 
     <#elseif field.slider>
