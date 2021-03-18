@@ -329,7 +329,7 @@
                                     if (errorMessage) {
                                         hasMessages = true;
                                         // add error message to feedback panel
-                                        $('#field-' + errorKey).html(errorMessage.localizedMessage);
+                                        $('#' + errorKey + '-error').html('<span class="nhsuk-u-visually-hidden">Error:</span>' + errorMessage.localizedMessage);
                                         const inputField = $('#' + errorKey);
                                         inputField.addClass("nhsuk-input--error");
                                         inputField.parent().addClass("nhsuk-form-group--error");
@@ -338,7 +338,7 @@
                             }
                             if (!hasMessages && params) {
                                 for (const key in params) {
-                                    $('#field-' + key).html("");
+                                    $('#' + key + '-error').html("");
                                     const inputField = $('#' + key);
                                     inputField.removeClass("nhsuk-input--error");
                                     inputField.parent().removeClass("nhsuk-form-group--error");
@@ -542,9 +542,10 @@
                                 var errorMessage = data[fieldName];
                                 if (errorMessage) {
                                     // add error message to feedback panel
-                                    $('#field-' + fieldName).html(errorMessage.localizedMessage);
-                                    $('#' + fieldName).addClass("nhsuk-input--error");
-                                    $('#' + fieldName).parent().addClass("nhsuk-form-group--error");
+                                    $('#' + fieldName + '-error').html('<span class="nhsuk-u-visually-hidden">Error:</span>' + errorMessage.localizedMessage);
+                                    const inputField = $('#' + fieldName);
+                                    inputField.addClass("nhsuk-input--error");
+                                    inputField.parent().addClass("nhsuk-form-group--error");
                                     count++;
                                 }
                             }
