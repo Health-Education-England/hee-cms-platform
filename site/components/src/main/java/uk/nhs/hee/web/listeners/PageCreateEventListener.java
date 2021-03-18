@@ -1,5 +1,6 @@
 package uk.nhs.hee.web.listeners;
 
+import org.hippoecm.hst.configuration.HstNodeTypes;
 import org.hippoecm.hst.pagecomposer.jaxrs.api.ChannelEventListenerRegistry;
 import org.hippoecm.hst.pagecomposer.jaxrs.api.PageCreateContext;
 import org.hippoecm.hst.pagecomposer.jaxrs.api.PageCreateEvent;
@@ -36,6 +37,7 @@ public class PageCreateEventListener {
 
         String newPageName = JcrUtils.getNodeNameQuietly(pageActionContext.getNewPageNode());
         // The new page name will have pattern `page-title-page-prototype-name-optional-running-number`
+        // For example `patient-and-public-information-minihub-page` or `patient-and-public-information-minihub-page-1`
         Pattern pattern = Pattern.compile(MINI_HUB_PAGE_PROTOTYPE_NAME + "[-]?[0-9]*$");
         boolean isMiniHubPage = pattern.matcher(newPageName).find();
         if (isMiniHubPage) {
@@ -46,11 +48,11 @@ public class PageCreateEventListener {
     private void processMiniHubPageCreation(PageCreateContext pageActionContext, String newPageName) {
         Node newSiteMapItemNode = pageActionContext.getNewSiteMapItemNode();
         try {
-            Node defaultNode = newSiteMapItemNode.addNode("_default_", "hst:sitemapitem");
-            defaultNode.setProperty("hst:componentconfigurationid", newSiteMapItemNode.getProperty("hst:componentconfigurationid").getString());
-            defaultNode.setProperty("hst:pagetitle", newSiteMapItemNode.getProperty("hst:pagetitle").getString());
+            Node defaultNode = newSiteMapItemNode.addNode(HstNodeTypes.WILDCARD, HstNodeTypes.NODETYPE_HST_SITEMAPITEM);
+            defaultNode.setProperty(HstNodeTypes.SITEMAPITEM_PROPERTY_COMPONENTCONFIGURATIONID, newSiteMapItemNode.getProperty(HstNodeTypes.SITEMAPITEM_PROPERTY_COMPONENTCONFIGURATIONID).getString());
+            defaultNode.setProperty(HstNodeTypes.SITEMAPITEM_PAGE_TITLE, newSiteMapItemNode.getProperty(HstNodeTypes.SITEMAPITEM_PAGE_TITLE).getString());
         } catch (RepositoryException e) {
-            LOGGER.error(String.format("Error on creating _default_ sitemap for MiniHub page %s", newPageName), e);
+            LOGGER.error(String.format("Error on creating %s sitemap item for MiniHub page %s", HstNodeTypes.WILDCARD, newPageName), e);
         }
     }
 }
