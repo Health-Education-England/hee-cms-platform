@@ -1,0 +1,13 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:prototypepages/minihub-page:
+      jcr:primaryType: hst:component
+      jcr:mixinTypes: ['hst:prototypemeta']
+      hst:displayname: MiniHub Page
+      hst:primarycontainer: main
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
+        hst:label: Main MiniHub
+        hst:xtype: hst.vbox

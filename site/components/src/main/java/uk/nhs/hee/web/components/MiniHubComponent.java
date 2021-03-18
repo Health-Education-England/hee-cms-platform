@@ -1,26 +1,32 @@
 package uk.nhs.hee.web.components;
 
-import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
+import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.MiniHub;
+import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
 
 import java.util.List;
 
-public class MiniHubComponent extends EssentialsContentComponent {
+@ParametersInfo(type = MiniHubComponentInfo.class)
+public class MiniHubComponent extends EssentialsDocumentComponent {
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        MiniHub miniHub = (MiniHub) request.getRequestContext().getContentBean();
+        MiniHub miniHub = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (miniHub != null) {
-            String guidanceName = getComponentParameter("guidance");
+            // When the page accessed from URL minihubName/guidanceName, request will be forward to te related _default_ sitemap item
+            boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
             Guidance previousGuidance = null, nextGuidance = null, currentGuidance = null;
             boolean accessFromRootHub = false;
             List<Guidance> guidancePages = miniHub.getGuidancePages();
-            if (StringUtils.isNotEmpty(guidanceName)) {
+
+            if (accessWithGuidancePath) {
+                // The guidance name in URL will be resolved as "1" parameter name
+                String guidanceName = (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
                 for (int i = 0; i < guidancePages.size(); i++) {
                     Guidance guidance = guidancePages.get(i);
                     if (guidance.getName().equalsIgnoreCase(guidanceName)) {

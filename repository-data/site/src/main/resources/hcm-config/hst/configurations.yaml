@@ -72,6 +72,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Landing Page
               hst:template: listingpage-main
+            /minihub:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: MiniHub
+              hst:template: minihub-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
