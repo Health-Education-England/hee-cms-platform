@@ -332,6 +332,7 @@
                                         $('#' + errorKey + '-error').html('<span class="nhsuk-u-visually-hidden">Error:</span>' + errorMessage.localizedMessage);
                                         const inputField = $('#' + errorKey);
                                         inputField.addClass("nhsuk-input--error");
+                                        inputField.attr("aria-describedby", errorKey + "-hint " + errorKey + "-error");
                                         inputField.parent().addClass("nhsuk-form-group--error");
                                     }
                                 }
@@ -341,6 +342,7 @@
                                     $('#' + key + '-error').html("");
                                     const inputField = $('#' + key);
                                     inputField.removeClass("nhsuk-input--error");
+                                    inputField.attr("aria-describedby", key + "-hint");
                                     inputField.parent().removeClass("nhsuk-form-group--error");
                                 }
                             }
@@ -545,6 +547,7 @@
                                     $('#' + fieldName + '-error').html('<span class="nhsuk-u-visually-hidden">Error:</span>' + errorMessage.localizedMessage);
                                     const inputField = $('#' + fieldName);
                                     inputField.addClass("nhsuk-input--error");
+                                    inputField.attr("aria-describedby", fieldName + "-hint " + fieldName + "-error");
                                     inputField.parent().addClass("nhsuk-form-group--error");
                                     count++;
                                 }
