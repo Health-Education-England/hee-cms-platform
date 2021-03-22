@@ -75,9 +75,7 @@ jobs:
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
-        run: mvn -B verify && mvn deploy -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
