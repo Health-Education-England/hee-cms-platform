@@ -13,7 +13,9 @@
                     <ul class="nhsuk-related-links-card__list">
                         <#list quickLinks as quickLink>
                             <li>
-                                <@hlink.link link=quickLink cssClassName="nhsuk-related-links-card__link"/>
+                                <@hlink.link link=quickLink cssClassName="nhsuk-related-links-card__link">
+                                    ${quickLink.text}
+                                </@hlink.link>
                             </li>
                         </#list>
                     </ul>

@@ -13,7 +13,9 @@
                 <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
                         <h3 class="nhsuk-card__heading nhsuk-heading-m">
-                            <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link"/>
+                            <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link">
+                                ${contentCard.header.text}
+                            </@hlink.link>
                         </h3>
                         <p class="nhsuk-card__description">${contentCard.description}</p>
                     </div>
