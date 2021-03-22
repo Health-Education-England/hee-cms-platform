@@ -12,9 +12,9 @@
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
             <h1>
-                      <span role="text">${document.title}
+                      <span role="text">${currentGuidance.title}
                         <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                          ${document.summary}
+                          ${document.title}
                         </span>
                       </span>
             </h1>
