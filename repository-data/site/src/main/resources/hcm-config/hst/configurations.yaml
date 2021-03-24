@@ -52,6 +52,9 @@ definitions:
           /formpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/formpage-main.ftl
+          /afterform-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/afterform-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -78,6 +81,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: MiniHub
               hst:template: minihub-main
+            /after-form:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: AfterForm
+              hst:template: afterform-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
