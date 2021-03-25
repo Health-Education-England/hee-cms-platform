@@ -4,18 +4,38 @@
 <@hst.defineObjects />
 <@hst.setBundle basename="uk.nhs.hee.web.homepage"/>
 
-<section class="nhsuk-section">
-  <div class="nhsuk-width-container">
-    <h1><@fmt.message key="homepage.title" var="title"/>${title?html}</h1>
-    <p><@fmt.message key="homepage.text" var="text"/>${text?html}</p>
-    <#if !hstRequest.requestContext.channelManagerPreviewRequest>
-      <p>
-        [This text can be edited
-        <a href="http://localhost:8080/cms/?1&path=/content/documents/administration/labels/homepage" target="_blank">here</a>.]
-      </p>
-    </#if>
-  </div>
-</section>
-<div>
-  <@hst.include ref="container"/>
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+        <section class="nhsuk-page-content__section-one">
+            <div class="nhsuk-page-content">
+                <#if document.contentBlocks??>
+                    <#list document.contentBlocks as block>
+                        <#switch block.getClass().getName()>
+                            <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
+                                <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
+                                    <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
+                                </#if>
+                                <#break>
+                            <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                                <@hst.html hippohtml=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.StatementBlock">
+                                <@hee.statementBlock block=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ActionLink">
+                                <@hee.actionLink actionLink=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
+                                <@hee.yellowAlertBlock block=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ContentCards">
+                                <@hee.contentCards contentCards=block/>
+                                <#break>
+                            <#default>
+                        </#switch>
+                    </#list>
+                </#if>
+            </div>
+        </section>
+    </div>
 </div>

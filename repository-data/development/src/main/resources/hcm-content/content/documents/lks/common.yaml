@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
     jcr:uuid: 2662c3d6-4f25-48d1-82b0-339489c61b0b
     hippo:name: Content Cards
-    hippostd:foldertype: [new-translated-folder, new-document]
+    hippostd:foldertype: [new-content-card]
     hippotranslation:id: fea0ba83-e268-4df7-bdf7-86dd1eedda6c
     hippotranslation:locale: en
     /search-bank:
@@ -1329,6 +1329,192 @@
         /hee:header:
           jcr:primaryType: hee:link
           hee:text: Adapting the workplace
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /knowledge-management:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 35896ebb-ebca-4ff7-9acc-013a6c4dee93
+      hippo:name: Knowledge management
+      hippo:versionHistory: da0e1641-678c-4a9e-8c4c-61334fcd70cd
+      /knowledge-management[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1ddf2ba1-3fa3-432e-b6fa-52ec8bbd6f93
+        hee:description: Finding the latest evidence through bulletins, literature
+          searching, using trusted sources like OpenAthens and collaboration.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-25T13:47:00.766+07:00
+        hippostdpubwf:lastModificationDate: 2021-03-25T13:47:00.767+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 712b52b2-5da7-4d04-8675-921a1db65864
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 4eb3601e-014a-4bbd-b51c-6eb3315189d9
+          hee:text: Knowledge management
+          hee:url: /
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /knowledge-management[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 1c1bde78-cc95-431c-b627-f5e3bffc610c
+        hee:description: Finding the latest evidence through bulletins, literature
+          searching, using trusted sources like OpenAthens and collaboration.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-25T13:47:00.766+07:00
+        hippostdpubwf:lastModificationDate: 2021-03-25T13:47:23.249+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 712b52b2-5da7-4d04-8675-921a1db65864
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Knowledge management
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /knowledge-management[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8937ee92-7163-42f4-97c9-b1eef12d698c
+        hee:description: Finding the latest evidence through bulletins, literature
+          searching, using trusted sources like OpenAthens and collaboration.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-25T13:47:00.766+07:00
+        hippostdpubwf:lastModificationDate: 2021-03-25T13:47:23.249+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-03-25T13:47:25.933+07:00
+        hippotranslation:id: 712b52b2-5da7-4d04-8675-921a1db65864
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Knowledge management
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /quality-and-impact:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 1d5ef5aa-4573-4994-892a-ce935c761217
+      hippo:name: Quality and impact
+      hippo:versionHistory: a1466913-ca64-4c5a-acd5-77eab277cc21
+      /quality-and-impact[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: eb9bccb0-f4f0-4d2a-ab9b-e3b8c7d85660
+        hee:description: Finding the latest evidence through bulletins, literature
+          searching, using trusted sources like OpenAthens and collaboration.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-25T13:47:46.784+07:00
+        hippostdpubwf:lastModificationDate: 2021-03-25T14:00:49.366+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: b4d785de-2d3c-4a05-9d4c-28674ff939dc
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Quality and impact
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /quality-and-impact[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: ee818cd8-6c0a-4809-9811-3f8282f3b672
+        hee:description: Finding the latest evidence through bulletins, literature
+          searching, using trusted sources like OpenAthens and collaboration.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-25T13:47:46.784+07:00
+        hippostdpubwf:lastModificationDate: 2021-03-25T14:00:54.397+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: b4d785de-2d3c-4a05-9d4c-28674ff939dc
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Quality and impact
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /quality-and-impact[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ab1c2a59-8723-4f45-919b-07cba8e2a26b
+        hee:description: Finding the latest evidence through bulletins, literature
+          searching, using trusted sources like OpenAthens and collaboration.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-25T13:47:46.784+07:00
+        hippostdpubwf:lastModificationDate: 2021-03-25T14:00:54.397+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-03-25T14:00:55.961+07:00
+        hippotranslation:id: b4d785de-2d3c-4a05-9d4c-28674ff939dc
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Quality and impact
           hee:url: /
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
