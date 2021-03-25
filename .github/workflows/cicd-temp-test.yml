@@ -7,7 +7,6 @@ on:
 env:
   BRC_STACK_NAME: hee
   BRC_MAX_DISTRIBUTIONS: 70
-  BRC_DISTRIBUTION_DELETE_COUNT: 2
 
 jobs:
   buildAndTest:
@@ -90,7 +89,6 @@ jobs:
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
-          distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
       - name: Upload distribution to Bloomreach Cloud
         uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
         id: upload
