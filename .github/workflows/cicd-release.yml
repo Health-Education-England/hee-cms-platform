@@ -6,8 +6,8 @@ on:
       - release-**
 env:
   BRC_STACK_NAME: hee
-  BRC_MAX_DISTRIBUTIONS: 70
-  BRC_DISTRIBUTION_DELETE_COUNT: 2
+  # BRC_MAX_DISTRIBUTIONS: 90
+  BRC_DISTRIBUTION_DELETE_COUNT: 10
 
 jobs:
   buildAndTest:
@@ -90,7 +90,7 @@ jobs:
           brcStack: ${{ env.BRC_STACK_NAME }}
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
-          maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
+          # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
 
       - name: Upload distribution to Bloomreach Cloud
