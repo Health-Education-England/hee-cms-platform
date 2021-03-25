@@ -3,8 +3,10 @@
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
 <#if document??>
-    <@hee.heroSection heroSection=document.heroSection/>
-
+    <h1>
+        ${document.title}
+    </h1>
+    <p class="nhsuk-lede-text">${document.summary}</p>
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
             <@hee.contentCards contentCards=document.contentCards/>

@@ -1,7 +1,9 @@
+<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.HomePage" -->
 <#include "../../include/imports.ftl">
+<#import "../macros/components.ftl" as hee>
 <@hst.defineObjects />
-
 <@hst.setBundle basename="uk.nhs.hee.web.homepage"/>
+
 <section class="nhsuk-section">
   <div class="nhsuk-width-container">
     <h1><@fmt.message key="homepage.title" var="title"/>${title?html}</h1>

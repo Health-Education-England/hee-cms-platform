@@ -6,6 +6,10 @@ definitions:
       /main:
         jcr:primaryType: hst:component
         hst:template: homepage-main
+        hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
         /container:
           jcr:primaryType: hst:containercomponentreference
           hst:referencecomponent: homepage/main
+      /hero:
+        jcr:primaryType: hst:component
+        hst:template: hero-section
