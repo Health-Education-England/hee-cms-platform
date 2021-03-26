@@ -1,8 +1,6 @@
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.HomePage" -->
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
-<@hst.defineObjects />
-<@hst.setBundle basename="uk.nhs.hee.web.homepage"/>
 
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
