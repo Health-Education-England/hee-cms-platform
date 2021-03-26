@@ -9,34 +9,30 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.hippoecm.repository.HippoStdPubWfNodeType;
 import org.onehippo.cms7.essentials.components.CommonComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
 import org.onehippo.cms7.essentials.components.utils.SiteUtils;
 import org.onehippo.forge.selection.hst.contentbean.ValueList;
 import org.onehippo.forge.selection.hst.util.SelectionUtil;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.components.info.BulletinComponentInfo;
+import uk.nhs.hee.web.constants.HeeNodeType;
+import uk.nhs.hee.web.utils.HstUtils;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 @ParametersInfo(type = BulletinComponentInfo.class)
 public class BulletinComponent extends CommonComponent {
-    private static final Logger log = LoggerFactory.getLogger(BulletinComponent.class);
-
     private final static String CATEGORY_QUERY_PARAM = "category";
-    private final static String CATEGORY_BEAN_ATTRIBUTE = "hee:category";
     private final static String CATEGORY_VALUE_LIST_IDENTIFIER = "categories";
 
     private final static String ASCENDING_SORT_ORDER = "asc";
     private final static String DESCENDING_SORT_ORDER = "desc";
-    private final static String LAST_MODIFICATION_DATE_BEAN_ATTRIBUTE = "hippostdpubwf:lastModificationDate";
     private final static String SORT_BY_DATE_QUERY_PARAM = "sortByDate";
 
     @Override
@@ -45,7 +41,7 @@ public class BulletinComponent extends CommonComponent {
 
         final Pageable<HippoBean> pageable = getDocumentBeans(request, paramInfo);
 
-        request.setAttribute("selectedCategories", getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
+        request.setAttribute("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
         request.setAttribute("categoriesMap", getCategoryValueListMap());
         request.setAttribute("selectedSortOrder", getSelectedSortOrder(request));
         request.setModel(REQUEST_ATTR_PAGEABLE, pageable);
@@ -55,8 +51,7 @@ public class BulletinComponent extends CommonComponent {
         try {
             return executeQuery(request, paramInfo);
         } catch (QueryException qe) {
-            log.error("An error has occurred while trying to execute hst query.", qe);
-            return null;
+            throw new HstComponentException("An error has occurred while trying to execute hst query.", qe);
         }
     }
 
@@ -111,17 +106,8 @@ public class BulletinComponent extends CommonComponent {
     }
 
     private Filter getCategoryFilter(final HstRequest request, final HstQuery query) {
-        List<String> categoriesFilter = getQueryParameterValues(request, CATEGORY_QUERY_PARAM);
-        return createOrFilter(query, categoriesFilter, CATEGORY_BEAN_ATTRIBUTE);
-    }
-
-    private List<String> getQueryParameterValues(final HstRequest request, final String parameter) {
-        String[] parameterValues = request.getParameterValues(parameter);
-        if (parameterValues == null) {
-            return Collections.emptyList();
-        }
-
-        return Arrays.asList(parameterValues);
+        List<String> categoriesFilter = HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM);
+        return createOrFilter(query, categoriesFilter, HeeNodeType.CATEGORY);
     }
 
     private Filter createOrFilter(HstQuery query, final List<String> values, final String attributeName) {
@@ -133,8 +119,8 @@ public class BulletinComponent extends CommonComponent {
                 filter.addEqualTo(attributeName, value);
                 baseFilter.addOrFilter(filter);
             } catch (FilterException fe) {
-                log.error("An error has occurred while trying to construct filter with attribute name {} and value {}",
-                        attributeName, value);
+                throw new HstComponentException(String.format("An error has occurred while trying to construct filter with attribute name %s and value %s",
+                        attributeName, value), fe);
             }
         });
 
@@ -144,15 +130,15 @@ public class BulletinComponent extends CommonComponent {
     protected void applySortOrdering(final HstRequest request, final HstQuery query) {
         String sortOrder = DESCENDING_SORT_ORDER;
 
-        final List<String> sortByDateQueryParamValues = getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
+        final List<String> sortByDateQueryParamValues = HstUtils.getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
         if (!sortByDateQueryParamValues.isEmpty()) {
             sortOrder = sortByDateQueryParamValues.get(0);
         }
 
         if (sortOrder.equals(ASCENDING_SORT_ORDER)) {
-            query.addOrderByAscending(LAST_MODIFICATION_DATE_BEAN_ATTRIBUTE);
+            query.addOrderByAscending(HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE);
         } else {
-            query.addOrderByDescending(LAST_MODIFICATION_DATE_BEAN_ATTRIBUTE);
+            query.addOrderByDescending(HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE);
         }
     }
 
