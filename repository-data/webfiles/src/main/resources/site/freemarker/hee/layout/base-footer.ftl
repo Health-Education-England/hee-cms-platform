@@ -1,3 +1,4 @@
+<#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 <#-- @ftlvariable name="menu" type="org.hippoecm.hst.core.sitemenu.HstSiteMenu" -->
@@ -9,15 +10,16 @@
                     <ul class="nhsuk-footer__list nhsuk-footer__list--three-columns">
                         <#list menu.siteMenuItems as item>
                             <#if !item.hstLink?? && !item.externalLink??>
-                                <li class="nhsuk-footer__list-item">${item.name?html}</li>
+                                <li class="nhsuk-footer__list-item">${item.name}</li>
                             <#else>
                                 <#if item.hstLink??>
                                     <#assign href><@hst.link link=item.hstLink/></#assign>
                                 <#elseif item.externalLink??>
                                     <#assign href>${item.externalLink?replace("\"", "")}</#assign>
                                 </#if>
-                                <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link"
-                                                                       href="${href}">${item.name?html}</a></li>
+                                <li class="nhsuk-footer__list-item">
+                                    <a class="nhsuk-footer__list-item-link" href="${href}">${item.name}</a>
+                                </li>
                             </#if>
                         </#list>
                     </ul>
