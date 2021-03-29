@@ -2,8 +2,6 @@
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
 <#import "./link.ftl" as hlink>
 
-<@hst.setBundle basename="uk.nhs.hee.web.global"/>
-
 <#macro quickLinks quickLinks>
     <#if quickLinks?? && quickLinks?size != 0>
         <div class="nhsuk-grid-column-one-third">
