@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/listingPage:
+    /hippo:namespaces/hee/landingPage:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: 597d30b4-0792-4b18-bb01-07f87ee62a2e
@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b56055a9-7a7b-4e7e-b2ae-e37292ab3071
+          jcr:uuid: 2e203332-320c-4141-af47-b3b4bb9a520d
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,18 +39,10 @@ definitions:
             hipposysedit:path: hee:contentCards
             hipposysedit:primary: false
             hipposysedit:type: hee:contentCards
-          /HeroSection:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:HeroSection
-            hipposysedit:primary: false
-            hipposysedit:type: hee:HeroSection
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:listingPage
+          jcr:primaryType: hee:landingPage
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -60,7 +52,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 0622f450-00c0-43a4-bea3-3132d3280d63
+          jcr:uuid: 7a36e553-47c6-4557-8272-c02171e3ddd4
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           /hee:contentCards:
@@ -69,10 +61,6 @@ definitions:
             /hee:cards:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:HeroSection:
-            jcr:primaryType: hee:HeroSection
-            hee:header: ''
-            hee:text: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -98,15 +86,6 @@ definitions:
             field: summary
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /HeroSection:
-            jcr:primaryType: frontend:plugin
-            caption: HeroSection
-            field: HeroSection
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /contentCards:

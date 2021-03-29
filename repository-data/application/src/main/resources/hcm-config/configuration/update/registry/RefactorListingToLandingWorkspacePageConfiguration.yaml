@@ -1,0 +1,28 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RefactorListingToLandingWorkspacePageConfiguration:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Refactors/updates Listing Page Configurations [hst:componentclassname=uk.nhs.hee.web.components.ListingPageComponent,
+        hst:template=listingpage-main] with Landing Page Configuration [hst:componentclassname=uk.nhs.hee.web.components.LandingPageComponent,
+        hst:template=landingpage-main].
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass RefactorListingToLandingWorkspacePageConfiguration\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        node.setProperty(\"\
+        hst:componentclassname\", \"uk.nhs.hee.web.components.LandingPageComponent\"\
+        )\r\n        node.setProperty(\"hst:template\", \"landingpage-main\")\r\n\
+        \        node.getSession().move(node.getPath(), node.getParent().getPath()\
+        \ + \"/landingpage\");\r\n        log.debug \"Successfully renamed 'listingpage'\
+        \ hst:containeritemcomponent to 'landingpage'\"\r\n        log.debug \"Also,\
+        \ successfully updated the node ${node.path} with properties [hst:componentclassname=uk.nhs.hee.web.components.LandingPageComponent,\
+        \ hst:template=landingpage-main]\"\r\n        return true\r\n    }\r\n\r\n\
+        \    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/lks/hst:workspace/hst:pages//*[hst:componentclassname
+        = 'uk.nhs.hee.web.components.ListingPageComponent']
