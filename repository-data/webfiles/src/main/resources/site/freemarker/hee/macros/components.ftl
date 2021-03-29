@@ -1,4 +1,3 @@
-<#include "../macros/hero-section.ftl">
 <#include "../macros/quick-links.ftl">
 <#include "../macros/last-next-reviewed-date.ftl">
 <#include "../macros/content-cards.ftl">

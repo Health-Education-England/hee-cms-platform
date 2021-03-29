@@ -36,11 +36,7 @@
 
     <@hst.include ref="breadcrumb"/>
 
-    <div class="nhsuk-width-container">
-      <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-        <@hst.include ref="main"/>
-      </main>
-    </div>
+    <@hst.include ref="main"/>
 
     <@hst.include ref="footer"/>
 

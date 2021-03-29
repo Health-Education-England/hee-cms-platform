@@ -6,7 +6,11 @@
     <meta name="robots" content="noindex"/>
 </@hst.headContribution>
 <#if document??>
-    <@hst.html hippohtml=document.mainBody/>
+    <div class="nhsuk-width-container">
+        <main id="maincontent" role="main" class="nhsuk-main-wrapper">
+            <@hst.html hippohtml=document.mainBody/>
 
-    <@backLink link=document.backLink/>
+            <@backLink link=document.backLink/>
+        </main>
+    </div>
 </#if>
