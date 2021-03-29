@@ -9,9 +9,9 @@
         <div class="nhsuk-grid-column-one-third">
             <div class="nhsuk-card">
                 <div class="nhsuk-card__content">
-                    <h3 class="nhsuk-card__heading"><@fmt.message key="quicklinks.header"/></h3>
+                    <h3 class="nhsuk-card__heading">${quickLinks.title}</h3>
                     <ul class="nhsuk-related-links-card__list">
-                        <#list quickLinks as quickLink>
+                        <#list quickLinks.links as quickLink>
                             <li>
                                 <@hlink.link link=quickLink cssClassName="nhsuk-related-links-card__link">
                                     ${quickLink.text}
