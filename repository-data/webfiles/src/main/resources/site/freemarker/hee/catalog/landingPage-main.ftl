@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
+<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.LandingPage" -->
 <#if document??>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">

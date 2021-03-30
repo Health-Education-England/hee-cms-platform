@@ -37,9 +37,9 @@ definitions:
           /guidance-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/guidance-main.ftl
-          /listingpage-main:
+          /landingpage-main:
             jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/listingpage-main.ftl
+            hst:renderpath: webfile:/freemarker/hee/catalog/landingPage-main.ftl
           /base-breadcrumb:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-breadcrumb.ftl
@@ -72,12 +72,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Guidance
               hst:template: guidance-main
-            /lisingpage:
+            /landingpage:
               jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
+              hst:componentclassname: uk.nhs.hee.web.components.LandingPageComponent
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Landing Page
-              hst:template: listingpage-main
+              hst:template: landingpage-main
             /minihub:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent

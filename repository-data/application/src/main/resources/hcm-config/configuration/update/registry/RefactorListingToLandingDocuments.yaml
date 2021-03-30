@@ -1,0 +1,20 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RefactorListingToLandingDocuments:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Refactors documents of type `hee:listingPage` to `hee:landingPage`.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/lks/landing-pages//element(*, hee:listingPage)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass RefactorListingToLandingDocuments extends BaseNodeUpdateVisitor\
+        \ {\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Updating\
+        \ node ${node.path}\"\r\n        node.setPrimaryType(\"hee:landingPage\")\r\
+        \n        log.debug \"Successfully updated Primary Type of the node ${node.path}\
+        \ from 'hee:listingPage' to 'hee:landingPage'\"\r\n        return true\r\n\
+        \    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
