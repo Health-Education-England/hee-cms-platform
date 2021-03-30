@@ -15,7 +15,7 @@
                             <#assign  isSelected = ''/>
                         </#if>
                         <input class="nhsuk-checkboxes__input" id="${name}--${value}" name="${name}" type="checkbox" value="${value}" ${isSelected}>
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="${name}--${value}">
+                        <label class="nhsuk-label nhsuk-checkboxes__label" for="${name}--${value}">${text}</label>
                     </div>
                 </#list>
             </div>
