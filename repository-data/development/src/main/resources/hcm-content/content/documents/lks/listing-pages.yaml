@@ -1,0 +1,72 @@
+/content/documents/lks/listing-pages:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 987fe1bb-55fe-4caf-ae1b-2201bad1c6a4
+  hippo:name: Listing Pages
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: d7193be7-d74a-43fc-9c03-95775a2f35fe
+  hippotranslation:locale: en
+  /bulletins:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: f426252f-bc13-45b3-975d-c4735c722333
+    hippo:name: Bulletins
+    hippo:versionHistory: cbea2d30-7f04-44f1-ac2f-3220628631c9
+    /bulletins[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 11868121-bc83-44fb-ae45-4764668ff356
+      hee:documentTypes: ['hee:bulletin']
+      hee:pageSize: 2
+      hee:path: ''
+      hee:summary: Find current awareness from our libraries and trusts across the
+        NHS.
+      hee:title: Bulletins
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-30T16:59:44.886+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
+      hippotranslation:locale: en
+    /bulletins[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 401ac712-a209-4a70-bbfc-376fb1b10682
+      hee:documentTypes: ['hee:bulletin']
+      hee:pageSize: 2
+      hee:path: ''
+      hee:summary: Find current awareness from our libraries and trusts across the
+        NHS.
+      hee:title: Bulletins
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-30T16:59:48.241+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
+      hippotranslation:locale: en
+    /bulletins[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 945b5dd0-be7b-441d-b198-d46b6e34e2e4
+      hee:documentTypes: ['hee:bulletin']
+      hee:pageSize: 2
+      hee:path: ''
+      hee:summary: Find current awareness from our libraries and trusts across the
+        NHS.
+      hee:title: Bulletins
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-30T16:59:48.241+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-03-30T17:00:02.328+07:00
+      hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
+      hippotranslation:locale: en

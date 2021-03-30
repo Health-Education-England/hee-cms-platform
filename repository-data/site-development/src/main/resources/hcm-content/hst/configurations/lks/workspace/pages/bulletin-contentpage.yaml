@@ -6,13 +6,13 @@
     jcr:primaryType: hst:containercomponent
     hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
     hst:label: Content Page Main
-    hst:lastmodified: 2021-03-11T15:41:27.752Z
+    hst:lastmodified: 2021-03-30T16:18:35.232+07:00
     hst:xtype: hst.vbox
-    /bulletin:
+    /listing:
       jcr:primaryType: hst:containeritemcomponent
-      hst:componentclassname: uk.nhs.hee.web.components.BulletinComponent
+      hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
       hst:iconpath: images/catalog-component-icons/generic-list.svg
-      hst:label: Bulletin
-      hst:parameternames: [path, documentTypes, pageSize]
-      hst:parametervalues: ['', 'hee:bulletin', '10']
-      hst:template: bulletin-main
+      hst:label: Listing
+      hst:parameternames: [document]
+      hst:parametervalues: [listing-pages/bulletins]
+      hst:template: listing-main

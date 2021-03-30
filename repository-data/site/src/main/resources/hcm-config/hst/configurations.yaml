@@ -40,9 +40,9 @@ definitions:
           /landingpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/landingPage-main.ftl
-          /bulletin-main:
+          /listing-main:
             jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/bulletin-main.ftl
+            hst:renderpath: webfile:/freemarker/hee/catalog/listing-main.ftl
           /base-breadcrumb:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-breadcrumb.ftl
@@ -95,10 +95,10 @@ definitions:
               hst:template: afterform-main
             /bulletin:
               jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: uk.nhs.hee.web.components.BulletinComponent
+              hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Bulletin
-              hst:template: bulletin-main
+              hst:label: Listing
+              hst:template: listing-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

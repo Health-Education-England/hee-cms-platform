@@ -14,20 +14,20 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
-import org.onehippo.cms7.essentials.components.CommonComponent;
+import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
-import org.onehippo.cms7.essentials.components.utils.SiteUtils;
 import org.onehippo.forge.selection.hst.contentbean.ValueList;
 import org.onehippo.forge.selection.hst.util.SelectionUtil;
-import uk.nhs.hee.web.components.info.BulletinComponentInfo;
+import uk.nhs.hee.web.beans.ListingPage;
+import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.constants.HeeNodeType;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.List;
 import java.util.Map;
 
-@ParametersInfo(type = BulletinComponentInfo.class)
-public class BulletinComponent extends CommonComponent {
+@ParametersInfo(type = ListingPageComponentInfo.class)
+public class ListingPageComponent extends EssentialsDocumentComponent {
     private final static String CATEGORY_QUERY_PARAM = "category";
     private final static String CATEGORY_VALUE_LIST_IDENTIFIER = "categories";
 
@@ -37,9 +37,9 @@ public class BulletinComponent extends CommonComponent {
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
-        final BulletinComponentInfo paramInfo = getComponentParametersInfo(request);
+        super.doBeforeRender(request, response);
 
-        final Pageable<HippoBean> pageable = getDocumentBeans(request, paramInfo);
+        final Pageable<HippoBean> pageable = getDocumentBeans(request);
 
         request.setAttribute("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
         request.setAttribute("categoriesMap", getCategoryValueListMap());
@@ -47,33 +47,36 @@ public class BulletinComponent extends CommonComponent {
         request.setModel(REQUEST_ATTR_PAGEABLE, pageable);
     }
 
-    private Pageable<HippoBean> getDocumentBeans(final HstRequest request, final BulletinComponentInfo paramInfo) {
+    private Pageable<HippoBean> getDocumentBeans(final HstRequest request) {
         try {
-            return executeQuery(request, paramInfo);
+            return executeQuery(request);
         } catch (QueryException qe) {
             throw new HstComponentException("An error has occurred while trying to execute hst query.", qe);
         }
     }
 
-    protected Pageable<HippoBean> executeQuery(final HstRequest request, final BulletinComponentInfo paramInfo) throws QueryException {
-        final HstQuery query = buildQuery(request, paramInfo);
+    protected Pageable<HippoBean> executeQuery(final HstRequest request) throws QueryException {
+        ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+
+        final HstQuery query = buildQuery(request, listingPage);
+
 
         final HstQueryResult execute = query.execute();
         return getPageableFactory().createPageable(
                 execute.getHippoBeans(),
                 execute.getTotalSize(),
-                paramInfo.getPageSize(),
+                listingPage.getPageSize().intValue(),
                 getCurrentPage(request));
     }
 
-    private HstQuery buildQuery(final HstRequest request, final BulletinComponentInfo paramInfo) {
-        final String documentPath = paramInfo.getPath();
+    private HstQuery buildQuery(final HstRequest request, ListingPage listingPage) {
+        final String documentPath = listingPage.getPath();
         final HippoBean scopeBean = doGetScopeBean(documentPath);
 
-        final String[] documentTypes = getDocumentTypes(paramInfo);
+        final String[] documentTypes = listingPage.getDocumentTypes();
         final HstQuery query = createQuery(scopeBean, documentTypes);
 
-        final int pageSize = paramInfo.getPageSize();
+        final int pageSize = listingPage.getPageSize().intValue();
         final int page = getCurrentPage(request);
         query.setLimit(pageSize);
         query.setOffset((page - 1) * pageSize);
@@ -82,11 +85,6 @@ public class BulletinComponent extends CommonComponent {
         applySortOrdering(request, query);
 
         return query;
-    }
-
-    private String[] getDocumentTypes(BulletinComponentInfo paramInfo) {
-        final String documentTypes = paramInfo.getDocumentTypes();
-        return SiteUtils.parseCommaSeparatedValue(documentTypes);
     }
 
     private HstQuery createQuery(HippoBean scope, String[] documentTypes) {

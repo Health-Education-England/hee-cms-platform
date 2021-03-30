@@ -20,9 +20,4 @@ public class LandingPage extends BaseDocument {
     public ContentCards getContentCards() {
         return getBean("hee:contentCards", ContentCards.class);
     }
-
-    @HippoEssentialsGenerated(internalName = "hee:HeroSection")
-    public HeroSection getHeroSection() {
-        return getBean("hee:HeroSection", HeroSection.class);
-    }
 }
