@@ -1,22 +1,52 @@
 /content/documents/administration/labels/pagination:
   jcr:primaryType: hippo:handle
-  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
-  jcr:uuid: 82cded88-174b-4ed4-a43b-d740023cb97a
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 60f4e754-6c6a-44b5-92ac-8fe8e8de3190
   hippo:name: Pagination
-  /pagination:
+  hippo:versionHistory: 777bcaba-1535-492d-bc54-007bd8280d72
+  /pagination[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
-    jcr:uuid: ce418a16-84f7-42f1-8aae-efbcbedd6748
-    hippo:availability: [live, preview]
+    jcr:uuid: e1254549-eb14-477d-8742-9a6a6d4328b7
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-30T17:01:39.922+07:00
+    hippostdpubwf:lastModificationDate: 2021-03-30T17:01:39.922+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: uk.nhs.hee.web.pagination
+    resourcebundle:keys: [page.previous, page.next]
+    resourcebundle:messages: [Previous, Next]
+  /pagination[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 2ae719cb-0f93-4a79-a9b8-f5857fbfefcb
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-30T17:01:39.922+07:00
+    hippostdpubwf:lastModificationDate: 2021-03-30T17:02:51.108+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: uk.nhs.hee.web.pagination
+    resourcebundle:keys: [page.previous, page.next]
+    resourcebundle:messages: [Previous, Next]
+  /pagination[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 20733806-dccf-416d-8188-79c77499442e
+    hippo:availability: [live]
+    hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
-    hippostdpubwf:creationDate: 2014-08-21T14:30:14.382+02:00
-    hippostdpubwf:lastModificationDate: 2014-08-21T17:03:32.811+02:00
+    hippostdpubwf:creationDate: 2021-03-30T17:01:39.922+07:00
+    hippostdpubwf:lastModificationDate: 2021-03-30T17:02:51.108+07:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2014-08-21T17:06:47.420+02:00
-    resourcebundle:descriptions: ['Used in the indication, how many results were found.
-        The label is appended to the number of results.', Label used for the link
-        to the previous page., Label used for the link to the next page.]
-    resourcebundle:id: essentials.pagination
-    resourcebundle:keys: [results.indication, page.previous, page.next]
-    resourcebundle:messages: [document(s), previous, next]
+    hippostdpubwf:publicationDate: 2021-03-30T17:02:53.920+07:00
+    resourcebundle:descriptions: ['', '']
+    resourcebundle:id: uk.nhs.hee.web.pagination
+    resourcebundle:keys: [page.previous, page.next]
+    resourcebundle:messages: [Previous, Next]

@@ -1,0 +1,75 @@
+/content/documents/administration/labels/bulletin:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 03cc6eaf-ca38-4874-a8a5-22ae5ea2c643
+  hippo:name: Bulletin
+  hippo:versionHistory: 524b0609-250c-4313-81ca-a1c5d648d058
+  /bulletin[1]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 0702ce80-f86a-4e7d-89fe-1fb7efcc2013
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostd:transferable: false
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+    hippostdpubwf:lastModificationDate: 2021-03-11T11:33:55.221Z
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+        item category., Used in a Bulletin component to show a bulletin item overview.,
+      Used in a Bulletin component to show a bulletin item website., Used in a Bulletin
+        component to show the sorting type., Used in a Bulletin component to show
+        the name of a sort option., Used in a Bulletin component to show the name
+        of a sort option., Used in a Bulletin component to show the name of the Category
+        filter., Used in a Bulletin component to show the name of the filters., Used
+        in a Bulletin component to present the number of document results.]
+    resourcebundle:id: uk.nhs.hee.web.bulletin
+    resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
+      sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
+      bulletin.results.count.text]
+    resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
+      Category, Filters, results]
+  /bulletin[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 3cde13e7-4274-4637-904c-a68eecbfe36f
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+    hippostdpubwf:lastModificationDate: 2021-03-11T11:28:59.774Z
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+        item category., Used in a Bulletin component to show a bulletin item overview.,
+      Used in a Bulletin component to show a bulletin item website., '', '', '', '',
+      '', '']
+    resourcebundle:id: uk.nhs.hee.web.bulletin
+    resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
+      sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
+      bulletin.results.count.text]
+    resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
+      Category, Filters, results]
+  /bulletin[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: b0d5b27c-b22c-48b3-b0d5-0dabdbd405db
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+    hippostdpubwf:lastModificationDate: 2021-03-11T11:28:59.774Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-03-11T11:29:03.949Z
+    resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+        item category., Used in a Bulletin component to show a bulletin item overview.,
+      Used in a Bulletin component to show a bulletin item website., '', '', '', '',
+      '', '']
+    resourcebundle:id: uk.nhs.hee.web.bulletin
+    resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
+      sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
+      bulletin.results.count.text]
+    resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
+      Category, Filters, results]

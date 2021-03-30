@@ -1,0 +1,95 @@
+/content/documents/lks/home:
+  .meta:order-before: bulletins
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: ef78c935-2f90-48d2-919f-5f99073f1832
+  hippo:name: Home
+  hippo:versionHistory: 6fc29672-5c3c-4804-89a2-0cf516a721cf
+  /home[1]:
+    jcr:primaryType: hee:HomePage
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: c275b7e7-3ef7-4cc7-8e28-c411a78cb641
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
+    hippostdpubwf:lastModificationDate: 2021-03-25T13:48:03.282+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
+    hippotranslation:locale: en
+    /hee:HeroSection:
+      jcr:primaryType: hee:HeroSection
+      hee:header: Welcome to the Library and Knowledge Services Staff Hub
+      hee:text: Guidance and information for library and information staff
+    /hee:contentBlocks:
+      jcr:primaryType: hee:contentCards
+      hee:header: Our services
+      /hee:cards[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+      /hee:cards[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 35896ebb-ebca-4ff7-9acc-013a6c4dee93
+      /hee:cards[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
+  /home[2]:
+    jcr:primaryType: hee:HomePage
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: dbf7ad5d-f808-44a7-87c9-c37d28027072
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
+    hippostdpubwf:lastModificationDate: 2021-03-25T13:48:17.490+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
+    hippotranslation:locale: en
+    /hee:HeroSection:
+      jcr:primaryType: hee:HeroSection
+      hee:header: Welcome to the Library and Knowledge Services Staff Hub
+      hee:text: Guidance and information for library and information staff
+    /hee:contentBlocks:
+      jcr:primaryType: hee:contentCards
+      hee:header: Our services
+      /hee:cards[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+      /hee:cards[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 35896ebb-ebca-4ff7-9acc-013a6c4dee93
+      /hee:cards[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
+  /home[3]:
+    jcr:primaryType: hee:HomePage
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 9058064b-baa9-47e9-92d8-300b48d6d972
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
+    hippostdpubwf:lastModificationDate: 2021-03-25T13:48:17.490+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-03-25T13:48:19.418+07:00
+    hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
+    hippotranslation:locale: en
+    /hee:HeroSection:
+      jcr:primaryType: hee:HeroSection
+      hee:header: Welcome to the Library and Knowledge Services Staff Hub
+      hee:text: Guidance and information for library and information staff
+    /hee:contentBlocks:
+      jcr:primaryType: hee:contentCards
+      hee:header: Our services
+      /hee:cards[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
+      /hee:cards[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 35896ebb-ebca-4ff7-9acc-013a6c4dee93
+      /hee:cards[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217

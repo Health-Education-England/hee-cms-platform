@@ -3,15 +3,14 @@ definitions:
     /hippo:namespaces/hee/listingPage:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 597d30b4-0792-4b18-bb01-07f87ee62a2e
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: ed824232-b8f0-4217-b2cb-dda8b404a65c
+        jcr:uuid: a8a04e81-3d9f-4f94-af8c-8a6c7735a8e7
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b56055a9-7a7b-4e7e-b2ae-e37292ab3071
+          jcr:uuid: 00ac1299-e238-44b3-83fc-159f4fcfe59b
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -31,22 +30,31 @@ definitions:
             hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-          /contentCards:
+          /pageSize:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:contentCards
+            hipposysedit:path: hee:pageSize
             hipposysedit:primary: false
-            hipposysedit:type: hee:contentCards
-          /HeroSection:
+            hipposysedit:type: Long
+            hipposysedit:validators: [required]
+          /path:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:HeroSection
+            hipposysedit:path: hee:path
             hipposysedit:primary: false
-            hipposysedit:type: hee:HeroSection
+            hipposysedit:type: String
+          /documentTypes:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:documentTypes
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -60,19 +68,12 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 0622f450-00c0-43a4-bea3-3132d3280d63
+          jcr:uuid: 7ec0952e-9511-431a-91b8-00b2373d797b
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
-          /hee:contentCards:
-            jcr:primaryType: hee:contentCards
-            hee:header: ''
-            /hee:cards:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:HeroSection:
-            jcr:primaryType: hee:HeroSection
-            hee:header: ''
-            hee:text: ''
+          hee:path: ''
+          hee:documentTypes: ['']
+          hee:pageSize: 0
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -100,21 +101,28 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /HeroSection:
+          /pageSize:
             jcr:primaryType: frontend:plugin
-            caption: HeroSection
-            field: HeroSection
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Page Size
+            field: pageSize
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /contentCards:
+          /path:
             jcr:primaryType: frontend:plugin
-            caption: Content Cards
-            field: contentCards
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Path
+            field: path
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /documentTypes:
+            jcr:primaryType: frontend:plugin
+            caption: Document Types
+            field: documentTypes
             hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
