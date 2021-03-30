@@ -1,3 +1,4 @@
+<#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
 
 <#-- @ftlvariable name="menu" type="org.hippoecm.hst.core.sitemenu.HstSiteMenu" -->
@@ -18,9 +19,9 @@
                     <#list menu.siteMenuItems as item>
                         <#if !item.hstLink?? && !item.externalLink??>
                             <#if item.selected || item.expanded>
-                                <li class="nhsuk-header__navigation-item active"><div style="padding: 10px 15px;">${item.name?html}</div></li>
+                                <li class="nhsuk-header__navigation-item active"><div style="padding: 10px 15px;">${item.name}</div></li>
                             <#else>
-                                <li class="nhsuk-header__navigation-item"><div style="padding: 10px 15px;">${item.name?html}</div></li>
+                                <li class="nhsuk-header__navigation-item"><div style="padding: 10px 15px;">${item.name}</div></li>
                             </#if>
                         <#else>
                             <#if item.hstLink??>
@@ -29,9 +30,9 @@
                                 <#assign href>${item.externalLink?replace("\"", "")}</#assign>
                             </#if>
                             <#if  item.selected || item.expanded>
-                                <li class="nhsuk-header__navigation-item active"><a class="nhsuk-header__navigation-link" href="${href}">${item.name?html}</a></li>
+                                <li class="nhsuk-header__navigation-item active"><a class="nhsuk-header__navigation-link" href="${href}">${item.name}</a></li>
                             <#else>
-                                <li class="nhsuk-header__navigation-item"><a class="nhsuk-header__navigation-link" href="${href}">${item.name?html}</a></li>
+                                <li class="nhsuk-header__navigation-item"><a class="nhsuk-header__navigation-link" href="${href}">${item.name}</a></li>
                             </#if>
                         </#if>
                     </#list>

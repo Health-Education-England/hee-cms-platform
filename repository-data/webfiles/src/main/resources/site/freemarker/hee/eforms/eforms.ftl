@@ -237,7 +237,7 @@
                     var fieldType = field.attr('type');
                     var fieldName = field.attr('name');
                     var checked = [];
-                    var checkedSelector = '.forms-page.conditionally-visible:visible .form-field *:input[name="' + fieldName + '"]:checked';
+                    var checkedSelector = '.forms-page.conditionally-visible:visible .nhsuk-form-group *:input[name="' + fieldName + '"]:checked';
 
                     if (fieldType == 'checkbox') {
                         if (!params[fieldName]) {
@@ -274,7 +274,7 @@
             }
 
             <#-- real-time ajax-based single field validation -->
-            var fields = $('.form-field *:input');
+            var fields = $('.nhsuk-form-group *:input');
             var ajaxValidationUrl = '<@hst.resourceURL resourceId="validation"/>';
             ajaxValidationUrl = ajaxValidationUrl.replace(/&amp;/g, "&");
             fields.blur(function () {
@@ -293,13 +293,13 @@
                 if (endsWith(fieldName, otherSuffix)) {
                     var prevFieldName = fieldName.substring(0, fieldName.length - otherSuffix.length);
                     // check if the radio/checkbox that enables this '-other' field is checked
-                    var prevField = $('.form-field *:input[name=' + prevFieldName + '][value=-other]:checked');
+                    var prevField = $('.nhsuk-form-group *:input[name=' + prevFieldName + '][value=-other]:checked');
                     if (prevField.length) {
                         params[fieldName] = fieldValue;
                         params[prevFieldName] = otherSuffix;
                     }
                 } else if (fieldType === 'checkbox') {
-                    var checked = $('.form-field *:input[name=' + fieldName + ']:checked');
+                    var checked = $('.nhsuk-form-group *:input[name=' + fieldName + ']:checked');
                     if (checked.length > 0) {
                         var values = [];
                         checked.each(function (index) {
@@ -320,37 +320,31 @@
 
                 $.post(ajaxValidationUrl, params,
                     function (data) {
-                        var count = 0;
                         if (data) {
-                            var messagesList = $('#feedbackPanel > ul');
-                            count = messagesList.children('li').length;
-                            //indicates if we received any messages
-                            var hasMessages = false;
-                            for (var errorKey in data) {
+                            let hasMessages = false;
+                            for (const errorKey in data) {
                                 if (data.hasOwnProperty(errorKey)) {
                                     // get the error message
-                                    var errorMessage = data[errorKey];
+                                    const errorMessage = data[errorKey];
                                     if (errorMessage) {
                                         hasMessages = true;
                                         // add error message to feedback panel
-                                        $('#field-' + errorKey).html(errorMessage.localizedMessage);
-                                        messagesList.append('<li data-field-name="' + errorKey + '">' + errorMessage.localizedMessage + '</li>')
-                                        count++;
+                                        $('#' + errorKey + '-error').html('<span class="nhsuk-u-visually-hidden">Error:</span>' + errorMessage.localizedMessage);
+                                        const inputField = $('#' + errorKey);
+                                        inputField.addClass("nhsuk-input--error");
+                                        inputField.attr("aria-describedby", errorKey + "-hint " + errorKey + "-error");
+                                        inputField.parent().addClass("nhsuk-form-group--error");
                                     }
                                 }
                             }
                             if (!hasMessages && params) {
-                                messagesList.children('li').each(function () {
-                                    var kid = $(this);
-                                    var existing = kid.attr("data-field-name");
-                                    for (var key in params) {
-                                        if (params.hasOwnProperty(key)) {
-                                            if (existing === key) {
-                                                kid.remove();
-                                            }
-                                        }
-                                    }
-                                });
+                                for (const key in params) {
+                                    $('#' + key + '-error').html("");
+                                    const inputField = $('#' + key);
+                                    inputField.removeClass("nhsuk-input--error");
+                                    inputField.attr("aria-describedby", key + "-hint");
+                                    inputField.parent().removeClass("nhsuk-form-group--error");
+                                }
                             }
                         }
                     }, "json");
@@ -379,7 +373,7 @@
             }
 
             for (var condFieldName in condFieldNames) {
-                var condField = $('.form-field *[name="' + condFieldName + '"]');
+                var condField = $('.nhsuk-form-group *[name="' + condFieldName + '"]');
                 if (condField.length == 0) continue;
                 var eventType = 'change';
 
@@ -393,16 +387,16 @@
                             if ($(this).attr('name') != condFieldName) continue;
 
                             var name = field['name'];
-                            var targetField = $('.form-field *[name="' + name + '"]');
+                            var targetField = $('.nhsuk-form-group *[name="' + name + '"]');
                             if (targetField.length == 0) {
-                                targetField = $('.form-fieldgroup[name="' + name + '"]');
+                                targetField = $('.nhsuk-form-groupgroup[name="' + name + '"]');
                             }
                             if (targetField.length == 0) {
                                 targetField = $('.forms-text[name="' + name + '"]');
                             }
                             if (targetField.length == 0) continue;
 
-                            var targetContainer = targetField.parents('.form-field');
+                            var targetContainer = targetField.parents('.nhsuk-form-group');
                             if (targetContainer.length == 0) {
                                 targetContainer = targetField;
                             }
@@ -412,7 +406,7 @@
                             var condNegated = field['condnegated'];
                             var curSelectedValue = $(this).val();
                             if ($(this).is('input') && $(this).attr('type') == 'radio') {
-                                curSelectedValue = $('.form-field *[name="' + condFieldName + '"]:radio:checked').val();
+                                curSelectedValue = $('.nhsuk-form-group *[name="' + condFieldName + '"]:radio:checked').val();
                             }
 
                             if (type == 'visibility') {
@@ -437,7 +431,7 @@
                             var condNegated = page['condnegated'];
                             var curSelectedValue = $(this).val();
                             if ($(this).is('input') && $(this).attr('type') == 'radio') {
-                                curSelectedValue = $('.form-field *[name="' + condFieldName + '"]:radio:checked').val();
+                                curSelectedValue = $('.nhsuk-form-group *[name="' + condFieldName + '"]:radio:checked').val();
                             }
 
                             if (type == 'visibility') {
@@ -497,11 +491,11 @@
                 // ajax based validation
                 // validate all fields on current page before going to the next
                 var params = {};
-                var fieldsOnPage = $('.forms-page.conditionally-visible:visible .form-field:visible *:input');
+                var fieldsOnPage = $('.forms-page.conditionally-visible:visible .nhsuk-form-group:visible *:input');
                 addFormFieldsToParameters(fieldsOnPage, params);
 
                 // add an empty parameter for any group on the current page
-                var groupsOnPage = $('.forms-page.conditionally-visible:visible .form-fieldgroup:visible');
+                var groupsOnPage = $('.forms-page.conditionally-visible:visible .nhsuk-form-groupgroup:visible');
                 groupsOnPage.each(function () {
                     params[$(this).attr('name')] = '';
                 });
@@ -524,11 +518,11 @@
                 }
 
                 var params = {};
-                var fieldsOnPage = $('.forms-page.conditionally-visible:visible .form-field:visible *:input');
+                var fieldsOnPage = $('.forms-page.conditionally-visible:visible .nhsuk-form-group:visible *:input');
                 addFormFieldsToParameters(fieldsOnPage, params);
 
                 // add an empty parameter for any visible group on the current page
-                var groupsOnPage = $('.forms-page.conditionally-visible:visible .form-fieldgroup:visible');
+                var groupsOnPage = $('.forms-page.conditionally-visible:visible .nhsuk-form-groupgroup:visible');
                 groupsOnPage.each(function () {
                     params[$(this).attr('name')] = '';
                 });
@@ -550,7 +544,11 @@
                                 var errorMessage = data[fieldName];
                                 if (errorMessage) {
                                     // add error message to feedback panel
-                                    $('#field-' + fieldName).html(errorMessage.localizedMessage);
+                                    $('#' + fieldName + '-error').html('<span class="nhsuk-u-visually-hidden">Error:</span>' + errorMessage.localizedMessage);
+                                    const inputField = $('#' + fieldName);
+                                    inputField.addClass("nhsuk-input--error");
+                                    inputField.attr("aria-describedby", fieldName + "-hint " + fieldName + "-error");
+                                    inputField.parent().addClass("nhsuk-form-group--error");
                                     count++;
                                 }
                             }

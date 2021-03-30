@@ -1,6 +1,6 @@
 <#include "../../include/imports.ftl">
 <#include "../macros/guidance-content.ftl"/>
-
+<@hst.defineObjects />
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.MiniHub" -->
@@ -11,13 +11,12 @@
 <#if document??>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-two-thirds">
                     <h1>
-                      <span role="text">${document.title}
+                      <span role="text">${currentGuidance.title}
                         <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                          ${document.summary}
+                          ${document.title}
                         </span>
                       </span>
                     </h1>
@@ -33,7 +32,7 @@
                                 <#else>
                                     <li class="nhsuk-contents-list__item">
                                         <a class="nhsuk-contents-list__link"
-                                           href="${accessFromRootHub?then(document.name + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
+                                           href="${accessFromRootHub?then(hstRequestContext.resolvedSiteMapItem.pathInfo + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
                                     </li>
                                 </#if>
                             </#list>
@@ -66,7 +65,7 @@
                         <#if nextGuidance??>
                             <li class="nhsuk-pagination-item--next">
                                 <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
-                                   href="${accessFromRootHub?then(document.name + '/' + nextGuidance.name, nextGuidance.name)}">
+                                   href="${accessFromRootHub?then(hstRequestContext.resolvedSiteMapItem.pathInfo + '/' + nextGuidance.name, nextGuidance.name)}">
                                     <span class="nhsuk-pagination__title"><@fmt.message key="next"/></span>
                                     <span class="nhsuk-u-visually-hidden">:</span>
                                     <span class="nhsuk-pagination__page">${nextGuidance.title}</span>

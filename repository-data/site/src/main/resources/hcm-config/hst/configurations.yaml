@@ -37,9 +37,9 @@ definitions:
           /guidance-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/guidance-main.ftl
-          /listingpage-main:
+          /landingpage-main:
             jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/listingpage-main.ftl
+            hst:renderpath: webfile:/freemarker/hee/catalog/landingPage-main.ftl
           /bulletin-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/bulletin-main.ftl
@@ -55,6 +55,12 @@ definitions:
           /formpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/formpage-main.ftl
+          /afterform-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/afterform-main.ftl
+          /hero-section:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/layout/hero-section.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -69,12 +75,24 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Guidance
               hst:template: guidance-main
-            /lisingpage:
+            /landingpage:
               jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
+              hst:componentclassname: uk.nhs.hee.web.components.LandingPageComponent
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Landing Page
-              hst:template: listingpage-main
+              hst:template: landingpage-main
+            /minihub:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: MiniHub
+              hst:template: minihub-main
+            /after-form:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: AfterForm
+              hst:template: afterform-main
             /bulletin:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.BulletinComponent

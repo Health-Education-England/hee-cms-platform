@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ea100f37-24c4-42a7-94a4-e5605d532479
+          jcr:uuid: c821286f-78c5-4510-9d07-56f7c5a1c8c3
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -40,14 +40,6 @@ definitions:
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /link:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:quickLinks
-            hipposysedit:primary: false
-            hipposysedit:type: hee:link
           /relatedContent:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -64,6 +56,14 @@ definitions:
             hipposysedit:path: hee:pageLastNextReview
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
+          /quickLinks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:quickLinks
+            hipposysedit:primary: false
+            hipposysedit:type: hee:QuickLinks
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -77,26 +77,9 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 2603f507-4b40-43f8-ada5-9e38b52997f8
+          jcr:uuid: d9e5bf15-a0eb-44ed-8805-38d8bc08d0fa
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
-          /hee:quickLinks:
-            jcr:primaryType: hee:link
-            jcr:mixinTypes: ['mix:referenceable']
-            hee:url: ''
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:locale: document-type-locale
-            hippostd:holder: holder
-            hippostd:state: draft
-            jcr:uuid: 8c9d570f-15bc-4ad5-8111-60301f2b6b74
-            hippotranslation:id: document-type-locale-id
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hee:text: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:relatedContent:
             jcr:primaryType: hee:contentCards
             hee:header: ''
@@ -116,6 +99,26 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:quickLinks:
+            jcr:primaryType: hee:QuickLinks
+            hee:title: ''
+            /hee:links:
+              jcr:primaryType: hee:link
+              jcr:mixinTypes: ['mix:referenceable']
+              jcr:uuid: b410343a-ee12-4d01-85d7-74f5c3bacd24
+              hee:text: ''
+              hee:url: ''
+              hippostd:holder: holder
+              hippostd:state: draft
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -168,15 +171,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /quickLinks:
-            jcr:primaryType: frontend:plugin
-            caption: Quick Links
-            field: link
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
             caption: Page Last Next Review Date
@@ -193,5 +187,14 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /quickLinks:
+            jcr:primaryType: frontend:plugin
+            caption: Quick Links
+            field: quickLinks
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

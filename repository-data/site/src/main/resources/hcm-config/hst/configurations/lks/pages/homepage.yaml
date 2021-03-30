@@ -6,6 +6,4 @@ definitions:
       /main:
         jcr:primaryType: hst:component
         hst:template: homepage-main
-        /container:
-          jcr:primaryType: hst:containercomponentreference
-          hst:referencecomponent: homepage/main
+        hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent

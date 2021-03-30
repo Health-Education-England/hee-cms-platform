@@ -11,13 +11,22 @@
 [hee:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
 
+[hee:AfterForm] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:ContentCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:HeroSection] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:HomePage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:MiniHub] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:QuickLinks] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:StatementBlock] > hippo:compound, hippostd:relaxed
@@ -41,6 +50,9 @@
   orderable
 
 [hee:listingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed
