@@ -1,5 +1,5 @@
 <#ftl output_format="HTML">
-<#--<@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>-->
+<#--<@hst.setBundle basename="uk.nhs.hee.web.bulletin" scope="request"/>-->
 
 <#macro listItem title category overview websiteURL websiteText>
     <dl class="nhsuk-summary-list">

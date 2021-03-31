@@ -1,7 +1,7 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
 
-<@hst.setBundle basename="essentials.pagenotfound"/>
+<@hst.setBundle basename="essentials.pagenotfound" scope="request"/>
 
 <div class="nhsuk-width-container">
     <main id="maincontent" role="main" class="nhsuk-main-wrapper">

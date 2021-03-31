@@ -3,7 +3,7 @@
 
 <#-- @ftlvariable name="breadcrumbLinks" type="java.util.List<uk.nhs.hee.web.components.beans.BreadcrumbLink>" -->
 <#if breadcrumbLinks?? && breadcrumbLinks?has_content>
-    <@hst.setBundle basename="uk.nhs.hee.web.global"/>
+    <@hst.setBundle basename="uk.nhs.hee.web.global" scope="request"/>
 
     <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
         <div class="nhsuk-width-container">

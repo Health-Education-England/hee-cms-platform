@@ -2,13 +2,13 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<@hst.setBundle basename="uk.nhs.hee.web.blogpost" scope="caca"/>
+<@hst.setBundle basename="uk.nhs.hee.web.blogpost" scope="request"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.BlogPost" -->
 <#-- @ftlvariable name="categoryToFilteredURLMap" type="java.util.Map" -->
 
 <#if document??>
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
+    <main id="maincontent" role="main" class="nhsuk-main-wrapper">
         <div class="nhsuk-width-container">
 
             <div class="nhsuk-grid-row">

@@ -5,7 +5,7 @@
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
 
-<@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>
+<@hst.setBundle basename="uk.nhs.hee.web.bulletin" scope="request"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
 <#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->

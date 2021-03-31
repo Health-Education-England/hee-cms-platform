@@ -1,6 +1,6 @@
 <#include "../../include/imports.ftl">
 
-<@hst.setBundle basename="uk.nhs.hee.web.global"/>
+<@hst.setBundle basename="uk.nhs.hee.web.global" scope="request"/>
 
 <div class="nhsuk-header nhsuk-header--organisation nhsuk-header--parent" role="banner">
     <div class="nhsuk-width-container nhsuk-header__container">
