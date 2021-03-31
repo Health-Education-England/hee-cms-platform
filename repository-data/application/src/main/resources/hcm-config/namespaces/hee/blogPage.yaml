@@ -1,17 +1,17 @@
 definitions:
   config:
-    /hippo:namespaces/hee/blogpage:
+    /hippo:namespaces/hee/blogPost:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: b639c6b9-6e4a-4f37-936a-c24760750a3e
+      jcr:uuid: 720bf71b-e7c9-49e2-8b9d-8189f50453d9
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 4fb90a42-3987-430d-b609-30223e48c0a5
+        jcr:uuid: 5e72915a-849f-4c90-b9fd-ea1289ded076
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1c93b891-edf4-46d0-b617-7f7ab1677ea8
+          jcr:uuid: 1098389d-b98c-4547-90d7-83b7ce6745e1
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -50,25 +50,42 @@ definitions:
             hipposysedit:path: hee:pageLastNextReview
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
-          /ActionLink:
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator, required]
+          /QuickLinks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:QuickLinks
+            hipposysedit:primary: false
+            hipposysedit:type: hee:QuickLinks
+          /publicationDate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:publicationDate
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+            hipposysedit:validators: [required]
+          /category:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:relatedPosts
+            hipposysedit:path: hee:category
             hipposysedit:primary: false
-            hipposysedit:type: hee:ActionLink
-          /bodyContentBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:bodyContentBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:blogpage
+          jcr:primaryType: hee:blogPost
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -76,22 +93,25 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 9a03120e-2129-47f0-ae7f-9e534e85a91b
+          hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
+          hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
-          hee:author: ''
           hee:summary: ''
-          jcr:uuid: 8953f2ac-1854-4ef0-91d3-542a433af803
-          hippostdpubwf:lastModificationDate: 2021-03-22T10:08:57.447Z
-          hippostdpubwf:creationDate: 2021-03-22T10:08:57.448Z
+          hee:author: ''
+          hee:publicationDate: 0001-01-01T12:00:00Z
+          hee:category: []
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
-          /hee:relatedPosts:
-            jcr:primaryType: hee:ActionLink
-            /hee:link:
+          /hee:QuickLinks:
+            jcr:primaryType: hee:QuickLinks
+            hee:title: Related posts
+            /hee:links:
               jcr:primaryType: hee:link
               jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: a7e8689f-7ff8-4784-a3ed-379016151ce8
+              jcr:uuid: 9683dc3e-2311-479f-a5af-6a5f9c7211c4
               hee:text: ''
               hee:url: ''
               hippostd:holder: holder
@@ -144,39 +164,63 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /category:
+            jcr:primaryType: frontend:plugin
+            caption: Category
+            field: category
+            multiselect.type: selectlist
+            palette.alloworder: false
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/lks/value-lists/blogcategories
+          /publicationDate:
+            jcr:primaryType: frontend:plugin
+            caption: Publication date
+            field: publicationDate
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /QuickLinks:
+            jcr:primaryType: frontend:plugin
+            caption: QuickLinks
+            field: QuickLinks
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
             field: summary
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /bodyContentBlocks:
+          /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Body
             compoundList: hippostd:html,hippogallerypicker:imagelink
             contentPickerType: links
-            field: bodyContentBlocks
+            field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /relatedPosts:
-            jcr:primaryType: frontend:plugin
-            caption: RelatedPosts
-            field: ActionLink
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
-            caption: Page Last Next Review Date
+            caption: Last/Next Review Date
             field: pageLastNextReview
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

@@ -1,0 +1,55 @@
+/content/documents/administration/labels/blogpost:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: b935acae-a789-495d-b0fa-f608668409ed
+  hippo:name: BlogPost
+  hippo:versionHistory: 08334201-dd16-4b20-8dc4-5bd6193fd7cf
+  /blogpost[1]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: d5c1f922-e066-4eb7-8321-2e8e93e53f5e
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
+    hippostdpubwf:lastModificationDate: 2021-03-31T14:21:42.935+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Label that defined the text before the publication
+        date., Label that defined the text before the publication author name.]
+    resourcebundle:id: uk.nhs.hee.web.blogpost
+    resourcebundle:keys: [published.on, publication.by]
+    resourcebundle:messages: [Published on, by]
+  /blogpost[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: f73f535f-d90b-4607-992f-28de8c3ff296
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
+    hippostdpubwf:lastModificationDate: 2021-03-31T14:21:42.863+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: [Label that defined the text before the publication
+        date., Label that defined the text before the publication author name.]
+    resourcebundle:id: uk.nhs.hee.web.blogpost
+    resourcebundle:keys: [published.on, publication.by]
+    resourcebundle:messages: [Published on, by]
+  /blogpost[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 31999361-867d-4157-aa04-f4e0c2b13ed3
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
+    hippostdpubwf:lastModificationDate: 2021-03-31T14:21:42.863+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-03-31T14:21:45.925+01:00
+    resourcebundle:descriptions: [Label that defined the text before the publication
+        date., Label that defined the text before the publication author name.]
+    resourcebundle:id: uk.nhs.hee.web.blogpost
+    resourcebundle:keys: [published.on, publication.by]
+    resourcebundle:messages: [Published on, by]

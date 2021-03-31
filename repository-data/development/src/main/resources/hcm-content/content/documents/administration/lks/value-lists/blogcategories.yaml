@@ -1,0 +1,28 @@
+/content/documents/administration/lks/value-lists/blogcategories:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 07ea54dc-5bbe-4ce9-a5a4-d59fe3181159
+  hippo:name: BlogCategories
+  /blogcategories:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: a6bf4ce5-fbc4-43e2-a3a6-eb68c2810538
+    hippo:availability: [live, preview]
+    hippotranslation:id: 236c0d4f-6715-4a31-93e4-9a7f7646e557
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: discovery_system
+      selection:label: Discovery System
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: inter_library_loans
+      selection:label: Inter Library Loans
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: data_serch
+      selection:label: Data Search
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: document_supply
+      selection:label: Document Supply

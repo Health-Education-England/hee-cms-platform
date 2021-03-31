@@ -35,10 +35,10 @@
 [hee:YellowAlertBlock] > hippo:compound, hippostd:relaxed
   orderable
 
-[hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+[hee:blogPost] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:blogpage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+[hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:contentCards] > hippo:compound, hippostd:relaxed
@@ -49,13 +49,13 @@
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
+[hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:link] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:listingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed

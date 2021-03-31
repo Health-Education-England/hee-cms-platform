@@ -1,0 +1,18 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/resourcediscoveryblogpost-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-03-31T11:18:11.922+01:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
+    hst:label: Content Page Main
+    hst:lastmodified: 2021-03-31T13:44:04.008+01:00
+    hst:xtype: hst.vbox
+    /blogpost:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: BlogPost
+      hst:parameternames: [document]
+      hst:parametervalues: [blogposts/expertssearch]
+      hst:template: blogpost-main

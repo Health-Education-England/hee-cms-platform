@@ -18,8 +18,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
   <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager"> 
     <constructor-arg> 
-      <map>
+      <map> 
         <entry key="categories" value="/content/documents/administration/lks/value-lists/categories"/>
+        <entry key="blogCategories" value="/content/documents/administration/lks/value-lists/blogcategories"/>
       </map> 
     </constructor-arg> 
   </bean> 
