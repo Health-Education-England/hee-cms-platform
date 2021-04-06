@@ -3,11 +3,13 @@
 <#import "./link.ftl" as hlink>
 
 <#macro quickLinks quickLinks>
-    <#if quickLinks?? && quickLinks.title?has_content && quickLinks.links?? && quickLinks.links?size != 0>
+    <#if quickLinks?? && quickLinks.links?? && quickLinks.links?size != 0>
         <div class="nhsuk-grid-column-one-third">
             <div class="nhsuk-card">
                 <div class="nhsuk-card__content">
-                    <h3 class="nhsuk-card__heading">${quickLinks.title}</h3>
+                    <#if quickLinks.title?has_content>
+                        <h3 class="nhsuk-card__heading">${quickLinks.title}</h3>
+                    </#if>
 
                     <ul class="nhsuk-related-links-card__list">
                         <#list quickLinks.links as quickLink>
