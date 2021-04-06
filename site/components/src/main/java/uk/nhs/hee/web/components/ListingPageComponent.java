@@ -41,9 +41,10 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
 
         final Pageable<HippoBean> pageable = getDocumentBeans(request);
 
-        request.setAttribute("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
-        request.setAttribute("categoriesMap", getCategoryValueListMap());
-        request.setAttribute("selectedSortOrder", getSelectedSortOrder(request));
+        request.setModel("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
+        request.setModel("categoriesMap", getCategoryValueListMap());
+        request.setModel("selectedSortOrder", getSelectedSortOrder(request));
+        request.setModel("isBulletinPage", isBulletinPage());
         request.setModel(REQUEST_ATTR_PAGEABLE, pageable);
     }
 
@@ -73,8 +74,7 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         final String documentPath = listingPage.getPath();
         final HippoBean scopeBean = doGetScopeBean(documentPath);
 
-        final String[] documentTypes = listingPage.getDocumentTypes();
-        final HstQuery query = createQuery(scopeBean, documentTypes);
+        final HstQuery query = createQuery(scopeBean, getDocumentTypes(listingPage));
 
         final int pageSize = listingPage.getPageSize().intValue();
         final int page = getCurrentPage(request);
@@ -90,6 +90,10 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
     private HstQuery createQuery(HippoBean scope, String[] documentTypes) {
         HstQueryBuilder builder = HstQueryBuilder.create(scope);
         return builder.ofTypes(documentTypes).build();
+    }
+
+    protected String[] getDocumentTypes(ListingPage listingPage) {
+        return listingPage.getDocumentTypes();
     }
 
     protected int getCurrentPage(final HstRequest request) {
@@ -151,4 +155,7 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         return Strings.isNullOrEmpty(sortQueryParam) ? DESCENDING_SORT_ORDER : sortQueryParam;
     }
 
+    protected boolean isBulletinPage() {
+        return true;
+    }
 }

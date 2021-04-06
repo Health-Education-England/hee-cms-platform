@@ -10,10 +10,30 @@ import uk.nhs.hee.web.beans.QuickLinks;
  */
 @HippoEssentialsGenerated(internalName = "hee:guidance")
 @Node(jcrType = "hee:guidance")
-public class Guidance extends BaseDocument {
+public class Guidance extends BaseDocument implements ListItem {
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");
+    }
+
+    @Override
+    public String getCategory() {
+        return "Test";
+    }
+
+    @Override
+    public String getOverview() {
+        return getSummary();
+    }
+
+    @Override
+    public String getWebsiteUrl() {
+        return "Test";
+    }
+
+    @Override
+    public String getWebsiteTitle() {
+        return "Test";
     }
 
     @HippoEssentialsGenerated(internalName = "hee:summary")

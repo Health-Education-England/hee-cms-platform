@@ -8,6 +8,7 @@
 <@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
+<#-- @ftlvariable name="isBulletinPage" type="java.lang.Boolean" -->
 <#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
 <#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.Bulletin" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
@@ -21,6 +22,19 @@
                 ${document.title}
             </h1>
             <p class="nhsuk-lede-text">${document.summary}</p>
+<#--            <div class="nhsuk-grid-column-full-width">-->
+<#--                <h1 class="nhsuk-heading-xl nhsuk-u-margin-bottom-4">Search</h1>-->
+<#--                <form class="nhsuk-header__search-form nhsuk-header__search-form--search-results" id="search" action="/search/" method="get" role="search">-->
+<#--                    <label class="nhsuk-u-visually-hidden" for="search-results-field">Search the NHS digital service manual</label>-->
+<#--                    <input class="nhsuk-search__input" id="search-results-field" name="search-field" type="search" value="" autocomplete="on">-->
+<#--                    <button class="nhsuk-search__submit" type="submit">-->
+<#--                        <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">-->
+<#--                            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>-->
+<#--                        </svg>-->
+<#--                        <span class="nhsuk-u-visually-hidden">Search</span>-->
+<#--                    </button>-->
+<#--                </form>-->
+<#--            </div>-->
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-one-third">
@@ -87,13 +101,7 @@
 
                         <#if pageable??>
                             <#list pageable.items as item>
-                                <@bulletinListItem
-                                title="${item.title}"
-                                category="${categoriesMap[item.category]}"
-                                overview="${item.overview}"
-                                websiteURL="${item.websiteUrl}"
-                                websiteText="${item.websiteTitle}"
-                                />
+                                <@listItem listItem=item/>
                             </#list>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>
