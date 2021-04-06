@@ -9,14 +9,22 @@
     </#if>
     <ul class="nhsuk-grid-row nhsuk-card-group">
         <#list contentCards.cards as contentCard>
+            <#if contentCard.header.text?has_content && (contentCard.header.document?? || contentCard.header.url?has_content)>
+                <#assign clickableCard=true/>
+            <#else>
+                <#assign clickableCard=false/>
+            </#if>
+
             <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                <div class="nhsuk-card nhsuk-card--clickable">
+                <div class="nhsuk-card ${clickableCard?then('nhsuk-card--clickable', 'nhsuk-card')}">
                     <div class="nhsuk-card__content">
-                        <h3 class="nhsuk-card__heading nhsuk-heading-m">
-                            <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link">
-                                ${contentCard.header.text}
-                            </@hlink.link>
-                        </h3>
+                        <#if clickableCard>
+                            <h3 class="nhsuk-card__heading nhsuk-heading-m">
+                                <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link">
+                                    ${contentCard.header.text}
+                                </@hlink.link>
+                            </h3>
+                        </#if>
                         <p class="nhsuk-card__description">${contentCard.description}</p>
                     </div>
                 </div>
