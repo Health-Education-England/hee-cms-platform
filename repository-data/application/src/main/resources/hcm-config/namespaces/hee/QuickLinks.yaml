@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b7be3bea-5b7a-41d7-9e5f-9164e29edb83
+          jcr:uuid: 1edf1b82-51de-4fa3-95ea-5df1a786cf26
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,7 +23,6 @@ definitions:
             hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /links:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -32,7 +31,6 @@ definitions:
             hipposysedit:path: hee:links
             hipposysedit:primary: false
             hipposysedit:type: hee:link
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -41,7 +39,7 @@ definitions:
           /hee:links:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: f91b7af6-5de0-41b6-95ae-ad2b93b6c5d1
+            jcr:uuid: 3ba70784-4d65-4138-b2b9-e9834a8560bd
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -72,6 +70,7 @@ definitions:
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /links:
