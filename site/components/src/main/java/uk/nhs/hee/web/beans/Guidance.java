@@ -2,38 +2,18 @@ package uk.nhs.hee.web.beans;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-import java.util.List;
-import uk.nhs.hee.web.beans.QuickLinks;
 
-/** 
+import java.util.List;
+
+/**
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:guidance")
 @Node(jcrType = "hee:guidance")
-public class Guidance extends BaseDocument implements ListItem {
+public class Guidance extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");
-    }
-
-    @Override
-    public String getCategory() {
-        return "Test";
-    }
-
-    @Override
-    public String getOverview() {
-        return getSummary();
-    }
-
-    @Override
-    public String getWebsiteUrl() {
-        return "Test";
-    }
-
-    @Override
-    public String getWebsiteTitle() {
-        return "Test";
     }
 
     @HippoEssentialsGenerated(internalName = "hee:summary")
@@ -58,5 +38,9 @@ public class Guidance extends BaseDocument implements ListItem {
     @HippoEssentialsGenerated(internalName = "hee:quickLinks")
     public QuickLinks getQuickLinks() {
         return getBean("hee:quickLinks", QuickLinks.class);
+    }
+
+    public String getContentType() {
+        return "Guidance";
     }
 }

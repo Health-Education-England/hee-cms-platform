@@ -1,6 +1,5 @@
 <#ftl output_format="HTML">
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
-<#--<@hst.setBundle basename="uk.nhs.hee.web.bulletin"/>-->
 
 <#macro bulletinListItem title category overview websiteURL websiteText>
     <dl class="nhsuk-summary-list">
@@ -24,9 +23,14 @@
 </#macro>
 <#macro listItem listItem>
     <li>
-        <span class="app-search-results-category">Components</span>
+        <span class="app-search-results-category">${listItem.contentType}</span>
         <h3><a href="<@hst.link hippobean=listItem/>">${listItem.title}</a></h3>
-        <div>${listItem.overview}</div>
+        <p class="nhsuk-body-s nhsuk-u-margin-top-1">${listItem.summary}</p>
+        <div class="nhsuk-review-date">
+            <p class="nhsuk-body-s">
+                ${listItem.publishedDate}
+            </p>
+        </div>
     </li>
 </#macro>
 
