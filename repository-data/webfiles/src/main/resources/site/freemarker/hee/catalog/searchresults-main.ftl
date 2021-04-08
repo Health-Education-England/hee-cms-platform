@@ -7,6 +7,7 @@
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
+<#-- @ftlvariable name="searchText" type="java.lang.String" -->
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
 <#-- @ftlvariable name="contentTypesMap" type="java.util.Map" -->
 <#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.Bulletin" -->
@@ -25,7 +26,7 @@
                 <div class="nhsuk-form-group  nhsuk-header__search-form--search-results">
                     <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
                     <input class="nhsuk-input nhsuk-search__input" type="search" name="q" autocomplete="on"
-                           id="search-field" value="${searchText}">
+                           id="search-field" value="${searchText!''}">
                     <button class="nhsuk-search__submit" type="submit">
                         <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg"
                              viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -51,7 +52,7 @@
                                 </div>
                             </div>
                             <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
-                            <input type="hidden" name="q" value="${searchText}">
+                            <input type="hidden" name="q" value="${searchText!''}">
                         </form>
                         <#-- End Filters -->
                     </div>
@@ -73,7 +74,7 @@
                                     <#list selectedContentTypes as contentType>
                                         <input type="hidden" name="contentTypes" value="${contentType}">
                                     </#list>
-                                    <input type="hidden" name="q" value="${searchText}">
+                                    <input type="hidden" name="q" value="${searchText!''}">
 
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
