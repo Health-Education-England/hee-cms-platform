@@ -28,7 +28,7 @@
         <p class="nhsuk-body-s nhsuk-u-margin-top-1">${listItem.summary}</p>
         <div class="nhsuk-review-date">
             <p class="nhsuk-body-s">
-                ${listItem.publishedDate}
+                <@fmt.message key="published_on"/> ${listItem.publishedDate}
             </p>
         </div>
     </li>
