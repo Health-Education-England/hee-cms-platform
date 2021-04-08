@@ -5,7 +5,7 @@ import org.hippoecm.hst.content.beans.Node;
 
 @HippoEssentialsGenerated(internalName = "hee:bulletin")
 @Node(jcrType = "hee:bulletin")
-public class Bulletin extends BaseDocument implements ListItem {
+public class Bulletin extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");
