@@ -89,7 +89,7 @@
 
                         <#-- Active Filters -->
                         <#if selectedContentTypes?has_content>
-                            <div class="nhsuk-listing__active-filters">
+                            <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
                                 <#list selectedContentTypes as contentType>
                                     <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${contentType}">
                                         <span>${contentTypesMap[contentType]}</span>

@@ -20,8 +20,4 @@ public class LandingPage extends BaseDocument {
     public ContentCards getContentCards() {
         return getBean("hee:contentCards", ContentCards.class);
     }
-
-    public String getContentType() {
-        return "LandingPage";
-    }
 }

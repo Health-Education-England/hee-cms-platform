@@ -39,8 +39,4 @@ public class Guidance extends BaseDocument {
     public QuickLinks getQuickLinks() {
         return getBean("hee:quickLinks", QuickLinks.class);
     }
-
-    public String getContentType() {
-        return "Guidance";
-    }
 }
