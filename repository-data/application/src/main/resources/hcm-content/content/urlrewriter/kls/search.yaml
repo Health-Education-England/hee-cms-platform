@@ -1,0 +1,65 @@
+/content/urlrewriter/kls/search:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 899a9d1a-2d01-4056-bbee-aabcd265a7b2
+  hippo:name: Search
+  hippo:versionHistory: 15c0ebfd-d8d3-4fb6-8129-63410625e058
+  /search[1]:
+    jcr:primaryType: urlrewriter:advancedrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 82bfc7c0-5bba-465d-884a-0ed791064d38
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-04-07T17:00:27.969+07:00
+    hippostdpubwf:lastModificationDate: 2021-04-07T17:02:46.140+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:casesensitive: false
+    urlrewriter:isnotlast: true
+    urlrewriter:iswildcardtype: false
+    urlrewriter:qsappend: true
+    urlrewriter:ruledescription: Search to Search result
+    urlrewriter:rulefrom: ^/search$
+    urlrewriter:ruleto: /site/search/results
+    urlrewriter:ruletype: temporary-redirect
+  /search[2]:
+    jcr:primaryType: urlrewriter:advancedrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 1950df56-de68-4625-93d4-2d5a069f795d
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-04-07T17:00:27.969+07:00
+    hippostdpubwf:lastModificationDate: 2021-04-07T17:02:49.808+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:casesensitive: false
+    urlrewriter:isnotlast: true
+    urlrewriter:iswildcardtype: false
+    urlrewriter:qsappend: true
+    urlrewriter:ruledescription: Search to Search result
+    urlrewriter:rulefrom: ^/search$
+    urlrewriter:ruleto: /site/search/results
+    urlrewriter:ruletype: temporary-redirect
+  /search[3]:
+    jcr:primaryType: urlrewriter:advancedrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: ee4f1100-f0f6-4df4-b1cc-0bc06ffbb631
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-04-07T17:00:27.969+07:00
+    hippostdpubwf:lastModificationDate: 2021-04-07T17:02:49.808+07:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-04-07T17:02:51.192+07:00
+    urlrewriter:casesensitive: false
+    urlrewriter:isnotlast: true
+    urlrewriter:iswildcardtype: false
+    urlrewriter:qsappend: true
+    urlrewriter:ruledescription: Search to Search result
+    urlrewriter:rulefrom: ^/search$
+    urlrewriter:ruleto: /site/search/results
+    urlrewriter:ruletype: temporary-redirect

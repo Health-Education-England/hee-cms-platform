@@ -25,7 +25,8 @@
                 <span class="nhsuk-u-visually-hidden">Search</span>
             </button>
             <div class="nhsuk-header__search-wrap" id="wrap-search">
-                <form class="nhsuk-header__search-form" id="search"  action="https://www.nhs.uk/search/" method="get" role="search">
+                <@hst.link var="searchLink" siteMapItemRefId="search"/>
+                <form class="nhsuk-header__search-form" id="search" action="${searchLink}" method="get" role="search">
                     <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
                     <div class="autocomplete-container" id="autocomplete-container"></div>
                     <input class="nhsuk-search__input" id="search-field" name="q" type="search" placeholder="Search" autocomplete="off">

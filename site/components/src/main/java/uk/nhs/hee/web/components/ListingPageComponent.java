@@ -18,6 +18,8 @@ import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
 import org.onehippo.forge.selection.hst.contentbean.ValueList;
 import org.onehippo.forge.selection.hst.util.SelectionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.constants.HeeNodeType;
@@ -28,6 +30,8 @@ import java.util.Map;
 
 @ParametersInfo(type = ListingPageComponentInfo.class)
 public class ListingPageComponent extends EssentialsDocumentComponent {
+    private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
+
     private final static String CATEGORY_QUERY_PARAM = "category";
     private final static String CATEGORY_VALUE_LIST_IDENTIFIER = "categories";
 
@@ -39,27 +43,24 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        final Pageable<HippoBean> pageable = getDocumentBeans(request);
+        final Pageable<HippoBean> pageable;
+        try {
+            pageable = executeQuery(request);
+        } catch (QueryException e) {
+            throw new HstComponentException("An error has occurred while trying to execute hst query.", e);
+        }
 
-        request.setAttribute("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
-        request.setAttribute("categoriesMap", getCategoryValueListMap());
-        request.setAttribute("selectedSortOrder", getSelectedSortOrder(request));
+        request.setModel("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
+        request.setModel("categoriesMap", getCategoryValueListMap());
+        request.setModel("selectedSortOrder", getSelectedSortOrder(request));
         request.setModel(REQUEST_ATTR_PAGEABLE, pageable);
     }
 
-    private Pageable<HippoBean> getDocumentBeans(final HstRequest request) {
-        try {
-            return executeQuery(request);
-        } catch (QueryException qe) {
-            throw new HstComponentException("An error has occurred while trying to execute hst query.", qe);
-        }
-    }
-
-    protected Pageable<HippoBean> executeQuery(final HstRequest request) throws QueryException {
+    private Pageable<HippoBean> executeQuery(final HstRequest request) throws QueryException {
         ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
 
         final HstQuery query = buildQuery(request, listingPage);
-
+        LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
 
         final HstQueryResult execute = query.execute();
         return getPageableFactory().createPageable(
@@ -69,12 +70,11 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
                 getCurrentPage(request));
     }
 
-    private HstQuery buildQuery(final HstRequest request, ListingPage listingPage) {
+    protected HstQuery buildQuery(final HstRequest request, ListingPage listingPage) throws FilterException {
         final String documentPath = listingPage.getPath();
         final HippoBean scopeBean = doGetScopeBean(documentPath);
 
-        final String[] documentTypes = listingPage.getDocumentTypes();
-        final HstQuery query = createQuery(scopeBean, documentTypes);
+        final HstQuery query = createQuery(scopeBean, getDocumentTypes(request, listingPage));
 
         final int pageSize = listingPage.getPageSize().intValue();
         final int page = getCurrentPage(request);
@@ -92,35 +92,31 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         return builder.ofTypes(documentTypes).build();
     }
 
+    protected String[] getDocumentTypes(HstRequest request, ListingPage listingPage) {
+        return listingPage.getDocumentTypes();
+    }
+
     protected int getCurrentPage(final HstRequest request) {
         return getAnyIntParameter(request, REQUEST_PARAM_PAGE, 1);
     }
 
-    protected Filter createQueryFilters(final HstRequest request, final HstQuery query) {
-        Filter baseFilter = query.createFilter();
-        baseFilter.addOrFilter(getCategoryFilter(request, query));
-
-        return baseFilter;
+    protected Filter createQueryFilters(final HstRequest request, final HstQuery query) throws FilterException {
+        return createCategoryFilter(request, query);
     }
 
-    private Filter getCategoryFilter(final HstRequest request, final HstQuery query) {
+    private Filter createCategoryFilter(final HstRequest request, final HstQuery query) throws FilterException {
         List<String> categoriesFilter = HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM);
         return createOrFilter(query, categoriesFilter, HeeNodeType.CATEGORY);
     }
 
-    private Filter createOrFilter(HstQuery query, final List<String> values, final String attributeName) {
+    private Filter createOrFilter(HstQuery query, final List<String> values, final String attributeName) throws FilterException {
         final Filter baseFilter = query.createFilter();
 
-        values.forEach(value -> {
-            try {
-                final Filter filter = query.createFilter();
-                filter.addEqualTo(attributeName, value);
-                baseFilter.addOrFilter(filter);
-            } catch (FilterException fe) {
-                throw new HstComponentException(String.format("An error has occurred while trying to construct filter with attribute name %s and value %s",
-                        attributeName, value), fe);
-            }
-        });
+        for (String value : values) {
+            final Filter filter = query.createFilter();
+            filter.addEqualTo(attributeName, value);
+            baseFilter.addOrFilter(filter);
+        }
 
         return baseFilter;
     }
@@ -150,5 +146,4 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         String sortQueryParam = getAnyParameter(request, SORT_BY_DATE_QUERY_PARAM);
         return Strings.isNullOrEmpty(sortQueryParam) ? DESCENDING_SORT_ORDER : sortQueryParam;
     }
-
 }
