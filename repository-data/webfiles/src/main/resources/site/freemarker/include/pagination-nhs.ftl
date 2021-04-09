@@ -1,4 +1,3 @@
-<#ftl output_format="HTML">
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 <#include "../include/imports.ftl">
 <@hst.setBundle basename="uk.nhs.hee.web.pagination"/>
@@ -15,7 +14,7 @@
                     <li class="nhsuk-pagination-item--previous">
                         <a class="nhsuk-pagination__link nhsuk-pagination__link--prev" href="${pageUrlPrevious}">
                             <@fmt.message key="page.previous" var="prev"/>
-                            <span class="nhsuk-pagination__title">${prev}</span>
+                            <span class="nhsuk-pagination__title">${prev?html}</span>
                             <span class="nhsuk-u-visually-hidden">:</span>
                             <span class="nhsuk-pagination__page">${pageable.previousPage} out of ${pageable.totalPages}</span>
                             <svg class="nhsuk-icon nhsuk-icon__arrow-left" xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +32,7 @@
                     <li class="nhsuk-pagination-item--next">
                         <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="${pageUrlNext}">
                             <@fmt.message key="page.next" var="next"/>
-                            <span class="nhsuk-pagination__title">${next}</span>
+                            <span class="nhsuk-pagination__title">${next?html}</span>
                             <span class="nhsuk-u-visually-hidden">:</span>
                             <span class="nhsuk-pagination__page">${pageable.nextPage} out of ${pageable.totalPages}</span>
                             <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg"
