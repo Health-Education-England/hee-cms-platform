@@ -43,7 +43,7 @@
 
             <article>
                 <#if currentGuidance??>
-                    <@guidance guidanceDocument=currentGuidance/>
+                    <@guidance guidanceDocument=currentGuidance showTitle=false/>
                 </#if>
                 <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
                     <ul class="nhsuk-list nhsuk-pagination__list">

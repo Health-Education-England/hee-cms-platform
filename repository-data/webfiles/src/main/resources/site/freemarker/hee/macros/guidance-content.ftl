@@ -1,15 +1,17 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<#macro guidance guidanceDocument>
+<#macro guidance guidanceDocument showTitle=true>
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
     <#if guidanceDocument??>
         <div class="nhsuk-width-container">
-            <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-two-thirds">
-                    <h1>${guidanceDocument.title}</h1>
+            <#if showTitle>
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                        <h1>${guidanceDocument.title}</h1>
+                    </div>
                 </div>
-            </div>
+            </#if>
 
             <article>
                 <div class="nhsuk-grid-row">
