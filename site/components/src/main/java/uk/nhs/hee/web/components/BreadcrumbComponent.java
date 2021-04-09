@@ -70,7 +70,9 @@ public class BreadcrumbComponent extends CommonComponent {
         HstSiteMapItem siteMapItem = hstSiteMapItem;
         while (siteMapItem.getParentItem() != null) {
             siteMapItem = siteMapItem.getParentItem();
-            addBreadCrumbLink(request, siteMapItem, breadcrumbLinks);
+            if(!Boolean.parseBoolean(siteMapItem.getParameter("excludedForBreadcrumb"))) {
+                addBreadCrumbLink(request, siteMapItem, breadcrumbLinks);
+            }
         }
 
         addHomeBreadcrumbLink(request, breadcrumbLinks);

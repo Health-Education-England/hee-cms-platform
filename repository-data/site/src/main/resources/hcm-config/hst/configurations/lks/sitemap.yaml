@@ -20,6 +20,8 @@ definitions:
         jcr:primaryType: hst:sitemapitem
         hst:refId: search
         hst:hiddeninchannelmanager: true
+        hst:parameternames: [excludedForBreadcrumb]
+        hst:parametervalues: ['true']
         /results:
           jcr:primaryType: hst:sitemapitem
           hst:componentconfigurationid: hst:pages/searchresults
