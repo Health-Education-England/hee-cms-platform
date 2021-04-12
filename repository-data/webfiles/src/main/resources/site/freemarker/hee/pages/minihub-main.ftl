@@ -41,11 +41,10 @@
                 </div>
             </div>
 
-            <article>
                 <#if currentGuidance??>
                     <@guidance guidanceDocument=currentGuidance showTitle=false/>
                 </#if>
-                <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+                <nav class="nhsuk-pagination nhsuk-u-margin-top-0" role="navigation" aria-label="Pagination">
                     <ul class="nhsuk-list nhsuk-pagination__list">
                         <#if previousGuidance??>
                             <li class="nhsuk-pagination-item--previous">
@@ -78,7 +77,6 @@
                         </#if>
                     </ul>
                 </nav>
-            </article>
         </main>
     </div>
 </#if>
