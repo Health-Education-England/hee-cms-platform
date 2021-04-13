@@ -11,12 +11,13 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: f426252f-bc13-45b3-975d-c4735c722333
     hippo:name: Bulletins
-    hippo:versionHistory: cbea2d30-7f04-44f1-ac2f-3220628631c9
+    hippo:versionHistory: 3f98d3c3-5fb5-4819-873c-bfb6cc28878c
     /bulletins[1]:
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 11868121-bc83-44fb-ae45-4764668ff356
       hee:documentTypes: ['hee:bulletin']
+      hee:documenttypes: ['hee:bulletin']
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Find current awareness from our libraries and trusts across the
@@ -27,7 +28,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-30T16:59:44.886+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-13T08:28:36.985+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
       hippotranslation:locale: en
@@ -36,6 +37,7 @@
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 401ac712-a209-4a70-bbfc-376fb1b10682
       hee:documentTypes: ['hee:bulletin']
+      hee:documenttypes: ['hee:bulletin']
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Find current awareness from our libraries and trusts across the
@@ -46,7 +48,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-30T16:59:48.241+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:07.788+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
       hippotranslation:locale: en
@@ -55,6 +57,7 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 945b5dd0-be7b-441d-b198-d46b6e34e2e4
       hee:documentTypes: ['hee:bulletin']
+      hee:documenttypes: ['hee:bulletin']
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Find current awareness from our libraries and trusts across the
@@ -65,9 +68,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-30T16:59:48.241+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:07.788+07:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-03-30T17:00:02.328+07:00
+      hippostdpubwf:publicationDate: 2021-04-12T15:45:09.327+07:00
       hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
       hippotranslation:locale: en
   /search-results:
@@ -75,12 +78,13 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 6d95c002-0535-41b3-8669-619735ecf394
     hippo:name: Search Results
-    hippo:versionHistory: b054450a-a222-41ac-a174-10a8f7f2237f
+    hippo:versionHistory: a7538351-a032-4d2f-acd7-ec8adc5eebc1
     /search-results[1]:
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e734ac17-0503-4c18-a111-7ea5d4ab8e9d
       hee:documentTypes: ['hee:guidance', 'hee:landingPage']
+      hee:documenttypes: ['hee:landingPage', 'hee:guidance']
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
@@ -90,7 +94,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-08T16:59:17.354+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:10.925+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
@@ -99,6 +103,7 @@
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: b843cfa2-5737-46f9-bba2-10d0d067a803
       hee:documentTypes: ['hee:guidance', 'hee:landingPage']
+      hee:documenttypes: ['hee:landingPage', 'hee:guidance']
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
@@ -108,7 +113,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-08T16:59:43.737+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:15.583+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
@@ -117,6 +122,7 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: ac0dc40d-426f-4299-840e-929ebf3d6a53
       hee:documentTypes: ['hee:guidance', 'hee:landingPage']
+      hee:documenttypes: ['hee:landingPage', 'hee:guidance']
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
@@ -126,8 +132,8 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-08T16:59:43.737+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:15.583+07:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-04-08T16:59:45.371+07:00
+      hippostdpubwf:publicationDate: 2021-04-12T15:45:17.359+07:00
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en

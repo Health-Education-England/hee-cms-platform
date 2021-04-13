@@ -10,7 +10,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a4f9c636-9f3e-4376-8af7-ca9cd35aa250
+          jcr:uuid: e76d1c14-178b-457d-82bb-a23cd45b456f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,20 +39,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Long
             hipposysedit:validators: [required]
-          /path:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:path
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /documentTypes:
+          /documenttypes:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:documentTypes
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:documenttypes
             hipposysedit:primary: false
             hipposysedit:type: String
       /hipposysedit:prototypes:
@@ -68,12 +60,11 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 5c6cc283-67d4-42b5-ab3e-fd21c13e4beb
+          jcr:uuid: e8bf2fa4-6386-415b-9268-aa07fa9c85a6
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
-          hee:path: ''
-          hee:documentTypes: []
           hee:pageSize: 0
+          hee:documenttypes: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -109,20 +100,17 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /path:
-            jcr:primaryType: frontend:plugin
-            caption: Path
-            field: path
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /documentTypes:
+          /documenttypes:
             jcr:primaryType: frontend:plugin
             caption: Document Types
-            field: documentTypes
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            field: documenttypes
+            multiselect.type: palette
+            palette.alloworder: true
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/documenttypes
