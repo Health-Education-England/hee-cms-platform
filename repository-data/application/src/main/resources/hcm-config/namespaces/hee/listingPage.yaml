@@ -10,7 +10,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9fbea77a-230b-4def-b1a2-43bfe910c2f5
+          jcr:uuid: e76d1c14-178b-457d-82bb-a23cd45b456f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -60,7 +60,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 892be927-4032-4798-a09e-51cd458abe46
+          jcr:uuid: e8bf2fa4-6386-415b-9268-aa07fa9c85a6
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           hee:pageSize: 0
@@ -113,4 +113,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/lks/value-lists/documenttypes
+              source: /content/documents/administration/valuelists/documenttypes
