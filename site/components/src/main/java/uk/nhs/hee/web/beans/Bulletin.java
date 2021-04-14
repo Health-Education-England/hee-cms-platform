@@ -27,7 +27,7 @@ public class Bulletin extends BaseDocument {
     }
 
     @HippoEssentialsGenerated(internalName = "hee:category")
-    public String getCategory() {
-        return getSingleProperty("hee:category");
+    public String[] getCategory() {
+        return getMultipleProperty("hee:category");
     }
 }

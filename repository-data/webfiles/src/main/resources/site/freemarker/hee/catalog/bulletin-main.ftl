@@ -89,7 +89,7 @@
                             <#list pageable.items as item>
                                 <@bulletinListItem
                                 title="${item.title}"
-                                category="${categoriesMap[item.category]}"
+                                category="${categoriesValue(categoriesMap, item.category)}"
                                 overview="${item.overview}"
                                 websiteURL="${item.websiteUrl}"
                                 websiteText="${item.websiteTitle}"
@@ -102,4 +102,14 @@
             </div>
         </div>
     </main>
+
+    <#function categoriesValue categoriesMap categories>
+        <#local returnValue = ''>
+        <#list categories as category>
+            <#if category?has_content>
+                <#local returnValue = returnValue + categoriesMap[category] + ', '>
+            </#if>
+        </#list>
+        <#return returnValue?has_content?then(returnValue?remove_ending(', '), returnValue)>
+    </#function>
 </#if>
