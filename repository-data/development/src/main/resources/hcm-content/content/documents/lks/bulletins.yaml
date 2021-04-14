@@ -19,12 +19,12 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: a20042ad-68ac-4c8e-8a83-0d8dc6950756
       hippo:name: Bulletin1
-      hippo:versionHistory: 9cd3ef0e-540c-40b8-8e50-467e67a1f28d
+      hippo:versionHistory: e6a943ca-fb7b-45a0-8d46-0397addb471c
       /bulletin1[1]:
         jcr:primaryType: hee:bulletin
         jcr:mixinTypes: ['mix:versionable']
         jcr:uuid: 3460cbe1-6245-436f-9b27-18bd702c4da4
-        hee:category: child_health
+        hee:category: [child_health, medical_oncology]
         hee:overview: Top journal articles, NICE guidance and relevant Cochrane Reviews
         hee:title: The Christie NHS Foundation Trust
         hee:websiteTitle: Website Title
@@ -34,7 +34,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-03-02T18:07:42.964Z
-        hippostdpubwf:lastModificationDate: 2021-03-02T18:08:19.247Z
+        hippostdpubwf:lastModificationDate: 2021-04-14T14:31:57.833+07:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: ef8322aa-c9aa-4e16-a478-abed7b4db06a
         hippotranslation:locale: en
@@ -42,7 +42,7 @@
         jcr:primaryType: hee:bulletin
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 036917a7-9bb2-4d7e-b987-6f64e4209437
-        hee:category: child_health
+        hee:category: [child_health, medical_oncology]
         hee:overview: Top journal articles, NICE guidance and relevant Cochrane Reviews
         hee:title: The Christie NHS Foundation Trust
         hee:websiteTitle: Website Title
@@ -50,9 +50,10 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-03-02T18:07:42.964Z
-        hippostdpubwf:lastModificationDate: 2021-03-11T16:03:11.142Z
+        hippostdpubwf:lastModificationDate: 2021-04-14T14:52:54.229+07:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: ef8322aa-c9aa-4e16-a478-abed7b4db06a
         hippotranslation:locale: en
@@ -60,7 +61,7 @@
         jcr:primaryType: hee:bulletin
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 8eef96ed-352b-4825-8ae0-440979ad928f
-        hee:category: child_health
+        hee:category: [child_health, medical_oncology]
         hee:overview: Top journal articles, NICE guidance and relevant Cochrane Reviews
         hee:title: The Christie NHS Foundation Trust
         hee:websiteTitle: Website Title
@@ -70,9 +71,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-03-02T18:07:42.964Z
-        hippostdpubwf:lastModificationDate: 2021-03-02T18:08:19.247Z
+        hippostdpubwf:lastModificationDate: 2021-04-14T14:31:57.833+07:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-03-02T20:26:28.991Z
+        hippostdpubwf:publicationDate: 2021-04-14T14:32:00.063+07:00
         hippotranslation:id: ef8322aa-c9aa-4e16-a478-abed7b4db06a
         hippotranslation:locale: en
     /bulletin2:

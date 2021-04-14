@@ -89,7 +89,7 @@
                             <#list pageable.items as item>
                                 <@bulletinListItem
                                 title="${item.title}"
-                                category="${categoriesMap[item.category]}"
+                                category="${item.category?map(category -> categoriesMap[category])?join(', ')}"
                                 overview="${item.overview}"
                                 websiteURL="${item.websiteUrl}"
                                 websiteText="${item.websiteTitle}"
