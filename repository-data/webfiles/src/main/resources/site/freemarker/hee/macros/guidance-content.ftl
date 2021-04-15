@@ -30,6 +30,9 @@
                                             <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
                                                 <@hst.html hippohtml=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.RichTextReference">
+                                                <@hst.html hippohtml=block.richTextBlock.html/>
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.StatementBlock">
                                                 <@hee.statementBlock block=block/>
                                                 <#break>
