@@ -1525,3 +1525,66 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /richtext-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 69c2ec2a-0d9c-4a07-92b2-00cc23aa5ef2
+    hippo:name: RichText Blocks
+    hippostd:foldertype: [new-richtext-block]
+    hippotranslation:id: 41a6b328-6259-4f58-9a56-9f559480c3a5
+    hippotranslation:locale: en
+    /reusable-richtextblock:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      hippo:name: Reusable RichTextBlock
+      hippo:versionHistory: b4387a57-8af7-4ffc-a614-d6b3420d080f
+      /reusable-richtextblock[1]:
+        jcr:primaryType: hee:richTextBlock
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: aca124ae-9ed8-404d-8555-c65a63277c62
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-04-15T16:43:49.997+07:00
+        hippostdpubwf:lastModificationDate: 2021-04-15T18:40:26.931+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 066502c3-5155-44fa-9f92-4aeba5c72c5e
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This is <strong>reusable </strong>RichTextBlock</p>
+      /reusable-richtextblock[2]:
+        jcr:primaryType: hee:richTextBlock
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: f0c092b0-3972-408b-a057-e172ce36e7a5
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-04-15T16:43:49.997+07:00
+        hippostdpubwf:lastModificationDate: 2021-04-15T18:40:31.807+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 066502c3-5155-44fa-9f92-4aeba5c72c5e
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This is <strong>reusable </strong>RichTextBlock</p>
+      /reusable-richtextblock[3]:
+        jcr:primaryType: hee:richTextBlock
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 01d8bee1-215c-419a-b4f5-28663ed5dbea
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-04-15T16:43:49.997+07:00
+        hippostdpubwf:lastModificationDate: 2021-04-15T18:40:31.807+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-04-15T18:40:33.875+07:00
+        hippotranslation:id: 066502c3-5155-44fa-9f92-4aeba5c72c5e
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This is <strong>reusable </strong>RichTextBlock</p>

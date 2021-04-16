@@ -29,6 +29,12 @@
 [hee:QuickLinks] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:richTextBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:richTextReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:StatementBlock] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -46,13 +52,13 @@
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
+[hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:link] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:listingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed
