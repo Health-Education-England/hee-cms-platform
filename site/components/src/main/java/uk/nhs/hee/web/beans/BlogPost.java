@@ -46,8 +46,8 @@ public class BlogPost extends BaseDocument {
         return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:category")
-    public String[] getCategory() {
-        return getMultipleProperty("hee:category");
+    @HippoEssentialsGenerated(internalName = "hee:categories")
+    public String[] getCategories() {
+        return getMultipleProperty("hee:categories");
     }
 }

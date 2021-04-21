@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1098389d-b98c-4547-90d7-83b7ce6745e1
+          jcr:uuid: cf1aaa61-9f87-4069-8250-0055bf1639a0
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -74,12 +74,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Date
             hipposysedit:validators: [required]
-          /category:
+          /categories:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:category
+            hipposysedit:path: hee:categories
             hipposysedit:primary: false
             hipposysedit:type: String
       /hipposysedit:prototypes:
@@ -93,14 +93,14 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 9a03120e-2129-47f0-ae7f-9e534e85a91b
+          jcr:uuid: 11fd608b-5ee9-40d8-b4c4-88d8025e89a4
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
           hee:summary: ''
           hee:author: ''
           hee:publicationDate: 0001-01-01T12:00:00Z
-          hee:category: []
+          hee:categories: []
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
@@ -111,7 +111,7 @@ definitions:
             /hee:links:
               jcr:primaryType: hee:link
               jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: 9683dc3e-2311-479f-a5af-6a5f9c7211c4
+              jcr:uuid: 424fdcb2-d246-47d2-9b20-0026b4e258ff
               hee:text: ''
               hee:url: ''
               hippostd:holder: holder
@@ -164,10 +164,10 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /category:
+          /categories:
             jcr:primaryType: frontend:plugin
-            caption: Category
-            field: category
+            caption: Categories
+            field: categories
             multiselect.type: selectlist
             palette.alloworder: false
             palette.maxrows: '10'
@@ -177,7 +177,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/lks/value-lists/blogcategories
+              source: /content/documents/administration/valuelists/kls/blogcategories
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date

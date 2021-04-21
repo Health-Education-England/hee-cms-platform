@@ -5,7 +5,7 @@
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost" scope="request"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.BlogPost" -->
-<#-- @ftlvariable name="categoryToFilteredURLMap" type="java.util.Map" -->
+<#-- @ftlvariable name="categoriesToFilteredURLMap" type="java.util.Map" -->
 
 <#if document??>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper">
@@ -35,7 +35,7 @@
 
                                 <#--Blog Categories -->
                                 <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-                                    <#list categoryToFilteredURLMap as category, filteredURL>
+                                    <#list categoriesToFilteredURLMap as category, filteredURL>
                                         <a href=${filteredURL}>
                                             ${category} <#sep>, </#sep>
                                         </a>
