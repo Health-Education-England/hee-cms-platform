@@ -40,9 +40,6 @@ definitions:
           /landingpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/landingPage-main.ftl
-          /listing-main:
-            jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/listing-main.ftl
           /base-breadcrumb:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-breadcrumb.ftl
@@ -64,6 +61,12 @@ definitions:
           /blogpost-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/blogpost-main.ftl
+          /searchresults-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/searchresults-main.ftl
+          /bulletin-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/bulletin-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -101,7 +104,7 @@ definitions:
               hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Listing
-              hst:template: listing-main
+              hst:template: bulletin-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent

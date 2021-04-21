@@ -1,37 +1,32 @@
-/content/documents/administration/labels/bulletin:
-  .meta:order-before: blogpost
+/content/documents/administration/labels/listing:
+  .meta:order-before: global
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 03cc6eaf-ca38-4874-a8a5-22ae5ea2c643
-  hippo:name: Bulletin
-  hippo:versionHistory: 524b0609-250c-4313-81ca-a1c5d648d058
-  /bulletin[1]:
+  hippo:name: Listing
+  hippo:versionHistory: 19c4a43d-9dca-4609-89bc-52b7973e194c
+  /listing[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 0702ce80-f86a-4e7d-89fe-1fb7efcc2013
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
-    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-03-11T11:33:55.221Z
+    hippostdpubwf:lastModificationDate: 2021-04-08T18:03:59.546+07:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item category., Used in a Bulletin component to show a bulletin item overview.,
-      Used in a Bulletin component to show a bulletin item website., Used in a Bulletin
-        component to show the sorting type., Used in a Bulletin component to show
-        the name of a sort option., Used in a Bulletin component to show the name
-        of a sort option., Used in a Bulletin component to show the name of the Category
-        filter., Used in a Bulletin component to show the name of the filters., Used
-        in a Bulletin component to present the number of document results.]
-    resourcebundle:id: uk.nhs.hee.web.bulletin
+      Used in a Bulletin component to show a bulletin item website., '', '', '', '',
+      '', '', '', '', '']
+    resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
       sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
-      bulletin.results.count.text]
+      bulletin.results.count.text, filter.content_type.label, filter.date.label, published_on]
     resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
-      Category, Filters, results]
-  /bulletin[2]:
+      Category, Filters, results, Content type, Date, Published on]
+  /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
     jcr:uuid: 3cde13e7-4274-4637-904c-a68eecbfe36f
@@ -40,19 +35,19 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-03-11T11:28:59.774Z
+    hippostdpubwf:lastModificationDate: 2021-04-08T18:04:41.279+07:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item category., Used in a Bulletin component to show a bulletin item overview.,
       Used in a Bulletin component to show a bulletin item website., '', '', '', '',
-      '', '']
-    resourcebundle:id: uk.nhs.hee.web.bulletin
+      '', '', '', '', '']
+    resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
       sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
-      bulletin.results.count.text]
+      bulletin.results.count.text, filter.content_type.label, filter.date.label, published_on]
     resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
-      Category, Filters, results]
-  /bulletin[3]:
+      Category, Filters, results, Content type, Date, Published on]
+  /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: b0d5b27c-b22c-48b3-b0d5-0dabdbd405db
@@ -61,16 +56,16 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-03-11T11:28:59.774Z
+    hippostdpubwf:lastModificationDate: 2021-04-08T18:04:41.279+07:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-03-11T11:29:03.949Z
+    hippostdpubwf:publicationDate: 2021-04-08T18:04:43.351+07:00
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item category., Used in a Bulletin component to show a bulletin item overview.,
       Used in a Bulletin component to show a bulletin item website., '', '', '', '',
-      '', '']
-    resourcebundle:id: uk.nhs.hee.web.bulletin
+      '', '', '', '', '']
+    resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
       sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
-      bulletin.results.count.text]
+      bulletin.results.count.text, filter.content_type.label, filter.date.label, published_on]
     resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
-      Category, Filters, results]
+      Category, Filters, results, Content type, Date, Published on]

@@ -1,0 +1,24 @@
+/content/documents/administration/valuelists/documenttypes:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 42d53c9c-46cd-4c74-8314-d81f1e7c2ca9
+  hippo:name: DocumentTypes
+  /documenttypes:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: bce17efe-4f4a-4af1-aec6-8af7e03c67f4
+    hippo:availability: [live, preview]
+    hippotranslation:id: 266aeccb-f4bf-4281-9929-829fa9eab1c8
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: hee:bulletin
+      selection:label: Bulletin
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: hee:guidance
+      selection:label: Guidance
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: hee:landingPage
+      selection:label: LandingPage

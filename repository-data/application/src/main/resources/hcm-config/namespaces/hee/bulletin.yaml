@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: e4e53c53-3d5e-42c3-b7c7-e6270805b173
+          jcr:uuid: 5947c60a-4dd1-4b69-a59f-570d04d2fc7c
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -51,11 +51,11 @@ definitions:
           /category:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: false
+            hipposysedit:multiple: true
             hipposysedit:ordered: false
             hipposysedit:path: hee:category
             hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -69,12 +69,11 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:overview: ''
-          jcr:uuid: 77b44284-7e8f-4149-8122-539b017923ed
+          jcr:uuid: 00c4b5fa-7a1d-4883-a7f3-93fd73550371
           hippostdpubwf:lastModificationDate: 2021-02-07T19:04:36.287Z
           hippostdpubwf:creationDate: 2021-02-07T19:04:36.287Z
           hee:websiteUrl: ''
           hee:websiteTitle: ''
-          hee:category: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -94,17 +93,6 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /category:
-            jcr:primaryType: frontend:plugin
-            caption: Category
-            field: category
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              orientation: vertical
-              source: /content/documents/administration/lks/value-lists/categories
           /overview:
             jcr:primaryType: frontend:plugin
             caption: Overview
@@ -131,3 +119,17 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /category:
+            jcr:primaryType: frontend:plugin
+            caption: Category
+            field: category
+            multiselect.type: palette
+            palette.alloworder: true
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/kls/categories

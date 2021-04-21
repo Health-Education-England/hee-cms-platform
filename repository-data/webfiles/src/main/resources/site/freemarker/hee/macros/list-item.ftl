@@ -1,7 +1,7 @@
 <#ftl output_format="HTML">
-<#--<@hst.setBundle basename="uk.nhs.hee.web.bulletin" scope="request"/>-->
+<#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 
-<#macro listItem title category overview websiteURL websiteText>
+<#macro bulletinListItem title category overview websiteURL websiteText>
     <dl class="nhsuk-summary-list">
         <h3><a href="${websiteURL}"> ${title}</a></h3>
         <#if category??>
@@ -20,6 +20,18 @@
             <@listItemRow key="${websiteLabel}" value="${website}" />
         </#if>
     </dl>
+</#macro>
+<#macro listItem listItem>
+    <li>
+        <span class="app-search-results-category">${listItem.contentType}</span>
+        <h3><a href="<@hst.link hippobean=listItem/>">${listItem.title}</a></h3>
+        <p class="nhsuk-body-s nhsuk-u-margin-top-1">${listItem.summary}</p>
+        <div class="nhsuk-review-date">
+            <p class="nhsuk-body-s">
+                <@fmt.message key="published_on"/> ${listItem.publishedDate}
+            </p>
+        </div>
+    </li>
 </#macro>
 
 <#macro listItemRow key value>

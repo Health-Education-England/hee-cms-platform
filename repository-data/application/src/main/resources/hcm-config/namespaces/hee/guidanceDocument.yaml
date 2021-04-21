@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c821286f-78c5-4510-9d07-56f7c5a1c8c3
+          jcr:uuid: f92af292-f8fa-4a2d-918d-21f312168840
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -77,7 +77,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: d9e5bf15-a0eb-44ed-8805-38d8bc08d0fa
+          jcr:uuid: 695769a6-7b03-473a-9709-e10d5a57fb93
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:relatedContent:
@@ -93,19 +93,13 @@ definitions:
           /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /hee:contentBlocks[2]:
-            jcr:primaryType: hippogallerypicker:imagelink
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-            hippo:facets: []
-            hippo:modes: []
-            hippo:values: []
           /hee:quickLinks:
             jcr:primaryType: hee:QuickLinks
             hee:title: ''
             /hee:links:
               jcr:primaryType: hee:link
               jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: b410343a-ee12-4d01-85d7-74f5c3bacd24
+              jcr:uuid: 7307c732-e8d0-40a0-a385-b369499db74f
               hee:text: ''
               hee:url: ''
               hippostd:holder: holder
@@ -162,7 +156,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock,hee:YellowAlertBlock,hee:ActionLink
+            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock,hee:YellowAlertBlock,hee:ActionLink,hee:richTextReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin

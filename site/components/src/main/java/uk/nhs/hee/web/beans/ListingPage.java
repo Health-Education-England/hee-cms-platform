@@ -21,11 +21,6 @@ public class ListingPage extends BaseDocument {
         return getSingleProperty("hee:pageSize");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:path")
-    public String getPath() {
-        return getSingleProperty("hee:path");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:documentTypes")
     public String[] getDocumentTypes() {
         return getMultipleProperty("hee:documentTypes");

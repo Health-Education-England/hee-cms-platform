@@ -2,6 +2,7 @@
 <#include "../../include/imports.ftl">
 <@hst.defineObjects />
 <#assign organizationName = "${hstRequestContext.resolvedMount.mount.channelInfo.organizationName}">
+<#assign GTMContainerID = "${hstRequestContext.resolvedMount.mount.channelInfo.GTMContainerID}">
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -27,10 +28,27 @@
     <meta name="msapplication-wide310x150logo" content="<@hst.link path='/static/assets/favicons/widetile-310x150.png'/>">
     <meta name="msapplication-square310x310logo" content="<@hst.link path='/static/assets/favicons/largetile-310x310.png'/>">
 
+    <!-- Google Tag Manager -->
+    <#if GTMContainerID?has_content>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','${GTMContainerID}');</script>
+    </#if>
+    <!-- End Google Tag Manager -->
+
     <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts" xhtml=true/>
   </head>
   <body>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <#if GTMContainerID?has_content>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTMContainerID}"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    </#if>
+    <!-- End Google Tag Manager (noscript) -->
 
     <@hst.include ref="header"/>
 
