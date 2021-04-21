@@ -1,6 +1,6 @@
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 <#include "../include/imports.ftl">
-<@hst.setBundle basename="uk.nhs.hee.web.pagination" scope="request"/>
+<@hst.setBundle basename="uk.nhs.hee.web.pagination"/>
 
 <#if pageable??>
     <#if pageable.totalPages gt 1>

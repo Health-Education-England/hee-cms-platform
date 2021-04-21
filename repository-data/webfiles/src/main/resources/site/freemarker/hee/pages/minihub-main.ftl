@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 <#include "../macros/guidance-content.ftl"/>
 <@hst.defineObjects />
-<@hst.setBundle basename="uk.nhs.hee.web.global" scope="request"/>
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.MiniHub" -->
 <#-- @ftlvariable name="currentGuidance" type="uk.nhs.hee.web.beans.Guidance" -->

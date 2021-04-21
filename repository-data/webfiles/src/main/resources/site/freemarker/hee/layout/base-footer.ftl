@@ -1,6 +1,6 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
-<@hst.setBundle basename="uk.nhs.hee.web.global" scope="request"/>
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
 <#-- @ftlvariable name="menu" type="org.hippoecm.hst.core.sitemenu.HstSiteMenu" -->
 <#if menu??>
     <footer>

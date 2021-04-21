@@ -2,7 +2,7 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<@hst.setBundle basename="uk.nhs.hee.web.blogpost" scope="request"/>
+<@hst.setBundle basename="uk.nhs.hee.web.blogpost"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.BlogPost" -->
 <#-- @ftlvariable name="categoriesToFilteredURLMap" type="java.util.Map" -->

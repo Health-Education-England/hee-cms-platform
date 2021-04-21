@@ -3,7 +3,7 @@
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 <#include "../include/imports.ftl">
 <#if pageable??>
-<@hst.setBundle basename="essentials.pagination" scope="request"/>
+<@hst.setBundle basename="uk.nhs.hee.web.pagination"/>
 <ul class="pagination">
     <li class="disabled">
         <a href="#">${pageable.total}&nbsp;<@fmt.message key="results.indication" var="indication"/>${indication}</a>
