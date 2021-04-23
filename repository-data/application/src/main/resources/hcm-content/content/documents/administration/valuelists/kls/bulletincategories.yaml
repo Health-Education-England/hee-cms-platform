@@ -1,8 +1,9 @@
-/content/documents/administration/valuelists/kls/categories:
+/content/documents/administration/valuelists/kls/bulletincategories:
   jcr:primaryType: hippo:handle
-  jcr:mixinTypes: ['mix:referenceable']
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
   jcr:uuid: 82898ecf-8e9e-4161-8f3f-af42fdd978c8
-  /categories:
+  hippo:name: BulletinCategories
+  /bulletincategories:
     jcr:primaryType: selection:valuelist
     jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
     jcr:uuid: 222a6df0-83ab-4d83-a35d-e8610145464f

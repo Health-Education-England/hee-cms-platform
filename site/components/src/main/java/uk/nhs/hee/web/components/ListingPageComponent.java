@@ -28,12 +28,15 @@ import uk.nhs.hee.web.utils.HstUtils;
 import java.util.List;
 import java.util.Map;
 
+// TODO: Make this as an abstract class retaining common Listing functionalities and
+// move the Bulletin Listing related functionalities into a separate BulletinListingPageComponent
+// extending from ListingPageComponent
 @ParametersInfo(type = ListingPageComponentInfo.class)
 public class ListingPageComponent extends EssentialsDocumentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
 
     private final static String CATEGORY_QUERY_PARAM = "category";
-    private final static String CATEGORY_VALUE_LIST_IDENTIFIER = "categories";
+    private final static String CATEGORY_VALUE_LIST_IDENTIFIER = "bulletinCategories";
 
     private final static String ASCENDING_SORT_ORDER = "asc";
     private final static String DESCENDING_SORT_ORDER = "desc";
