@@ -58,12 +58,15 @@ definitions:
           /hero-section:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/hero-section.ftl
+          /blogpost-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/blogpost-main.ftl
           /searchresults-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/searchresults-main.ftl
-          /bulletin-main:
+          /bulletin-listing-main:
             jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/bulletin-main.ftl
+            hst:renderpath: webfile:/freemarker/hee/catalog/bulletin-listing-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -96,12 +99,18 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: AfterForm
               hst:template: afterform-main
-            /bulletin:
+            /bulletin-listing:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Listing
-              hst:template: bulletin-main
+              hst:label: Bulletin Listing
+              hst:template: bulletin-listing-main
+            /blogpost:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+              hst:template: blogpost-main
+              hst:label: BlogPost
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

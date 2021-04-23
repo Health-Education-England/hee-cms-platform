@@ -8,7 +8,6 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
 import uk.nhs.hee.web.beans.ListingPage;
-import uk.nhs.hee.web.constants.HeeNodeType;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.StringUtils;
 
