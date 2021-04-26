@@ -3,7 +3,6 @@
 <@hst.defineObjects />
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
-<#-- @ftlvariable name="hstRequestContext" type="org.hippoecm.hst.core.request.HstRequestContext" -->
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.MiniHub" -->
 <#-- @ftlvariable name="minihubName" type="java.lang.String" -->
 <#-- @ftlvariable name="currentGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
