@@ -47,6 +47,9 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
                 if (guidancePages.size() > 1) {
                     nextGuidance = guidancePages.get(1);
                 }
+
+                String minihubName = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().getValue();
+                request.setModel("minihubName", minihubName);
             }
 
             request.setModel("previousGuidance", previousGuidance);
