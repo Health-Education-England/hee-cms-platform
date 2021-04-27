@@ -10,7 +10,7 @@
 <#-- @ftlvariable name="searchText" type="java.lang.String" -->
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
 <#-- @ftlvariable name="contentTypesMap" type="java.util.Map" -->
-<#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.Bulletin" -->
+<#-- @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Guidance, uk.nhs.hee.web.beans.LandingPage,...]" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 <#-- @ftlvariable name="selectedContentTypes" type="java.util.List" -->
 
@@ -60,7 +60,7 @@
                     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
                         <div class="nhsuk-listing__summary o-flex@tablet">
                             <#-- Results number -->
-                            <@fmt.message key="bulletin.results.count.text" var="resultsCountText"/>
+                            <@fmt.message key="results.count.text" var="resultsCountText"/>
                             <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
                                 ${pageable.total} ${resultsCountText}
                             </h2>
@@ -103,9 +103,7 @@
 
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
-                                <#list pageable.items as item>
-                                    <@listItem listItem=item/>
-                                </#list>
+                                <@searchListItem items=pageable.items/>
                             </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>

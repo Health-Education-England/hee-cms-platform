@@ -11,13 +11,13 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: f426252f-bc13-45b3-975d-c4735c722333
     hippo:name: Bulletins
-    hippo:versionHistory: 3f98d3c3-5fb5-4819-873c-bfb6cc28878c
+    hippo:versionHistory: 0746b25f-e4cb-47d5-8430-7c5811b14a1c
     /bulletins[1]:
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 11868121-bc83-44fb-ae45-4764668ff356
-      hee:documentTypes: ['hee:bulletin']
-      hee:documenttypes: ['hee:bulletin']
+      hee:documentTypes: []
+      hee:listingType: bulletin
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Find current awareness from our libraries and trusts across the
@@ -28,7 +28,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-13T08:28:36.985+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-26T21:18:59.967+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
       hippotranslation:locale: en
@@ -36,8 +36,8 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 401ac712-a209-4a70-bbfc-376fb1b10682
-      hee:documentTypes: ['hee:bulletin']
-      hee:documenttypes: ['hee:bulletin']
+      hee:documentTypes: []
+      hee:listingType: bulletin
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Find current awareness from our libraries and trusts across the
@@ -48,7 +48,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:07.788+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-26T21:19:08.414+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
       hippotranslation:locale: en
@@ -56,8 +56,8 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 945b5dd0-be7b-441d-b198-d46b6e34e2e4
-      hee:documentTypes: ['hee:bulletin']
-      hee:documenttypes: ['hee:bulletin']
+      hee:documentTypes: []
+      hee:listingType: bulletin
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Find current awareness from our libraries and trusts across the
@@ -68,9 +68,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:07.788+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-26T21:19:08.414+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-04-12T15:45:09.327+07:00
+      hippostdpubwf:publicationDate: 2021-04-26T21:19:10.359+01:00
       hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
       hippotranslation:locale: en
   /search-results:
@@ -78,13 +78,13 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 6d95c002-0535-41b3-8669-619735ecf394
     hippo:name: Search Results
-    hippo:versionHistory: a7538351-a032-4d2f-acd7-ec8adc5eebc1
+    hippo:versionHistory: 86d579c2-59bd-48be-b246-62a3dfd67086
     /search-results[1]:
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e734ac17-0503-4c18-a111-7ea5d4ab8e9d
-      hee:documentTypes: ['hee:guidance', 'hee:landingPage']
-      hee:documenttypes: ['hee:landingPage', 'hee:guidance']
+      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin']
+      hee:listingType: search
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
@@ -94,7 +94,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:10.925+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-26T21:19:26.983+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
@@ -102,8 +102,8 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: b843cfa2-5737-46f9-bba2-10d0d067a803
-      hee:documentTypes: ['hee:guidance', 'hee:landingPage']
-      hee:documenttypes: ['hee:landingPage', 'hee:guidance']
+      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin']
+      hee:listingType: search
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
@@ -113,7 +113,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:15.583+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-26T21:19:32.231+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
@@ -121,8 +121,8 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: ac0dc40d-426f-4299-840e-929ebf3d6a53
-      hee:documentTypes: ['hee:guidance', 'hee:landingPage']
-      hee:documenttypes: ['hee:landingPage', 'hee:guidance']
+      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin']
+      hee:listingType: search
       hee:pageSize: 2
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
@@ -132,8 +132,72 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-04-12T15:45:15.583+07:00
+      hippostdpubwf:lastModificationDate: 2021-04-26T21:19:32.231+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-04-12T15:45:17.359+07:00
+      hippostdpubwf:publicationDate: 2021-04-26T21:19:34.032+01:00
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
+      hippotranslation:locale: en
+  /blogs:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: ed4d5d76-15ab-4472-b368-33302a2c0599
+    hippo:name: Blogs
+    hippo:versionHistory: 2d52c943-1a7b-42bc-b09e-61376666e49d
+    /blogs[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 1eb4a342-0e50-4d7e-b05b-36b9ab162daf
+      hee:documentTypes: []
+      hee:listingType: blog
+      hee:pageSize: 2
+      hee:summary: Latest news and best practice from across NHS library work
+      hee:title: Blogs
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-04-26T20:43:09.941+01:00
+      hippostdpubwf:lastModificationDate: 2021-04-27T08:26:00.800+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 23ea8f81-5abf-471f-88fd-1f8ad82b95af
+      hippotranslation:locale: en
+    /blogs[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: c03bd01e-1bac-4e0e-90a1-b9ed3d4fd66f
+      hee:documentTypes: []
+      hee:listingType: blog
+      hee:pageSize: 2
+      hee:summary: Latest news and best practice from across NHS library work
+      hee:title: Blogs
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-04-26T20:43:09.941+01:00
+      hippostdpubwf:lastModificationDate: 2021-04-27T08:26:07.524+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 23ea8f81-5abf-471f-88fd-1f8ad82b95af
+      hippotranslation:locale: en
+    /blogs[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 124dfc1f-08cc-4d9b-8e32-108f0842348d
+      hee:documentTypes: []
+      hee:listingType: blog
+      hee:pageSize: 2
+      hee:summary: Latest news and best practice from across NHS library work
+      hee:title: Blogs
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-04-26T20:43:09.941+01:00
+      hippostdpubwf:lastModificationDate: 2021-04-27T08:26:07.524+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-04-27T08:26:42.278+01:00
+      hippotranslation:id: 23ea8f81-5abf-471f-88fd-1f8ad82b95af
       hippotranslation:locale: en

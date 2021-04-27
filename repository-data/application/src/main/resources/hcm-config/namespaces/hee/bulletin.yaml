@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5947c60a-4dd1-4b69-a59f-570d04d2fc7c
+          jcr:uuid: 77e30ece-74df-4b72-8372-06a9e612bdb2
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -48,12 +48,12 @@ definitions:
             hipposysedit:path: hee:websiteUrl
             hipposysedit:primary: false
             hipposysedit:type: String
-          /category:
+          /categories:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:category
+            hipposysedit:path: hee:categories
             hipposysedit:primary: false
             hipposysedit:type: String
       /hipposysedit:prototypes:
@@ -69,11 +69,12 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:overview: ''
-          jcr:uuid: 00c4b5fa-7a1d-4883-a7f3-93fd73550371
+          jcr:uuid: 494545f7-09af-4d5a-93f4-0aff5cc66839
           hippostdpubwf:lastModificationDate: 2021-02-07T19:04:36.287Z
           hippostdpubwf:creationDate: 2021-02-07T19:04:36.287Z
           hee:websiteUrl: ''
           hee:websiteTitle: ''
+          hee:categories: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -119,10 +120,10 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /category:
+          /categories:
             jcr:primaryType: frontend:plugin
-            caption: Category
-            field: category
+            caption: Categories
+            field: categories
             multiselect.type: palette
             palette.alloworder: true
             palette.maxrows: '10'
@@ -132,4 +133,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/kls/bulletinCategories
+              source: /content/documents/administration/valuelists/kls/bulletincategories

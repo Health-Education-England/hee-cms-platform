@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 03cc6eaf-ca38-4874-a8a5-22ae5ea2c643
   hippo:name: Listing
-  hippo:versionHistory: 19c4a43d-9dca-4609-89bc-52b7973e194c
+  hippo:versionHistory: aca367a9-1849-451e-bdaf-1313256595f7
   /listing[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -13,18 +13,19 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-04-08T18:03:59.546+07:00
+    hippostdpubwf:lastModificationDate: 2021-04-27T07:38:53.686+01:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item category., Used in a Bulletin component to show a bulletin item overview.,
       Used in a Bulletin component to show a bulletin item website., '', '', '', '',
-      '', '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
       sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
-      bulletin.results.count.text, filter.content_type.label, filter.date.label, published_on]
+      filter.content_type.label, filter.date.label, results.count.text, published_on.text,
+      by.text]
     resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
-      Category, Filters, results, Content type, Date, Published on]
+      Category, Filters, Content type, Date, results, Published on, By]
   /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -34,18 +35,19 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-04-08T18:04:41.279+07:00
+    hippostdpubwf:lastModificationDate: 2021-04-27T07:46:35.276+01:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item category., Used in a Bulletin component to show a bulletin item overview.,
       Used in a Bulletin component to show a bulletin item website., '', '', '', '',
-      '', '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
       sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
-      bulletin.results.count.text, filter.content_type.label, filter.date.label, published_on]
+      filter.content_type.label, filter.date.label, results.count.text, published_on.text,
+      by.text]
     resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
-      Category, Filters, results, Content type, Date, Published on]
+      Category, Filters, Content type, Date, results, Published on, By]
   /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -55,16 +57,17 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-04-08T18:04:41.279+07:00
+    hippostdpubwf:lastModificationDate: 2021-04-27T07:46:35.276+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-04-08T18:04:43.351+07:00
+    hippostdpubwf:publicationDate: 2021-04-27T07:46:37.413+01:00
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item category., Used in a Bulletin component to show a bulletin item overview.,
       Used in a Bulletin component to show a bulletin item website., '', '', '', '',
-      '', '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.category, bulletin.overview, bulletin.website,
       sort.label, sort.option.oldest, sort.option.newest, filter.category.label, filters.label,
-      bulletin.results.count.text, filter.content_type.label, filter.date.label, published_on]
+      filter.content_type.label, filter.date.label, results.count.text, published_on.text,
+      by.text]
     resourcebundle:messages: [Category, Overview, Website, Sort by date, Oldest, Newest,
-      Category, Filters, results, Content type, Date, Published on]
+      Category, Filters, Content type, Date, results, Published on, By]

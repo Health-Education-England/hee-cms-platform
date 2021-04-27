@@ -10,7 +10,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: e76d1c14-178b-457d-82bb-a23cd45b456f
+          jcr:uuid: 5ecdd94f-fe0e-4064-b131-6f229f77c2ab
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,14 +39,23 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Long
             hipposysedit:validators: [required]
-          /documenttypes:
+          /documentTypes:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:documenttypes
+            hipposysedit:path: hee:documentTypes
             hipposysedit:primary: false
             hipposysedit:type: String
+          /listingType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:listingType
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -60,11 +69,12 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: e8bf2fa4-6386-415b-9268-aa07fa9c85a6
+          jcr:uuid: 254097d5-6ccc-4fb7-9d00-41c04b7d02d3
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           hee:pageSize: 0
-          hee:documenttypes: []
+          hee:listingType: ''
+          hee:documentTypes: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -76,6 +86,31 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /listingType:
+            jcr:primaryType: frontend:plugin
+            caption: Listing Type
+            field: listingType
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/listingtypes
+              valuelistProvider: ''
+          /documentTypes:
+            jcr:primaryType: frontend:plugin
+            caption: Document Types (Applicable for Search Listing Type)
+            field: documentTypes
+            multiselect.type: palette
+            palette.alloworder: true
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/documenttypes
           /title:
             jcr:primaryType: frontend:plugin
             caption: Page Title
@@ -100,17 +135,3 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /documenttypes:
-            jcr:primaryType: frontend:plugin
-            caption: Document Types
-            field: documenttypes
-            multiselect.type: palette
-            palette.alloworder: true
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/documenttypes
