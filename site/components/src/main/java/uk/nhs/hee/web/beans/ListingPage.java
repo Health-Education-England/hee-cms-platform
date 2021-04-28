@@ -6,11 +6,6 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 @HippoEssentialsGenerated(internalName = "hee:listingPage")
 @Node(jcrType = "hee:listingPage")
 public class ListingPage extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:listingType")
-    public String getListingType() {
-        return getSingleProperty("hee:listingType");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");
@@ -29,5 +24,10 @@ public class ListingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:documentTypes")
     public String[] getDocumentTypes() {
         return getMultipleProperty("hee:documentTypes");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:listingPageType")
+    public String getListingPageType() {
+        return getSingleProperty("hee:listingPageType");
     }
 }

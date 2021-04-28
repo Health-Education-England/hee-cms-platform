@@ -63,21 +63,21 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
      * Returns Categories value-list for the current {@code request} as a map.
      *
      * <p>This gets the identifier of the value-list to be returned as map
-     * from its {@link Listing} instance (identified by current Listing Type).</p>
+     * from its {@link ListingPageType} instance (identified by current Listing Page Type).</p>
      *
      * @param request the {@link HstRequest} instance.
      * @return the Categories value-list for the current {@code request} as a map.
      */
     private Map<String, String> getCategoryValueListMap(final HstRequest request) {
-        final Listing listing = getListing(request);
+        final ListingPageType listingPageType = getListing(request);
 
-        if (StringUtils.isEmpty(listing.getCategoryValueListIdentifier())) {
+        if (StringUtils.isEmpty(listingPageType.getCategoryValueListIdentifier())) {
             return Collections.emptyMap();
         }
 
         final ValueList categoriesValueList =
                 SelectionUtil.getValueListByIdentifier(
-                        listing.getCategoryValueListIdentifier(), RequestContextProvider.get());
+                        listingPageType.getCategoryValueListIdentifier(), RequestContextProvider.get());
         return SelectionUtil.valueListAsMap(categoriesValueList);
     }
 }

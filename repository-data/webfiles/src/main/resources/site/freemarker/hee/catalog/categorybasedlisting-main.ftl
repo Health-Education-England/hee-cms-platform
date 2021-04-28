@@ -85,7 +85,7 @@
 
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
-                                <@.vars["${document.listingType}ListItem"] items=pageable.items categoriesMap=categoriesMap/>
+                                <@.vars["${document.listingPageType}ListItem"] items=pageable.items categoriesMap=categoriesMap/>
                             </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>

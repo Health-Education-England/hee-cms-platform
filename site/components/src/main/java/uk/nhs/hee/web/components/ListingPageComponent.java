@@ -107,7 +107,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     /**
      * Returns an array of document types against which the Query will be executed.
      *
-     * <p>Returns document types from {@link Listing} instance if available.
+     * <p>Returns document types from {@link ListingPageType} instance if available.
      * Otherwise, returns from the {@link ListingPage} instance</p>
      *
      * @param request     the {@link HstRequest} instance.
@@ -115,13 +115,13 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @return An array of document types against which the Query will be executed.
      */
     protected String[] getDocumentTypes(final HstRequest request, final ListingPage listingPage) {
-        final Listing listing =
-                Listing.getByName(getListingPageModel(request).getListingType());
-        if (listing.getDocumentTypes().length == 0) {
+        final ListingPageType listingPageType =
+                ListingPageType.getByName(getListingPageModel(request).getListingPageType());
+        if (listingPageType.getDocumentTypes().length == 0) {
             return listingPage.getDocumentTypes();
         }
 
-        return listing.getDocumentTypes();
+        return listingPageType.getDocumentTypes();
     }
 
     /**
@@ -216,12 +216,12 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     }
 
     /**
-     * Returns {@link Listing} instance of the current {@code request}.
+     * Returns {@link ListingPageType} instance of the current {@code request}.
      *
      * @param request the {@link HstRequest} instance.
-     * @return the {@link Listing} instance of the current {@code request}.
+     * @return the {@link ListingPageType} instance of the current {@code request}.
      */
-    protected Listing getListing(final HstRequest request) {
-        return Listing.getByName(getListingPageModel(request).getListingType());
+    protected ListingPageType getListing(final HstRequest request) {
+        return ListingPageType.getByName(getListingPageModel(request).getListingPageType());
     }
 }

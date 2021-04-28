@@ -47,12 +47,12 @@ definitions:
             hipposysedit:path: hee:documentTypes
             hipposysedit:primary: false
             hipposysedit:type: String
-          /listingType:
+          /listingPageType:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:listingType
+            hipposysedit:path: hee:listingPageType
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
@@ -73,8 +73,8 @@ definitions:
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           hee:pageSize: 0
-          hee:listingType: ''
           hee:documentTypes: []
+          hee:listingPageType: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -86,16 +86,16 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /listingType:
+          /listingPageType:
             jcr:primaryType: frontend:plugin
-            caption: Listing Type
-            field: listingType
+            caption: Listing Page Type
+            field: listingPageType
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/listingtypes
+              source: /content/documents/administration/valuelists/listingpagetypes
               valuelistProvider: ''
           /documentTypes:
             jcr:primaryType: frontend:plugin

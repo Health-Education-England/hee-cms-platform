@@ -3,12 +3,12 @@ package uk.nhs.hee.web.components;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * An enumeration of Listing Types and its document types & category value-list identifier.
+ * An enumeration of Listing Page Types and its document types & category value-list identifier.
  *
  * <p>Note that the listing types should be in sync
- * with the value-list {@code /content/documents/administration/valuelists/listingtypes}.</p>
+ * with the value-list {@code /content/documents/administration/valuelists/listingpagetypes}.</p>
  */
-public enum Listing {
+public enum ListingPageType {
 
     /**
      * Blog Listing
@@ -37,7 +37,7 @@ public enum Listing {
      * @param documentTypes               the document types which needs to be queried to list the results.
      * @param categoryValueListIdentifier the value-list identifier of the supported categories.
      */
-    Listing(
+    ListingPageType(
             final String type,
             final String[] documentTypes,
             final String categoryValueListIdentifier
@@ -53,17 +53,17 @@ public enum Listing {
      * @param type the listing type.
      * @return
      */
-    public static Listing getByName(final String type) {
-        for (final Listing listing : Listing.values()) {
+    public static ListingPageType getByName(final String type) {
+        for (final ListingPageType listingPageType : ListingPageType.values()) {
 
-            if (listing.getType().equals(type)) {
-                return listing;
+            if (listingPageType.getType().equals(type)) {
+                return listingPageType;
             }
 
         }
 
         throw new IllegalArgumentException(
-                Listing.class.getSimpleName() +
+                ListingPageType.class.getSimpleName() +
                         " ENUM type has no constant with the specified type '" + type + "'"
         );
     }
