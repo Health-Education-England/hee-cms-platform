@@ -24,20 +24,19 @@ public class SearchResultsComponent extends ListingPageComponent {
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
+
         request.setModel("contentTypesMap", buildContentMaps(request.getModel(REQUEST_ATTR_DOCUMENT)));
         request.setModel("selectedContentTypes", HstUtils.getQueryParameterValues(request, CONTENT_TYPE_QUERY_PARAM));
         request.setModel("searchText", request.getParameter(SEARCH_TEXT_QUERY_PARAM));
     }
 
     @Override
-    protected Filter createQueryFilters(HstRequest request, HstQuery query) throws FilterException {
-        Filter baseFilter = query.createFilter();
+    protected Filter createQueryFilters(final HstRequest request, final HstQuery query) throws FilterException {
+        final Filter baseFilter = query.createFilter();
 
-        baseFilter.addAndFilter(super.createQueryFilters(request, query));
-
-        String searchText = request.getParameter(SEARCH_TEXT_QUERY_PARAM);
+        final String searchText = request.getParameter(SEARCH_TEXT_QUERY_PARAM);
         if (StringUtils.isNotEmpty(searchText)) {
-            Filter searchTextFilter = query.createFilter();
+            final Filter searchTextFilter = query.createFilter();
             searchTextFilter.addContains(".", searchText);
 
             baseFilter.addAndFilter(searchTextFilter);
@@ -46,15 +45,18 @@ public class SearchResultsComponent extends ListingPageComponent {
         return baseFilter;
     }
 
-    protected String[] getDocumentTypes(HstRequest request, ListingPage listingPage) {
-        List<String> selectedContentTypes = HstUtils.getQueryParameterValues(request, CONTENT_TYPE_QUERY_PARAM);
+    @Override
+    protected String[] getDocumentTypes(final HstRequest request, final ListingPage listingPage) {
+        final List<String> selectedContentTypes = HstUtils.getQueryParameterValues(request, CONTENT_TYPE_QUERY_PARAM);
         if (!selectedContentTypes.isEmpty()) {
             return selectedContentTypes.toArray(new String[0]);
-        } else return listingPage.getDocumentTypes();
+        }
+
+        return listingPage.getDocumentTypes();
     }
 
-    private Map<String, String> buildContentMaps(ListingPage listingPage) {
-        String[] documentTypes = listingPage.getDocumentTypes();
+    private Map<String, String> buildContentMaps(final ListingPage listingPage) {
+        final String[] documentTypes = listingPage.getDocumentTypes();
         return Arrays.stream(documentTypes)
                 .collect(Collectors.toMap(
                         documentType -> documentType,

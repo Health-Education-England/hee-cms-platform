@@ -1,37 +1,59 @@
 <#ftl output_format="HTML">
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 
-<#macro bulletinListItem title category overview websiteURL websiteText>
-    <dl class="nhsuk-summary-list">
-        <h3><a href="${websiteURL}"> ${title}</a></h3>
-        <#if category??>
-            <@fmt.message key="bulletin.category" var="categoryLabel"/>
-            <@listItemRow key="${categoryLabel}" value="${category}" />
-        </#if>
-        <#if overview??>
-            <@fmt.message key="bulletin.overview" var="overviewLabel"/>
-            <@listItemRow key="${overviewLabel}" value="${overview}" />
-        </#if>
-        <#if websiteURL??>
-            <#assign website>
-                <a href="${websiteURL}"> ${websiteText}</a>
-            </#assign>
-            <@fmt.message key="bulletin.website" var="websiteLabel"/>
-            <@listItemRow key="${websiteLabel}" value="${website}" />
-        </#if>
-    </dl>
+<#macro bulletinListItem items categoriesMap>
+    <#list items as item>
+        <dl class="nhsuk-summary-list">
+            <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
+            <#assign categories>${item.categories?map(category -> categoriesMap[category])?join(', ')}</#assign>
+            <#if categories??>
+                <@fmt.message key="bulletin.category" var="categoryLabel"/>
+                <@listItemRow key="${categoryLabel}" value="${categories}" />
+            </#if>
+            <#if item.overview??>
+                <@fmt.message key="bulletin.overview" var="overviewLabel"/>
+                <@listItemRow key="${overviewLabel}" value="${item.overview}" />
+            </#if>
+            <#if item.websiteUrl??>
+                <#assign website>
+                    <a href="${item.websiteUrl}"> ${item.websiteTitle}</a>
+                </#assign>
+                <@fmt.message key="bulletin.website" var="websiteLabel"/>
+                <@listItemRow key="${websiteLabel}" value="${website}" />
+            </#if>
+        </dl>
+    </#list>
 </#macro>
-<#macro listItem listItem>
-    <li>
-        <span class="app-search-results-category">${listItem.contentType}</span>
-        <h3><a href="<@hst.link hippobean=listItem/>">${listItem.title}</a></h3>
-        <p class="nhsuk-body-s nhsuk-u-margin-top-1">${listItem.summary}</p>
-        <div class="nhsuk-review-date">
-            <p class="nhsuk-body-s">
-                <@fmt.message key="published_on"/> ${listItem.publishedDate}
-            </p>
-        </div>
-    </li>
+<#macro blogListItem items categoriesMap>
+    <#list items as item>
+        <li>
+            <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
+            <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary}</p>
+            <div class="nhsuk-review-date">
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </p>
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="by.text"/> ${item.author}
+                </p>
+            </div>
+        </li>
+    </#list>
+</#macro>
+<#macro searchListItem items>
+    <#list items as item>
+        <li>
+            <span class="app-search-results-category">${item.contentType}</span>
+            <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+            <div class="nhsuk-review-date">
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                </p>
+            </div>
+        </li>
+    </#list>
 </#macro>
 
 <#macro listItemRow key value>

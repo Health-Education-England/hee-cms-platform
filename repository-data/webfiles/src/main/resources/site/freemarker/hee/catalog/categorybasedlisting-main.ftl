@@ -8,9 +8,8 @@
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
-<#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
-<#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.Bulletin" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
+<#-- @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Bulletin, uk.nhs.hee.web.beans.BlogPost]" -->
 <#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
 <#-- @ftlvariable name="selectedCategories" type="java.util.List" -->
 
@@ -44,7 +43,7 @@
                     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
                         <div class="nhsuk-listing__summary o-flex@tablet">
                             <#-- Results number -->
-                            <@fmt.message key="bulletin.results.count.text" var="resultsCountText"/>
+                            <@fmt.message key="results.count.text" var="resultsCountText"/>
                             <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
                                 ${pageable.total} ${resultsCountText}
                             </h2>
@@ -72,7 +71,7 @@
 
                         <#-- Active Filters -->
                         <#if selectedCategories?has_content>
-                            <div class="nhsuk-listing__active-filters">
+                            <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
                                 <#list selectedCategories as categoryValue>
                                     <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${categoryValue}">
                                         <span>${categoriesMap[categoryValue]}</span>
@@ -82,19 +81,12 @@
                                 </#list>
                             </div>
                         </#if>
-                        <hr/>
                         <#-- End Active Filters -->
 
                         <#if pageable??>
-                            <#list pageable.items as item>
-                                <@bulletinListItem
-                                title="${item.title}"
-                                category="${item.category?map(category -> categoriesMap[category])?join(', ')}"
-                                overview="${item.overview}"
-                                websiteURL="${item.websiteUrl}"
-                                websiteText="${item.websiteTitle}"
-                                />
-                            </#list>
+                            <ul class="nhsuk-list nhsuk-list--border">
+                                <@.vars["${document.listingPageType}ListItem"] items=pageable.items categoriesMap=categoriesMap/>
+                            </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>
                     </div>

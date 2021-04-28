@@ -26,8 +26,8 @@ public class Bulletin extends BaseDocument {
         return getSingleProperty("hee:websiteTitle");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:category")
-    public String[] getCategory() {
-        return getMultipleProperty("hee:category");
+    @HippoEssentialsGenerated(internalName = "hee:categories")
+    public String[] getCategories() {
+        return getMultipleProperty("hee:categories");
     }
 }

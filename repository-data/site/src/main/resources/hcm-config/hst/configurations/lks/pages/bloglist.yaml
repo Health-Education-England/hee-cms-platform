@@ -1,0 +1,11 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/lks/hst:pages/bloglist:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
+        hst:parameternames: [document]
+        hst:parametervalues: [listing-pages/blogs]
+        hst:template: categorybasedlisting-main

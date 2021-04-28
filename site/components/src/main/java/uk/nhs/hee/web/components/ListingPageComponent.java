@@ -1,7 +1,6 @@
 package uk.nhs.hee.web.components;
 
 import com.google.common.base.Strings;
-import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.builder.HstQueryBuilder;
@@ -12,31 +11,21 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
-import org.onehippo.forge.selection.hst.contentbean.ValueList;
-import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.ListingPage;
-import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
-import uk.nhs.hee.web.constants.HeeNodeType;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.List;
-import java.util.Map;
 
-// TODO: Make this as an abstract class retaining common Listing functionalities and
-// move the Bulletin Listing related functionalities into a separate BulletinListingPageComponent
-// extending from ListingPageComponent
-@ParametersInfo(type = ListingPageComponentInfo.class)
-public class ListingPageComponent extends EssentialsDocumentComponent {
+/**
+ * Base abstract component class for Listing Pages ({@code hee:listingPage}).
+ */
+public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
-
-    private final static String CATEGORY_QUERY_PARAM = "category";
-    private final static String CATEGORY_VALUE_LIST_IDENTIFIER = "bulletinCategories";
 
     private final static String ASCENDING_SORT_ORDER = "asc";
     private final static String DESCENDING_SORT_ORDER = "desc";
@@ -49,18 +38,23 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         final Pageable<HippoBean> pageable;
         try {
             pageable = executeQuery(request);
-        } catch (QueryException e) {
+        } catch (final QueryException e) {
             throw new HstComponentException("An error has occurred while trying to execute hst query.", e);
         }
 
-        request.setModel("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
-        request.setModel("categoriesMap", getCategoryValueListMap());
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
         request.setModel(REQUEST_ATTR_PAGEABLE, pageable);
     }
 
+    /**
+     * Builds and executes the Query to list pages for the current Listing Page request.
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return the {@link Pageable<HippoBean>} instance.
+     * @throws QueryException thrown when an error occurs during execution of the query built.
+     */
     private Pageable<HippoBean> executeQuery(final HstRequest request) throws QueryException {
-        ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+        final ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
 
         final HstQuery query = buildQuery(request, listingPage);
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
@@ -73,7 +67,15 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
                 getCurrentPage(request));
     }
 
-    protected HstQuery buildQuery(final HstRequest request, ListingPage listingPage) throws FilterException {
+    /**
+     * Builds Query for the current Listing Page request.
+     *
+     * @param request     the {@link HstRequest} instance.
+     * @param listingPage the {@link ListingPage} instance.
+     * @return the {@link HstQuery} instance built for the current Listing Page request.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
+    private HstQuery buildQuery(final HstRequest request, final ListingPage listingPage) throws FilterException {
         final String documentPath = listingPage.getPath();
         final HippoBean scopeBean = doGetScopeBean(documentPath);
 
@@ -90,32 +92,75 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         return query;
     }
 
-    private HstQuery createQuery(HippoBean scope, String[] documentTypes) {
-        HstQueryBuilder builder = HstQueryBuilder.create(scope);
+    /**
+     * Returns {@link HstQuery} built based on the given {@code scope} bean and {@code documentTypes}.
+     *
+     * @param scope         the scope {@link HippoBean} instance.
+     * @param documentTypes the list of document types against which the query needs to be executed.
+     * @return the {@link HstQuery} built based on the given {@code scope} bean and {@code documentTypes}.
+     */
+    private HstQuery createQuery(final HippoBean scope, final String[] documentTypes) {
+        final HstQueryBuilder builder = HstQueryBuilder.create(scope);
         return builder.ofTypes(documentTypes).build();
     }
 
-    protected String[] getDocumentTypes(HstRequest request, ListingPage listingPage) {
-        return listingPage.getDocumentTypes();
+    /**
+     * Returns an array of document types against which the Query will be executed.
+     *
+     * <p>Returns document types from {@link ListingPageType} instance if available.
+     * Otherwise, returns from the {@link ListingPage} instance</p>
+     *
+     * @param request     the {@link HstRequest} instance.
+     * @param listingPage the {@link ListingPage} instance.
+     * @return An array of document types against which the Query will be executed.
+     */
+    protected String[] getDocumentTypes(final HstRequest request, final ListingPage listingPage) {
+        final ListingPageType listingPageType =
+                ListingPageType.getByName(getListingPageModel(request).getListingPageType());
+        if (listingPageType.getDocumentTypes().length == 0) {
+            return listingPage.getDocumentTypes();
+        }
+
+        return listingPageType.getDocumentTypes();
     }
 
-    protected int getCurrentPage(final HstRequest request) {
+    /**
+     * Returns current result/listing page number.
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return current result/listing page number.
+     */
+    private int getCurrentPage(final HstRequest request) {
         return getAnyIntParameter(request, REQUEST_PARAM_PAGE, 1);
     }
 
-    protected Filter createQueryFilters(final HstRequest request, final HstQuery query) throws FilterException {
-        return createCategoryFilter(request, query);
-    }
+    /**
+     * Abstract method for extending classes to override the logic to build Query Filters.
+     *
+     * @param request the {@link HstRequest} instance.
+     * @param query   the {@link HstQuery} instance.
+     * @return the {@link Filter} instance built based on the given inputs.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
+    protected abstract Filter createQueryFilters(
+            final HstRequest request, final HstQuery query) throws FilterException;
 
-    private Filter createCategoryFilter(final HstRequest request, final HstQuery query) throws FilterException {
-        List<String> categoriesFilter = HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM);
-        return createOrFilter(query, categoriesFilter, HeeNodeType.CATEGORY);
-    }
-
-    private Filter createOrFilter(HstQuery query, final List<String> values, final String attributeName) throws FilterException {
+    /**
+     * Returns Query {@link Filter} built based on the given inputs.
+     *
+     * @param query         the {@link HstQuery} instance.
+     * @param values        the Filter field values.
+     * @param attributeName the Filter field name.
+     * @return the Query {@link Filter} built based on the given inputs.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
+    protected Filter createOrFilter(
+            final HstQuery query,
+            final List<String> values,
+            final String attributeName) throws FilterException {
         final Filter baseFilter = query.createFilter();
 
-        for (String value : values) {
+        for (final String value : values) {
             final Filter filter = query.createFilter();
             filter.addEqualTo(attributeName, value);
             baseFilter.addOrFilter(filter);
@@ -124,10 +169,20 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         return baseFilter;
     }
 
-    protected void applySortOrdering(final HstRequest request, final HstQuery query) {
+    /**
+     * Adds sorting order on the given {@code query} instance based
+     * on the requested sorting order via {@code sortByDate} query parameter.
+     *
+     * <p>Defaults to Descending sort order.</p>
+     *
+     * @param request the {@link HstRequest} instance.
+     * @param query   the {@link HstQuery} instance.
+     */
+    private void applySortOrdering(final HstRequest request, final HstQuery query) {
         String sortOrder = DESCENDING_SORT_ORDER;
 
-        final List<String> sortByDateQueryParamValues = HstUtils.getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
+        final List<String> sortByDateQueryParamValues =
+                HstUtils.getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
         if (!sortByDateQueryParamValues.isEmpty()) {
             sortOrder = sortByDateQueryParamValues.get(0);
         }
@@ -139,14 +194,34 @@ public class ListingPageComponent extends EssentialsDocumentComponent {
         }
     }
 
-    private Map<String, String> getCategoryValueListMap() {
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(CATEGORY_VALUE_LIST_IDENTIFIER, RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
+    /**
+     * Returns requested sort order. Defaults to Descending sort order.
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return the requested sort order. Defaults to Descending sort order.
+     */
+    private String getSelectedSortOrder(final HstRequest request) {
+        final String sortQueryParam = getAnyParameter(request, SORT_BY_DATE_QUERY_PARAM);
+        return Strings.isNullOrEmpty(sortQueryParam) ? DESCENDING_SORT_ORDER : sortQueryParam;
     }
 
-    private String getSelectedSortOrder(HstRequest request) {
-        String sortQueryParam = getAnyParameter(request, SORT_BY_DATE_QUERY_PARAM);
-        return Strings.isNullOrEmpty(sortQueryParam) ? DESCENDING_SORT_ORDER : sortQueryParam;
+    /**
+     * Returns {@link ListingPage} instance of the current {@code request}.
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return the {@link ListingPage} instance of the current {@code request}.
+     */
+    protected ListingPage getListingPageModel(final HstRequest request) {
+        return request.getModel(REQUEST_ATTR_DOCUMENT);
+    }
+
+    /**
+     * Returns {@link ListingPageType} instance of the current {@code request}.
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return the {@link ListingPageType} instance of the current {@code request}.
+     */
+    protected ListingPageType getListing(final HstRequest request) {
+        return ListingPageType.getByName(getListingPageModel(request).getListingPageType());
     }
 }

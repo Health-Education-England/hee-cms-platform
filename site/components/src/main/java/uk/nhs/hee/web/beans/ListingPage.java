@@ -1,7 +1,7 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
 @HippoEssentialsGenerated(internalName = "hee:listingPage")
 @Node(jcrType = "hee:listingPage")
@@ -24,5 +24,10 @@ public class ListingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:documentTypes")
     public String[] getDocumentTypes() {
         return getMultipleProperty("hee:documentTypes");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:listingPageType")
+    public String getListingPageType() {
+        return getSingleProperty("hee:listingPageType");
     }
 }
