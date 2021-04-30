@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: 253a4fc4-8a03-4987-a69b-4dfc409296a3
+    hippo:versionHistory: e4e1a42e-1856-4fa8-a9cb-e66b1ca76934
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -27,14 +27,14 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-04-27T08:19:26.333+01:00
+      hippostdpubwf:lastModificationDate: 2021-04-30T10:14:29.977+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2021-03-31T00:00:00+01:00
-        hee:nextReviewed: 2021-03-31T00:00:00+01:00
+        hee:lastReviewed: 2021-03-31T00:00:00+07:00
+        hee:nextReviewed: 2021-03-31T00:00:00+07:00
       /hee:QuickLinks:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
@@ -77,6 +77,11 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -92,14 +97,14 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-04-27T08:20:17.659+01:00
+      hippostdpubwf:lastModificationDate: 2021-04-30T10:16:42.721+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2021-03-31T00:00:00+01:00
-        hee:nextReviewed: 2021-03-31T00:00:00+01:00
+        hee:lastReviewed: 2021-03-31T00:00:00+07:00
+        hee:nextReviewed: 2021-03-31T00:00:00+07:00
       /hee:QuickLinks:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
@@ -142,6 +147,11 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -157,15 +167,15 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-04-27T08:20:17.659+01:00
+      hippostdpubwf:lastModificationDate: 2021-04-30T10:16:42.721+07:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-04-27T08:20:19.472+01:00
+      hippostdpubwf:publicationDate: 2021-04-30T10:16:44.628+07:00
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2021-03-31T00:00:00+01:00
-        hee:nextReviewed: 2021-03-31T00:00:00+01:00
+        hee:lastReviewed: 2021-03-31T00:00:00+07:00
+        hee:nextReviewed: 2021-03-31T00:00:00+07:00
       /hee:QuickLinks:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
@@ -208,3 +218,8 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
