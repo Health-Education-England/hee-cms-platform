@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: e4e1a42e-1856-4fa8-a9cb-e66b1ca76934
+    hippo:versionHistory: 7cf0ae2c-d223-49a1-a5ef-52f5b8258c8d
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -27,7 +27,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-04-30T10:14:29.977+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-04T09:18:56.618+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -82,6 +82,58 @@
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:comments[1]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:00:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: John
+          hee:string_: Greene
+      /hee:comments[2]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:16:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
+      /hee:comments[3]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:19:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
+      /hee:comments[4]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:19:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -97,7 +149,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-04-30T10:16:42.721+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-04T09:19:57.622+07:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -152,6 +204,58 @@
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:comments[1]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:00:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: John
+          hee:string_: Greene
+      /hee:comments[2]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:16:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
+      /hee:comments[3]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:19:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
+      /hee:comments[4]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:19:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -167,9 +271,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-04-30T10:16:42.721+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-04T09:19:57.622+07:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-04-30T10:16:44.628+07:00
+      hippostdpubwf:publicationDate: 2021-05-04T09:20:00.992+07:00
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
@@ -223,3 +327,55 @@
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:comments[1]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:00:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: John
+          hee:string_: Greene
+      /hee:comments[2]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:16:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
+      /hee:comments[3]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:19:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
+      /hee:comments[4]:
+        jcr:primaryType: hee:blogComment
+        hee:message: 'Comment text goes here: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit
+          amet lacus accumsan et viverra justo commodo.'
+        hee:postedDate: 2021-05-04T09:19:00+07:00
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: test@test.com
+          hee:firstName: John
+          hee:lastName: Greene
+          hee:string: ''
+          hee:string_: ''
