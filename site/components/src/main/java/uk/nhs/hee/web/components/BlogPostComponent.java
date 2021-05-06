@@ -29,7 +29,15 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
+        BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
+        if (blogPost == null) {
+            // Looks up for blogPost document associated to the ResolvedSiteMapItem
+            // in case if any and adds its bean in the request.
+            // Essentially a fall back mechanism in case
+            setContentBean(null, request, response);
+        }
+
+        blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
             final List<String> blogCategories = Arrays.asList(blogPost.getCategories());
             request.setAttribute(
