@@ -1,0 +1,9 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/lks/hst:pages/blogpost:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+        hst:template: blogpost-main
