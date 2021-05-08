@@ -6,3 +6,9 @@ definitions:
       wicket.id: ${cluster.id}.extensions.item
       wicket.model: ${wicket.model}
       plugin.class: com.onehippo.cms7.eforms.cms.extensions.AfterProcessPlugin
+    /hippo:namespaces/eforms/form/editor:templates/_default_/storeformdata:
+      jcr:primaryType: frontend:plugin
+      mode: ${mode}
+      plugin.class: com.onehippo.cms7.eforms.cms.extensions.StoreFormDataPlugin
+      wicket.id: ${cluster.id}.extensions.item
+      wicket.model: ${wicket.model}

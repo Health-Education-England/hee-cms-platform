@@ -15,6 +15,7 @@ import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -38,11 +39,12 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                     "categoriesToFilteredURLMap",
                     mapCategoriesToFilteredUrl(request.getRequestContext(), blogCategories));
 
-            List<BlogComment> comments = blogPost.getComments();
+            List<BlogComment> comments =  blogPost.getComments();
+            Collections.reverse(comments);
             request.setModel("allComments", comments);
             boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
             if (!showAllComments) {
-                request.setModel("visibleComments", comments.subList(0, Math.max(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size()) - 1));
+                request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size() - 1)));
             }
             else
                 request.setModel("visibleComments", comments);

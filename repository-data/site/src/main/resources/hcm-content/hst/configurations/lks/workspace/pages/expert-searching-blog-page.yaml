@@ -1,0 +1,40 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/expert-searching-blog-page:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-05-05T09:18:46.077+07:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+    hst:template: blogpage-main
+    /comment:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 8a3a0041-c2d8-42db-b03e-1fb8fe51e333
+      hst:label: Comment Form
+      hst:lastmodified: 2021-05-05T09:19:22.498+07:00
+      hst:xtype: hst.vbox
+      /form:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent
+        hst:iconpath: resources/addon/eforms/images/icons/form.svg
+        hst:label: Enterprise Form
+        hst:parameternames: [form, behaviors, eforms-from-email, eforms-from-name]
+        hst:parametervalues: [/content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
+            uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior', changeit@example.com,
+          ChangeIt]
+        hst:resourcetemplate: eforms.validation.default
+        hst:template: eforms.default
+        hst:xtype: HST.Item
+    /blog:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 8a3a0041-c2d8-42db-b03e-1fb8fe51e333
+      hst:label: Blog Post
+      hst:lastmodified: 2021-05-05T09:19:22.498+07:00
+      hst:xtype: hst.vbox
+      /blogpost:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+        hst:iconpath: images/catalog-component-icons/simple-content.svg
+        hst:label: BlogPost
+        hst:parameternames: [document]
+        hst:parametervalues: [blogposts/expertssearch]
+        hst:template: blogpost-main

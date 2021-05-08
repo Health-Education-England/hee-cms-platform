@@ -4,4 +4,5 @@ definitions:
       jcr:primaryType: hst:containeritempackage
     /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-catalog/form:
       hst:parameternames: [eforms-from-email, eforms-from-name, behaviors]
-      hst:parametervalues: [changeit@example.com, ChangeIt, com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior]
+      hst:parametervalues: [changeit@example.com, ChangeIt, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
+          uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior']
