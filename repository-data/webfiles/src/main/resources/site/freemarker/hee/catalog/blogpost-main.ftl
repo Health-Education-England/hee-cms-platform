@@ -46,7 +46,7 @@
 
                         <#--Blog Summary -->
                         <p class="nhsuk-body-l">
-                            ${document.summary}
+                            ${document.summary!}
                         </p>
                         <#-- End Blog Summary -->
 
