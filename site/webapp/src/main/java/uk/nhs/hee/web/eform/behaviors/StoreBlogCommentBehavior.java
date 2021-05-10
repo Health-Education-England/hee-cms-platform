@@ -8,18 +8,16 @@ import org.hippoecm.hst.component.support.forms.FormField;
 import org.hippoecm.hst.component.support.forms.FormMap;
 import org.hippoecm.hst.component.support.forms.FormUtils;
 import org.hippoecm.hst.configuration.components.HstComponentConfiguration;
-import org.hippoecm.hst.container.RequestContextProvider;
-import org.hippoecm.hst.content.beans.ObjectBeanManagerException;
-import org.hippoecm.hst.content.beans.ObjectBeanPersistenceException;
-import org.hippoecm.hst.content.beans.manager.workflow.WorkflowPersistenceManagerImpl;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.request.ComponentConfiguration;
-import org.hippoecm.hst.core.request.HstRequestContext;
-import org.hippoecm.repository.api.*;
+import org.hippoecm.repository.api.HippoWorkspace;
+import org.hippoecm.repository.api.WorkflowException;
+import org.hippoecm.repository.api.WorkflowManager;
 import org.onehippo.repository.documentworkflow.DocumentWorkflow;
-import uk.nhs.hee.web.beans.BlogComment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.BlogPost;
 
 import javax.jcr.Node;
@@ -31,6 +29,8 @@ import java.util.Calendar;
 import java.util.Map;
 
 public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
+    private static final Logger LOGGER = LoggerFactory.getLogger(StoreBlogCommentBehavior.class);
+
     @Override
     public void onValidationSuccess(HstRequest request, HstResponse response, ComponentConfiguration config, FormBean bean, Form form, FormMap map) {
         try {
@@ -61,7 +61,7 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
                 }
             }
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException | RepositoryException | WorkflowException | RemoteException e) {
-            e.printStackTrace();
+            LOGGER.warn("Problem on handling blog comment posting: " + e.getMessage(), e);
         }
     }
 }
