@@ -3,12 +3,15 @@
 <@hst.defineObjects />
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
+<#-- @ftlvariable name="hstRequestContext" type="org.hippoecm.hst.core.request.HstRequestContext" -->
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.MiniHub" -->
 <#-- @ftlvariable name="minihubName" type="java.lang.String" -->
 <#-- @ftlvariable name="currentGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="previousGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="nextGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="accessFromRootHub" type="java.lang.Boolean" -->
+
+<#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?endsWith("/")/>
 <#if document??>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
@@ -33,7 +36,7 @@
                                 <#else>
                                     <li class="nhsuk-contents-list__item">
                                         <a class="nhsuk-contents-list__link"
-                                           href="${accessFromRootHub?then(minihubName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
+                                           href="${(accessFromRootHub && !accessWithEndSlash)?then(minihubName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
                                     </li>
                                 </#if>
                             </#list>
@@ -65,7 +68,7 @@
                         <#if nextGuidance??>
                             <li class="nhsuk-pagination-item--next">
                                 <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
-                                   href="${accessFromRootHub?then(minihubName + '/' + nextGuidance.name, nextGuidance.name)}">
+                                   href="${(accessFromRootHub && !accessWithEndSlash)?then(minihubName + '/' + nextGuidance.name, nextGuidance.name)}">
                                     <span class="nhsuk-pagination__title"><@fmt.message key="next"/></span>
                                     <span class="nhsuk-u-visually-hidden">:</span>
                                     <span class="nhsuk-pagination__page">${nextGuidance.title}</span>
