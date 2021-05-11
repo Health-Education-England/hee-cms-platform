@@ -15,7 +15,7 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /string:
+          /firstName:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -23,7 +23,7 @@ definitions:
             hipposysedit:path: hee:firstName
             hipposysedit:primary: false
             hipposysedit:type: String
-          /string_:
+          /lastName:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -60,7 +60,7 @@ definitions:
           /firstName:
             jcr:primaryType: frontend:plugin
             caption: First Name
-            field: string
+            field: firstName
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -68,7 +68,7 @@ definitions:
           /lastName:
             jcr:primaryType: frontend:plugin
             caption: Last Name
-            field: string_
+            field: lastName
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
