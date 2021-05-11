@@ -21,9 +21,19 @@ public enum ListingPageType {
     BULLETIN_LISTING("bulletin", new String[]{"hee:bulletin"}, "bulletinCategories"),
 
     /**
+     * Case Study Listing
+     */
+    CASE_STUDY_LISTING("casestudy", new String[]{"hee:caseStudy"}, "caseStudyCategories"),
+
+    /**
      * Search Listing
      */
-    SEARCH_LISTING("search", new String[]{}, StringUtils.EMPTY);
+    SEARCH_LISTING("search", new String[]{}, StringUtils.EMPTY),
+
+    /**
+     * Search Bank Listing
+     */
+    SEARCH_BANK_LISTING("searchbank", new String[]{"hee:searchBank"}, "searchBankTopics");
 
 
     private final String type;
@@ -48,10 +58,10 @@ public enum ListingPageType {
     }
 
     /**
-     * Returns
+     * Returns {@link ListingPageType} instance for the given listing {@code type}.
      *
      * @param type the listing type.
-     * @return
+     * @return the {@link ListingPageType} instance for the given listing {@code type}.
      */
     public static ListingPageType getByName(final String type) {
         for (final ListingPageType listingPageType : ListingPageType.values()) {

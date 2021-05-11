@@ -1,0 +1,118 @@
+/content/documents/lks/case-studies:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 33e453c2-3935-4767-a609-7e7c2da6bb5c
+  hippo:name: Case Studies
+  hippostd:foldertype: [new-caseStudy-folder, new-caseStudy-document]
+  hippotranslation:id: 967ddd11-c898-49cd-afa9-f0df060e4e82
+  hippotranslation:locale: en
+  /apprenticeships:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+    hippo:name: Apprenticeships
+    hippostd:foldertype: [new-caseStudy-document, new-caseStudy-folder]
+    hippotranslation:id: 67ecf1b1-aad4-4489-971a-4e398b9b517e
+    hippotranslation:locale: en
+    /modern-apprentice-in-cellular-pathology:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 9b337c99-391d-4cc2-abcc-d3dd6e5176c5
+      hippo:name: Modern apprentice in cellular pathology
+      hippo:versionHistory: 9bba3871-6208-48db-a512-d7c8ceae2f1c
+      /modern-apprentice-in-cellular-pathology[1]:
+        jcr:primaryType: hee:caseStudy
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b4e15551-dd19-447b-a3e9-8db9fa2eaf41
+        hee:categories: [apprenticeships, hsst]
+        hee:description: As a Modern Apprentice in Cellular Pathology, the apprentice
+          will be responsible for a range of laboratory-based pathology tasks, using
+          a range of cutting edge scientific technologies.
+        hee:region: Royal Preston Hospital
+        hee:sector: Pathology
+        hee:title: Modern apprentice in cellular pathology
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-07T20:14:52.104+01:00
+        hippostdpubwf:lastModificationDate: 2021-05-11T13:06:03.993+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 2f9ac5d4-2134-4577-b9ff-1c159f6883a7
+        hippotranslation:locale: en
+        /hee:document:
+          jcr:primaryType: hippo:resource
+          hippo:filename: hee-case studies-2018-02-14.pdf
+          hippo:text:
+            type: binary
+            resource: /content/documents/lks/case-studies/apprenticeships/modern-apprentice-in-cellular-pathology/modern-apprentice-in-cellular-pathology[1]/document/hee-case-studies-2018-02-14.pdf
+          jcr:data:
+            type: binary
+            resource: /content/documents/lks/case-studies/apprenticeships/modern-apprentice-in-cellular-pathology/modern-apprentice-in-cellular-pathology[1]/document/hee-case-studies-2018-02-14-1.pdf
+          jcr:encoding: UTF-8
+          jcr:lastModified: 2021-05-11T13:06:13.939+01:00
+          jcr:mimeType: application/pdf
+      /modern-apprentice-in-cellular-pathology[2]:
+        jcr:primaryType: hee:caseStudy
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 6d8cf9f1-d240-4c82-8ba6-0c397910a85f
+        hee:categories: [apprenticeships, hsst]
+        hee:description: As a Modern Apprentice in Cellular Pathology, the apprentice
+          will be responsible for a range of laboratory-based pathology tasks, using
+          a range of cutting edge scientific technologies.
+        hee:region: Royal Preston Hospital
+        hee:sector: Pathology
+        hee:title: Modern apprentice in cellular pathology
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-07T20:14:52.104+01:00
+        hippostdpubwf:lastModificationDate: 2021-05-11T13:06:16.849+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 2f9ac5d4-2134-4577-b9ff-1c159f6883a7
+        hippotranslation:locale: en
+        /hee:document:
+          jcr:primaryType: hippo:resource
+          hippo:filename: hee-case studies-2018-02-14.pdf
+          hippo:text:
+            type: binary
+            resource: /content/documents/lks/case-studies/apprenticeships/modern-apprentice-in-cellular-pathology/modern-apprentice-in-cellular-pathology[2]/document/hee-case-studies-2018-02-14.pdf
+          jcr:data:
+            type: binary
+            resource: /content/documents/lks/case-studies/apprenticeships/modern-apprentice-in-cellular-pathology/modern-apprentice-in-cellular-pathology[2]/document/hee-case-studies-2018-02-14-1.pdf
+          jcr:encoding: UTF-8
+          jcr:lastModified: 2021-05-11T13:06:13.939+01:00
+          jcr:mimeType: application/pdf
+      /modern-apprentice-in-cellular-pathology[3]:
+        jcr:primaryType: hee:caseStudy
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 21b946a2-b1f9-4f8d-ba64-43eae58b3204
+        hee:categories: [apprenticeships, hsst]
+        hee:description: As a Modern Apprentice in Cellular Pathology, the apprentice
+          will be responsible for a range of laboratory-based pathology tasks, using
+          a range of cutting edge scientific technologies.
+        hee:region: Royal Preston Hospital
+        hee:sector: Pathology
+        hee:title: Modern apprentice in cellular pathology
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-07T20:14:52.104+01:00
+        hippostdpubwf:lastModificationDate: 2021-05-11T13:06:16.849+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-05-11T13:06:22.359+01:00
+        hippotranslation:id: 2f9ac5d4-2134-4577-b9ff-1c159f6883a7
+        hippotranslation:locale: en
+        /hee:document:
+          jcr:primaryType: hippo:resource
+          hippo:filename: hee-case studies-2018-02-14.pdf
+          hippo:text:
+            type: binary
+            resource: /content/documents/lks/case-studies/apprenticeships/modern-apprentice-in-cellular-pathology/modern-apprentice-in-cellular-pathology[3]/document/hee-case-studies-2018-02-14.pdf
+          jcr:data:
+            type: binary
+            resource: /content/documents/lks/case-studies/apprenticeships/modern-apprentice-in-cellular-pathology/modern-apprentice-in-cellular-pathology[3]/document/hee-case-studies-2018-02-14-1.pdf
+          jcr:encoding: UTF-8
+          jcr:lastModified: 2021-05-11T13:06:13.939+01:00
+          jcr:mimeType: application/pdf
