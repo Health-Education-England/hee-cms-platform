@@ -49,7 +49,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
 
             List<BlogComment> comments =  blogPost.getComments();
             Collections.reverse(comments);
-            request.setModel("allComments", comments);
+            request.setModel("totalComments", comments.size());
             boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
             if (!showAllComments) {
                 request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size() - 1)));

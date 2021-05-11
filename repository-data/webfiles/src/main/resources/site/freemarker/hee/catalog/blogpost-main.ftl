@@ -7,7 +7,7 @@
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.BlogPost" -->
 <#-- @ftlvariable name="categoriesToFilteredURLMap" type="java.util.Map" -->
 <#-- @ftlvariable name="visibleComments" type="java.util.ArrayList<uk.nhs.hee.web.beans.BlogComment>" -->
-<#-- @ftlvariable name="allComments" type="java.util.ArrayList" -->
+<#-- @ftlvariable name="totalComments" type="java.lang.Integer" -->
 
 <#if document??>
 
@@ -95,7 +95,7 @@
                 </div>
             </#list>
 
-            <#if allComments?size gt visibleComments?size>
+            <#if totalComments gt visibleComments?size>
                 <a href="?showAllComments=true"><@fmt.message key="comment.view_all"/> ${document.comments?size} <@fmt.message key="comments"/></a>
             <#else>
                 <a href="?showAllComments=false"><@fmt.message key="comment.view_less"/> <@fmt.message key="comments"/></a>
