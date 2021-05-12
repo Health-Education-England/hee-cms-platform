@@ -1,0 +1,94 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/blogComment:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 7174783b-9fef-47f8-bb49-b7f482bafedc
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b22fb87a-bbe3-40e3-b6d7-b7f39070f5cf
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 891694ca-2a12-46d1-aa92-cf88a3e16477
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /author:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:author
+            hipposysedit:primary: false
+            hipposysedit:type: hee:blogCommentAuthor
+            hipposysedit:validators: [required]
+          /message:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:message
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [required]
+          /postedDate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:postedDate
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+            hipposysedit:validators: [required]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:blogComment
+          hee:message: ''
+          hee:postedDate: 0001-01-01T19:00:00+07:00
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: ''
+            hee:string: ''
+            hee:string_: ''
+            hee:firstName: ''
+            hee:lastName: ''
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /author:
+            jcr:primaryType: frontend:plugin
+            caption: Author
+            field: author
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /message:
+            jcr:primaryType: frontend:plugin
+            caption: Message
+            field: message
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /postedDate:
+            jcr:primaryType: frontend:plugin
+            caption: Posted Date
+            field: postedDate
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
