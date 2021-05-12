@@ -34,8 +34,7 @@ public class Guidance extends BaseDocument {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:quickLinks")
-    public QuickLinks getQuickLinks() {
-        return getBean("hee:quickLinks", QuickLinks.class);
+    public List<?> getRightHandBlocks() {
+        return getChildBeansByName("hee:rightHandBlocks");
     }
 }

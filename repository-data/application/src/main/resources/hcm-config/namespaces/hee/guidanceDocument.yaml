@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f92af292-f8fa-4a2d-918d-21f312168840
+          jcr:uuid: 7f88927e-1a37-40a8-bf7d-f86e6d6f3bbe
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -56,14 +56,13 @@ definitions:
             hipposysedit:path: hee:pageLastNextReview
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
-          /quickLinks:
+          /rightHandBlocks:
             jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:quickLinks
-            hipposysedit:primary: false
-            hipposysedit:type: hee:QuickLinks
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:rightHandBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -77,7 +76,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 695769a6-7b03-473a-9709-e10d5a57fb93
+          jcr:uuid: 6379d716-9853-4e11-b845-8a3adf40cdc8
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:relatedContent:
@@ -93,26 +92,6 @@ definitions:
           /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /hee:quickLinks:
-            jcr:primaryType: hee:QuickLinks
-            hee:title: ''
-            /hee:links:
-              jcr:primaryType: hee:link
-              jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: 7307c732-e8d0-40a0-a385-b369499db74f
-              hee:text: ''
-              hee:url: ''
-              hippostd:holder: holder
-              hippostd:state: draft
-              hippostdpubwf:createdBy: ''
-              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-              hippostdpubwf:lastModifiedBy: ''
-              hippotranslation:id: document-type-locale-id
-              hippotranslation:locale: document-type-locale
-              /hee:document:
-                jcr:primaryType: hippo:mirror
-                hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -183,12 +162,15 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /quickLinks:
+          /rightHandBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Quick Links
-            field: quickLinks
+            caption: Right Hand Blocks
+            compoundList: hee:QuickLinks
+            contentPickerType: links
+            field: rightHandBlocks
             hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
