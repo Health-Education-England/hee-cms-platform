@@ -7,11 +7,6 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
 @HippoEssentialsGenerated(internalName = "hee:richTextBlock")
 @Node(jcrType = "hee:richTextBlock")
 public class RichTextBlock extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:name")
-    public String getName() {
-        return getSingleProperty("hee:name");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:html")
     public HippoHtml getHtml() {
         return getHippoHtml("hee:html");

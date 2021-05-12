@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: b935acae-a789-495d-b0fa-f608668409ed
   hippo:name: BlogPost
-  hippo:versionHistory: 08334201-dd16-4b20-8dc4-5bd6193fd7cf
+  hippo:versionHistory: e7a17841-4005-44a8-be61-ce3e16c299e9
   /blogpost[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -13,13 +13,16 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
-    hippostdpubwf:lastModificationDate: 2021-03-31T14:21:42.935+01:00
+    hippostdpubwf:lastModificationDate: 2021-05-04T11:11:46.032+07:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Label that defined the text before the publication
-        date., Label that defined the text before the publication author name.]
+        date., Label that defined the text before the publication author name., '',
+      '', '', '']
     resourcebundle:id: uk.nhs.hee.web.blogpost
-    resourcebundle:keys: [published.on, publication.by]
-    resourcebundle:messages: [Published on, by]
+    resourcebundle:keys: [published.on, publication.by, comments, comment.posted_on,
+      comment.view_all, comment.view_less]
+    resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
+        less]
   /blogpost[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -29,13 +32,16 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
-    hippostdpubwf:lastModificationDate: 2021-03-31T14:21:42.863+01:00
+    hippostdpubwf:lastModificationDate: 2021-05-04T11:12:04.830+07:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Label that defined the text before the publication
-        date., Label that defined the text before the publication author name.]
+        date., Label that defined the text before the publication author name., '',
+      '', '', '']
     resourcebundle:id: uk.nhs.hee.web.blogpost
-    resourcebundle:keys: [published.on, publication.by]
-    resourcebundle:messages: [Published on, by]
+    resourcebundle:keys: [published.on, publication.by, comments, comment.posted_on,
+      comment.view_all, comment.view_less]
+    resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
+        less]
   /blogpost[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -45,11 +51,14 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
-    hippostdpubwf:lastModificationDate: 2021-03-31T14:21:42.863+01:00
+    hippostdpubwf:lastModificationDate: 2021-05-04T11:12:04.830+07:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-03-31T14:21:45.925+01:00
+    hippostdpubwf:publicationDate: 2021-05-04T11:12:06.803+07:00
     resourcebundle:descriptions: [Label that defined the text before the publication
-        date., Label that defined the text before the publication author name.]
+        date., Label that defined the text before the publication author name., '',
+      '', '', '']
     resourcebundle:id: uk.nhs.hee.web.blogpost
-    resourcebundle:keys: [published.on, publication.by]
-    resourcebundle:messages: [Published on, by]
+    resourcebundle:keys: [published.on, publication.by, comments, comment.posted_on,
+      comment.view_all, comment.view_less]
+    resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
+        less]

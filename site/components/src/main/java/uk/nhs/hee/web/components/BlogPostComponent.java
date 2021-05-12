@@ -9,11 +9,13 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.forge.selection.hst.contentbean.ValueList;
 import org.onehippo.forge.selection.hst.util.SelectionUtil;
+import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -24,6 +26,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     private static final String BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER = "blogCategories";
     private static final String BLOG_OVERVIEW_PAGE_SITEMAP_REF_ID = "blogs";
     private static final String BLOG_OVERVIEW_PAGE_DEFAULT_URL = "/blogs";
+    private static final int DEFAULT_NUMBER_OF_VISIBLE_COMMENTS = 3;
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -40,9 +43,19 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
             final List<String> blogCategories = Arrays.asList(blogPost.getCategories());
-            request.setAttribute(
+            request.setModel(
                     "categoriesToFilteredURLMap",
                     mapCategoriesToFilteredUrl(request.getRequestContext(), blogCategories));
+
+            List<BlogComment> comments =  blogPost.getComments();
+            Collections.reverse(comments);
+            request.setModel("totalComments", comments.size());
+            boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
+            if (!showAllComments) {
+                request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size() - 1)));
+            }
+            else
+                request.setModel("visibleComments", comments);
         }
     }
 

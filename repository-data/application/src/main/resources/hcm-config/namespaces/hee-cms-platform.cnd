@@ -29,16 +29,16 @@
 [hee:QuickLinks] > hippo:compound, hippostd:relaxed
   orderable
 
-[hee:richTextBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:richTextReference] > hippo:compound, hippostd:relaxed
-  orderable
-
 [hee:StatementBlock] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:YellowAlertBlock] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:blogComment] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:blogCommentAuthor] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:blogPost] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -65,5 +65,11 @@
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:richTextBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:richTextReference] > hippo:compound, hippostd:relaxed
   orderable
 
