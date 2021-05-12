@@ -47,14 +47,18 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                     "categoriesToFilteredURLMap",
                     mapCategoriesToFilteredUrl(request.getRequestContext(), blogCategories));
 
-            List<BlogComment> comments =  blogPost.getComments();
-            Collections.reverse(comments);
+            final List<BlogComment> comments = blogPost.getComments();
             request.setModel("totalComments", comments.size());
-            boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
-            if (!showAllComments) {
-                request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size() - 1)));
+
+            if (comments.isEmpty()) {
+                return;
             }
-            else
+
+            Collections.reverse(comments);
+            final boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
+            if (!showAllComments) {
+                request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
+            } else
                 request.setModel("visibleComments", comments);
         }
     }

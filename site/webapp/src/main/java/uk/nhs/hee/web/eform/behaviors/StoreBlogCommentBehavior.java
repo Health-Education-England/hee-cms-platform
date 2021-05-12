@@ -34,9 +34,19 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
     @Override
     public void onValidationSuccess(HstRequest request, HstResponse response, ComponentConfiguration config, FormBean bean, Form form, FormMap map) {
         try {
-            HstComponentConfiguration componentConfiguration = (HstComponentConfiguration) config.getClass().getMethod("getComponentConfiguration").invoke(config);
-            HstComponentConfiguration blogConfiguration = componentConfiguration.getParent().getParent().getChildByName("blog").getChildByName("blogpost");
-            String documentPath = blogConfiguration.getParameter("document");
+            // In the case of archived blog posts wherein the hst:relativecontentpath is set
+            // in the (non-workspace) sitemap
+            String documentPath = request.getRequestContext().getResolvedSiteMapItem().getRelativeContentPath();
+
+            if (documentPath == null) {
+                // In the case of blog post pages created via channel i.e. for blog post pages
+                // exists in the workspace
+                final HstComponentConfiguration componentConfiguration =
+                        (HstComponentConfiguration) config.getClass().getMethod("getComponentConfiguration").invoke(config);
+                final HstComponentConfiguration blogConfiguration =
+                        componentConfiguration.getParent().getParent().getChildByName("blog").getChildByName("blogpost");
+                documentPath = blogConfiguration.getParameter("document");
+            }
             if (!Strings.isNullOrEmpty(documentPath)) {
                 final HippoBean root = request.getRequestContext().getSiteContentBaseBean();
                 Session session = FormUtils.getWritableSession();
