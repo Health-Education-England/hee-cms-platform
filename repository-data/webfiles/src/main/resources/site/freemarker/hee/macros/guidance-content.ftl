@@ -52,7 +52,7 @@
                         </section>
                     </div>
 
-                    <#if guidanceDocument.contentBlocks??>
+                    <#if guidanceDocument.rightHandBlocks??>
                         <#list guidanceDocument.rightHandBlocks as block>
                             <#switch block.getClass().getName()>
                                 <#case "uk.nhs.hee.web.beans.QuickLinks">
