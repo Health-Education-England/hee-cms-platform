@@ -5,3 +5,4 @@
 <#include "../macros/image-with-caption.ftl">
 <#include "../macros/yellow-alert-block.ftl">
 <#include "../macros/action-link.ftl">
+<#include "../macros/contactCard.ftl">

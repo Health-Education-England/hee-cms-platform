@@ -58,6 +58,9 @@
                                 <#case "uk.nhs.hee.web.beans.QuickLinks">
                                      <@hee.quickLinks quickLinks=block/>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.ContactCardReference">
+                                    <@hee.contactCard contactCard=block/>
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>

@@ -1588,3 +1588,228 @@
         /hee:html:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>This is <strong>reusable </strong>RichTextBlock</p>
+  /people:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: a8a9e144-5025-4e10-8ca2-5eb0aae9ce5e
+    hippo:name: People
+    hippostd:foldertype: [new-person]
+    hippotranslation:id: f2245ad4-7aed-428a-ae19-54b5175dfd96
+    hippotranslation:locale: en
+    /james-smith:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      hippo:name: James Smith
+      hippo:versionHistory: c23e89bd-caa6-473f-965b-6a710c998a8a
+      /james-smith[1]:
+        jcr:primaryType: hee:person
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4b80c402-e216-4c34-832a-e3ac361d52ef
+        hee:address: London
+        hee:departmentName: Developement
+        hee:email: name.surname@mail.com
+        hee:jobTitle: Developer
+        hee:name: James Smith
+        hee:phoneNumber: 0733 910 013
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-13T16:59:45.576+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
+        hippotranslation:locale: en
+        /hee:image:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /james-smith[2]:
+        jcr:primaryType: hee:person
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 3bf10f45-519c-43f3-855e-6be08db1a144
+        hee:address: London
+        hee:departmentName: Developement
+        hee:email: name.surname@mail.com
+        hee:jobTitle: Developer
+        hee:name: James Smith
+        hee:phoneNumber: 0733 910 013
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-13T17:01:42.454+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
+        hippotranslation:locale: en
+        /hee:image:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /james-smith[3]:
+        jcr:primaryType: hee:person
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 7f1d3f13-35e6-4081-9bb5-993efd895567
+        hee:address: London
+        hee:departmentName: Developement
+        hee:email: name.surname@mail.com
+        hee:jobTitle: Developer
+        hee:name: James Smith
+        hee:phoneNumber: 0733 910 013
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-13T17:01:42.454+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-05-13T17:01:50.040+07:00
+        hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
+        hippotranslation:locale: en
+        /hee:image:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+  /departments:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: b2171aee-b448-4b61-a77e-a10afa61a080
+    hippo:name: Departments
+    hippostd:foldertype: [new-department]
+    hippotranslation:id: c6389875-9de3-4597-99a3-eaf1a5ca6a45
+    hippotranslation:locale: en
+    /development:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+      hippo:name: Development
+      hippo:versionHistory: 3ebcb8cf-4e5e-40c0-a0ad-64f7df876c7b
+      /development[1]:
+        jcr:primaryType: hee:department
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 69f67fc2-bacd-47ba-bef5-69c0dc6a17eb
+        hee:address: London
+        hee:email: development@gmail.com
+        hee:name: Development
+        hee:phoneNumber: Software Development
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-13T17:02:14.997+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
+        hippotranslation:locale: en
+      /development[2]:
+        jcr:primaryType: hee:department
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 22aa3be9-7cc3-49f9-b8e8-233ad301e77e
+        hee:address: London
+        hee:email: development@gmail.com
+        hee:name: Development
+        hee:phoneNumber: Software Development
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-13T17:02:35.249+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
+        hippotranslation:locale: en
+      /development[3]:
+        jcr:primaryType: hee:department
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: deaaf4b6-170a-422f-9298-b2f0d4f47b5e
+        hee:address: London
+        hee:email: development@gmail.com
+        hee:name: Development
+        hee:phoneNumber: Software Development
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-13T17:02:35.249+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-05-13T17:02:38.344+07:00
+        hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
+        hippotranslation:locale: en
+  /contact-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 8e26dbf7-3f65-4a25-a02f-af4bdbccf826
+    hippo:name: Contact Cards
+    hippostd:foldertype: [new-contact-card]
+    hippotranslation:id: 4de2c8c8-e599-4514-9d99-526fbc324095
+    hippotranslation:locale: en
+    /james-smith-contact-card:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: a352e94a-1e98-4280-abc5-b0853ae32e26
+      hippo:name: James Smith Contact Card
+      hippo:versionHistory: 9fd1a10f-33ad-4a60-80f0-24e34f25ca54
+      /james-smith-contact-card[1]:
+        jcr:primaryType: hee:contactCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 53abc77e-fc94-4509-a455-ca0f70d188eb
+        hee:display: []
+        hee:title: Contact
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-17T08:30:17.096+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-17T08:38:19.936+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 948d14b8-abd9-4215-9503-66c0572093a7
+        hippotranslation:locale: en
+        /hee:contentItem:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /james-smith-contact-card[2]:
+        jcr:primaryType: hee:contactCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 77432d24-038e-4ffb-b0bb-c80440070a3d
+        hee:display: []
+        hee:title: Contact
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-17T08:30:17.096+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-17T08:38:25.715+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 948d14b8-abd9-4215-9503-66c0572093a7
+        hippotranslation:locale: en
+        /hee:contentItem:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /james-smith-contact-card[3]:
+        jcr:primaryType: hee:contactCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 972b4a24-4511-40ea-8fed-dbc62014460a
+        hee:display: []
+        hee:title: Contact
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-05-17T08:30:17.096+07:00
+        hippostdpubwf:lastModificationDate: 2021-05-17T08:38:25.715+07:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-05-17T08:38:27.657+07:00
+        hippotranslation:id: 948d14b8-abd9-4215-9503-66c0572093a7
+        hippotranslation:locale: en
+        /hee:contentItem:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
