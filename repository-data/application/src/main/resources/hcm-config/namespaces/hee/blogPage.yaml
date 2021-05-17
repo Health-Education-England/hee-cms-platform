@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: cf1aaa61-9f87-4069-8250-0055bf1639a0
+          jcr:uuid: 5e17d160-189a-4511-a7da-496fa90fcb19
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -82,6 +82,14 @@ definitions:
             hipposysedit:path: hee:categories
             hipposysedit:primary: false
             hipposysedit:type: String
+          /comments:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:comments
+            hipposysedit:primary: false
+            hipposysedit:type: hee:blogComment
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -93,7 +101,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 11fd608b-5ee9-40d8-b4c4-88d8025e89a4
+          jcr:uuid: 519311d2-492f-4daf-824b-b6ccc8da555d
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -111,7 +119,7 @@ definitions:
             /hee:links:
               jcr:primaryType: hee:link
               jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: 424fdcb2-d246-47d2-9b20-0026b4e258ff
+              jcr:uuid: 7b179d59-e715-4b10-8e30-7ccb74b5caa8
               hee:text: ''
               hee:url: ''
               hippostd:holder: holder
@@ -125,6 +133,14 @@ definitions:
               /hee:document:
                 jcr:primaryType: hippo:mirror
                 hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:comments:
+            jcr:primaryType: hee:blogComment
+            hee:message: ''
+            /hee:author:
+              jcr:primaryType: hee:blogCommentAuthor
+              hee:email: ''
+              hee:string: ''
+              hee:string_: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -220,6 +236,15 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Last/Next Review Date
             field: pageLastNextReview
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /comments:
+            jcr:primaryType: frontend:plugin
+            caption: Comments
+            field: comments
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:

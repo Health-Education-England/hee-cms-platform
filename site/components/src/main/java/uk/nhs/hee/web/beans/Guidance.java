@@ -2,10 +2,9 @@ package uk.nhs.hee.web.beans;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-
 import java.util.List;
 
-/**
+/** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:guidance")
@@ -35,8 +34,7 @@ public class Guidance extends BaseDocument {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:quickLinks")
-    public QuickLinks getQuickLinks() {
-        return getBean("hee:quickLinks", QuickLinks.class);
+    public List<?> getRightHandBlocks() {
+        return getChildBeansByName("hee:rightHandBlocks");
     }
 }

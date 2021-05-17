@@ -5,5 +5,17 @@ definitions:
       hst:referencecomponent: hst:abstractpages/base
       /main:
         jcr:primaryType: hst:component
-        hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
-        hst:template: blogpost-main
+        hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+        hst:template: blogpage-main
+        /comment:
+          jcr:primaryType: hst:component
+          hst:componentclassname: com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent
+          hst:parameternames: [form, behaviors]
+          hst:parametervalues: [/content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
+              uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior']
+          hst:resourcetemplate: eforms.validation.default
+          hst:template: eforms.default
+        /blog:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+          hst:template: blogpost-main

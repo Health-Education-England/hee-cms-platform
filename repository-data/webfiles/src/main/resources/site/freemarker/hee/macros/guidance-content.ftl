@@ -52,7 +52,17 @@
                         </section>
                     </div>
 
-                    <@hee.quickLinks quickLinks=guidanceDocument.quickLinks/>
+                    <#if guidanceDocument.rightHandBlocks??>
+                        <#list guidanceDocument.rightHandBlocks as block>
+                            <#switch block.getClass().getName()>
+                                <#case "uk.nhs.hee.web.beans.QuickLinks">
+                                     <@hee.quickLinks quickLinks=block/>
+                                    <#break>
+                                <#default>
+                            </#switch>
+                        </#list>
+                    </#if>
+
 
                     <div class="nhsuk-grid-column-full nhsuk-section__content">
                         <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
