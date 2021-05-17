@@ -35,7 +35,9 @@
 </#macro>
 <#macro casestudyListItem items categoriesMap>
     <#list items as item>
-        <@hst.link var="casestudyDocumentURL" hippobean=item.document/>
+        <@hst.link var="casestudyDocumentURL" hippobean=item.document>
+            <@hst.param name="forceDownload" value="true"/>
+        </@hst.link>
 
         <h3><a href="${casestudyDocumentURL}" target="_blank">${item.title}</a></h3>
         <p>${item.description}</p>
@@ -74,7 +76,9 @@
 </#macro>
 <#macro searchbankListItem items categoriesMap>
     <#list items as item>
-        <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument/>
+        <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument>
+            <@hst.param name="forceDownload" value="true"/>
+        </@hst.link>
 
         <h3>
             <#if strategyDocumentURL??>
@@ -108,7 +112,9 @@
                 </@listItemRow>
             </#if>
 
-            <@hst.link var="searchDocumentURL" hippobean=item.searchDocument/>
+            <@hst.link var="searchDocumentURL" hippobean=item.searchDocument>
+                <@hst.param name="forceDownload" value="true"/>
+            </@hst.link>
             <#if searchDocumentURL??>
                 <@fmt.message key="searchbank.search" var="searchLabel"/>
                 <@listItemRow key="${searchLabel}">
