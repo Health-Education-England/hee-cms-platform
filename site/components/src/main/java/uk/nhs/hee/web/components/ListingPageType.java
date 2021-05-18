@@ -1,9 +1,11 @@
 package uk.nhs.hee.web.components;
 
 import org.apache.commons.lang.StringUtils;
+import org.hippoecm.repository.HippoStdPubWfNodeType;
+import uk.nhs.hee.web.constants.HeeNodeType;
 
 /**
- * An enumeration of Listing Page Types and its document types & category value-list identifier.
+ * An enumeration of Listing Page Types and its document types, sort by date field & category value-list identifier.
  *
  * <p>Note that the listing types should be in sync
  * with the value-list {@code /content/documents/administration/valuelists/listingpagetypes}.</p>
@@ -13,31 +15,52 @@ public enum ListingPageType {
     /**
      * Blog Listing
      */
-    BLOG_LISTING("blog", new String[]{"hee:blogPost"}, "blogCategories"),
+    BLOG_LISTING(
+            "blog",
+            new String[]{"hee:blogPost"},
+            HeeNodeType.PUBLICATION_DATE,
+            "blogCategories"),
 
     /**
      * Bulletin Listing
      */
-    BULLETIN_LISTING("bulletin", new String[]{"hee:bulletin"}, "bulletinCategories"),
+    BULLETIN_LISTING(
+            "bulletin",
+            new String[]{"hee:bulletin"},
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            "bulletinCategories"),
 
     /**
      * Case Study Listing
      */
-    CASE_STUDY_LISTING("casestudy", new String[]{"hee:caseStudy"}, "caseStudyCategories"),
+    CASE_STUDY_LISTING(
+            "casestudy",
+            new String[]{"hee:caseStudy"},
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            "caseStudyCategories"),
 
     /**
      * Search Listing
      */
-    SEARCH_LISTING("search", new String[]{}, StringUtils.EMPTY),
+    SEARCH_LISTING(
+            "search",
+            new String[]{},
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            StringUtils.EMPTY),
 
     /**
      * Search Bank Listing
      */
-    SEARCH_BANK_LISTING("searchbank", new String[]{"hee:searchBank"}, "searchBankTopics");
+    SEARCH_BANK_LISTING(
+            "searchbank",
+            new String[]{"hee:searchBank"},
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            "searchBankTopics");
 
 
     private final String type;
     private final String[] documentTypes;
+    private final String sortByDateField;
     private final String categoryValueListIdentifier;
 
     /**
@@ -50,10 +73,12 @@ public enum ListingPageType {
     ListingPageType(
             final String type,
             final String[] documentTypes,
+            final String sortByDateField,
             final String categoryValueListIdentifier
     ) {
         this.type = type;
         this.documentTypes = documentTypes;
+        this.sortByDateField = sortByDateField;
         this.categoryValueListIdentifier = categoryValueListIdentifier;
     }
 
@@ -94,6 +119,15 @@ public enum ListingPageType {
      */
     public String[] getDocumentTypes() {
         return documentTypes;
+    }
+
+    /**
+     * Returns name of the field with which the results needs to be sorted.
+     *
+     * @return name of the field with which the results needs to be sorted.
+     */
+    public String getSortByDateField() {
+        return sortByDateField;
     }
 
     /**

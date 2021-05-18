@@ -11,7 +11,6 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.repository.HippoStdPubWfNodeType;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
 import org.slf4j.Logger;
@@ -27,9 +26,9 @@ import java.util.List;
 public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
 
-    private final static String ASCENDING_SORT_ORDER = "asc";
-    private final static String DESCENDING_SORT_ORDER = "desc";
-    private final static String SORT_BY_DATE_QUERY_PARAM = "sortByDate";
+    private static final String ASCENDING_SORT_ORDER = "asc";
+    private static final String DESCENDING_SORT_ORDER = "desc";
+    private static final String SORT_BY_DATE_QUERY_PARAM = "sortByDate";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -187,10 +186,13 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             sortOrder = sortByDateQueryParamValues.get(0);
         }
 
+        final String sortByDateField =
+                ListingPageType.getByName(getListingPageModel(request).getListingPageType()).getSortByDateField();
+
         if (sortOrder.equals(ASCENDING_SORT_ORDER)) {
-            query.addOrderByAscending(HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE);
+            query.addOrderByAscending(sortByDateField);
         } else {
-            query.addOrderByDescending(HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE);
+            query.addOrderByDescending(sortByDateField);
         }
     }
 

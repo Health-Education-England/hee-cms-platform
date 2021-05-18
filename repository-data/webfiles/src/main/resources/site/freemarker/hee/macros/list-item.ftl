@@ -143,7 +143,7 @@
         <li>
             <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
             <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
-            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary}</p>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
             <div class="nhsuk-review-date">
                 <p class="nhsuk-body-s">
                     <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
