@@ -82,23 +82,27 @@
         <div class="nhsuk-grid-column-two-thirds">
             <h2>${document.comments?size} <@fmt.message key="comments"/></h2>
 
-            <#assign datePattern = "d MMMM yyyy">
-            <#list visibleComments as comment>
-                <div class="nhsuk-card nhsuk-u-padding-4 nhsuk-u-margin-bottom-3">
-                    <h3 class="nhsuk-u-margin-bottom-3">${comment.author.firstName} ${comment.author.lastName}</h3>
-                    <div>
-                        ${comment.message}
+            <#if totalComments gt 0>
+                <#assign datePattern = "d MMMM yyyy">
+                <#list visibleComments as comment>
+                    <div class="nhsuk-card nhsuk-u-padding-4 nhsuk-u-margin-bottom-3">
+                        <h3 class="nhsuk-u-margin-bottom-3">${comment.author.firstName} ${comment.author.lastName}</h3>
+                        <div>
+                            ${comment.message}
+                        </div>
+                        <div class="nhsuk-review-date nhsuk-u-margin-top-3">
+                            <@fmt.message key="comment.posted_on"/> ${comment.postedDate.getTime()?date?string["${datePattern}"]}
+                        </div>
                     </div>
-                    <div class="nhsuk-review-date nhsuk-u-margin-top-3">
-                        <@fmt.message key="comment.posted_on"/> ${comment.postedDate.getTime()?date?string["${datePattern}"]}
-                    </div>
-                </div>
-            </#list>
+                </#list>
 
-            <#if totalComments gt visibleComments?size>
-                <a href="?showAllComments=true"><@fmt.message key="comment.view_all"/> ${document.comments?size} <@fmt.message key="comments"/></a>
-            <#else>
-                <a href="?showAllComments=false"><@fmt.message key="comment.view_less"/> <@fmt.message key="comments"/></a>
+                <#if totalComments gt 3>
+                    <#if totalComments gt visibleComments?size>
+                        <a href="?showAllComments=true"><@fmt.message key="comment.view_all"/> ${document.comments?size} <@fmt.message key="comments"/></a>
+                    <#else>
+                        <a href="?showAllComments=false"><@fmt.message key="comment.view_less"/> <@fmt.message key="comments"/></a>
+                    </#if>
+                </#if>
             </#if>
         </div>
     </div>
