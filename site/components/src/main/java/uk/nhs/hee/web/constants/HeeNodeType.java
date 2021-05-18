@@ -4,4 +4,5 @@ public interface HeeNodeType {
     String HEE_NAMESPACE = "hee";
     String CATEGORIES = "hee:categories";
     String PUBLICATION_DATE = "hee:publicationDate";
+    String DATE = "hee:date";
 }

@@ -27,7 +27,7 @@ public enum ListingPageType {
     BULLETIN_LISTING(
             "bulletin",
             new String[]{"hee:bulletin"},
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             "bulletinCategories"),
 
     /**
@@ -36,8 +36,17 @@ public enum ListingPageType {
     CASE_STUDY_LISTING(
             "casestudy",
             new String[]{"hee:caseStudy"},
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             "caseStudyCategories"),
+
+    /**
+     * Event Listing
+     */
+    EVENT_LISTING(
+            "event",
+            new String[]{"hee:event"},
+            HeeNodeType.DATE,
+            StringUtils.EMPTY),
 
     /**
      * Search Listing
@@ -45,7 +54,7 @@ public enum ListingPageType {
     SEARCH_LISTING(
             "search",
             new String[]{},
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             StringUtils.EMPTY),
 
     /**
@@ -54,7 +63,7 @@ public enum ListingPageType {
     SEARCH_BANK_LISTING(
             "searchbank",
             new String[]{"hee:searchBank"},
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_LAST_MODIFIED_DATE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             "searchBankTopics");
 
 

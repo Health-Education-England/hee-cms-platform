@@ -37,7 +37,7 @@
                                 </#if>
 
                                 <div class="nhsuk-filter__group">
-                                    <@checkboxGroup title=categoryLabel name="category" itemsMap=categoriesMap selectedItemsList=selectedCategories />
+                                    <@checkboxGroup title=categoryLabel name="category" items=categoriesMap selectedItemsList=selectedCategories />
                                 </div>
                             </div>
                             <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
