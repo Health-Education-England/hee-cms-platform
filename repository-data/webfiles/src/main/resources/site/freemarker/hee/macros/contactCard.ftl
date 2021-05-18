@@ -10,27 +10,43 @@
                         <li>
                             <h3 class="nhsuk-card__heading">${contactCard.content.title}</h3>
                         </li>
-                        <li>
-                            <b>${contactCard.content.contentItem.name}</b>
-                        </li>
-                        <li>
-                            ${contactCard.content.contentItem.departmentName}
-                        </li>
-                        <li>
-                            ${contactCard.content.contentItem.jobTitle}
-                        </li>
+                        <#if contactCard.content.display?seq_contains("name")>
+                            <li>
+                                <b>${contactCard.content.contentItem.name}</b>
+                            </li>
+                        </#if>
+                        <#if hst.isBeanType(contactCard.content.contentItem, 'uk.nhs.hee.web.beans.Person')>
+                            <#if contactCard.content.display?seq_contains("departmentName")>
+                                <li>
+                                    ${contactCard.content.contentItem.departmentName}
+                                </li>
+                            </#if>
+                            <#if contactCard.content.display?seq_contains("jobTitle")>
+                                <li>
+                                    ${contactCard.content.contentItem.jobTitle}
+                                </li>
+                            </#if>
+                        </#if>
                     </ul>
                     <hr class="nhsuk-u-margin-bottom-1 nhsuk-u-margin-top-1"/>
                     <ul class="nhsuk-related-links-card__list">
-                        <li>
-                            <a class="nhsuk-related-links-card__link" href="tel:${contactCard.content.contentItem.phoneNumber}">${contactCard.content.contentItem.phoneNumber}</a>
-                        </li>
-                        <li>
-                            <a class="nhsuk-related-links-card__link" href="mailto:${contactCard.content.contentItem.email}">${contactCard.content.contentItem.email}</a>
-                        </li>
-                        <li>
-                            ${contactCard.content.contentItem.address}
-                        </li>
+                        <#if contactCard.content.display?seq_contains("phoneNumber")>
+                            <li>
+                                <a class="nhsuk-related-links-card__link"
+                                   href="tel:${contactCard.content.contentItem.phoneNumber}">${contactCard.content.contentItem.phoneNumber}</a>
+                            </li>
+                        </#if>
+                        <#if contactCard.content.display?seq_contains("email")>
+                            <li>
+                                <a class="nhsuk-related-links-card__link"
+                                   href="mailto:${contactCard.content.contentItem.email}">${contactCard.content.contentItem.email}</a>
+                            </li>
+                        </#if>
+                        <#if contactCard.content.display?seq_contains("address")>
+                            <li>
+                                ${contactCard.content.contentItem.address}
+                            </li>
+                        </#if>
                     </ul>
                 </div>
             </div>

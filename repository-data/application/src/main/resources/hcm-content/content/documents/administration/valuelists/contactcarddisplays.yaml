@@ -1,0 +1,36 @@
+/content/documents/administration/valuelists/contactcarddisplays:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 7f0a2525-35ba-4071-8fe3-36c8ecd15df9
+  hippo:name: ContactCardDisplays
+  /contactcarddisplays:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: eb130905-0509-41dd-b6ac-48fcc4ce3e28
+    hippo:availability: [live, preview]
+    hippotranslation:id: a178ab99-e6e6-4f52-b46a-70e96df15978
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: name
+      selection:label: Name
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: departmentName
+      selection:label: Department Name
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: jobTitle
+      selection:label: Job Title
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: phoneNumber
+      selection:label: Phone Number
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: email
+      selection:label: Email
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: address
+      selection:label: Address

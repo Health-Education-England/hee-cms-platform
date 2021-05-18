@@ -89,7 +89,7 @@ definitions:
               nodetypes: ['hee:person', 'hee:department']
           /display:
             jcr:primaryType: frontend:plugin
-            caption: display
+            caption: Display
             field: display
             multiselect.type: checkboxes
             palette.alloworder: false
@@ -100,4 +100,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/documenttypes
+              source: /content/documents/administration/valuelists/contactcarddisplays
