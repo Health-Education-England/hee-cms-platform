@@ -1,0 +1,24 @@
+/content/documents/administration/valuelists/kls/searchbanktopics:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: a06957b3-e1dd-43d8-aad0-1d5647ed87ed
+  hippo:name: SearchBankTopics
+  /searchbanktopics:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: c7d3a495-dc08-4217-9338-e816fa14d8d5
+    hippo:availability: [live, preview]
+    hippotranslation:id: 115f4ff0-3029-4460-beb2-9197f1904688
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: prevention
+      selection:label: Prevention
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: emergency
+      selection:label: Emergency
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: recovery
+      selection:label: Recovery

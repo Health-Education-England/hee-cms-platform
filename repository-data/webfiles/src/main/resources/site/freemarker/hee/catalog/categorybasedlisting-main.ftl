@@ -30,7 +30,12 @@
                             <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
 
                             <div class="nhsuk-filter__groups">
-                                <@fmt.message key="filter.category.label" var="categoryLabel"/>
+                                <#if document.listingPageType='searchbank'>
+                                    <@fmt.message key="filter.topic.label" var="categoryLabel"/>
+                                <#else>
+                                    <@fmt.message key="filter.category.label" var="categoryLabel"/>
+                                </#if>
+
                                 <div class="nhsuk-filter__group">
                                     <@checkboxGroup title=categoryLabel name="category" itemsMap=categoriesMap selectedItemsList=selectedCategories />
                                 </div>

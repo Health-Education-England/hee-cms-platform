@@ -40,13 +40,6 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
     }
 
     /**
-     * @param request
-     * @param query
-     * @return
-     * @throws FilterException
-     */
-
-    /**
      * Returns Query Filters built based on the requested categories (identified by {@code category} query parameter).
      *
      * @param request the {@link HstRequest} instance.

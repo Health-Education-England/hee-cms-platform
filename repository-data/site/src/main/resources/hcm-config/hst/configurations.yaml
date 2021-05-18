@@ -102,12 +102,13 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: AfterForm
               hst:template: afterform-main
-            /bulletin-listing:
+            /listingpage:
               jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: uk.nhs.hee.web.components.ListingPageComponent
+              hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Bulletin Listing
-              hst:template: bulletin-listing-main
+              hst:label: Category based Listing Page [Bulletin, Case Study & Search
+                Bank]
+              hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
