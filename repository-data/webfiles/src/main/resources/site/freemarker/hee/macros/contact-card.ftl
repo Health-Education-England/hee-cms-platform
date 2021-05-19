@@ -16,12 +16,12 @@
                             </li>
                         </#if>
                         <#if hst.isBeanType(contactCard.content.contentItem, 'uk.nhs.hee.web.beans.Person')>
-                            <#if contactCard.content.display?seq_contains("departmentName")>
+                            <#if contactCard.content.display?seq_contains("departmentName") && contactCard.content.contentItem.departmentName?has_content>
                                 <li>
                                     ${contactCard.content.contentItem.departmentName}
                                 </li>
                             </#if>
-                            <#if contactCard.content.display?seq_contains("jobTitle")>
+                            <#if contactCard.content.display?seq_contains("jobTitle") && contactCard.content.contentItem.jobTitle?has_content>
                                 <li>
                                     ${contactCard.content.contentItem.jobTitle}
                                 </li>
@@ -30,19 +30,19 @@
                     </ul>
                     <hr class="nhsuk-u-margin-bottom-1 nhsuk-u-margin-top-1"/>
                     <ul class="nhsuk-related-links-card__list">
-                        <#if contactCard.content.display?seq_contains("phoneNumber")>
+                        <#if contactCard.content.display?seq_contains("phoneNumber") && contactCard.content.contentItem.phoneNumber?has_content>
                             <li>
                                 <a class="nhsuk-related-links-card__link"
                                    href="tel:${contactCard.content.contentItem.phoneNumber}">${contactCard.content.contentItem.phoneNumber}</a>
                             </li>
                         </#if>
-                        <#if contactCard.content.display?seq_contains("email")>
+                        <#if contactCard.content.display?seq_contains("email") && contactCard.content.contentItem.email?has_content>
                             <li>
                                 <a class="nhsuk-related-links-card__link"
                                    href="mailto:${contactCard.content.contentItem.email}">${contactCard.content.contentItem.email}</a>
                             </li>
                         </#if>
-                        <#if contactCard.content.display?seq_contains("address")>
+                        <#if contactCard.content.display?seq_contains("address") && contactCard.content.contentItem.address?has_content>
                             <li>
                                 ${contactCard.content.contentItem.address}
                             </li>
