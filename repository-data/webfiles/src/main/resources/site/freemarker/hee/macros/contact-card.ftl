@@ -44,7 +44,7 @@
                         </#if>
                         <#if contactCard.content.display?seq_contains("address") && contactCard.content.contentItem.address?has_content>
                             <li>
-                                ${contactCard.content.contentItem.address}
+                                ${contactCard.content.contentItem.address?replace('\n', '<br>')}
                             </li>
                         </#if>
                     </ul>
