@@ -47,10 +47,19 @@
 [hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:contactCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:contactCardReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:caseStudy] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:contentCards] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:department] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -71,6 +80,9 @@
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:person] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:richTextBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
