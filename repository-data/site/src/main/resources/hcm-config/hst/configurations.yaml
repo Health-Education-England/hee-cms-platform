@@ -70,6 +70,9 @@ definitions:
           /blogpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/pages/blogpage-main.ftl
+          /eventlisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/eventlisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -102,7 +105,7 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: AfterForm
               hst:template: afterform-main
-            /listingpage:
+            /category-based-listing:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
@@ -115,6 +118,12 @@ definitions:
               hst:template: blogpost-main
               hst:label: BlogPost
               hst:iconpath: images/catalog-component-icons/simple-content.svg
+            /event-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.EventListingPageComponent
+              hst:iconpath: images/catalog-component-icons/generic-list.svg
+              hst:label: Event Listing Page
+              hst:template: eventlisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

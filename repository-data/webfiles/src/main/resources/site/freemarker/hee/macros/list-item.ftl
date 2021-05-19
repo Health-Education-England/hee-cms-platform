@@ -33,6 +33,25 @@
         </dl>
     </#list>
 </#macro>
+
+<#macro blogListItem items categoriesMap>
+    <#list items as item>
+        <li>
+            <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
+            <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+            <div class="nhsuk-review-date">
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </p>
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="by.text"/> ${item.author}
+                </p>
+            </div>
+        </li>
+    </#list>
+</#macro>
+
 <#macro casestudyListItem items categoriesMap>
     <#list items as item>
         <@hst.link var="casestudyDocumentURL" hippobean=item.document>
@@ -74,6 +93,26 @@
         </dl>
     </#list>
 </#macro>
+
+<#macro eventListItem items>
+    <#list items as item>
+        <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+        <p>${item.description}</p>
+
+        <dl class="nhsuk-summary-list">
+            <@fmt.message key="event.date" var="dateLabel"/>
+            <@listItemRow key="${dateLabel}">
+                ${item.date.time?string['dd MMMM yyyy']}
+            </@listItemRow>
+
+            <@fmt.message key="event.location" var="locationLabel"/>
+            <@listItemRow key="${locationLabel}">
+                ${item.location}
+            </@listItemRow>
+        </dl>
+    </#list>
+</#macro>
+
 <#macro searchbankListItem items categoriesMap>
     <#list items as item>
         <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument>
@@ -138,23 +177,7 @@
         </dl>
     </#list>
 </#macro>
-<#macro blogListItem items categoriesMap>
-    <#list items as item>
-        <li>
-            <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
-            <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
-            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary}</p>
-            <div class="nhsuk-review-date">
-                <p class="nhsuk-body-s">
-                    <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
-                </p>
-                <p class="nhsuk-body-s">
-                    <@fmt.message key="by.text"/> ${item.author}
-                </p>
-            </div>
-        </li>
-    </#list>
-</#macro>
+
 <#macro searchListItem items>
     <#list items as item>
         <li>
