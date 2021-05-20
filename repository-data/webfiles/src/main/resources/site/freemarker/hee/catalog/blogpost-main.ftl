@@ -28,18 +28,14 @@
                             <@fmt.message key="publication.by" var="byLabel" />
                             <@fmt.message key="published.on" var="publishedOnLabel"/>
 
-                            ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}
-                            ,
-                            ${byLabel} ${document.author}
+                            ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}, ${byLabel} ${document.author}
                         </p>
                         <#-- End Author and published date -->
 
                         <#--Blog Categories -->
                         <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
                             <#list categoriesToFilteredURLMap as category, filteredURL>
-                                <a href=${filteredURL}>
-                                    ${category} <#sep>, </#sep>
-                                </a>
+                                <a href=${filteredURL}>${category}</a><#sep>, </#sep>
                             </#list>
                         </p>
                         <#--End Blog Categories -->

@@ -23,13 +23,12 @@
             </h1>
             <p class="nhsuk-lede-text">${document.summary}</p>
             <form method="get" action="">
-                <div class="nhsuk-form-group  nhsuk-header__search-form--search-results">
+                <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
                     <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
-                    <input class="nhsuk-input nhsuk-search__input" type="search" name="q" autocomplete="on"
-                           id="search-field" value="${searchText!''}">
-                    <button class="nhsuk-search__submit" type="submit">
-                        <svg class="nhsuk-icon nhsuk-icon__search" xmlns="http://www.w3.org/2000/svg"
-                             viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <input class="nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="${searchText!''}">
+                    <button class="nhsuk-search__submit--search-results" type="submit">
+                        <span class="nhsuk-u-visually-hidden">Submit</span>
+                        <svg class="nhsuk-icon nhsuk-icon__search--search-results" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                             <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
                         </svg>
                     </button>
