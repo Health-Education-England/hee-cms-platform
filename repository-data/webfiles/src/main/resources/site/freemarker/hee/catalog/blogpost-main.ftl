@@ -61,6 +61,9 @@
                                     <#case "uk.nhs.hee.web.beans.RichTextReference">
                                         <@hst.html hippohtml=block.richTextBlock.html/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.Contact">
+                                        <@hee.contact block=block/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
@@ -70,7 +73,26 @@
                     </div>
                 </section>
             </div>
-            <@hee.quickLinks quickLinks=document.quickLinks/>
+
+            <#if document.rightHandBlocks??>
+                <#list document.rightHandBlocks as block>
+                    <#switch block.getClass().getName()>
+                        <#case "uk.nhs.hee.web.beans.QuickLinks">
+                                <@hee.quickLinks quickLinks=block/>
+                            <#break>
+                        <#case "uk.nhs.hee.web.beans.ContactCardReference">
+                            <@hee.contactCard card=block.content/>
+                            <#break>
+                        <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
+                            <@hee.externalLinksCard card=block.externalLinksCard/>
+                            <#break>
+                        <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
+                            <@hee.fileLinksCard card=block.fileLinksCard/>
+                            <#break>
+                        <#default>
+                    </#switch>
+                </#list>
+            </#if>
         </div>
     </article>
 

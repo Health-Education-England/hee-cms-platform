@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 244dd430-944e-4e70-8dad-2d7c51e3df1b
+    hippo:versionHistory: ad6514b3-740c-48c9-b386-827fa519be09
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -25,7 +25,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-05-17T08:31:21.671+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-21T15:23:04.590+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -82,8 +82,8 @@
           hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00+07:00
-        hee:nextReviewed: 2021-02-02T00:00:00+07:00
+        hee:lastReviewed: 2017-02-10T00:00:00Z
+        hee:nextReviewed: 2021-02-01T00:00:00Z
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -177,61 +177,6 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:quickLinks:
-        jcr:primaryType: hee:QuickLinks
-        hee:title: Related posts
-        /hee:links[1]:
-          jcr:primaryType: hee:link
-          hee:text: Expert searching
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[2]:
-          jcr:primaryType: hee:link
-          hee:text: Search bank
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[3]:
-          jcr:primaryType: hee:link
-          hee:text: Costing
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[4]:
-          jcr:primaryType: hee:link
-          hee:text: Search training
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:contentBlocks[8]:
         jcr:primaryType: hee:richTextReference
         /hee:richTextBlock:
@@ -313,6 +258,39 @@
         /hee:content:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+      /hee:contentBlocks[9]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
+        hee:title: Person Contact
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Vivamus magna justo, lacinia eget consectetur sed, convallis at
+            tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non
+            nisi.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, email, address, phoneNumber]
+        hee:title: Department Contact
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+            risus.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:fileLinksCardReference
+        /hee:fileLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
     /copyright[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -325,7 +303,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-05-17T08:31:06.721+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-21T15:22:46.399+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -382,8 +360,8 @@
           hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00+07:00
-        hee:nextReviewed: 2021-02-02T00:00:00+07:00
+        hee:lastReviewed: 2017-02-10T00:00:00Z
+        hee:nextReviewed: 2021-02-01T00:00:00Z
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -477,61 +455,6 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:quickLinks:
-        jcr:primaryType: hee:QuickLinks
-        hee:title: Related posts
-        /hee:links[1]:
-          jcr:primaryType: hee:link
-          hee:text: Expert searching
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[2]:
-          jcr:primaryType: hee:link
-          hee:text: Search bank
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[3]:
-          jcr:primaryType: hee:link
-          hee:text: Costing
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[4]:
-          jcr:primaryType: hee:link
-          hee:text: Search training
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:contentBlocks[8]:
         jcr:primaryType: hee:richTextReference
         /hee:richTextBlock:
@@ -613,6 +536,39 @@
         /hee:content:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+      /hee:contentBlocks[9]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
+        hee:title: Person Contact
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Vivamus magna justo, lacinia eget consectetur sed, convallis at
+            tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non
+            nisi.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, email, address, phoneNumber]
+        hee:title: Department Contact
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+            risus.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:fileLinksCardReference
+        /hee:fileLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
     /copyright[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -625,9 +581,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-05-17T08:31:21.671+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-21T15:23:04.590+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-05-17T08:31:24.946+07:00
+      hippostdpubwf:publicationDate: 2021-05-21T15:23:07.580+01:00
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -683,8 +639,8 @@
           hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00+07:00
-        hee:nextReviewed: 2021-02-02T00:00:00+07:00
+        hee:lastReviewed: 2017-02-10T00:00:00Z
+        hee:nextReviewed: 2021-02-01T00:00:00Z
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -778,61 +734,6 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:quickLinks:
-        jcr:primaryType: hee:QuickLinks
-        hee:title: Related posts
-        /hee:links[1]:
-          jcr:primaryType: hee:link
-          hee:text: Expert searching
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[2]:
-          jcr:primaryType: hee:link
-          hee:text: Search bank
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[3]:
-          jcr:primaryType: hee:link
-          hee:text: Costing
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[4]:
-          jcr:primaryType: hee:link
-          hee:text: Search training
-          hee:url: /
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:contentBlocks[8]:
         jcr:primaryType: hee:richTextReference
         /hee:richTextBlock:
@@ -914,6 +815,39 @@
         /hee:content:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+      /hee:contentBlocks[9]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
+        hee:title: Person Contact
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Vivamus magna justo, lacinia eget consectetur sed, convallis at
+            tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non
+            nisi.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, email, address, phoneNumber]
+        hee:title: Department Contact
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
+            risus.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:fileLinksCardReference
+        /hee:fileLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
   /introduction:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1084,7 +1018,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:quickLinks:
+      /hee:rightHandBlocks:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -1304,7 +1238,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:quickLinks:
+      /hee:rightHandBlocks:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -1369,9 +1303,10 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T14:13:04.785+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-21T16:53:46.710+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1428,8 +1363,8 @@
           hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-11T00:00:00+07:00
-        hee:nextReviewed: 2021-02-02T00:00:00+07:00
+        hee:lastReviewed: 2017-02-10T00:00:00Z
+        hee:nextReviewed: 2021-02-01T00:00:00Z
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -1523,7 +1458,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:quickLinks:
+      /hee:rightHandBlocks:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:

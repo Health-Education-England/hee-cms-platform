@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: 629c55bb-b8ec-43e3-9ca6-b1fc455c0a79
+    hippo:versionHistory: b73a9ad8-4e69-4eda-8805-1bc5b57ebc67
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -27,44 +27,14 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-05-10T08:44:56.235+07:00
-      hippostdpubwf:lastModifiedBy: sitewriter
+      hippostdpubwf:lastModificationDate: 2021-05-21T17:46:56.517+01:00
+      hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2021-03-31T00:00:00+07:00
-        hee:nextReviewed: 2021-03-31T00:00:00+07:00
-      /hee:QuickLinks:
-        jcr:primaryType: hee:QuickLinks
-        hee:title: Related posts
-        /hee:links[1]:
-          jcr:primaryType: hee:link
-          hee:text: Briefing for library staff on Library and inter-library document
-            supply and copyright in the NHS
-          hee:url: http://test
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[2]:
-          jcr:primaryType: hee:link
-          hee:text: Decision Tree
-          hee:url: http://test.com
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hee:lastReviewed: 2021-03-30T00:00:00+01:00
+        hee:nextReviewed: 2021-03-30T00:00:00+01:00
       /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
@@ -129,7 +99,7 @@
       /hee:comments[5]:
         jcr:primaryType: hee:blogComment
         hee:message: Tho
-        hee:postedDate: 2021-05-07T16:08:16.140+07:00
+        hee:postedDate: 2021-05-07T10:08:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
@@ -138,7 +108,7 @@
       /hee:comments[6]:
         jcr:primaryType: hee:blogComment
         hee:message: Today
-        hee:postedDate: 2021-05-07T16:15:26.037+07:00
+        hee:postedDate: 2021-05-07T10:15:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
@@ -147,12 +117,68 @@
       /hee:comments[7]:
         jcr:primaryType: hee:blogComment
         hee:message: Testing on Monday
-        hee:postedDate: 2021-05-10T08:44:56.457+07:00
+        hee:postedDate: 2021-05-10T02:44:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
           hee:firstName: Tho
           hee:lastName: Le
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
+        hee:title: Contact 1
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem
+            ut libero malesuada feugiat.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:QuickLinks
+        hee:title: Related posts
+        /hee:links[1]:
+          jcr:primaryType: hee:link
+          hee:text: Briefing for library staff on Library and inter-library document
+            supply and copyright in the NHS
+          hee:url: http://test
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[2]:
+          jcr:primaryType: hee:link
+          hee:text: Decision Tree
+          hee:url: http://test.com
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:contactCardReference
+        /hee:content:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:fileLinksCardReference
+        /hee:fileLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -168,44 +194,14 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-05-10T08:44:56.929+07:00
-      hippostdpubwf:lastModifiedBy: sitewriter
+      hippostdpubwf:lastModificationDate: 2021-05-21T17:47:06.802+01:00
+      hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2021-03-31T00:00:00+07:00
-        hee:nextReviewed: 2021-03-31T00:00:00+07:00
-      /hee:QuickLinks:
-        jcr:primaryType: hee:QuickLinks
-        hee:title: Related posts
-        /hee:links[1]:
-          jcr:primaryType: hee:link
-          hee:text: Briefing for library staff on Library and inter-library document
-            supply and copyright in the NHS
-          hee:url: http://test
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[2]:
-          jcr:primaryType: hee:link
-          hee:text: Decision Tree
-          hee:url: http://test.com
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hee:lastReviewed: 2021-03-30T00:00:00+01:00
+        hee:nextReviewed: 2021-03-30T00:00:00+01:00
       /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
@@ -270,7 +266,7 @@
       /hee:comments[5]:
         jcr:primaryType: hee:blogComment
         hee:message: Tho
-        hee:postedDate: 2021-05-07T16:08:16.140+07:00
+        hee:postedDate: 2021-05-07T10:08:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
@@ -279,7 +275,7 @@
       /hee:comments[6]:
         jcr:primaryType: hee:blogComment
         hee:message: Today
-        hee:postedDate: 2021-05-07T16:15:26.037+07:00
+        hee:postedDate: 2021-05-07T10:15:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
@@ -288,12 +284,68 @@
       /hee:comments[7]:
         jcr:primaryType: hee:blogComment
         hee:message: Testing on Monday
-        hee:postedDate: 2021-05-10T08:44:56.457+07:00
+        hee:postedDate: 2021-05-10T02:44:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
           hee:firstName: Tho
           hee:lastName: Le
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
+        hee:title: Contact 1
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem
+            ut libero malesuada feugiat.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:QuickLinks
+        hee:title: Related posts
+        /hee:links[1]:
+          jcr:primaryType: hee:link
+          hee:text: Briefing for library staff on Library and inter-library document
+            supply and copyright in the NHS
+          hee:url: http://test
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[2]:
+          jcr:primaryType: hee:link
+          hee:text: Decision Tree
+          hee:url: http://test.com
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:contactCardReference
+        /hee:content:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:fileLinksCardReference
+        /hee:fileLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -309,45 +361,15 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-05-10T08:44:56.929+07:00
-      hippostdpubwf:lastModifiedBy: sitewriter
-      hippostdpubwf:publicationDate: 2021-05-10T08:44:57.411+07:00
+      hippostdpubwf:lastModificationDate: 2021-05-21T17:47:06.802+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-05-21T17:47:08.798+01:00
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2021-03-31T00:00:00+07:00
-        hee:nextReviewed: 2021-03-31T00:00:00+07:00
-      /hee:QuickLinks:
-        jcr:primaryType: hee:QuickLinks
-        hee:title: Related posts
-        /hee:links[1]:
-          jcr:primaryType: hee:link
-          hee:text: Briefing for library staff on Library and inter-library document
-            supply and copyright in the NHS
-          hee:url: http://test
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hee:links[2]:
-          jcr:primaryType: hee:link
-          hee:text: Decision Tree
-          hee:url: http://test.com
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hee:lastReviewed: 2021-03-30T00:00:00+01:00
+        hee:nextReviewed: 2021-03-30T00:00:00+01:00
       /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
@@ -412,7 +434,7 @@
       /hee:comments[5]:
         jcr:primaryType: hee:blogComment
         hee:message: Tho
-        hee:postedDate: 2021-05-07T16:08:16.140+07:00
+        hee:postedDate: 2021-05-07T10:08:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
@@ -421,7 +443,7 @@
       /hee:comments[6]:
         jcr:primaryType: hee:blogComment
         hee:message: Today
-        hee:postedDate: 2021-05-07T16:15:26.037+07:00
+        hee:postedDate: 2021-05-07T10:15:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
@@ -430,9 +452,65 @@
       /hee:comments[7]:
         jcr:primaryType: hee:blogComment
         hee:message: Testing on Monday
-        hee:postedDate: 2021-05-10T08:44:56.457+07:00
+        hee:postedDate: 2021-05-10T02:44:00+01:00
         /hee:author:
           jcr:primaryType: hee:blogCommentAuthor
           hee:email: thold88@gmail.com
           hee:firstName: Tho
           hee:lastName: Le
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:contact
+        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
+        hee:title: Contact 1
+        /hee:contentItems:
+          jcr:primaryType: hee:contactWithCopy
+          hee:copy: Nulla quis lorem ut libero malesuada feugiat. Nulla quis lorem
+            ut libero malesuada feugiat.
+          /hee:contentItem:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:QuickLinks
+        hee:title: Related posts
+        /hee:links[1]:
+          jcr:primaryType: hee:link
+          hee:text: Briefing for library staff on Library and inter-library document
+            supply and copyright in the NHS
+          hee:url: http://test
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[2]:
+          jcr:primaryType: hee:link
+          hee:text: Decision Tree
+          hee:url: http://test.com
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:contactCardReference
+        /hee:content:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:fileLinksCardReference
+        /hee:fileLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8

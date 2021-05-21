@@ -57,14 +57,6 @@ definitions:
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator, required]
-          /QuickLinks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:QuickLinks
-            hipposysedit:primary: false
-            hipposysedit:type: hee:QuickLinks
           /publicationDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -90,6 +82,13 @@ definitions:
             hipposysedit:path: hee:comments
             hipposysedit:primary: false
             hipposysedit:type: hee:blogComment
+          /rightHandBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:rightHandBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -113,26 +112,6 @@ definitions:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
-          /hee:QuickLinks:
-            jcr:primaryType: hee:QuickLinks
-            hee:title: Related posts
-            /hee:links:
-              jcr:primaryType: hee:link
-              jcr:mixinTypes: ['mix:referenceable']
-              jcr:uuid: 7b179d59-e715-4b10-8e30-7ccb74b5caa8
-              hee:text: ''
-              hee:url: ''
-              hippostd:holder: holder
-              hippostd:state: draft
-              hippostdpubwf:createdBy: ''
-              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-              hippostdpubwf:lastModifiedBy: ''
-              hippotranslation:id: document-type-locale-id
-              hippotranslation:locale: document-type-locale
-              /hee:document:
-                jcr:primaryType: hippo:mirror
-                hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:comments:
             jcr:primaryType: hee:blogComment
             hee:message: ''
@@ -203,15 +182,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /QuickLinks:
-            jcr:primaryType: frontend:plugin
-            caption: QuickLinks
-            field: QuickLinks
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -223,8 +193,8 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /contentBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Body
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
+            caption: Content Blocks
+            compoundList: hee:contact,hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -247,5 +217,15 @@ definitions:
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /rightHandBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Right Hand Blocks
+            compoundList: hee:QuickLinks,hee:contactCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference
+            contentPickerType: links
+            field: rightHandBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

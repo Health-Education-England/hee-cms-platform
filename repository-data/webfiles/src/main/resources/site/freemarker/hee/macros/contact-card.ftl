@@ -1,53 +1,45 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
 
-<#macro contactCard contactCard>
-    <#if contactCard??>
+<#macro contactCard card>
+    <#if card??>
         <div class="nhsuk-grid-column-one-third">
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <ul class="nhsuk-related-links-card__list nhsuk-u-margin-bottom-0">
-                        <li>
-                            <h3 class="nhsuk-card__heading">${contactCard.content.title}</h3>
-                        </li>
-                        <#if contactCard.content.display?seq_contains("name")>
-                            <li>
-                                <b>${contactCard.content.contentItem.name}</b>
-                            </li>
+            <div class="nhsuk-contact nhsuk-contact__card">
+                <div class="nhsuk-contact__content">
+                    <h3>${card.title}</h3>
+
+                    <#if card.display?seq_contains("name")>
+                        <h4 class="nhsuk-contact__name" aria-label="Name">
+                            ${card.contentItem.name}
+                        </h4>
+                    </#if>
+
+                    <#if hst.isBeanType(card.contentItem, 'uk.nhs.hee.web.beans.Person')>
+                        <#if card.display?seq_contains("departmentName") && card.contentItem.departmentName?has_content>
+                            <p aria-label="Department">${card.contentItem.departmentName}</p>
                         </#if>
-                        <#if hst.isBeanType(contactCard.content.contentItem, 'uk.nhs.hee.web.beans.Person')>
-                            <#if contactCard.content.display?seq_contains("departmentName") && contactCard.content.contentItem.departmentName?has_content>
-                                <li>
-                                    ${contactCard.content.contentItem.departmentName}
-                                </li>
-                            </#if>
-                            <#if contactCard.content.display?seq_contains("jobTitle") && contactCard.content.contentItem.jobTitle?has_content>
-                                <li>
-                                    ${contactCard.content.contentItem.jobTitle}
-                                </li>
-                            </#if>
+                        <#if card.display?seq_contains("jobTitle") && card.contentItem.jobTitle?has_content>
+                            <p aria-label="Job Title">${card.contentItem.jobTitle}</p>
                         </#if>
-                    </ul>
-                    <hr class="nhsuk-u-margin-bottom-1 nhsuk-u-margin-top-1"/>
-                    <ul class="nhsuk-related-links-card__list">
-                        <#if contactCard.content.display?seq_contains("phoneNumber") && contactCard.content.contentItem.phoneNumber?has_content>
-                            <li>
-                                <a class="nhsuk-related-links-card__link"
-                                   href="tel:${contactCard.content.contentItem.phoneNumber}">${contactCard.content.contentItem.phoneNumber}</a>
-                            </li>
+                    </#if>
+
+                    <hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+                    <div class="nhsuk-contact__secondary-info">
+                        <#if card.display?seq_contains("phoneNumber") && card.contentItem.phoneNumber?has_content>
+                            <p aria-label="Telephone">
+                                <a href="tel:${card.contentItem.phoneNumber}" title="Opens call">${card.contentItem.phoneNumber}</a>
+                            </p>
                         </#if>
-                        <#if contactCard.content.display?seq_contains("email") && contactCard.content.contentItem.email?has_content>
-                            <li>
-                                <a class="nhsuk-related-links-card__link"
-                                   href="mailto:${contactCard.content.contentItem.email}">${contactCard.content.contentItem.email}</a>
-                            </li>
+                        <#if card.display?seq_contains("email") && card.contentItem.email?has_content>
+                            <p aria-label="Email">
+                                <a href="mailto:${card.contentItem.email}" title="Opens email">${card.contentItem.email}</a>
+                            </p>
                         </#if>
-                        <#if contactCard.content.display?seq_contains("address") && contactCard.content.contentItem.address?has_content>
-                            <li>
-                                ${contactCard.content.contentItem.address?replace('\n', '<br>')}
-                            </li>
+                        <#if card.display?seq_contains("address") && card.contentItem.address?has_content>
+                            <p aria-label="Address">${card.contentItem.address?replace('\n', '<br>')}</p>
                         </#if>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
