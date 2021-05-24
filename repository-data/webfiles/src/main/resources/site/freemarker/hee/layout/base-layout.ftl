@@ -60,6 +60,7 @@
 
     <!-- Scripts -->
     <script src="<@hst.link path='/static/js/nhsuk-4.1.0.min.js'/>" defer></script>
+    <script src="<@hst.link path='/static/js/main.min.js'/>" defer></script>
     <@hst.headContributions categoryIncludes="htmlBodyEnd, scripts" xhtml=true/>
   </body>
 </html>
