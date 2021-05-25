@@ -19,11 +19,11 @@
     urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
       \ other than 'library.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
       equal\">library.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"\
-      permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\n</rule>\r\n\r\n\
+      permanent-redirect\" last=\"true\">/knowledge-staff?%{query-string}</to>\r\n</rule>\r\n\r\n\
       <rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
       \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
       \n    <from>^/$</from>\r\n    <to type=\"permanent-redirect\" last=\"true\"\
-      >/site/knowledge-staff</to>\r\n</rule>"
+      >/site/knowledge-staff?%{query-string}</to>\r\n</rule>"
   /hometoknowledgestaffredirect[2]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -38,11 +38,11 @@
     urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
       \ other than 'library.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
       equal\">library.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"\
-      permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\n</rule>\r\n\r\n\
+      permanent-redirect\" last=\"true\">/knowledge-staff?%{query-string}</to>\r\n</rule>\r\n\r\n\
       <rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
       \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
       \n    <from>^/$</from>\r\n    <to type=\"permanent-redirect\" last=\"true\"\
-      >/site/knowledge-staff</to>\r\n</rule>"
+      >/site/knowledge-staff?%{query-string}</to>\r\n</rule>"
   /hometoknowledgestaffredirect[3]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -58,8 +58,8 @@
     urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
       \ other than 'library.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
       equal\">library.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"\
-      permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\n</rule>\r\n\r\n\
+      permanent-redirect\" last=\"true\">/knowledge-staff?%{query-string}</to>\r\n</rule>\r\n\r\n\
       <rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
       \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
       \n    <from>^/$</from>\r\n    <to type=\"permanent-redirect\" last=\"true\"\
-      >/site/knowledge-staff</to>\r\n</rule>"
+      >/site/knowledge-staff?%{query-string}</to>\r\n</rule>"
