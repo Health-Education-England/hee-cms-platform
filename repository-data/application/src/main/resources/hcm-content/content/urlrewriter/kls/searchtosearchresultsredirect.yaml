@@ -19,10 +19,10 @@
     hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'library.hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results</to>\r\
+      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for 'library.hee.nhs.uk'\
       \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/site/search/results</to>\r\
+      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/site/search/results?%{query-string}</to>\r\
       \n</rule>"
   /searchtosearchresultsredirect[2]:
     jcr:primaryType: urlrewriter:xmlrule
@@ -37,10 +37,10 @@
     hippostdpubwf:lastModifiedBy: admin
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'library.hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results</to>\r\
+      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for 'library.hee.nhs.uk'\
       \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/site/search/results</to>\r\
+      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/site/search/results?%{query-string}</to>\r\
       \n</rule>"
   /searchtosearchresultsredirect[3]:
     jcr:primaryType: urlrewriter:xmlrule
@@ -56,8 +56,8 @@
     hippostdpubwf:publicationDate: 2021-05-25T15:07:41.519+01:00
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'library.hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results</to>\r\
+      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for 'library.hee.nhs.uk'\
       \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/site/search/results</to>\r\
+      \n    <from>^/search$</from>\r\n    <to type=\"redirect\" last=\"true\">/site/search/results?%{query-string}</to>\r\
       \n</rule>"
