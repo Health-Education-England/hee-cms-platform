@@ -19,6 +19,10 @@ import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.List;
+import java.util.Spliterator;
+import java.util.Spliterators;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
@@ -58,12 +62,18 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         final HstQuery query = buildQuery(request, listingPage);
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
 
-        final HstQueryResult execute = query.execute();
+        final HstQueryResult results = query.execute();
+
+        // Removes/filters out the documents whose page is not found.
+        final List<HippoBean> resultsWithoutNonPageBeans = StreamSupport.stream(
+                Spliterators.spliteratorUnknownSize(results.getHippoBeans(), Spliterator.ORDERED), false)
+                .filter(hippoBean -> HstUtils.isPageFound(request.getRequestContext(), hippoBean))
+                .collect(Collectors.toList());
+
         return getPageableFactory().createPageable(
-                execute.getHippoBeans(),
-                execute.getTotalSize(),
-                listingPage.getPageSize().intValue(),
-                getCurrentPage(request));
+                resultsWithoutNonPageBeans,
+                getCurrentPage(request),
+                listingPage.getPageSize().intValue());
     }
 
     /**
