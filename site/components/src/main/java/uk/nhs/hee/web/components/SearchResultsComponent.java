@@ -16,8 +16,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static org.apache.commons.lang3.StringUtils.isNotEmpty;
+
 @ParametersInfo(type = EssentialsDocumentComponentInfo.class)
 public class SearchResultsComponent extends ListingPageComponent {
+
     private static final String CONTENT_TYPE_QUERY_PARAM = "contentTypes";
     private static final String SEARCH_TEXT_QUERY_PARAM = "q";
 
@@ -34,15 +37,51 @@ public class SearchResultsComponent extends ListingPageComponent {
     protected Filter createQueryFilters(final HstRequest request, final HstQuery query) throws FilterException {
         final Filter baseFilter = query.createFilter();
 
-        final String searchText = request.getParameter(SEARCH_TEXT_QUERY_PARAM);
-        if (StringUtils.isNotEmpty(searchText)) {
-            final Filter searchTextFilter = query.createFilter();
-            searchTextFilter.addContains(".", searchText);
+        String searchText = request.getParameter(SEARCH_TEXT_QUERY_PARAM);
+        if (isNotEmpty(searchText)) {
+            searchText = searchText.trim();
 
-            baseFilter.addAndFilter(searchTextFilter);
+            if (searchText.startsWith("\"") && searchText.endsWith("\"")) {
+                // Phrase search
+                baseFilter.addAndFilter(buildSearchFilter(query, searchText));
+            } else {
+                // Performs search based on the space delimited words/terms
+                Filter searchTermFilters = null;
+                for (final String searchTerm : searchText.split("\\s+")) {
+                    if (searchTermFilters == null) {
+                        searchTermFilters = buildSearchFilter(query, searchTerm);
+                    } else {
+                        searchTermFilters = searchTermFilters.addOrFilter(buildSearchFilter(query, searchTerm));
+                    }
+                }
+
+                baseFilter.addAndFilter(searchTermFilters);
+            }
         }
 
         return baseFilter;
+    }
+
+    /**
+     * Builds {@code OR} search {@link Filter} on {@code hee:title} and (all) document fields
+     * using the given {@code searchTerm}.
+     *
+     * @param query      the {@link HstQuery} instance.
+     * @param searchTerm the search term/word with which Filter needs to be build.
+     * @return {@code OR} search {@link Filter} on {@code hee:title} and (all) document fields
+     * using the given {@code searchTerm}.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
+    private Filter buildSearchFilter(final HstQuery query, final String searchTerm) throws FilterException {
+        // Filter that searches the 'searchText' on Title field.
+        final Filter titleFilter = query.createFilter();
+        titleFilter.addContains("hee:title", searchTerm);
+
+        // Filter that searches the 'searchText' on all document fields.
+        final Filter documentFilter = query.createFilter();
+        documentFilter.addContains(".", searchTerm);
+
+        return titleFilter.addOrFilter(documentFilter);
     }
 
     @Override
