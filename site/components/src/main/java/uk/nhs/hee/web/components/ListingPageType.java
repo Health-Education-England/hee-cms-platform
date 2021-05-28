@@ -18,6 +18,7 @@ public enum ListingPageType {
     BLOG_LISTING(
             "blog",
             new String[]{"hee:blogPost"},
+            Boolean.TRUE,
             HeeNodeType.PUBLICATION_DATE,
             "blogCategories"),
 
@@ -27,6 +28,7 @@ public enum ListingPageType {
     BULLETIN_LISTING(
             "bulletin",
             new String[]{"hee:bulletin"},
+            Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             "bulletinCategories"),
 
@@ -36,6 +38,7 @@ public enum ListingPageType {
     CASE_STUDY_LISTING(
             "casestudy",
             new String[]{"hee:caseStudy"},
+            Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             "caseStudyCategories"),
 
@@ -45,6 +48,7 @@ public enum ListingPageType {
     EVENT_LISTING(
             "event",
             new String[]{"hee:event"},
+            Boolean.TRUE,
             HeeNodeType.DATE,
             StringUtils.EMPTY),
 
@@ -54,6 +58,7 @@ public enum ListingPageType {
     SEARCH_LISTING(
             "search",
             new String[]{},
+            Boolean.FALSE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             StringUtils.EMPTY),
 
@@ -63,12 +68,14 @@ public enum ListingPageType {
     SEARCH_BANK_LISTING(
             "searchbank",
             new String[]{"hee:searchBank"},
+            Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             "searchBankTopics");
 
 
     private final String type;
     private final String[] documentTypes;
+    private final boolean sortingEnabled;
     private final String sortByDateField;
     private final String categoryValueListIdentifier;
 
@@ -77,16 +84,20 @@ public enum ListingPageType {
      *
      * @param type                        the listing type.
      * @param documentTypes               the document types which needs to be queried to list the results.
+     * @param sortingEnabled              the flag indicating whether sorting is enabled for listing or not.
+     * @param sortByDateField             the date field by which search results needs to be sorted.
      * @param categoryValueListIdentifier the value-list identifier of the supported categories.
      */
     ListingPageType(
             final String type,
             final String[] documentTypes,
+            final boolean sortingEnabled,
             final String sortByDateField,
             final String categoryValueListIdentifier
     ) {
         this.type = type;
         this.documentTypes = documentTypes;
+        this.sortingEnabled = sortingEnabled;
         this.sortByDateField = sortByDateField;
         this.categoryValueListIdentifier = categoryValueListIdentifier;
     }
@@ -128,6 +139,15 @@ public enum ListingPageType {
      */
     public String[] getDocumentTypes() {
         return documentTypes;
+    }
+
+    /**
+     * Returns {@code true} if sorting is enabled for listing. Otherwise, returns {@code false}.
+     *
+     * @return {@code true} if sorting is enabled for listing. Otherwise, returns {@code false}.
+     */
+    public boolean isSortingEnabled() {
+        return sortingEnabled;
     }
 
     /**

@@ -41,7 +41,6 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             throw new HstComponentException("An error has occurred while trying to execute hst query.", e);
         }
 
-        request.setModel("selectedSortOrder", getSelectedSortOrder(request));
         request.setModel(REQUEST_ATTR_PAGEABLE, pageable);
     }
 
@@ -114,8 +113,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @return An array of document types against which the Query will be executed.
      */
     protected String[] getDocumentTypes(final HstRequest request, final ListingPage listingPage) {
-        final ListingPageType listingPageType =
-                ListingPageType.getByName(getListingPageModel(request).getListingPageType());
+        final ListingPageType listingPageType = getListing(request);
         if (listingPageType.getDocumentTypes().length == 0) {
             return listingPage.getDocumentTypes();
         }
@@ -178,6 +176,12 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @param query   the {@link HstQuery} instance.
      */
     private void applySortOrdering(final HstRequest request, final HstQuery query) {
+        final ListingPageType listingPageType = getListing(request);
+
+        if (!listingPageType.isSortingEnabled()) {
+            return;
+        }
+
         String sortOrder = DESCENDING_SORT_ORDER;
 
         final List<String> sortByDateQueryParamValues =
@@ -186,13 +190,10 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             sortOrder = sortByDateQueryParamValues.get(0);
         }
 
-        final String sortByDateField =
-                ListingPageType.getByName(getListingPageModel(request).getListingPageType()).getSortByDateField();
-
         if (sortOrder.equals(ASCENDING_SORT_ORDER)) {
-            query.addOrderByAscending(sortByDateField);
+            query.addOrderByAscending(listingPageType.getSortByDateField());
         } else {
-            query.addOrderByDescending(sortByDateField);
+            query.addOrderByDescending(listingPageType.getSortByDateField());
         }
     }
 
@@ -202,7 +203,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @param request the {@link HstRequest} instance.
      * @return the requested sort order. Defaults to Descending sort order.
      */
-    private String getSelectedSortOrder(final HstRequest request) {
+    protected String getSelectedSortOrder(final HstRequest request) {
         final String sortQueryParam = getAnyParameter(request, SORT_BY_DATE_QUERY_PARAM);
         return Strings.isNullOrEmpty(sortQueryParam) ? DESCENDING_SORT_ORDER : sortQueryParam;
     }

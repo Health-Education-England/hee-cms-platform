@@ -24,7 +24,7 @@ import java.util.Map;
 @ParametersInfo(type = ListingPageComponentInfo.class)
 public class CategoryBasedListingPageComponent extends ListingPageComponent {
 
-    private final static String CATEGORY_QUERY_PARAM = "category";
+    private static final String CATEGORY_QUERY_PARAM = "category";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -32,6 +32,7 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
 
         request.setModel("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
         request.setModel("categoriesMap", getCategoryValueListMap(request));
+        request.setModel("selectedSortOrder", getSelectedSortOrder(request));
     }
 
     @Override

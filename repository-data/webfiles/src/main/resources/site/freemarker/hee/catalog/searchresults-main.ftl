@@ -25,6 +25,9 @@
             <form method="get" action="">
                 <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
                     <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
+                    <#list selectedContentTypes as contentType>
+                        <input type="hidden" name="contentTypes" value="${contentType}">
+                    </#list>
                     <input class="nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="${searchText!''}">
                     <button class="nhsuk-search__submit--search-results" type="submit">
                         <span class="nhsuk-u-visually-hidden">Submit</span>
@@ -50,7 +53,6 @@
                                     <@checkboxGroup title=contentTypeLabel name="contentTypes" items=contentTypesMap selectedItemsList=selectedContentTypes />
                                 </div>
                             </div>
-                            <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
                             <input type="hidden" name="q" value="${searchText!''}">
                         </form>
                         <#-- End Filters -->
@@ -64,26 +66,6 @@
                                 ${pageable.total} ${resultsCountText}
                             </h2>
                             <#-- End Results number -->
-
-                            <#-- Sort DropDown-->
-                            <@hst.renderURL var="pagelink" />
-                            <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center"
-                                  action="${pagelink}">
-                                <div class="o-flex__grow">
-                                    <#list selectedContentTypes as contentType>
-                                        <input type="hidden" name="contentTypes" value="${contentType}">
-                                    </#list>
-                                    <input type="hidden" name="q" value="${searchText!''}">
-
-                                    <@fmt.message key="sort.label" var="sortLabel"/>
-                                    <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
-                                    <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
-                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}"} />
-
-                                    <@select label="${sortLabel}" name="sortByDate" optionsMap=selectOptions selectedValue=selectedSortOrder/>
-                                </div>
-                            </form>
-                            <#-- End Sort DropDown -->
                         </div>
 
                         <#-- Active Filters -->
