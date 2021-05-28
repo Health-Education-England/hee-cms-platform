@@ -64,6 +64,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         final HstQueryResult results = query.execute();
 
         // Removes/filters out the documents whose page is not found.
+        // TODO: Find out if there is a way to accommodate this through query to improve performance
         final List<HippoBean> resultsWithoutNonPageBeans = StreamSupport.stream(
                 Spliterators.spliteratorUnknownSize(results.getHippoBeans(), Spliterator.ORDERED), false)
                 .filter(hippoBean -> HstUtils.isPageFound(request.getRequestContext(), hippoBean))
