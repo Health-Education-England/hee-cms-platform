@@ -1,6 +1,7 @@
 package uk.nhs.hee.web.utils;
 
 import org.apache.commons.lang.StringUtils;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.request.HstRequestContext;
@@ -41,4 +42,18 @@ public class HstUtils {
 
         return hstLink.toUrlForm(requestContext, fullQualified);
     }
+
+    /**
+     * Returns {@code true} if the URL for the given {@code hippoBean} is found.
+     * Otherwise, returns {@code false}.
+     *
+     * @param requestContext the {@link HstRequestContext} instance.
+     * @param hippoBean      the {@link HippoBean} instance.
+     * @return {@code true} if the URL for the given {@code hippoBean} is found.
+     * Otherwise, returns {@code false}.
+     */
+    public static boolean isPageFound(final HstRequestContext requestContext, final HippoBean hippoBean) {
+        return !requestContext.getHstLinkCreator().create(hippoBean, requestContext).isNotFound();
+    }
+
 }
