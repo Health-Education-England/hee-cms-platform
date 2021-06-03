@@ -30,19 +30,11 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (blogPost == null) {
-            // Looks up for blogPost document associated to the ResolvedSiteMapItem
-            // in case if any and adds its bean in the request.
-            // Essentially a fall back mechanism in case
-            setContentBean(null, request, response);
-        }
-
-        blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
+        final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
             addCategoriesValueListMapToModel(request, blogPost);
 
-            addBlogListingURLToModel(request);
+            addBlogListingPageURLToModel(request);
 
             final List<BlogComment> comments = blogPost.getComments();
             request.setModel("totalComments", comments.size());
@@ -60,7 +52,12 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         }
     }
 
-    private void addBlogListingURLToModel(final HstRequest request) {
+    /**
+     * Adds Blog Listing Page URL to model.
+     *
+     * @param request the {@link HstRequest} instance.
+     */
+    private void addBlogListingPageURLToModel(final HstRequest request) {
         final HstRequestContext hstRequestContext = request.getRequestContext();
         final HippoBean blogListingPageBean =
                 HstUtils.getListingPageBeanByType(hstRequestContext, ListingPageType.BLOG_LISTING.getType());
@@ -94,7 +91,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         final Map<String, String> allBlogCategoriesValueListMap = getBlogCategoriesKeyValueMap();
 
         request.setModel(
-                Model.BLOG_CATEGORIES_VALUE_LIST_MAP.getKey(),
+                Model.CATEGORIES_VALUE_LIST_MAP.getKey(),
                 blogCategories.stream().collect(
                         Collectors.toMap(
                                 category -> category,

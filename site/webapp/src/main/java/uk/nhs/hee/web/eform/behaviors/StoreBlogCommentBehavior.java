@@ -44,7 +44,7 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
             final Form form,
             final FormMap map) {
         try {
-            final String documentPath = getBlogDocumentPath(request, config);
+            final String documentPath = getBlogDocumentPath(config);
             if (!Strings.isNullOrEmpty(documentPath)) {
                 final BlogPost blogPost = getBlogPost(request, documentPath);
                 final Session session = FormUtils.getWritableSession();
@@ -70,29 +70,20 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
     /**
      * Returns blog post document path for the current request.
      *
-     * @param request the {@link HstRequest} instance.
      * @param config  the {@link ComponentConfiguration} instance.
      * @return the blog post document path for the current request.
-     * @throws IllegalAccessException
-     * @throws InvocationTargetException
-     * @throws NoSuchMethodException
+     * @throws NoSuchMethodException if {@code getComponentConfiguration} method is not found.
+     * @throws InvocationTargetException if the underlying method throws an exception.
+     * @throws IllegalAccessException if {@code getComponentConfiguration} method object
+     * is enforcing Java language access control and the underlying method is inaccessible.
      */
-    private String getBlogDocumentPath(final HstRequest request, final ComponentConfiguration config)
-            throws IllegalAccessException, InvocationTargetException, NoSuchMethodException {
-        // In the case of archived blog posts wherein hst:relativecontentpath is set
-        // in the (non-workspace) sitemap
-        String documentPath = request.getRequestContext().getResolvedSiteMapItem().getRelativeContentPath();
-
-        if (documentPath == null) {
-            // In the case of blog post pages created via channel i.e. for blog post pages
-            // exists in the workspace
-            final HstComponentConfiguration componentConfiguration =
-                    (HstComponentConfiguration) config.getClass().getMethod("getComponentConfiguration").invoke(config);
-            final HstComponentConfiguration blogConfiguration =
-                    componentConfiguration.getParent().getParent().getChildByName("blog").getChildByName("blogpost");
-            documentPath = blogConfiguration.getParameter("document");
-        }
-        return documentPath;
+    private String getBlogDocumentPath(final ComponentConfiguration config)
+            throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        final HstComponentConfiguration componentConfiguration =
+                (HstComponentConfiguration) config.getClass().getMethod("getComponentConfiguration").invoke(config);
+        final HstComponentConfiguration blogConfiguration =
+                componentConfiguration.getParent().getParent().getChildByName("blog").getChildByName("blogpost");
+        return blogConfiguration.getParameter("document");
     }
 
     /**
