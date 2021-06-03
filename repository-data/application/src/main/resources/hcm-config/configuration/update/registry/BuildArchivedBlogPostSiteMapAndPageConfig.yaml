@@ -1,0 +1,100 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/BuildArchivedBlogPostSiteMapAndPageConfig:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Builds SiteMapItems and the corresponding Page Component
+        Config for the archived blog posts
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/lks/archived-blog-posts//element(*,
+        hee:blogPost)[(@hippo:availability='live') and not(@jcr:primaryType='nt:frozenNode')
+        and (@hee:publicationDate____hour >= xs:dateTime('2015-08-04T13:00:00.000Z'))]/..
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.commons.lang.StringUtils\r\nimport org.apache.jackrabbit.util.ISO8601\r\
+        \nimport org.hippoecm.hst.configuration.HstNodeTypes\r\nimport org.hippoecm.repository.api.HippoNodeType\r\
+        \nimport org.hippoecm.repository.util.JcrUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass BuildArchivedBlogPostSiteMapAndPageConfig\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Building SiteMapItem and Page Configuration for the\
+        \ archived blog post with node = ${node.path}\"\r\n\r\n        String blogPostPageConfigName\
+        \ = \"about-blogs-${node.name}-blog-page\"\r\n        buildBlogPageComponentConfigNode(node,\
+        \ blogPostPageConfigName)\r\n        buildBlogSiteMapItemNode(node, blogPostPageConfigName)\r\
+        \n\r\n        log.debug \"Successfully completed building SiteMapItem and\
+        \ Page Configuration for the archived blog post with node = ${node.path}\"\
+        \r\n        return true\r\n    }\r\n\r\n    /**\r\n     * Builds blogPost\
+        \ Page Component Configuration Nodes on\r\n     * live ({@code /hst:hee/hst:configurations/lks/hst:workspace/hst:pages})\
+        \ as well as\r\n     * on preview ({@code /hst:hee/hst:configurations/lks-preview/hst:workspace/hst:pages})\
+        \ workspaces.\r\n     *\r\n     * @param blogPostHandleNode the archived blogPost\
+        \ handle node.\r\n     * @param blogPostPageConfigName the archived blogPost\
+        \ page configuration node name.\r\n     */\r\n    static void buildBlogPageComponentConfigNode(Node\
+        \ blogPostHandleNode, String blogPostPageConfigName) {\r\n        // blogPost\
+        \ root hst:component node\r\n        Node blogPostPageConfigNode = blogPostHandleNode.getSession()\r\
+        \n                .getNode(\"/hst:hee/hst:configurations/lks/hst:workspace/hst:pages\"\
+        )\r\n                .addNode(blogPostPageConfigName, HstNodeTypes.NODETYPE_HST_COMPONENT)\r\
+        \n\r\n        blogPostPageConfigNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_REFERECENCECOMPONENT,\
+        \ \"hst:abstractpages/base\")\r\n        blogPostPageConfigNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_LAST_MODIFIED,\
+        \ ISO8601.format(new Date()))\r\n\r\n        // 'main' hst:component node\r\
+        \n        Node blogPostMainNode = blogPostPageConfigNode.addNode(\"main\"\
+        , HstNodeTypes.NODETYPE_HST_COMPONENT)\r\n        blogPostMainNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_COMPONENT_CLASSNAME,\
+        \ \"org.onehippo.cms7.essentials.components.EssentialsDocumentComponent\"\
+        )\r\n        blogPostMainNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_TEMPLATE,\
+        \ \"blogpage-main\")\r\n\r\n        // 'main/comment' hst:containercomponent\
+        \ node\r\n        Node blogPostCommentContainerNode = blogPostMainNode.addNode(\"\
+        comment\", HstNodeTypes.NODETYPE_HST_CONTAINERCOMPONENT)\r\n        blogPostCommentContainerNode.setProperty(\"\
+        hippo:identifier\", \"3009ef19-c5f6-4583-876b-e2f0d52941ee\")\r\n        blogPostCommentContainerNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Comment Form\")\r\n        blogPostCommentContainerNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_LAST_MODIFIED,\
+        \ ISO8601.format(new Date()))\r\n        blogPostCommentContainerNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_XTYPE,\
+        \ \"hst.vbox\")\r\n\r\n        // 'main/comment/blog-comment-form' hst:containeritemcomponent\
+        \ node\r\n        Node blogPostCommentContainerItemNode = blogPostCommentContainerNode.addNode(\"\
+        blog-comment-form\", HstNodeTypes.NODETYPE_HST_CONTAINERITEMCOMPONENT)\r\n\
+        \        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_COMPONENT_CLASSNAME,\
+        \ \"com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent\")\r\n\
+        \        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_ICON_PATH,\
+        \ \"resources/addon/eforms/images/icons/form.svg\")\r\n        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Enterprise Form\")\r\n        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_PARAMETER_NAMES,\
+        \ [\"form\", \"behaviors\"] as String[])\r\n        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_PARAMETER_VALUES,\
+        \ [\"/content/documents/lks/forms/blogcomment\", \"com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,\
+        \ uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior\"] as String[])\r\
+        \n        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_RESOURCE_TEMPLATE,\
+        \ \"eforms.validation.default\")\r\n        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_TEMPLATE,\
+        \ \"eforms.default\")\r\n        blogPostCommentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_XTYPE,\
+        \ \"HST.Item\")\r\n\r\n        // 'main/blog' hst:containercomponent node\r\
+        \n        Node blogPostDocumentContainerNode = blogPostMainNode.addNode(\"\
+        blog\", HstNodeTypes.NODETYPE_HST_CONTAINERCOMPONENT)\r\n        blogPostDocumentContainerNode.setProperty(\"\
+        hippo:identifier\", \"9c5b2da6-9a3f-4964-8296-ac6af0793859\")\r\n        blogPostDocumentContainerNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Blog Post\")\r\n        blogPostDocumentContainerNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_LAST_MODIFIED,\
+        \ ISO8601.format(new Date()))\r\n        blogPostDocumentContainerNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_XTYPE,\
+        \ \"hst.vbox\")\r\n\r\n        // 'main/blog/blogpost' hst:containeritemcomponent\
+        \ node\r\n        Node blogPostDocumentContainerItemNode = blogPostDocumentContainerNode.addNode(\"\
+        blogpost\", HstNodeTypes.NODETYPE_HST_CONTAINERITEMCOMPONENT)\r\n        blogPostDocumentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_COMPONENT_CLASSNAME,\
+        \ \"uk.nhs.hee.web.components.BlogPostComponent\")\r\n        blogPostDocumentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_ICON_PATH,\
+        \ \"images/catalog-component-icons/simple-content.svg\")\r\n        blogPostDocumentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"BlogPost\")\r\n        blogPostDocumentContainerItemNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_PARAMETER_NAMES,\
+        \ [\"document\"] as String[])\r\n        blogPostDocumentContainerItemNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_PARAMETER_VALUES,\
+        \ [blogPostHandleNode.path.substring('/content/documents/lks'.length() + 1)]\
+        \ as String[])\r\n        blogPostDocumentContainerItemNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_TEMPLATE,\
+        \ \"blogpost-main\")\r\n\r\n        // Finally, copy it over to preview workspace\r\
+        \n        JcrUtils.copy(\r\n                blogPostPageConfigNode,\r\n  \
+        \              blogPostPageConfigName,\r\n                blogPostHandleNode.getSession().getNode(\"\
+        /hst:hee/hst:configurations/lks-preview/hst:workspace/hst:pages\"))\r\n  \
+        \  }\r\n\r\n    /**\r\n     * Builds blogPost SiteMapItem Node under {@code\
+        \ /about/blogs}.\r\n     *\r\n     * @param blogPostHandleNode the archived\
+        \ blogPost handle node.\r\n     * @param blogPostPageConfigName the archived\
+        \ blogPost page configuration node name.\r\n     */\r\n    static void buildBlogSiteMapItemNode(Node\
+        \ blogPostHandleNode, String blogPostPageConfigName) {\r\n        Node blogPostSiteMapItemNode\
+        \ = blogPostHandleNode.getSession()\r\n                .getNode(\"/hst:hee/hst:configurations/lks/hst:workspace/hst:sitemap/about/blogs\"\
+        )\r\n                .addNode(blogPostHandleNode.getName(), HstNodeTypes.NODETYPE_HST_SITEMAPITEM)\r\
+        \n\r\n        blogPostSiteMapItemNode.setProperty(HstNodeTypes.SITEMAPITEM_PROPERTY_COMPONENTCONFIGURATIONID,\
+        \ \"hst:pages/${blogPostPageConfigName}\")\r\n        blogPostSiteMapItemNode.setProperty(HstNodeTypes.SITEMAPITEM_PAGE_TITLE,\
+        \ JcrUtils.getStringProperty(blogPostHandleNode, HippoNodeType.HIPPO_NAME,\
+        \ StringUtils.EMPTY))\r\n        blogPostSiteMapItemNode.setProperty(HstNodeTypes.GENERAL_PROPERTY_LAST_MODIFIED,\
+        \ ISO8601.format(new Date()))\r\n\r\n        // Finally, copy it over to preview\
+        \ workspace\r\n        JcrUtils.copy(\r\n                blogPostSiteMapItemNode,\r\
+        \n                blogPostHandleNode.getName(),\r\n                blogPostHandleNode.getSession().getNode(\"\
+        /hst:hee/hst:configurations/lks-preview/hst:workspace/hst:sitemap/about/blogs\"\
+        ))\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw new\
+        \ UnsupportedOperationException('Updater does not implement undoUpdate method')\r\
+        \n    }\r\n\r\n}"
+      hipposys:throttle: 1000

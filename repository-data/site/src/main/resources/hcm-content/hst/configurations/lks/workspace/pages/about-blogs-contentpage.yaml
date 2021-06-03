@@ -1,0 +1,19 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/about-blogs-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-05-24T23:55:32.388+01:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
+    hst:label: Content Page Main
+    hst:lastmodified: 2021-05-24T23:56:02.334+01:00
+    hst:xtype: hst.vbox
+    /category-based-listing:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
+      hst:iconpath: images/catalog-component-icons/generic-list.svg
+      hst:label: Category based Listing Page [Bulletin, Blog, Case Study & Search
+        Bank]
+      hst:parameternames: [document]
+      hst:parametervalues: [listing-pages/blogs]
+      hst:template: categorybasedlisting-main

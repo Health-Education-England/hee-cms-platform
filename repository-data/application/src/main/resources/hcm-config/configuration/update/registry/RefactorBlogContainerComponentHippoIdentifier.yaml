@@ -1,0 +1,23 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RefactorBlogContainerComponentHippoIdentifier:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Updates 'hippo:identifier' of 'blog' hst:containercomponent
+        from '8a3a0041-c2d8-42db-b03e-1fb8fe51e333' to '9c5b2da6-9a3f-4964-8296-ac6af0793859'
+        in order to keep it unique as described in https://documentation.bloomreach.com/14/library/concepts/hst-configuration-model/experience-page-layouts-configuration.html.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations//element(blog, hst:containercomponent)[@hippo:identifier='8a3a0041-c2d8-42db-b03e-1fb8fe51e333']
+      hipposys:throttle: 1000
+      hipposys:script: "import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass RefactorBlogContainerComponentHippoIdentifier\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        node.setProperty(\"\
+        hippo:identifier\", \"9c5b2da6-9a3f-4964-8296-ac6af0793859\")\r\n        log.debug\
+        \ \"Successfully updated 'hippo:identifier' of the node ${node.path} from\
+        \ '8a3a0041-c2d8-42db-b03e-1fb8fe51e333' to '9c5b2da6-9a3f-4964-8296-ac6af0793859'\"\
+        \r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
+        \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
