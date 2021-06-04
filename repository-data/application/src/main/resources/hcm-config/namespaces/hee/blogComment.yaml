@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 891694ca-2a12-46d1-aa92-cf88a3e16477
+          jcr:uuid: a20b8c5a-383c-45d0-b6ea-c4cf4eeead20
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,7 +23,6 @@ definitions:
             hipposysedit:path: hee:author
             hipposysedit:primary: false
             hipposysedit:type: hee:blogCommentAuthor
-            hipposysedit:validators: [required]
           /message:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -32,7 +31,6 @@ definitions:
             hipposysedit:path: hee:message
             hipposysedit:primary: false
             hipposysedit:type: Text
-            hipposysedit:validators: [required]
           /postedDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -41,7 +39,6 @@ definitions:
             hipposysedit:path: hee:postedDate
             hipposysedit:primary: false
             hipposysedit:type: Date
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
