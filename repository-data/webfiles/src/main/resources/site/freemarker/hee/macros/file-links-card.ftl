@@ -1,19 +1,27 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
 
-<#function docTypeSnippet mimeType>
+<#function docTypeByMimeType mimeType>
     <#switch mimeType>
         <#case 'application/pdf'>
-            <#assign tagClass='nhsuk-tag nhsuk-tag--red' docType='PDF'/>
+            <#assign docType='pdf'/>
+            <#break>
+        <#case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
+            <#assign docType='docx'/>
             <#break>
         <#case 'application/msword'>
-            <#assign tagClass='nhsuk-tag' docType='DOC'/>
+            <#assign docType='doc'/>
+            <#break>
+        <#case 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'>
+            <#assign docType='xlsx'/>
+            <#break>
+        <#case 'application/vnd.ms-excel'>
+            <#assign docType='xls'/>
             <#break>
         <#default>
     </#switch>
 
-    <#assign docTypeHTML><strong class="${tagClass}">${docType}</strong></#assign>
-    <#return docTypeHTML>
+    <#return docType>
 </#function>
 
 <#macro fileLinksCard card>
@@ -23,16 +31,19 @@
                 <div class="nhsuk-card__content">
                     <h3 class="nhsuk-card__heading">${card.title}</h3>
 
-                    <ul class="nhsuk-related-links-card__list">
+                    <ul class="nhsuk-resources__list">
                         <#list card.fileLinks as link>
                             <@hst.link var="fileURL" hippobean=link.file>
                                 <@hst.param name="forceDownload" value="true"/>
                             </@hst.link>
 
+                            <#assign docType>${docTypeByMimeType(link.file.mimeType)}</#assign>
+
                             <li>
-                                <a class="nhsuk-related-links-card__link" href="${fileURL}">
-                                    ${link.text}
-                                </a> ${docTypeSnippet(link.file.mimeType)} ${link.file.lengthKB}kB
+                                <a class="nhsuk-resources__link" href="${fileURL}" title="${link.text}  (opens in new window)">
+                                ${link.text}
+                                <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType?upper_case}</span><span class="nhsuk-resources__docSize">${link.file.lengthKB}kB</span>
+                                </a>
                             </li>
                         </#list>
                     </ul>
