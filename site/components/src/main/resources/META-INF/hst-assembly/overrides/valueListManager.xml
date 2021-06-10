@@ -15,15 +15,18 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
-  <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager"> 
-    <constructor-arg> 
-      <map> 
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+  <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager">
+    <constructor-arg>
+      <map>
         <entry key="bulletinCategories" value="/content/documents/administration/valuelists/kls/bulletincategories"/>
         <entry key="blogCategories" value="/content/documents/administration/valuelists/kls/blogcategories"/>
-        <entry key="caseStudyCategories" value="/content/documents/administration/valuelists/kls/casestudycategories"/>
+        <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/kls/casestudyimpacttypes"/>
+        <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/kls/casestudyimpactgroups"/>
+        <entry key="caseStudySectors" value="/content/documents/administration/valuelists/kls/casestudysectors"/>
+        <entry key="regions" value="/content/documents/administration/valuelists/kls/regions"/>
         <entry key="searchBankTopics" value="/content/documents/administration/valuelists/kls/searchbanktopics"/>
-      </map> 
-    </constructor-arg> 
-  </bean> 
+      </map>
+    </constructor-arg>
+  </bean>
 </beans>

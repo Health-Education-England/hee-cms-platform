@@ -1,6 +1,8 @@
 package uk.nhs.hee.web.components;
 
 import com.google.common.base.Strings;
+import org.apache.commons.lang.StringUtils;
+import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.builder.HstQueryBuilder;
@@ -13,14 +15,14 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
+import org.onehippo.forge.selection.hst.contentbean.ValueList;
+import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.utils.HstUtils;
 
-import java.util.List;
-import java.util.Spliterator;
-import java.util.Spliterators;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -206,6 +208,28 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         } else {
             query.addOrderByDescending(listingPageType.getSortByDateField());
         }
+    }
+
+    /**
+     * Returns value-list map for the filter.
+     *
+     * <p>This gets the identifier of the value-list to be returned as map
+     * from its {@link ListingPageType} instance (identified by current Listing Page Type).</p>
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return the value-list map for the filter.
+     */
+    protected Map<String, String> getFilterValueListMap(final HstRequest request) {
+        final ListingPageType listingPageType = getListing(request);
+
+        if (StringUtils.isEmpty(listingPageType.getFilterValueListIdentifier())) {
+            return Collections.emptyMap();
+        }
+
+        final ValueList categoriesValueList =
+                SelectionUtil.getValueListByIdentifier(
+                        listingPageType.getFilterValueListIdentifier(), RequestContextProvider.get());
+        return SelectionUtil.valueListAsMap(categoriesValueList);
     }
 
     /**

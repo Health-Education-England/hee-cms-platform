@@ -31,7 +31,7 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
         super.doBeforeRender(request, response);
 
         request.setModel("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
-        request.setModel("categoriesMap", getCategoryValueListMap(request));
+        request.setModel("categoriesMap", getFilterValueListMap(request));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
     }
 
@@ -51,27 +51,5 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
     private Filter createCategoryFilter(final HstRequest request, final HstQuery query) throws FilterException {
         final List<String> categoriesFilter = HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM);
         return createOrFilter(query, categoriesFilter, HeeNodeType.CATEGORIES);
-    }
-
-    /**
-     * Returns Categories value-list for the current {@code request} as a map.
-     *
-     * <p>This gets the identifier of the value-list to be returned as map
-     * from its {@link ListingPageType} instance (identified by current Listing Page Type).</p>
-     *
-     * @param request the {@link HstRequest} instance.
-     * @return the Categories value-list for the current {@code request} as a map.
-     */
-    private Map<String, String> getCategoryValueListMap(final HstRequest request) {
-        final ListingPageType listingPageType = getListing(request);
-
-        if (StringUtils.isEmpty(listingPageType.getCategoryValueListIdentifier())) {
-            return Collections.emptyMap();
-        }
-
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(
-                        listingPageType.getCategoryValueListIdentifier(), RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
     }
 }

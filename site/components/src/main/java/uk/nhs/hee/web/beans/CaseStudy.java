@@ -1,17 +1,12 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoResourceBean;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
 @HippoEssentialsGenerated(internalName = "hee:caseStudy")
 @Node(jcrType = "hee:caseStudy")
 public class CaseStudy extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:description")
-    public String getDescription() {
-        return getSingleProperty("hee:description");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");
@@ -27,13 +22,18 @@ public class CaseStudy extends BaseDocument {
         return getSingleProperty("hee:region");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:categories")
-    public String[] getCategories() {
-        return getMultipleProperty("hee:categories");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:document")
     public HippoResourceBean getDocument() {
         return getBean("hee:document", HippoResourceBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:impactTypes")
+    public String[] getImpactTypes() {
+        return getMultipleProperty("hee:impactTypes");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:impactGroup")
+    public String getImpactGroup() {
+        return getSingleProperty("hee:impactGroup");
     }
 }

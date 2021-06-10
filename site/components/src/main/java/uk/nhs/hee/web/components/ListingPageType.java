@@ -5,7 +5,7 @@ import org.hippoecm.repository.HippoStdPubWfNodeType;
 import uk.nhs.hee.web.constants.HeeNodeType;
 
 /**
- * An enumeration of Listing Page Types and its document types, sort by date field & category value-list identifier.
+ * An enumeration of Listing Page Types and its document types, sort by date field & filter value-list identifier.
  *
  * <p>Note that the listing types should be in sync
  * with the value-list {@code /content/documents/administration/valuelists/listingpagetypes}.</p>
@@ -40,7 +40,7 @@ public enum ListingPageType {
             new String[]{"hee:caseStudy"},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
-            "caseStudyCategories"),
+            "caseStudyImpactGroups"),
 
     /**
      * Event Listing
@@ -77,7 +77,7 @@ public enum ListingPageType {
     private final String[] documentTypes;
     private final boolean sortingEnabled;
     private final String sortByDateField;
-    private final String categoryValueListIdentifier;
+    private final String filterValueListIdentifier;
 
     /**
      * Constructor that initialises the Listing Type (Default) Information.
@@ -86,20 +86,20 @@ public enum ListingPageType {
      * @param documentTypes               the document types which needs to be queried to list the results.
      * @param sortingEnabled              the flag indicating whether sorting is enabled for listing or not.
      * @param sortByDateField             the date field by which search results needs to be sorted.
-     * @param categoryValueListIdentifier the value-list identifier of the supported categories.
+     * @param filterValueListIdentifier   the value-list identifier for the listing filter.
      */
     ListingPageType(
             final String type,
             final String[] documentTypes,
             final boolean sortingEnabled,
             final String sortByDateField,
-            final String categoryValueListIdentifier
+            final String filterValueListIdentifier
     ) {
         this.type = type;
         this.documentTypes = documentTypes;
         this.sortingEnabled = sortingEnabled;
         this.sortByDateField = sortByDateField;
-        this.categoryValueListIdentifier = categoryValueListIdentifier;
+        this.filterValueListIdentifier = filterValueListIdentifier;
     }
 
     /**
@@ -160,11 +160,11 @@ public enum ListingPageType {
     }
 
     /**
-     * Returns value-list identifier of the supported categories.
+     * Returns value-list identifier for the supported filter.
      *
-     * @return the value-list identifier of the supported categories.
+     * @return the value-list identifier for the supported filter.
      */
-    public String getCategoryValueListIdentifier() {
-        return categoryValueListIdentifier;
+    public String getFilterValueListIdentifier() {
+        return filterValueListIdentifier;
     }
 }

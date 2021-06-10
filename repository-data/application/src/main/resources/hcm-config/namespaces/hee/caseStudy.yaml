@@ -11,19 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8eafcc1d-eda6-4302-b2c1-a357900732da
+          jcr:uuid: 4e0dcd7b-64d2-4819-a424-48699842255a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [required]
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -42,6 +33,23 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:resource
             hipposysedit:validators: [required]
+          /impactTypes:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:impactTypes
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /impactGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:impactGroup
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
           /sector:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -49,8 +57,7 @@ definitions:
             hipposysedit:ordered: false
             hipposysedit:path: hee:sector
             hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [optional]
+            hipposysedit:type: DynamicDropdown
           /region:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -58,16 +65,7 @@ definitions:
             hipposysedit:ordered: false
             hipposysedit:path: hee:region
             hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [optional]
-          /categories:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:categories
-            hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: DynamicDropdown
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -79,14 +77,14 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:description: ''
           hee:title: ''
-          hee:sector: ''
-          hee:region: ''
-          jcr:uuid: 5ee7e29a-c174-418b-a0d7-4342161f8458
+          jcr:uuid: 28bf7d04-de82-453b-b95a-605e2fed14be
           hippostdpubwf:lastModificationDate: 2021-05-07T20:02:42.163+01:00
           hippostdpubwf:creationDate: 2021-05-07T20:02:42.164+01:00
-          hee:categories: []
+          hee:sector: ''
+          hee:region: ''
+          hee:impactGroup: ''
+          hee:impactTypes: ['']
           /hee:document:
             jcr:primaryType: hippo:resource
             hippo:filename: hippo:resource
@@ -115,27 +113,10 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /description:
+          /impactTypes:
             jcr:primaryType: frontend:plugin
-            caption: Description
-            field: description
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /document:
-            jcr:primaryType: frontend:plugin
-            caption: Document
-            field: document
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /categories:
-            jcr:primaryType: frontend:plugin
-            caption: Categories
-            field: categories
+            caption: Impact Types
+            field: impactTypes
             multiselect.type: palette
             palette.alloworder: true
             palette.maxrows: '10'
@@ -145,7 +126,26 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/kls/casestudycategories
+              source: /content/documents/administration/valuelists/kls/casestudyimpacttypes
+          /document:
+            jcr:primaryType: frontend:plugin
+            caption: Document
+            field: document
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /impactGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Group Impacted
+            field: impactGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              orientation: vertical
+              source: /content/documents/administration/valuelists/kls/casestudyimpactgroups
           /sector:
             jcr:primaryType: frontend:plugin
             caption: Sector
@@ -154,12 +154,16 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              orientation: vertical
+              source: /content/documents/administration/valuelists/kls/casestudysectors
           /region:
             jcr:primaryType: frontend:plugin
             caption: Region
             field: region
-            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              orientation: vertical
+              source: /content/documents/administration/valuelists/kls/regions

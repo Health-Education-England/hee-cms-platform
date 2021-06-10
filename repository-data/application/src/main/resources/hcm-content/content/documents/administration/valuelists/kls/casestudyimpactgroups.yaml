@@ -1,0 +1,36 @@
+/content/documents/administration/valuelists/kls/casestudyimpactgroups:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: f401e53a-83b6-4514-97b8-8107e96ad065
+  hippo:name: CaseStudyImpactGroups
+  /casestudyimpactgroups:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 85ddd823-6e48-4fff-8827-40f4f51ea16d
+    hippo:availability: [live, preview]
+    hippotranslation:id: 11d4f770-4e4a-4de6-b0e5-97ffea618c43
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: choose_staff_group
+      selection:label: Choose staff group
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: medicine_and_dental
+      selection:label: Medicine and Dental
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: multiprofessional
+      selection:label: Multiprofessional
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: nursing_and_midwifery
+      selection:label: Nursing and Midwifery
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: patients_carers_and_the_public
+      selection:label: Patients, carers and the public
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: scientific_and_technical
+      selection:label: Scientific and Technical
