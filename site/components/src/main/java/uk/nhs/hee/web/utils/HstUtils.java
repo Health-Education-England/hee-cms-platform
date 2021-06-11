@@ -44,16 +44,24 @@ public class HstUtils {
     }
 
     /**
-     * Returns {@code true} if the URL for the given {@code hippoBean} is found.
-     * Otherwise, returns {@code false}.
+     * Returns URL for the given {@code hippoBean} instance.
      *
      * @param requestContext the {@link HstRequestContext} instance.
-     * @param hippoBean      the {@link HippoBean} instance.
-     * @return {@code true} if the URL for the given {@code hippoBean} is found.
-     * Otherwise, returns {@code false}.
+     * @param hippoBean      the {@link HippoBean} instance whose URL needs to be returned.
+     * @param fullQualified  Boolean indicating whether to return fully qualified URL or not.
+     * @return the URL for the given {@code hippoBean} instance.
      */
-    public static boolean isPageFound(final HstRequestContext requestContext, final HippoBean hippoBean) {
-        return !requestContext.getHstLinkCreator().create(hippoBean, requestContext).isNotFound();
+    public static String getURLByBean(
+            final HstRequestContext requestContext,
+            final HippoBean hippoBean,
+            final boolean fullQualified) {
+        final HstLink hstLink = requestContext.getHstLinkCreator().create(hippoBean, requestContext);
+
+        if (hstLink == null) {
+            return StringUtils.EMPTY;
+        }
+
+        return hstLink.toUrlForm(requestContext, fullQualified);
     }
 
 }
