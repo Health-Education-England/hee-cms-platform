@@ -1,0 +1,24 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UnPublishOlderArchivedBlogPosts:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Unpublish (or Take Offline) the blog posts which are older
+        than 2020-08-04T13:00:00.000Z'
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/lks/archived-blog-posts//element(*,
+        hee:blogPost)[(@hippo:availability='live') and not(@jcr:primaryType='nt:frozenNode')
+        and (@hee:publicationDate____hour < xs:dateTime('2020-08-04T13:00:00.000Z'))]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\n\
+        import javax.jcr.Node\r\n\r\nclass UnPublishOlderArchivedBlogPosts extends\
+        \ BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\n   \
+        \     log.debug \"Updating node ${node.path}\"\r\n        node.setProperty(\"\
+        hippo:availability\", new String[0])\r\n        log.debug \"Successfully unpublished\
+        \ '${node.path}' i.e. Successfully took the node '${node.path}' offline\"\r\
+        \n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\
+        \n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
