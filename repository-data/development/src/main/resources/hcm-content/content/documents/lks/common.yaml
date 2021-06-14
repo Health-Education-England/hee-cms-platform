@@ -1525,6 +1525,98 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /blogs:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 4f1dce33-1e03-4c52-a767-719ac7d9471c
+      hippo:name: Blogs
+      hippo:versionHistory: 01f2a769-4147-46a4-b0d4-0f31c0fffdb3
+      /blogs[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1c6a839d-fbd0-456c-9267-e38c4e0dc3d3
+        hee:description: Posts and comments about current and future KLS developments
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-03T10:53:20.026+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-03T10:53:20.026+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 2f368e5f-d978-43df-a878-cbc66e8ca788
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 3d4ad46b-958c-4b9a-b936-e5e3ee69d9b8
+          hee:text: Blog
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ed4d5d76-15ab-4472-b368-33302a2c0599
+      /blogs[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 76ecf907-ed19-49ee-b85b-3d051f27de78
+        hee:description: Posts and comments about current and future KLS developments
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-03T10:53:20.026+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-03T10:53:53.636+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 2f368e5f-d978-43df-a878-cbc66e8ca788
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Blog
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ed4d5d76-15ab-4472-b368-33302a2c0599
+      /blogs[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 6d0a8846-3832-4f2a-b1c4-20eb3c64e0ea
+        hee:description: Posts and comments about current and future KLS developments
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-03T10:53:20.026+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-03T10:53:53.636+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-06-03T10:53:55.620+01:00
+        hippotranslation:id: 2f368e5f-d978-43df-a878-cbc66e8ca788
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Blog
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ed4d5d76-15ab-4472-b368-33302a2c0599
   /richtext-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

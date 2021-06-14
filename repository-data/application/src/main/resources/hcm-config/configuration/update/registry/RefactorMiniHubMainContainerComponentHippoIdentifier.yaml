@@ -1,0 +1,24 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RefactorMiniHubMainContainerComponentHippoIdentifier:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Updates 'hippo:identifier' of MiniHub 'main' hst:containercomponent
+        from '43b034db-240d-480d-9a69-edea2f3c0cd4' to '08618578-df7c-4816-a986-c26d2b7ba5de'
+        in order to keep it unique as described in https://documentation.bloomreach.com/14/library/concepts/hst-configuration-model/experience-page-layouts-configuration.html.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations//element(main, hst:containercomponent)[@hippo:identifier='43b034db-240d-480d-9a69-edea2f3c0cd4'
+        and @hst:label='Main MiniHub']
+      hipposys:script: "import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass RefactorMiniHubMainContainerComponentHippoIdentifier\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        node.setProperty(\"\
+        hippo:identifier\", \"08618578-df7c-4816-a986-c26d2b7ba5de\")\r\n        log.debug\
+        \ \"Successfully updated 'hippo:identifier' of the node ${node.path} from\
+        \ '43b034db-240d-480d-9a69-edea2f3c0cd4' to '08618578-df7c-4816-a986-c26d2b7ba5de'\"\
+        \r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
+        \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

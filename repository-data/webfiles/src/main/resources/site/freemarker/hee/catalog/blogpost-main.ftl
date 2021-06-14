@@ -5,7 +5,7 @@
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.BlogPost" -->
-<#-- @ftlvariable name="categoriesToFilteredURLMap" type="java.util.Map" -->
+<#-- @ftlvariable name="categoriesValueListMap" type="java.util.Map" -->
 <#-- @ftlvariable name="visibleComments" type="java.util.ArrayList<uk.nhs.hee.web.beans.BlogComment>" -->
 <#-- @ftlvariable name="totalComments" type="java.lang.Integer" -->
 
@@ -34,9 +34,15 @@
 
                         <#--Blog Categories -->
                         <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-                            <#list categoriesToFilteredURLMap as category, filteredURL>
-                                <a href=${filteredURL}>${category}</a><#sep>, </#sep>
-                            </#list>
+                            <#if blogListingPageURL?has_content>
+                                <#list categoriesValueListMap as key, value>
+                                    <a href=${blogListingPageURL}?category=${key}>${value}</a><#sep>, </#sep>
+                                </#list>
+                            <#else>
+                                <#list categoriesValueListMap?values as value>
+                                    ${value}<#sep>, </#sep>
+                                </#list>
+                            </#if>
                         </p>
                         <#--End Blog Categories -->
 

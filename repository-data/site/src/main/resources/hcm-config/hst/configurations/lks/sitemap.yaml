@@ -27,20 +27,6 @@ definitions:
           hst:componentconfigurationid: hst:pages/searchresults
           hst:pagetitle: Search
           hst:relativecontentpath: listing-pages/search-results
-      /blogs:
-        jcr:primaryType: hst:sitemapitem
-        hst:componentconfigurationid: hst:pages/bloglist
-        hst:pagetitle: Blogs
-        hst:refId: blogs
-        /archived:
-          jcr:primaryType: hst:sitemapitem
-          hst:hiddeninchannelmanager: true
-          hst:parameternames: [excludedForBreadcrumb]
-          hst:parametervalues: ['true']
-          /_default_:
-            jcr:primaryType: hst:sitemapitem
-            hst:componentconfigurationid: hst:pages/blogpost
-            hst:relativecontentpath: archived-blog-posts/${1}
       /knowledge-staff:
         jcr:primaryType: hst:sitemapitem
         hst:componentconfigurationid: hst:pages/homepage
