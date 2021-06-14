@@ -33,24 +33,11 @@ public class HstUtils {
     }
 
     /**
-     * Returns {@code true} if the URL for the given {@code hippoBean} is found.
-     * Otherwise, returns {@code false}.
-     *
-     * @param requestContext the {@link HstRequestContext} instance.
-     * @param hippoBean      the {@link HippoBean} instance.
-     * @return {@code true} if the URL for the given {@code hippoBean} is found.
-     * Otherwise, returns {@code false}.
-     */
-    public static boolean isPageFound(final HstRequestContext requestContext, final HippoBean hippoBean) {
-        return !requestContext.getHstLinkCreator().create(hippoBean, requestContext).isNotFound();
-    }
-
-    /**
      * Returns URL for the given {@code hippoBean} instance.
      *
      * @param requestContext the {@link HstRequestContext} instance.
-     * @param hippoBean the {@link HippoBean} instance whose URL needs to be returned.
-     * @param fullQualified Boolean indicating whether to return fully qualified URL or not.
+     * @param hippoBean      the {@link HippoBean} instance whose URL needs to be returned.
+     * @param fullQualified  Boolean indicating whether to return fully qualified URL or not.
      * @return the URL for the given {@code hippoBean} instance.
      */
     public static String getURLByBean(
