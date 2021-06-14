@@ -1,0 +1,56 @@
+/content/documents/administration/valuelists/kls/casestudyimpacttypes:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 6e7305d1-d558-4e59-bdfb-d5c002e2537b
+  hippo:name: CaseStudyImpactTypes
+  /casestudyimpacttypes:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 3fa7124a-5258-4cd6-9c89-8b8564d4db90
+    hippo:availability: [live, preview]
+    hippotranslation:id: ad59f4bb-e1ce-401c-ac15-88a7f7eea2bf
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: carers_and_the_public
+      selection:label: Carers and the Public
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: contributed_to_personal_or_professional_development
+      selection:label: Contributed to personal or professional development
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: contributed_to_service_development_or_delivery
+      selection:label: Contributed to service development or delivery
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: facilitated_collaborative_working
+      selection:label: Facilitated collaborative working
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: health_information_for_patients
+      selection:label: Health Information for Patients
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: improved_the_quality_of_patient_care
+      selection:label: Improved the quality of patient care
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: mobilising_evidence_and_organisational_knowledge
+      selection:label: Mobilising evidence and organisational knowledge
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: more_informed_decision_making
+      selection:label: More informed decision making
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: productivity_and_efficiency
+      selection:label: Productivity and efficiency
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: reduced_risk_or_improved_safety
+      selection:label: Reduced risk or improved safety
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: saved_money_or_contributed_to_financial_effectiveness
+      selection:label: Saved money or contributed to financial effectiveness

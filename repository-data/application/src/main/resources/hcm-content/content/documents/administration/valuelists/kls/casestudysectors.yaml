@@ -1,0 +1,36 @@
+/content/documents/administration/valuelists/kls/casestudysectors:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: be71522b-4f65-4ba7-ac62-abd00440cad6
+  hippo:name: CaseStudySectors
+  /casestudysectors:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: be74f493-dbf0-4a17-80b6-0daeac9183ed
+    hippo:availability: [live, preview]
+    hippotranslation:id: a40140b6-570f-4c67-a022-d20ccfa70e31
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: acute
+      selection:label: Acute
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: acute_and_community
+      selection:label: Acute and Community
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: cross_sector
+      selection:label: Cross Sector
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: mental_health
+      selection:label: Mental Health
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: other
+      selection:label: Other
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: public_health
+      selection:label: Public Health

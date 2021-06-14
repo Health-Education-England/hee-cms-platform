@@ -1,6 +1,7 @@
 package uk.nhs.hee.web.components;
 
 import com.google.common.base.Strings;
+import org.apache.commons.lang.StringUtils;
 import org.apache.jackrabbit.JcrConstants;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.query.HstQuery;
@@ -16,6 +17,8 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
+import org.onehippo.forge.selection.hst.contentbean.ValueList;
+import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
@@ -87,6 +90,14 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      *
      * <p>This map would be used by search listing view/template in order to render URLs
      * for MiniHub Guidance documents (which may not have a channel page on its own).</p>
+     *
+     * <p>This approach has been taken in order to avoid querying {@code hee:MiniHub} document corresponding
+     * to each of the {@code hee:guidance} document available in the search results (which might be
+     * little expensive performance wise) in order to construct the {@code hee:guidance} document URL.</p>
+     *
+     * <p>TODO: Improve the performance by caching the {@code miniHubGuidancePathToURLMap} against
+     * {@code hee:MiniHub} documents so that {@code miniHubGuidancePathToURLMap} can be reused
+     * unless {@code hee:MiniHub} documents have been added/amended/deleted.</p>
      *
      * @param request the {@link HstRequest} instance.
      * @throws QueryException thrown when an error occurs during execution of the query built.
@@ -247,6 +258,28 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         } else {
             query.addOrderByDescending(listingPageType.getSortByDateField());
         }
+    }
+
+    /**
+     * Returns value-list map for the filter.
+     *
+     * <p>This gets the identifier of the value-list to be returned as map
+     * from its {@link ListingPageType} instance (identified by current Listing Page Type).</p>
+     *
+     * @param request the {@link HstRequest} instance.
+     * @return the value-list map for the filter.
+     */
+    protected Map<String, String> getFilterValueListMap(final HstRequest request) {
+        final ListingPageType listingPageType = getListing(request);
+
+        if (StringUtils.isEmpty(listingPageType.getFilterValueListIdentifier())) {
+            return Collections.emptyMap();
+        }
+
+        final ValueList categoriesValueList =
+                SelectionUtil.getValueListByIdentifier(
+                        listingPageType.getFilterValueListIdentifier(), RequestContextProvider.get());
+        return SelectionUtil.valueListAsMap(categoriesValueList);
     }
 
     /**

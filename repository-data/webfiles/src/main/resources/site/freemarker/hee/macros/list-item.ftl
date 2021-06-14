@@ -58,21 +58,27 @@
     </#list>
 </#macro>
 
-<#macro casestudyListItem items categoriesMap>
+<#macro casestudyListItem items impactGroupMap impactTypesMap sectorMap regionMap>
     <#list items as item>
         <@hst.link var="casestudyDocumentURL" hippobean=item.document>
             <@hst.param name="forceDownload" value="true"/>
         </@hst.link>
 
         <h3><a href="${casestudyDocumentURL}" target="_blank">${item.title}</a></h3>
-        <p>${item.description}</p>
 
         <dl class="nhsuk-summary-list">
-            <#assign categories>${item.categories?map(category -> categoriesMap[category])?join(', ')}</#assign>
-            <#if categories??>
-                <@fmt.message key="category.text" var="categoryLabel"/>
-                <@listItemRow key="${categoryLabel}">
-                    ${categories}
+            <#if item.impactGroup?has_content>
+                <@fmt.message key="casestudy.impact_group" var="impactGroupLabel"/>
+                <@listItemRow key="${impactGroupLabel}">
+                    ${impactGroupMap[item.impactGroup]}
+                </@listItemRow>
+            </#if>
+
+            <#if item.impactTypes?size gt 0>
+                <@fmt.message key="casestudy.impact_types" var="impactTypesLabel"/>
+                <#assign impactTypes>${item.impactTypes?map(impactType -> impactTypesMap[impactType])?join(', ')}</#assign>
+                <@listItemRow key="${impactTypesLabel}">
+                    ${impactTypes}
                 </@listItemRow>
             </#if>
 
@@ -83,17 +89,17 @@
                 </@listItemRow>
             </#if>
 
-            <#if item.sector??>
+            <#if item.sector?has_content>
                 <@fmt.message key="casestudy.sector" var="sectorLabel"/>
                 <@listItemRow key="${sectorLabel}">
-                    ${item.sector}
+                    ${sectorMap[item.sector]}
                 </@listItemRow>
             </#if>
 
-            <#if item.region??>
+            <#if item.region?has_content>
                 <@fmt.message key="casestudy.region" var="regionLabel"/>
                 <@listItemRow key="${regionLabel}">
-                    ${item.region}
+                    ${regionMap[item.region]}
                 </@listItemRow>
             </#if>
         </dl>

@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 03cc6eaf-ca38-4874-a8a5-22ae5ea2c643
   hippo:name: Listing
-  hippo:versionHistory: f23e1f27-3cfb-4ee9-8423-b6232266ebae
+  hippo:versionHistory: 53345eec-9103-4a87-95b9-849c27b9455a
   /listing[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -13,12 +13,12 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-05-18T19:11:46.742+01:00
+    hippostdpubwf:lastModificationDate: 2021-06-10T16:36:54.785+01:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -26,11 +26,13 @@
       casestudy.region, filter.topic.label, searchbank.topics, searchbank.details,
       searchbank.strategies, searchbank.get_strategy, searchbank.search, searchbank.get_search,
       searchbank.completed_on, searchbank.provider, category.text, casestudy.document,
-      searchbank.get_document, filter.year.label, event.date, event.location]
+      searchbank.get_document, filter.year.label, event.date, event.location, casestudy.impact_group,
+      casestudy.impact_types]
     resourcebundle:messages: [Overview, Website, Sort by date, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Details, Strings / Strategies, Get Strategy, Search, Get Search, Completed
-        on, Provider, Category, Document, Get Document, Year, Date, Location]
+        on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+        Impacted, Impact Types]
   /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -40,12 +42,12 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-05-18T19:11:55.231+01:00
+    hippostdpubwf:lastModificationDate: 2021-06-10T16:37:05.998+01:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -53,11 +55,13 @@
       casestudy.region, filter.topic.label, searchbank.topics, searchbank.details,
       searchbank.strategies, searchbank.get_strategy, searchbank.search, searchbank.get_search,
       searchbank.completed_on, searchbank.provider, category.text, casestudy.document,
-      searchbank.get_document, filter.year.label, event.date, event.location]
+      searchbank.get_document, filter.year.label, event.date, event.location, casestudy.impact_group,
+      casestudy.impact_types]
     resourcebundle:messages: [Overview, Website, Sort by date, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Details, Strings / Strategies, Get Strategy, Search, Get Search, Completed
-        on, Provider, Category, Document, Get Document, Year, Date, Location]
+        on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+        Impacted, Impact Types]
   /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -67,13 +71,13 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2021-05-18T19:11:55.231+01:00
+    hippostdpubwf:lastModificationDate: 2021-06-10T16:37:05.998+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-05-18T19:11:56.885+01:00
+    hippostdpubwf:publicationDate: 2021-06-10T16:37:07.690+01:00
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -81,8 +85,10 @@
       casestudy.region, filter.topic.label, searchbank.topics, searchbank.details,
       searchbank.strategies, searchbank.get_strategy, searchbank.search, searchbank.get_search,
       searchbank.completed_on, searchbank.provider, category.text, casestudy.document,
-      searchbank.get_document, filter.year.label, event.date, event.location]
+      searchbank.get_document, filter.year.label, event.date, event.location, casestudy.impact_group,
+      casestudy.impact_types]
     resourcebundle:messages: [Overview, Website, Sort by date, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Details, Strings / Strategies, Get Strategy, Search, Get Search, Completed
-        on, Provider, Category, Document, Get Document, Year, Date, Location]
+        on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+        Impacted, Impact Types]

@@ -73,6 +73,9 @@ definitions:
           /eventlisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/eventlisting-main.ftl
+          /casestudylisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/casestudylisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -109,8 +112,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin, Blog, Case Study & Search
-                Bank]
+              hst:label: Category based Listing Page [Bulletin & Search Bank]
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -124,6 +126,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Event Listing Page
               hst:template: eventlisting-main
+            /case-study-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.CaseStudyListingPageComponent
+              hst:iconpath: images/catalog-component-icons/generic-list.svg
+              hst:label: Case Study Listing Page
+              hst:template: casestudylisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
