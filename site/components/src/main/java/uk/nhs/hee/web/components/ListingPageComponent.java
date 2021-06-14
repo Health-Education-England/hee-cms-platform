@@ -2,6 +2,7 @@ package uk.nhs.hee.web.components;
 
 import com.google.common.base.Strings;
 import org.apache.commons.lang.StringUtils;
+import org.apache.jackrabbit.JcrConstants;
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
@@ -10,6 +11,7 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
@@ -19,11 +21,12 @@ import org.onehippo.forge.selection.hst.contentbean.ValueList;
 import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.ListingPage;
+import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 /**
@@ -65,17 +68,64 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
 
         final HstQueryResult results = query.execute();
 
-        // Removes/filters out the documents whose page is not found.
-        // TODO: Find out if there is a way to accommodate this through query to improve performance
-        final List<HippoBean> resultsWithoutNonPageBeans = StreamSupport.stream(
+        final boolean hasGuidance = StreamSupport.stream(
                 Spliterators.spliteratorUnknownSize(results.getHippoBeans(), Spliterator.ORDERED), false)
-                .filter(hippoBean -> HstUtils.isPageFound(request.getRequestContext(), hippoBean))
-                .collect(Collectors.toList());
+                .anyMatch(bean -> "hee:guidance".equals(bean.getSingleProperty(JcrConstants.JCR_PRIMARYTYPE)));
+
+        if (hasGuidance) {
+            addMiniHubGuidances(request);
+        } else {
+            request.setModel("miniHubGuidancePathToURLMap", Collections.emptyMap());
+        }
 
         return getPageableFactory().createPageable(
-                resultsWithoutNonPageBeans,
-                getCurrentPage(request),
-                listingPage.getPageSize().intValue());
+                results.getHippoBeans(),
+                results.getTotalSize(),
+                listingPage.getPageSize().intValue(),
+                getCurrentPage(request));
+    }
+
+    /**
+     * Adds a map of all MiniHub Guidance document Paths and its URLs (available in the CMS) to the model.
+     *
+     * <p>This map would be used by search listing view/template in order to render URLs
+     * for MiniHub Guidance documents (which may not have a channel page on its own).</p>
+     *
+     * <p>This approach has been taken in order to avoid querying {@code hee:MiniHub} document corresponding
+     * to each of the {@code hee:guidance} document available in the search results (which might be
+     * little expensive performance wise) in order to construct the {@code hee:guidance} document URL.</p>
+     *
+     * <p>TODO: Improve the performance by caching the {@code miniHubGuidancePathToURLMap} against
+     * {@code hee:MiniHub} documents so that {@code miniHubGuidancePathToURLMap} can be reused
+     * unless {@code hee:MiniHub} documents have been added/amended/deleted.</p>
+     *
+     * @param request the {@link HstRequest} instance.
+     * @throws QueryException thrown when an error occurs during execution of the query built.
+     */
+    private void addMiniHubGuidances(final HstRequest request) throws QueryException {
+        final Map<String, String> miniHubGuidancePathToURLMap = new HashMap<>();
+
+        final HstQuery query = HstQueryBuilder
+                .create(RequestContextProvider.get().getSiteContentBaseBean())
+                .ofTypes(MiniHub.class).build();
+        final HstQueryResult result = query.execute();
+        final HippoBeanIterator beanIterator = result.getHippoBeans();
+
+        while (beanIterator.hasNext()) {
+            final MiniHub miniHubBean = (MiniHub) beanIterator.next();
+            final List<Guidance> guidanceDocs = miniHubBean.getGuidancePages();
+
+            for (final Guidance guidanceDoc : guidanceDocs) {
+                miniHubGuidancePathToURLMap.put(
+                        guidanceDoc.getPath(),
+                        HstUtils.getURLByBean(
+                                request.getRequestContext(), miniHubBean, false) +
+                                "/" +
+                                guidanceDoc.getName());
+            }
+        }
+
+        request.setModel("miniHubGuidancePathToURLMap", miniHubGuidancePathToURLMap);
     }
 
     /**

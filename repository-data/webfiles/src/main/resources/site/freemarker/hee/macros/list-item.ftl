@@ -35,20 +35,26 @@
 </#macro>
 
 <#macro blogListItem items categoriesMap>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+
     <#list items as item>
-        <li>
-            <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
-            <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
-            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-            <div class="nhsuk-review-date">
-                <p class="nhsuk-body-s">
-                    <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
-                </p>
-                <p class="nhsuk-body-s">
-                    <@fmt.message key="by.text"/> ${item.author}
-                </p>
-            </div>
-        </li>
+        <@hst.link hippobean=item var="pageURL"/>
+
+        <#if pageURL != pageNotFoundURL>
+            <li>
+                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
+                <h3><a href="${pageURL}">${item.title}</a></h3>
+                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+                <div class="nhsuk-review-date">
+                    <p class="nhsuk-body-s">
+                        <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
+                    </p>
+                    <p class="nhsuk-body-s">
+                        <@fmt.message key="by.text"/> ${item.author}
+                    </p>
+                </div>
+            </li>
+        </#if>
     </#list>
 </#macro>
 
@@ -184,18 +190,29 @@
     </#list>
 </#macro>
 
-<#macro searchListItem items>
+<#macro searchListItem items miniHubGuidancePathToURLMap>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+
     <#list items as item>
-        <li>
-            <span class="app-search-results-category">${item.contentType}</span>
-            <h3><a href="<@hst.link hippobean=item/>">${item.title}</a></h3>
-            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-            <div class="nhsuk-review-date">
-                <p class="nhsuk-body-s">
-                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
-                </p>
-            </div>
-        </li>
+        <@hst.link hippobean=item var="pageURL"/>
+
+        <#if pageURL != pageNotFoundURL || ('uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??)>
+            <li>
+                <span class="app-search-results-category">${item.contentType}</span>
+
+                <#if 'uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??>
+                    <#assign pageURL=miniHubGuidancePathToURLMap[item.path]/>
+                </#if>
+
+                <h3><a href="${pageURL}">${item.title}</a></h3>
+                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+                <div class="nhsuk-review-date">
+                    <p class="nhsuk-body-s">
+                        <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                    </p>
+                </div>
+            </li>
+        </#if>
     </#list>
 </#macro>
 

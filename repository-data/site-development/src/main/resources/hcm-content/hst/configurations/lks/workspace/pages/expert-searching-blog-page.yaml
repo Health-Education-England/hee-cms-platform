@@ -8,7 +8,7 @@
     hst:template: blogpage-main
     /comment:
       jcr:primaryType: hst:containercomponent
-      hippo:identifier: 8a3a0041-c2d8-42db-b03e-1fb8fe51e333
+      hippo:identifier: 3009ef19-c5f6-4583-876b-e2f0d52941ee
       hst:label: Comment Form
       hst:lastmodified: 2021-05-05T09:19:22.498+07:00
       hst:xtype: hst.vbox
@@ -17,16 +17,15 @@
         hst:componentclassname: com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent
         hst:iconpath: resources/addon/eforms/images/icons/form.svg
         hst:label: Enterprise Form
-        hst:parameternames: [form, behaviors, eforms-from-email, eforms-from-name]
+        hst:parameternames: [form, behaviors]
         hst:parametervalues: [/content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
-            uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior', changeit@example.com,
-          ChangeIt]
+            uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior']
         hst:resourcetemplate: eforms.validation.default
         hst:template: eforms.default
         hst:xtype: HST.Item
     /blog:
       jcr:primaryType: hst:containercomponent
-      hippo:identifier: 8a3a0041-c2d8-42db-b03e-1fb8fe51e333
+      hippo:identifier: 9c5b2da6-9a3f-4964-8296-ac6af0793859
       hst:label: Blog Post
       hst:lastmodified: 2021-05-05T09:19:22.498+07:00
       hst:xtype: hst.vbox

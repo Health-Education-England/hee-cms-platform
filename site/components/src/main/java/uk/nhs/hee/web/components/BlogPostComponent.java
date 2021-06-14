@@ -1,7 +1,7 @@
 package uk.nhs.hee.web.components;
 
-import org.apache.commons.lang.StringUtils;
 import org.hippoecm.hst.container.RequestContextProvider;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
@@ -24,28 +24,17 @@ import java.util.stream.Collectors;
 public class BlogPostComponent extends EssentialsDocumentComponent {
 
     private static final String BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER = "blogCategories";
-    private static final String BLOG_OVERVIEW_PAGE_SITEMAP_REF_ID = "blogs";
-    private static final String BLOG_OVERVIEW_PAGE_DEFAULT_URL = "/blogs";
     private static final int DEFAULT_NUMBER_OF_VISIBLE_COMMENTS = 3;
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (blogPost == null) {
-            // Looks up for blogPost document associated to the ResolvedSiteMapItem
-            // in case if any and adds its bean in the request.
-            // Essentially a fall back mechanism in case
-            setContentBean(null, request, response);
-        }
-
-        blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
+        final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
-            final List<String> blogCategories = Arrays.asList(blogPost.getCategories());
-            request.setModel(
-                    "categoriesToFilteredURLMap",
-                    mapCategoriesToFilteredUrl(request.getRequestContext(), blogCategories));
+            addCategoriesValueListMapToModel(request, blogPost);
+
+            addBlogListingPageURLToModel(request);
 
             final List<BlogComment> comments = blogPost.getComments();
             request.setModel("totalComments", comments.size());
@@ -64,6 +53,25 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     }
 
     /**
+     * Adds Blog Listing Page URL to model.
+     *
+     * @param request the {@link HstRequest} instance.
+     */
+    private void addBlogListingPageURLToModel(final HstRequest request) {
+        final HstRequestContext hstRequestContext = request.getRequestContext();
+        final HippoBean blogListingPageBean =
+                HstUtils.getListingPageBeanByType(hstRequestContext, ListingPageType.BLOG_LISTING.getType());
+
+        if (blogListingPageBean == null) {
+            return;
+        }
+
+        request.setModel(
+                Model.BLOG_LISTING_PAGE_URL.getKey(),
+                HstUtils.getURLByBean(hstRequestContext, blogListingPageBean, false));
+    }
+
+    /**
      * Creates a Map that has as the key the name of the blog category and as the value the URL path
      * to the Blog Overview page filtered by category.
      *
@@ -71,33 +79,23 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
      * Example: given the categories = ["data_search"],
      * the response will be [{"Data Search", "/blogs?category=data_search" }]
      * </p>
-     *
-     * @param categories list of categories
-     * @return categoriesToFilteredURL Map
      */
-    private Map<String, String> mapCategoriesToFilteredUrl(
-            final HstRequestContext requestContext,
-            final List<String> categories) {
-        final Map<String, String> blogCategoriesValueListMap = getBlogCategoriesKeyValueMap();
+    private void addCategoriesValueListMapToModel(
+            final HstRequest request,
+            final BlogPost blogPost) {
+        final List<String> blogCategories = Arrays.asList(blogPost.getCategories());
 
-        // TODO: Decision needs to be made whether hard coded default value of blogs overview page '/blogs'
-        // can be retained or perhaps display the categories as texts rather than links or not display categories
-        // at all. Check with Eleanor/Olivia/Duncan/Matt
-        final String blogOverviewUrlPath = StringUtils.defaultIfEmpty(
-                HstUtils.getURLBySiteMapItemRefId(requestContext, BLOG_OVERVIEW_PAGE_SITEMAP_REF_ID, false),
-                BLOG_OVERVIEW_PAGE_DEFAULT_URL);
+        if (blogCategories.isEmpty()) {
+            return;
+        }
+        final Map<String, String> allBlogCategoriesValueListMap = getBlogCategoriesKeyValueMap();
 
-        return categories.stream().collect(
-                Collectors.toMap(
-                        blogCategoriesValueListMap::get,
-                        category -> createBlogOverviewUrlPathWithCategoryFilter(category, blogOverviewUrlPath))
-        );
-    }
-
-    private String createBlogOverviewUrlPathWithCategoryFilter(
-            final String categoryKey,
-            final String blogOverviewUrlPath) {
-        return String.format("%s?category=%s", blogOverviewUrlPath, categoryKey);
+        request.setModel(
+                Model.CATEGORIES_VALUE_LIST_MAP.getKey(),
+                blogCategories.stream().collect(
+                        Collectors.toMap(
+                                category -> category,
+                                allBlogCategoriesValueListMap::get)));
     }
 
     /**
