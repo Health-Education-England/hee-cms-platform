@@ -47,13 +47,19 @@
 [hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:caseStudy] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:contact] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:contactCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:contactCardReference] > hippo:compound, hippostd:relaxed
   orderable
 
-[hee:caseStudy] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+[hee:contactWithCopy] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:contentCards] > hippo:compound, hippostd:relaxed
@@ -63,6 +69,24 @@
   orderable
 
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:externalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:externalLinksCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:externalLinksCardReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:fileLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:fileLinksCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:fileLinksCardReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:guidance] > hee:basedocument, hippostd:relaxed, hippotranslation:translated

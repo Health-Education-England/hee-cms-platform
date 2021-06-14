@@ -135,7 +135,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock,hee:YellowAlertBlock,hee:ActionLink,hee:richTextReference
+            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock,hee:YellowAlertBlock,hee:ActionLink,hee:richTextReference,hee:contact
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -165,7 +165,7 @@ definitions:
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right Hand Blocks
-            compoundList: hee:QuickLinks, hee:contactCardReference
+            compoundList: hee:QuickLinks,hee:contactCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference
             contentPickerType: links
             field: rightHandBlocks
             hint: ''

@@ -42,6 +42,9 @@
                                             <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
                                                 <@hee.yellowAlertBlock block=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.Contact">
+                                                <@hee.contact block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
@@ -59,13 +62,18 @@
                                      <@hee.quickLinks quickLinks=block/>
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                    <@hee.contactCard contactCard=block/>
+                                    <@hee.contactCard card=block.content/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
+                                    <@hee.externalLinksCard card=block.externalLinksCard/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
+                                    <@hee.fileLinksCard card=block.fileLinksCard/>
                                     <#break>
                                 <#default>
                             </#switch>
                         </#list>
                     </#if>
-
 
                     <div class="nhsuk-grid-column-full nhsuk-section__content">
                         <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
