@@ -9,3 +9,4 @@
 <#include "quick-links.ftl">
 <#include "statement-block.ftl">
 <#include "yellow-alert-block.ftl">
+<#include "block-links.ftl">
