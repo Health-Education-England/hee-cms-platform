@@ -1,67 +1,56 @@
 definitions:
   config:
-    /hippo:namespaces/hee/blockLinks:
+    /hippo:namespaces/hee/blockLinksReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 4953da19-ea58-461e-9eaf-ebe1085bc4e8
+      jcr:uuid: 6ec6d9de-c784-4219-aa30-43c7eea8bbfc
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: ec738eff-a3c8-4bef-bc80-9279e8b226cd
-        /hipposysedit:nodetype[1]:
+        jcr:uuid: cae32b9f-bd6a-4bd8-97be-fa408bb2ab3d
+        /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: c91ecca8-5d82-4aba-9779-138df87eebac
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: ba767517-1050-4f29-837f-987b4a3ad3b1
           hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
+          /blockLinksContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:blockLinksContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
+          /blockLinksTitleOverride:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:titleOverride
             hipposysedit:primary: false
             hipposysedit:type: Text
-          /description:
+            hipposysedit:validators: [optional]
+          /blockLinksDescriptionOverride:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:desc
+            hipposysedit:path: hee:descOverride
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
             hipposysedit:validators: [optional]
-          /blockLinks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:blockLinks
-            hipposysedit:primary: false
-            hipposysedit:type: hee:linkBlock
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
-        /hipposysedit:prototype[1]:
-          jcr:primaryType: hee:blockLinks
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 7a7cd773-07db-457b-ab88-661a489f2e18
-          hee:title: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-06-14T20:23:53.390+01:00
-          hippostdpubwf:lastModificationDate: 2021-06-14T20:23:53.390+01:00
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:blockLinks:
-            jcr:primaryType: hee:linkBlock
-            hee:blockTitle: ''
-            /hee:blockLink:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:desc:
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:blockLinksReference
+          hee:titleOverride: ''
+          /hee:blockLinksContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:descOverride:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
       /editor:templates:
@@ -75,29 +64,29 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /titleOverride:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: title
+            caption: Title Override
+            field: blockLinksTitleOverride
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /desc:
+          /descOverride:
             jcr:primaryType: frontend:plugin
-            caption: Description
-            field: description
+            caption: Description Override
+            field: blockLinksDescriptionOverride
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /blockLinksContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Select Block Links
+            field: blockLinksContentBlock
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /blockLinks:
-            jcr:primaryType: frontend:plugin
-            caption: Block Links
-            field: blockLinks
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:blockLinks']
