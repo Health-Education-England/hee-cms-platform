@@ -2219,3 +2219,258 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2021-05-21T15:22:32.956+01:00
             jcr:mimeType: application/msword
+  /block-links:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 6373f3ec-1deb-4954-a887-450d19aec68b
+    hippo:name: Block Links
+    hippostd:foldertype: [new-blockLinks-folder, new-blockLinks-document]
+    hippotranslation:id: e5360244-d557-4a07-8057-22c7037b2684
+    hippotranslation:locale: en
+    /block-links-example:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+      hippo:name: Block Links Example
+      hippo:versionHistory: 2c147543-8d95-4558-a40b-71ca8e089019
+      /block-links-example[1]:
+        jcr:primaryType: hee:blockLinks
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: bd0780fe-a316-4cea-a559-c24fda0f8c47
+        hee:title: Block Links Example Title
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-15T11:37:34.546+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-15T11:56:33.931+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 2cebe0e0-e525-4604-9527-d597e38a7aee
+        hippotranslation:locale: en
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+        /hee:blockLinks[1]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Bradford
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[2]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Rotherham
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[3]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Harrowgate
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[4]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Scarborough
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[5]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Hull
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[6]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Sheffield
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[7]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Leeds
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[8]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Wakefield
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[9]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Northallerton
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[10]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: York
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:desc:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+      /block-links-example[2]:
+        jcr:primaryType: hee:blockLinks
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 16c10259-259e-49bd-9f06-5d8cd0a48815
+        hee:title: Block Links Example Title
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-15T11:37:34.546+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-15T11:57:10.999+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 2cebe0e0-e525-4604-9527-d597e38a7aee
+        hippotranslation:locale: en
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+        /hee:blockLinks[1]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Bradford
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[2]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Rotherham
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[3]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Harrowgate
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[4]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Scarborough
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[5]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Hull
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[6]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Sheffield
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[7]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Leeds
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[8]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Wakefield
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[9]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Northallerton
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[10]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: York
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:desc:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+      /block-links-example[3]:
+        jcr:primaryType: hee:blockLinks
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: bc81bd10-07a9-4d36-a738-420f2cc11def
+        hee:title: Block Links Example Title
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-15T11:37:34.546+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-15T11:57:10.999+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-06-15T11:57:17.311+01:00
+        hippotranslation:id: 2cebe0e0-e525-4604-9527-d597e38a7aee
+        hippotranslation:locale: en
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+        /hee:blockLinks[1]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Bradford
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[2]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Rotherham
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[3]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Harrowgate
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[4]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Scarborough
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[5]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Hull
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[6]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Sheffield
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[7]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Leeds
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[8]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Wakefield
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[9]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Northallerton
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[10]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: York
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:desc:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
