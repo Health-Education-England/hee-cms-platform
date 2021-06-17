@@ -11,6 +11,9 @@
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 <#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.CaseStudy" -->
 <#-- @ftlvariable name="impactGroupMap" type="java.util.Map" -->
+<#-- @ftlvariable name="impactTypesMap" type="java.util.Map" -->
+<#-- @ftlvariable name="sectorMap" type="java.util.Map" -->
+<#-- @ftlvariable name="regionMap" type="java.util.Map" -->
 <#-- @ftlvariable name="selectedImpactGroups" type="java.util.List" -->
 
 <#if document??>

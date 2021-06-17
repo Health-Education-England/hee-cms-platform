@@ -9,9 +9,11 @@
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
-<#-- @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Bulletin, uk.nhs.hee.web.beans.BlogPost]" -->
-<#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
-<#-- @ftlvariable name="selectedCategories" type="java.util.List" -->
+<#-- @ftlvariable name="item" type="uk.nhs.hee.web.beans.SearchBank" -->
+<#-- @ftlvariable name="topicMap" type="java.util.Map" -->
+<#-- @ftlvariable name="keyTermMap" type="java.util.Map" -->
+<#-- @ftlvariable name="providerMap" type="java.util.Map" -->
+<#-- @ftlvariable name="selectedTopics" type="java.util.List" -->
 
 <#if document??>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
@@ -30,10 +32,10 @@
                             <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
 
                             <div class="nhsuk-filter__groups">
-                                <@fmt.message key="filter.category.label" var="categoryLabel"/>
+                                <@fmt.message key="filter.topic.label" var="topicLabel"/>
 
                                 <div class="nhsuk-filter__group">
-                                    <@checkboxGroup title=categoryLabel name="category" items=categoriesMap selectedItemsList=selectedCategories />
+                                    <@checkboxGroup title=topicLabel name="topic" items=topicMap selectedItemsList=selectedTopics />
                                 </div>
                             </div>
                             <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
@@ -55,8 +57,8 @@
                             <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center"
                                   action="${pagelink}">
                                 <div class="o-flex__grow">
-                                    <#list selectedCategories as category>
-                                        <input type="hidden" name="category" value="${category}">
+                                    <#list selectedTopics as topic>
+                                        <input type="hidden" name="topic" value="${topic}">
                                     </#list>
 
                                     <@fmt.message key="sort.label" var="sortLabel"/>
@@ -71,11 +73,12 @@
                         </div>
 
                         <#-- Active Filters -->
-                        <#if selectedCategories?has_content>
+                        <#if selectedTopics?has_content>
                             <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
-                                <#list selectedCategories as categoryValue>
-                                    <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${categoryValue}">
-                                        <span>${categoriesMap[categoryValue]}</span>
+                                <#list selectedTopics as topic>
+                                    <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${topic
+                                    }">
+                                        <span>${topicMap[topic]}</span>
                                         <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
                                         <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
                                     </div>
@@ -86,7 +89,11 @@
 
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
-                                <@.vars["${document.listingPageType}ListItem"] items=pageable.items categoriesMap=categoriesMap/>
+                                <@.vars["${document.listingPageType}ListItem"]
+                                    items=pageable.items
+                                    topicMap=topicMap
+                                    keyTermMap=keyTermMap
+                                    providerMap=providerMap/>
                             </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>

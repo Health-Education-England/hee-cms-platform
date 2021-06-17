@@ -8,7 +8,33 @@ public enum HEEField {
     /**
      * {@code listingPageType} field/property.
      */
-    LISTING_TYPE("hee:listingPageType");
+    LISTING_TYPE("hee:listingPageType"),
+
+    /**
+     * {@code impactGroup} field/property.
+     */
+    IMPACT_GROUP("hee:impactGroup"),
+
+    /**
+     * {@code topics} field/property.
+     */
+    TOPICS("hee:topics"),
+
+    /**
+     * {@code categories} field/property.
+     */
+    CATEGORIES("hee:categories"),
+
+    /**
+     * {@code publicationDate} field/property.
+     */
+    PUBLICATION_DATE("hee:publicationDate"),
+
+    /**
+     * {@code date} field/property.
+     */
+    DATE("hee:date");
+
 
     private final String name;
 
@@ -27,6 +53,6 @@ public enum HEEField {
      * @return the name of HEE field/property.
      */
     public String getName() {
-        return name;
+        return this.name;
     }
 }
