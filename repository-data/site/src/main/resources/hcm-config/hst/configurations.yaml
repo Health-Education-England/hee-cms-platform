@@ -76,6 +76,9 @@ definitions:
           /casestudylisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/casestudylisting-main.ftl
+          /searchbanklisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/searchbanklisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -112,7 +115,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin, Blog & Search Bank]
+              hst:label: Category based Listing Page [Bulletin & Blog]
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -132,6 +135,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Case Study Listing Page
               hst:template: casestudylisting-main
+            /search-bank-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.SearchBankListingPageComponent
+              hst:iconpath: images/catalog-component-icons/generic-list.svg
+              hst:label: Search Bank Listing Page
+              hst:template: searchbanklisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

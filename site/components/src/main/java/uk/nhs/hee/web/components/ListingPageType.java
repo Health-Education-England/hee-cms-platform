@@ -2,7 +2,7 @@ package uk.nhs.hee.web.components;
 
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
-import uk.nhs.hee.web.constants.HeeNodeType;
+import uk.nhs.hee.web.repository.HEEField;
 
 /**
  * An enumeration of Listing Page Types and its document types, sort by date field & filter value-list identifier.
@@ -19,7 +19,7 @@ public enum ListingPageType {
             "blog",
             new String[]{"hee:blogPost"},
             Boolean.TRUE,
-            HeeNodeType.PUBLICATION_DATE,
+            HEEField.PUBLICATION_DATE.getName(),
             "blogCategories"),
 
     /**
@@ -49,7 +49,7 @@ public enum ListingPageType {
             "event",
             new String[]{"hee:event"},
             Boolean.TRUE,
-            HeeNodeType.DATE,
+            HEEField.DATE.getName(),
             StringUtils.EMPTY),
 
     /**

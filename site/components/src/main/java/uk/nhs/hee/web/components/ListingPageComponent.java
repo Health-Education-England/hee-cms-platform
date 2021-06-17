@@ -283,6 +283,18 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     }
 
     /**
+     * Returns value-list map by identifier ({@code valueListIdentifier}).
+     *
+     * @param valueListIdentifier the value-list identifier whose map needs to be returned.
+     * @return the value-list map by identifier ({@code valueListIdentifier}).
+     */
+    protected Map<String, String> getValueListMapByIdentifier(final String valueListIdentifier) {
+        final ValueList categoriesValueList =
+                SelectionUtil.getValueListByIdentifier(valueListIdentifier, RequestContextProvider.get());
+        return SelectionUtil.valueListAsMap(categoriesValueList);
+    }
+
+    /**
      * Returns requested sort order. Defaults to Descending sort order.
      *
      * @param request the {@link HstRequest} instance.
