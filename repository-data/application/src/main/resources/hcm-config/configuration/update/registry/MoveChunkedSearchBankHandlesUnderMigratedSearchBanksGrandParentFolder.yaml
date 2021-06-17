@@ -1,0 +1,23 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/MoveChunkedSearchBankHandlesUnderMigratedSearchBanksGrandParentFolder:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Post SearchBank data migration script - Moves all chunked Search Bank Handles (hippo:handle) under
+        'migrated-search-banks' grand parent folder.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/lks/migrated-search-banks//element(*,
+        hippo:handle)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass MoveChunkedSearchBankHandlesUnderMigratedSearchBanksGrandParentFolder\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        String nodePath\
+        \ = node.path\r\n        node.getSession().move(nodePath, node.parent.path)\r\
+        \n        log.debug \"Successfully moved the node '${nodePath}' under '${node.parent.path}'\"\
+        \r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
+        \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
