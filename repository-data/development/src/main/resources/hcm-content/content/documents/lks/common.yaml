@@ -2232,18 +2232,18 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 9c32e2cf-d909-4b40-97d7-4488317670c0
       hippo:name: CTA Card Example
-      hippo:versionHistory: 7543a25f-7774-4eea-8c6b-ce3796bce4b8
+      hippo:versionHistory: e7fe8ebb-c057-479e-becd-8992db3e2080
       /cta-card-example[1]:
         jcr:primaryType: hee:ctaCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 378cc66c-5f1c-478e-8014-1b753372d160
-        hee:title: CTA Card Example Title
+        hee:title: CTA Title
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-06-16T13:20:44.236+01:00
-        hippostdpubwf:lastModificationDate: 2021-06-16T13:20:44.236+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-18T03:03:21.721+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4faa0a3c-d039-4fc0-b47b-92d90af79c16
         hippotranslation:locale: en
@@ -2252,12 +2252,8 @@
           hippostd:content: <p>CTA Card Example Text</p>
         /hee:ctaLink:
           jcr:primaryType: hee:link
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 86934d26-5133-4038-a4e2-ddcc244972d8
           hee:text: CTA Card Link Text
           hee:url: ''
-          hippostd:holder: holder
-          hippostd:state: draft
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -2266,18 +2262,18 @@
           hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
-            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
       /cta-card-example[2]:
         jcr:primaryType: hee:ctaCard
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 50168d11-7200-4249-9948-ae81d8b08843
-        hee:title: CTA Card Example Title
+        hee:title: CTA Title
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-06-16T13:20:44.236+01:00
-        hippostdpubwf:lastModificationDate: 2021-06-16T13:21:31.665+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-18T03:03:21.681+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4faa0a3c-d039-4fc0-b47b-92d90af79c16
         hippotranslation:locale: en
@@ -2296,20 +2292,20 @@
           hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
-            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
       /cta-card-example[3]:
         jcr:primaryType: hee:ctaCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: f4cd59db-1a3d-4e5e-b937-519b8da37dde
-        hee:title: CTA Card Example Title
+        hee:title: CTA Title
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-06-16T13:20:44.236+01:00
-        hippostdpubwf:lastModificationDate: 2021-06-16T13:21:31.665+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-18T03:03:21.681+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-06-16T13:21:40.111+01:00
+        hippostdpubwf:publicationDate: 2021-06-18T03:03:25.583+01:00
         hippotranslation:id: 4faa0a3c-d039-4fc0-b47b-92d90af79c16
         hippotranslation:locale: en
         /hee:ctaText:
@@ -2327,4 +2323,4 @@
           hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
-            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
