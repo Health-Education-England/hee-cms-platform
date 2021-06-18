@@ -15,7 +15,7 @@ definitions:
         \ javax.jcr.Node\r\n\r\nclass MoveChunkedSearchBankHandlesUnderMigratedSearchBanksGrandParentFolder\
         \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
         \n        log.debug \"Updating node ${node.path}\"\r\n        String nodePath\
-        \ = node.path\r\n        node.getSession().move(nodePath, node.parent.path)\r\
+        \ = node.path\r\n        node.getSession().move(nodePath, node.parent.parent.path + '/' + node.name)\r\
         \n        log.debug \"Successfully moved the node '${nodePath}' under '${node.parent.path}'\"\
         \r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
         \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
