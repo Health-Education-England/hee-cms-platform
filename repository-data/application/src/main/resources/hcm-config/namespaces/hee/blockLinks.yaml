@@ -11,27 +11,10 @@ definitions:
         /hipposysedit:nodetype[1]:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: c91ecca8-5d82-4aba-9779-138df87eebac
+          jcr:uuid: 50e00344-97c7-48b0-8a2f-6cc2abcbfd1e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:title
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:desc
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
-            hipposysedit:validators: [optional]
           /blockLinks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -40,12 +23,28 @@ definitions:
             hipposysedit:path: hee:blockLinks
             hipposysedit:primary: false
             hipposysedit:type: hee:linkBlock
+          /string:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype[1]:
           jcr:primaryType: hee:blockLinks
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 7a7cd773-07db-457b-ab88-661a489f2e18
+          jcr:uuid: 7c9458fc-337f-4ee9-accc-8a6a02c188e3
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -61,7 +60,7 @@ definitions:
             /hee:blockLink:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:desc:
+          /hee:description:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
       /editor:templates:
@@ -78,18 +77,19 @@ definitions:
           /title:
             jcr:primaryType: frontend:plugin
             caption: Title
-            field: title
+            field: string
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /desc:
+          /description:
             jcr:primaryType: frontend:plugin
             caption: Description
             field: description
-            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /blockLinks:

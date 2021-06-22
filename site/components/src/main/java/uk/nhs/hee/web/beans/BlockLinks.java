@@ -14,9 +14,9 @@ public class BlockLinks extends BaseDocument {
         return getSingleProperty("hee:title");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:desc")
-    public HippoHtml getDesc() {
-        return getHippoHtml("hee:desc");
+    @HippoEssentialsGenerated(internalName = "hee:description")
+    public HippoHtml getDescription() {
+        return getHippoHtml("hee:description");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:blockLinks")

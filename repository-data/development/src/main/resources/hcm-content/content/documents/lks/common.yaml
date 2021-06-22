@@ -2232,24 +2232,25 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
       hippo:name: Block Links Example
-      hippo:versionHistory: 0f8334c9-8e01-4393-a5e6-6c73b4bf12ee
+      hippo:versionHistory: 5e6eb159-060f-4c5d-8705-ed57d9cdf125
       /block-links-example[1]:
         jcr:primaryType: hee:blockLinks
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: bd0780fe-a316-4cea-a559-c24fda0f8c47
+        hee:description: Block Links Example Description
         hee:title: Block Links Example Title
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-06-15T11:37:34.546+01:00
-        hippostdpubwf:lastModificationDate: 2021-06-15T20:03:51.467+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T02:42:59.043+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 2cebe0e0-e525-4604-9527-d597e38a7aee
         hippotranslation:locale: en
         /hee:description:
           jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+          hippostd:content: <p>Block Links Example <u><strong>Description..</strong></u></p>
         /hee:blockLinks[1]:
           jcr:primaryType: hee:linkBlock
           hee:blockTitle: Bradford
@@ -2317,19 +2318,20 @@
         jcr:primaryType: hee:blockLinks
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 16c10259-259e-49bd-9f06-5d8cd0a48815
+        hee:description: Block Links Example Description
         hee:title: Block Links Example Title
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-06-15T11:37:34.546+01:00
-        hippostdpubwf:lastModificationDate: 2021-06-15T20:04:13.750+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T02:42:58.955+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 2cebe0e0-e525-4604-9527-d597e38a7aee
         hippotranslation:locale: en
         /hee:description:
           jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+          hippostd:content: <p>Block Links Example <u><strong>Description..</strong></u></p>
         /hee:blockLinks[1]:
           jcr:primaryType: hee:linkBlock
           hee:blockTitle: Bradford
@@ -2397,20 +2399,21 @@
         jcr:primaryType: hee:blockLinks
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: bc81bd10-07a9-4d36-a738-420f2cc11def
+        hee:description: Block Links Example Description
         hee:title: Block Links Example Title
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-06-15T11:37:34.546+01:00
-        hippostdpubwf:lastModificationDate: 2021-06-15T20:04:13.750+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T02:42:58.955+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-06-15T20:04:16.696+01:00
+        hippostdpubwf:publicationDate: 2021-06-22T02:43:04.546+01:00
         hippotranslation:id: 2cebe0e0-e525-4604-9527-d597e38a7aee
         hippotranslation:locale: en
         /hee:description:
           jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+          hippostd:content: <p>Block Links Example <u><strong>Description..</strong></u></p>
         /hee:blockLinks[1]:
           jcr:primaryType: hee:linkBlock
           hee:blockTitle: Bradford
@@ -2474,3 +2477,246 @@
         /hee:desc:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Block Links Example <u><strong>Description</strong></u></p>
+    /training-types:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      hippo:versionHistory: 5b749f1a-bfd5-4973-92ef-44986449d81d
+      /training-types[1]:
+        jcr:primaryType: hee:blockLinks
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 55de3d1c-47ea-44b2-bffb-879259d0bb65
+        hee:description: ''
+        hee:title: Types of training available
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-22T02:12:34.064+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T02:52:20.216+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: cf78bb3a-98e7-46a9-805f-1377facfac39
+        hippotranslation:locale: en
+        /hee:blockLinks[1]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Dental training in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[2]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Support in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[3]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Academic training in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[4]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Information for international dentists
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <ul>
+             <li><strong><a href="about_1">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_4">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_2">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_3">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+            </ul>
+          /about:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_1:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_2:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_3:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_4:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /training-types[2]:
+        jcr:primaryType: hee:blockLinks
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 407e6b4d-7701-4ec7-8d2b-59ce93ea6c05
+        hee:description: ''
+        hee:title: Types of training available
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-22T02:12:34.064+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T02:52:20.101+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: cf78bb3a-98e7-46a9-805f-1377facfac39
+        hippotranslation:locale: en
+        /hee:blockLinks[1]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Dental training in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[2]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Support in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[3]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Academic training in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[4]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Information for international dentists
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <ul>
+             <li><strong><a href="about_1">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_4">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_2">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_3">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+            </ul>
+          /about:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_1:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_2:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_3:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_4:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /training-types[3]:
+        jcr:primaryType: hee:blockLinks
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d954095b-c3c8-4080-9b8a-880f0944a3e5
+        hee:description: ''
+        hee:title: Types of training available
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-06-22T02:12:34.064+01:00
+        hippostdpubwf:lastModificationDate: 2021-06-22T02:52:20.101+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-06-22T02:52:25.471+01:00
+        hippotranslation:id: cf78bb3a-98e7-46a9-805f-1377facfac39
+        hippotranslation:locale: en
+        /hee:blockLinks[1]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Dental training in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[2]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Support in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[3]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Academic training in Yorkshire and the Humber
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:blockLinks[4]:
+          jcr:primaryType: hee:linkBlock
+          hee:blockTitle: Information for international dentists
+          /hee:blockLink:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <ul>
+             <li><strong><a href="about_1">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_4">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_2">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+             <li><strong><a href="about_3">Foundation Training</a></strong>: For dentists who've qualified to develop their skills and become eligible to work for NHS in England.</li>
+            </ul>
+          /about:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_1:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_2:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_3:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /about_4:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: c00b5009-8337-4955-8d70-d173191133fe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []

@@ -928,7 +928,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c2a82e35-2945-4350-825d-b56c7d46f68d
     hippo:name: Introduction
-    hippo:versionHistory: 893201b1-600d-4b81-b91c-bd46e45130ba
+    hippo:versionHistory: a6cdd175-f212-43e6-be22-6e77c966a325
     /introduction[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -941,7 +941,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-15T20:12:37.050+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-22T02:39:09.292+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1031,6 +1031,11 @@
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
       /hee:contentBlocks[4]:
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      /hee:contentBlocks[5]:
         jcr:primaryType: hee:StatementBlock
         hee:statement: "blah blah \r\n\r\nhello"
         hee:title: Another statement block
@@ -1048,7 +1053,7 @@
         /hee:richStatement:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[5]:
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1063,7 +1068,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[6]:
+      /hee:contentBlocks[7]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1078,7 +1083,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[7]:
+      /hee:contentBlocks[8]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1148,7 +1153,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[8]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:blockLinksReference
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
@@ -1165,9 +1170,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-15T20:12:37.050+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-22T02:39:09.292+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-06-15T20:12:40.319+01:00
+      hippostdpubwf:publicationDate: 2021-06-22T02:39:12.949+01:00
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1256,6 +1261,11 @@
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
       /hee:contentBlocks[4]:
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      /hee:contentBlocks[5]:
         jcr:primaryType: hee:StatementBlock
         hee:statement: "blah blah \r\n\r\nhello"
         hee:title: Another statement block
@@ -1273,7 +1283,7 @@
         /hee:richStatement:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[5]:
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1288,7 +1298,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[6]:
+      /hee:contentBlocks[7]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1303,7 +1313,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[7]:
+      /hee:contentBlocks[8]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1373,7 +1383,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[8]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:blockLinksReference
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
@@ -1390,7 +1400,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-15T20:12:37.153+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-22T02:37:26.809+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1480,6 +1490,11 @@
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
       /hee:contentBlocks[4]:
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      /hee:contentBlocks[5]:
         jcr:primaryType: hee:StatementBlock
         hee:statement: "blah blah \r\n\r\nhello"
         hee:title: Another statement block
@@ -1497,7 +1512,7 @@
         /hee:richStatement:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[5]:
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1512,7 +1527,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[6]:
+      /hee:contentBlocks[7]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1527,7 +1542,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[7]:
+      /hee:contentBlocks[8]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1597,7 +1612,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[8]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:blockLinksReference
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
