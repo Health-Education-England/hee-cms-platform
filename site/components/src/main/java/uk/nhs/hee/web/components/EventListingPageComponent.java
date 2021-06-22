@@ -11,7 +11,7 @@ import org.hippoecm.repository.util.DateTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
-import uk.nhs.hee.web.constants.HeeNodeType;
+import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import javax.jcr.NodeIterator;
@@ -59,7 +59,7 @@ public class EventListingPageComponent extends ListingPageComponent {
             final Filter filter = query.createFilter();
             final Calendar yearCalendar = Calendar.getInstance();
             yearCalendar.set(Calendar.YEAR, Integer.parseInt(year));
-            filter.addBetween(HeeNodeType.DATE, yearCalendar, yearCalendar, DateTools.Resolution.YEAR);
+            filter.addBetween(HEEField.DATE.getName(), yearCalendar, yearCalendar, DateTools.Resolution.YEAR);
             baseFilter.addOrFilter(filter);
         }
 
@@ -85,7 +85,7 @@ public class EventListingPageComponent extends ListingPageComponent {
 
             while (eventNodeIterator.hasNext()) {
                 eventYearsSet.add(eventNodeIterator.nextNode()
-                        .getProperty(HeeNodeType.DATE).getDate().get(Calendar.YEAR));
+                        .getProperty(HEEField.DATE.getName()).getDate().get(Calendar.YEAR));
             }
         } catch (final RepositoryException e) {
             LOGGER.error("Caught {} while extracting distinct event years from 'hee:event' documents",

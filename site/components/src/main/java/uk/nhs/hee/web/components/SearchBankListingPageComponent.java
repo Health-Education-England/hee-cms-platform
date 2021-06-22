@@ -13,29 +13,28 @@ import uk.nhs.hee.web.utils.HstUtils;
 import java.util.List;
 
 /**
- * Base component for Case Study Listing Page.
+ * Base component for Search Bank Listing Page.
  */
 @ParametersInfo(type = ListingPageComponentInfo.class)
-public class CaseStudyListingPageComponent extends ListingPageComponent {
+public class SearchBankListingPageComponent extends ListingPageComponent {
 
-    private static final String IMPACT_GROUP_QUERY_PARAM = "impactGroup";
+    private static final String TOPIC_QUERY_PARAM = "topic";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        request.setModel("selectedImpactGroups", HstUtils.getQueryParameterValues(request, IMPACT_GROUP_QUERY_PARAM));
+        request.setModel("selectedTopics", HstUtils.getQueryParameterValues(request, TOPIC_QUERY_PARAM));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
 
-        request.setModel("impactGroupMap", getFilterValueListMap(request));
-        request.setModel("impactTypesMap", getValueListMapByIdentifier("caseStudyImpactTypes"));
-        request.setModel("sectorMap", getValueListMapByIdentifier("caseStudySectors"));
-        request.setModel("regionMap", getValueListMapByIdentifier("regions"));
+        request.setModel("topicMap", getFilterValueListMap(request));
+        request.setModel("keyTermMap", getValueListMapByIdentifier("searchBankKeyTerms"));
+        request.setModel("providerMap", getValueListMapByIdentifier("searchBankProviders"));
     }
 
     @Override
     protected Filter createQueryFilters(final HstRequest request, final HstQuery query) throws FilterException {
-        return createImpactGroupFilter(request, query);
+        return createTopicsFilter(request, query);
     }
 
     /**
@@ -47,8 +46,8 @@ public class CaseStudyListingPageComponent extends ListingPageComponent {
      * @return the {@link Filter} instance built based on the requested impactedGroups.
      * @throws FilterException thrown when an error occurs during Query Filter build.
      */
-    private Filter createImpactGroupFilter(final HstRequest request, final HstQuery query) throws FilterException {
-        final List<String> impactGroupFilter = HstUtils.getQueryParameterValues(request, IMPACT_GROUP_QUERY_PARAM);
-        return createOrFilter(query, impactGroupFilter, HEEField.IMPACT_GROUP.getName());
+    private Filter createTopicsFilter(final HstRequest request, final HstQuery query) throws FilterException {
+        final List<String> impactGroupFilter = HstUtils.getQueryParameterValues(request, TOPIC_QUERY_PARAM);
+        return createOrFilter(query, impactGroupFilter, HEEField.TOPICS.getName());
     }
 }

@@ -125,48 +125,53 @@
     </#list>
 </#macro>
 
-<#macro searchbankListItem items categoriesMap>
+<#macro searchbankListItem items topicMap keyTermMap providerMap>
     <#list items as item>
-        <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument>
-            <@hst.param name="forceDownload" value="true"/>
-        </@hst.link>
+        <#if item.strategyDocument?? && item.strategyDocument.mimeType != 'application/vnd.hippo.blank'>
+            <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument>
+                <@hst.param name="forceDownload" value="true"/>
+            </@hst.link>
+        <#else>
+            <#assign strategyDocumentURL=''/>
+        </#if>
 
         <h3>
-            <#if strategyDocumentURL??>
+            <#if strategyDocumentURL?has_content>
                 <a href="${strategyDocumentURL}" target="_blank">${item.title}</a>
             <#else>
                 ${item.title}
             </#if>
         </h3>
-        <p>${item.description}</p>
 
         <dl class="nhsuk-summary-list">
-            <#assign categories>${item.categories?map(category -> categoriesMap[category])?join(', ')}</#assign>
-            <#if categories??>
+            <#assign topics>${item.topics?map(topic -> topicMap[topic])?join(', ')}</#assign>
+            <#if topics??>
                 <@fmt.message key="searchbank.topics" var="topicLabel"/>
                 <@listItemRow key="${topicLabel}">
-                    ${categories}
+                    ${topics}
                 </@listItemRow>
             </#if>
 
-            <#if item.details??>
-                <@fmt.message key="searchbank.details" var="detailsLabel"/>
-                <@listItemRow key="${detailsLabel}">
-                    ${item.details}
+            <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm])?join(', ')}</#assign>
+            <#if keyTerms??>
+                <@fmt.message key="searchbank.key_terms" var="keyTermsLabel"/>
+                <@listItemRow key="${keyTermsLabel}">
+                    ${keyTerms}
                 </@listItemRow>
             </#if>
 
-            <#if strategyDocumentURL??>
+            <#if strategyDocumentURL?has_content>
                 <@fmt.message key="searchbank.strategies" var="strategiesLabel"/>
                 <@listItemRow key="${strategiesLabel}">
                     <a href="${strategyDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_strategy"/></a>
                 </@listItemRow>
             </#if>
 
-            <@hst.link var="searchDocumentURL" hippobean=item.searchDocument>
-                <@hst.param name="forceDownload" value="true"/>
-            </@hst.link>
-            <#if searchDocumentURL??>
+            <#if item.searchDocument?? && item.searchDocument.mimeType != 'application/vnd.hippo.blank'>
+                <@hst.link var="searchDocumentURL" hippobean=item.searchDocument>
+                    <@hst.param name="forceDownload" value="true"/>
+                </@hst.link>
+
                 <@fmt.message key="searchbank.search" var="searchLabel"/>
                 <@listItemRow key="${searchLabel}">
                     <a href="${searchDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_search"/></a>
@@ -180,10 +185,10 @@
                 </@listItemRow>
             </#if>
 
-            <#if item.provider??>
+            <#if item.provider?has_content>
                 <@fmt.message key="searchbank.provider" var="providerLabel"/>
                 <@listItemRow key="${providerLabel}">
-                    ${item.provider}
+                    ${providerMap[item.provider]}
                 </@listItemRow>
             </#if>
         </dl>

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 42402c2d-ce0b-4b76-a4db-1c4e7a98260b
+          jcr:uuid: 067cf0f8-bd81-4471-93cb-c034588e7670
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,24 +23,6 @@ definitions:
             hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [required]
-          /details:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:details
-            hipposysedit:primary: false
-            hipposysedit:type: Text
             hipposysedit:validators: [required]
           /strategies:
             jcr:primaryType: hipposysedit:field
@@ -69,6 +51,15 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:resource
             hipposysedit:validators: [optional]
+          /topics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:topics
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
           /provider:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -76,17 +67,15 @@ definitions:
             hipposysedit:ordered: false
             hipposysedit:path: hee:provider
             hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [optional]
-          /categories:
+            hipposysedit:type: DynamicDropdown
+          /keyTerms:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:categories
+            hipposysedit:path: hee:keyTerms
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -99,14 +88,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          hee:description: ''
-          hee:details: ''
-          hee:provider: ''
-          jcr:uuid: 79a225d7-fe19-4286-aa54-6fa5e7b595a0
+          jcr:uuid: f5678485-22e4-468b-b153-11cb10960871
           hippostdpubwf:lastModificationDate: 2021-05-10T09:26:01.512+01:00
           hippostdpubwf:creationDate: 2021-05-10T09:26:01.513+01:00
           hee:categories: []
           hee:completedDate: 0001-01-01T12:00:00Z
+          hee:topics: []
+          hee:provider: ''
+          hee:keyTerms: []
           /hee:strategyDocument:
             jcr:primaryType: hippo:resource
             hippo:filename: hippo:resource
@@ -144,18 +133,10 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /description:
-            jcr:primaryType: frontend:plugin
-            caption: Description
-            field: description
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /categories:
+          /topics:
             jcr:primaryType: frontend:plugin
             caption: Topics
-            field: categories
+            field: topics
             multiselect.type: palette
             palette.alloworder: true
             palette.maxrows: '10'
@@ -166,14 +147,20 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/kls/searchbanktopics
-          /details:
+          /keyTerms:
             jcr:primaryType: frontend:plugin
-            caption: Details
-            field: details
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Key Terms
+            field: keyTerms
+            multiselect.type: palette
+            palette.alloworder: true
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/kls/searchbankkeyterms
           /strategyDocument:
             jcr:primaryType: frontend:plugin
             caption: String / Strategies Document
@@ -205,8 +192,10 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Provider
             field: provider
-            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              orientation: vertical
+              source: /content/documents/administration/valuelists/kls/searchbankproviders

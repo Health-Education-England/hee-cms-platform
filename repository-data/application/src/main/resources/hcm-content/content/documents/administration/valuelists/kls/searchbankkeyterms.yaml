@@ -1,0 +1,20 @@
+/content/documents/administration/valuelists/kls/searchbankkeyterms:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: fdc7f222-01fc-447d-b704-c6c3d87bf3e5
+  hippo:name: SearchBankKeyTerms
+  /searchbankkeyterms:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: e931080b-e0b9-4bfa-9262-660a2db8c2da
+    hippo:availability: [live, preview]
+    hippotranslation:id: 242c8581-1695-48af-8f25-c2da070fd08e
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: environmental_microbiology
+      selection:label: ENVIRONMENTAL MICROBIOLOGY
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: medical_records
+      selection:label: MEDICAL RECORDS
