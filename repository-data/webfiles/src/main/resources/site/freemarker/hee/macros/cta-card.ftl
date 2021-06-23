@@ -13,17 +13,17 @@
         </#if>
         <#if ctaCard.ctaCardContentBlock.ctaLink.text?has_content && link?has_content>
             <div class="nhsuk-grid-column-one-third">
-            <div class="nhsuk-card nhsuk-card--clickable">
-                <div class="nhsuk-card__content">
-                    <h2 class="nhsuk-card__heading">
-                        ${ctaCard.ctaCardContentBlock.title}
-                    </h2>
-                    <p class="nhsuk-card__description"><@hst.html hippohtml=ctaCard.ctaCardContentBlock.ctaText/></p>
-                    <a class="nhsuk-button" href="${link}" draggable="false">
-                        ${ctaCard.ctaCardContentBlock.ctaLink.text}
-                    </a>
+                <div class="nhsuk-card nhsuk-card--clickable">
+                    <div class="nhsuk-card__content">
+                        <h3 class="nhsuk-card__heading">
+                            ${ctaCard.ctaCardContentBlock.title}
+                        </h3>
+                        <p class="nhsuk-card__description">${ctaCard.ctaCardContentBlock.description}</p>
+                        <a class="nhsuk-button" href="${link}" draggable="false" ${openInNewWindow?then('target="_blank"', '')}>
+                            ${ctaCard.ctaCardContentBlock.ctaLink.text}
+                        </a>
+                    </div>
                 </div>
-            </div>
             </div>
         </#if>
     </#if>

@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 67568d47-d105-462e-8c46-900aad78dfe4
+    hippo:versionHistory: c14e7dec-fac7-4c09-ab99-d4e1dd31b117
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -25,7 +25,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-07T07:36:17.824+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-23T01:25:35.336+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -183,6 +183,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
       /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c9d58420-ae91-42a8-a19d-82c7f78a3bd8
+      /hee:rightHandBlocks[2]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -237,7 +242,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[2]:
+      /hee:rightHandBlocks[3]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Second Quick Links
         /hee:links:
@@ -253,7 +258,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[3]:
+      /hee:rightHandBlocks[4]:
         jcr:primaryType: hee:contactCardReference
         /hee:content:
           jcr:primaryType: hippo:mirror
@@ -281,12 +286,12 @@
           /hee:contentItem:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
-      /hee:rightHandBlocks[4]:
+      /hee:rightHandBlocks[5]:
         jcr:primaryType: hee:externalLinksCardReference
         /hee:externalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
-      /hee:rightHandBlocks[5]:
+      /hee:rightHandBlocks[6]:
         jcr:primaryType: hee:fileLinksCardReference
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
@@ -328,7 +333,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-07T07:36:08.689+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-23T01:25:35.448+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -486,6 +491,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
       /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c9d58420-ae91-42a8-a19d-82c7f78a3bd8
+      /hee:rightHandBlocks[2]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -540,7 +550,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[2]:
+      /hee:rightHandBlocks[3]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Second Quick Links
         /hee:links:
@@ -556,7 +566,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[3]:
+      /hee:rightHandBlocks[4]:
         jcr:primaryType: hee:contactCardReference
         /hee:content:
           jcr:primaryType: hippo:mirror
@@ -584,12 +594,12 @@
           /hee:contentItem:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
-      /hee:rightHandBlocks[4]:
+      /hee:rightHandBlocks[5]:
         jcr:primaryType: hee:externalLinksCardReference
         /hee:externalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
-      /hee:rightHandBlocks[5]:
+      /hee:rightHandBlocks[6]:
         jcr:primaryType: hee:fileLinksCardReference
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
@@ -631,9 +641,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-07T07:36:17.824+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-23T01:25:35.336+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-06-07T07:36:19.814+01:00
+      hippostdpubwf:publicationDate: 2021-06-23T01:25:39.371+01:00
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -790,6 +800,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
       /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c9d58420-ae91-42a8-a19d-82c7f78a3bd8
+      /hee:rightHandBlocks[2]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -844,7 +859,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[2]:
+      /hee:rightHandBlocks[3]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Second Quick Links
         /hee:links:
@@ -860,7 +875,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[3]:
+      /hee:rightHandBlocks[4]:
         jcr:primaryType: hee:contactCardReference
         /hee:content:
           jcr:primaryType: hippo:mirror
@@ -888,12 +903,12 @@
           /hee:contentItem:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
-      /hee:rightHandBlocks[4]:
+      /hee:rightHandBlocks[5]:
         jcr:primaryType: hee:externalLinksCardReference
         /hee:externalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
-      /hee:rightHandBlocks[5]:
+      /hee:rightHandBlocks[6]:
         jcr:primaryType: hee:fileLinksCardReference
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
@@ -928,7 +943,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c2a82e35-2945-4350-825d-b56c7d46f68d
     hippo:name: Introduction
-    hippo:versionHistory: a3906516-0af3-4603-beb8-b204fab623ad
+    hippo:versionHistory: e6c7417d-202b-4656-b36d-956c7fc7306b
     /introduction[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -941,7 +956,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-16T13:26:29.220+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-23T01:51:49.287+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1094,6 +1109,16 @@
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
       /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c9d58420-ae91-42a8-a19d-82c7f78a3bd8
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
+      /hee:rightHandBlocks[3]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -1148,11 +1173,6 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[2]:
-        jcr:primaryType: hee:ctaCardReference
-        /hee:ctaCardContentBlock:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
     /introduction[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -1165,9 +1185,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-16T13:26:29.220+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-23T01:51:49.287+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-06-16T13:26:32.767+01:00
+      hippostdpubwf:publicationDate: 2021-06-23T02:13:03.207+01:00
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1319,6 +1339,16 @@
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
       /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c9d58420-ae91-42a8-a19d-82c7f78a3bd8
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
+      /hee:rightHandBlocks[3]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -1373,11 +1403,6 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[2]:
-        jcr:primaryType: hee:ctaCardReference
-        /hee:ctaCardContentBlock:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
     /introduction[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -1390,7 +1415,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-06-16T13:22:02.245+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-23T01:51:49.431+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1543,6 +1568,16 @@
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
       /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c9d58420-ae91-42a8-a19d-82c7f78a3bd8
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
+      /hee:rightHandBlocks[3]:
         jcr:primaryType: hee:QuickLinks
         hee:title: Related posts
         /hee:links[1]:
@@ -1597,8 +1632,3 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:rightHandBlocks[2]:
-        jcr:primaryType: hee:ctaCardReference
-        /hee:ctaCardContentBlock:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0

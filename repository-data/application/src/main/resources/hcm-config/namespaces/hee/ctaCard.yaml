@@ -11,28 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 22f5da1b-ddcc-47e3-b43a-92fd4fdf25ee
+          jcr:uuid: 420d4176-e9e5-4da1-82d9-d38e2d84e70f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:title
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [required]
-          /ctaText:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:ctaText
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
-            hipposysedit:validators: [required]
           /ctaLink:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -42,6 +24,24 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hee:link
             hipposysedit:validators: [required]
+          /string:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -54,16 +54,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 87c91b07-c69d-4467-b5f8-d63ae098eff5
+          jcr:uuid: 490500f4-22e8-4a16-95e4-88a34954f6f2
           hippostdpubwf:lastModificationDate: 2021-06-16T13:17:42.808+01:00
           hippostdpubwf:creationDate: 2021-06-16T13:17:42.808+01:00
-          /hee:ctaText:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          hee:description: ''
           /hee:ctaLink:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 3ea5d8f0-5134-40b1-a1b6-4763a3ed57b2
+            jcr:uuid: fe9dd33c-b91b-4c52-95f1-1c95d296cf2b
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -91,17 +89,19 @@ definitions:
           /title:
             jcr:primaryType: frontend:plugin
             caption: Title
-            field: title
+            field: string
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /ctaText:
+          /description:
             jcr:primaryType: frontend:plugin
-            caption: CTA Text
-            field: ctaText
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Description
+            field: description
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /ctaLink:

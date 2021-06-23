@@ -2,7 +2,6 @@ package uk.nhs.hee.web.beans;
 
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
-import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import uk.nhs.hee.web.beans.Link;
 
 @HippoEssentialsGenerated(internalName = "hee:ctaCard")
@@ -13,9 +12,9 @@ public class CtaCard extends BaseDocument {
         return getSingleProperty("hee:title");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:ctaText")
-    public HippoHtml getCtaText() {
-        return getHippoHtml("hee:ctaText");
+    @HippoEssentialsGenerated(internalName = "hee:description")
+    public String getDescription() {
+        return getSingleProperty("hee:description");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:ctaLink")
