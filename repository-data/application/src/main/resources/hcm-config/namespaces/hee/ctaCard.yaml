@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 420d4176-e9e5-4da1-82d9-d38e2d84e70f
+          jcr:uuid: b5bf2167-a71e-435b-99fb-f9f41e14b4b9
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,7 +24,7 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hee:link
             hipposysedit:validators: [required]
-          /string:
+          /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -54,14 +54,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 490500f4-22e8-4a16-95e4-88a34954f6f2
+          jcr:uuid: 07aff17c-6f17-4d09-ab1a-32002ab0c0ac
           hippostdpubwf:lastModificationDate: 2021-06-16T13:17:42.808+01:00
           hippostdpubwf:creationDate: 2021-06-16T13:17:42.808+01:00
           hee:description: ''
           /hee:ctaLink:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: fe9dd33c-b91b-4c52-95f1-1c95d296cf2b
+            jcr:uuid: cf5b46d4-373a-4750-9bcf-217fe86716e5
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -89,7 +89,7 @@ definitions:
           /title:
             jcr:primaryType: frontend:plugin
             caption: Title
-            field: string
+            field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
