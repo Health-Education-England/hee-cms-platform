@@ -1,0 +1,13 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="customChannelManagerEventListeners" class="org.springframework.beans.factory.config.ListFactoryBean">
+        <property name="sourceList">
+            <list>
+                <bean id="postBluePrintChannelCreationTasksListener" class="uk.nhs.hee.web.configuration.channel.listener.PostBluePrintChannelCreationTasksListener"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>
