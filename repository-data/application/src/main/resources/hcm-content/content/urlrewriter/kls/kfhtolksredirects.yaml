@@ -1,9 +1,10 @@
 /content/urlrewriter/kls/kfhtolksredirects:
+  .meta:order-before: hometoknowledgestaffredirect
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 3e5c8fac-e733-40e0-8151-f78e9d2253de
   hippo:name: KFHToLKSRedirects
-  hippo:versionHistory: 7536197e-e284-46dd-a3f1-8148ba92b71a
+  hippo:versionHistory: b00ff53a-2848-448c-8eb2-4f6f50e93920
   /kfhtolksredirects[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:versionable']
@@ -13,9 +14,15 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-06-23T15:03:02.060+01:00
+    hippostdpubwf:lastModificationDate: 2021-07-01T10:19:53.417+01:00
     hippostdpubwf:lastModifiedBy: admin
-    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+    urlrewriter:rule: "<rule>\r\n  <name>kfh.libraryservices.nhs.uk to library.hee.nhs.uk\
+      \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
+      \ in order to ensure that the domain level redirect happens first before any\
+      \ of the following redirects are processed</note>\r\n  <condition name=\"host\"\
+      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <from>^(.*)$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">https://library.hee.nhs.uk$1</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/database/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
       true\">/quality-and-impact/value-and-impact/case-studies-impact</to>\r\n</rule>\r\
       \n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
@@ -1683,9 +1690,15 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-06-23T15:02:58.576+01:00
+    hippostdpubwf:lastModificationDate: 2021-07-01T10:19:46.754+01:00
     hippostdpubwf:lastModifiedBy: admin
-    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+    urlrewriter:rule: "<rule>\r\n  <name>kfh.libraryservices.nhs.uk to library.hee.nhs.uk\
+      \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
+      \ in order to ensure that the domain level redirect happens first before any\
+      \ of the following redirects are processed</note>\r\n  <condition name=\"host\"\
+      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <from>^(.*)$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">https://library.hee.nhs.uk$1</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/database/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
       true\">/quality-and-impact/value-and-impact/case-studies-impact</to>\r\n</rule>\r\
       \n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
@@ -3353,10 +3366,16 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-06-23T15:03:02.060+01:00
+    hippostdpubwf:lastModificationDate: 2021-07-01T10:19:53.417+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-06-23T15:03:06.867+01:00
-    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+    hippostdpubwf:publicationDate: 2021-07-01T10:19:55.845+01:00
+    urlrewriter:rule: "<rule>\r\n  <name>kfh.libraryservices.nhs.uk to library.hee.nhs.uk\
+      \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
+      \ in order to ensure that the domain level redirect happens first before any\
+      \ of the following redirects are processed</note>\r\n  <condition name=\"host\"\
+      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <from>^(.*)$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">https://library.hee.nhs.uk$1</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/database/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
       true\">/quality-and-impact/value-and-impact/case-studies-impact</to>\r\n</rule>\r\
       \n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\

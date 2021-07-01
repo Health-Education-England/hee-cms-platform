@@ -21,3 +21,15 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/lks
+        /libraryservices:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:virtualhost
+          /kfh:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:virtualhost
+            /hst:root:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:homepage: root
+              hst:locale: en
+              hst:mountpoint: /hst:hee/hst:sites/lks
