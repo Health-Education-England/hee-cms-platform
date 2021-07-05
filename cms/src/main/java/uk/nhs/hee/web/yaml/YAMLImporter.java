@@ -15,6 +15,7 @@ import javax.jcr.Session;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.CodeSource;
@@ -129,12 +130,21 @@ public class YAMLImporter {
                 parentNode);
     }
 
-    private String getParentNodePath(final String plainYaml) {
-        // Get the first line of the YAML which should essentially contain the node path.
-        final String nodePath = plainYaml.split(System.lineSeparator())[0];
+    private String getParentNodePath(final String plainYaml) throws IOException {
+        try {
+            // Get the first line of the YAML which should essentially contain the node path.
+            final String nodePath = IOUtils.readLines(new StringReader(plainYaml)).get(0);
 
-        // Returns parent node path of the node
-        return nodePath.substring(0, nodePath.lastIndexOf('/'));
+            // Returns parent node path of the node
+            return nodePath.substring(0, nodePath.lastIndexOf('/'));
+        } catch (final IOException e) {
+            LOGGER.error(
+                    "Caught error {} while retrieving parent node path from YAML: {}",
+                    e.getMessage(),
+                    plainYaml,
+                    e);
+            throw e;
+        }
     }
 
     /**
