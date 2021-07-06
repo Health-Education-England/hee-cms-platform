@@ -1,0 +1,6 @@
+/content/gallery/{{ channelId }}:
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  hippo:name: {{ channelName }}
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hee:imagesetWithCaption']

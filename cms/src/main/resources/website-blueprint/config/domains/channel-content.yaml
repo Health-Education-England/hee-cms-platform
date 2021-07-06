@@ -1,0 +1,41 @@
+/hippo:configuration/hippo:domains/content-{{ channelId }}:
+  jcr:primaryType: hipposys:domain
+  /content-domain:
+    jcr:primaryType: hipposys:domainrule
+    /{{ channelId }}-content-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: true
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/documents/{{ channelId }}
+  /author:
+    jcr:primaryType: hipposys:authrole
+    hipposys:groups: [ {{ channelId }}-author ]
+    hipposys:role: author
+    hipposys:users: [ ]
+  /editor:
+    jcr:primaryType: hipposys:authrole
+    hipposys:groups: [ {{ channelId }}-editor ]
+    hipposys:role: editor
+    hipposys:users: [ ]
+  /gallery-domain:
+    jcr:primaryType: hipposys:domainrule
+    /{{ channelId }}-gallery-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: true
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/gallery/{{ channelId }}
+  /assets-domain:
+    jcr:primaryType: hipposys:domainrule
+    /{{ channelId }}-assets-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: true
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/assets/{{ channelId }}
+  /readonly:
+    jcr:primaryType: hipposys:authrole
+    hipposys:groups: [ {{ channelId }}-reader ]
+    hipposys:role: readonly
+    hipposys:users: [ ]
