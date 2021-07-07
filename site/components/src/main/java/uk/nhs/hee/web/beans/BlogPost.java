@@ -36,11 +36,6 @@ public class BlogPost extends BaseDocument {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:QuickLinks")
-    public QuickLinks getQuickLinks() {
-        return getBean("hee:QuickLinks", QuickLinks.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:publicationDate")
     public Calendar getPublicationDate() {
         return getSingleProperty("hee:publicationDate");

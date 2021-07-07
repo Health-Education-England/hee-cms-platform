@@ -5,6 +5,31 @@ definitions:
         jcr:primaryType: hst:configuration
         /hst:sitemap:
           jcr:primaryType: hst:sitemap
+          /pagenotfound:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/pagenotfound
+            hst:pagetitle: Not Found Page
+            hst:refId: pagenotfound
+          /_any_:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/pagenotfound
+          /root:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/homepage
+            hst:pagetitle: Home
+            hst:refId: root
+            hst:relativecontentpath: home
+          /search:
+            jcr:primaryType: hst:sitemapitem
+            hst:hiddeninchannelmanager: true
+            hst:parameternames: [excludedForBreadcrumb]
+            hst:parametervalues: ['true']
+            hst:refId: search
+            /results:
+              jcr:primaryType: hst:sitemapitem
+              hst:componentconfigurationid: hst:pages/searchresults
+              hst:pagetitle: Search
+              hst:relativecontentpath: listing-pages/search-results
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:
@@ -76,6 +101,9 @@ definitions:
           /casestudylisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/casestudylisting-main.ftl
+          /searchbanklisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/searchbanklisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -112,7 +140,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin, Blog & Search Bank]
+              hst:label: Category based Listing Page [Bulletin & Blog]
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -132,6 +160,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Case Study Listing Page
               hst:template: casestudylisting-main
+            /search-bank-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.SearchBankListingPageComponent
+              hst:iconpath: images/catalog-component-icons/generic-list.svg
+              hst:label: Search Bank Listing Page
+              hst:template: searchbanklisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

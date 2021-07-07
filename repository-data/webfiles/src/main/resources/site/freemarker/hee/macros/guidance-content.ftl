@@ -73,6 +73,9 @@
                                 <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
                                     <@hee.fileLinksCard card=block.fileLinksCard/>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.CtaCardReference">
+                                    <@hee.ctaCard ctaCard=block/>
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>

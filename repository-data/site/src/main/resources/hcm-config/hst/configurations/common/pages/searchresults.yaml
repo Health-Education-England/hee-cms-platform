@@ -1,11 +1,11 @@
 definitions:
   config:
-    /hst:hst/hst:configurations/lks/hst:pages/searchresults:
+    /hst:hst/hst:configurations/common/hst:pages/searchresults:
       jcr:primaryType: hst:component
       hst:referencecomponent: hst:abstractpages/base
       /main:
         jcr:primaryType: hst:component
         hst:componentclassname: uk.nhs.hee.web.components.SearchResultsComponent
-        hst:template: searchresults-main
         hst:parameternames: [document]
         hst:parametervalues: [listing-pages/search-results]
+        hst:template: searchresults-main

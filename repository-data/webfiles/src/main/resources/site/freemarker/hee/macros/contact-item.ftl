@@ -11,7 +11,7 @@
                 <#if block.display?seq_contains("image") && item.contentItem.image??>
                     <@hst.link var="personImage" hippobean=item.contentItem.image/>
                     <div class="nhsuk-contact__img-container">
-                        <img class="nhsuk-contact__img" src="${personImage}" alt="${item.contentItem.image.description}">
+                        <img class="nhsuk-contact__img" src="${personImage}" alt="${item.contentItem.image.description!}">
                     </div>
                 </#if>
 

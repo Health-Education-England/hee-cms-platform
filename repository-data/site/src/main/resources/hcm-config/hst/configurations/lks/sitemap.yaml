@@ -2,31 +2,6 @@ definitions:
   config:
     /hst:hst/hst:configurations/lks/hst:sitemap:
       jcr:primaryType: hst:sitemap
-      /root:
-        jcr:primaryType: hst:sitemapitem
-        hst:componentconfigurationid: hst:pages/homepage
-        hst:pagetitle: Home
-        hst:refId: root
-        hst:relativecontentpath: home
-      /_any_:
-        jcr:primaryType: hst:sitemapitem
-        hst:componentconfigurationid: hst:pages/pagenotfound
-      /pagenotfound:
-        jcr:primaryType: hst:sitemapitem
-        hst:componentconfigurationid: hst:pages/pagenotfound
-        hst:pagetitle: Not Found Page
-        hst:refId: pagenotfound
-      /search:
-        jcr:primaryType: hst:sitemapitem
-        hst:refId: search
-        hst:hiddeninchannelmanager: true
-        hst:parameternames: [excludedForBreadcrumb]
-        hst:parametervalues: ['true']
-        /results:
-          jcr:primaryType: hst:sitemapitem
-          hst:componentconfigurationid: hst:pages/searchresults
-          hst:pagetitle: Search
-          hst:relativecontentpath: listing-pages/search-results
       /knowledge-staff:
         jcr:primaryType: hst:sitemapitem
         hst:componentconfigurationid: hst:pages/homepage
