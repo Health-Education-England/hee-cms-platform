@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype[1]:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: 50e00344-97c7-48b0-8a2f-6cc2abcbfd1e
+          jcr:uuid: aa0e4d7a-9b01-40f2-b295-878ee216bcfb
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,12 +39,21 @@ definitions:
             hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
+          /columns:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:columns
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype[1]:
           jcr:primaryType: hee:blockLinks
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 7c9458fc-337f-4ee9-accc-8a6a02c188e3
+          jcr:uuid: a2a429d0-1f70-4431-97be-74d8748622dd
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -54,6 +63,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
+          hee:columns: Two
           /hee:blockLinks:
             jcr:primaryType: hee:linkBlock
             hee:blockTitle: ''
@@ -101,3 +111,13 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /columns:
+            jcr:primaryType: frontend:plugin
+            caption: Number of Columns
+            field: columns
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: Two,One

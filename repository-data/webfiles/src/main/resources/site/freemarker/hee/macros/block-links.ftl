@@ -6,8 +6,12 @@
                     <h2>${block.blockLinksContentBlock.title}</h2>
                     <p><@hst.html hippohtml=block.blockLinksContentBlock.description/></p>
                 </div>
-
-                <ul class="nhsuk-list-signage nhsuk-list-signage--two-columns">
+                <#if block.blockLinksContentBlock.columns == "One">
+                    <#assign colClass = " nhsuk-list-blocklinks--one-column">
+                <#elseif  block.blockLinksContentBlock.columns == "Two">
+                    <#assign colClass = " nhsuk-list-blocklinks--two-columns">
+                </#if>
+                <ul class="nhsuk-list-blocklinks${colClass}">
                     <#list block.blockLinksContentBlock.blockLinks as linkBlock>
                         <li>
                             <a href="<@hst.link hippobean=linkBlock.blockLink/>">
