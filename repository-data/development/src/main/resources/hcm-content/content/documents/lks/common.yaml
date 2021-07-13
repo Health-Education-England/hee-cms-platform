@@ -2418,3 +2418,66 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /videos:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 39e4e66f-2238-4a15-8c6b-f3bda7bfa007
+    hippo:name: Videos
+    hippostd:foldertype: [new-video-folder, new-video-document]
+    hippotranslation:id: a1687215-3b90-4ee8-8bbe-5eb227c384d5
+    hippotranslation:locale: en
+    /video-test:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 8e51e831-2f7e-46a6-a13a-2bd818d826c0
+      hippo:name: Video Test
+      hippo:versionHistory: f4c864ca-6d40-4b1e-b1c5-ed74cba36dd2
+      /video-test[1]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 41ae1c1b-e1c3-4c84-a234-c8ed33d4acd7
+        hee:embedVideo: <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAc5Rscs80E"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-07-13T11:51:18.234+01:00
+        hippostdpubwf:lastModificationDate: 2021-07-13T11:51:18.235+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 006cca52-f91c-4602-9bb7-8e176f627bd8
+        hippotranslation:locale: en
+      /video-test[2]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 074993f1-ca9e-4677-b129-bce12f477989
+        hee:embedVideo: <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAc5Rscs80E"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-07-13T11:51:18.234+01:00
+        hippostdpubwf:lastModificationDate: 2021-07-13T11:51:38.069+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 006cca52-f91c-4602-9bb7-8e176f627bd8
+        hippotranslation:locale: en
+      /video-test[3]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 083450e3-6d6e-4a69-a57f-947b1e9dd27c
+        hee:embedVideo: <iframe width="560" height="315" src="https://www.youtube.com/embed/ZAc5Rscs80E"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-07-13T11:51:18.234+01:00
+        hippostdpubwf:lastModificationDate: 2021-07-13T11:51:38.069+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-07-13T11:51:43.798+01:00
+        hippotranslation:id: 006cca52-f91c-4602-9bb7-8e176f627bd8
+        hippotranslation:locale: en
