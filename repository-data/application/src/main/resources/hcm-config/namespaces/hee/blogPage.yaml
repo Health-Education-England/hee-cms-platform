@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5e17d160-189a-4511-a7da-496fa90fcb19
+          jcr:uuid: 54d2eec7-dd37-4e18-9ddc-3ff7b917decb
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -100,7 +100,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 519311d2-492f-4daf-824b-b6ccc8da555d
+          jcr:uuid: 7cc502bc-376c-42da-b522-72b7c597b277
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -115,11 +115,14 @@ definitions:
           /hee:comments:
             jcr:primaryType: hee:blogComment
             hee:message: ''
+            hee:postedDate: 0001-01-01T12:00:00Z
             /hee:author:
               jcr:primaryType: hee:blogCommentAuthor
               hee:email: ''
               hee:string: ''
               hee:string_: ''
+              hee:firstName: ''
+              hee:lastName: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -194,7 +197,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hee:contact,hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
+            compoundList: hee:blockLinksReference,hee:contact,hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
