@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: b73a9ad8-4e69-4eda-8805-1bc5b57ebc67
+    hippo:versionHistory: 256ed01c-6023-4459-ac9a-a56d666bfeb3
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -27,7 +27,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-05-21T17:46:56.517+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-15T14:08:00.131+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -179,6 +179,15 @@
         /hee:externalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:contentBlocks[5]:
+        jcr:primaryType: hee:blockLinksReference
+        hee:titleOverride: Block Links Title Override
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+        /hee:descOverride:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Description Override</p>
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -194,7 +203,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-05-21T17:47:06.802+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-15T14:08:00.023+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -346,6 +355,15 @@
         /hee:externalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:contentBlocks[5]:
+        jcr:primaryType: hee:blockLinksReference
+        hee:titleOverride: Block Links Title Override
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+        /hee:descOverride:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Description Override</p>
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -361,9 +379,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2021-05-21T17:47:06.802+01:00
+      hippostdpubwf:lastModificationDate: 2021-06-15T14:08:00.023+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-05-21T17:47:08.798+01:00
+      hippostdpubwf:publicationDate: 2021-06-15T14:08:38.685+01:00
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
@@ -514,3 +532,12 @@
         /hee:externalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:contentBlocks[5]:
+        jcr:primaryType: hee:blockLinksReference
+        hee:titleOverride: Block Links Title Override
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+        /hee:descOverride:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Block Links Description Override</p>
