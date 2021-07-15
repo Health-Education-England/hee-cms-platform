@@ -41,6 +41,7 @@
     <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts" xhtml=true/>
   </head>
   <body>
+    <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <!-- Google Tag Manager (noscript) -->
