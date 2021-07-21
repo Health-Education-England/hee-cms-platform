@@ -39,24 +39,24 @@
             </form>
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
-                    <div class="nhsuk-grid-column-one-third">
-                        <#-- Filters -->
-                        <@hst.renderURL var="pagelink"/>
-                        <form class="nhsuk-filter" method="get" action="${pagelink}">
-                            <@fmt.message key="filters.label" var="filtersLabel"/>
-                            <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
+<#--                    <div class="nhsuk-grid-column-one-third">-->
+<#--                        &lt;#&ndash; Filters &ndash;&gt;-->
+<#--                        <@hst.renderURL var="pagelink"/>-->
+<#--                        <form class="nhsuk-filter" method="get" action="${pagelink}">-->
+<#--                            <@fmt.message key="filters.label" var="filtersLabel"/>-->
+<#--                            <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>-->
 
-                            <div class="nhsuk-filter__groups">
-                                <@fmt.message key="filter.content_type.label" var="contentTypeLabel"/>
-                                <@fmt.message key="filter.date.label" var="dateLabel"/>
-                                <div class="nhsuk-filter__group">
-                                    <@checkboxGroup title=contentTypeLabel name="contentTypes" items=contentTypesMap selectedItemsList=selectedContentTypes />
-                                </div>
-                            </div>
-                            <input type="hidden" name="q" value="${searchText!''}">
-                        </form>
-                        <#-- End Filters -->
-                    </div>
+<#--                            <div class="nhsuk-filter__groups">-->
+<#--                                <@fmt.message key="filter.content_type.label" var="contentTypeLabel"/>-->
+<#--                                <@fmt.message key="filter.date.label" var="dateLabel"/>-->
+<#--                                <div class="nhsuk-filter__group">-->
+<#--                                    <@checkboxGroup title=contentTypeLabel name="contentTypes" items=contentTypesMap selectedItemsList=selectedContentTypes />-->
+<#--                                </div>-->
+<#--                            </div>-->
+<#--                            <input type="hidden" name="q" value="${searchText!''}">-->
+<#--                        </form>-->
+<#--                        &lt;#&ndash; End Filters &ndash;&gt;-->
+<#--                    </div>-->
 
                     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
                         <div class="nhsuk-listing__summary o-flex@tablet">
