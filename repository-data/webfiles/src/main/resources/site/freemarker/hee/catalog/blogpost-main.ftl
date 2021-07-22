@@ -33,17 +33,19 @@
                         <#-- End Author and published date -->
 
                         <#--Blog Categories -->
-                        <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-                            <#if blogListingPageURL?has_content>
-                                <#list categoriesValueListMap as key, value>
-                                    <a href=${blogListingPageURL}?category=${key}>${value}</a><#sep>, </#sep>
-                                </#list>
-                            <#else>
-                                <#list categoriesValueListMap?values as value>
-                                    ${value}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </p>
+                        <#if categoriesValueListMap?has_content>
+                            <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+                                <#if blogListingPageURL?has_content>
+                                    <#list categoriesValueListMap as key, value>
+                                        <a href=${blogListingPageURL}?category=${key}>${value}</a><#sep>, </#sep>
+                                    </#list>
+                                <#else>
+                                    <#list categoriesValueListMap?values as value>
+                                        ${value}<#sep>, </#sep>
+                                    </#list>
+                                </#if>
+                            </p>
+                        </#if>
                         <#--End Blog Categories -->
 
                         <#--Blog Summary -->
