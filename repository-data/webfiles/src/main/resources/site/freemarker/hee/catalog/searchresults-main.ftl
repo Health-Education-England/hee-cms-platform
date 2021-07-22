@@ -7,12 +7,12 @@
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
-<#-- @ftlvariable name="searchText" type="java.lang.String" -->
-<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
-<#-- @ftlvariable name="contentTypesMap" type="java.util.Map" -->
-<#-- @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Guidance, uk.nhs.hee.web.beans.LandingPage,...]" -->
-<#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
-<#-- @ftlvariable name="selectedContentTypes" type="java.util.List" -->
+<#-- @ftlvariable name="searchText" type="java.lang.String"
+ @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage"
+ @ftlvariable name="contentTypesMap" type="java.util.Map"
+ @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Guidance, uk.nhs.hee.web.beans.LandingPage,...]"
+ @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable"
+ @ftlvariable name="selectedContentTypes" type="java.util.List" -->
 
 <#if document??>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html"
@@ -25,9 +25,9 @@
             <form method="get" action="">
                 <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
                     <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
-                    <#list selectedContentTypes as contentType>
+                    <#--<#list selectedContentTypes as contentType>
                         <input type="hidden" name="contentTypes" value="${contentType}">
-                    </#list>
+                    </#list>-->
                     <input class="nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="${searchText!''}">
                     <button class="nhsuk-search__submit--search-results" type="submit">
                         <span class="nhsuk-u-visually-hidden">Submit</span>
@@ -39,24 +39,24 @@
             </form>
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
-<#--                    <div class="nhsuk-grid-column-one-third">-->
-<#--                        &lt;#&ndash; Filters &ndash;&gt;-->
-<#--                        <@hst.renderURL var="pagelink"/>-->
-<#--                        <form class="nhsuk-filter" method="get" action="${pagelink}">-->
-<#--                            <@fmt.message key="filters.label" var="filtersLabel"/>-->
-<#--                            <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>-->
+                    <#-- <div class="nhsuk-grid-column-one-third">
 
-<#--                            <div class="nhsuk-filter__groups">-->
-<#--                                <@fmt.message key="filter.content_type.label" var="contentTypeLabel"/>-->
-<#--                                <@fmt.message key="filter.date.label" var="dateLabel"/>-->
-<#--                                <div class="nhsuk-filter__group">-->
-<#--                                    <@checkboxGroup title=contentTypeLabel name="contentTypes" items=contentTypesMap selectedItemsList=selectedContentTypes />-->
-<#--                                </div>-->
-<#--                            </div>-->
-<#--                            <input type="hidden" name="q" value="${searchText!''}">-->
-<#--                        </form>-->
-<#--                        &lt;#&ndash; End Filters &ndash;&gt;-->
-<#--                    </div>-->
+                        <@hst.renderURL var="pagelink"/>
+                        <form class="nhsuk-filter" method="get" action="${pagelink}">
+                            <@fmt.message key="filters.label" var="filtersLabel"/>
+                            <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
+
+                            <div class="nhsuk-filter__groups">
+                                <@fmt.message key="filter.content_type.label" var="contentTypeLabel"/>
+                                <@fmt.message key="filter.date.label" var="dateLabel"/>
+                                <div class="nhsuk-filter__group">
+                                    <@checkboxGroup title=contentTypeLabel name="contentTypes" items=contentTypesMap selectedItemsList=selectedContentTypes />
+                                </div>
+                            </div>
+                            <input type="hidden" name="q" value="${searchText!''}">
+                        </form>
+
+                    </div> -->
 
                     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
                         <div class="nhsuk-listing__summary o-flex@tablet">
@@ -68,7 +68,7 @@
                             <#-- End Results number -->
                         </div>
 
-                        <#-- Active Filters -->
+                        <#-- Active Filters
                         <#if selectedContentTypes?has_content>
                             <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
                                 <#list selectedContentTypes as contentType>
@@ -80,7 +80,7 @@
                                 </#list>
                             </div>
                         </#if>
-                        <#-- End Active Filters -->
+                        End Active Filters -->
 
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
