@@ -205,17 +205,62 @@
             <li>
 <#--                <span class="app-search-results-category">${item.contentType}</span>-->
 
-                <#if 'uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??>
-                    <#assign pageURL=miniHubGuidancePathToURLMap[item.path]/>
-                </#if>
-
-                <h3><a href="${pageURL}">${item.title}</a></h3>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                <div class="nhsuk-review-date">
-                    <p class="nhsuk-body-s">
-                        <@fmt.message key="published_on.text"/> ${item.publishedDate}
-                    </p>
-                </div>
+                <#switch item.getClass().getName()>
+                    <#case "uk.nhs.hee.web.beans.Guidance">
+                        <#if miniHubGuidancePathToURLMap[item.path]??>
+                            <h3><a href="${miniHubGuidancePathToURLMap[item.path]}">${item.title}</a></h3>
+                            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+                            <div class="nhsuk-review-date">
+                                <p class="nhsuk-body-s">
+                                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                                </p>
+                            </div>
+                        </#if>
+                        <#break>
+                    <#case "uk.nhs.hee.web.beans.Event">
+                        <h3><a href="${item.link}">${item.title}</a></h3>
+                        <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.description!}</p>
+                        <dl class="nhsuk-summary-list">
+                            <@fmt.message key="event.date" var="dateLabel"/>
+                            <@listItemRow key="${dateLabel}">
+                                ${item.date.time?string['dd MMMM yyyy']}
+                            </@listItemRow>
+                            <@fmt.message key="event.location" var="locationLabel"/>
+                            <@listItemRow key="${locationLabel}">
+                                ${item.location}
+                            </@listItemRow>
+                        </dl>
+                        <p class="nhsuk-body-s">
+                            <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                        </p>
+                        <#break>
+                    <#case "uk.nhs.hee.web.beans.CaseStudy">
+                        <@hst.link var="pageURL" hippobean=item.document>
+                            <@hst.param name="forceDownload" value="true"/>
+                        </@hst.link>
+                        <h3><a href="${pageURL}" target="_blank">${item.title}</a></h3>
+                        <div class="nhsuk-review-date">
+                            <p class="nhsuk-body-s">
+                                <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                            </p>
+                        </div>
+                        <#break>
+                    <#case "uk.nhs.hee.web.beans.Bulletin">
+                        <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
+                        <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.overview!}</p>
+                        <#break>
+                    <#case "uk.nhs.hee.web.beans.">
+                        <#assign pageURL=item.getLink()/>
+                        <#break>
+                    <#default>
+                        <h3><a href="${pageURL}">${item.title}</a></h3>
+                        <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+                        <div class="nhsuk-review-date">
+                        <p class="nhsuk-body-s">
+                            <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                        </p>
+                        </div>${item.class.simpleName}
+                </#switch>
             </li>
         </#if>
     </#list>
