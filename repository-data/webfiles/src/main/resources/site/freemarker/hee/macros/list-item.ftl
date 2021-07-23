@@ -249,17 +249,46 @@
                         <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
                         <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.overview!}</p>
                         <#break>
-                    <#case "uk.nhs.hee.web.beans.">
-                        <#assign pageURL=item.getLink()/>
+                    <#case "uk.nhs.hee.web.beans.SearchBank">
+                        <#if item.searchDocument?? && item.searchDocument.mimeType != 'application/vnd.hippo.blank'>
+                            <@hst.link var="pageURL" hippobean=item.searchDocument>
+                                <@hst.param name="forceDownload" value="true"/>
+                            </@hst.link>
+                            <h3><a href="${pageURL}">${item.title}</a></h3>
+                            <dl class="nhsuk-summary-list">
+
+                                <#if item.strategyDocument?has_content>
+                                    <@hst.link var="strategyURL" hippobean=item.strategyDocument>
+                                        <@hst.param name="forceDownload" value="true"/>
+                                    </@hst.link>
+                                    <@fmt.message key="searchbank.strategies" var="strategiesLabel"/>
+                                    <@listItemRow key="${strategiesLabel}">
+                                        <a href="${strategyURL}" target="_blank"><@fmt.message key="searchbank.get_strategy"/></a>
+                                    </@listItemRow>
+                                </#if>
+
+                                <#if item.completedDate??>
+                                    <@fmt.message key="searchbank.completed_on" var="completedOnLabel"/>
+                                    <@listItemRow key="${completedOnLabel}">
+                                        ${item.completedDate.time?string['dd MMMM yyyy']}
+                                    </@listItemRow>
+                                </#if>
+                            </dl>
+                            <div class="nhsuk-review-date">
+                                <p class="nhsuk-body-s">
+                                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                                </p>
+                            </div>
+                        </#if>
                         <#break>
                     <#default>
                         <h3><a href="${pageURL}">${item.title}</a></h3>
                         <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
                         <div class="nhsuk-review-date">
-                        <p class="nhsuk-body-s">
-                            <@fmt.message key="published_on.text"/> ${item.publishedDate}
-                        </p>
-                        </div>${item.class.simpleName}
+                            <p class="nhsuk-body-s">
+                                <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                            </p>
+                        </div>
                 </#switch>
             </li>
         </#if>
