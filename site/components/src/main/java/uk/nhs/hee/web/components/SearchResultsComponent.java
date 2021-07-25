@@ -28,8 +28,8 @@ public class SearchResultsComponent extends ListingPageComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        //request.setModel("contentTypesMap", buildContentMaps(request.getModel(REQUEST_ATTR_DOCUMENT)));
-        //request.setModel("selectedContentTypes", HstUtils.getQueryParameterValues(request, CONTENT_TYPE_QUERY_PARAM));
+        /* request.setModel("contentTypesMap", buildContentMaps(request.getModel(REQUEST_ATTR_DOCUMENT)));
+        request.setModel("selectedContentTypes", HstUtils.getQueryParameterValues(request, CONTENT_TYPE_QUERY_PARAM)); */
         request.setModel("searchText", request.getParameter(SEARCH_TEXT_QUERY_PARAM));
     }
 
@@ -94,11 +94,11 @@ public class SearchResultsComponent extends ListingPageComponent {
         return listingPage.getDocumentTypes();
     } */
 
-    private Map<String, String> buildContentMaps(final ListingPage listingPage) {
+    /* private Map<String, String> buildContentMaps(final ListingPage listingPage) {
         final String[] documentTypes = listingPage.getDocumentTypes();
         return Arrays.stream(documentTypes)
                 .collect(Collectors.toMap(
                         documentType -> documentType,
                         StringUtils::getDocumentTypeDisplayName));
-    }
+    } */
 }

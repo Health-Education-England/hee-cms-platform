@@ -7,12 +7,14 @@
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
-<#-- @ftlvariable name="searchText" type="java.lang.String"
- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage"
- @ftlvariable name="contentTypesMap" type="java.util.Map"
- @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Guidance, uk.nhs.hee.web.beans.LandingPage,...]"
- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable"
- @ftlvariable name="selectedContentTypes" type="java.util.List" -->
+<#-- @ftlvariable name="searchText" type="java.lang.String" -->
+<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
+<#-- @ftlvariable name="item" type="[uk.nhs.hee.web.beans.Guidance, uk.nhs.hee.web.beans.LandingPage,...]" -->
+<#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
+
+<#--  UNUSED FOR NOW  -->
+<#-- @ftlvariable name="contentTypesMap" type="java.util.Map"
+     @ftlvariable name="selectedContentTypes" type="java.util.List" -->
 
 <#if document??>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html"

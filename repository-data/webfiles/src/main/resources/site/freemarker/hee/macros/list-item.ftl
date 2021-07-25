@@ -203,20 +203,9 @@
 
         <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || (pageURL != pageNotFoundURL || ('uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??))>
             <li>
-<#--                <span class="app-search-results-category">${item.contentType}</span>-->
+                <#--  <span class="app-search-results-category">${item.contentType}</span>  -->
 
                 <#switch item.getClass().getName()>
-                    <#case "uk.nhs.hee.web.beans.Guidance">
-                        <#if miniHubGuidancePathToURLMap[item.path]??>
-                            <h3><a href="${miniHubGuidancePathToURLMap[item.path]}">${item.title}</a></h3>
-                            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                            <div class="nhsuk-review-date">
-                                <p class="nhsuk-body-s">
-                                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
-                                </p>
-                            </div>
-                        </#if>
-                        <#break>
                     <#case "uk.nhs.hee.web.beans.Event">
                         <h3><a href="${item.link}">${item.title}</a></h3>
                         <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.description!}</p>
@@ -281,6 +270,17 @@
                             </div>
                         </#if>
                         <#break>
+                    <#case "uk.nhs.hee.web.beans.Guidance">
+                        <#if miniHubGuidancePathToURLMap[item.path]??>
+                            <h3><a href="${miniHubGuidancePathToURLMap[item.path]}">${item.title}</a></h3>
+                            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+                            <div class="nhsuk-review-date">
+                                <p class="nhsuk-body-s">
+                                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
+                                </p>
+                            </div>
+                            <#break>
+                        </#if>
                     <#default>
                         <h3><a href="${pageURL}">${item.title}</a></h3>
                         <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
