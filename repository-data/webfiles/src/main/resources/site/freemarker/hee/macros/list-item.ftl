@@ -203,8 +203,6 @@
 
         <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || (pageURL != pageNotFoundURL || ('uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??))>
             <li>
-                <#--  <span class="app-search-results-category">${item.contentType}</span>  -->
-
                 <#switch item.getClass().getName()>
                     <#case "uk.nhs.hee.web.beans.Event">
                         <h3><a href="${item.link}">${item.title}</a></h3>
