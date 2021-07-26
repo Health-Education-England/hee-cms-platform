@@ -166,8 +166,8 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Categories
             field: categories
-            multiselect.type: selectlist
-            palette.alloworder: false
+            multiselect.type: palette
+            palette.alloworder: true
             palette.maxrows: '10'
             plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
             selectlist.maxrows: '10'
