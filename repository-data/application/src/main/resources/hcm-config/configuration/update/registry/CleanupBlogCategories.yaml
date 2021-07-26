@@ -1,0 +1,23 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/CleanupBlogCategories:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: '[HEE-273] Cleans up existing ''hee:categories'' from
+        documents of ''hee:blogPost'' type in order to let content team to repopulate
+        blog posts with new/updated categories.'
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/lks//element(*, hee:blogPost)/@hee:categories
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\n\
+        import javax.jcr.Node\r\n\r\nclass CleanupBlogCategories extends BaseNodeUpdateVisitor\
+        \ {\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Updating\
+        \ node ${node.path}\"\r\n        node.setProperty(\"hee:categories\", new\
+        \ String[0])\r\n        log.debug \"Successfully cleared up blog categories\
+        \ (hee:categories) on the blog post node '${node.path}'\"\r\n        return\
+        \ true\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw\
+        \ new UnsupportedOperationException('Updater does not implement undoUpdate\
+        \ method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
