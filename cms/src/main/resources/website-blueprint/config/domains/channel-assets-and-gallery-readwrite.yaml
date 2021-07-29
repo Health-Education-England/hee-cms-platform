@@ -20,7 +20,7 @@
       hipposys:facet: jcr:path
       hipposys:type: Reference
       hipposys:value: /content/assets/{{ channelId }}
-  /rewrite:
+  /readwrite:
     jcr:primaryType: hipposys:authrole
     hipposys:groups: [{{ channelId }}-author, {{ channelId }}-editor]
     hipposys:role: readwrite
