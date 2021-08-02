@@ -1,7 +1,7 @@
 <#macro blockLinks block>
     <#if block??>
         <#if block.blockLinksContentBlock.blockLinks?size gt 0>
-            <div class="nhsuk-block-links">
+            <div class="nhsuk-blocklinks">
                 <div class="nhsuk-u-reading-width">
                     <h2>${block.blockLinksContentBlock.title}</h2>
                     <p><@hst.html hippohtml=block.blockLinksContentBlock.description/></p>
