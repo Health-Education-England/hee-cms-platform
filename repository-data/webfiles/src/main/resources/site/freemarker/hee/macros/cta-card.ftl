@@ -11,7 +11,7 @@
             <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
             <#assign openInNewWindow=true/>
         </#if>
-        <#if ctaCard.ctaCardContentBlock.ctaLink.text?has_content && link?has_content>
+        <#if link?has_content>
             <div class="nhsuk-grid-column-one-third">
                 <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
