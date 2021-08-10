@@ -9,7 +9,7 @@
     </#if>
     <ul class="nhsuk-grid-row nhsuk-card-group">
         <#list contentCards.cards as contentCard>
-            <#if contentCard.header.text?has_content && (contentCard.header.document?? || contentCard.header.url?has_content)>
+            <#if contentCard.header.document?? || contentCard.header.url?has_content>
                 <#assign clickableCard=true/>
             <#else>
                 <#assign clickableCard=false/>
