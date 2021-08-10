@@ -13,7 +13,12 @@ public enum Model {
     /**
      * Model key for Categories ValueList Map
      */
-    CATEGORIES_VALUE_LIST_MAP("categoriesValueListMap");
+    CATEGORIES_VALUE_LIST_MAP("categoriesValueListMap"),
+
+    /**
+     * Model key for navMapRegions ValueList Map
+     */
+    NAV_MAP_REGION_MAP("navMapRegionMap");
 
     private final String key;
 
