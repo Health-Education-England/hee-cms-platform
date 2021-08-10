@@ -11,6 +11,7 @@
             <#assign link = "${actionLink.link.url}">
             <#assign openInNewWindow=true/>
         </#if>
+
         <#if link?has_content>
             <div class="nhsuk-action-link">
                 <a class="nhsuk-action-link__link" href="${link}" ${openInNewWindow?then('target="_blank"', '')}>
