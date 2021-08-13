@@ -71,7 +71,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Content Blocks
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock,hee:YellowAlertBlock,hee:ActionLink,hee:contentCards
+            compoundList: hee:ActionLink,hee:anchorLinks,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:StatementBlock,hee:YellowAlertBlock
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
