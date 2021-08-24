@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: aefcbd21-6a51-459d-97cc-9f57e488de4b
+          jcr:uuid: 72696360-7c99-47ce-a6e7-3efe321f102e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -78,7 +78,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: f5758b25-b5d4-4073-8b90-dcbaa757f850
+          jcr:uuid: 253b7a5e-41ed-4037-b38b-8feafb41b37f
           hippostdpubwf:lastModificationDate: 2021-05-07T20:02:42.163+01:00
           hippostdpubwf:creationDate: 2021-05-07T20:02:42.164+01:00
           hee:sector: ''
@@ -115,7 +115,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /impactTypes:
             jcr:primaryType: frontend:plugin
-            caption: Impact Types
+            caption: Impact types
             field: impactTypes
             multiselect.type: palette
             palette.alloworder: true

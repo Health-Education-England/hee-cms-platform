@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 06fc4f79-dbf3-47cf-8be0-ba79a4dbd3cc
+          jcr:uuid: 0e175558-55bb-4183-861e-6132b59c65a1
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -76,7 +76,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 0ec90a33-04e8-403e-9bf3-1f9b18627eb0
+          jcr:uuid: d96b7543-a497-4558-bb65-c55832aa2ade
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:relatedContent:
@@ -121,7 +121,7 @@ definitions:
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: ''
+            hint: Page title must be 60 characters or fewer.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /summary:
@@ -146,7 +146,7 @@ definitions:
               showCompoundNames: 'true'
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
-            caption: Last/Next review date
+            caption: Page review dates
             field: pageLastNextReview
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
