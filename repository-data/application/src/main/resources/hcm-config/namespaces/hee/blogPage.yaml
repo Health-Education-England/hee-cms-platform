@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 54d2eec7-dd37-4e18-9ddc-3ff7b917decb
+          jcr:uuid: 90651e19-fb64-4a7c-9daa-de0911239b54
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -100,7 +100,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 7cc502bc-376c-42da-b522-72b7c597b277
+          jcr:uuid: bc1d978d-8755-422e-9db7-49eb818b43af
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -196,7 +196,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /contentBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Content Blocks
+            caption: Main content objects
             compoundList: hee:blockLinksReference,hee:contact,hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
             contentPickerType: links
             field: contentBlocks
@@ -207,10 +207,11 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
-            caption: Last/Next Review Date
+            caption: Last/Next review date
             field: pageLastNextReview
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /comments:
@@ -224,7 +225,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Right Hand Blocks
+            caption: Right hand objects
             compoundList: hee:QuickLinks,hee:contactCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference
             contentPickerType: links
             field: rightHandBlocks

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5ecdd94f-fe0e-4064-b131-6f229f77c2ab
+          jcr:uuid: aae6ec1b-8f3a-4f97-a387-48a8bbb8d003
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -70,7 +70,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 254097d5-6ccc-4fb7-9d00-41c04b7d02d3
+          jcr:uuid: b936b6ac-cd8b-42c7-a655-8f1926d2132c
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           hee:pageSize: 0
@@ -89,7 +89,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /listingPageType:
             jcr:primaryType: frontend:plugin
-            caption: Listing Page Type
+            caption: Listing page type
             field: listingPageType
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
@@ -114,7 +114,7 @@ definitions:
               source: /content/documents/administration/valuelists/documenttypes
           /title:
             jcr:primaryType: frontend:plugin
-            caption: Page Title
+            caption: Page title
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -130,7 +130,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /pageSize:
             jcr:primaryType: frontend:plugin
-            caption: Page Size
+            caption: Page size
             field: pageSize
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field

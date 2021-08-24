@@ -42,7 +42,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:imagesetWithCaption
           jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 24ce2e4d-d6f8-4d5b-997f-ac0f324cbe2c
+          jcr:uuid: b231b211-2129-49cc-a69e-586bcc2b0468
           /hippogallery:thumbnail:
             jcr:primaryType: hippogallery:image
             jcr:data:
@@ -79,7 +79,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /description:
             jcr:primaryType: frontend:plugin
-            caption: description
+            caption: Description
             field: description
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -87,7 +87,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /caption:
             jcr:primaryType: frontend:plugin
-            caption: caption
+            caption: Caption
             field: caption
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field

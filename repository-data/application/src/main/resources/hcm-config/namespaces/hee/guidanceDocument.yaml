@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 7f88927e-1a37-40a8-bf7d-f86e6d6f3bbe
+          jcr:uuid: 06fc4f79-dbf3-47cf-8be0-ba79a4dbd3cc
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -76,7 +76,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 6379d716-9853-4e11-b845-8a3adf40cdc8
+          jcr:uuid: 0ec90a33-04e8-403e-9bf3-1f9b18627eb0
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:relatedContent:
@@ -117,7 +117,7 @@ definitions:
             wicket.id: ${cluster.id}.right
           /title:
             jcr:primaryType: frontend:plugin
-            caption: Page Title
+            caption: Page title
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
@@ -134,7 +134,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /contentBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Content Blocks
+            caption: Main content objects
             compoundList: hee:ActionLink,hee:blockLinksReference,hee:contact,hippostd:html,hippogallerypicker:imagelink,hee:richTextReference,hee:StatementBlock,hee:YellowAlertBlock
             contentPickerType: links
             field: contentBlocks
@@ -146,7 +146,7 @@ definitions:
               showCompoundNames: 'true'
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
-            caption: Page Last Next Review Date
+            caption: Last/Next review date
             field: pageLastNextReview
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
@@ -155,7 +155,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /relatedContent:
             jcr:primaryType: frontend:plugin
-            caption: Related Content
+            caption: Related content
             field: relatedContent
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
@@ -164,7 +164,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Right Hand Blocks
+            caption: Right hand objects
             compoundList: hee:contactCardReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:QuickLinks
             contentPickerType: links
             field: rightHandBlocks
