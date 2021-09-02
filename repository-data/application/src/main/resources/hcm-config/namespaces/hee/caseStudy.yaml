@@ -126,7 +126,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/kls/casestudyimpacttypes
+              source: /content/documents/administration/valuelists/lks/casestudyimpacttypes
           /document:
             jcr:primaryType: frontend:plugin
             caption: Document
@@ -145,7 +145,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
-              source: /content/documents/administration/valuelists/kls/casestudyimpactgroups
+              source: /content/documents/administration/valuelists/lks/casestudyimpactgroups
           /sector:
             jcr:primaryType: frontend:plugin
             caption: Sector
@@ -155,7 +155,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
-              source: /content/documents/administration/valuelists/kls/casestudysectors
+              source: /content/documents/administration/valuelists/lks/casestudysectors
           /region:
             jcr:primaryType: frontend:plugin
             caption: Region
@@ -166,4 +166,4 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
-              source: /content/documents/administration/valuelists/kls/regions
+              source: /content/documents/administration/valuelists/lks/casestudyregions

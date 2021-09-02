@@ -8,6 +8,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
+import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
 
 import java.util.List;
@@ -24,13 +25,16 @@ public class CaseStudyListingPageComponent extends ListingPageComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        request.setModel("selectedImpactGroups", HstUtils.getQueryParameterValues(request, IMPACT_GROUP_QUERY_PARAM));
+        request.setModel("selectedImpactGroups",
+                HstUtils.getQueryParameterValues(request, IMPACT_GROUP_QUERY_PARAM));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
 
         request.setModel("impactGroupMap", getFilterValueListMap(request));
-        request.setModel("impactTypesMap", getValueListMapByIdentifier("caseStudyImpactTypes"));
-        request.setModel("sectorMap", getValueListMapByIdentifier("caseStudySectors"));
-        request.setModel("regionMap", getValueListMapByIdentifier("regions"));
+        request.setModel("impactTypesMap",
+                getValueListMapByIdentifier(ValueListIdentifier.CASE_STUDY_IMPACT_TYPES.getName()));
+        request.setModel("sectorMap",
+                getValueListMapByIdentifier(ValueListIdentifier.CASE_STUDY_SECTORS.getName()));
+        request.setModel("regionMap", getValueListMapByIdentifier(ValueListIdentifier.CASE_STUDY_REGIONS.getName()));
     }
 
     @Override

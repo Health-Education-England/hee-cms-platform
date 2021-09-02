@@ -169,13 +169,16 @@ definitions:
             multiselect.type: palette
             palette.alloworder: true
             palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            plugin.class: uk.nhs.hee.web.selection.frontend.plugin.ChannelBasedDynamicMultiSelectPlugin
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/kls/blogcategories
+              source: /content/documents/administration/valuelists/lks/blogcategories
+              valueListBasePathFormat: /content/documents/administration/valuelists/${channel}
+              valueListName: blogcategories
+              nameProvider: uk.nhs.hee.web.selection.frontend.provider.ChannelBasedValueListNameProvider
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date

@@ -24,7 +24,9 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.beans.MiniHub;
+import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.*;
 import java.util.stream.StreamSupport;
@@ -276,9 +278,19 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             return Collections.emptyMap();
         }
 
+        String valueListIdentifier = listingPageType.getFilterValueListIdentifier();
+
+        if (listingPageType.isChannelSpecificValueListIdentifier()) {
+            valueListIdentifier = ValueListUtils.getChannelSpecificValueListIdentifier(
+                    valueListIdentifier,
+                    DocumentUtils.getChannel(getListingPageModel(request).getPath())
+            );
+        }
+
+
         final ValueList categoriesValueList =
                 SelectionUtil.getValueListByIdentifier(
-                        listingPageType.getFilterValueListIdentifier(), RequestContextProvider.get());
+                        valueListIdentifier, RequestContextProvider.get());
         return SelectionUtil.valueListAsMap(categoriesValueList);
     }
 

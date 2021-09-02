@@ -12,7 +12,9 @@ import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
+import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -88,7 +90,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         if (blogCategories.isEmpty()) {
             return;
         }
-        final Map<String, String> allBlogCategoriesValueListMap = getBlogCategoriesKeyValueMap();
+        final Map<String, String> allBlogCategoriesValueListMap = getBlogCategoriesKeyValueMap(blogPost.getPath());
 
         request.setModel(
                 Model.CATEGORIES_VALUE_LIST_MAP.getKey(),
@@ -99,16 +101,21 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     }
 
     /**
-     * Creates a map from the {@value BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER} BR value list.
+     * Creates a map from the channel specific {@value BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER} BR value-list.
      * The map has as the key the blog category key and as the value the blog category label.
      *
+     * @param documentPath the document path.
      * @return blogCategoryKeyValueMap
      */
-    private Map<String, String> getBlogCategoriesKeyValueMap() {
+    private Map<String, String> getBlogCategoriesKeyValueMap(final String documentPath) {
         final ValueList categoriesValueList =
                 SelectionUtil.getValueListByIdentifier(
-                        BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER,
-                        RequestContextProvider.get());
+                        ValueListUtils.getChannelSpecificValueListIdentifier(
+                                BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER,
+                                DocumentUtils.getChannel(documentPath)
+                        ),
+                        RequestContextProvider.get()
+                );
         return SelectionUtil.valueListAsMap(categoriesValueList);
     }
 
