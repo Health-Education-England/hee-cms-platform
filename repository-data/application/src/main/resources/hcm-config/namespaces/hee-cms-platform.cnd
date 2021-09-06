@@ -14,9 +14,6 @@
 [hee:AfterForm] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:blockLinksReference] > hippo:compound, hippostd:relaxed
-  orderable
-
 [hee:ContentCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -38,7 +35,13 @@
 [hee:YellowAlertBlock] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:anchorLinks] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:blockLinks] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:blockLinksReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:blogComment] > hippo:compound, hippostd:relaxed
