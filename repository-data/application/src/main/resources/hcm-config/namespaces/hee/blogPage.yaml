@@ -175,7 +175,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/lks/blogcategories
               valueListBasePathFormat: /content/documents/administration/valuelists/${channel}
               valueListName: blogcategories
               nameProvider: uk.nhs.hee.web.selection.frontend.provider.ChannelBasedValueListNameProvider
