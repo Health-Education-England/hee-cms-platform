@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ef78c935-2f90-48d2-919f-5f99073f1832
   hippo:name: Home
-  hippo:versionHistory: 6406bb13-d2ba-436e-a5b5-31b99ee8b610
+  hippo:versionHistory: 7f71d049-7be8-43cd-8b40-5dfd292cdd87
   /home[1]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -14,7 +14,7 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-08-10T09:52:16.740+01:00
+    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:22.534+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -37,7 +37,7 @@
     /hee:contentBlocks[2]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: dental
-      hee:title: Dental regions
+      hee:title: Explore dental training region
       hippostdpubwf:createdBy: ''
       hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
       hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
@@ -143,6 +143,12 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
+
+          <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
     /hee:contentBlocks[3]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: higher
@@ -252,6 +258,9 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
     /hee:contentBlocks[4]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: medical
@@ -417,6 +426,9 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
   /home[2]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -426,7 +438,7 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-08-10T12:32:52.949+01:00
+    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:29.996+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -449,7 +461,7 @@
     /hee:contentBlocks[2]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: dental
-      hee:title: Dental regions
+      hee:title: Explore dental training region
       hippostdpubwf:createdBy: ''
       hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
       hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
@@ -555,6 +567,12 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
+
+          <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
     /hee:contentBlocks[3]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: higher
@@ -664,6 +682,9 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
     /hee:contentBlocks[4]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: medical
@@ -829,6 +850,9 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
   /home[3]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -838,9 +862,9 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-08-10T12:32:52.949+01:00
+    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:29.996+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-08-10T12:32:56.092+01:00
+    hippostdpubwf:publicationDate: 2021-09-09T18:21:32.762+01:00
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
     /hee:HeroSection:
@@ -862,7 +886,7 @@
     /hee:contentBlocks[2]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: dental
-      hee:title: Dental regions
+      hee:title: Explore dental training region
       hippostdpubwf:createdBy: ''
       hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
       hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
@@ -968,6 +992,12 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
+
+          <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
     /hee:contentBlocks[3]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: higher
@@ -1077,6 +1107,9 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
     /hee:contentBlocks[4]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: medical
@@ -1242,3 +1275,6 @@
         /hee:document:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''

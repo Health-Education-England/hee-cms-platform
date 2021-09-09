@@ -5,10 +5,15 @@
 
     <#assign educationPrefix="${block.mapEducation}-"/>
     <#assign educationLabelPrefix="[${block.mapEducation?upper_case}] "/>
+
     <figure class="nhsuk-map">
-        <object class="nhsuk-map__image" data="<@hst.link path='/static/assets/images/maps/${block.mapEducation}-regions.svg'/>" type="image/svg+xml" tabindex="-1">
-        </object>
         <figcaption class="nhsuk-map__caption">
+            <#if block.description.content?has_content>
+                <div class="nhsuk-map__description">
+                    <@hst.html hippohtml=block.description/>
+                </div>
+            </#if>
+
             <ul id="regionList">
                 <#list block.links as link>
                     <#if link.document??>
@@ -34,5 +39,6 @@
                 </#list>
             </ul>
         </figcaption>
+        <object class="nhsuk-map__image" data="<@hst.link path='/static/assets/images/maps/${block.mapEducation}-regions.svg'/>" type="image/svg+xml" tabindex="-1"></object>
     </figure>
 </#macro>

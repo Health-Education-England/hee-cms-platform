@@ -4,7 +4,7 @@
             <div class="nhsuk-blocklinks">
                 <div class="nhsuk-u-reading-width">
                     <h2>${block.blockLinksContentBlock.title}</h2>
-                    <p><@hst.html hippohtml=block.blockLinksContentBlock.description/></p>
+                    <@hst.html hippohtml=block.blockLinksContentBlock.description/>
                 </div>
                 <#if block.blockLinksContentBlock.columns == "One">
                     <#assign colClass = " nhsuk-list-blocklinks--one-column">

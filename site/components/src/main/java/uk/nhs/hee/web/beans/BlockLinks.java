@@ -23,4 +23,9 @@ public class BlockLinks extends BaseDocument {
     public List<LinkBlock> getBlockLinks() {
         return getChildBeansByName("hee:blockLinks", LinkBlock.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:columns")
+    public String getColumns() {
+        return getSingleProperty("hee:columns");
+    }
 }

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: e6692cc6-c80c-4da4-8903-97901c65a0f9
+          jcr:uuid: 86386488-92ba-40a8-a932-c6be3931e8a6
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -43,6 +43,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -55,14 +63,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: e9670d9c-5a89-4bde-a6e3-7588cb6f43fd
+          jcr:uuid: b27ed2fa-66ec-4f28-9832-1d600534870a
           hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
           hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
           hee:mapEducation: ''
           /hee:links:
             jcr:primaryType: hee:navMapLink
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 419df7f0-fb03-4758-99f3-7ada6eb5ce34
+            jcr:uuid: 6e80f062-a64c-4d2a-bcaf-75922e74ff07
             hee:regionId: ''
             hee:text: ''
             hee:url: ''
@@ -78,6 +86,9 @@ definitions:
             /hee:document:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:description:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -95,6 +106,15 @@ definitions:
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /description:
+            jcr:primaryType: frontend:plugin
+            caption: Description
+            field: description
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /mapEducation:
