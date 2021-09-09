@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1bb1035d-ffe3-45bf-8fb5-6174f3b60256
+          jcr:uuid: 9a709531-fab8-438e-b266-aad7362d43c3
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -50,7 +50,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /lastReviewed:
             jcr:primaryType: frontend:plugin
-            caption: Last Reviewed
+            caption: Last reviewed
             field: lastReviewed
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
@@ -59,7 +59,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /nextReviewed:
             jcr:primaryType: frontend:plugin
-            caption: Next Reviewed
+            caption: Next reviewed
             field: calendardate_
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin

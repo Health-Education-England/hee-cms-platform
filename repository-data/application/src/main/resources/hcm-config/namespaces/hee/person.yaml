@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 47304e0d-6924-45bd-9df6-b5ed4fb412ef
+          jcr:uuid: 16071bd2-ace6-4d4a-b9e3-57feb52516af
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -89,7 +89,7 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: 910f6f37-90f0-4815-a6be-dcb4a8dfd65d
+          jcr:uuid: 3390db29-6013-4b91-980d-168b6196e286
           hippostdpubwf:lastModificationDate: 2021-05-13T16:45:32.265+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:45:32.266+07:00
           /hee:image:
@@ -119,7 +119,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /departmentName:
             jcr:primaryType: frontend:plugin
-            caption: Department Name
+            caption: Department name
             field: departmentName
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -143,7 +143,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /phoneNumber:
             jcr:primaryType: frontend:plugin
-            caption: Phone Number
+            caption: Phone number
             field: phoneNumber
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field

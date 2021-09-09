@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 130b9eee-e404-448e-a121-79d7de8baaa0
+          jcr:uuid: 37668886-c9e2-40ce-942e-1be3969a7011
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -44,7 +44,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /ctaCardContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Select CTA Card
+            caption: Select button card
             field: ctaCardContentBlock
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

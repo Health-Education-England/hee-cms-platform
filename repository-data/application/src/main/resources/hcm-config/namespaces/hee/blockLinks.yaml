@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype[1]:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: aa0e4d7a-9b01-40f2-b295-878ee216bcfb
+          jcr:uuid: 9d020927-5d62-4522-9ca5-da88d9583560
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -53,7 +53,7 @@ definitions:
         /hipposysedit:prototype[1]:
           jcr:primaryType: hee:blockLinks
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: a2a429d0-1f70-4431-97be-74d8748622dd
+          jcr:uuid: 4cacd851-146e-4c23-8fab-b3f1597e510e
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -104,7 +104,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /blockLinks:
             jcr:primaryType: frontend:plugin
-            caption: Block Links
+            caption: Block links
             field: blockLinks
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
@@ -113,7 +113,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /columns:
             jcr:primaryType: frontend:plugin
-            caption: Number of Columns
+            caption: Number of columns
             field: columns
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin

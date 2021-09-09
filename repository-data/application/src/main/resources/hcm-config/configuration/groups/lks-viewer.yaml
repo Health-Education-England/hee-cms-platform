@@ -1,12 +1,12 @@
 definitions:
   config:
-    /hippo:configuration/hippo:groups/digital-transformation-reader:
+    /hippo:configuration/hippo:groups/lks-viewer:
       jcr:primaryType: hipposys:group
       hipposys:members:
         .meta:category: system
         .meta:add-new-system-values: true
         type: string
-        value: []
+        value: [lks-viewer]
       hipposys:securityprovider: internal
       hipposys:userroles:
         .meta:category: system
