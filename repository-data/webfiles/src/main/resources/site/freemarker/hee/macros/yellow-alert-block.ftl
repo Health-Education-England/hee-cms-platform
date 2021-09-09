@@ -3,7 +3,7 @@
 <#macro yellowAlertBlock block>
     <#if block.title?? && block.richAlertText?? >
         <div class="nhsuk-warning-callout">
-            <h3 class="nhsuk-warning-callout__label">
+            <h3 class="nhsuk-warning-callout__label" data-anchorlinksignore="true">
             <span role="text">
               <span class="nhsuk-u-visually-hidden">Important: </span>
               ${block.title}
