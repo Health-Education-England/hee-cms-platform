@@ -75,6 +75,9 @@
                                     <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                         <@hee.blockLinks block=block/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.AnchorLinks">
+                                        <@hee.anchorLinks anchor=block/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 348b2a3f-9822-407c-b78e-5b0fa27f072b
+          jcr:uuid: a0dbdcc5-5b47-46eb-8dc7-aac6235c5252
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -44,7 +44,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /fileLinksCard:
             jcr:primaryType: frontend:plugin
-            caption: File Links Card
+            caption: Downloads card
             field: fileLinksCard
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

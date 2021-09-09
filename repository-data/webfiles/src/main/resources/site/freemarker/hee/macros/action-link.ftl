@@ -11,7 +11,8 @@
             <#assign link = "${actionLink.link.url}">
             <#assign openInNewWindow=true/>
         </#if>
-        <#if actionLink.link.text?has_content && link?has_content>
+
+        <#if link?has_content>
             <div class="nhsuk-action-link">
                 <a class="nhsuk-action-link__link" href="${link}" ${openInNewWindow?then('target="_blank"', '')}>
                     <svg class="nhsuk-icon nhsuk-icon__arrow-right-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">

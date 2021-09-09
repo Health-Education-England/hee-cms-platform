@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: e6c44d37-3bc3-4994-b823-88e939475410
+          jcr:uuid: a7309c09-0252-44a1-aecf-5edb39320054
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -41,7 +41,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 96aa7fb3-ef1c-40c4-89c3-79dd6a79dc44
+          jcr:uuid: 7bcd3d43-bc55-434f-b7e1-3f9247a42782
           hippostdpubwf:lastModificationDate: 2021-03-24T17:00:07.151+07:00
           hippostdpubwf:creationDate: 2021-03-24T17:00:07.151+07:00
           /hee:HeroSection:
@@ -61,7 +61,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /HeroSection:
             jcr:primaryType: frontend:plugin
-            caption: HeroSection
+            caption: Hero
             field: HeroSection
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -70,8 +70,8 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /contentBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Content Blocks
-            compoundList: hee:ActionLink,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:navMap,hee:StatementBlock,hee:YellowAlertBlock
+            caption: Main content objects
+            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:navMap,hee:StatementBlock,hee:YellowAlertBlock,hee:ActionLink,hee:contentCards
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin

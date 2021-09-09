@@ -12,3 +12,4 @@
 <#include "yellow-alert-block.ftl">
 <#include "cta-card.ftl">
 <#include "block-links.ftl">
+<#include "anchor-links.ftl">
