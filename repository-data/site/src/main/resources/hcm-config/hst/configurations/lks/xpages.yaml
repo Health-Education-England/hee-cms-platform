@@ -1,0 +1,11 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/lks/hst:xpages:
+      jcr:primaryType: hst:xpages
+      /experience-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Experience Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:containercomponent
+          hst:xtype: HST.vBox

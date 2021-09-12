@@ -8,3 +8,10 @@ definitions:
         hst:pagetitle: Knowledge Staff
         hst:refId: root
         hst:relativecontentpath: home
+      /experiencepages:
+        jcr:primaryType: hst:sitemapitem
+        hst:hiddeninchannelmanager: true
+        hst:relativecontentpath: experience-pages
+        /_any_.html:
+          jcr:primaryType: hst:sitemapitem
+          hst:relativecontentpath: ${parent}/${1}
