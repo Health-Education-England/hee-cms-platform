@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hst:hst/hst:configurations/lks/hst:xpages:
+    /hst:hst/hst:configurations/common/hst:xpages:
       jcr:primaryType: hst:xpages
       /experience-page:
         jcr:primaryType: hst:xpage
@@ -8,4 +8,5 @@ definitions:
         hst:referencecomponent: hst:abstractpages/base
         /main:
           jcr:primaryType: hst:containercomponent
+          hippo:identifier: bf198c4f-b95e-477b-bd1d-8a7f8922e9fc
           hst:xtype: HST.vBox

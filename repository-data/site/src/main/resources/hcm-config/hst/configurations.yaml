@@ -30,6 +30,13 @@ definitions:
               hst:componentconfigurationid: hst:pages/searchresults
               hst:pagetitle: Search
               hst:relativecontentpath: listing-pages/search-results
+          /site:
+            jcr:primaryType: hst:sitemapitem
+            hst:hiddeninchannelmanager: true
+            hst:relativecontentpath: site-root
+            /_any_.html:
+              jcr:primaryType: hst:sitemapitem
+              hst:relativecontentpath: ${parent}/${1}
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:
