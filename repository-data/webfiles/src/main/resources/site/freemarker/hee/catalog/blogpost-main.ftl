@@ -112,13 +112,13 @@
 
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-            <h2>${document.comments?size} <@fmt.message key="comments"/></h2>
+            <h2 data-anchorlinksignore="true">${document.comments?size} <@fmt.message key="comments"/></h2>
 
             <#if totalComments gt 0>
                 <#assign datePattern = "d MMMM yyyy">
                 <#list visibleComments as comment>
                     <div class="nhsuk-card nhsuk-u-padding-4 nhsuk-u-margin-bottom-3">
-                        <h3 class="nhsuk-u-margin-bottom-3">${comment.author.firstName} ${comment.author.lastName}</h3>
+                        <h3 class="nhsuk-u-margin-bottom-3" data-anchorlinksignore="true">${comment.author.firstName} ${comment.author.lastName}</h3>
                         <div>
                             ${comment.message}
                         </div>

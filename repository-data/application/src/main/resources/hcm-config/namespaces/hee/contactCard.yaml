@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 135672cb-e046-42c0-a8b6-54f9ea74c6d7
+          jcr:uuid: 6acedbaf-2c8e-4752-944d-aeb0696ed01a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -52,7 +52,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 96fabf85-ea4c-4c7d-8194-6f6f17f04286
+          jcr:uuid: ed3b25a5-89a4-4398-b1de-f8398aa03614
           hippostdpubwf:lastModificationDate: 2021-05-14T09:37:59.039+07:00
           hippostdpubwf:creationDate: 2021-05-14T09:37:59.039+07:00
           /hee:contentItem:
@@ -79,7 +79,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /contentItem:
             jcr:primaryType: frontend:plugin
-            caption: Content Item
+            caption: Content item
             field: contentItem
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: c5d5bbac-b0f0-4097-9898-cc167e330783
+          jcr:uuid: 6553b679-4b09-45e2-a957-eb0a1b2dcf0d
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -63,7 +63,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /richStatement:
             jcr:primaryType: frontend:plugin
-            caption: Block copy
+            caption: Content
             field: richStatement
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

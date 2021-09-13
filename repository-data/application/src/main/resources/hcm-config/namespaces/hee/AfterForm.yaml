@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a3565d28-b2aa-4e0d-9168-ff5e0d1b7e5b
+          jcr:uuid: abc3bc0f-de23-466e-88f7-9a5bf710a7d8
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -44,7 +44,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 135d62bc-6708-4b81-92f0-ca6950f24bd7
+          jcr:uuid: 3ad17da5-d2dc-481f-a0db-82d08e3db56b
           hippostdpubwf:lastModificationDate: 2021-03-20T09:45:31.232+07:00
           hippostdpubwf:creationDate: 2021-03-20T09:45:31.232+07:00
           /hee:mainBody:
@@ -53,7 +53,7 @@ definitions:
           /hee:backLink:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: c33bc7ee-3de9-4a0c-af7d-30bae69f702a
+            jcr:uuid: f84377d5-ae3f-4e21-8c7d-5c9e8f8a1c46
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -80,7 +80,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /mainBody:
             jcr:primaryType: frontend:plugin
-            caption: Main Body
+            caption: Main body
             field: mainBody
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -88,7 +88,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /backLink:
             jcr:primaryType: frontend:plugin
-            caption: Back Link
+            caption: Back link
             field: backLink
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

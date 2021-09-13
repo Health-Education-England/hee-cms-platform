@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 77e30ece-74df-4b72-8372-06a9e612bdb2
+          jcr:uuid: 051a79e1-d218-4f6b-aee7-c6aaace87f14
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -69,7 +69,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:overview: ''
-          jcr:uuid: 494545f7-09af-4d5a-93f4-0aff5cc66839
+          jcr:uuid: 4e431281-e930-4221-b3df-234c9241e6a2
           hippostdpubwf:lastModificationDate: 2021-02-07T19:04:36.287Z
           hippostdpubwf:creationDate: 2021-02-07T19:04:36.287Z
           hee:websiteUrl: ''
@@ -104,7 +104,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /websiteTitle:
             jcr:primaryType: frontend:plugin
-            caption: Website Title
+            caption: Website title
             field: websiteText
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
