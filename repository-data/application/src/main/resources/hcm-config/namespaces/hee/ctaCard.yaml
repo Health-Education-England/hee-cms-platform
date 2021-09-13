@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b5bf2167-a71e-435b-99fb-f9f41e14b4b9
+          jcr:uuid: 50b54967-f9be-45d6-b012-aab374daef7a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -54,14 +54,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 07aff17c-6f17-4d09-ab1a-32002ab0c0ac
+          jcr:uuid: cbe906a3-b768-40a7-83e6-5e89d5158b8b
           hippostdpubwf:lastModificationDate: 2021-06-16T13:17:42.808+01:00
           hippostdpubwf:creationDate: 2021-06-16T13:17:42.808+01:00
           hee:description: ''
           /hee:ctaLink:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: cf5b46d4-373a-4750-9bcf-217fe86716e5
+            jcr:uuid: 4653b8d2-3519-432f-9e5d-1687e0158d64
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -106,7 +106,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /ctaLink:
             jcr:primaryType: frontend:plugin
-            caption: CTA Link
+            caption: Button link
             field: ctaLink
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

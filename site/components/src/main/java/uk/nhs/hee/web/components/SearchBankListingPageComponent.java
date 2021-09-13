@@ -10,6 +10,7 @@ import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.List;
 
@@ -30,9 +31,9 @@ public class SearchBankListingPageComponent extends ListingPageComponent {
 
         request.setModel("topicMap", getFilterValueListMap(request));
         request.setModel("keyTermMap",
-                getValueListMapByIdentifier(ValueListIdentifier.SEARCH_BANK_KEY_TERMS.getName()));
+                ValueListUtils.getValueListMap(ValueListIdentifier.SEARCH_BANK_KEY_TERMS.getName()));
         request.setModel("providerMap",
-                getValueListMapByIdentifier(ValueListIdentifier.SEARCH_BANK_PROVIDERS.getName()));
+                ValueListUtils.getValueListMap(ValueListIdentifier.SEARCH_BANK_PROVIDERS.getName()));
     }
 
     @Override

@@ -6,6 +6,7 @@
 <#include "file-links-card.ftl">
 <#include "image-with-caption.ftl">
 <#include "last-next-reviewed-date.ftl">
+<#include "nav-map.ftl">
 <#include "quick-links.ftl">
 <#include "statement-block.ftl">
 <#include "yellow-alert-block.ftl">

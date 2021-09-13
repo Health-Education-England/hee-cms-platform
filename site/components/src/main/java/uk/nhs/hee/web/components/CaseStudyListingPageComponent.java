@@ -10,6 +10,7 @@ import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.List;
 
@@ -31,10 +32,11 @@ public class CaseStudyListingPageComponent extends ListingPageComponent {
 
         request.setModel("impactGroupMap", getFilterValueListMap(request));
         request.setModel("impactTypesMap",
-                getValueListMapByIdentifier(ValueListIdentifier.CASE_STUDY_IMPACT_TYPES.getName()));
+                ValueListUtils.getValueListMap(ValueListIdentifier.CASE_STUDY_IMPACT_TYPES.getName()));
         request.setModel("sectorMap",
-                getValueListMapByIdentifier(ValueListIdentifier.CASE_STUDY_SECTORS.getName()));
-        request.setModel("regionMap", getValueListMapByIdentifier(ValueListIdentifier.CASE_STUDY_REGIONS.getName()));
+                ValueListUtils.getValueListMap(ValueListIdentifier.CASE_STUDY_SECTORS.getName()));
+        request.setModel("regionMap",
+                ValueListUtils.getValueListMap(ValueListIdentifier.CASE_STUDY_REGIONS.getName()));
     }
 
     @Override

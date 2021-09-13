@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 2e203332-320c-4141-af47-b3b4bb9a520d
+          jcr:uuid: 8aee0794-c1b7-4b86-86b8-3df779ad3365
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -52,7 +52,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 7a36e553-47c6-4557-8272-c02171e3ddd4
+          jcr:uuid: 7dae64bf-4f8c-40f4-93b8-e098cbec1f31
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           /hee:contentCards:
@@ -74,7 +74,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /title:
             jcr:primaryType: frontend:plugin
-            caption: Page Title
+            caption: Page title
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -90,7 +90,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /contentCards:
             jcr:primaryType: frontend:plugin
-            caption: Content Cards
+            caption: Navigation cards
             field: contentCards
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field

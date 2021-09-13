@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 067cf0f8-bd81-4471-93cb-c034588e7670
+          jcr:uuid: 190a5d36-6197-45e6-8d55-e520a81333cc
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -88,7 +88,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: f5678485-22e4-468b-b153-11cb10960871
+          jcr:uuid: c3ea0c54-b917-4091-bb1d-0bc173dc7193
           hippostdpubwf:lastModificationDate: 2021-05-10T09:26:01.512+01:00
           hippostdpubwf:creationDate: 2021-05-10T09:26:01.513+01:00
           hee:categories: []
@@ -163,7 +163,7 @@ definitions:
               source: /content/documents/administration/valuelists/lks/searchbankkeyterms
           /strategyDocument:
             jcr:primaryType: frontend:plugin
-            caption: String / Strategies Document
+            caption: String / Strategies document
             field: strategies
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -181,7 +181,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /searchDocument:
             jcr:primaryType: frontend:plugin
-            caption: Search Document
+            caption: Search document
             field: search
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

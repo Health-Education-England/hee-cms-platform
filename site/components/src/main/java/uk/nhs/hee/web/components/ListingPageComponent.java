@@ -17,8 +17,6 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
-import org.onehippo.forge.selection.hst.contentbean.ValueList;
-import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
@@ -287,23 +285,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             );
         }
 
-
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(
-                        valueListIdentifier, RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
-    }
-
-    /**
-     * Returns value-list map by identifier ({@code valueListIdentifier}).
-     *
-     * @param valueListIdentifier the value-list identifier whose map needs to be returned.
-     * @return the value-list map by identifier ({@code valueListIdentifier}).
-     */
-    protected Map<String, String> getValueListMapByIdentifier(final String valueListIdentifier) {
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(valueListIdentifier, RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
+        return ValueListUtils.getValueListMap(valueListIdentifier);
     }
 
     /**

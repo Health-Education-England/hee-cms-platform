@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c6408112-745b-4532-9bd8-48151dfca80f
+          jcr:uuid: 7c34a133-5dd9-4578-901d-5fe18f37d686
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -54,7 +54,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /blockTitle:
             jcr:primaryType: frontend:plugin
-            caption: Block Title
+            caption: Block title
             field: string
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
@@ -63,7 +63,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /blockLink:
             jcr:primaryType: frontend:plugin
-            caption: Block Link
+            caption: Block link
             field: blockLink
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

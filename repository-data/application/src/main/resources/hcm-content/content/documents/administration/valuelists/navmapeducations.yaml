@@ -1,0 +1,25 @@
+/content/documents/administration/valuelists/navmapeducations:
+  .meta:order-before: listingpagetypes
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: af6a0a0a-1580-4b2d-aa02-14d6e41427ea
+  hippo:name: NavMapEducations
+  /navmapeducations:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 0ab61944-71fc-405b-9cda-bd855980d877
+    hippo:availability: [live, preview]
+    hippotranslation:id: 269ae249-af82-4c0a-8375-e83766d34546
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: dental
+      selection:label: Dental
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: higher
+      selection:label: Higher
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: medical
+      selection:label: Medical

@@ -1,10 +1,10 @@
 /content/documents/lks/home:
-  .meta:order-before: bulletins
+  .meta:order-before: blogposts
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ef78c935-2f90-48d2-919f-5f99073f1832
   hippo:name: Home
-  hippo:versionHistory: 6fc29672-5c3c-4804-89a2-0cf516a721cf
+  hippo:versionHistory: 7f71d049-7be8-43cd-8b40-5dfd292cdd87
   /home[1]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -14,7 +14,7 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-03-25T13:48:03.282+07:00
+    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:22.534+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -22,7 +22,7 @@
       jcr:primaryType: hee:HeroSection
       hee:header: Welcome to the Library and Knowledge Services Staff Hub
       hee:text: Guidance and information for library and information staff
-    /hee:contentBlocks:
+    /hee:contentBlocks[1]:
       jcr:primaryType: hee:contentCards
       hee:header: Our services
       /hee:cards[1]:
@@ -34,6 +34,401 @@
       /hee:cards[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
+    /hee:contentBlocks[2]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: dental
+      hee:title: Explore dental training region
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-lk
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-me
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-nenc
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-sw
+        hee:text: ''
+        hee:url: ''
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-tvw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-yh
+        hee:text: Yorkshire & the Humber
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
+
+          <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
+    /hee:contentBlocks[3]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: higher
+      hee:title: Higher regions
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-east
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-lon
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-mid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-ney
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-se
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-sw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+    /hee:contentBlocks[4]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: medical
+      hee:title: Medical regions
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-east
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-eMid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-lon
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-nenc
+        hee:text: ''
+        hee:url: https://www.hee.nhs.uk/
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-sw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-tv
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[8]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-wes
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[9]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-wMid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[10]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-yh
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[11]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-kss
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
   /home[2]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -43,7 +438,7 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-03-25T13:48:17.490+07:00
+    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:29.996+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -51,7 +446,7 @@
       jcr:primaryType: hee:HeroSection
       hee:header: Welcome to the Library and Knowledge Services Staff Hub
       hee:text: Guidance and information for library and information staff
-    /hee:contentBlocks:
+    /hee:contentBlocks[1]:
       jcr:primaryType: hee:contentCards
       hee:header: Our services
       /hee:cards[1]:
@@ -63,6 +458,401 @@
       /hee:cards[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
+    /hee:contentBlocks[2]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: dental
+      hee:title: Explore dental training region
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-lk
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-me
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-nenc
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-sw
+        hee:text: ''
+        hee:url: ''
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-tvw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-yh
+        hee:text: Yorkshire & the Humber
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
+
+          <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
+    /hee:contentBlocks[3]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: higher
+      hee:title: Higher regions
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-east
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-lon
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-mid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-ney
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-se
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-sw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+    /hee:contentBlocks[4]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: medical
+      hee:title: Medical regions
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-east
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-eMid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-lon
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-nenc
+        hee:text: ''
+        hee:url: https://www.hee.nhs.uk/
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-sw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-tv
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[8]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-wes
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[9]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-wMid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[10]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-yh
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[11]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-kss
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
   /home[3]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -72,16 +862,16 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-03-25T13:48:17.490+07:00
+    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:29.996+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-03-25T13:48:19.418+07:00
+    hippostdpubwf:publicationDate: 2021-09-09T18:21:32.762+01:00
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
     /hee:HeroSection:
       jcr:primaryType: hee:HeroSection
       hee:header: Welcome to the Library and Knowledge Services Staff Hub
       hee:text: Guidance and information for library and information staff
-    /hee:contentBlocks:
+    /hee:contentBlocks[1]:
       jcr:primaryType: hee:contentCards
       hee:header: Our services
       /hee:cards[1]:
@@ -93,3 +883,398 @@
       /hee:cards[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
+    /hee:contentBlocks[2]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: dental
+      hee:title: Explore dental training region
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-lk
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-me
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-nenc
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-sw
+        hee:text: ''
+        hee:url: ''
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-tvw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: dental-yh
+        hee:text: Yorkshire & the Humber
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
+
+          <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
+    /hee:contentBlocks[3]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: higher
+      hee:title: Higher regions
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-east
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-lon
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-mid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-ney
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-se
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: higher-sw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+    /hee:contentBlocks[4]:
+      jcr:primaryType: hee:navMap
+      hee:mapEducation: medical
+      hee:title: Medical regions
+      hippostdpubwf:createdBy: ''
+      hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+      hippostdpubwf:lastModifiedBy: ''
+      hippotranslation:id: document-type-locale-id
+      hippotranslation:locale: document-type-locale
+      /hee:links[1]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-east
+        hee:regionId: ''
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[2]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-eMid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[3]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-lon
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[4]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-nenc
+        hee:text: ''
+        hee:url: https://www.hee.nhs.uk/
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[5]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-nw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[6]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-sw
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[7]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-tv
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[8]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-wes
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[9]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-wMid
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[10]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-yh
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:links[11]:
+        jcr:primaryType: hee:navMapLink
+        hee:region: medical-kss
+        hee:text: ''
+        hee:url: /
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
