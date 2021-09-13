@@ -37,6 +37,9 @@
                                     <#case "uk.nhs.hee.web.beans.AnchorLinks">
                                         <@hee.anchorLinks anchor=block/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.NavMap">
+                                        <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
