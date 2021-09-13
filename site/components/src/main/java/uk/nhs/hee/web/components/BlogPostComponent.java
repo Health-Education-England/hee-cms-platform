@@ -1,18 +1,18 @@
 package uk.nhs.hee.web.components;
 
-import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
-import org.onehippo.forge.selection.hst.contentbean.ValueList;
-import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
+import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -23,7 +23,6 @@ import java.util.stream.Collectors;
 @ParametersInfo(type = BlogPostComponentInfo.class)
 public class BlogPostComponent extends EssentialsDocumentComponent {
 
-    private static final String BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER = "blogCategories";
     private static final int DEFAULT_NUMBER_OF_VISIBLE_COMMENTS = 3;
 
     @Override
@@ -88,28 +87,14 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         if (blogCategories.isEmpty()) {
             return;
         }
-        final Map<String, String> allBlogCategoriesValueListMap = getBlogCategoriesKeyValueMap();
+        final Map<String, String> allBlogCategoriesValueListMap = ValueListUtils.getValueListMap(
+                ValueListIdentifier.BLOG_CATEGORIES.getName(), DocumentUtils.getChannel(blogPost.getPath()));
 
         request.setModel(
                 Model.CATEGORIES_VALUE_LIST_MAP.getKey(),
-                blogCategories.stream().collect(
-                        Collectors.toMap(
-                                category -> category,
-                                allBlogCategoriesValueListMap::get)));
-    }
-
-    /**
-     * Creates a map from the {@value BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER} BR value list.
-     * The map has as the key the blog category key and as the value the blog category label.
-     *
-     * @return blogCategoryKeyValueMap
-     */
-    private Map<String, String> getBlogCategoriesKeyValueMap() {
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(
-                        BLOG_CATEGORIES_VALUE_LIST_IDENTIFIER,
-                        RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
+                blogCategories.stream()
+                        .filter(category -> allBlogCategoriesValueListMap.get(category) != null)
+                        .collect(Collectors.toMap(category -> category, allBlogCategoriesValueListMap::get)));
     }
 
 }

@@ -19,16 +19,18 @@
   <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager">
     <constructor-arg>
       <map>
-        <entry key="bulletinCategories" value="/content/documents/administration/valuelists/kls/bulletincategories"/>
-        <entry key="blogCategories" value="/content/documents/administration/valuelists/kls/blogcategories"/>
-        <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/kls/casestudyimpacttypes"/>
-        <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/kls/casestudyimpactgroups"/>
-        <entry key="caseStudySectors" value="/content/documents/administration/valuelists/kls/casestudysectors"/>
-        <entry key="regions" value="/content/documents/administration/valuelists/kls/regions"/>
-        <entry key="searchBankTopics" value="/content/documents/administration/valuelists/kls/searchbanktopics"/>
-        <entry key="searchBankKeyTerms" value="/content/documents/administration/valuelists/kls/searchbankkeyterms"/>
-        <entry key="searchBankProviders" value="/content/documents/administration/valuelists/kls/searchbankproviders"/>
+        <entry key="bulletinCategories" value="/content/documents/administration/valuelists/lks/bulletincategories"/>
+        <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/lks/casestudyimpacttypes"/>
+        <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/lks/casestudyimpactgroups"/>
+        <entry key="caseStudySectors" value="/content/documents/administration/valuelists/lks/casestudysectors"/>
+        <entry key="caseStudyRegions" value="/content/documents/administration/valuelists/lks/casestudyregions"/>
         <entry key="navMapRegions" value="/content/documents/administration/valuelists/navmapregions"/>
+        <entry key="searchBankTopics" value="/content/documents/administration/valuelists/lks/searchbanktopics"/>
+        <entry key="searchBankKeyTerms" value="/content/documents/administration/valuelists/lks/searchbankkeyterms"/>
+        <entry key="searchBankProviders" value="/content/documents/administration/valuelists/lks/searchbankproviders"/>
+
+        <!-- Blog Categories [/content/documents/administration/valuelists/${channel}/blogcategories] -->
+        <entry key="blogCategories_lks" value="/content/documents/administration/valuelists/lks/blogcategories"/>
       </map>
     </constructor-arg>
   </bean>

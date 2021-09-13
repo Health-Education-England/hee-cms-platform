@@ -17,14 +17,14 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
-import org.onehippo.forge.selection.hst.contentbean.ValueList;
-import org.onehippo.forge.selection.hst.util.SelectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.beans.MiniHub;
+import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.*;
 import java.util.stream.StreamSupport;
@@ -276,22 +276,16 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             return Collections.emptyMap();
         }
 
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(
-                        listingPageType.getFilterValueListIdentifier(), RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
-    }
+        String valueListIdentifier = listingPageType.getFilterValueListIdentifier();
 
-    /**
-     * Returns value-list map by identifier ({@code valueListIdentifier}).
-     *
-     * @param valueListIdentifier the value-list identifier whose map needs to be returned.
-     * @return the value-list map by identifier ({@code valueListIdentifier}).
-     */
-    protected Map<String, String> getValueListMapByIdentifier(final String valueListIdentifier) {
-        final ValueList categoriesValueList =
-                SelectionUtil.getValueListByIdentifier(valueListIdentifier, RequestContextProvider.get());
-        return SelectionUtil.valueListAsMap(categoriesValueList);
+        if (listingPageType.isChannelSpecificValueListIdentifier()) {
+            valueListIdentifier = ValueListUtils.getChannelSpecificValueListIdentifier(
+                    valueListIdentifier,
+                    DocumentUtils.getChannel(getListingPageModel(request).getPath())
+            );
+        }
+
+        return ValueListUtils.getValueListMap(valueListIdentifier);
     }
 
     /**

@@ -3,6 +3,7 @@ package uk.nhs.hee.web.components;
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
 import uk.nhs.hee.web.repository.HEEField;
+import uk.nhs.hee.web.repository.ValueListIdentifier;
 
 /**
  * An enumeration of Listing Page Types and its document types, sort by date field & filter value-list identifier.
@@ -20,7 +21,8 @@ public enum ListingPageType {
             new String[]{"hee:blogPost"},
             Boolean.TRUE,
             HEEField.PUBLICATION_DATE.getName(),
-            "blogCategories"),
+            ValueListIdentifier.BLOG_CATEGORIES.getName(),
+            Boolean.TRUE),
 
     /**
      * Bulletin Listing
@@ -30,7 +32,8 @@ public enum ListingPageType {
             new String[]{"hee:bulletin"},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
-            "bulletinCategories"),
+            ValueListIdentifier.BULLETIN_CATEGORIES.getName(),
+            Boolean.FALSE),
 
     /**
      * Case Study Listing
@@ -40,7 +43,8 @@ public enum ListingPageType {
             new String[]{"hee:caseStudy"},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
-            "caseStudyImpactGroups"),
+            ValueListIdentifier.CASE_STUDY_IMPACT_GROUPS.getName(),
+            Boolean.FALSE),
 
     /**
      * Event Listing
@@ -50,7 +54,8 @@ public enum ListingPageType {
             new String[]{"hee:event"},
             Boolean.TRUE,
             HEEField.DATE.getName(),
-            StringUtils.EMPTY),
+            StringUtils.EMPTY,
+            Boolean.FALSE),
 
     /**
      * Search Listing
@@ -60,7 +65,8 @@ public enum ListingPageType {
             new String[]{},
             Boolean.FALSE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
-            StringUtils.EMPTY),
+            StringUtils.EMPTY,
+            Boolean.FALSE),
 
     /**
      * Search Bank Listing
@@ -70,7 +76,8 @@ public enum ListingPageType {
             new String[]{"hee:searchBank"},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
-            "searchBankTopics");
+            ValueListIdentifier.SEARCH_BANK_TOPICS.getName(),
+            Boolean.FALSE);
 
 
     private final String type;
@@ -78,28 +85,33 @@ public enum ListingPageType {
     private final boolean sortingEnabled;
     private final String sortByDateField;
     private final String filterValueListIdentifier;
+    private final boolean channelSpecificValueListIdentifier;
 
     /**
      * Constructor that initialises the Listing Type (Default) Information.
      *
-     * @param type                        the listing type.
-     * @param documentTypes               the document types which needs to be queried to list the results.
-     * @param sortingEnabled              the flag indicating whether sorting is enabled for listing or not.
-     * @param sortByDateField             the date field by which search results needs to be sorted.
-     * @param filterValueListIdentifier   the value-list identifier for the listing filter.
+     * @param type                               the listing type.
+     * @param documentTypes                      the document types which needs to be queried to list the results.
+     * @param sortingEnabled                     the flag indicating whether sorting is enabled for listing or not.
+     * @param sortByDateField                    the date field by which search results needs to be sorted.
+     * @param filterValueListIdentifier          the value-list identifier for the listing filter.
+     * @param channelSpecificValueListIdentifier the flag indicating whether channel specific
+     *                                           {@code filterValueListIdentifier} is available.
      */
     ListingPageType(
             final String type,
             final String[] documentTypes,
             final boolean sortingEnabled,
             final String sortByDateField,
-            final String filterValueListIdentifier
+            final String filterValueListIdentifier,
+            final boolean channelSpecificValueListIdentifier
     ) {
         this.type = type;
         this.documentTypes = documentTypes;
         this.sortingEnabled = sortingEnabled;
         this.sortByDateField = sortByDateField;
         this.filterValueListIdentifier = filterValueListIdentifier;
+        this.channelSpecificValueListIdentifier = channelSpecificValueListIdentifier;
     }
 
     /**
@@ -166,5 +178,16 @@ public enum ListingPageType {
      */
     public String getFilterValueListIdentifier() {
         return filterValueListIdentifier;
+    }
+
+    /**
+     * Returns {@code true} if channel specific {@code filterValueListIdentifier} is available.
+     * Otherwise, returns {@code false}.
+     *
+     * @return {@code true} if channel specific {@code filterValueListIdentifier} is available.
+     * Otherwise, returns {@code false}.
+     */
+    public boolean isChannelSpecificValueListIdentifier() {
+        return channelSpecificValueListIdentifier;
     }
 }

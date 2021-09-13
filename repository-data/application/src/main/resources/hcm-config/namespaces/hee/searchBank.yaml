@@ -146,7 +146,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/kls/searchbanktopics
+              source: /content/documents/administration/valuelists/lks/searchbanktopics
           /keyTerms:
             jcr:primaryType: frontend:plugin
             caption: Key Terms
@@ -160,7 +160,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/kls/searchbankkeyterms
+              source: /content/documents/administration/valuelists/lks/searchbankkeyterms
           /strategyDocument:
             jcr:primaryType: frontend:plugin
             caption: String / Strategies document
@@ -198,4 +198,4 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
-              source: /content/documents/administration/valuelists/kls/searchbankproviders
+              source: /content/documents/administration/valuelists/lks/searchbankproviders

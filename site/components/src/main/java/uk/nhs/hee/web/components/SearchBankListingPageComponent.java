@@ -8,7 +8,9 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
+import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.List;
 
@@ -28,8 +30,10 @@ public class SearchBankListingPageComponent extends ListingPageComponent {
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
 
         request.setModel("topicMap", getFilterValueListMap(request));
-        request.setModel("keyTermMap", getValueListMapByIdentifier("searchBankKeyTerms"));
-        request.setModel("providerMap", getValueListMapByIdentifier("searchBankProviders"));
+        request.setModel("keyTermMap",
+                ValueListUtils.getValueListMap(ValueListIdentifier.SEARCH_BANK_KEY_TERMS.getName()));
+        request.setModel("providerMap",
+                ValueListUtils.getValueListMap(ValueListIdentifier.SEARCH_BANK_PROVIDERS.getName()));
     }
 
     @Override

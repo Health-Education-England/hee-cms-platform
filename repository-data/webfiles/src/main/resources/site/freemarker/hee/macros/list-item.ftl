@@ -6,7 +6,7 @@
         <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
 
         <dl class="nhsuk-summary-list">
-            <#assign categories>${item.categories?map(category -> categoriesMap[category])?join(', ')}</#assign>
+            <#assign categories>${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</#assign>
             <#if categories??>
                 <@fmt.message key="category.text" var="categoryLabel"/>
                 <@listItemRow key="${categoryLabel}">
@@ -42,7 +42,7 @@
 
         <#if pageURL != pageNotFoundURL>
             <li>
-                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category])?join(', ')}</span>
+                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
                 <h3><a href="${pageURL}">${item.title}</a></h3>
                 <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
                 <div class="nhsuk-review-date">
@@ -76,7 +76,7 @@
 
             <#if item.impactTypes?size gt 0>
                 <@fmt.message key="casestudy.impact_types" var="impactTypesLabel"/>
-                <#assign impactTypes>${item.impactTypes?map(impactType -> impactTypesMap[impactType])?join(', ')}</#assign>
+                <#assign impactTypes>${item.impactTypes?map(impactType -> impactTypesMap[impactType]!)?join(', ')}</#assign>
                 <@listItemRow key="${impactTypesLabel}">
                     ${impactTypes}
                 </@listItemRow>
@@ -144,7 +144,7 @@
         </h3>
 
         <dl class="nhsuk-summary-list">
-            <#assign topics>${item.topics?map(topic -> topicMap[topic])?join(', ')}</#assign>
+            <#assign topics>${item.topics?map(topic -> topicMap[topic]!)?join(', ')}</#assign>
             <#if topics??>
                 <@fmt.message key="searchbank.topics" var="topicLabel"/>
                 <@listItemRow key="${topicLabel}">
@@ -152,7 +152,7 @@
                 </@listItemRow>
             </#if>
 
-            <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm])?join(', ')}</#assign>
+            <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm]!)?join(', ')}</#assign>
             <#if keyTerms??>
                 <@fmt.message key="searchbank.key_terms" var="keyTermsLabel"/>
                 <@listItemRow key="${keyTermsLabel}">

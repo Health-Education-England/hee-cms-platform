@@ -1,0 +1,42 @@
+/*
+ * Source: Duplicated from org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin.css
+ */
+select.multiselect-select {
+  width: 99%;
+}
+
+select.multiselect-viewlist li {
+  padding: 6px;
+}
+
+div.multiselect-selection-link {
+  text-align: right;
+  padding-right: 1%;
+}
+
+div.multiselect-selection-link:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+div.multiselect-selection-link a {
+  color: #333333;
+}
+
+.multiselect-checkboxes input[type="checkbox"] {
+  align-self: center;
+  height: auto;
+}
+
+.multiselect-checkboxes label {
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+.multiselect-checkboxes .checkbox-container {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.multiselect-checkboxes .checkbox-container:last-child {
+  margin-bottom: 0;
+}
