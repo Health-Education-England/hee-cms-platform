@@ -62,7 +62,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Headings
             field: headings
-            hint: Comma delimited list of heading tags e.g. "h2,h3"
+            hint: Add the types of heading you want to include, separated by commas. For example "h2,h3"
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
