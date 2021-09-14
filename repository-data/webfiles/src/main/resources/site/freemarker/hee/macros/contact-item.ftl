@@ -4,7 +4,7 @@
     <div class="nhsuk-contact">
         <div class="nhsuk-contact__content">
             <#if singleContact && block.title?has_content>
-                <h2>${block.title}</h2>
+                <h2 data-anchorlinksignore="true">${block.title}</h2>
             </#if>
 
             <#if hst.isBeanType(item.contentItem, 'uk.nhs.hee.web.beans.Person')>
@@ -16,11 +16,11 @@
                 </#if>
 
                 <#if block.display?seq_contains("name")>
-                    <h3 class="nhsuk-contact__name" aria-label="Name">${item.contentItem.name}</h3>
+                    <h3 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${item.contentItem.name}</h3>
                 </#if>
 
                 <#if block.display?seq_contains("departmentName") && item.contentItem.departmentName?has_content>
-                    <h4 aria-label="Department">${item.contentItem.departmentName}</h4>
+                    <h4 data-anchorlinksignore="true" aria-label="Department">${item.contentItem.departmentName}</h4>
                 </#if>
 
                 <#if block.display?seq_contains("jobTitle") && item.contentItem.jobTitle?has_content>
@@ -28,7 +28,7 @@
                 </#if>
             <#else>
                 <#if block.display?seq_contains("name")>
-                    <h3 class="nhsuk-contact__name" aria-label="Name">${item.contentItem.name}</h3>
+                    <h3 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${item.contentItem.name}</h3>
                 </#if>
             </#if>
 
