@@ -4,7 +4,7 @@
     <div class="nhsuk-contact">
         <div class="nhsuk-contact__content">
             <#if singleContact && block.title?has_content>
-                <h2 data-anchorlinksignore="true">${block.title}</h2>
+                <h2>${block.title}</h2>
             </#if>
 
             <#if hst.isBeanType(item.contentItem, 'uk.nhs.hee.web.beans.Person')>
