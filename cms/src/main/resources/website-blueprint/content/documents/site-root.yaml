@@ -1,0 +1,7 @@
+/content/documents/{{ channelId }}/site-root:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippostd:cmxpagefolder',
+                   'mix:versionable']
+  hippo:name: Site Root
+  hippostd:channelid: {{ channelId }}
+  hippostd:foldertype: [new-folder, new-document]
