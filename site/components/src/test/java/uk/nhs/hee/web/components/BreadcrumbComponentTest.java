@@ -1,4 +1,4 @@
-package uk.nhs.hee.web.uk.nhs.hee.web.components;
+package uk.nhs.hee.web.components;
 
 import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.configuration.site.HstSite;
@@ -23,13 +23,11 @@ import org.onehippo.cms7.essentials.components.ext.DoBeforeRenderExtension;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import uk.nhs.hee.web.components.BreadcrumbComponent;
 import uk.nhs.hee.web.components.beans.BreadcrumbLinkTest;
 
 import java.util.List;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.tuple;
+import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 

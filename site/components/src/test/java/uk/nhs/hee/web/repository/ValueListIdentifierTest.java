@@ -1,7 +1,6 @@
-package uk.nhs.hee.web.uk.nhs.hee.web.repository;
+package uk.nhs.hee.web.repository;
 
 import org.junit.Test;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
 
 import static org.assertj.core.api.Assertions.*;
 

@@ -1,0 +1,11 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/cookies:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:componentclassname: uk.nhs.hee.web.components.CookiesPageComponent
+        hst:template: guidance-main
+        hst:parameternames: [document, fallbackSiteContentBasePath]
+        hst:parametervalues: [cookies, /content/documents/lks]
