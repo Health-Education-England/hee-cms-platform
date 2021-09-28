@@ -2925,3 +2925,58 @@
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+  /tabs:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 0f86d1e3-3b87-4f9f-9035-988c7af0b1c5
+    hippo:name: Tabs
+    hippostd:foldertype: [new-tabs-folder, new-tabs-document]
+    hippotranslation:id: 168dcd2c-268b-4c96-8a25-b05ed8bb0951
+    hippotranslation:locale: en
+    /tabs-example:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
+      hippo:name: Tabs Example
+      hippo:versionHistory: faeb2ce8-fba6-42c3-930a-b5e69b4c1b72
+      /tabs-example[1]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0499b820-f8f5-400f-a46b-3d5c2985df75
+        hee:title: Tabs Example
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-28T23:31:08.031+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-28T23:31:08.031+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 92f96bce-602f-466f-8c75-636c696a5119
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title One
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Consectetur elementum amet tristique massa proin erat hendrerit eros phasellus a diam mi sit phasellus amet tortor purus leo sed amet tincidunt pellentesque quisque nisi.</p>
+
+              <p>Ex portaest lacus vel dolor sit molestie scelerisque maecenas a quam leo nulla ac massa eros interdum nec rutrum leo orci sollicitudin diam placerat quam.</p>
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Two
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Id lacus elit interdum elit maecenas quisque quisque arcu massa varius accumsan scelerisque et leo quis morbi adipiscing fusce nulla elementum placerat commodo facilisis lacus.</p>
+
+              <p>Urna euismod commodo proin nec lacus quam facilisis felis phasellus orci ac a sem nunc condimentum rutrum sem id quam sed lorem suspendisse varius maecenas.</p>
+        /hee:tabPanel[3]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Three
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Felis suspendisse ex enim rutrum ex sit morbi elementum rutrum scelerisque suspendisse quisque leo amet nunc sem commodo amet a accumsan morbi tortor sem urna.</p>
+
+              <p>Maecenas eros leo leo lorem pellentesque rutrum varius suspendisse eget euismod eget vivamus massa cursus a enim tempus elit lacus tincidunt nec tempus portaest nec.</p>
