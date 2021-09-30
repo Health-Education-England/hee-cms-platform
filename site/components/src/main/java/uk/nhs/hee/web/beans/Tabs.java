@@ -1,5 +1,6 @@
 package uk.nhs.hee.web.beans;
 
+import org.apache.commons.lang.RandomStringUtils;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import java.util.List;
@@ -16,5 +17,9 @@ public class Tabs extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:tabPanel")
     public List<TabPanel> getTabPanel() {
         return getChildBeansByName("hee:tabPanel", TabPanel.class);
+    }
+
+    public String getRandomPrefix() {
+        return RandomStringUtils.randomAlphabetic(5);
     }
 }

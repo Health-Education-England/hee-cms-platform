@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 7c0d5273-4d4d-44ca-ac33-a41af203be01
+          jcr:uuid: f2ce3863-1ea9-4af5-8485-41f15cabadfe
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -45,7 +45,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 8198c266-899d-46d0-865b-d17fc695c5de
+          jcr:uuid: 1c34981c-0b89-43e2-8e17-9775b6d07731
           hippostdpubwf:lastModificationDate: 2021-09-28T23:15:46.551+01:00
           hippostdpubwf:creationDate: 2021-09-28T23:15:46.552+01:00
           /hee:tabPanel:
@@ -75,9 +75,10 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /tabPanel:
             jcr:primaryType: frontend:plugin
-            caption: tabPanel
+            caption: Tab panel
             field: tabPanel
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
