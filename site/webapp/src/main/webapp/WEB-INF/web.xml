@@ -214,6 +214,11 @@
     </init-param>
   </servlet>
 
+  <servlet>
+    <servlet-name>PushEngageServiceWorker</servlet-name>
+    <servlet-class>uk.nhs.hee.web.pushengage.serviceworker.ServiceWorkerServlet</servlet-class>
+  </servlet>
+
   <servlet-mapping>
     <servlet-name>BinariesServlet</servlet-name>
     <url-pattern>/binaries/*</url-pattern>
@@ -242,6 +247,11 @@
   <servlet-mapping>
     <servlet-name>HstResourceServlet</servlet-name>
     <url-pattern>/resources/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>PushEngageServiceWorker</servlet-name>
+    <url-pattern>/service-worker.js</url-pattern>
   </servlet-mapping>
 
   <security-constraint>
