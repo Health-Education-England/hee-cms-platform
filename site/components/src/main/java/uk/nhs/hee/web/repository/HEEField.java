@@ -33,8 +33,12 @@ public enum HEEField {
     /**
      * {@code date} field/property.
      */
-    DATE("hee:date");
+    DATE("hee:date"),
 
+    /**
+     * {@code title} field/property.
+     */
+    DOCUMENT_TITLE("hee:title");
 
     private final String name;
 

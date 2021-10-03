@@ -58,13 +58,12 @@
                                     <#list selectedCategories as category>
                                         <input type="hidden" name="category" value="${category}">
                                     </#list>
-
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
                                     <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
-                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}"} />
-
-                                    <@select label="${sortLabel}" name="sortByDate" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+                                    <@fmt.message key="sort.option.az" var="sortByAZ"/>
+                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
+                                    <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
                                 </div>
                             </form>
                             <#-- End Sort DropDown -->

@@ -4,6 +4,7 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
+<#include "../macros/listing-sort-order.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
@@ -38,7 +39,7 @@
                                     <@checkboxGroup title=topicLabel name="topic" items=topicMap selectedItemsList=selectedTopics />
                                 </div>
                             </div>
-                            <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
+                            <input type="hidden" name="sortBy" value="${selectedSortOrder}">
                         </form>
                         <#-- End Filters -->
                     </div>
@@ -60,13 +61,12 @@
                                     <#list selectedTopics as topic>
                                         <input type="hidden" name="topic" value="${topic}">
                                     </#list>
-
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
                                     <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
-                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}"} />
-
-                                    <@select label="${sortLabel}" name="sortByDate" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+                                    <@fmt.message key="sort.option.az" var="sortByAZ"/>
+                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
+                                    <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
                                 </div>
                             </form>
                             <#-- End Sort DropDown -->
