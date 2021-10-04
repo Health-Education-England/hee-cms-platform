@@ -8,7 +8,7 @@
                 <h2 class="nhsuk-tabs__title">${tabs.tabsContentBlock.title}</h2>
                 <div class="nhsuk-tabs__list" role="tablist" aria-label="${tabs.tabsContentBlock.title}" data-module="nhsuk-tabs">
                     <#list tabs.tabsContentBlock.tabPanel as tabPanel>
-                        <button class="nhsuk-tabs__list-item${(tabPanel?is_first?then(' nhsuk-tabs__list-item--selected',''))}" role="tab" aria-selected="true"
+                        <button class="nhsuk-tabs__list-item${(tabPanel?is_first?then(' nhsuk-tabs__list-item--selected',''))}" role="tab" aria-selected="${(tabPanel?is_first?then('true','false'))}"
                                 aria-controls="${randPref}-panel-${tabPanel?index}" id="${randPref}-tab-${tabPanel?index}" tabindex="0">
                             ${tabPanel.tabTitle}
                         </button>
