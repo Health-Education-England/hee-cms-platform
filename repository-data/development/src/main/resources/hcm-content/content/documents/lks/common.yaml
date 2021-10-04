@@ -2933,3 +2933,64 @@
     hippostd:foldertype: [new-video-document, new-video-folder]
     hippotranslation:id: 7a0fa432-3eed-4253-bf01-089c78573441
     hippotranslation:locale: en
+    /test-youtube:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 62e6e16c-cfd6-4a5d-a36e-857f931932ae
+      hippo:name: Test YouTube
+      hippo:versionHistory: 26c6bb4e-1c03-49c5-b642-907fe9abc0b5
+      /test-youtube[1]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 3e2e36ef-29c4-46ef-93c0-366a3df21f2b
+        hee:lastReviewed: 2021-10-04T00:54:00+01:00
+        hee:nextReview: 2021-10-11T00:00:00+01:00
+        hee:title: Test YouTube
+        hee:url: https://www.youtube.com/watch?v=86YLFOog4GM
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-04T00:54:15.521+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-04T00:54:15.521+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 42422c8f-4de6-4a27-b4cb-53721a0e99cf
+        hippotranslation:locale: en
+      /test-youtube[2]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 44b8e0ac-db0b-4267-beec-40033432db3d
+        hee:lastReviewed: 2021-10-04T00:54:00+01:00
+        hee:nextReview: 2021-10-11T00:00:00+01:00
+        hee:title: Test YouTube
+        hee:url: https://www.youtube.com/watch?v=86YLFOog4GM
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-04T00:54:15.521+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-04T00:54:43.881+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 42422c8f-4de6-4a27-b4cb-53721a0e99cf
+        hippotranslation:locale: en
+      /test-youtube[3]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f4b50e4b-04fa-42c3-ae41-aa4c28df369b
+        hee:lastReviewed: 2021-10-04T00:54:00+01:00
+        hee:nextReview: 2021-10-11T00:00:00+01:00
+        hee:title: Test YouTube
+        hee:url: https://www.youtube.com/watch?v=86YLFOog4GM
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-04T00:54:15.521+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-04T00:54:43.881+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-10-04T00:54:52.445+01:00
+        hippotranslation:id: 42422c8f-4de6-4a27-b4cb-53721a0e99cf
+        hippotranslation:locale: en

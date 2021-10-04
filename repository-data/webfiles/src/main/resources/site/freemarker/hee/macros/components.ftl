@@ -13,3 +13,4 @@
 <#include "cta-card.ftl">
 <#include "block-links.ftl">
 <#include "anchor-links.ftl">
+<#include "video.ftl">
