@@ -1,6 +1,5 @@
 package uk.nhs.hee.web.beans;
 
-import org.apache.commons.lang.RandomStringUtils;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import java.util.List;
