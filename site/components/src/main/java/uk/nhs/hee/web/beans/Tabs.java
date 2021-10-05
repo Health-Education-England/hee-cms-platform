@@ -18,8 +18,4 @@ public class Tabs extends BaseDocument {
     public List<TabPanel> getTabPanel() {
         return getChildBeansByName("hee:tabPanel", TabPanel.class);
     }
-
-    public String getRandomPrefix() {
-        return RandomStringUtils.randomAlphabetic(5);
-    }
 }

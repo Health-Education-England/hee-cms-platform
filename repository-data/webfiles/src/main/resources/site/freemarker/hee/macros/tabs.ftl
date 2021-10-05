@@ -3,7 +3,7 @@
 <#macro tabs tabs>
     <#if tabs??>
         <#if tabs.tabsContentBlock.tabPanel?size gt 1>
-            <#assign randPref = tabs.tabsContentBlock.randomPrefix>
+            <#assign randPref = "t"+tabs.identifier?keep_before('-')>
             <div class="nhsuk-tabs" data-module="nhsuk-tabs">
                 <h2 class="nhsuk-tabs__title">${tabs.tabsContentBlock.title}</h2>
                 <div class="nhsuk-tabs__list" role="tablist" aria-label="${tabs.tabsContentBlock.title}" data-module="nhsuk-tabs">
