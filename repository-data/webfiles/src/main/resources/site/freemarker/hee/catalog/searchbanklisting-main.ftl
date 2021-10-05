@@ -4,7 +4,6 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
-<#include "../macros/listing-sort-order.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
