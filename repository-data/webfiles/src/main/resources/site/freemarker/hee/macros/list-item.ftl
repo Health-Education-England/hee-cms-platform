@@ -128,9 +128,11 @@
 <#macro searchbankListItem items topicMap keyTermMap providerMap>
     <#list items as item>
         <#if item.strategyDocument?? && item.strategyDocument.mimeType != 'application/vnd.hippo.blank'>
-            <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument>
-                <@hst.param name="forceDownload" value="true"/>
-            </@hst.link>
+            <#assign strategyDocumentURL>
+                <@hst.link hippobean=item.strategyDocument>
+                    <@hst.param name="forceDownload" value="true"/>
+                </@hst.link>
+            </#assign>
         <#else>
             <#assign strategyDocumentURL=''/>
         </#if>
