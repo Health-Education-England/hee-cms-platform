@@ -39,7 +39,7 @@
                                     <@checkboxGroup title=impactGroupLabel name="impactGroup" items=impactGroupMap selectedItemsList=selectedImpactGroups />
                                 </div>
                             </div>
-                            <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
+                            <input type="hidden" name="sortBy" value="${selectedSortOrder}">
                         </form>
                         <#-- End Filters -->
                     </div>

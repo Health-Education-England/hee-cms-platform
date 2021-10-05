@@ -36,7 +36,7 @@
                                     <@checkboxGroup title=categoryLabel name="category" items=categoriesMap selectedItemsList=selectedCategories />
                                 </div>
                             </div>
-                            <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
+                            <input type="hidden" name="sortBy" value="${selectedSortOrder}">
                         </form>
                         <#-- End Filters -->
                     </div>
