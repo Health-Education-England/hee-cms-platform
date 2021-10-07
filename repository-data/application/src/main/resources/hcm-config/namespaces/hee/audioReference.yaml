@@ -1,34 +1,33 @@
 definitions:
   config:
-    /hippo:namespaces/hee/videoReference:
+    /hippo:namespaces/hee/audioReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 1eb12aa8-547a-4ef6-94e6-e7a92e9a4d70
+      jcr:uuid: 8a578502-e2eb-4666-8a7e-ce03f94991e7
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 1fb78210-d3e7-4739-af78-5782da13405e
+        jcr:uuid: 26a1f908-1f9a-452b-8fcf-38c94415c494
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 72fc4253-06a0-4593-a5d5-79403f2400c6
+          jcr:uuid: b03a780d-c0bf-44df-a1d8-4977f580e3b9
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /videoContentBlock:
+          /audioContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:videoContentBlock
+            hipposysedit:path: hee:audioContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:videoReference
-          /hee:videoContentBlock:
+          jcr:primaryType: hee:audioReference
+          /hee:audioContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -42,13 +41,13 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /videoContentBlock:
+          /audioContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Select video
-            field: videoContentBlock
+            caption: Select audio
+            field: audioContentBlock
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:video']
+              nodetypes: ['hee:audio']

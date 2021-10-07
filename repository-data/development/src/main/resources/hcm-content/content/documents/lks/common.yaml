@@ -3052,3 +3052,72 @@
         hippostdpubwf:publicationDate: 2021-10-07T16:11:31.501+01:00
         hippotranslation:id: dec63095-3846-411c-9a9a-55ae0c59b7eb
         hippotranslation:locale: en
+  /audio:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: ce5156c3-896d-4ad2-9323-1f3c99d7c660
+    hippo:name: Audio
+    hippostd:foldertype: [new-audio-folder, new-audio-document]
+    hippotranslation:id: 6e09ef84-e924-4629-b422-01fc1815b18f
+    hippotranslation:locale: en
+    /audio-test:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 03a2ee01-4feb-4133-8773-c353455de6e3
+      hippo:name: Audio Test
+      hippo:versionHistory: 2fc22a6a-6139-44fc-b0f8-0cd79bb2f282
+      /audio-test[1]:
+        jcr:primaryType: hee:audio
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f0f81fee-cb3d-4d7f-900a-f3f78cfc84bb
+        hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun"
+          height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:lastReviewed: 2021-10-07T19:45:00+01:00
+        hee:nextReview: 2021-10-14T00:00:00+01:00
+        hee:title: Audio test
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-07T19:45:23.537+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-07T19:45:23.537+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4a9d82ae-3dea-4901-a34d-623e0805d78b
+        hippotranslation:locale: en
+      /audio-test[2]:
+        jcr:primaryType: hee:audio
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 76bbcf67-beea-433d-b1d2-5fc20c81e1a6
+        hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun"
+          height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:lastReviewed: 2021-10-07T19:45:00+01:00
+        hee:nextReview: 2021-10-14T00:00:00+01:00
+        hee:title: Audio test
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-07T19:45:23.537+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-07T19:46:03.165+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4a9d82ae-3dea-4901-a34d-623e0805d78b
+        hippotranslation:locale: en
+      /audio-test[3]:
+        jcr:primaryType: hee:audio
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ba3378b1-0a60-45e4-99ca-146ac6fbc25c
+        hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Robyn-Scargill---Trainee-nursing-associate-eqe7mk/a-a4l5nun"
+          height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:lastReviewed: 2021-10-07T19:45:00+01:00
+        hee:nextReview: 2021-10-14T00:00:00+01:00
+        hee:title: Audio test
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-07T19:45:23.537+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-07T19:46:03.165+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-10-07T19:46:07.607+01:00
+        hippotranslation:id: 4a9d82ae-3dea-4901-a34d-623e0805d78b
+        hippotranslation:locale: en
