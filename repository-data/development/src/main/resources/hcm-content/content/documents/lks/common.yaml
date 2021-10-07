@@ -2994,3 +2994,61 @@
         hippostdpubwf:publicationDate: 2021-10-04T00:54:52.445+01:00
         hippotranslation:id: 42422c8f-4de6-4a27-b4cb-53721a0e99cf
         hippotranslation:locale: en
+    /test-vimeo:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: a2933c50-35ff-4f18-8104-420a62d1cd10
+      hippo:name: Test Vimeo
+      hippo:versionHistory: 49eba125-3d74-4752-84af-4684854d90aa
+      /test-vimeo[1]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1d60550e-e68a-40cd-ad19-9c62bc2e4d91
+        hee:lastReviewed: 2021-10-07T16:11:00+01:00
+        hee:nextReview: 2021-10-14T00:00:00+01:00
+        hee:title: Test Vimeo
+        hee:url: https://vimeo.com/625425256
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-07T16:10:54.968+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-07T16:10:54.968+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: dec63095-3846-411c-9a9a-55ae0c59b7eb
+        hippotranslation:locale: en
+      /test-vimeo[2]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: e1b10d9d-0799-4bc4-acbd-2c201983a0b7
+        hee:lastReviewed: 2021-10-07T16:11:00+01:00
+        hee:nextReview: 2021-10-14T00:00:00+01:00
+        hee:title: Test Vimeo
+        hee:url: https://vimeo.com/625425256
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-07T16:10:54.968+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-07T16:11:28.869+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: dec63095-3846-411c-9a9a-55ae0c59b7eb
+        hippotranslation:locale: en
+      /test-vimeo[3]:
+        jcr:primaryType: hee:video
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: c0b735f8-cfeb-4e49-8512-a12629c79965
+        hee:lastReviewed: 2021-10-07T16:11:00+01:00
+        hee:nextReview: 2021-10-14T00:00:00+01:00
+        hee:title: Test Vimeo
+        hee:url: https://vimeo.com/625425256
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-07T16:10:54.968+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-07T16:11:28.869+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-10-07T16:11:31.501+01:00
+        hippotranslation:id: dec63095-3846-411c-9a9a-55ae0c59b7eb
+        hippotranslation:locale: en

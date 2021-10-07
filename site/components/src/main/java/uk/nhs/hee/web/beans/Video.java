@@ -9,6 +9,10 @@ import java.util.regex.Pattern;
 @HippoEssentialsGenerated(internalName = "hee:video")
 @Node(jcrType = "hee:video")
 public class Video extends BaseDocument {
+
+    private final Pattern YOUTUBE_PATTERN = Pattern.compile("v=([^\\s&#]*)");
+    private final Pattern VIMEO_PATTERN = Pattern.compile(".*\\/([^?]+)");
+
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");
@@ -30,13 +34,23 @@ public class Video extends BaseDocument {
     }
 
     public String getVideoId() {
-        String regex = "v=([^\\s&#]*)";
-        Pattern pattern = Pattern.compile(regex, Pattern.MULTILINE);
-        Matcher matcher = pattern.matcher(getUrl());
-        String videoId = null;
-        if(matcher.find()) {
-            videoId = matcher.group(1);
+        String regex;
+        String videoId;
+        Matcher matcher;
+        if (getUrl().contains("youtu")) {
+            matcher = YOUTUBE_PATTERN.matcher(getUrl());
+            if(matcher.find()) {
+                videoId = matcher.group(1);
+                return videoId;
+            }
         }
-        return videoId;
+        else if (getUrl().contains("vimeo")) {
+            matcher = VIMEO_PATTERN.matcher(getUrl());
+            if(matcher.find()) {
+                videoId = matcher.group(1);
+                return videoId;
+            }
+        }
+        return null;
     }
 }
