@@ -14,3 +14,4 @@
 <#include "block-links.ftl">
 <#include "anchor-links.ftl">
 <#include "video.ftl">
+<#include "audio.ftl">
