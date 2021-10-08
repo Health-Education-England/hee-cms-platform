@@ -1,59 +1,46 @@
 definitions:
   config:
-    /hippo:namespaces/hee/QuickLinks:
+    /hippo:namespaces/hee/tabPanel:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: a5ef4aba-ad72-4e1f-a076-b02b7753599a
+      jcr:uuid: 9ebfb858-6d4f-488c-906b-2865b45c5c07
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 3539864b-771b-4c86-8067-1857ab7bc7ef
+        jcr:uuid: 9e499704-4c12-4ec7-a314-62d34bad1dee
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 425d4fd2-b121-477b-9587-2565d3851455
+          jcr:uuid: 75095823-317b-4e58-8cd1-9359212d58eb
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
+          /tabTitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:tabTitle
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /links:
+          /tabBody:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:links
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:tabBody
             hipposysedit:primary: false
-            hipposysedit:type: hee:link
+            hipposysedit:type: hippostd:html
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:QuickLinks
-          hee:title: ''
-          /hee:links:
-            jcr:primaryType: hee:link
-            jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 1688b9e0-c727-4aa1-94ba-533b4e348cf6
-            hee:text: ''
-            hee:url: ''
-            hippostd:holder: holder
-            hippostd:state: draft
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: ''
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -65,19 +52,18 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /tabTitle:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: title
+            caption: Tab title
+            field: tabTitle
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /links:
+          /tabBody:
             jcr:primaryType: frontend:plugin
-            caption: Links
-            field: links
+            caption: Tab body
+            field: tabBody
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field

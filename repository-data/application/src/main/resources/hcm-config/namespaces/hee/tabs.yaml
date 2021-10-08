@@ -1,19 +1,19 @@
 definitions:
   config:
-    /hippo:namespaces/hee/QuickLinks:
+    /hippo:namespaces/hee/tabs:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: a5ef4aba-ad72-4e1f-a076-b02b7753599a
+      jcr:uuid: 3251bbf8-068a-43aa-b0c9-18ee813fd909
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 3539864b-771b-4c86-8067-1857ab7bc7ef
+        jcr:uuid: 6a3527e3-e6a5-4795-b15d-505ed207cf29
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 425d4fd2-b121-477b-9587-2565d3851455
+          jcr:uuid: f2ce3863-1ea9-4af5-8485-41f15cabadfe
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -24,36 +24,36 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /links:
+          /tabPanel:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:links
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:tabPanel
             hipposysedit:primary: false
-            hipposysedit:type: hee:link
+            hipposysedit:type: hee:tabPanel
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:QuickLinks
+          jcr:primaryType: hee:tabs
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          /hee:links:
-            jcr:primaryType: hee:link
-            jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 1688b9e0-c727-4aa1-94ba-533b4e348cf6
-            hee:text: ''
-            hee:url: ''
-            hippostd:holder: holder
-            hippostd:state: draft
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          jcr:uuid: 1c34981c-0b89-43e2-8e17-9775b6d07731
+          hippostdpubwf:lastModificationDate: 2021-09-28T23:15:46.551+01:00
+          hippostdpubwf:creationDate: 2021-09-28T23:15:46.552+01:00
+          /hee:tabPanel:
+            jcr:primaryType: hee:tabPanel
+            hee:tabTitle: ''
+            /hee:tabBody:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -71,15 +71,14 @@ definitions:
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /links:
+          /tabPanel:
             jcr:primaryType: frontend:plugin
-            caption: Links
-            field: links
-            hint: ''
+            caption: Tab panel
+            field: tabPanel
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

@@ -81,6 +81,9 @@
                                     <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                         <@hee.media media=block/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.TabsReference">
+                                        <@hee.tabs tabs=block/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
