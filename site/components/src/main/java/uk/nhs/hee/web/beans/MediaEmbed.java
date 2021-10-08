@@ -4,9 +4,9 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import java.util.Calendar;
 
-@HippoEssentialsGenerated(internalName = "hee:audio")
-@Node(jcrType = "hee:audio")
-public class Audio extends BaseDocument {
+@HippoEssentialsGenerated(internalName = "hee:mediaEmbed")
+@Node(jcrType = "hee:mediaEmbed")
+public class MediaEmbed extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");

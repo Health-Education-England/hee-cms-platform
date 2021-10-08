@@ -1,16 +1,16 @@
 definitions:
   config:
-    /hippo:configuration/hippo:queries/hippo:templates/new-audio-folder:
+    /hippo:configuration/hippo:queries/hippo:templates/new-media-embed-folder:
       jcr:primaryType: hippostd:templatequery
       hippostd:modify: [./_name, $name, './hippotranslation:id', $uuid, './hippotranslation:locale',
         $inherited]
       jcr:language: xpath
-      jcr:statement: /jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-audio-folder/hippostd:templates/node()
+      jcr:statement: /jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-media-embed-folder/hippostd:templates/node()
       /hippostd:templates:
         jcr:primaryType: hippostd:templates
         /hippostd:folder:
           jcr:primaryType: hippostd:folder
           jcr:mixinTypes: ['hippotranslation:translated']
-          hippostd:foldertype: [new-audio-document, new-audio-folder]
+          hippostd:foldertype: [new-media-embed-document, new-media-embed-folder]
           hippotranslation:id: generated id
           hippotranslation:locale: inherited locale

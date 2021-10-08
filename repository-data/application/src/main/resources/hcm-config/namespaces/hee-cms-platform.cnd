@@ -38,10 +38,10 @@
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
   orderable
 
-[hee:audio] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+[hee:mediaEmbed] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:audioReference] > hippo:compound, hippostd:relaxed
+[hee:mediaEmbedReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:blockLinks] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -147,10 +147,3 @@
 
 [hee:searchBank] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
-
-[hee:video] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:videoReference] > hippo:compound, hippostd:relaxed
-  orderable
-

@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/audioReference:
+    /hippo:namespaces/hee/mediaEmbedReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: 8a578502-e2eb-4666-8a7e-ce03f94991e7
@@ -15,19 +15,19 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /audioContentBlock:
+          /mediaEmbedContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:audioContentBlock
+            hipposysedit:path: hee:mediaEmbedContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:audioReference
-          /hee:audioContentBlock:
+          jcr:primaryType: hee:mediaEmbedReference
+          /hee:mediaEmbedContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -41,13 +41,13 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /audioContentBlock:
+          /mediaEmbedContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Select audio
-            field: audioContentBlock
+            caption: Select mediaEmbed
+            field: mediaEmbedContentBlock
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:audio']
+              nodetypes: ['hee:mediaEmbed']
