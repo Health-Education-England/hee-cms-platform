@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 512f38a7-1ccf-4791-b0ec-8e51e62bbf24
+          jcr:uuid: 1fbd8f8b-40f7-4640-b4d2-81052809c788
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -50,6 +50,14 @@ definitions:
             hipposysedit:path: hee:nextReview
             hipposysedit:primary: false
             hipposysedit:type: Date
+          /transcript:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:transcript
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -65,9 +73,12 @@ definitions:
           hee:embedCode: ''
           hee:lastReviewed: 0001-01-01T12:00:00Z
           hee:nextReview: 0001-01-01T12:00:00Z
-          jcr:uuid: 61c58e4a-2d86-4fb2-b53c-c69796b2307c
+          jcr:uuid: 62a9a68b-802c-49d3-a92c-15887fbaa617
           hippostdpubwf:lastModificationDate: 2021-10-07T19:24:39.068+01:00
           hippostdpubwf:creationDate: 2021-10-07T19:24:39.068+01:00
+          /hee:transcript:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -92,6 +103,15 @@ definitions:
             caption: Embed code
             field: embedCode
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /transcript:
+            jcr:primaryType: frontend:plugin
+            caption: Transcript
+            field: transcript
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
