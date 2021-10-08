@@ -7,15 +7,17 @@
                 <div class="nhsuk-media">
                     ${ media.mediaEmbedContentBlock.embedCode }
                     <div class="nhsuk-media__info">
-                        <div class="nhsuk-media__transcript">
-                            <a href="javascript:void(0);">
-                                <span class="nhsuk-media__show-text">Show transcript</span>
-                                <span class="nhsuk-media__hide-text">Hide transcript</span>
-                            </a>
-                            <div class="nhsuk-media__transcript-text">
-                                <@hst.html hippohtml=media.mediaEmbedContentBlock.transcript/>
+                        <#if media.mediaEmbedContentBlock.transcript??>
+                            <div class="nhsuk-media__transcript">
+                                <a href="javascript:void(0);">
+                                    <span class="nhsuk-media__show-text">Show transcript</span>
+                                    <span class="nhsuk-media__hide-text">Hide transcript</span>
+                                </a>
+                                <div class="nhsuk-media__transcript-text">
+                                    <@hst.html hippohtml=media.mediaEmbedContentBlock.transcript/>
+                                </div>
                             </div>
-                        </div>
+                        </#if>
                         <div class="nhsuk-media__reviews">
                             <#if media.mediaEmbedContentBlock.lastReviewed??>
                                 <p>
