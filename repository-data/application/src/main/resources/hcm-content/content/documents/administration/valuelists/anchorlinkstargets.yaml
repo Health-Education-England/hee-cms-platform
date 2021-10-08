@@ -1,0 +1,24 @@
+/content/documents/administration/valuelists/anchorlinkstargets:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 5989e44e-3eee-4064-a0d2-80bdc0ceb2df
+  hippo:name: AnchorLinksTargets
+  /anchorlinkstargets:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: feb16791-45bf-43dc-8290-54247fe4444f
+    hippo:availability: [live, preview]
+    hippotranslation:id: d0122c65-7706-40cb-9d69-bc63a3ad530c
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: h2
+      selection:label: h2
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: h3
+      selection:label: h3
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: h4
+      selection:label: h4
