@@ -9,7 +9,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 @Node(jcrType = "hee:mediaEmbedReference")
 public class MediaEmbedReference extends HippoCompound {
     @HippoEssentialsGenerated(internalName = "hee:mediaEmbedContentBlock")
-    public HippoBean getMediaContentBlock() {
+    public HippoBean getMediaEmbedContentBlock() {
         return getLinkedBean("hee:mediaEmbedContentBlock", HippoBean.class);
     }
 }
