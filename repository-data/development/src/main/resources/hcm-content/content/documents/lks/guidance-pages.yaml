@@ -997,7 +997,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c2a82e35-2945-4350-825d-b56c7d46f68d
     hippo:name: Introduction
-    hippo:versionHistory: 57cf7027-52ae-40b5-93f7-c4e897f14d89
+    hippo:versionHistory: 677a4c04-fae2-4894-a882-ed54b80b6266
     /introduction[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -1010,7 +1010,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-10-08T19:23:42.601+01:00
+      hippostdpubwf:lastModificationDate: 2021-10-08T10:44:20.441+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1254,9 +1254,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-10-08T19:23:42.601+01:00
+      hippostdpubwf:lastModificationDate: 2021-10-08T10:44:20.441+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-10-08T19:23:44.549+01:00
+      hippostdpubwf:publicationDate: 2021-10-08T10:44:23.802+01:00
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1499,7 +1499,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-10-08T19:23:38.437+01:00
+      hippostdpubwf:lastModificationDate: 2021-10-08T10:44:01.214+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1731,3 +1731,149 @@
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:anchorLinks
+        hee:headings: h2,h3
+        hee:title: On this page
+  /test-media:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
+    hippo:name: Test Media
+    hippo:versionHistory: 08e78b7d-6067-4e9a-9f32-3f87381292ea
+    /test-media[1]:
+      jcr:primaryType: hee:guidance
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2182f2fc-4b9f-49bf-9913-3f9ad7368b99
+      hee:summary: Test media component. Currently only tested with embed codes from
+        Youtube, Vimeo and Anchor FM.
+      hee:title: Test Media Component
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
+      hippostdpubwf:lastModificationDate: 2021-10-08T12:16:13.061+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ba8ebbae-82df-4b58-8533-aa0c9ec51229
+      hippotranslation:locale: en
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 2021-10-08T00:00:00+01:00
+        hee:nextReviewed: 2022-02-24T00:00:00Z
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:anchorLinks
+        hee:headings: h2
+        hee:title: On this page
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 2e16ec4b-0f06-4265-958b-2f48d40fedbb
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
+    /test-media[2]:
+      jcr:primaryType: hee:guidance
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 9a29f360-baec-4517-9447-d599b40924f5
+      hee:summary: Test media component. Currently only tested with embed codes from
+        Youtube, Vimeo and Anchor FM.
+      hee:title: Test Media Component
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
+      hippostdpubwf:lastModificationDate: 2021-10-08T12:18:09.257+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ba8ebbae-82df-4b58-8533-aa0c9ec51229
+      hippotranslation:locale: en
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 2021-10-08T00:00:00+01:00
+        hee:nextReviewed: 2022-02-24T00:00:00Z
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:anchorLinks
+        hee:headings: h2
+        hee:title: On this page
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 2e16ec4b-0f06-4265-958b-2f48d40fedbb
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
+    /test-media[3]:
+      jcr:primaryType: hee:guidance
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: d41e2767-2b55-4e46-ac19-6e3a9a707782
+      hee:summary: Test media component. Currently only tested with embed codes from
+        Youtube, Vimeo and Anchor FM.
+      hee:title: Test Media Component
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
+      hippostdpubwf:lastModificationDate: 2021-10-08T12:18:09.257+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-10-08T12:18:11.218+01:00
+      hippotranslation:id: ba8ebbae-82df-4b58-8533-aa0c9ec51229
+      hippotranslation:locale: en
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 2021-10-08T00:00:00+01:00
+        hee:nextReviewed: 2022-02-24T00:00:00Z
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:anchorLinks
+        hee:headings: h2
+        hee:title: On this page
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 2e16ec4b-0f06-4265-958b-2f48d40fedbb
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb

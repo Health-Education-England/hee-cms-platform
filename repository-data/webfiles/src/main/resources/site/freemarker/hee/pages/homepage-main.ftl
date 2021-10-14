@@ -40,6 +40,9 @@
                                     <#case "uk.nhs.hee.web.beans.NavMap">
                                         <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
+                                        <@hee.media media=block/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>

@@ -36,6 +36,7 @@ public class EventListingPageComponent extends ListingPageComponent {
 
         request.setModel("selectedYears", HstUtils.getQueryParameterValues(request, YEAR_QUERY_PARAM));
         request.setModel("years", getDistinctEventYears(request));
+        request.setModel("selectedSortOrder", getSelectedSortOrder(request));
     }
 
     @Override
