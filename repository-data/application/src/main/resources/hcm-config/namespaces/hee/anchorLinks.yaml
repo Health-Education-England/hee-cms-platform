@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 945d1b15-b988-4859-8d7d-f4db138e9fab
+          jcr:uuid: a9d5ea4e-cfd4-4f5a-8e48-e096a421b9e7
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,21 +24,20 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /headings:
+          /targetheadings:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: false
+            hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:headings
+            hipposysedit:path: hee:targetheadings
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:anchorLinks
           hee:title: On this page
-          hee:headings: h2,h3
+          hee:targetheadings: [h2]
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -58,12 +57,17 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /headings:
+          /targetheadings:
             jcr:primaryType: frontend:plugin
-            caption: Headings
-            field: headings
-            hint: Add the types of heading you want to include, separated by commas. For example "h2,h3"
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Target headings
+            field: targetheadings
+            multiselect.type: checkboxes
+            palette.alloworder: false
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/anchorlinkstargets
