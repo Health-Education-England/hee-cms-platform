@@ -22,12 +22,15 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.beans.MiniHub;
+import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.*;
 import java.util.stream.StreamSupport;
+
+import static uk.nhs.hee.web.repository.HEEField.DOCUMENT_TITLE;
 
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
@@ -37,7 +40,8 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
 
     private static final String ASCENDING_SORT_ORDER = "asc";
     private static final String DESCENDING_SORT_ORDER = "desc";
-    private static final String SORT_BY_DATE_QUERY_PARAM = "sortByDate";
+    private static final String ATOZ_SORT_ORDER = "az";
+    private static final String SORT_BY_QUERY_PARAM = "sortBy";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -248,13 +252,15 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         String sortOrder = DESCENDING_SORT_ORDER;
 
         final List<String> sortByDateQueryParamValues =
-                HstUtils.getQueryParameterValues(request, SORT_BY_DATE_QUERY_PARAM);
+                HstUtils.getQueryParameterValues(request, SORT_BY_QUERY_PARAM);
         if (!sortByDateQueryParamValues.isEmpty()) {
             sortOrder = sortByDateQueryParamValues.get(0);
         }
 
         if (sortOrder.equals(ASCENDING_SORT_ORDER)) {
             query.addOrderByAscending(listingPageType.getSortByDateField());
+        } else if (sortOrder.equals(ATOZ_SORT_ORDER)) {
+            query.addOrderByAscending(HEEField.DOCUMENT_TITLE.getName());
         } else {
             query.addOrderByDescending(listingPageType.getSortByDateField());
         }
@@ -295,7 +301,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @return the requested sort order. Defaults to Descending sort order.
      */
     protected String getSelectedSortOrder(final HstRequest request) {
-        final String sortQueryParam = getAnyParameter(request, SORT_BY_DATE_QUERY_PARAM);
+        final String sortQueryParam = getAnyParameter(request, SORT_BY_QUERY_PARAM);
         return Strings.isNullOrEmpty(sortQueryParam) ? DESCENDING_SORT_ORDER : sortQueryParam;
     }
 

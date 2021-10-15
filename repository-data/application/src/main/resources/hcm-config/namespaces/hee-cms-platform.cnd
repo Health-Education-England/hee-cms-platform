@@ -38,6 +38,12 @@
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:mediaEmbed] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:mediaEmbedReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:blockLinks] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -143,5 +149,14 @@
   orderable
 
 [hee:searchBank] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:tabPanel] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:tabs] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:tabsReference] > hippo:compound, hippostd:relaxed
   orderable
 
