@@ -6,6 +6,6 @@ definitions:
       /main:
         jcr:primaryType: hst:component
         hst:componentclassname: uk.nhs.hee.web.components.CookiesPageComponent
-        hst:template: guidance-main
-        hst:parameternames: [document, fallbackSiteContentBasePath]
-        hst:parametervalues: [cookies, /content/documents/lks]
+        hst:template: cookies-main
+        hst:parameternames: [document, fallbackSiteContentBasePath, fallbackChannelDomainWithProtocol]
+        hst:parametervalues: [cookies, /content/documents/lks, 'https://library.hee.nhs.uk']
