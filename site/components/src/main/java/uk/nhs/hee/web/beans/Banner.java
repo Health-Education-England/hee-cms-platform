@@ -4,9 +4,9 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 
-@HippoEssentialsGenerated(internalName = "hee:phaseBanner")
-@Node(jcrType = "hee:phaseBanner")
-public class PhaseBanner extends BaseDocument {
+@HippoEssentialsGenerated(internalName = "hee:banner")
+@Node(jcrType = "hee:banner")
+public class Banner extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:tag")
     public String getTag() {
         return getSingleProperty("hee:tag");

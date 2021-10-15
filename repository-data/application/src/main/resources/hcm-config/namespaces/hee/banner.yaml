@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/phaseBanner:
+    /hippo:namespaces/hee/banner:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: aff42650-cbfb-432c-8021-c35ab2e02b53
@@ -35,7 +35,7 @@ definitions:
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:phaseBanner
+          jcr:primaryType: hee:banner
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -74,7 +74,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Copy
             field: copy
-            hint: Make sure the banner doesn't contain more than one paragraph
+            hint: Make sure the copy doesn't contain more than one paragraph
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
