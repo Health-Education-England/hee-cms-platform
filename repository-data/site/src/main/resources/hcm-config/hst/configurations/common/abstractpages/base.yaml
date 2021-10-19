@@ -28,3 +28,9 @@ definitions:
         jcr:primaryType: hst:component
         hst:template: base-breadcrumb
         hst:componentclassname: uk.nhs.hee.web.components.BreadcrumbComponent
+      /banner:
+        jcr:primaryType: hst:component
+        hst:componentclassname: uk.nhs.hee.web.components.BannerComponent
+        hst:template: base-banner
+        hst:parameternames: [document]
+        hst:parametervalues: [site-banner]
