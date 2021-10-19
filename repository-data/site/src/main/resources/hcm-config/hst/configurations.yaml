@@ -30,6 +30,11 @@ definitions:
               hst:componentconfigurationid: hst:pages/searchresults
               hst:pagetitle: Search
               hst:relativecontentpath: listing-pages/search-results
+          /cookies:
+            jcr:primaryType: hst:sitemapitem
+            hst:componentconfigurationid: hst:pages/cookies
+            hst:pagetitle: Cookies
+            hst:refId: cookies
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:
@@ -104,6 +109,9 @@ definitions:
           /searchbanklisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/searchbanklisting-main.ftl
+          /cookies-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/cookies-main.ftl
           /base-banner:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/banner.ftl

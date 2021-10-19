@@ -16,6 +16,11 @@ public enum Model {
     CATEGORIES_VALUE_LIST_MAP("categoriesValueListMap"),
 
     /**
+     * Model key for Canonical URL
+     */
+    CANONICAL_URL("canonicalURL"),
+
+    /**
      * Model key for navMapRegions ValueList Map
      */
     NAV_MAP_REGION_MAP("navMapRegionMap");
