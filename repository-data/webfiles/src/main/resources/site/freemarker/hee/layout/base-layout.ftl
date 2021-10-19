@@ -53,6 +53,8 @@
 
     <@hst.include ref="header"/>
 
+    <@hst.include ref="banner"/>
+
     <@hst.include ref="breadcrumb"/>
 
     <@hst.include ref="main"/>

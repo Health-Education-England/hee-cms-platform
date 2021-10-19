@@ -1,43 +1,55 @@
 definitions:
   config:
-    /hippo:namespaces/hee/anchorLinks:
+    /hippo:namespaces/hee/banner:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 38d42105-84a4-4a68-af71-3a4a47492bf9
+      jcr:uuid: aff42650-cbfb-432c-8021-c35ab2e02b53
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: f3733faf-21db-42ca-b89a-88c09832bd95
+        jcr:uuid: 4a85a91e-d431-40c1-84e5-7c78bb9733b7
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a9d5ea4e-cfd4-4f5a-8e48-e096a421b9e7
+          jcr:uuid: f85fa20a-0838-43f6-9fc9-6bd2e3f8175d
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
+          /tag:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:tag
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /targetheadings:
+          /copy:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: true
+            hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:targetheadings
+            hipposysedit:path: hee:copy
             hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: hippostd:html
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:anchorLinks
-          hee:title: On this page
-          hee:targetheadings: [h2]
+          jcr:primaryType: hee:banner
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:tag: ''
+          jcr:uuid: 8da09c46-50d7-4e24-ac45-3252b1739f0d
+          hippostdpubwf:lastModificationDate: 2021-09-21T16:31:53.916+01:00
+          hippostdpubwf:creationDate: 2021-09-21T16:31:53.916+01:00
+          /hee:copy:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -49,25 +61,21 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /tag:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: title
+            caption: Tag
+            field: tag
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /targetheadings:
+          /copy:
             jcr:primaryType: frontend:plugin
-            caption: Target headings
-            field: targetheadings
-            multiselect.type: checkboxes
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: Copy
+            field: copy
+            hint: Make sure the copy doesn't contain more than one paragraph
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/anchorlinkstargets

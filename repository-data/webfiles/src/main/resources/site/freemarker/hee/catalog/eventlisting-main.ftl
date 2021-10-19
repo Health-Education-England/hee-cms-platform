@@ -36,7 +36,7 @@
                                     <@checkboxGroup title=yearLabel name="year" items=years selectedItemsList=selectedYears />
                                 </div>
                             </div>
-                            <input type="hidden" name="sortByDate" value="${selectedSortOrder}">
+                            <input type="hidden" name="sortBy" value="${selectedSortOrder}">
                         </form>
                         <#-- End Filters -->
                     </div>
@@ -58,13 +58,12 @@
                                     <#list selectedYears as year>
                                         <input type="hidden" name="year" value="${year}">
                                     </#list>
-
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
                                     <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
-                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}"} />
-
-                                    <@select label="${sortLabel}" name="sortByDate" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+                                    <@fmt.message key="sort.option.az" var="sortByAZ"/>
+                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
+                                    <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
                                 </div>
                             </form>
                             <#-- End Sort DropDown -->

@@ -2925,3 +2925,637 @@
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+  /tabs:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 0f86d1e3-3b87-4f9f-9035-988c7af0b1c5
+    hippo:name: Tabs
+    hippostd:foldertype: [new-tabs-folder, new-tabs-document]
+    hippotranslation:id: 168dcd2c-268b-4c96-8a25-b05ed8bb0951
+    hippotranslation:locale: en
+    /tabs-example:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
+      hippo:name: Tabs Example
+      hippo:versionHistory: f51e9d1e-f0db-49f3-b2e9-78390550d8cd
+      /tabs-example[1]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0499b820-f8f5-400f-a46b-3d5c2985df75
+        hee:title: Tabs Example
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-28T23:31:08.031+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-30T12:28:38.491+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 92f96bce-602f-466f-8c75-636c696a5119
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title One
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Consectetur elementum amet tristique massa proin erat hendrerit eros phasellus a diam mi sit phasellus amet tortor purus leo sed amet tincidunt pellentesque quisque nisi.</p>
+
+              <p>Ex portaest lacus vel dolor sit molestie scelerisque maecenas a quam leo nulla ac massa eros interdum nec rutrum leo orci sollicitudin diam placerat quam.</p>
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Two
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Id lacus elit interdum elit maecenas quisque quisque arcu massa varius accumsan scelerisque et leo quis morbi adipiscing fusce nulla elementum placerat commodo facilisis lacus.</p>
+
+              <p>Urna euismod commodo proin nec lacus quam facilisis felis phasellus orci ac a sem nunc condimentum rutrum sem id quam sed lorem suspendisse varius maecenas.</p>
+        /hee:tabPanel[3]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Three
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Felis suspendisse ex enim rutrum ex sit morbi elementum rutrum scelerisque suspendisse quisque leo amet nunc sem commodo amet a accumsan morbi tortor sem urna.</p>
+
+              <p>Maecenas eros leo leo lorem pellentesque rutrum varius suspendisse eget euismod eget vivamus massa cursus a enim tempus elit lacus tincidunt nec tempus portaest nec.</p>
+      /tabs-example[2]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: eae7ba27-25ef-4c4b-b3cc-7edfbd7464df
+        hee:title: Tabs Example
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-28T23:31:08.031+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-30T12:28:41.456+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 92f96bce-602f-466f-8c75-636c696a5119
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title One
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Consectetur elementum amet tristique massa proin erat hendrerit eros phasellus a diam mi sit phasellus amet tortor purus leo sed amet tincidunt pellentesque quisque nisi.</p>
+
+              <p>Ex portaest lacus vel dolor sit molestie scelerisque maecenas a quam leo nulla ac massa eros interdum nec rutrum leo orci sollicitudin diam placerat quam.</p>
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Two
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Id lacus elit interdum elit maecenas quisque quisque arcu massa varius accumsan scelerisque et leo quis morbi adipiscing fusce nulla elementum placerat commodo facilisis lacus.</p>
+
+              <p>Urna euismod commodo proin nec lacus quam facilisis felis phasellus orci ac a sem nunc condimentum rutrum sem id quam sed lorem suspendisse varius maecenas.</p>
+        /hee:tabPanel[3]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Three
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Felis suspendisse ex enim rutrum ex sit morbi elementum rutrum scelerisque suspendisse quisque leo amet nunc sem commodo amet a accumsan morbi tortor sem urna.</p>
+
+              <p>Maecenas eros leo leo lorem pellentesque rutrum varius suspendisse eget euismod eget vivamus massa cursus a enim tempus elit lacus tincidunt nec tempus portaest nec.</p>
+      /tabs-example[3]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 6a7e297d-9508-4dbd-b405-77a34f392c8e
+        hee:title: Tabs Example
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-28T23:31:08.031+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-30T12:28:41.456+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-09-30T12:28:51.923+01:00
+        hippotranslation:id: 92f96bce-602f-466f-8c75-636c696a5119
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title One
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Consectetur elementum amet tristique massa proin erat hendrerit eros phasellus a diam mi sit phasellus amet tortor purus leo sed amet tincidunt pellentesque quisque nisi.</p>
+
+              <p>Ex portaest lacus vel dolor sit molestie scelerisque maecenas a quam leo nulla ac massa eros interdum nec rutrum leo orci sollicitudin diam placerat quam.</p>
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Two
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Id lacus elit interdum elit maecenas quisque quisque arcu massa varius accumsan scelerisque et leo quis morbi adipiscing fusce nulla elementum placerat commodo facilisis lacus.</p>
+
+              <p>Urna euismod commodo proin nec lacus quam facilisis felis phasellus orci ac a sem nunc condimentum rutrum sem id quam sed lorem suspendisse varius maecenas.</p>
+        /hee:tabPanel[3]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Tab Title Three
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Felis suspendisse ex enim rutrum ex sit morbi elementum rutrum scelerisque suspendisse quisque leo amet nunc sem commodo amet a accumsan morbi tortor sem urna.</p>
+
+              <p>Maecenas eros leo leo lorem pellentesque rutrum varius suspendisse eget euismod eget vivamus massa cursus a enim tempus elit lacus tincidunt nec tempus portaest nec.</p>
+    /tabs-example-two:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 01128cc5-221f-4894-a953-22acb3f8b2a7
+      hippo:name: Tabs Example Two
+      hippo:versionHistory: 5dd6359f-9bdc-4182-80c4-8240a7aee073
+      /tabs-example-two[1]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 57d231f7-3432-48bb-9c3e-86b546a64f3f
+        hee:title: Tab Example Two
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-30T12:30:51.101+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-30T12:30:51.101+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: c13e05f5-a1ac-4b96-aec9-d5de54407156
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: England
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Placerat tortor nulla eu erat facilisis congue ut nisl nisi urna nisl vel quam eget tortor metus scelerisque adipiscing lorem bibendum adipiscing et quam consectetur.</p>
+
+              <p><img src="image.png/{_document}/hippogallery:original" width="100%" /></p>
+
+              <p>Pellentesque scelerisque elit nulla molestie nulla tristique quam aliquam sollicitudin magna quam lorem hendrerit lacus arcu quis bibendum tempus fusce quisque amet accumsan orci sollicitudin.</p>
+            /image.png:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Wales
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Tincidunt arcu vel elementum fusce eu arcu commodo eu accumsan orci ut euismod eu mi nulla eget placerat facilisis leo quis sit sed purus varius.</p>
+
+              <p style="text-align:center"><img src="john-doe-picture.jpeg/{_document}/hippogallery:original" /></p>
+
+              <p>Sit felis elit eu felis hendrerit molestie diam nunc tincidunt amet elementum sed sit quis facilisis leo nulla massa magna leo proin molestie orci vel.</p>
+            /john-doe-picture.jpeg:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: c3246673-7eec-4c71-8d44-bc9d150a84b3
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+      /tabs-example-two[2]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 7478679a-b7bf-4220-8794-6937ce26176b
+        hee:title: Tab Example Two
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-30T12:30:51.101+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-30T12:33:42.751+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: c13e05f5-a1ac-4b96-aec9-d5de54407156
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: England
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Placerat tortor nulla eu erat facilisis congue ut nisl nisi urna nisl vel quam eget tortor metus scelerisque adipiscing lorem bibendum adipiscing et quam consectetur.</p>
+
+              <p><img src="image.png/{_document}/hippogallery:original" width="100%" /></p>
+
+              <p>Pellentesque scelerisque elit nulla molestie nulla tristique quam aliquam sollicitudin magna quam lorem hendrerit lacus arcu quis bibendum tempus fusce quisque amet accumsan orci sollicitudin.</p>
+            /image.png:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Wales
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Tincidunt arcu vel elementum fusce eu arcu commodo eu accumsan orci ut euismod eu mi nulla eget placerat facilisis leo quis sit sed purus varius.</p>
+
+              <p style="text-align:center"><img src="john-doe-picture.jpeg/{_document}/hippogallery:original" /></p>
+
+              <p>Sit felis elit eu felis hendrerit molestie diam nunc tincidunt amet elementum sed sit quis facilisis leo nulla massa magna leo proin molestie orci vel.</p>
+            /john-doe-picture.jpeg:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: c3246673-7eec-4c71-8d44-bc9d150a84b3
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+      /tabs-example-two[3]:
+        jcr:primaryType: hee:tabs
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 63139a78-17d1-4159-9ec2-757d023c1335
+        hee:title: Tab Example Two
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-09-30T12:30:51.101+01:00
+        hippostdpubwf:lastModificationDate: 2021-09-30T12:33:42.751+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-09-30T12:33:49.417+01:00
+        hippotranslation:id: c13e05f5-a1ac-4b96-aec9-d5de54407156
+        hippotranslation:locale: en
+        /hee:tabPanel[1]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: England
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Placerat tortor nulla eu erat facilisis congue ut nisl nisi urna nisl vel quam eget tortor metus scelerisque adipiscing lorem bibendum adipiscing et quam consectetur.</p>
+
+              <p><img src="image.png/{_document}/hippogallery:original" width="100%" /></p>
+
+              <p>Pellentesque scelerisque elit nulla molestie nulla tristique quam aliquam sollicitudin magna quam lorem hendrerit lacus arcu quis bibendum tempus fusce quisque amet accumsan orci sollicitudin.</p>
+            /image.png:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+        /hee:tabPanel[2]:
+          jcr:primaryType: hee:tabPanel
+          hee:tabTitle: Wales
+          /hee:tabBody:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Tincidunt arcu vel elementum fusce eu arcu commodo eu accumsan orci ut euismod eu mi nulla eget placerat facilisis leo quis sit sed purus varius.</p>
+
+              <p style="text-align:center"><img src="john-doe-picture.jpeg/{_document}/hippogallery:original" /></p>
+
+              <p>Sit felis elit eu felis hendrerit molestie diam nunc tincidunt amet elementum sed sit quis facilisis leo nulla massa magna leo proin molestie orci vel.</p>
+            /john-doe-picture.jpeg:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: c3246673-7eec-4c71-8d44-bc9d150a84b3
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
+  /media-embed:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: ce5156c3-896d-4ad2-9323-1f3c99d7c660
+    hippo:name: Media Embed
+    hippostd:foldertype: [new-media-embed-folder, new-media-embed-document]
+    hippotranslation:id: 6e09ef84-e924-4629-b422-01fc1815b18f
+    hippotranslation:locale: en
+    /test-youtube:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 02090386-3700-441e-8e27-e3e67780fc1a
+      hippo:name: Test YouTube
+      hippo:versionHistory: 6e92fa56-2a6b-474a-ac97-ccd8c4927471
+      /test-youtube[1]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: cd31a9d8-d648-4531-b302-90122a0a0214
+        hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hee:lastReviewed: 2021-10-08T12:07:00+01:00
+        hee:nextReview: 0001-01-01T12:00:00Z
+        hee:title: Test YouTube
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:12:14.392+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Our Peer to Peer series explores the shared experience between GPs and other healthcare professionals working in a practice.</p>
+
+            <p>Our Peer to Peer episodes focus on the challenges.</p>
+
+            <p>I think what we're trying to do is learn from each other, learn from other practices, what practices do well, what we can offer them.</p>
+
+            <p>The rewards.</p>
+
+            <p>The beauty of general practice is that you can pretty much determine the career path you want to take.</p>
+
+            <p>And of course, the laughs.</p>
+
+            <p>I'm probably in love with you, but anyway.</p>
+
+            <p>It's been an interesting journey I think.</p>
+
+            <p>Watch or listen to the full episodes online now and to find out more about a career in general practice, search #ChooseGP.</p>
+      /test-youtube[2]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 35ea91e3-3087-4f59-ac75-cdea623fe9dc
+        hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hee:lastReviewed: 2021-10-08T12:07:00+01:00
+        hee:nextReview: 0001-01-01T12:00:00Z
+        hee:title: Test YouTube
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:07:50.747+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Our Peer to Peer series explores the shared experience between GPs and other healthcare professionals working in a practice.</p>
+
+            <p>Our Peer to Peer episodes focus on the challenges.</p>
+
+            <p>I think what we're trying to do is learn from each other, learn from other practices, what practices do well, what we can offer them.</p>
+
+            <p>The rewards.</p>
+
+            <p>The beauty of general practice is that you can pretty much determine the career path you want to take.</p>
+
+            <p>And of course, the laughs.</p>
+
+            <p>I'm probably in love with you, but anyway.</p>
+
+            <p>It's been an interesting journey I think.</p>
+
+            <p>Watch or listen to the full episodes online now and to find out more about a career in general practice, search #ChooseGP.</p>
+      /test-youtube[3]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 66e4a18c-d83d-4b82-a0d8-e8191aa017c3
+        hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+          clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hee:lastReviewed: 2021-10-08T12:07:00+01:00
+        hee:nextReview: 0001-01-01T12:00:00Z
+        hee:title: Test YouTube
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:07:50.747+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-10-08T12:07:57.096+01:00
+        hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Our Peer to Peer series explores the shared experience between GPs and other healthcare professionals working in a practice.</p>
+
+            <p>Our Peer to Peer episodes focus on the challenges.</p>
+
+            <p>I think what we're trying to do is learn from each other, learn from other practices, what practices do well, what we can offer them.</p>
+
+            <p>The rewards.</p>
+
+            <p>The beauty of general practice is that you can pretty much determine the career path you want to take.</p>
+
+            <p>And of course, the laughs.</p>
+
+            <p>I'm probably in love with you, but anyway.</p>
+
+            <p>It's been an interesting journey I think.</p>
+
+            <p>Watch or listen to the full episodes online now and to find out more about a career in general practice, search #ChooseGP.</p>
+    /test-vimeo:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 2e16ec4b-0f06-4265-958b-2f48d40fedbb
+      hippo:name: Test Vimeo
+      hippo:versionHistory: e3cbcf7f-7541-454d-917c-603a11632d8e
+      /test-vimeo[1]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: db028fbb-8ded-43a0-bb88-1e73e32c230c
+        hee:embedCode: <iframe src="https://player.vimeo.com/video/458515271?h=58fe614121"
+          width="640" height="298" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReview: 2021-10-08T12:12:00+01:00
+        hee:title: Test Vimeo
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:08:27.723+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T15:44:59.644+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3044f16b-c859-4127-a7e6-b8977f42814a
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Fusce interdum adipiscing erat eget amet morbi morbi fusce sollicitudin condimentum sem nisi quisque ut hendrerit ut urna ipsum tempus quis molestie ipsum hendrerit elementum.</p>
+
+            <p>Sem congue nec nulla sit consectetur sollicitudin sit elementum bibendum id mi molestie molestie portaest nulla tempus tincidunt facilisis leo aliquam urna eget elit eget.</p>
+
+            <p>Tincidunt lorem maecenas tempus euismod arcu euismod gravida felis leo tincidunt cursus maecenas nisi portaest molestie quisque vel id congue nulla sed massa phasellus hendrerit.</p>
+
+            <p>Nunc ex pellentesque orci nisl tortor vel quam sed et vivamus lorem tincidunt ipsum cursus condimentum gravida ex rutrum eu eget leo proin portaest enim.</p>
+
+            <p>Eget molestie euismod commodo urna erat proin facilisis enim varius maecenas enim portaest a tincidunt arcu maecenas bibendum gravida dolor amet accumsan eu orci vivamus.</p>
+
+            <p>Eros commodo suspendisse quam tempus eros suspendisse ipsum lacus tincidunt nunc adipiscing id et ut tristique id scelerisque mi lacus dolor lacus eu accumsan amet.</p>
+      /test-vimeo[2]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 5b4128fb-dd47-4428-8645-935c22047811
+        hee:embedCode: <iframe src="https://player.vimeo.com/video/458515271?h=58fe614121"
+          width="640" height="298" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen></iframe>
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReview: 2021-10-08T12:12:00+01:00
+        hee:title: Test Vimeo
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:08:27.723+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T15:45:08.967+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3044f16b-c859-4127-a7e6-b8977f42814a
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Fusce interdum adipiscing erat eget amet morbi morbi fusce sollicitudin condimentum sem nisi quisque ut hendrerit ut urna ipsum tempus quis molestie ipsum hendrerit elementum.</p>
+
+            <p>Sem congue nec nulla sit consectetur sollicitudin sit elementum bibendum id mi molestie molestie portaest nulla tempus tincidunt facilisis leo aliquam urna eget elit eget.</p>
+
+            <p>Tincidunt lorem maecenas tempus euismod arcu euismod gravida felis leo tincidunt cursus maecenas nisi portaest molestie quisque vel id congue nulla sed massa phasellus hendrerit.</p>
+
+            <p>Nunc ex pellentesque orci nisl tortor vel quam sed et vivamus lorem tincidunt ipsum cursus condimentum gravida ex rutrum eu eget leo proin portaest enim.</p>
+
+            <p>Eget molestie euismod commodo urna erat proin facilisis enim varius maecenas enim portaest a tincidunt arcu maecenas bibendum gravida dolor amet accumsan eu orci vivamus.</p>
+
+            <p>Eros commodo suspendisse quam tempus eros suspendisse ipsum lacus tincidunt nunc adipiscing id et ut tristique id scelerisque mi lacus dolor lacus eu accumsan amet.</p>
+      /test-vimeo[3]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 65c5ada2-ce99-465d-8448-ec1e4dfb4d39
+        hee:embedCode: "<iframe src=\"https://player.vimeo.com/video/458515271?h=58fe614121\"\
+          \ width=\"640\" height=\"298\" frameborder=\"0\" allow=\"autoplay; fullscreen;\
+          \ picture-in-picture\" allowfullscreen></iframe>"
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReview: 2021-10-08T12:12:00+01:00
+        hee:title: Test Vimeo
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:08:27.723+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:14:06.438+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-10-08T12:14:12.333+01:00
+        hippotranslation:id: 3044f16b-c859-4127-a7e6-b8977f42814a
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Fusce interdum adipiscing erat eget amet morbi morbi fusce sollicitudin condimentum sem nisi quisque ut hendrerit ut urna ipsum tempus quis molestie ipsum hendrerit elementum.</p>
+
+            <p>Sem congue nec nulla sit consectetur sollicitudin sit elementum bibendum id mi molestie molestie portaest nulla tempus tincidunt facilisis leo aliquam urna eget elit eget.</p>
+
+            <p>Tincidunt lorem maecenas tempus euismod arcu euismod gravida felis leo tincidunt cursus maecenas nisi portaest molestie quisque vel id congue nulla sed massa phasellus hendrerit.</p>
+
+            <p>Nunc ex pellentesque orci nisl tortor vel quam sed et vivamus lorem tincidunt ipsum cursus condimentum gravida ex rutrum eu eget leo proin portaest enim.</p>
+
+            <p>Eget molestie euismod commodo urna erat proin facilisis enim varius maecenas enim portaest a tincidunt arcu maecenas bibendum gravida dolor amet accumsan eu orci vivamus.</p>
+
+            <p>Eros commodo suspendisse quam tempus eros suspendisse ipsum lacus tincidunt nunc adipiscing id et ut tristique id scelerisque mi lacus dolor lacus eu accumsan amet.</p>
+    /test-anchor-fm:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 065e8389-fd25-4966-8e28-173efeb943eb
+      hippo:name: Test Anchor FM
+      hippo:versionHistory: a7518e3c-bf49-495b-8c46-4091913d687e
+      /test-anchor-fm[1]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ec89791c-8a0a-402b-acf6-2c4bc7b499f9
+        hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj"
+          height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:lastReviewed: 2021-10-08T12:15:00+01:00
+        hee:nextReview: 2021-10-29T00:00:00+01:00
+        hee:title: Test Anchor FM
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:14:31.599+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:14:31.599+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 0d8ec11e-9ea2-4ad2-acad-d2f3b99ecf6e
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Sit sem aliquam tristique consectetur tincidunt proin molestie nisl rutrum felis lacus facilisis nec elit bibendum vivamus consectetur arcu elit leo varius a nunc adipiscing.</p>
+
+            <p>Rutrum mi suspendisse ipsum rutrum nisi tincidunt scelerisque gravida dolor amet nisl rutrum phasellus euismod magna amet maximus condimentum sit mi elementum purus vel rutrum.</p>
+
+            <p>Vivamus ex fusce interdum ex gravida erat ipsum commodo adipiscing quam magna ipsum interdum consectetur fusce pellentesque condimentum vivamus dolor eu sem cursus elit placerat.</p>
+
+            <p>Placerat vel nulla leo gravida magna gravida erat accumsan ac nisi phasellus sollicitudin sollicitudin placerat congue ac metus urna ipsum eros varius massa maximus diam.</p>
+
+            <p>Interdum a sem placerat ut felis elementum enim aliquam purus cursus urna euismod diam lorem morbi euismod dolor leo proin massa adipiscing erat ipsum felis.</p>
+
+            <p>Tortor facilisis enim ut leo accumsan pellentesque urna maximus felis hendrerit erat purus dolor ut sollicitudin leo eu scelerisque portaest metus massa erat placerat interdum.</p>
+      /test-anchor-fm[2]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 183868d9-6b99-4625-a74e-3547a0800177
+        hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj"
+          height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:lastReviewed: 2021-10-08T12:15:00+01:00
+        hee:nextReview: 2021-10-29T00:00:00+01:00
+        hee:title: Test Anchor FM
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:14:31.599+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:15:43.853+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 0d8ec11e-9ea2-4ad2-acad-d2f3b99ecf6e
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Sit sem aliquam tristique consectetur tincidunt proin molestie nisl rutrum felis lacus facilisis nec elit bibendum vivamus consectetur arcu elit leo varius a nunc adipiscing.</p>
+
+            <p>Rutrum mi suspendisse ipsum rutrum nisi tincidunt scelerisque gravida dolor amet nisl rutrum phasellus euismod magna amet maximus condimentum sit mi elementum purus vel rutrum.</p>
+
+            <p>Vivamus ex fusce interdum ex gravida erat ipsum commodo adipiscing quam magna ipsum interdum consectetur fusce pellentesque condimentum vivamus dolor eu sem cursus elit placerat.</p>
+
+            <p>Placerat vel nulla leo gravida magna gravida erat accumsan ac nisi phasellus sollicitudin sollicitudin placerat congue ac metus urna ipsum eros varius massa maximus diam.</p>
+
+            <p>Interdum a sem placerat ut felis elementum enim aliquam purus cursus urna euismod diam lorem morbi euismod dolor leo proin massa adipiscing erat ipsum felis.</p>
+
+            <p>Tortor facilisis enim ut leo accumsan pellentesque urna maximus felis hendrerit erat purus dolor ut sollicitudin leo eu scelerisque portaest metus massa erat placerat interdum.</p>
+      /test-anchor-fm[3]:
+        jcr:primaryType: hee:mediaEmbed
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f6ceb503-3710-4fb3-83ef-bc1b78696d1f
+        hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj"
+          height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:lastReviewed: 2021-10-08T12:15:00+01:00
+        hee:nextReview: 2021-10-29T00:00:00+01:00
+        hee:title: Test Anchor FM
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-10-08T12:14:31.599+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-08T12:15:43.853+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-10-08T12:15:45.900+01:00
+        hippotranslation:id: 0d8ec11e-9ea2-4ad2-acad-d2f3b99ecf6e
+        hippotranslation:locale: en
+        /hee:transcript:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Sit sem aliquam tristique consectetur tincidunt proin molestie nisl rutrum felis lacus facilisis nec elit bibendum vivamus consectetur arcu elit leo varius a nunc adipiscing.</p>
+
+            <p>Rutrum mi suspendisse ipsum rutrum nisi tincidunt scelerisque gravida dolor amet nisl rutrum phasellus euismod magna amet maximus condimentum sit mi elementum purus vel rutrum.</p>
+
+            <p>Vivamus ex fusce interdum ex gravida erat ipsum commodo adipiscing quam magna ipsum interdum consectetur fusce pellentesque condimentum vivamus dolor eu sem cursus elit placerat.</p>
+
+            <p>Placerat vel nulla leo gravida magna gravida erat accumsan ac nisi phasellus sollicitudin sollicitudin placerat congue ac metus urna ipsum eros varius massa maximus diam.</p>
+
+            <p>Interdum a sem placerat ut felis elementum enim aliquam purus cursus urna euismod diam lorem morbi euismod dolor leo proin massa adipiscing erat ipsum felis.</p>
+
+            <p>Tortor facilisis enim ut leo accumsan pellentesque urna maximus felis hendrerit erat purus dolor ut sollicitudin leo eu scelerisque portaest metus massa erat placerat interdum.</p>

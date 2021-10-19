@@ -1,19 +1,19 @@
 definitions:
   config:
-    /hippo:namespaces/hee/anchorLinks:
+    /hippo:namespaces/hee/tabs:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 38d42105-84a4-4a68-af71-3a4a47492bf9
+      jcr:uuid: 3251bbf8-068a-43aa-b0c9-18ee813fd909
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: f3733faf-21db-42ca-b89a-88c09832bd95
+        jcr:uuid: 6a3527e3-e6a5-4795-b15d-505ed207cf29
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a9d5ea4e-cfd4-4f5a-8e48-e096a421b9e7
+          jcr:uuid: f2ce3863-1ea9-4af5-8485-41f15cabadfe
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -24,20 +24,36 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /targetheadings:
+          /tabPanel:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:targetheadings
+            hipposysedit:path: hee:tabPanel
             hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: hee:tabPanel
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:anchorLinks
-          hee:title: On this page
-          hee:targetheadings: [h2]
+          jcr:primaryType: hee:tabs
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:title: ''
+          jcr:uuid: 1c34981c-0b89-43e2-8e17-9775b6d07731
+          hippostdpubwf:lastModificationDate: 2021-09-28T23:15:46.551+01:00
+          hippostdpubwf:creationDate: 2021-09-28T23:15:46.552+01:00
+          /hee:tabPanel:
+            jcr:primaryType: hee:tabPanel
+            hee:tabTitle: ''
+            /hee:tabBody:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -57,17 +73,12 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /targetheadings:
+          /tabPanel:
             jcr:primaryType: frontend:plugin
-            caption: Target headings
-            field: targetheadings
-            multiselect.type: checkboxes
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: Tab panel
+            field: tabPanel
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/anchorlinkstargets
