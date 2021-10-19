@@ -1,3 +1,5 @@
+<#include "last-next-reviewed-date.ftl">
+
 <#assign datePattern = "d MMMM yyyy">
 <#macro media media>
     <#if media??>
@@ -18,18 +20,8 @@
                                 </div>
                             </div>
                         </#if>
-                        <div class="nhsuk-media__reviews">
-                            <#if media.mediaEmbedContentBlock.lastReviewed??>
-                                <p>
-                                    <@fmt.message key="media-last-reviewed" />: ${ media.mediaEmbedContentBlock.lastReviewed.getTime()?date?string["${datePattern}"] }
-                                </p>
-                            </#if>
-                            <#if media.mediaEmbedContentBlock.nextReview??>
-                                <p>
-                                    <@fmt.message key="media-next-review" />: ${ media.mediaEmbedContentBlock.nextReview.getTime()?date?string["${datePattern}"] }
-                                </p>
-                            </#if>
-                        </div>
+
+                        <@hee.lastNextReviewedDate lastNextReviewedDate=media.mediaEmbedContentBlock.mediaLastNextReview contentType='media'/>
                     </div>
                 </div>
             </section>

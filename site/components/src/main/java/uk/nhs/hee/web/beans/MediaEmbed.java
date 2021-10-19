@@ -4,6 +4,7 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import java.util.Calendar;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import uk.nhs.hee.web.beans.PageLastNextReview;
 
 @HippoEssentialsGenerated(internalName = "hee:mediaEmbed")
 @Node(jcrType = "hee:mediaEmbed")
@@ -18,18 +19,13 @@ public class MediaEmbed extends BaseDocument {
         return getSingleProperty("hee:embedCode");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:lastReviewed")
-    public Calendar getLastReviewed() {
-        return getSingleProperty("hee:lastReviewed");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:nextReview")
-    public Calendar getNextReview() {
-        return getSingleProperty("hee:nextReview");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:transcript")
     public HippoHtml getTranscript() {
         return getHippoHtml("hee:transcript");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:mediaLastNextReview")
+    public PageLastNextReview getMediaLastNextReview() {
+        return getBean("hee:mediaLastNextReview", PageLastNextReview.class);
     }
 }
