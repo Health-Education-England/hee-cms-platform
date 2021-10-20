@@ -24,12 +24,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /targetheadings:
+          /targetHeadings:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:targetheadings
+            hipposysedit:path: hee:targetHeadings
             hipposysedit:primary: false
             hipposysedit:type: String
       /hipposysedit:prototypes:
@@ -37,7 +37,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:anchorLinks
           hee:title: On this page
-          hee:targetheadings: [h2]
+          hee:targetHeadings: [h2]
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -57,10 +57,10 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /targetheadings:
+          /targetHeadings:
             jcr:primaryType: frontend:plugin
             caption: Target headings
-            field: targetheadings
+            field: targetHeadings
             multiselect.type: checkboxes
             palette.alloworder: false
             palette.maxrows: '10'
