@@ -12,8 +12,8 @@ public class AnchorLinks extends HippoCompound {
         return getSingleProperty("hee:title");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:targetheadings")
-    public String[] getTargetheadings() {
-        return getMultipleProperty("hee:targetheadings");
+    @HippoEssentialsGenerated(internalName = "hee:targetHeadings")
+    public String[] getTargetHeadings() {
+        return getMultipleProperty("hee:targetHeadings");
     }
 }

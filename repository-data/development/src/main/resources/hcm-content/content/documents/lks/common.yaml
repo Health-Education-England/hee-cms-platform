@@ -3227,7 +3227,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 02090386-3700-441e-8e27-e3e67780fc1a
       hippo:name: Test YouTube
-      hippo:versionHistory: 2be0858d-f707-4cc3-ad9a-54aa69aea204
+      hippo:versionHistory: 64e8479f-a270-49b1-b982-912151e7a71b
       /test-youtube[1]:
         jcr:primaryType: hee:mediaEmbed
         jcr:mixinTypes: ['mix:referenceable']
@@ -3235,13 +3235,15 @@
         hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hee:hideTranscriptButtonText: Hide transcription
+        hee:showTranscriptButtonText: Show transcription
         hee:title: Test YouTube
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:30:04.594+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:47.910+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
         hippotranslation:locale: en
@@ -3276,13 +3278,15 @@
         hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hee:hideTranscriptButtonText: Hide transcription
+        hee:showTranscriptButtonText: Show transcription
         hee:title: Test YouTube
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:29:21.850+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:53:08.330+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
         hippotranslation:locale: en
@@ -3317,15 +3321,17 @@
         hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        hee:hideTranscriptButtonText: Hide transcription
+        hee:showTranscriptButtonText: Show transcription
         hee:title: Test YouTube
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:29:21.850+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:53:08.330+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-10-19T17:29:24.177+01:00
+        hippostdpubwf:publicationDate: 2021-10-20T14:53:10.578+01:00
         hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
         hippotranslation:locale: en
         /hee:transcript:
@@ -3357,7 +3363,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 2e16ec4b-0f06-4265-958b-2f48d40fedbb
       hippo:name: Test Vimeo
-      hippo:versionHistory: 77eb1f3e-6234-4dba-a24a-f149a11b9182
+      hippo:versionHistory: d6ef015f-d33a-49be-a29e-0e9d9c639fcb
       /test-vimeo[1]:
         jcr:primaryType: hee:mediaEmbed
         jcr:mixinTypes: ['mix:referenceable']
@@ -3365,6 +3371,8 @@
         hee:embedCode: <iframe src="https://player.vimeo.com/video/458515271?h=58fe614121"
           width="640" height="298" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen></iframe>
+        hee:hideTranscriptButtonText: Hide video transcript
+        hee:showTranscriptButtonText: Show video transcript
         hee:title: Test Vimeo
         hippo:availability: []
         hippostd:retainable: false
@@ -3372,7 +3380,7 @@
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:08:27.723+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:30:20.294+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:19.750+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 3044f16b-c859-4127-a7e6-b8977f42814a
         hippotranslation:locale: en
@@ -3401,6 +3409,8 @@
         hee:embedCode: <iframe src="https://player.vimeo.com/video/458515271?h=58fe614121"
           width="640" height="298" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen></iframe>
+        hee:hideTranscriptButtonText: Hide video transcript
+        hee:showTranscriptButtonText: Show video transcript
         hee:title: Test Vimeo
         hippo:availability: [preview]
         hippostd:retainable: false
@@ -3408,7 +3418,7 @@
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:08:27.723+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:30:28.755+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:40.955+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 3044f16b-c859-4127-a7e6-b8977f42814a
         hippotranslation:locale: en
@@ -3437,6 +3447,8 @@
         hee:embedCode: <iframe src="https://player.vimeo.com/video/458515271?h=58fe614121"
           width="640" height="298" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen></iframe>
+        hee:hideTranscriptButtonText: Hide video transcript
+        hee:showTranscriptButtonText: Show video transcript
         hee:title: Test Vimeo
         hippo:availability: [live]
         hippostd:retainable: false
@@ -3444,9 +3456,9 @@
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:08:27.723+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:30:28.755+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:40.955+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-10-19T17:30:30.824+01:00
+        hippostdpubwf:publicationDate: 2021-10-20T14:52:43.957+01:00
         hippotranslation:id: 3044f16b-c859-4127-a7e6-b8977f42814a
         hippotranslation:locale: en
         /hee:transcript:
@@ -3472,20 +3484,22 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 065e8389-fd25-4966-8e28-173efeb943eb
       hippo:name: Test Anchor FM
-      hippo:versionHistory: 2fb1c7b7-f861-446e-a5d6-8adc09ec7b4b
+      hippo:versionHistory: 78cfdc55-e9d7-461c-a5ba-acaaa95fe4fa
       /test-anchor-fm[1]:
         jcr:primaryType: hee:mediaEmbed
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: ec89791c-8a0a-402b-acf6-2c4bc7b499f9
         hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj"
           height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:hideTranscriptButtonText: Hide P2P transcript
+        hee:showTranscriptButtonText: Show P2P transcript
         hee:title: Test Anchor FM
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:14:31.599+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:31:06.955+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:51:29.021+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 0d8ec11e-9ea2-4ad2-acad-d2f3b99ecf6e
         hippotranslation:locale: en
@@ -3513,13 +3527,15 @@
         jcr:uuid: 183868d9-6b99-4625-a74e-3547a0800177
         hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj"
           height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:hideTranscriptButtonText: Hide P2P transcript
+        hee:showTranscriptButtonText: Show P2P transcript
         hee:title: Test Anchor FM
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:14:31.599+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:31:17.226+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:11.623+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 0d8ec11e-9ea2-4ad2-acad-d2f3b99ecf6e
         hippotranslation:locale: en
@@ -3547,15 +3563,17 @@
         jcr:uuid: f6ceb503-3710-4fb3-83ef-bc1b78696d1f
         hee:embedCode: <iframe src="https://anchor.fm/health-education-england/embed/episodes/Peer-to-Peer-conversation-with-GP-Elvis-Martinez-and-Physician-Associate-Eunice-Ashley-e161oaj"
           height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+        hee:hideTranscriptButtonText: Hide P2P transcript
+        hee:showTranscriptButtonText: Show P2P transcript
         hee:title: Test Anchor FM
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:14:31.599+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-19T17:31:17.226+01:00
+        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:11.623+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-10-19T17:31:19.277+01:00
+        hippostdpubwf:publicationDate: 2021-10-20T14:52:14.881+01:00
         hippotranslation:id: 0d8ec11e-9ea2-4ad2-acad-d2f3b99ecf6e
         hippotranslation:locale: en
         /hee:transcript:
