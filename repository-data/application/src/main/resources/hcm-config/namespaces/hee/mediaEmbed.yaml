@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1fbd8f8b-40f7-4640-b4d2-81052809c788
+          jcr:uuid: 82d02a8f-4827-4755-a212-39a3ce28a17d
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -33,23 +33,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Text
             hipposysedit:validators: [required]
-          /lastReviewed:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:lastReviewed
-            hipposysedit:primary: false
-            hipposysedit:type: Date
-            hipposysedit:validators: [optional]
-          /nextReview:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:nextReview
-            hipposysedit:primary: false
-            hipposysedit:type: Date
           /transcript:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -58,6 +41,14 @@ definitions:
             hipposysedit:path: hee:transcript
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
+          /pageLastNextReview:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:mediaLastNextReview
+            hipposysedit:primary: false
+            hipposysedit:type: hee:pageLastNextReview
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -71,14 +62,16 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:embedCode: ''
-          hee:lastReviewed: 0001-01-01T12:00:00Z
-          hee:nextReview: 0001-01-01T12:00:00Z
-          jcr:uuid: 62a9a68b-802c-49d3-a92c-15887fbaa617
+          jcr:uuid: 0505467b-d45f-4502-87d8-3cfe4733ef12
           hippostdpubwf:lastModificationDate: 2021-10-07T19:24:39.068+01:00
           hippostdpubwf:creationDate: 2021-10-07T19:24:39.068+01:00
           /hee:transcript:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /hee:mediaLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -115,19 +108,11 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /lastReviewed:
+          /mediaLastNextReview:
             jcr:primaryType: frontend:plugin
-            caption: Last reviewed
-            field: lastReviewed
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /nextReview:
-            jcr:primaryType: frontend:plugin
-            caption: Next review
-            field: nextReview
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Media review dates
+            field: pageLastNextReview
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:

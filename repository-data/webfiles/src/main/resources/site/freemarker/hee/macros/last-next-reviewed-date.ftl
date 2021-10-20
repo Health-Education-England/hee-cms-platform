@@ -3,18 +3,25 @@
 <@hst.setBundle basename="uk.nhs.hee.web.global" scope="request"/>
 
 <#assign datePattern = "d MMMM yyyy">
-<#macro lastNextReviewedDate lastNextReviewedDate>
+<#macro lastNextReviewedDate lastNextReviewedDate contentType='page'>
     <#if lastNextReviewedDate.lastReviewed?? || lastNextReviewedDate.nextReviewed??>
-        <div class="nhsuk-review-date">
+
+        <#if contentType='media'>
+            <#assign wrapperDivClass='nhsuk-media__reviews'/>
+        <#else>
+            <#assign wrapperDivClass='nhsuk-review-date'/>
+        </#if>
+
+        <div class="${wrapperDivClass}">
             <p class="nhsuk-body-s">
                 <#if lastNextReviewedDate.lastReviewed??>
-                    <@fmt.message key="page-last-reviewed"/>: ${lastNextReviewedDate.lastReviewed.getTime()?date?string["${datePattern}"]}
+                    <@fmt.message key="${contentType}-last-reviewed"/>: ${lastNextReviewedDate.lastReviewed.getTime()?date?string["${datePattern}"]}
                 </#if>
                 <#if lastNextReviewedDate.nextReviewed??>
                     <#if lastNextReviewedDate.lastReviewed??>
                         <br/>
                     </#if>
-                    <@fmt.message key="page-next-review"/>: ${lastNextReviewedDate.nextReviewed.getTime()?date?string["${datePattern}"]}
+                    <@fmt.message key="${contentType}-next-review"/>: ${lastNextReviewedDate.nextReviewed.getTime()?date?string["${datePattern}"]}
                 </#if>
             </p>
         </div>
