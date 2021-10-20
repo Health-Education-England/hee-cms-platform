@@ -207,6 +207,7 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
             caption: Page review dates
@@ -235,3 +236,4 @@ definitions:
             wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
