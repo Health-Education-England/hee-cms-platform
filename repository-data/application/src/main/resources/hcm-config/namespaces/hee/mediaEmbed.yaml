@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 82d02a8f-4827-4755-a212-39a3ce28a17d
+          jcr:uuid: 99efdeb2-c1e9-4eee-9f47-feb703eddd5e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -41,6 +41,7 @@ definitions:
             hipposysedit:path: hee:transcript
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
+            hipposysedit:validators: [required]
           /pageLastNextReview:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -49,6 +50,24 @@ definitions:
             hipposysedit:path: hee:mediaLastNextReview
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
+          /transcriptButtonText:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showTranscriptButtonText
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /hideTranscriptButtonText:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:hideTranscriptButtonText
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -62,9 +81,11 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:embedCode: ''
-          jcr:uuid: 0505467b-d45f-4502-87d8-3cfe4733ef12
+          jcr:uuid: 9d235d20-eae3-47c4-8b51-e3c37ecd5251
           hippostdpubwf:lastModificationDate: 2021-10-07T19:24:39.068+01:00
           hippostdpubwf:creationDate: 2021-10-07T19:24:39.068+01:00
+          hee:showTranscriptButtonText: ''
+          hee:hideTranscriptButtonText: ''
           /hee:transcript:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -95,6 +116,24 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Embed code
             field: embedCode
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /showTranscriptButtonText:
+            jcr:primaryType: frontend:plugin
+            caption: Show transcript button text
+            field: transcriptButtonText
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /hideTranscriptButtonText:
+            jcr:primaryType: frontend:plugin
+            caption: Hide transcript button text
+            field: hideTranscriptButtonText
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

@@ -28,4 +28,14 @@ public class MediaEmbed extends BaseDocument {
     public PageLastNextReview getMediaLastNextReview() {
         return getBean("hee:mediaLastNextReview", PageLastNextReview.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:showTranscriptButtonText")
+    public String getShowTranscriptButtonText() {
+        return getSingleProperty("hee:showTranscriptButtonText");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:hideTranscriptButtonText")
+    public String getHideTranscriptButtonText() {
+        return getSingleProperty("hee:hideTranscriptButtonText");
+    }
 }

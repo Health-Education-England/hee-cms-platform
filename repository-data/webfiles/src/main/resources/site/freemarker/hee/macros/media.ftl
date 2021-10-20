@@ -12,8 +12,8 @@
                         <#if media.mediaEmbedContentBlock.transcript.content?has_content && media.mediaEmbedContentBlock.transcript.content?trim != ''>
                             <div class="nhsuk-media__transcript">
                                 <a href="javascript:void(0);">
-                                    <span class="nhsuk-media__show-text">Show transcript</span>
-                                    <span class="nhsuk-media__hide-text">Hide transcript</span>
+                                    <span class="nhsuk-media__show-text">${ media.mediaEmbedContentBlock.showTranscriptButtonText }</span>
+                                    <span class="nhsuk-media__hide-text">${ media.mediaEmbedContentBlock.hideTranscriptButtonText }</span>
                                 </a>
                                 <div class="nhsuk-media__transcript-text">
                                     <@hst.html hippohtml=media.mediaEmbedContentBlock.transcript />
