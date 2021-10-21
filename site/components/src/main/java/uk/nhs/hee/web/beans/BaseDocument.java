@@ -16,7 +16,7 @@ public class BaseDocument extends HippoDocument {
                 DateUtils.DD_MMMM_YYYY_PATTERN);
     }
 
-    public String getContentType() throws RepositoryException {
-        return StringUtils.getDocumentTypeDisplayName(this.getNode().getPrimaryNodeType().getName());
-    }
+//    public String getContentType() throws RepositoryException {
+//        return StringUtils.getDocumentTypeDisplayName(this.getNode().getPrimaryNodeType().getName());
+//    }
 }
