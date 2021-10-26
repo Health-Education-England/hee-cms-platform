@@ -6,29 +6,14 @@ package uk.nhs.hee.web.repository;
 public enum HEEField {
 
     /**
-     * {@code listingPageType} field/property.
-     */
-    LISTING_TYPE("hee:listingPageType"),
-
-    /**
-     * {@code impactGroup} field/property.
-     */
-    IMPACT_GROUP("hee:impactGroup"),
-
-    /**
-     * {@code topics} field/property.
-     */
-    TOPICS("hee:topics"),
-
-    /**
      * {@code categories} field/property.
      */
     CATEGORIES("hee:categories"),
 
     /**
-     * {@code publicationDate} field/property.
+     * {@code completedDate} field/property.
      */
-    PUBLICATION_DATE("hee:publicationDate"),
+    COMPLETED_DATE("hee:completedDate"),
 
     /**
      * {@code date} field/property.
@@ -38,7 +23,27 @@ public enum HEEField {
     /**
      * {@code title} field/property.
      */
-    DOCUMENT_TITLE("hee:title");
+    DOCUMENT_TITLE("hee:title"),
+
+    /**
+     * {@code impactGroup} field/property.
+     */
+    IMPACT_GROUP("hee:impactGroup"),
+
+    /**
+     * {@code listingPageType} field/property.
+     */
+    LISTING_TYPE("hee:listingPageType"),
+
+    /**
+     * {@code publicationDate} field/property.
+     */
+    PUBLICATION_DATE("hee:publicationDate"),
+
+    /**
+     * {@code topics} field/property.
+     */
+    TOPICS("hee:topics");
 
     private final String name;
 

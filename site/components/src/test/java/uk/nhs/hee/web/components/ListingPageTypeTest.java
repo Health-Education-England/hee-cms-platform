@@ -77,7 +77,7 @@ public class ListingPageTypeTest {
         assertThat(searchBankListing.getDocumentTypes()).isEqualTo(new String[]{"hee:searchBank"});
         assertThat(searchBankListing.isSortingEnabled()).isTrue();
         assertThat(searchBankListing.getSortByDateField())
-                .isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
+                .isEqualTo(HEEField.COMPLETED_DATE.getName());
         assertThat(searchBankListing.getFilterValueListIdentifier()).isEqualTo("searchBankTopics");
         assertThat(searchBankListing.isChannelSpecificValueListIdentifier()).isFalse();
     }
