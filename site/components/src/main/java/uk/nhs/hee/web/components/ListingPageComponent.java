@@ -22,6 +22,7 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.beans.MiniHub;
+import uk.nhs.hee.web.repository.HEEDocumentType;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -29,8 +30,6 @@ import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.*;
 import java.util.stream.StreamSupport;
-
-import static uk.nhs.hee.web.repository.HEEField.DOCUMENT_TITLE;
 
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
@@ -73,8 +72,9 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         final HstQueryResult results = query.execute();
 
         final boolean hasGuidance = StreamSupport.stream(
-                Spliterators.spliteratorUnknownSize(results.getHippoBeans(), Spliterator.ORDERED), false)
-                .anyMatch(bean -> "hee:guidance".equals(bean.getSingleProperty(JcrConstants.JCR_PRIMARYTYPE)));
+                        Spliterators.spliteratorUnknownSize(results.getHippoBeans(), Spliterator.ORDERED), false)
+                .anyMatch(bean -> HEEDocumentType.GUIDANCE.getName()
+                        .equals(bean.getSingleProperty(JcrConstants.JCR_PRIMARYTYPE)));
 
         if (hasGuidance) {
             addMiniHubGuidances(request);

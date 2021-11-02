@@ -26,7 +26,7 @@ import static org.mockito.Mockito.*;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"javax.management.*", "javax.script.*"})
-public class MiniHubGuidanceLinkRewriterTest {
+public class HEEContentRewriterTest {
     @Mock
     private Session mockJCRSession;
     @Mock
@@ -44,7 +44,7 @@ public class MiniHubGuidanceLinkRewriterTest {
     @Mock
     private Node mockMiniHubNode;
     @Spy
-    private final MiniHubGuidanceLinkRewriter systemUnderTest = new MiniHubGuidanceLinkRewriter() {
+    private final HEEContentRewriter systemUnderTest = new HEEContentRewriter() {
         @Override
         protected HstLink createInternalLink(
                 final Node referencedNode,
@@ -52,6 +52,23 @@ public class MiniHubGuidanceLinkRewriterTest {
                 final Mount targetMount) {
             if (referencedNode == mockMiniHubNode) {
                 return mockMiniHubLink;
+            }
+
+            return mockSuperClassLink;
+        }
+
+        @Override
+        protected HstLink getDocumentLink(
+                final String path,
+                final Node hippoHtmlNode,
+                final HstRequestContext requestContext,
+                final Mount targetMount) {
+            if ("introduction".equals(path)) {
+                final HstLink mockIntroductionHstLink = mock(HstLink.class);
+                when(mockIntroductionHstLink.getPath()).thenReturn("introduction");
+                when(mockIntroductionHstLink.toUrlForm(requestContext, false))
+                        .thenReturn("patient-and-public-information/introduction");
+                return mockIntroductionHstLink;
             }
 
             return mockSuperClassLink;
@@ -236,6 +253,30 @@ public class MiniHubGuidanceLinkRewriterTest {
         // Verify
         assertThat(hstLink).isEqualTo(mockMiniHubLink);
         verify(hstLink, times(1)).setPath("patient-and-public-information/introduction");
+    }
+
+    @Test
+    public void rewrite_WithHtmlContainsBothInternalAndExternalLinks_ReturnsHtmlWithExternalLinksRewrittenToOpenInANewWindow() {
+        // Mocks & stubs
+        final String richTextHtml = "<p>Use the <a href=\"https://www.hee.nhs.uk/\">Check Permissions Tool</a> " +
+                "to find out whether what you want to copy is covered by the Licence.</p>\n\n" +
+                "<p>Use the <a href=\"http://www.hee.nhs.uk/\">Check Permissions Tool</a> " +
+                "to find out whether what you want to copy is covered by the Licence.</p>\n\n" +
+                "<p>Read more on <a href=\"introduction\">Patient &amp; Public Information</a></p>";
+
+        // Execute the method to be tested
+        final String rewrittenHtml =
+                systemUnderTest.rewrite(richTextHtml, mockHtmlNode, mockHstRequestContext, mock(Mount.class));
+
+        // Verify
+        assertThat(rewrittenHtml).isEqualTo("<p>Use the <a href=\"https://www.hee.nhs.uk/\" target=\"_blank\">" +
+                "Check Permissions Tool (Opens in a new window)</a> " +
+                "to find out whether what you want to copy is covered by the Licence.</p>\n\n" +
+                "<p>Use the <a href=\"http://www.hee.nhs.uk/\" target=\"_blank\">" +
+                "Check Permissions Tool (Opens in a new window)</a> " +
+                "to find out whether what you want to copy is covered by the Licence.</p>\n\n" +
+                "<p>Read more on <a href=\"patient-and-public-information/introduction\">" +
+                "Patient &amp; Public Information</a></p>");
     }
 
 }

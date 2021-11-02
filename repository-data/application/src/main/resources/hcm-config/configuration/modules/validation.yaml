@@ -3,6 +3,11 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:nav-map-region-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.NavMapRegionValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:nav-map-link-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.LinkValidator
+      link.node.type: hee:navMapLink
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:link-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.LinkValidator
+      link.node.type: hee:link

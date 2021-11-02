@@ -2,6 +2,7 @@ package uk.nhs.hee.web.components;
 
 import org.apache.commons.lang.StringUtils;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
+import uk.nhs.hee.web.repository.HEEDocumentType;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 
@@ -18,7 +19,7 @@ public enum ListingPageType {
      */
     BLOG_LISTING(
             "blog",
-            new String[]{"hee:blogPost"},
+            new String[]{HEEDocumentType.BLOG_POST.getName()},
             Boolean.TRUE,
             HEEField.PUBLICATION_DATE.getName(),
             ValueListIdentifier.BLOG_CATEGORIES.getName(),
@@ -29,7 +30,7 @@ public enum ListingPageType {
      */
     BULLETIN_LISTING(
             "bulletin",
-            new String[]{"hee:bulletin"},
+            new String[]{HEEDocumentType.BULLETIN.getName()},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             ValueListIdentifier.BULLETIN_CATEGORIES.getName(),
@@ -40,7 +41,7 @@ public enum ListingPageType {
      */
     CASE_STUDY_LISTING(
             "casestudy",
-            new String[]{"hee:caseStudy"},
+            new String[]{HEEDocumentType.CASE_STUDY.getName()},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             ValueListIdentifier.CASE_STUDY_IMPACT_GROUPS.getName(),
@@ -51,7 +52,7 @@ public enum ListingPageType {
      */
     EVENT_LISTING(
             "event",
-            new String[]{"hee:event"},
+            new String[]{HEEDocumentType.EVENT.getName()},
             Boolean.TRUE,
             HEEField.DATE.getName(),
             StringUtils.EMPTY,
@@ -73,7 +74,7 @@ public enum ListingPageType {
      */
     SEARCH_BANK_LISTING(
             "searchbank",
-            new String[]{"hee:searchBank"},
+            new String[]{HEEDocumentType.SEARCH_BANK.getName()},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             ValueListIdentifier.SEARCH_BANK_TOPICS.getName(),

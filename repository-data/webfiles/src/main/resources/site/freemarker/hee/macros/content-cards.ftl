@@ -1,4 +1,3 @@
-<#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#import "./link.ftl" as hlink>
 
 <#macro contentCards contentCards>
@@ -7,22 +6,19 @@
             <h2>${contentCards.header}</h2>
         </div>
     </#if>
+
     <ul class="nhsuk-grid-row nhsuk-card-group">
         <#list contentCards.cards as contentCard>
-            <#if contentCard.header.document?? || contentCard.header.url?has_content>
-                <#assign clickableCard=true/>
-            <#else>
-                <#assign clickableCard=false/>
-            </#if>
+            <#assign href="${hlink.link(contentCard.header)}"/>
 
             <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
-                <div class="nhsuk-card ${clickableCard?then('nhsuk-card--clickable', 'nhsuk-card')}">
+                <div class="nhsuk-card ${(href?has_content)?then('nhsuk-card--clickable', 'nhsuk-card')}">
                     <div class="nhsuk-card__content">
-                        <#if clickableCard>
+                        <#if href?has_content>
                             <h3 class="nhsuk-card__heading nhsuk-heading-m">
-                                <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link">
-                                    ${contentCard.header.text}
-                                </@hlink.link>
+                                <a class="nhsuk-card__link" href="${href}" ${hlink.linkTarget(contentCard.header)}>
+                                    ${contentCard.header.text}<@hlink.linkTextSuffix link=contentCard.header/>
+                                </a>
                             </h3>
                         </#if>
                         <p class="nhsuk-card__description">${contentCard.description}</p>

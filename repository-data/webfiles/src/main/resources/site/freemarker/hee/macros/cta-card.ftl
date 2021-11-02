@@ -1,17 +1,10 @@
-<#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#import "./link.ftl" as hlink>
 
 <#macro ctaCard ctaCard>
     <#if ctaCard??>
-        <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
-            <#assign link>
-                <@hst.link hippobean=ctaCard.ctaCardContentBlock.ctaLink.document/>
-            </#assign>
-            <#assign openInNewWindow=false/>
-        <#else>
-            <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
-            <#assign openInNewWindow=true/>
-        </#if>
-        <#if link?has_content>
+        <#assign href="${hlink.link(ctaCard.ctaCardContentBlock.ctaLink)}"/>
+
+        <#if href?has_content>
             <div class="nhsuk-grid-column-one-third">
                 <div class="nhsuk-card nhsuk-card--clickable">
                     <div class="nhsuk-card__content">
@@ -19,8 +12,11 @@
                             ${ctaCard.ctaCardContentBlock.title}
                         </h3>
                         <p class="nhsuk-card__description">${ctaCard.ctaCardContentBlock.description}</p>
-                        <a class="nhsuk-button" href="${link}" draggable="false" ${openInNewWindow?then('target="_blank"', '')}>
+                        <a class="nhsuk-button" href="${href}" draggable="false" ${hlink.linkTarget(ctaCard.ctaCardContentBlock.ctaLink)}>
                             ${ctaCard.ctaCardContentBlock.ctaLink.text}
+                            <#if ctaCard.ctaCardContentBlock.ctaLink.external>
+                                <span class="nhsuk-u-visually-hidden">Opens in a new window</span>
+                            </#if>
                         </a>
                     </div>
                 </div>

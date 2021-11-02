@@ -1,13 +1,18 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
-import org.hippoecm.hst.content.beans.standard.HippoCompound;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoCompound;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
 @HippoEssentialsGenerated(internalName = "hee:navMapLink")
 @Node(jcrType = "hee:navMapLink")
 public class NavMapLink extends HippoCompound {
+    @HippoEssentialsGenerated(internalName = "hee:region")
+    public String getRegion() {
+        return getSingleProperty("hee:region");
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:text")
     public String getText() {
         return getSingleProperty("hee:text");
@@ -23,8 +28,7 @@ public class NavMapLink extends HippoCompound {
         return getLinkedBean("hee:document", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:region")
-    public String getRegion() {
-        return getSingleProperty("hee:region");
+    public boolean isExternal() {
+        return getDocument() == null;
     }
 }

@@ -1,4 +1,5 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#import "./link.ftl" as hlink>
 
 <#macro navMap block navMapRegionMap>
     <h2>${block.title}</h2>
@@ -16,23 +17,12 @@
 
             <ul id="regionList">
                 <#list block.links as link>
-                    <#if link.document??>
-                        <#assign linkHREF>
-                            <@hst.link hippobean=link.document/>
-                        </#assign>
-                        <#assign openInNewWindow=false/>
-                    <#else>
-                        <#assign linkHREF="${link.url}">
-                        <#assign openInNewWindow=true/>
-                    </#if>
+                    <#assign href="${hlink.link(link)}"/>
 
-                    <#if linkHREF?has_content>
+                    <#if href?has_content>
                         <li>
-                            <a id="${link.region?replace(educationPrefix, '')}" href="${linkHREF}" ${openInNewWindow?then('target="_blank"', '')}>
-                                ${(link.text?has_content)?then(link.text, navMapRegionMap[link.region]?replace(educationLabelPrefix, ''))}
-                                <#if openInNewWindow>
-                                    <span class="nhsuk-u-visually-hidden">Opens in a new window</span>
-                                </#if>
+                            <a id="${link.region?replace(educationPrefix, '')}" href="${href}" ${hlink.linkTarget(link)}>
+                                ${(link.text?has_content)?then(link.text, navMapRegionMap[link.region]?replace(educationLabelPrefix, ''))}<@hlink.linkTextSuffix link=link/>
                             </a>
                         </li>
                     </#if>

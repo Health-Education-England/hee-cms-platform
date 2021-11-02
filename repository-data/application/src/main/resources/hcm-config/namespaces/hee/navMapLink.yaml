@@ -15,7 +15,7 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:link-validator']
+          hipposysedit:validators: ['hee:nav-map-link-validator']
           /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -96,7 +96,7 @@ definitions:
               source: /content/documents/administration/valuelists/navmapregions
           /text:
             jcr:primaryType: frontend:plugin
-            caption: Link Text
+            caption: Link text
             field: text
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
@@ -105,7 +105,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /document:
             jcr:primaryType: frontend:plugin
-            caption: Link Document
+            caption: Link document
             field: document
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
