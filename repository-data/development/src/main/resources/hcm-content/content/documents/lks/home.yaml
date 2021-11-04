@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ef78c935-2f90-48d2-919f-5f99073f1832
   hippo:name: Home
-  hippo:versionHistory: 7f71d049-7be8-43cd-8b40-5dfd292cdd87
+  hippo:versionHistory: 5fba63bd-251c-4040-bbbc-d3328fafb902
   /home[1]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -14,7 +14,7 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:22.534+01:00
+    hippostdpubwf:lastModificationDate: 2021-10-27T08:46:08.702+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -23,6 +23,10 @@
       hee:header: Welcome to the Library and Knowledge Services Staff Hub
       hee:text: Guidance and information for library and information staff
     /hee:contentBlocks[1]:
+      jcr:primaryType: hee:anchorLinks
+      hee:targetHeadings: [h2]
+      hee:title: On this page
+    /hee:contentBlocks[2]:
       jcr:primaryType: hee:contentCards
       hee:header: Our services
       /hee:cards[1]:
@@ -34,7 +38,7 @@
       /hee:cards[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
-    /hee:contentBlocks[2]:
+    /hee:contentBlocks[3]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: dental
       hee:title: Explore dental training region
@@ -149,7 +153,7 @@
           <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
 
           <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
-    /hee:contentBlocks[3]:
+    /hee:contentBlocks[4]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: higher
       hee:title: Higher regions
@@ -261,7 +265,7 @@
       /hee:description:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /hee:contentBlocks[4]:
+    /hee:contentBlocks[5]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: medical
       hee:title: Medical regions
@@ -429,6 +433,32 @@
       /hee:description:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
+    /hee:contentBlocks[6]:
+      jcr:primaryType: hee:blockLinksReference
+      /hee:blockLinksContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+    /hee:contentBlocks[7]:
+      jcr:primaryType: hee:contact
+      hee:display: [name, image, departmentName, jobTitle, email, address, phoneNumber]
+      hee:title: ''
+      /hee:contentItems:
+        jcr:primaryType: hee:contactWithCopy
+        hee:copy: Praesent sapien massa, convallis a pellentesque nec, egestas non
+          nisi. Proin eget tortor risus.
+        /hee:contentItem:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+    /hee:contentBlocks[8]:
+      jcr:primaryType: hee:richTextReference
+      /hee:richTextBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /hee:contentBlocks[9]:
+      jcr:primaryType: hee:tabsReference
+      /hee:tabsContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
   /home[2]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -438,7 +468,7 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:29.996+01:00
+    hippostdpubwf:lastModificationDate: 2021-10-27T08:46:23.724+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -447,6 +477,10 @@
       hee:header: Welcome to the Library and Knowledge Services Staff Hub
       hee:text: Guidance and information for library and information staff
     /hee:contentBlocks[1]:
+      jcr:primaryType: hee:anchorLinks
+      hee:targetHeadings: [h2]
+      hee:title: On this page
+    /hee:contentBlocks[2]:
       jcr:primaryType: hee:contentCards
       hee:header: Our services
       /hee:cards[1]:
@@ -458,7 +492,7 @@
       /hee:cards[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
-    /hee:contentBlocks[2]:
+    /hee:contentBlocks[3]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: dental
       hee:title: Explore dental training region
@@ -573,7 +607,7 @@
           <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
 
           <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
-    /hee:contentBlocks[3]:
+    /hee:contentBlocks[4]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: higher
       hee:title: Higher regions
@@ -685,7 +719,7 @@
       /hee:description:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /hee:contentBlocks[4]:
+    /hee:contentBlocks[5]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: medical
       hee:title: Medical regions
@@ -853,6 +887,32 @@
       /hee:description:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
+    /hee:contentBlocks[6]:
+      jcr:primaryType: hee:blockLinksReference
+      /hee:blockLinksContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+    /hee:contentBlocks[7]:
+      jcr:primaryType: hee:contact
+      hee:display: [name, image, departmentName, jobTitle, email, address, phoneNumber]
+      hee:title: ''
+      /hee:contentItems:
+        jcr:primaryType: hee:contactWithCopy
+        hee:copy: Praesent sapien massa, convallis a pellentesque nec, egestas non
+          nisi. Proin eget tortor risus.
+        /hee:contentItem:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+    /hee:contentBlocks[8]:
+      jcr:primaryType: hee:richTextReference
+      /hee:richTextBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /hee:contentBlocks[9]:
+      jcr:primaryType: hee:tabsReference
+      /hee:tabsContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
   /home[3]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -862,9 +922,9 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-09-09T18:21:29.996+01:00
+    hippostdpubwf:lastModificationDate: 2021-10-27T08:46:23.724+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-09-09T18:21:32.762+01:00
+    hippostdpubwf:publicationDate: 2021-10-27T08:46:26.497+01:00
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
     /hee:HeroSection:
@@ -872,6 +932,10 @@
       hee:header: Welcome to the Library and Knowledge Services Staff Hub
       hee:text: Guidance and information for library and information staff
     /hee:contentBlocks[1]:
+      jcr:primaryType: hee:anchorLinks
+      hee:targetHeadings: [h2]
+      hee:title: On this page
+    /hee:contentBlocks[2]:
       jcr:primaryType: hee:contentCards
       hee:header: Our services
       /hee:cards[1]:
@@ -883,7 +947,7 @@
       /hee:cards[3]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 1d5ef5aa-4573-4994-892a-ce935c761217
-    /hee:contentBlocks[2]:
+    /hee:contentBlocks[3]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: dental
       hee:title: Explore dental training region
@@ -998,7 +1062,7 @@
           <p>When you're selected for a <strong>training</strong> programme, you'll learn your skills in one of England's seven regions.</p>
 
           <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
-    /hee:contentBlocks[3]:
+    /hee:contentBlocks[4]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: higher
       hee:title: Higher regions
@@ -1110,7 +1174,7 @@
       /hee:description:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-    /hee:contentBlocks[4]:
+    /hee:contentBlocks[5]:
       jcr:primaryType: hee:navMap
       hee:mapEducation: medical
       hee:title: Medical regions
@@ -1278,3 +1342,29 @@
       /hee:description:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
+    /hee:contentBlocks[6]:
+      jcr:primaryType: hee:blockLinksReference
+      /hee:blockLinksContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+    /hee:contentBlocks[7]:
+      jcr:primaryType: hee:contact
+      hee:display: [name, image, departmentName, jobTitle, email, address, phoneNumber]
+      hee:title: ''
+      /hee:contentItems:
+        jcr:primaryType: hee:contactWithCopy
+        hee:copy: Praesent sapien massa, convallis a pellentesque nec, egestas non
+          nisi. Proin eget tortor risus.
+        /hee:contentItem:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+    /hee:contentBlocks[8]:
+      jcr:primaryType: hee:richTextReference
+      /hee:richTextBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /hee:contentBlocks[9]:
+      jcr:primaryType: hee:tabsReference
+      /hee:tabsContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
