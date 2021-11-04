@@ -75,7 +75,7 @@ public enum ListingPageType {
             "searchbank",
             new String[]{"hee:searchBank"},
             Boolean.TRUE,
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
+            HEEField.COMPLETED_DATE.getName(),
             ValueListIdentifier.SEARCH_BANK_TOPICS.getName(),
             Boolean.FALSE);
 
