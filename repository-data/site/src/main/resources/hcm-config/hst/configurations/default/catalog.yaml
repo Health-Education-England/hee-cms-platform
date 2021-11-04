@@ -5,14 +5,17 @@ definitions:
     /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-catalog/form:
       hst:parameternames: [behaviors]
       hst:parametervalues: [com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior]
-    /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-catalog/blog-comment-form:
-      jcr:primaryType: hst:containeritemcomponent
-      hst:componentclassname: com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent
-      hst:iconpath: resources/addon/eforms/images/icons/form.svg
-      hst:label: Blog Comments Form
-      hst:parameternames: [behaviors]
-      hst:parametervalues: ['com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
-          uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior']
-      hst:resourcetemplate: eforms.validation.default
-      hst:template: eforms.default
-      hst:xtype: HST.Item
+    /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-blog-catalog:
+      jcr:primaryType: hst:containeritempackage
+      hst:hiddeninchannelmanager: true
+      /blog-comment-form:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: com.onehippo.cms7.eforms.hst.components.AutoDetectFormComponent
+        hst:iconpath: resources/addon/eforms/images/icons/form.svg
+        hst:label: Blog Comments Form
+        hst:parameternames: [behaviors]
+        hst:parametervalues: ['com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
+            uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior']
+        hst:resourcetemplate: eforms.validation.default
+        hst:template: eforms.default
+        hst:xtype: HST.Item
