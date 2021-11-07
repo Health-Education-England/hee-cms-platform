@@ -1735,7 +1735,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
     hippo:name: Test Media
-    hippo:versionHistory: 84fccd89-f6a6-456f-b9cf-d1efa10c86e6
+    hippo:versionHistory: 3ce7ebca-86e5-41d0-bc7b-eb41d3d0704d
     /test-media[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -1748,7 +1748,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
-      hippostdpubwf:lastModificationDate: 2021-10-20T16:09:56.706+01:00
+      hippostdpubwf:lastModificationDate: 2021-11-07T00:54:00.010Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: ba8ebbae-82df-4b58-8533-aa0c9ec51229
       hippotranslation:locale: en
@@ -1782,6 +1782,12 @@
         /hee:mediaEmbedContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /test-media[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -1794,7 +1800,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
-      hippostdpubwf:lastModificationDate: 2021-10-20T16:10:06.598+01:00
+      hippostdpubwf:lastModificationDate: 2021-11-07T00:54:18.530Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: ba8ebbae-82df-4b58-8533-aa0c9ec51229
       hippotranslation:locale: en
@@ -1828,6 +1834,12 @@
         /hee:mediaEmbedContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /test-media[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -1840,9 +1852,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
-      hippostdpubwf:lastModificationDate: 2021-10-20T16:10:06.598+01:00
+      hippostdpubwf:lastModificationDate: 2021-11-07T00:54:18.530Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-10-20T16:10:09.150+01:00
+      hippostdpubwf:publicationDate: 2021-11-07T00:54:36.235Z
       hippotranslation:id: ba8ebbae-82df-4b58-8533-aa0c9ec51229
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -1875,3 +1887,9 @@
         /hee:mediaEmbedContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []

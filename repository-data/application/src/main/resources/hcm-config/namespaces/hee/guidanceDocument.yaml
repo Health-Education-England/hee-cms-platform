@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 0e175558-55bb-4183-861e-6132b59c65a1
+          jcr:uuid: 787411d0-feec-4c5a-a222-8b68a89ca046
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -63,6 +63,15 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /heroImage:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:heroImage
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -76,7 +85,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: d96b7543-a497-4558-bb65-c55832aa2ade
+          jcr:uuid: d2989cf9-9c65-4ce0-b1cd-b46ea6012bea
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           /hee:relatedContent:
@@ -92,6 +101,12 @@ definitions:
           /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -132,6 +147,15 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /heroImage:
+            jcr:primaryType: frontend:plugin
+            caption: Hero image
+            field: heroImage
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
@@ -153,15 +177,6 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /relatedContent:
-            jcr:primaryType: frontend:plugin
-            caption: Related content
-            field: relatedContent
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
@@ -174,3 +189,12 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
+          /relatedContent:
+            jcr:primaryType: frontend:plugin
+            caption: Related content
+            field: relatedContent
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
