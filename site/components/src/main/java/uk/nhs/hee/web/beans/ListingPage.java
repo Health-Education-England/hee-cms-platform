@@ -32,8 +32,8 @@ public class ListingPage extends BaseDocument {
         return getSingleProperty("hee:listingPageType");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:imagelink")
-    public ImageSetWithCaption getImagelink() {
-        return getLinkedBean("hee:imagelink", ImageSetWithCaption.class);
+    @HippoEssentialsGenerated(internalName = "hee:heroImage")
+    public ImageSetWithCaption getHeroImage() {
+        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
     }
 }

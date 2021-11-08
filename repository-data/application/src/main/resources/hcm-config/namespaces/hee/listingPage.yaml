@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 12508edd-829b-4413-814a-add4a0376b33
+          jcr:uuid: 3049f000-8d64-4efb-bd7f-e814d16a0e50
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -64,7 +64,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:imagelink
+            hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
       /hipposysedit:prototypes:
@@ -80,13 +80,13 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 4c57e489-a601-4833-a41e-08d5fa14ea72
+          jcr:uuid: 1a662f13-25ec-4e63-976a-5b1a57a49c5e
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           hee:pageSize: 0
           hee:documentTypes: []
           hee:listingPageType: ''
-          /hee:imagelink:
+          /hee:heroImage:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
             hippo:facets: []
@@ -146,10 +146,11 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /imagelink:
+          /heroImage:
             jcr:primaryType: frontend:plugin
             caption: Hero image
             field: imagelink
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
