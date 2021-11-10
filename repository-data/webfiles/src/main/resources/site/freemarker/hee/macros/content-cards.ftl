@@ -7,6 +7,9 @@
             <h2>${contentCards.header}</h2>
         </div>
     </#if>
+    <#if contentCards.cardGroupSummary?has_content>
+        <p>${contentCards.cardGroupSummary}</p>
+    </#if>
     <ul class="nhsuk-grid-row nhsuk-card-group">
         <#list contentCards.cards as contentCard>
             <#if contentCard.header.document?? || contentCard.header.url?has_content>
@@ -17,6 +20,10 @@
 
             <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
                 <div class="nhsuk-card ${clickableCard?then('nhsuk-card--clickable', 'nhsuk-card')}">
+                    <@hst.link var="cardImage" hippobean=contentCard.cardImage />
+                    <#if cardImage??>
+                    <img class="nhsuk-card__img" src="${cardImage}" alt="">
+                    </#if>
                     <div class="nhsuk-card__content">
                         <#if clickableCard>
                             <h3 class="nhsuk-card__heading nhsuk-heading-m">
