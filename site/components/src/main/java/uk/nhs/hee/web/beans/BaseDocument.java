@@ -4,7 +4,6 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoDocument;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
 import uk.nhs.hee.web.utils.DateUtils;
-import uk.nhs.hee.web.utils.StringUtils;
 
 import javax.jcr.RepositoryException;
 
