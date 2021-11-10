@@ -29,8 +29,15 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
+        BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
+
+        if (blogPost == null) {
+            blogPost = (BlogPost) request.getRequestContext().getContentBean();
+        }
+
         if (blogPost != null) {
+            request.setModel(REQUEST_ATTR_DOCUMENT, blogPost);
+
             addCategoriesValueListMapToModel(request, blogPost);
 
             addBlogListingPageURLToModel(request);
