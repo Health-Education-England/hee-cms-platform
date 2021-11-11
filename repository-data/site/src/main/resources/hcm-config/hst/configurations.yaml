@@ -42,63 +42,66 @@ definitions:
             /_default_:
               jcr:primaryType: hst:sitemapitem
               hst:relativecontentpath: ${parent}/${1}
-              /_index_:
-                jcr:primaryType: hst:sitemapitem
-                hst:relativecontentpath: ${parent}/${1}/${1}
               /_default_:
                 jcr:primaryType: hst:sitemapitem
                 hst:relativecontentpath: ${parent}/${2}
                 /_index_:
                   jcr:primaryType: hst:sitemapitem
-                  hst:relativecontentpath: ${parent}/${2}/${2}
+                  hst:relativecontentpath: ${parent}/index
                 /_default_:
                   jcr:primaryType: hst:sitemapitem
                   hst:relativecontentpath: ${parent}/${3}
                   /_index_:
                     jcr:primaryType: hst:sitemapitem
-                    hst:relativecontentpath: ${parent}/${3}/${3}
+                    hst:relativecontentpath: ${parent}/index
                   /_default_:
                     jcr:primaryType: hst:sitemapitem
                     hst:relativecontentpath: ${parent}/${4}
                     /_index_:
                       jcr:primaryType: hst:sitemapitem
-                      hst:relativecontentpath: ${parent}/${4}/${4}
+                      hst:relativecontentpath: ${parent}/index
                     /_default_:
                       jcr:primaryType: hst:sitemapitem
                       hst:relativecontentpath: ${parent}/${5}
                       /_index_:
                         jcr:primaryType: hst:sitemapitem
-                        hst:relativecontentpath: ${parent}/${5}/${5}
+                        hst:relativecontentpath: ${parent}/index
                       /_default_:
                         jcr:primaryType: hst:sitemapitem
                         hst:relativecontentpath: ${parent}/${6}
                         /_index_:
                           jcr:primaryType: hst:sitemapitem
-                          hst:relativecontentpath: ${parent}/${6}/${6}
+                          hst:relativecontentpath: ${parent}/index
                         /_default_:
                           jcr:primaryType: hst:sitemapitem
                           hst:relativecontentpath: ${parent}/${7}
                           /_index_:
                             jcr:primaryType: hst:sitemapitem
-                            hst:relativecontentpath: ${parent}/${7}/${7}
+                            hst:relativecontentpath: ${parent}/index
                           /_default_:
                             jcr:primaryType: hst:sitemapitem
                             hst:relativecontentpath: ${parent}/${8}
                             /_index_:
                               jcr:primaryType: hst:sitemapitem
-                              hst:relativecontentpath: ${parent}/${8}/${8}
+                              hst:relativecontentpath: ${parent}/index
                             /_default_:
                               jcr:primaryType: hst:sitemapitem
                               hst:relativecontentpath: ${parent}/${9}
                               /_index_:
                                 jcr:primaryType: hst:sitemapitem
-                                hst:relativecontentpath: ${parent}/${9}/${9}
+                                hst:relativecontentpath: ${parent}/index
                               /_default_:
                                 jcr:primaryType: hst:sitemapitem
                                 hst:relativecontentpath: ${parent}/${10}
                                 /_index_:
                                   jcr:primaryType: hst:sitemapitem
-                                  hst:relativecontentpath: ${parent}/${10}/${10}
+                                  hst:relativecontentpath: ${parent}/index
+                                /_any_:
+                                  jcr:primaryType: hst:sitemapitem
+                                  hst:relativecontentpath: ${parent}/${11}
+              /_index_:
+                jcr:primaryType: hst:sitemapitem
+                hst:relativecontentpath: ${parent}/index
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:
