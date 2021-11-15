@@ -1,7 +1,7 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#import "./link.ftl" as hlink>
 
-<#macro contentCards contentCards>
+<#macro contentCards contentCards size="third">
     <#if contentCards.header?has_content>
         <div class="nhsuk-u-reading-width">
             <h2>${contentCards.header}</h2>
@@ -18,7 +18,7 @@
                 <#assign clickableCard=false/>
             </#if>
 
-            <li class="nhsuk-grid-column-one-third nhsuk-card-group__item">
+            <li class="nhsuk-grid-column-one-${size} nhsuk-card-group__item">
                 <div class="nhsuk-card ${clickableCard?then('nhsuk-card--clickable', 'nhsuk-card')}">
                     <@hst.link var="cardImage" hippobean=contentCard.cardImage />
                     <#if cardImage??>

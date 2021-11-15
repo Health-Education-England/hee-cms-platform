@@ -79,6 +79,9 @@
                                             <#case "uk.nhs.hee.web.beans.TabsReference">
                                                 <@hee.tabs tabs=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.ContentCards">
+                                                <@hee.contentCards contentCards=block size="half"/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
