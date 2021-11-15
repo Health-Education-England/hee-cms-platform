@@ -5,6 +5,7 @@
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
     <#if guidanceDocument??>
         <div class="nhsuk-width-container">
+            <@hst.manageContent hippobean=guidanceDocument />
             <#if showTitle>
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
