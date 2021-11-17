@@ -4,6 +4,7 @@ import org.hippoecm.hst.content.beans.Node;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import java.util.List;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
+import uk.nhs.hee.web.beans.ContentCards;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -23,11 +24,6 @@ public class Guidance extends BaseDocument {
 
     public List<?> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
-    public ContentCards getRelatedContent() {
-        return getBean("hee:relatedContent", ContentCards.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")

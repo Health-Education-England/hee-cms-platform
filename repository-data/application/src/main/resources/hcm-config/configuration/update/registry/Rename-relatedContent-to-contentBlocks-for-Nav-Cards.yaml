@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/Rename relatedContent to contentBlocks for Nav Cards:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: HEE-220
+      hipposys:dryrun: true
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport javax.jcr.Node\r\
+        \n\r\nclass RenameRelatedContentToContentBlocks extends BaseNodeUpdateVisitor\
+        \ {\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Updating node\
+        \ ${node.path}\"\r\n        String nodePath = node.path\r\n            if\
+        \ (node.getNodes().size == 1 && node.getNodes().nextNode().getProperty(\"\
+        hippo:docbase\").getString().equals(\"cafebabe-cafe-babe-cafe-babecafebabe\"\
+        )) {\r\n                node.remove();\r\n                log.debug \"Successfully\
+        \ removed the empty card group\"\r\n            }\r\n            else {\r\n\
+        \                node.getSession().move(nodePath, node.parent.path + '/' +\
+        \ 'hee:contentBlocks')\r\n\r\n                log.debug \"Successfully moved\
+        \ the node '${nodePath}' under '${node.parent.path}'\"\r\n            }\r\n\
+        \        return true\r\n    }\r\n    boolean undoUpdate(Node node) {\r\n \
+        \       throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: /jcr:root/content/documents/lks//element(hee:relatedContent)

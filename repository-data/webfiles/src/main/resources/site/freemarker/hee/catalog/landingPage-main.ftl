@@ -29,9 +29,16 @@
                 <p class="nhsuk-lede-text">${document.summary}</p>
             </#if>
             <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-full">
-                    <@hee.contentCards contentCards=document.contentCards/>
-                </div>
+                <#if document.contentBlocks??>
+                    <#list document.contentBlocks as block>
+                        <#switch block.getClass().getName()>
+                            <#case "uk.nhs.hee.web.beans.ContentCards">
+                                <@hee.contentCards contentCards=block />
+                                <#break>
+                            <#default>
+                        </#switch>
+                    </#list>
+                </#if>
             </div>
         </main>
     </div>

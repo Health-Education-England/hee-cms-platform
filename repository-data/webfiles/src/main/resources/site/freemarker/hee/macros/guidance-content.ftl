@@ -110,17 +110,15 @@
                                 <#case "uk.nhs.hee.web.beans.CtaCardReference">
                                     <@hee.ctaCard ctaCard=block/>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.ContentCards">
+                                    <@hee.contentCards contentCards=block size="half" />
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
                     </#if>
-
-                    <div class="nhsuk-grid-column-full nhsuk-section__content">
-                        <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
-                    </div>
                 </div>
             </article>
         </div>
-        </main>
     </#if>
 </#macro>

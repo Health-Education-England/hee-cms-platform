@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b23c48c0-d57d-4250-b73c-ab77de0fee8c
+          jcr:uuid: 81e46b19-f281-4ec6-8fb8-8d9078553f32
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,14 +39,6 @@ definitions:
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /relatedContent:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:relatedContent
-            hipposysedit:primary: false
-            hipposysedit:type: hee:contentCards
           /pageLastNextReview:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -83,16 +75,9 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: cd388740-80ba-4e2c-9290-23b912254de0
+          jcr:uuid: 24fa8696-7b55-4f64-851a-59a8f6a6c37b
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
-          /hee:relatedContent:
-            jcr:primaryType: hee:contentCards
-            hee:header: ''
-            hee:cardGroupSummary: ''
-            /hee:cards:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
@@ -188,12 +173,3 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /relatedContent:
-            jcr:primaryType: frontend:plugin
-            caption: Related content
-            field: relatedContent
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
