@@ -6,6 +6,8 @@ definitions:
       hst:scheme: https
       hst:showcontextpath: true
       hst:showport: false
+      hst:responseheaders: ['Content-Security-Policy: frame-ancestors ''self''',
+          'X-Frame-Options: SAMEORIGIN']
       /onehippo:
         .meta:residual-child-node-category: content
         jcr:primaryType: hst:virtualhost
