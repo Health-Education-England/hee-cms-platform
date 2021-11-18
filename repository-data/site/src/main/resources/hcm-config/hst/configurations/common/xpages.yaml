@@ -1,0 +1,20 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:xpages:
+      jcr:primaryType: hst:xpages
+      /home-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Home page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.HomePageComponent
+          hst:template: homepage-main
+      /guidance-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Standard content page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+          hst:template: guidance-main
