@@ -22,6 +22,106 @@
       hippostd:foldertype: [new-translated-folder, new-document]
       hippotranslation:id: c764b15c-217e-436c-adc5-5cdb3585519a
       hippotranslation:locale: en
+      /content-cards:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: 6af2520b-dc58-487d-99bf-c8ee461d9d04
+        hippo:name: Content Cards
+        hippostd:foldertype: [new-content-card, new-translated-folder]
+        hippotranslation:id: 243fbe73-8478-444c-b42a-1feab254aa0b
+        hippotranslation:locale: en
+        /go-to-home-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          hippo:name: Go to home page
+          hippo:versionHistory: 9a0449d4-14de-406e-a38d-f6b79e38d0cb
+          /go-to-home-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: dd214659-a8b1-48e3-8c52-942c38f93876
+            hee:description: Go to home page
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-11-19T23:20:38.092Z
+            hippostdpubwf:lastModificationDate: 2021-11-19T23:20:38.092Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: ec36bcf6-83b4-44aa-8918-3204ceb45683
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              jcr:mixinTypes: ['mix:referenceable']
+              jcr:uuid: c269fa48-6dd8-4d1c-9ab5-1faa225ece72
+              hee:text: Home page
+              hee:url: ''
+              hippostd:holder: holder
+              hippostd:state: draft
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 254e1c0c-1f31-4203-af5c-1b8b71092fba
+          /go-to-home-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+            jcr:uuid: e1582b7d-04ae-4616-b6c2-10a9db3d2607
+            hee:description: Go to home page
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-11-19T23:20:38.092Z
+            hippostdpubwf:lastModificationDate: 2021-11-19T23:22:29.276Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: ec36bcf6-83b4-44aa-8918-3204ceb45683
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:text: Home page
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 254e1c0c-1f31-4203-af5c-1b8b71092fba
+          /go-to-home-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: eada8da8-fa74-47e2-ac7e-9193021f1b67
+            hee:description: Go to home page
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-11-19T23:20:38.092Z
+            hippostdpubwf:lastModificationDate: 2021-11-19T23:22:29.276Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2021-11-19T23:22:31.203Z
+            hippotranslation:id: ec36bcf6-83b4-44aa-8918-3204ceb45683
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:text: Home page
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 254e1c0c-1f31-4203-af5c-1b8b71092fba
     /old:
       jcr:primaryType: hippostd:folder
       jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

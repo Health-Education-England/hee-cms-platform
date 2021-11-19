@@ -18,3 +18,11 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
           hst:template: guidance-main
+      /landing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Landing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+          hst:template: landingpage-main
