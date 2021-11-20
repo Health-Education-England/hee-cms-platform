@@ -23,7 +23,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
-      hippostdpubwf:lastModificationDate: 2021-11-19T23:35:51.612Z
+      hippostdpubwf:lastModificationDate: 2021-11-20T00:05:25.626Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: acbc524d-0f10-47da-9dcd-82ec88613a52
       hippotranslation:locale: en
@@ -31,9 +31,21 @@
         jcr:primaryType: hee:HeroSection
         hee:header: Hero header
         hee:text: Hero text
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>Main content objects rich text</p>
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:header: Navigation cards
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
     /index[2]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
@@ -43,7 +55,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
-      hippostdpubwf:lastModificationDate: 2021-11-19T23:38:51.602Z
+      hippostdpubwf:lastModificationDate: 2021-11-20T00:05:49.181Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: acbc524d-0f10-47da-9dcd-82ec88613a52
       hippotranslation:locale: en
@@ -55,9 +67,21 @@
         jcr:primaryType: hee:HeroSection
         hee:header: Hero header
         hee:text: Hero text
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>Main content objects rich text</p>
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:header: Navigation cards
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
     /index[3]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
@@ -67,22 +91,34 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
-      hippostdpubwf:lastModificationDate: 2021-11-19T23:38:51.602Z
+      hippostdpubwf:lastModificationDate: 2021-11-20T00:05:49.181Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-11-19T23:38:53.756Z
+      hippostdpubwf:publicationDate: 2021-11-20T00:05:50.723Z
       hippotranslation:id: acbc524d-0f10-47da-9dcd-82ec88613a52
       hippotranslation:locale: en
       /hst:xpage:
         jcr:primaryType: hst:xpage
-        jcr:uuid: bdd9685f-e245-4f7a-b819-bdcbd835d61e
+        jcr:uuid: 9b3c7a4d-34da-4909-9d48-232fafffa520
         hst:pageref: home-page
       /hee:HeroSection:
         jcr:primaryType: hee:HeroSection
         hee:header: Hero header
         hee:text: Hero text
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>Main content objects rich text</p>
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:header: Navigation cards
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
   /page-types:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
@@ -92,81 +128,370 @@
     hippostd:foldertype: [new-experience-folder, new-experience-document]
     /index:
       jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: fd2d7077-4a0b-487e-8f11-779c1efa7ca9
+      hippo:name: index
       hippo:versionHistory: b6080cce-b366-4aa1-a584-0fc25c609993
       /index[1]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
         jcr:uuid: e09a7feb-3635-4182-b26a-8ea12077fd21
-        hee:summary: Landing page summary
-        hee:title: Landing page title
+        hee:summary: Landing page for HEE's page types
+        hee:title: Page types
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2021-11-19T23:43:54.985Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:47.092Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
         /hee:contentCards:
           jcr:primaryType: hee:contentCards
           hee:header: Navigation cards
-          /hee:cards:
+          /hee:cards[1]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+          /hee:cards[4]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c7a41b-b574-4ef0-8f95-90fc9538f1fe
+          /hee:cards[5]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9e121cb3-30a2-4a97-a478-4465bdf84eb3
+          /hee:cards[6]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
       /index[2]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
         jcr:uuid: c55a5be4-716f-440f-a10c-8e8dd570c052
-        hee:summary: Landing page summary
-        hee:title: Landing page title
+        hee:summary: Landing page for HEE's page types
+        hee:title: Page types
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2021-11-19T23:44:41.803Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:17:51.279Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
-        /hee:contentCards:
-          jcr:primaryType: hee:contentCards
-          hee:header: Navigation cards
-          /hee:cards:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
         /hst:xpage:
           jcr:primaryType: hst:xpage
           jcr:uuid: e7bca175-7eaa-4651-b5a4-036799395fd9
           hst:pageref: landing-page
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: Navigation cards
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+          /hee:cards[4]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c7a41b-b574-4ef0-8f95-90fc9538f1fe
+          /hee:cards[5]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9e121cb3-30a2-4a97-a478-4465bdf84eb3
+          /hee:cards[6]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
       /index[3]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
         jcr:uuid: a34f6ebf-962a-4246-b55b-41704bc12b0c
-        hee:summary: Landing page summary
-        hee:title: Landing page title
+        hee:summary: Landing page for HEE's page types
+        hee:title: Page types
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2021-11-19T23:44:41.803Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:17:51.279Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-11-19T23:44:44.120Z
+        hippostdpubwf:publicationDate: 2021-11-20T00:17:52.927Z
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 77f5e9d1-42cc-4d74-a1c4-0bb112039690
+          hst:pageref: landing-page
         /hee:contentCards:
           jcr:primaryType: hee:contentCards
           hee:header: Navigation cards
-          /hee:cards:
+          /hee:cards[1]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+          /hee:cards[4]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c7a41b-b574-4ef0-8f95-90fc9538f1fe
+          /hee:cards[5]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9e121cb3-30a2-4a97-a478-4465bdf84eb3
+          /hee:cards[6]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+    /home-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: b1655e70-66eb-4120-ab9a-57c0503cbece
+      hippo:name: Home page
+      hippo:versionHistory: f8ade988-464b-4c52-b012-65229066b9e4
+      /home-page[1]:
+        jcr:primaryType: hee:HomePage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: f041f6a4-7475-4452-9b22-6245861891d4
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:09:51.259Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:09:51.259Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 651db028-f6f5-4f7f-a465-3f3c93a6ffe2
+        hippotranslation:locale: document-type-locale
+        /hee:HeroSection:
+          jcr:primaryType: hee:HeroSection
+          hee:header: 'Page type: Home page'
+          hee:text: Example Home Page
+      /home-page[2]:
+        jcr:primaryType: hee:HomePage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: bb1d4e7f-d131-49ad-a360-af9f571fc1a6
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:09:51.259Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:10:43.916Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 651db028-f6f5-4f7f-a465-3f3c93a6ffe2
+        hippotranslation:locale: document-type-locale
+        /hee:HeroSection:
+          jcr:primaryType: hee:HeroSection
+          hee:header: 'Page type: Home page'
+          hee:text: Example Home Page
         /hst:xpage:
           jcr:primaryType: hst:xpage
-          jcr:uuid: d41c4072-a767-4ee1-a8b4-df9f14ec8062
+          jcr:uuid: 32a9b6c3-82e7-4ed6-b09c-97ebf025a318
+          hst:pageref: home-page
+      /home-page[3]:
+        jcr:primaryType: hee:HomePage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: ff996780-79bd-4823-96ca-37d4e8c505a3
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:09:51.259Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:10:43.916Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-11-20T00:10:46.076Z
+        hippotranslation:id: 651db028-f6f5-4f7f-a465-3f3c93a6ffe2
+        hippotranslation:locale: document-type-locale
+        /hee:HeroSection:
+          jcr:primaryType: hee:HeroSection
+          hee:header: 'Page type: Home page'
+          hee:text: Example Home Page
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: dea7af52-fb51-4065-aeba-5e88ccbf0b56
+          hst:pageref: home-page
+    /landing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 49ad101a-40dd-48f1-88f4-5627381b8ea4
+      hippo:name: Landing page
+      hippo:versionHistory: f78594b9-5045-4379-82a1-9c7f80c1227b
+      /landing-page[1]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 41a356be-cdf6-466e-8bc3-3e0d37591285
+        hee:summary: Example landing page
+        hee:title: 'Page type: Landing Page'
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:11:11.314Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:11:11.314Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a87a72eb-717f-439f-bd03-652a1acc0241
+        hippotranslation:locale: document-type-locale
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /landing-page[2]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: f01ec9ff-f12e-4e24-bc16-104018b069f9
+        hee:summary: Example landing page
+        hee:title: 'Page type: Landing Page'
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:11:11.314Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:11:38.212Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a87a72eb-717f-439f-bd03-652a1acc0241
+        hippotranslation:locale: document-type-locale
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 1bb2cf79-06c1-4638-8157-890a3425879a
           hst:pageref: landing-page
+      /landing-page[3]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 0f2613d3-8b1a-4880-a9b5-a14ca53f0823
+        hee:summary: Example landing page
+        hee:title: 'Page type: Landing Page'
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:11:11.314Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:11:38.212Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-11-20T00:11:42.373Z
+        hippotranslation:id: a87a72eb-717f-439f-bd03-652a1acc0241
+        hippotranslation:locale: document-type-locale
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: c847aa69-7a43-494b-b4d5-aa16a6abe2d7
+          hst:pageref: landing-page
+    /standard-content-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 142c94a0-791f-4cba-91b0-e36fc149a3e3
+      hippo:name: Standard content page
+      hippo:versionHistory: 76485ac9-5876-4ae2-a3a6-6818069482d0
+      /standard-content-page[1]:
+        jcr:primaryType: hee:guidance
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: e06df73c-328c-4cfa-b3bb-010f6379b26c
+        hee:summary: Example standard content page
+        hee:title: 'Page type: Standard content page'
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:12:04.711Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:04.711Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 6fc4cb6c-6c4d-4cb7-8a48-d1df6baa0241
+        hippotranslation:locale: document-type-locale
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 0001-01-01T12:00:00Z
+          hee:nextReviewed: 0001-01-01T12:00:00Z
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: ''
+      /standard-content-page[2]:
+        jcr:primaryType: hee:guidance
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: 60a5efc5-2aee-4beb-8847-edb3003ca24b
+        hee:summary: Example standard content page
+        hee:title: 'Page type: Standard content page'
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:12:04.711Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:29.488Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 6fc4cb6c-6c4d-4cb7-8a48-d1df6baa0241
+        hippotranslation:locale: document-type-locale
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 0001-01-01T12:00:00Z
+          hee:nextReviewed: 0001-01-01T12:00:00Z
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: ''
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 6dd72abc-503e-4c27-8994-119519893df4
+          hst:pageref: guidance-page
+      /standard-content-page[3]:
+        jcr:primaryType: hee:guidance
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 1dd2510b-7a3f-4ce7-a75e-1f528c19b95c
+        hee:summary: Example standard content page
+        hee:title: 'Page type: Standard content page'
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-20T00:12:04.711Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:29.488Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-11-20T00:12:31.431Z
+        hippotranslation:id: 6fc4cb6c-6c4d-4cb7-8a48-d1df6baa0241
+        hippotranslation:locale: document-type-locale
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 0001-01-01T12:00:00Z
+          hee:nextReviewed: 0001-01-01T12:00:00Z
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: ''
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 7fbfb3ca-85b6-4890-967a-22c293d8fc88
+          hst:pageref: guidance-page
   /components-library:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
@@ -174,3 +499,98 @@
     hippo:name: Components library
     hippostd:channelid: lks
     hippostd:foldertype: [new-experience-folder, new-experience-document]
+    /index:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 295e3b50-c59c-4548-87b9-9c6789fe80d6
+      hippo:versionHistory: a03864db-b700-4ece-9a38-1bd08f52e7d3
+      /index[1]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 286483a9-f00e-4083-b7a6-4bd796df4590
+        hee:summary: Landing page for HEEs component library
+        hee:title: Components library
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-19T23:59:02.394Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:04:38.047Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 08c7c4f3-106b-4b7b-8e56-532899c1d477
+        hippotranslation:locale: document-type-locale
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: Navigation cards
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+      /index[2]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: e9c35d04-610f-43c6-a514-fc50981caf52
+        hee:summary: Landing page for HEEs component library
+        hee:title: Components library
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-19T23:59:02.394Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:04:57.240Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 08c7c4f3-106b-4b7b-8e56-532899c1d477
+        hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: ffb7b267-3491-4532-a614-d1baee290a7a
+          hst:pageref: landing-page
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: Navigation cards
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+      /index[3]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 0df5a540-6281-45ef-8591-07ec99be860e
+        hee:summary: Landing page for HEEs component library
+        hee:title: Components library
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-19T23:59:02.394Z
+        hippostdpubwf:lastModificationDate: 2021-11-20T00:04:57.240Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-11-20T00:04:59.083Z
+        hippotranslation:id: 08c7c4f3-106b-4b7b-8e56-532899c1d477
+        hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: ca8aa8ed-7383-4ba5-afa3-b69f52d0ab37
+          hst:pageref: landing-page
+        /hee:contentCards:
+          jcr:primaryType: hee:contentCards
+          hee:header: Navigation cards
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
