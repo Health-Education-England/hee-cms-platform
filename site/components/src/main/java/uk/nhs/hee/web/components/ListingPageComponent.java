@@ -15,6 +15,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
+import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
 import org.slf4j.Logger;
@@ -35,7 +36,7 @@ import static uk.nhs.hee.web.repository.HEEField.DOCUMENT_TITLE;
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
  */
-public abstract class ListingPageComponent extends EssentialsDocumentComponent {
+public abstract class ListingPageComponent extends EssentialsContentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
 
     private static final String ASCENDING_SORT_ORDER = "asc";

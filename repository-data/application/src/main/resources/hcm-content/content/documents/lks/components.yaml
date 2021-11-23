@@ -574,6 +574,550 @@
             /hee:document:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 142c94a0-791f-4cba-91b0-e36fc149a3e3
+      /events-listing-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 6b040cb0-544e-448b-be1d-044f3077f59a
+        hippo:name: Events listing example
+        hippo:versionHistory: 3e279a74-ccef-4b41-975f-b47c9213c953
+        /events-listing-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 692a71c5-41b9-48d4-ab33-c38fae741e58
+          hee:description: Example events listing page
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:00:53.417Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:03:06.107Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 0cdec6ee-4d5b-429d-8e82-ca068f0b046f
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Events listing page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: d516e5bc-03b2-4a3c-90e3-00aa781ff7e8
+        /events-listing-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: f08c3d42-e3ff-49c7-9d0e-1fb9d4efafcd
+          hee:description: Example events listing page
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:00:53.417Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:03:12.462Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 0cdec6ee-4d5b-429d-8e82-ca068f0b046f
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Events listing page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: d516e5bc-03b2-4a3c-90e3-00aa781ff7e8
+        /events-listing-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 7c3b7f35-d487-4a17-88fb-0cfdd958cd33
+          hee:description: Example events listing page
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:00:53.417Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:03:12.462Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2021-11-23T18:03:33.459Z
+          hippotranslation:id: 0cdec6ee-4d5b-429d-8e82-ca068f0b046f
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Events listing page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: d516e5bc-03b2-4a3c-90e3-00aa781ff7e8
+      /blog-listing-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: c6268cb4-82dd-4015-9bd5-494fddc3282b
+        hippo:name: Blog listing example
+        hippo:versionHistory: 9f242817-a686-4c41-9421-d12ec5ea6ca6
+        /blog-listing-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 61536e1a-9f88-4b38-a10e-134f4b4ce8f5
+          hee:description: Example blog listing page
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:02:27.638Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:03:15.652Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 3dfcc5d6-91c6-4e01-aabb-521f51db74a5
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Blog listing page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 07735474-a5f7-4593-aa8d-af0f683610a0
+        /blog-listing-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 93305b6d-d2e5-42b5-8f29-fd2902532a30
+          hee:description: Example blog listing page
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:02:27.638Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:03:27.728Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 3dfcc5d6-91c6-4e01-aabb-521f51db74a5
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Blog listing page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 07735474-a5f7-4593-aa8d-af0f683610a0
+        /blog-listing-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 31885d0a-a16e-4876-8c4e-bb8b2bb35420
+          hee:description: Example blog listing page
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:02:27.638Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:03:27.728Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2021-11-23T18:03:29.280Z
+          hippotranslation:id: 3dfcc5d6-91c6-4e01-aabb-521f51db74a5
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Blog listing page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 07735474-a5f7-4593-aa8d-af0f683610a0
+      /search-bank-listing-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: f79b5fad-e5a1-4aa0-99db-c3999f98c6cf
+        hippo:name: Search bank listing example
+        hippo:versionHistory: b6ac4cc9-8da9-4db9-a99c-3019dd39afbd
+        /search-bank-listing-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 5b2373ad-ba9a-4ddb-afff-826642b349cc
+          hee:description: Example search bank listing page
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:04:12.404Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:04:12.404Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 44bd0fd9-63ac-484f-9962-3d3dabbd1244
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 102a0b42-ee2f-4325-b23a-84da4b606e2f
+            hee:text: Search bank listing example
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 68c66596-7b54-4ba0-a770-662d2a3eff66
+        /search-bank-listing-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 4c1b077f-47e7-451f-9101-38a2f168af43
+          hee:description: Example search bank listing page
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:04:12.404Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:04:47.932Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 44bd0fd9-63ac-484f-9962-3d3dabbd1244
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Search bank listing example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 68c66596-7b54-4ba0-a770-662d2a3eff66
+        /search-bank-listing-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 03f9ac30-50f5-4710-a497-bf41973d1861
+          hee:description: Example search bank listing page
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:04:12.404Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:04:47.932Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2021-11-23T18:04:49.537Z
+          hippotranslation:id: 44bd0fd9-63ac-484f-9962-3d3dabbd1244
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Search bank listing example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 68c66596-7b54-4ba0-a770-662d2a3eff66
+      /bulletin-listing-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 1707c637-a1d8-49dd-8d1c-400c01cfe2f9
+        hippo:name: Bulletin listing example
+        hippo:versionHistory: e8fe69a1-1865-4bfc-b345-9bcfd9c23708
+        /bulletin-listing-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 1da0fb8c-221e-448a-9b11-fa156361abb0
+          hee:description: Example bulletin listing page
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:05:20.577Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:05:20.577Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 9dcffcc5-4343-4b9a-8910-3b86a39b37b2
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 3aed00e6-f84b-4f36-ad23-f06a1d807118
+            hee:text: Bulletin listing example
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: f43138a7-81ab-41b0-b537-ea3425822f26
+        /bulletin-listing-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: cb5fbe49-e596-4ae4-ad58-b99db7bbf4f2
+          hee:description: Example bulletin listing page
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:05:20.577Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:05:52.548Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 9dcffcc5-4343-4b9a-8910-3b86a39b37b2
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Bulletin listing example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: f43138a7-81ab-41b0-b537-ea3425822f26
+        /bulletin-listing-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 3fbcf299-681a-4a12-aae7-578bf8eae276
+          hee:description: Example bulletin listing page
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:05:20.577Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:05:52.548Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2021-11-23T18:05:54.205Z
+          hippotranslation:id: 9dcffcc5-4343-4b9a-8910-3b86a39b37b2
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Bulletin listing example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: f43138a7-81ab-41b0-b537-ea3425822f26
+      /case-study-listing-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 6edcb6fc-fffd-4f6b-b04d-746ef35d31f1
+        hippo:name: Case study listing example
+        hippo:versionHistory: 552ca1cc-d025-4dc2-93e0-3ba4bfcf6fdb
+        /case-study-listing-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: e77b1199-9fb1-4c69-bf09-da7a6e6be73b
+          hee:description: Example case study listing page
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:06:20.849Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:06:20.849Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 365b2061-1fe5-4c48-89de-a3bd28767ec7
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: dffaec09-44be-4312-a360-df2532e3c3ca
+            hee:text: Case study listing example
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: c84eb5af-ba6d-4ad0-bcdd-b5d3f0b2d16a
+        /case-study-listing-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: db30961c-36e9-47e4-a507-46f4538e8148
+          hee:description: Example case study listing page
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:06:20.849Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:06:45.335Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 365b2061-1fe5-4c48-89de-a3bd28767ec7
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Case study listing example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: c84eb5af-ba6d-4ad0-bcdd-b5d3f0b2d16a
+        /case-study-listing-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 0576ac2d-517e-4f47-ba79-7b0ddc4d8c65
+          hee:description: Example case study listing page
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2021-11-23T18:06:20.849Z
+          hippostdpubwf:lastModificationDate: 2021-11-23T18:06:45.335Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2021-11-23T18:06:46.835Z
+          hippotranslation:id: 365b2061-1fe5-4c48-89de-a3bd28767ec7
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:text: Case study listing example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: c84eb5af-ba6d-4ad0-bcdd-b5d3f0b2d16a
+    /go-to-listing-page-types:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e6dc46e6-67a8-442c-81f5-ea1a3fc80bcb
+      hippo:name: Go to listing page types
+      hippo:versionHistory: 6c505286-b173-4d1c-9d34-88f0c21a425e
+      /go-to-listing-page-types[1]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 67c106af-2f46-4f4f-864e-9c7bb79aefc1
+        hee:description: Go to listing page examples
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-23T18:08:30.818Z
+        hippostdpubwf:lastModificationDate: 2021-11-23T18:08:30.818Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 80ccb31e-0aca-4566-903e-6d4208179e7b
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: a5cbc9e1-c185-4a2a-90ce-5ee629a33c92
+          hee:text: Listing page types
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: b6bc97e9-e735-441a-93e4-91308ffbf9e4
+      /go-to-listing-page-types[2]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: a50e4e6b-66e3-4923-82fa-65c1db184893
+        hee:description: Go to listing page examples
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-23T18:08:30.818Z
+        hippostdpubwf:lastModificationDate: 2021-11-23T18:09:05.413Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 80ccb31e-0aca-4566-903e-6d4208179e7b
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Listing page types
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: b6bc97e9-e735-441a-93e4-91308ffbf9e4
+      /go-to-listing-page-types[3]:
+        jcr:primaryType: hee:ContentCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: cdcbc19f-6ad5-4b52-8684-37654ca6ac2a
+        hee:description: Go to listing page examples
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-11-23T18:08:30.818Z
+        hippostdpubwf:lastModificationDate: 2021-11-23T18:09:05.413Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-11-23T18:09:07.633Z
+        hippotranslation:id: 80ccb31e-0aca-4566-903e-6d4208179e7b
+        hippotranslation:locale: en
+        /hee:header:
+          jcr:primaryType: hee:link
+          hee:text: Listing page types
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: b6bc97e9-e735-441a-93e4-91308ffbf9e4
   /richtext-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

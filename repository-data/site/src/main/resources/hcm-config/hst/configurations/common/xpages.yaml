@@ -26,3 +26,35 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
           hst:template: landingpage-main
+      /category-based-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Blog/Bulletin listing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
+          hst:template: categorybasedlisting-main
+      /event-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Event listing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.EventListingPageComponent
+          hst:template: eventlisting-main
+      /searchbank-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Search bank listing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.SearchBankListingPageComponent
+          hst:template: searchbanklisting-main
+      /casestudy-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Case study listing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.CaseStudyListingPageComponent
+          hst:template: casestudylisting-main
