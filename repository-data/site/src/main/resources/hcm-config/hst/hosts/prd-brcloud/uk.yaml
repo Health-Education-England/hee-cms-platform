@@ -32,7 +32,8 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/dental
-              hst:responseheaders: ['robots: noindex, nofollow']
+              hst:responseheaders: ['robots: noindex, nofollow', 'Content-Security-Policy:
+                  frame-ancestors ''self''', 'X-Frame-Options: SAMEORIGIN']
               hst:roles: [site.viewer]
               hst:authenticated: true
           /digital-transformation:
