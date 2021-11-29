@@ -36,7 +36,7 @@ import static uk.nhs.hee.web.repository.HEEField.DOCUMENT_TITLE;
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
  */
-public abstract class ListingPageComponent extends EssentialsContentComponent {
+public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
 
     private static final String ASCENDING_SORT_ORDER = "asc";

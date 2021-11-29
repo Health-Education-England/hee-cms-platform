@@ -58,3 +58,11 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: uk.nhs.hee.web.components.CaseStudyListingPageComponent
           hst:template: casestudylisting-main
+      /search-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Search listing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.SearchResultsComponent
+          hst:template: searchresults-main
