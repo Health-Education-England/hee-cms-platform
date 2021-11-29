@@ -19,17 +19,6 @@ definitions:
             hst:pagetitle: Home
             hst:refId: root
             hst:relativecontentpath: home
-          /search:
-            jcr:primaryType: hst:sitemapitem
-            hst:hiddeninchannelmanager: true
-            hst:parameternames: [excludedForBreadcrumb]
-            hst:parametervalues: ['true']
-            hst:refId: search
-            /results:
-              jcr:primaryType: hst:sitemapitem
-              hst:componentconfigurationid: hst:pages/searchresults
-              hst:pagetitle: Search
-              hst:relativecontentpath: listing-pages/search-results
           /cookies:
             jcr:primaryType: hst:sitemapitem
             hst:componentconfigurationid: hst:pages/cookies
@@ -105,6 +94,17 @@ definitions:
             /_index_:
               jcr:primaryType: hst:sitemapitem
               hst:relativecontentpath: ${parent}/index
+            /search:
+              jcr:primaryType: hst:sitemapitem
+              hst:hiddeninchannelmanager: true
+              hst:parameternames: [excludedForBreadcrumb]
+              hst:parametervalues: ['true']
+              hst:refId: search
+              /results:
+                jcr:primaryType: hst:sitemapitem
+                hst:componentconfigurationid: hst:xpages/search-listing-page
+                hst:pagetitle: Search
+                hst:relativecontentpath: search-results
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:

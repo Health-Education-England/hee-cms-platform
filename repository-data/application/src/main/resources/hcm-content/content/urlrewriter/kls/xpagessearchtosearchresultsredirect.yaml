@@ -1,0 +1,64 @@
+/content/urlrewriter/kls/xpagessearchtosearchresultsredirect:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 9842d7e1-20ab-4799-8a6f-16e103a9f7e4
+  hippo:name: XPagesSearchToSearchResultsRedirect
+  hippo:versionHistory: 3c65a4a3-925e-457e-8af1-83a9d4130c65
+  /xpagessearchtosearchresultsredirect[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 893c4da5-42ae-4884-90f0-a3f09cace691
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2021-11-29T22:39:39.057Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'library.hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/pages/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+      >/pages/search-results?%{query-string}</to>\r\n</rule>\r\n\r\n<rule>\r\n   \
+      \ <name>Search Redirect for 'library.hee.nhs.uk' host</name>\r\n    <condition\
+      \ name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\n   \
+      \ <from>^/pages/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+      >/site/pages/search-results?%{query-string}</to>\r\n</rule>"
+  /xpagessearchtosearchresultsredirect[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 2d39fc41-73e8-4b02-a43e-523952f21720
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2021-11-29T22:39:26.719Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'library.hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/pages/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+      >/pages/search-results?%{query-string}</to>\r\n</rule>\r\n\r\n<rule>\r\n   \
+      \ <name>Search Redirect for 'library.hee.nhs.uk' host</name>\r\n    <condition\
+      \ name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\n   \
+      \ <from>^/pages/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+      >/site/pages/search-results?%{query-string}</to>\r\n</rule>"
+  /xpagessearchtosearchresultsredirect[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 3ec15821-7402-4785-9acd-4161d35f2f6e
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2021-11-29T22:39:39.057Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-11-29T22:39:40.833Z
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'library.hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/pages/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+      >/pages/search-results?%{query-string}</to>\r\n</rule>\r\n\r\n<rule>\r\n   \
+      \ <name>Search Redirect for 'library.hee.nhs.uk' host</name>\r\n    <condition\
+      \ name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\n   \
+      \ <from>^/pages/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+      >/site/pages/search-results?%{query-string}</to>\r\n</rule>"
