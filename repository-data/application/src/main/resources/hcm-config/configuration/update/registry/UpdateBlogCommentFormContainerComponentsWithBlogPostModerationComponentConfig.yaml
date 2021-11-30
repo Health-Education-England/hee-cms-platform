@@ -26,7 +26,7 @@ definitions:
         \ // existing form param value\r\n                \"com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,\
         \ uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior\"\
         ,\r\n                \"mail/Session\",\r\n                \"true\",\r\n  \
-        \              \"CMS Admin [Dev]\",\r\n                \"cms.admin.dev@hee.nhs.uk\"\
+        \              \"CMS Admin\",\r\n                \"cms.admin@hee.nhs.uk\"\
         ]\r\n        node.setProperty(\"hst:parameternames\", paramNames)\r\n    \
         \    node.setProperty(\"hst:parametervalues\", paramValues)\r\n        log.debug\
         \ \"Successfully updated blog comment form container component '${node.path}'\
