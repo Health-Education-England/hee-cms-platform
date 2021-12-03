@@ -18,7 +18,9 @@
                     <div class="nhsuk-grid-column-two-thirds">
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
-                                <p>${guidanceDocument.summary}</p>
+                                <p class="nhsuk-body-l">
+                                    <@hst.html formattedText="${guidanceDocument.summary?replace('\n', '<br>')}"/>
+                                </p>
                                 <#if guidanceDocument.contentBlocks??>
                                     <#list guidanceDocument.contentBlocks as block>
                                         <#switch block.getClass().getName()>

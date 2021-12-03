@@ -19,7 +19,9 @@
             <h1>
                 ${document.title}
             </h1>
-            <p class="nhsuk-lede-text">${document.summary}</p>
+            <p class="nhsuk-lede-text">
+                <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
+            </p>
             <form method="get" action="">
                 <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
                     <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
