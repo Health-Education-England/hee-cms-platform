@@ -8,7 +8,8 @@
             <h1>
                 ${document.title}
             </h1>
-            <p class="nhsuk-lede-text">${document.summary}</p>
+            <p class="nhsuk-lede-text">
+                <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-full">
                     <@hee.contentCards contentCards=document.contentCards/>

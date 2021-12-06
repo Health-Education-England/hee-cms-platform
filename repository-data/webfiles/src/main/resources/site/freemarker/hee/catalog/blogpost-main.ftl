@@ -50,7 +50,7 @@
 
                         <#--Blog Summary -->
                         <p class="nhsuk-body-l">
-                            ${document.summary!}
+                            <@hst.html formattedText="${document.summary?replace('\n', '<br>')}"/>
                         </p>
                         <#-- End Blog Summary -->
 
