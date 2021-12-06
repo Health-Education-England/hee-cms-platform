@@ -26,28 +26,26 @@
 
 <#macro fileLinksCard card>
     <#if card??>
-        <div class="nhsuk-grid-column-one-third">
-            <div class="nhsuk-card">
-                <div class="nhsuk-card__content">
-                    <h3 class="nhsuk-card__heading">${card.title}</h3>
+        <div class="nhsuk-card">
+            <div class="nhsuk-card__content">
+                <h3 class="nhsuk-card__heading">${card.title}</h3>
 
-                    <ul class="nhsuk-resources__list">
-                        <#list card.fileLinks as link>
-                            <@hst.link var="fileURL" hippobean=link.file>
-                                <@hst.param name="forceDownload" value="true"/>
-                            </@hst.link>
+                <ul class="nhsuk-resources__list">
+                    <#list card.fileLinks as link>
+                        <@hst.link var="fileURL" hippobean=link.file>
+                            <@hst.param name="forceDownload" value="true"/>
+                        </@hst.link>
 
-                            <#assign docType>${docTypeByMimeType(link.file.mimeType)}</#assign>
+                        <#assign docType>${docTypeByMimeType(link.file.mimeType)}</#assign>
 
-                            <li>
-                                <a class="nhsuk-resources__link" href="${fileURL}" title="${link.text}  (opens in new window)">
-                                ${link.text}
-                                <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType?upper_case}</span><span class="nhsuk-resources__docSize">${link.file.lengthKB}kB</span>
-                                </a>
-                            </li>
-                        </#list>
-                    </ul>
-                </div>
+                        <li>
+                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.text}  (opens in new window)">
+                            ${link.text}
+                            <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType?upper_case}</span><span class="nhsuk-resources__docSize">${link.file.lengthKB}kB</span>
+                            </a>
+                        </li>
+                    </#list>
+                </ul>
             </div>
         </div>
     </#if>
