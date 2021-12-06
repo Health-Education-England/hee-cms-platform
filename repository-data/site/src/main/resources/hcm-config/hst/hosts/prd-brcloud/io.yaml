@@ -20,6 +20,8 @@ definitions:
             hst:homepage: root
             hst:locale: en
             hst:mountpoint: /hst:hee/hst:sites/lks
+            hst:roles: [site.viewer]
+            hst:authenticated: true
             /dental:
               jcr:primaryType: hst:mount
               hst:mountpoint: /hst:hee/hst:sites/dental
