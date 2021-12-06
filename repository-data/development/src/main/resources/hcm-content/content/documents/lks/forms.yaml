@@ -311,7 +311,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9dd41d06-83d1-41c5-9ae7-9f2884ea778f
     hippo:name: BlogComment
-    hippo:versionHistory: 533b7243-06fc-48e0-af74-5ddbc8590a75
+    hippo:versionHistory: fcd3449d-5025-4fc5-b2e3-63ccb095a60e
     /blogcomment[1]:
       jcr:primaryType: eforms:form
       jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
@@ -330,19 +330,19 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-05-05T08:37:22.526+07:00
-      hippostdpubwf:lastModificationDate: 2021-05-05T10:23:58.567+07:00
+      hippostdpubwf:lastModificationDate: 2021-11-26T08:32:25.615Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: b9db01d7-c4b0-4fc3-bd8a-9b5202d47f02
       hippotranslation:locale: en
       /page0:
         jcr:primaryType: eforms:page
-        jcr:uuid: 557e53e0-653e-4858-a17b-8133e4b3d240
+        jcr:uuid: ac10397b-4bee-47ff-bfd0-fdb48fc5cdf4
         eforms:conditional: false
         eforms:conditionnegate: false
         eforms:label: Page 1
         /field0:
           jcr:primaryType: eforms:textarea
-          jcr:uuid: 63f7c945-981a-409a-8c9d-3620c4727f3c
+          jcr:uuid: 82c736c6-a361-4ffd-86b2-a3719005d8fa
           eforms:cols: 40
           eforms:conditional: false
           eforms:conditionnegate: false
@@ -356,7 +356,7 @@
           eforms:validexpression: ''
         /field1:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: ce7decc7-75d9-47d4-84b7-fb1fee213c40
+          jcr:uuid: cd3fede4-2c69-43f4-b2c9-d206ce3f0bb3
           eforms:conditional: false
           eforms:conditionnegate: false
           eforms:fieldid: id978631fab1d1fafd
@@ -369,7 +369,7 @@
           eforms:validexpression: ''
         /field2:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: 3f3bbba6-c1c3-49c5-a90f-bce2918aecb4
+          jcr:uuid: a8b32ff1-3728-475b-a6e6-f02e4a12181d
           eforms:conditional: false
           eforms:conditionnegate: false
           eforms:fieldid: idbb0577bef97b7753
@@ -382,7 +382,7 @@
           eforms:validexpression: ''
         /field3:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: 464f7024-ecb5-4e5e-9d4a-5c66a231633d
+          jcr:uuid: 95f260fa-75cc-43d3-b19a-cfe34437d9cd
           eforms:autocomplete: ''
           eforms:conditional: false
           eforms:conditionnegate: false
@@ -395,6 +395,86 @@
           eforms:mandatory: false
           eforms:validcasesensitive: 'false'
           eforms:validexpression: ''
+      /emailconfiguration0:
+        jcr:primaryType: eforms:formconfiguration
+        jcr:uuid: 8dc637f7-3850-45d8-904c-ad62ea8ceb90
+        eforms:addattachments: 'false'
+        eforms:mailformdata: 'true'
+        eforms:notificationbccemail: ''
+        eforms:notificationccemail: ''
+        eforms:notificationreplytoemailfields: ''
+        eforms:notificationsubject: Blog comment moderation notification
+        eforms:notificationtemplate: "<#--\r\n  Extended from [hippo-addon-eforms-hst-14.6.3]\
+          \ com.onehippo.cms7:hippo-addon-eforms:14.6.3:com/onehippo/cms7/eforms/hst/templates/email/eforms_html.ftl\r\
+          \n  -->\r\n<#-- @ftlvariable name=\"form\" type=\"com.onehippo.cms7.eforms.hst.model.Form\"\
+          \ -->\r\n<#-- @ftlvariable name=\"paragraph\" type=\"java.lang.String\"\
+          \ -->\r\n<#-- @ftlvariable name=\"includeFieldData\" type=\"java.lang.Boolean\"\
+          \ -->\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\
+          >\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n    <#function getRadioGroupValue\
+          \ field>\r\n    <#-- @ftlvariable name=\"field\" type=\"com.onehippo.cms7.eforms.hst.model.AbstractField\"\
+          \ -->\r\n        <#list field.unescapedMultiValues?keys as key>\r\n    \
+          \        <#if key = field.label>\r\n                <#assign collection\
+          \ = field.unescapedMultiValues[key]>\r\n                <#if collection[0]??>\r\
+          \n                    <#return (field.getDisplayValue(collection[0]))!collection[0]>\r\
+          \n                </#if>\r\n            </#if>\r\n        </#list>\r\n \
+          \       <#return \"\">\r\n    </#function>\r\n\r\n    <#macro displayField\
+          \ field ancestor>\r\n        <#-- @ftlvariable name=\"field\" type=\"com.onehippo.cms7.eforms.hst.model.AbstractField\"\
+          \ -->\r\n        <#if !ancestor.conditional || form.checkCondition(ancestor)>\r\
+          \n            <#if !field.conditional || form.checkCondition(field)>\r\n\
+          \                <#if field.multiple>\r\n                    <#if field.type\
+          \ == \"checkboxgroup\">\r\n                    <tr>\r\n                \
+          \        <td colspan=\"2\">${field.labelOrName}</td>\r\n               \
+          \     </tr>\r\n                        <#if field.unescapedMultiValues[field.label]??>\r\
+          \n                            <#list field.unescapedMultiValues[field.label]\
+          \ as checkedValue>\r\n                              <tr>\r\n           \
+          \                     <td></td>\r\n                                <td>${(field.getDisplayValue(checkedValue))!checkedValue}</td>\r\
+          \n                              </tr>\r\n                            </#list>\r\
+          \n                        </#if>\r\n                    <#else>\r\n    \
+          \                <tr><td colspan=\"2\">\r\n                        <table>\r\
+          \n                            <#assign multiValues = field.unescapedMultiValues>\r\
+          \n                            <thead>\r\n                            <tr><th\
+          \ align=\"left\" colspan=\"2\">${field.labelOrName}</th></tr>\r\n      \
+          \                      </thead>\r\n                            <tbody>\r\
+          \n                                <#list multiValues?keys as key>\r\n  \
+          \                              <tr>\r\n                                \
+          \    <td>${key}</td>\r\n                                    <#assign collection\
+          \ = multiValues[key]>\r\n                                    <#list collection\
+          \ as itemValue>\r\n                                        <td>${(field.getDisplayValue(itemValue))!itemValue}</td>\r\
+          \n                                    </#list>\r\n                     \
+          \           </tr>\r\n                                </#list>\r\n      \
+          \                      </tbody>\r\n                        </table>\r\n\
+          \                    </td></tr>\r\n                    </#if>\r\n      \
+          \          <#elseif field.type == \"simpletextfield\">\r\n             \
+          \       <tr>\r\n                        <td colspan=\"2\">${field.labelOrName}</td>\r\
+          \n                    </tr>\r\n                <#else>\r\n             \
+          \       <tr>\r\n                        <td>${field.labelOrName}</td>\r\n\
+          \                        <#if field.type == \"radiogroup\">\r\n        \
+          \                    <td>${getRadioGroupValue(field)}</td>\r\n         \
+          \               <#else>\r\n                            <#if field.unescapedValue??>\r\
+          \n                                <td>${(field.getDisplayValue(field.unescapedValue))!field.unescapedValue}</td>\r\
+          \n                            <#else>\r\n                              \
+          \  <td></td>\r\n                            </#if>\r\n                 \
+          \       </#if>\r\n                    </tr>\r\n                </#if>\r\n\
+          \            </#if>\r\n        </#if>\r\n    </#macro>\r\n\r\n    <head>\r\
+          \n        <meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\"\
+          />\r\n        <title>Blog comment moderation notification</title>\r\n  \
+          \  </head>\r\n    <body>\r\n        <#if paragraph??>\r\n            <p>${paragraph}</p>\r\
+          \n        </#if>\r\n        <#if includeFieldData>\r\n        <table>\r\n\
+          \            <#list form.pages as page>\r\n                <#list page.fields\
+          \ as field>\r\n                    <#assign fieldType = field.type>\r\n\
+          \                    <#if fieldType == 'fieldgroup'>\r\n               \
+          \         <#if !field.conditional || form.checkCondition(field)>\r\n   \
+          \                         <tr><th align=\"left\" colspan=\"2\">${field.labelOrName}</th></tr>\r\
+          \n                            <#list field.fields as groupField>\r\n   \
+          \                             <@displayField field=groupField ancestor=field/>\r\
+          \n                            </#list>\r\n                        </#if>\r\
+          \n                    <#else>\r\n                        <@displayField\
+          \ field=field ancestor=page/>\r\n                    </#if>\r\n        \
+          \        </#list>\r\n            </#list>\r\n        </table>\r\n      \
+          \  </#if>\r\n    </body>\r\n</html>"
+        eforms:notificationtext: "Hi,\r\n\r\nPlease moderate the following comment\
+          \ that has recently been added by a visitor to the ##BLOG_POST_DOCUMENT##\
+          \ blog post document:"
     /blogcomment[2]:
       jcr:primaryType: eforms:form
       jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable', 'mix:versionable']
@@ -413,19 +493,19 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-05-05T08:37:22.526+07:00
-      hippostdpubwf:lastModificationDate: 2021-05-05T10:24:15.385+07:00
+      hippostdpubwf:lastModificationDate: 2021-11-26T08:32:37.475Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: b9db01d7-c4b0-4fc3-bd8a-9b5202d47f02
       hippotranslation:locale: en
       /page0:
         jcr:primaryType: eforms:page
-        jcr:uuid: 31d8e933-bd77-4297-86cc-dc3390af4ce6
+        jcr:uuid: 83fc5a9f-dedd-4cb3-a830-0419e4b634ce
         eforms:conditional: false
         eforms:conditionnegate: false
         eforms:label: Page 1
         /field0:
           jcr:primaryType: eforms:textarea
-          jcr:uuid: dd188e4f-6303-4825-87ba-a3f345231ebe
+          jcr:uuid: 98c424b8-b34e-4cb9-9afa-9698321df355
           eforms:cols: 40
           eforms:conditional: false
           eforms:conditionnegate: false
@@ -439,7 +519,7 @@
           eforms:validexpression: ''
         /field1:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: 9f5b1ca9-3e8e-4f2b-a28b-4c0059a1f871
+          jcr:uuid: 7887613a-6f31-400e-bad8-770bdefbefbc
           eforms:conditional: false
           eforms:conditionnegate: false
           eforms:fieldid: id978631fab1d1fafd
@@ -452,7 +532,7 @@
           eforms:validexpression: ''
         /field2:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: a31d8ead-1914-4ca5-82b4-00a319337c33
+          jcr:uuid: 5616bfeb-d27a-4df0-b5ae-e23f7b1fff9e
           eforms:conditional: false
           eforms:conditionnegate: false
           eforms:fieldid: idbb0577bef97b7753
@@ -465,7 +545,7 @@
           eforms:validexpression: ''
         /field3:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: 17cd5a55-9bb1-48e8-8278-2073cb2402cc
+          jcr:uuid: ce915ed9-5579-46e7-9ae3-55465b86bbff
           eforms:autocomplete: ''
           eforms:conditional: false
           eforms:conditionnegate: false
@@ -478,6 +558,86 @@
           eforms:mandatory: false
           eforms:validcasesensitive: 'false'
           eforms:validexpression: ''
+      /emailconfiguration0:
+        jcr:primaryType: eforms:formconfiguration
+        jcr:uuid: 9c4c40db-5fca-4e94-b67b-95af6a6127cf
+        eforms:addattachments: 'false'
+        eforms:mailformdata: 'true'
+        eforms:notificationbccemail: ''
+        eforms:notificationccemail: ''
+        eforms:notificationreplytoemailfields: ''
+        eforms:notificationsubject: Blog comment moderation notification
+        eforms:notificationtemplate: "<#--\r\n  Extended from [hippo-addon-eforms-hst-14.6.3]\
+          \ com.onehippo.cms7:hippo-addon-eforms:14.6.3:com/onehippo/cms7/eforms/hst/templates/email/eforms_html.ftl\r\
+          \n  -->\r\n<#-- @ftlvariable name=\"form\" type=\"com.onehippo.cms7.eforms.hst.model.Form\"\
+          \ -->\r\n<#-- @ftlvariable name=\"paragraph\" type=\"java.lang.String\"\
+          \ -->\r\n<#-- @ftlvariable name=\"includeFieldData\" type=\"java.lang.Boolean\"\
+          \ -->\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\
+          >\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n    <#function getRadioGroupValue\
+          \ field>\r\n    <#-- @ftlvariable name=\"field\" type=\"com.onehippo.cms7.eforms.hst.model.AbstractField\"\
+          \ -->\r\n        <#list field.unescapedMultiValues?keys as key>\r\n    \
+          \        <#if key = field.label>\r\n                <#assign collection\
+          \ = field.unescapedMultiValues[key]>\r\n                <#if collection[0]??>\r\
+          \n                    <#return (field.getDisplayValue(collection[0]))!collection[0]>\r\
+          \n                </#if>\r\n            </#if>\r\n        </#list>\r\n \
+          \       <#return \"\">\r\n    </#function>\r\n\r\n    <#macro displayField\
+          \ field ancestor>\r\n        <#-- @ftlvariable name=\"field\" type=\"com.onehippo.cms7.eforms.hst.model.AbstractField\"\
+          \ -->\r\n        <#if !ancestor.conditional || form.checkCondition(ancestor)>\r\
+          \n            <#if !field.conditional || form.checkCondition(field)>\r\n\
+          \                <#if field.multiple>\r\n                    <#if field.type\
+          \ == \"checkboxgroup\">\r\n                    <tr>\r\n                \
+          \        <td colspan=\"2\">${field.labelOrName}</td>\r\n               \
+          \     </tr>\r\n                        <#if field.unescapedMultiValues[field.label]??>\r\
+          \n                            <#list field.unescapedMultiValues[field.label]\
+          \ as checkedValue>\r\n                              <tr>\r\n           \
+          \                     <td></td>\r\n                                <td>${(field.getDisplayValue(checkedValue))!checkedValue}</td>\r\
+          \n                              </tr>\r\n                            </#list>\r\
+          \n                        </#if>\r\n                    <#else>\r\n    \
+          \                <tr><td colspan=\"2\">\r\n                        <table>\r\
+          \n                            <#assign multiValues = field.unescapedMultiValues>\r\
+          \n                            <thead>\r\n                            <tr><th\
+          \ align=\"left\" colspan=\"2\">${field.labelOrName}</th></tr>\r\n      \
+          \                      </thead>\r\n                            <tbody>\r\
+          \n                                <#list multiValues?keys as key>\r\n  \
+          \                              <tr>\r\n                                \
+          \    <td>${key}</td>\r\n                                    <#assign collection\
+          \ = multiValues[key]>\r\n                                    <#list collection\
+          \ as itemValue>\r\n                                        <td>${(field.getDisplayValue(itemValue))!itemValue}</td>\r\
+          \n                                    </#list>\r\n                     \
+          \           </tr>\r\n                                </#list>\r\n      \
+          \                      </tbody>\r\n                        </table>\r\n\
+          \                    </td></tr>\r\n                    </#if>\r\n      \
+          \          <#elseif field.type == \"simpletextfield\">\r\n             \
+          \       <tr>\r\n                        <td colspan=\"2\">${field.labelOrName}</td>\r\
+          \n                    </tr>\r\n                <#else>\r\n             \
+          \       <tr>\r\n                        <td>${field.labelOrName}</td>\r\n\
+          \                        <#if field.type == \"radiogroup\">\r\n        \
+          \                    <td>${getRadioGroupValue(field)}</td>\r\n         \
+          \               <#else>\r\n                            <#if field.unescapedValue??>\r\
+          \n                                <td>${(field.getDisplayValue(field.unescapedValue))!field.unescapedValue}</td>\r\
+          \n                            <#else>\r\n                              \
+          \  <td></td>\r\n                            </#if>\r\n                 \
+          \       </#if>\r\n                    </tr>\r\n                </#if>\r\n\
+          \            </#if>\r\n        </#if>\r\n    </#macro>\r\n\r\n    <head>\r\
+          \n        <meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\"\
+          />\r\n        <title>Blog comment moderation notification</title>\r\n  \
+          \  </head>\r\n    <body>\r\n        <#if paragraph??>\r\n            <p>${paragraph}</p>\r\
+          \n        </#if>\r\n        <#if includeFieldData>\r\n        <table>\r\n\
+          \            <#list form.pages as page>\r\n                <#list page.fields\
+          \ as field>\r\n                    <#assign fieldType = field.type>\r\n\
+          \                    <#if fieldType == 'fieldgroup'>\r\n               \
+          \         <#if !field.conditional || form.checkCondition(field)>\r\n   \
+          \                         <tr><th align=\"left\" colspan=\"2\">${field.labelOrName}</th></tr>\r\
+          \n                            <#list field.fields as groupField>\r\n   \
+          \                             <@displayField field=groupField ancestor=field/>\r\
+          \n                            </#list>\r\n                        </#if>\r\
+          \n                    <#else>\r\n                        <@displayField\
+          \ field=field ancestor=page/>\r\n                    </#if>\r\n        \
+          \        </#list>\r\n            </#list>\r\n        </table>\r\n      \
+          \  </#if>\r\n    </body>\r\n</html>"
+        eforms:notificationtext: "Hi,\r\n\r\nPlease moderate the following comment\
+          \ that has recently been added by a visitor to the ##BLOG_POST_DOCUMENT##\
+          \ blog post document:"
     /blogcomment[3]:
       jcr:primaryType: eforms:form
       jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
@@ -496,20 +656,20 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-05-05T08:37:22.526+07:00
-      hippostdpubwf:lastModificationDate: 2021-05-05T10:24:15.385+07:00
+      hippostdpubwf:lastModificationDate: 2021-11-26T08:32:37.475Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-05-05T10:24:17.165+07:00
+      hippostdpubwf:publicationDate: 2021-11-26T08:32:40.114Z
       hippotranslation:id: b9db01d7-c4b0-4fc3-bd8a-9b5202d47f02
       hippotranslation:locale: en
       /page0:
         jcr:primaryType: eforms:page
-        jcr:uuid: e0ef544f-3857-44be-93d2-b21d52554ab2
+        jcr:uuid: 07e236da-18ce-47c6-adfd-e8abc4847754
         eforms:conditional: false
         eforms:conditionnegate: false
         eforms:label: Page 1
         /field0:
           jcr:primaryType: eforms:textarea
-          jcr:uuid: 5d446043-c66d-436b-9e58-fb30d7dbdd7c
+          jcr:uuid: 4c4564cc-0a09-4571-a63c-3f0d6c1a874a
           eforms:cols: 40
           eforms:conditional: false
           eforms:conditionnegate: false
@@ -523,7 +683,7 @@
           eforms:validexpression: ''
         /field1:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: 18095035-2bcf-4f12-ac9a-8591ddc46522
+          jcr:uuid: ad6d1d16-3141-4d80-a99f-923e788e7be5
           eforms:conditional: false
           eforms:conditionnegate: false
           eforms:fieldid: id978631fab1d1fafd
@@ -536,7 +696,7 @@
           eforms:validexpression: ''
         /field2:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: d717cbbe-6a03-4ba5-aa46-0134739a2260
+          jcr:uuid: dbb7598d-e926-473a-9ec6-3f636012e534
           eforms:conditional: false
           eforms:conditionnegate: false
           eforms:fieldid: idbb0577bef97b7753
@@ -549,7 +709,7 @@
           eforms:validexpression: ''
         /field3:
           jcr:primaryType: eforms:textfield
-          jcr:uuid: 5f68ed07-548c-481f-85ad-0edcbe252df4
+          jcr:uuid: a5f4e7cd-87b0-4a29-9241-cadc51144afc
           eforms:autocomplete: ''
           eforms:conditional: false
           eforms:conditionnegate: false
@@ -562,3 +722,83 @@
           eforms:mandatory: false
           eforms:validcasesensitive: 'false'
           eforms:validexpression: ''
+      /emailconfiguration0:
+        jcr:primaryType: eforms:formconfiguration
+        jcr:uuid: 46849a35-a86e-4f9d-b070-5b8d1f6d74c2
+        eforms:addattachments: 'false'
+        eforms:mailformdata: 'true'
+        eforms:notificationbccemail: ''
+        eforms:notificationccemail: ''
+        eforms:notificationreplytoemailfields: ''
+        eforms:notificationsubject: Blog comment moderation notification
+        eforms:notificationtemplate: "<#--\r\n  Extended from [hippo-addon-eforms-hst-14.6.3]\
+          \ com.onehippo.cms7:hippo-addon-eforms:14.6.3:com/onehippo/cms7/eforms/hst/templates/email/eforms_html.ftl\r\
+          \n  -->\r\n<#-- @ftlvariable name=\"form\" type=\"com.onehippo.cms7.eforms.hst.model.Form\"\
+          \ -->\r\n<#-- @ftlvariable name=\"paragraph\" type=\"java.lang.String\"\
+          \ -->\r\n<#-- @ftlvariable name=\"includeFieldData\" type=\"java.lang.Boolean\"\
+          \ -->\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"\
+          >\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\r\n    <#function getRadioGroupValue\
+          \ field>\r\n    <#-- @ftlvariable name=\"field\" type=\"com.onehippo.cms7.eforms.hst.model.AbstractField\"\
+          \ -->\r\n        <#list field.unescapedMultiValues?keys as key>\r\n    \
+          \        <#if key = field.label>\r\n                <#assign collection\
+          \ = field.unescapedMultiValues[key]>\r\n                <#if collection[0]??>\r\
+          \n                    <#return (field.getDisplayValue(collection[0]))!collection[0]>\r\
+          \n                </#if>\r\n            </#if>\r\n        </#list>\r\n \
+          \       <#return \"\">\r\n    </#function>\r\n\r\n    <#macro displayField\
+          \ field ancestor>\r\n        <#-- @ftlvariable name=\"field\" type=\"com.onehippo.cms7.eforms.hst.model.AbstractField\"\
+          \ -->\r\n        <#if !ancestor.conditional || form.checkCondition(ancestor)>\r\
+          \n            <#if !field.conditional || form.checkCondition(field)>\r\n\
+          \                <#if field.multiple>\r\n                    <#if field.type\
+          \ == \"checkboxgroup\">\r\n                    <tr>\r\n                \
+          \        <td colspan=\"2\">${field.labelOrName}</td>\r\n               \
+          \     </tr>\r\n                        <#if field.unescapedMultiValues[field.label]??>\r\
+          \n                            <#list field.unescapedMultiValues[field.label]\
+          \ as checkedValue>\r\n                              <tr>\r\n           \
+          \                     <td></td>\r\n                                <td>${(field.getDisplayValue(checkedValue))!checkedValue}</td>\r\
+          \n                              </tr>\r\n                            </#list>\r\
+          \n                        </#if>\r\n                    <#else>\r\n    \
+          \                <tr><td colspan=\"2\">\r\n                        <table>\r\
+          \n                            <#assign multiValues = field.unescapedMultiValues>\r\
+          \n                            <thead>\r\n                            <tr><th\
+          \ align=\"left\" colspan=\"2\">${field.labelOrName}</th></tr>\r\n      \
+          \                      </thead>\r\n                            <tbody>\r\
+          \n                                <#list multiValues?keys as key>\r\n  \
+          \                              <tr>\r\n                                \
+          \    <td>${key}</td>\r\n                                    <#assign collection\
+          \ = multiValues[key]>\r\n                                    <#list collection\
+          \ as itemValue>\r\n                                        <td>${(field.getDisplayValue(itemValue))!itemValue}</td>\r\
+          \n                                    </#list>\r\n                     \
+          \           </tr>\r\n                                </#list>\r\n      \
+          \                      </tbody>\r\n                        </table>\r\n\
+          \                    </td></tr>\r\n                    </#if>\r\n      \
+          \          <#elseif field.type == \"simpletextfield\">\r\n             \
+          \       <tr>\r\n                        <td colspan=\"2\">${field.labelOrName}</td>\r\
+          \n                    </tr>\r\n                <#else>\r\n             \
+          \       <tr>\r\n                        <td>${field.labelOrName}</td>\r\n\
+          \                        <#if field.type == \"radiogroup\">\r\n        \
+          \                    <td>${getRadioGroupValue(field)}</td>\r\n         \
+          \               <#else>\r\n                            <#if field.unescapedValue??>\r\
+          \n                                <td>${(field.getDisplayValue(field.unescapedValue))!field.unescapedValue}</td>\r\
+          \n                            <#else>\r\n                              \
+          \  <td></td>\r\n                            </#if>\r\n                 \
+          \       </#if>\r\n                    </tr>\r\n                </#if>\r\n\
+          \            </#if>\r\n        </#if>\r\n    </#macro>\r\n\r\n    <head>\r\
+          \n        <meta http-equiv=\"content-type\" content=\"text/html;charset=UTF-8\"\
+          />\r\n        <title>Blog comment moderation notification</title>\r\n  \
+          \  </head>\r\n    <body>\r\n        <#if paragraph??>\r\n            <p>${paragraph}</p>\r\
+          \n        </#if>\r\n        <#if includeFieldData>\r\n        <table>\r\n\
+          \            <#list form.pages as page>\r\n                <#list page.fields\
+          \ as field>\r\n                    <#assign fieldType = field.type>\r\n\
+          \                    <#if fieldType == 'fieldgroup'>\r\n               \
+          \         <#if !field.conditional || form.checkCondition(field)>\r\n   \
+          \                         <tr><th align=\"left\" colspan=\"2\">${field.labelOrName}</th></tr>\r\
+          \n                            <#list field.fields as groupField>\r\n   \
+          \                             <@displayField field=groupField ancestor=field/>\r\
+          \n                            </#list>\r\n                        </#if>\r\
+          \n                    <#else>\r\n                        <@displayField\
+          \ field=field ancestor=page/>\r\n                    </#if>\r\n        \
+          \        </#list>\r\n            </#list>\r\n        </table>\r\n      \
+          \  </#if>\r\n    </body>\r\n</html>"
+        eforms:notificationtext: "Hi,\r\n\r\nPlease moderate the following comment\
+          \ that has recently been added by a visitor to the ##BLOG_POST_DOCUMENT##\
+          \ blog post document:"
