@@ -40,10 +40,8 @@
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
             <#if showHero=false>
-                <h1>
-                    ${document.title}
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                </h1>
+                <h1>${document.title}</h1>
+                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </#if>
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
