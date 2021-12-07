@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b197bc1b-c597-4b04-b681-9e99581ffd19
+          jcr:uuid: 23a3980c-9327-412d-b2ec-c84aa1aa7063
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -31,11 +31,20 @@ definitions:
             hipposysedit:path: hee:cards
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /cardGroupSummary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:cardGroupSummary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:contentCards
           hee:header: ''
+          hee:cardGroupSummary: ''
           /hee:cards:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -57,6 +66,15 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardGroupSummary:
+            jcr:primaryType: frontend:plugin
+            caption: Card group summary
+            field: cardGroupSummary
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /cards:

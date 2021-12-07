@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5686583d-9015-409f-953c-25da5f47b70d
+          jcr:uuid: d1ffe39f-04cd-4d29-a2ab-913e97fdf894
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -31,6 +31,15 @@ definitions:
             hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: String
+          /cardImage:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:cardImage
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -43,13 +52,13 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: f2195e47-5bc6-483f-a557-db3adb807bf8
+          jcr:uuid: 76d5fa72-4a22-475d-a2b9-f4464ae80dc6
           hippostdpubwf:lastModificationDate: 2021-02-25T15:31:01.327+07:00
           hippostdpubwf:creationDate: 2021-02-25T15:31:01.327+07:00
           /hee:header:
             jcr:primaryType: hee:link
             jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 902badcb-ce14-45ce-bf7a-8d9d9e6bd1d3
+            jcr:uuid: f5018d50-57b8-4866-a56f-617fc7af0393
             hee:text: ''
             hee:url: ''
             hippostd:holder: holder
@@ -63,6 +72,12 @@ definitions:
             /hee:document:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -88,6 +103,15 @@ definitions:
             field: description
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /cardImage:
+            jcr:primaryType: frontend:plugin
+            caption: Card image
+            field: cardImage
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
