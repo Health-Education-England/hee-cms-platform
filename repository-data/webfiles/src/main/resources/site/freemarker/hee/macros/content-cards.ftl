@@ -8,7 +8,7 @@
         </div>
     </#if>
     <#if contentCards.cardGroupSummary?has_content>
-        <p>${contentCards.cardGroupSummary}</p>
+        <p>${contentCards.cardGroupSummary?replace('\n', '<br>')}</p>
     </#if>
     <ul class="nhsuk-grid-row nhsuk-card-group">
         <#list contentCards.cards as contentCard>

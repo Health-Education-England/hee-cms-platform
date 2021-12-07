@@ -199,7 +199,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c00b5009-8337-4955-8d70-d173191133fe
     hippo:name: About
-    hippo:versionHistory: 2d916a97-da6e-4488-aeda-9135add5ad7a
+    hippo:versionHistory: 75d7546b-6d7e-4922-b2ec-ac8a51bb89b5
     /about[1]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:versionable']
@@ -211,7 +211,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T00:21:16.477Z
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:57.197Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
@@ -223,7 +223,8 @@
         hippo:values: []
       /hee:contentBlocks:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
+        hee:header: Card group header
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -251,10 +252,9 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:03:17.923Z
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:08.344Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
@@ -264,10 +264,10 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:contentBlocks[1]:
+      /hee:contentBlocks:
         jcr:primaryType: hee:contentCards
-        hee:cardGroupSummary: ''
-        hee:header: ''
+        hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
+        hee:header: Card group header
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -286,20 +286,6 @@
         /hee:cards[6]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f1dce33-1e03-4c52-a767-719ac7d9471c
-      /hee:contentCards:
-        jcr:primaryType: hee:contentCards
-        hee:cardGroupSummary: ''
-        hee:header: ''
-        /hee:cards:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[2]:
-        jcr:primaryType: hee:contentCards
-        hee:cardGroupSummary: ''
-        hee:header: ''
-        /hee:cards:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /about[3]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -311,9 +297,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T00:21:16.477Z
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:57.197Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-11-08T00:21:18.333Z
+      hippostdpubwf:publicationDate: 2021-12-07T01:00:00.176Z
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
       /hee:heroImage:
@@ -324,7 +310,8 @@
         hippo:values: []
       /hee:contentBlocks:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
+        hee:header: Card group header
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
