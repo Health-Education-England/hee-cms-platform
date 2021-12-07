@@ -95,23 +95,25 @@
             </div>
 
             <#if document.rightHandBlocks??>
-                <#list document.rightHandBlocks as block>
-                    <#switch block.getClass().getName()>
-                        <#case "uk.nhs.hee.web.beans.QuickLinks">
+                <div class="nhsuk-grid-column-one-third">
+                    <#list document.rightHandBlocks as block>
+                        <#switch block.getClass().getName()>
+                            <#case "uk.nhs.hee.web.beans.QuickLinks">
                                 <@hee.quickLinks quickLinks=block/>
-                            <#break>
-                        <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                            <@hee.contactCard card=block.content/>
-                            <#break>
-                        <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
-                            <@hee.externalLinksCard card=block.externalLinksCard/>
-                            <#break>
-                        <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
-                            <@hee.fileLinksCard card=block.fileLinksCard/>
-                            <#break>
-                        <#default>
-                    </#switch>
-                </#list>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ContactCardReference">
+                                <@hee.contactCard card=block.content/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
+                                <@hee.externalLinksCard card=block.externalLinksCard/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
+                                <@hee.fileLinksCard card=block.fileLinksCard/>
+                                <#break>
+                            <#default>
+                        </#switch>
+                    </#list>
+                </div>
             </#if>
         </div>
     </article>
