@@ -25,7 +25,6 @@
     </#if>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-            <@hst.link var="heroImage" hippobean=document.heroImage />
             <#if showHero=false>
                 <h1>
                     ${document.title}
