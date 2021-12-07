@@ -14,9 +14,9 @@
         <#if link?has_content>
             <div class="nhsuk-grid-column-one-third">
                 <div class="nhsuk-card nhsuk-card--clickable">
-                    <@hst.link var="cardImage" hippobean=ctaCard.ctaCardContentBlock.cardImage />
-                    <#if cardImage??>
-                        <img class="nhsuk-card__img" src="${cardImage}" alt="">
+                    <@hst.link var="cardImageLink" hippobean=ctaCard.ctaCardContentBlock.cardImage />
+                    <#if cardImageLink??>
+                        <img class="nhsuk-card__img" src="${cardImageLink}" alt="${ctaCard.ctaCardContentBlock.cardImage.description!}">
                     </#if>
                     <div class="nhsuk-card__content">
                         <h3 class="nhsuk-card__heading">

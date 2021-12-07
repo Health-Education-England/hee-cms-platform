@@ -20,9 +20,9 @@
 
             <li class="nhsuk-grid-column-one-${size} nhsuk-card-group__item">
                 <div class="nhsuk-card ${clickableCard?then('nhsuk-card--clickable', 'nhsuk-card')}">
-                    <@hst.link var="cardImage" hippobean=contentCard.cardImage />
-                    <#if cardImage??>
-                    <img class="nhsuk-card__img" src="${cardImage}" alt="">
+                    <@hst.link var="cardImageLink" hippobean=contentCard.cardImage />
+                    <#if cardImageLink??>
+                        <img class="nhsuk-card__img" src="${cardImageLink}" alt="${contentCard.cardImage.description!}">
                     </#if>
                     <div class="nhsuk-card__content">
                         <#if clickableCard>
