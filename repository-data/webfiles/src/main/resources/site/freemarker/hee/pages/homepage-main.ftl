@@ -3,8 +3,32 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/hero-section.ftl">
 
-<@heroSection heroSection=document.heroSection/>
-
+<@hst.link var="heroImage" hippobean=document.heroImage />
+<#if heroImage??>
+    <#assign backgroundImage>
+        style="background-image: url('${heroImage}');"
+    </#assign>
+    <#assign heroType>
+        class="nhsuk-hero-content"
+    </#assign>
+<#else>
+    <#assign heroType>
+        class="nhsuk-hero__wrapper"
+    </#assign>
+</#if>
+<section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description"${backgroundImage}>
+    <div class="nhsuk-width-container">
+        <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-two-thirds">
+                <div${heroType}>
+                    <h1 class="nhsuk-u-margin-bottom-3">${document.title}</h1>
+                    <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">${document.summary}</p>
+                    <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="nhsuk-width-container">
     <main id="maincontent" role="main" class="nhsuk-main-wrapper">
         <div class="nhsuk-grid-row">

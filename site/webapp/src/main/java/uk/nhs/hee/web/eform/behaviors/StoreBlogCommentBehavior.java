@@ -3,6 +3,7 @@ package uk.nhs.hee.web.eform.behaviors;
 import com.google.common.base.Strings;
 import com.onehippo.cms7.eforms.hst.api.OnValidationSuccessBehavior;
 import com.onehippo.cms7.eforms.hst.beans.FormBean;
+import com.onehippo.cms7.eforms.hst.exceptions.EformBehaviorException;
 import com.onehippo.cms7.eforms.hst.model.Form;
 import org.hippoecm.hst.component.support.forms.FormField;
 import org.hippoecm.hst.component.support.forms.FormMap;
@@ -63,7 +64,10 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
                 }
             }
         } catch (final Exception e) {
-            LOGGER.warn("Problem on handling blog comment posting: " + e.getMessage(), e);
+            final String errorMsg = "Caught error '" + e.getMessage() + "' while processing/storing the submitted blog post comment.";
+            LOGGER.error(errorMsg, e);
+            // Throwing 'EformBehaviorException' in order to fail the subsequent behaviours
+            throw new EformBehaviorException(errorMsg);
         }
     }
 
@@ -111,6 +115,7 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
         final Map<String, FormField> formValues = map.getValue();
         commentNode.setProperty("hee:message", formValues.get("comment").getValue());
         commentNode.setProperty("hee:postedDate", Calendar.getInstance());
+        commentNode.setProperty("hee:moderated", Boolean.FALSE);
         final Node authorNode = commentNode.addNode("hee:author", "hee:blogCommentAuthor");
         authorNode.setProperty("hee:firstName", formValues.get("firstName").getValue());
         authorNode.setProperty("hee:lastName", formValues.get("lastName").getValue());

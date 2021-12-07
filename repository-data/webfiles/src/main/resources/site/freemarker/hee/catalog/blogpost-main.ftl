@@ -50,7 +50,7 @@
 
                         <#--Blog Summary -->
                         <p class="nhsuk-body-l">
-                            ${document.summary!}
+                            <@hst.html formattedText="${document.summary?replace('\n', '<br>')}"/>
                         </p>
                         <#-- End Blog Summary -->
 
@@ -94,8 +94,8 @@
                 </section>
             </div>
 
-            <div class="nhsuk-grid-column-one-third">
-                <#if document.rightHandBlocks??>
+            <#if document.rightHandBlocks??>
+                <div class="nhsuk-grid-column-one-third">
                     <#list document.rightHandBlocks as block>
                         <#switch block.getClass().getName()>
                             <#case "uk.nhs.hee.web.beans.QuickLinks">
@@ -113,14 +113,14 @@
                             <#default>
                         </#switch>
                     </#list>
-                </#if>
-            </div>
+                </div>
+            </#if>
         </div>
     </article>
 
     <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
-            <h2 data-anchorlinksignore="true">${document.comments?size} <@fmt.message key="comments"/></h2>
+            <h2 data-anchorlinksignore="true">${totalComments} <@fmt.message key="comments"/></h2>
 
             <#if totalComments gt 0>
                 <#assign datePattern = "d MMMM yyyy">
@@ -138,7 +138,7 @@
 
                 <#if totalComments gt 3>
                     <#if totalComments gt visibleComments?size>
-                        <a href="?showAllComments=true"><@fmt.message key="comment.view_all"/> ${document.comments?size} <@fmt.message key="comments"/></a>
+                        <a href="?showAllComments=true"><@fmt.message key="comment.view_all"/> ${totalComments} <@fmt.message key="comments"/></a>
                     <#else>
                         <a href="?showAllComments=false"><@fmt.message key="comment.view_less"/> <@fmt.message key="comments"/></a>
                     </#if>

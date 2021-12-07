@@ -2,8 +2,9 @@ package uk.nhs.hee.web.beans;
 
 import org.hippoecm.hst.content.beans.Node;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-
 import java.util.List;
+import uk.nhs.hee.web.beans.ImageSetWithCaption;
+import uk.nhs.hee.web.beans.ContentCards;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -25,11 +26,6 @@ public class Guidance extends BaseDocument {
         return getChildBeansByName("hee:contentBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
-    public ContentCards getRelatedContent() {
-        return getBean("hee:relatedContent", ContentCards.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
     public PageLastNextReview getPageLastNextReview() {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
@@ -37,5 +33,10 @@ public class Guidance extends BaseDocument {
 
     public List<?> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:heroImage")
+    public ImageSetWithCaption getHeroImage() {
+        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
     }
 }

@@ -1,11 +1,11 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<#macro guidance guidanceDocument showTitle=true>
+<#macro guidance guidanceDocument showTitle=true showHero=false>
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
     <#if guidanceDocument??>
         <div class="nhsuk-width-container">
-            <#if showTitle>
+            <#if showTitle && showHero=false>
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
                         <h1>${guidanceDocument.title}</h1>
@@ -18,7 +18,9 @@
                     <div class="nhsuk-grid-column-two-thirds">
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
-                                <p>${guidanceDocument.summary}</p>
+                                <#if showHero=false>
+                                    <p><@hst.html formattedText="${guidanceDocument.summary?replace('\n', '<br>')}"/></p>
+                                </#if>
                                 <#if guidanceDocument.contentBlocks??>
                                     <#list guidanceDocument.contentBlocks as block>
                                         <#switch block.getClass().getName()>
@@ -57,6 +59,9 @@
                                             <#case "uk.nhs.hee.web.beans.TabsReference">
                                                 <@hee.tabs tabs=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.ContentCards">
+                                                <@hee.contentCards contentCards=block size="half"/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
@@ -67,8 +72,8 @@
                         </section>
                     </div>
 
-                    <div class="nhsuk-grid-column-one-third">
-                        <#if guidanceDocument.rightHandBlocks??>
+                    <#if guidanceDocument.rightHandBlocks??>
+                        <div class="nhsuk-grid-column-one-third">
                             <#list guidanceDocument.rightHandBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "uk.nhs.hee.web.beans.QuickLinks">
@@ -89,15 +94,10 @@
                                     <#default>
                                 </#switch>
                             </#list>
-                        </#if>
-                    </div>
-
-                    <div class="nhsuk-grid-column-full nhsuk-section__content">
-                        <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
-                    </div>
+                        </div>
+                    </#if>
                 </div>
             </article>
         </div>
-        </main>
     </#if>
 </#macro>

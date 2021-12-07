@@ -13,6 +13,10 @@
         </#if>
         <#if link?has_content>
             <div class="nhsuk-card nhsuk-card--clickable">
+                <@hst.link var="cardImageLink" hippobean=ctaCard.ctaCardContentBlock.cardImage />
+                <#if cardImageLink??>
+                    <img class="nhsuk-card__img" src="${cardImageLink}" alt="${ctaCard.ctaCardContentBlock.cardImage.description!}">
+                </#if>
                 <div class="nhsuk-card__content">
                     <h3 class="nhsuk-card__heading">
                         ${ctaCard.ctaCardContentBlock.title}

@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: dee51778-a61b-42f1-be47-76627658d0a2
     hippo:name: Knowledge management
-    hippo:versionHistory: 69ffa9c5-08b9-44f2-b008-0f33139f1c03
+    hippo:versionHistory: 544804b5-4354-4049-9eae-b8ca7be6f135
     /knowledge-management[1]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -24,13 +24,22 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T19:01:27.049+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:05:28.202Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
-      /hee:contentCards:
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks[1]:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Tincidunt accumsan congue massa amet eros tortor purus\
+          \ urna eros gravida accumsan et diam quis erat.\r\n\r\nUrna nisl id amet\
+          \ commodo morbi a gravida lacus orci quis portaest sed arcu enim vel."
+        hee:header: Nav card 1
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -40,33 +49,23 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
-        /hee:cards[4]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
-        /hee:cards[5]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
-        /hee:cards[6]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 5d795439-58f0-491e-92e3-df3aaecc48c7
-        /hee:cards[7]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
-        /hee:cards[8]:
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: "Magna diam placerat sem lacus varius eget purus gravida\
+          \ sit quam gravida quam ex quis euismod tempus suspendisse eros nisl et\
+          \ a sem rutrum nulla.\r\n\r\nMassa erat nisl mi enim ipsum dolor tortor\
+          \ erat consectetur nisl lorem nec consectetur suspendisse lacus lacus maecenas\
+          \ suspendisse suspendisse magna orci tincidunt euismod a."
+        hee:header: Nav 2
+        /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 2532e41b-bb5c-42b6-9379-432cc418aa82
-        /hee:cards[9]:
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
+        /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
-        /hee:cards[10]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: d52750b5-9d64-45f5-954c-d3e81bce2976
-        /hee:cards[11]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
-        /hee:cards[12]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 7a7e7415-aad8-42e3-babe-6d1d37dae132
     /knowledge-management[2]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -78,13 +77,22 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T19:01:34.312+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:06:49.817Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
-      /hee:contentCards:
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks[1]:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Tincidunt accumsan congue massa amet eros tortor purus\
+          \ urna eros gravida accumsan et diam quis erat.\r\n\r\nUrna nisl id amet\
+          \ commodo morbi a gravida lacus orci quis portaest sed arcu enim vel."
+        hee:header: Nav card 1
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -94,33 +102,23 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
-        /hee:cards[4]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
-        /hee:cards[5]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
-        /hee:cards[6]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 5d795439-58f0-491e-92e3-df3aaecc48c7
-        /hee:cards[7]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
-        /hee:cards[8]:
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: "Magna diam placerat sem lacus varius eget purus gravida\
+          \ sit quam gravida quam ex quis euismod tempus suspendisse eros nisl et\
+          \ a sem rutrum nulla.\r\n\r\nMassa erat nisl mi enim ipsum dolor tortor\
+          \ erat consectetur nisl lorem nec consectetur suspendisse lacus lacus maecenas\
+          \ suspendisse suspendisse magna orci tincidunt euismod a."
+        hee:header: Nav 2
+        /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 2532e41b-bb5c-42b6-9379-432cc418aa82
-        /hee:cards[9]:
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
+        /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
-        /hee:cards[10]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: d52750b5-9d64-45f5-954c-d3e81bce2976
-        /hee:cards[11]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
-        /hee:cards[12]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 7a7e7415-aad8-42e3-babe-6d1d37dae132
     /knowledge-management[3]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -132,14 +130,23 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T19:01:34.312+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:06:49.817Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-03-29T19:01:36.469+01:00
+      hippostdpubwf:publicationDate: 2021-12-07T00:06:53.175Z
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
-      /hee:contentCards:
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks[1]:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Tincidunt accumsan congue massa amet eros tortor purus\
+          \ urna eros gravida accumsan et diam quis erat.\r\n\r\nUrna nisl id amet\
+          \ commodo morbi a gravida lacus orci quis portaest sed arcu enim vel."
+        hee:header: Nav card 1
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -149,39 +156,29 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
-        /hee:cards[4]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
-        /hee:cards[5]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 24aff40d-0ece-4673-885f-1f0a21d7b2a9
-        /hee:cards[6]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 5d795439-58f0-491e-92e3-df3aaecc48c7
-        /hee:cards[7]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: c6aeebaf-10b0-4943-9192-7acfe30d4e3c
-        /hee:cards[8]:
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: "Magna diam placerat sem lacus varius eget purus gravida\
+          \ sit quam gravida quam ex quis euismod tempus suspendisse eros nisl et\
+          \ a sem rutrum nulla.\r\n\r\nMassa erat nisl mi enim ipsum dolor tortor\
+          \ erat consectetur nisl lorem nec consectetur suspendisse lacus lacus maecenas\
+          \ suspendisse suspendisse magna orci tincidunt euismod a."
+        hee:header: Nav 2
+        /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 2532e41b-bb5c-42b6-9379-432cc418aa82
-        /hee:cards[9]:
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
+        /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
-        /hee:cards[10]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: d52750b5-9d64-45f5-954c-d3e81bce2976
-        /hee:cards[11]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
-        /hee:cards[12]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 7a7e7415-aad8-42e3-babe-6d1d37dae132
   /about:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c00b5009-8337-4955-8d70-d173191133fe
     hippo:name: About
-    hippo:versionHistory: 139f40f8-2cb5-40f7-9b64-6d3fb7f8d822
+    hippo:versionHistory: 75d7546b-6d7e-4922-b2ec-ac8a51bb89b5
     /about[1]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:versionable']
@@ -193,13 +190,20 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-07-23T10:36:12.514+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:57.197Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
-      /hee:contentCards:
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
+        hee:header: Card group header
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -229,13 +233,20 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-07-23T10:36:12.598+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:08.344Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
-      /hee:contentCards:
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
+        hee:header: Card group header
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
@@ -265,14 +276,21 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-07-23T10:36:12.514+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:57.197Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-07-23T10:36:16.654+01:00
+      hippostdpubwf:publicationDate: 2021-12-07T01:00:00.176Z
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
-      /hee:contentCards:
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks:
         jcr:primaryType: hee:contentCards
-        hee:header: ''
+        hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
+        hee:header: Card group header
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
