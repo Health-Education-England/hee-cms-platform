@@ -1,0 +1,36 @@
+definitions:
+  config:
+    ? /hippo:configuration/hippo:update/hippo:registry/UpdateBlogCommentFormContainerComponentsWithBlogPostModerationComponentConfig
+    : jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Update blog-comment-form (container) component with blog
+        post moderation component config (e.g. hst:componentclassname, hst:parameternames,
+        etc)
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(blog-comment-form,
+        hst:containeritemcomponent)[jcr:contains(@hst:parametervalues, 'uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior')]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\n\
+        import javax.jcr.Node\r\n\r\nclass UpdateBlogCommentFormContainerComponentsWithBlogPostModerationComponentConfig\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        node.setProperty(\"\
+        hst:componentclassname\", \"uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent\"\
+        )\r\n        node.setProperty(\"hst:label\", \"Blog comment form\")\r\n\r\n\
+        \        String[] paramNames = [\r\n                \"form\",\r\n        \
+        \        \"behaviors\",\r\n                \"eforms-mailsession\",\r\n   \
+        \             \"eforms-use-freemarker\",\r\n                \"eforms-from-name\"\
+        ,\r\n                \"eforms-from-email\"]\r\n        String[] paramValues\
+        \ = [\r\n                node.getProperty(\"hst:parametervalues\").getValues()[0].getString(),\
+        \ // existing form param value\r\n                \"com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,\
+        \ uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior\"\
+        ,\r\n                \"mail/Session\",\r\n                \"true\",\r\n  \
+        \              \"CMS Admin\",\r\n                \"cms.admin@hee.nhs.uk\"\
+        ]\r\n        node.setProperty(\"hst:parameternames\", paramNames)\r\n    \
+        \    node.setProperty(\"hst:parametervalues\", paramValues)\r\n        log.debug\
+        \ \"Successfully updated blog comment form container component '${node.path}'\
+        \ with blog post moderation component config\"\r\n        return true\r\n\
+        \    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

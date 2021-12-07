@@ -23,4 +23,9 @@ public class BlogComment extends HippoCompound {
     public Calendar getPostedDate() {
         return getSingleProperty("hee:postedDate");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:moderated")
+    public Boolean getModerated() {
+        return getSingleProperty("hee:moderated");
+    }
 }

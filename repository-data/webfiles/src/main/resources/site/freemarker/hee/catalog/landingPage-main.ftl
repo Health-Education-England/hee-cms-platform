@@ -14,7 +14,7 @@
                         <div class="nhsuk-grid-column-two-thirds">
                             <div class="nhsuk-hero-content">
                                 <h1 class="nhsuk-u-margin-bottom-3">${document.title}</h1>
-                                <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">${document.summary}</p>
+                                <p class="nhsuk-body-l nhsuk-u-margin-bottom-0"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                                 <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                 <h1>
                     ${document.title}
                 </h1>
-                <p class="nhsuk-lede-text">${document.summary}</p>
+                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </#if>
             <div class="nhsuk-grid-row">
                 <#if document.contentBlocks??>
