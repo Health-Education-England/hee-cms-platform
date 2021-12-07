@@ -90,9 +90,6 @@
                                 <#case "uk.nhs.hee.web.beans.CtaCardReference">
                                     <@hee.ctaCard ctaCard=block/>
                                     <#break>
-                                <#case "uk.nhs.hee.web.beans.ContentCards">
-                                    <@hee.contentCards contentCards=block size="half" />
-                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
