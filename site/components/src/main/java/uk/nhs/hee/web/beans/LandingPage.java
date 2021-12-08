@@ -25,11 +25,6 @@ public class LandingPage extends BaseDocument {
         return getChildBeansByName("hee:contentBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:contentCards")
-    public ContentCards getContentCards() {
-        return getBean("hee:contentCards", ContentCards.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:heroImage")
     public ImageSetWithCaption getHeroImage() {
         return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);

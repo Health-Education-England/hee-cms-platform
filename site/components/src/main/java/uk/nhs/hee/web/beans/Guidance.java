@@ -39,4 +39,9 @@ public class Guidance extends BaseDocument {
     public ImageSetWithCaption getHeroImage() {
         return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
+    public ContentCards getRelatedContent() {
+        return getBean("hee:relatedContent", ContentCards.class);
+    }
 }
