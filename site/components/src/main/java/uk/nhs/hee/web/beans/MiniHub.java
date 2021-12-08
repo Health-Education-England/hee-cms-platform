@@ -4,6 +4,7 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import java.util.List;
+import uk.nhs.hee.web.beans.ContentCards;
 
 @HippoEssentialsGenerated(internalName = "hee:MiniHub")
 @Node(jcrType = "hee:MiniHub")
@@ -16,5 +17,10 @@ public class MiniHub extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:guidancePages")
     public List<Guidance> getGuidancePages() {
         return getLinkedBeans("hee:guidancePages", Guidance.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
+    public ContentCards getRelatedContent() {
+        return getBean("hee:relatedContent", ContentCards.class);
     }
 }

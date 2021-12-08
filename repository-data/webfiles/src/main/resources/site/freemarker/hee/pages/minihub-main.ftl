@@ -81,6 +81,9 @@
                         </#if>
                     </ul>
                 </nav>
+                <div class="nhsuk-width-container">
+                    <@hee.contentCards contentCards=document.relatedContent/>
+                </div>
         </main>
     </div>
 </#if>

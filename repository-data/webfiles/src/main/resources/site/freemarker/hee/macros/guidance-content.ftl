@@ -96,6 +96,9 @@
                             </#list>
                         </div>
                     </#if>
+                    <div class="nhsuk-grid-column-full nhsuk-section__content">
+                        <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
+                    </div>
                 </div>
             </article>
         </div>
