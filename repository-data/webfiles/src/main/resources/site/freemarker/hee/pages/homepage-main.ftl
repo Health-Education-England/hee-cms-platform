@@ -4,6 +4,7 @@
 <#include "../macros/hero-section.ftl">
 
 <@hst.link var="heroImage" hippobean=document.heroImage />
+<#assign heroImgClass=''>
 <#if heroImage??>
     <#assign backgroundImage>
         style="background-image: url('${heroImage}');"
@@ -11,7 +12,7 @@
     <#assign heroType>
         class="nhsuk-hero-content"
     </#assign>
-    <#assign heroImgClass> nhsuk-hero--image nhsuk-hero--image-description</#assign>
+    <#assign heroImgClass=' nhsuk-hero--image nhsuk-hero--image-description'>
 <#else>
     <#assign heroType>
         class="nhsuk-hero__wrapper"
