@@ -113,6 +113,9 @@
                             <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
                                 <@hee.fileLinksCard card=block.fileLinksCard/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
+                                <@hee.internalLinksCard card=block.internalLinksCard/>
+                                <#break>
                             <#default>
                         </#switch>
                     </#list>

@@ -91,6 +91,9 @@
                                     <#case "uk.nhs.hee.web.beans.CtaCardReference">
                                         <@hee.ctaCard ctaCard=block/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
+                                        <@hee.internalLinksCard card=block.internalLinksCard/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
