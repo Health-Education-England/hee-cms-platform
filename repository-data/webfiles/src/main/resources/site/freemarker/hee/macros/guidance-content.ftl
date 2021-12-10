@@ -19,7 +19,7 @@
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
                                 <#if showHero=false && guidanceDocument.summary??>
-                                    <p class="nhsuk-body-l nhsuk-u-margin-bottom-0"><@hst.html formattedText="${guidanceDocument.summary!?replace('\n', '<br>')}"/></p>
+                                    <p class="nhsuk-body-l"><@hst.html formattedText="${guidanceDocument.summary!?replace('\n', '<br>')}"/></p>
                                 </#if>
                                 <#if guidanceDocument.contentBlocks??>
                                     <#list guidanceDocument.contentBlocks as block>

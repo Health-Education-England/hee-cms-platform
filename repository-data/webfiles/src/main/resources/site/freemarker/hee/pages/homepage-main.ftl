@@ -1,10 +1,10 @@
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.HomePage" -->
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
-<#include "../macros/hero-section.ftl">
 
 <@hst.link var="heroImage" hippobean=document.heroImage />
 <#assign heroImgClass=''>
+<#assign backgroundImage=''>
 <#if heroImage??>
     <#assign backgroundImage>
         style="background-image: url('${heroImage}');"
