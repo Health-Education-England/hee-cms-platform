@@ -15,11 +15,10 @@
 <#-- @ftlvariable name="selectedYears" type="java.util.List" -->
 
 <#if document??>
-    <@hst.link var="heroImage" hippobean=document.heroImage />
     <#assign showHero=false>
-    <#if heroImage??>
+    <#if document.heroImage??>
         <#assign showHero=true>
-        <@heroSection document=document heroImage=heroImage/>
+        <@heroSection document=document />
     </#if>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
