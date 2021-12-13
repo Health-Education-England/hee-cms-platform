@@ -6,17 +6,11 @@
 <#assign heroImgClass=''>
 <#assign backgroundImage=''>
 <#if heroImage??>
-    <#assign backgroundImage>
-        style="background-image: url('${heroImage}');"
-    </#assign>
-    <#assign heroType>
-        class="nhsuk-hero-content"
-    </#assign>
+    <#assign backgroundImage=' style="background-image: url(\'${heroImage}\');"'>
+    <#assign heroType=' class="nhsuk-hero-content"'>
     <#assign heroImgClass=' nhsuk-hero--image nhsuk-hero--image-description'>
 <#else>
-    <#assign heroType>
-        class="nhsuk-hero__wrapper"
-    </#assign>
+    <#assign heroType=' class="nhsuk-hero__wrapper"'>
 </#if>
 <section class="nhsuk-hero${heroImgClass}"${backgroundImage}>
     <div class="nhsuk-width-container">
