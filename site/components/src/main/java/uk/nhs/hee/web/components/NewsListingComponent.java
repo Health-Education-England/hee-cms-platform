@@ -7,6 +7,7 @@ import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.NewsItem;
+import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.components.info.NewsComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.DocumentUtils;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@ParametersInfo(type = NewsComponentInfo.class)
+@ParametersInfo(type = ListingPageComponentInfo.class)
 public class NewsListingComponent extends EssentialsDocumentComponent {
 
     @Override
