@@ -1,4 +1,5 @@
 /content/documents/lks/listing-pages:
+  .meta:order-before: news
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: 987fe1bb-55fe-4caf-ae1b-2201bad1c6a4
@@ -522,6 +523,88 @@
       /hee:heroImage:
         jcr:primaryType: hippogallerypicker:imagelink
         hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /news:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
+    hippo:name: News
+    hippo:versionHistory: 6015080a-10ff-4f53-ab85-10b870c175d1
+    /news[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: d9b6ae1d-e6e9-4344-8efb-063997d77a4d
+      hee:documentTypes: ['hee:news']
+      hee:listingPageType: news
+      hee:pageSize: 5
+      hee:summary: Welcome to our news section, where you’ll find our latest news,
+        and information relating to our work.
+      hee:title: News
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModificationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 41d1c3ba-5840-41a9-8f15-03f985c630ab
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /news[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 7e95f8cf-f27b-4c29-977e-9ac88ffbed39
+      hee:documentTypes: ['hee:news']
+      hee:listingPageType: news
+      hee:pageSize: 5
+      hee:summary: Welcome to our news section, where you’ll find our latest news,
+        and information relating to our work.
+      hee:title: News
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModificationDate: 2021-12-15T02:39:50.741Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 41d1c3ba-5840-41a9-8f15-03f985c630ab
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /news[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 24337054-9b4b-425d-8930-7f30835c80d4
+      hee:documentTypes: ['hee:news']
+      hee:listingPageType: news
+      hee:pageSize: 5
+      hee:summary: Welcome to our news section, where you’ll find our latest news,
+        and information relating to our work.
+      hee:title: News
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModificationDate: 2021-12-15T02:39:50.741Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-12-15T02:39:53.337Z
+      hippotranslation:id: 41d1c3ba-5840-41a9-8f15-03f985c630ab
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         hippo:facets: []
         hippo:modes: []
         hippo:values: []

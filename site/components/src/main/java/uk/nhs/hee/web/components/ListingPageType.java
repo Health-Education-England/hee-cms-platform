@@ -77,7 +77,18 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.COMPLETED_DATE.getName(),
             ValueListIdentifier.SEARCH_BANK_TOPICS.getName(),
-            Boolean.FALSE);
+            Boolean.FALSE),
+
+    /**
+     * News Listing
+     */
+    NEWS_LISTING(
+            "news",
+            new String[]{"hee:newsItem"},
+            Boolean.TRUE,
+            HEEField.PUBLICATION_DATE.getName(),
+            ValueListIdentifier.NEWS_CATEGORIES.getName(),
+            Boolean.TRUE);
 
 
     private final String type;

@@ -115,6 +115,9 @@ definitions:
           /base-banner:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/banner.ftl
+          /newslisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/newslisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -177,6 +180,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Search Bank Listing Page
               hst:template: searchbanklisting-main
+            /news-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.NewsListingComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: News Listing Page
+              hst:template: newslisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

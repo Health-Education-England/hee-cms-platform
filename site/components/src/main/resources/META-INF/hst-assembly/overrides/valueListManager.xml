@@ -15,23 +15,23 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-  <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager">
-    <constructor-arg>
-      <map>
-        <entry key="bulletinCategories" value="/content/documents/administration/valuelists/lks/bulletincategories"/>
-        <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/lks/casestudyimpacttypes"/>
-        <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/lks/casestudyimpactgroups"/>
-        <entry key="caseStudySectors" value="/content/documents/administration/valuelists/lks/casestudysectors"/>
-        <entry key="caseStudyRegions" value="/content/documents/administration/valuelists/lks/casestudyregions"/>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager"> 
+    <constructor-arg> 
+      <map> 
+        <!-- Blog Categories [/content/documents/administration/valuelists/${channel}/blogcategories] -->  
         <entry key="navMapRegions" value="/content/documents/administration/valuelists/navmapregions"/>
-        <entry key="searchBankTopics" value="/content/documents/administration/valuelists/lks/searchbanktopics"/>
+        <entry key="blogCategories_lks" value="/content/documents/administration/valuelists/lks/blogcategories"/>
+        <entry key="bulletinCategories" value="/content/documents/administration/valuelists/lks/bulletincategories"/>
+        <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/lks/casestudyimpactgroups"/>
+        <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/lks/casestudyimpacttypes"/>
+        <entry key="caseStudyRegions" value="/content/documents/administration/valuelists/lks/casestudyregions"/>
+        <entry key="caseStudySectors" value="/content/documents/administration/valuelists/lks/casestudysectors"/>
         <entry key="searchBankKeyTerms" value="/content/documents/administration/valuelists/lks/searchbankkeyterms"/>
         <entry key="searchBankProviders" value="/content/documents/administration/valuelists/lks/searchbankproviders"/>
-
-        <!-- Blog Categories [/content/documents/administration/valuelists/${channel}/blogcategories] -->
-        <entry key="blogCategories_lks" value="/content/documents/administration/valuelists/lks/blogcategories"/>
-      </map>
-    </constructor-arg>
-  </bean>
+        <entry key="searchBankTopics" value="/content/documents/administration/valuelists/lks/searchbanktopics"/>
+        <entry key="newsCategories" value="/content/documents/administration/valuelists/lks/newscategories"/>
+      </map> 
+    </constructor-arg> 
+  </bean> 
 </beans>
