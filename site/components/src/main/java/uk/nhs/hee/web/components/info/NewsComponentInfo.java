@@ -5,7 +5,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
 
 public interface NewsComponentInfo extends EssentialsDocumentComponentInfo {
-    @Parameter(name = "document", required = true, displayName = "News Item")
-    @JcrPath(isRelative = true, pickerSelectableNodeTypes = {"hee:newsItem"})
+    @Parameter(name = "document", required = true, displayName = "News")
+    @JcrPath(isRelative = true, pickerSelectableNodeTypes = {"hee:news"})
     String getDocument();
 }

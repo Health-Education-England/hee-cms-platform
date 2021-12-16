@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: 81fc0634-341d-40b2-a67b-c256097569f5
   hippo:name: News
-  hippostd:foldertype: [new-newsItem-folder, new-newsItem-document]
+  hippostd:foldertype: [new-news-folder, new-news-document]
   hippotranslation:id: aab63e48-065e-402a-a015-0497747e79fa
   hippotranslation:locale: en
   /news-item-one:
@@ -13,7 +13,7 @@
     hippo:name: News item one
     hippo:versionHistory: 57113259-4ecd-40ad-b927-2b635261dea1
     /news-item-one[1]:
-      jcr:primaryType: hee:newsItem
+      jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 625c02f0-d009-44d0-b824-fa64e6ae62cd
       hee:author: Author
@@ -21,11 +21,12 @@
       hee:summary: Summary
       hee:title: Page title
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2021-12-16T01:34:39.757Z
+      hippostdpubwf:lastModificationDate: 2021-12-16T02:06:29.090Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
@@ -50,7 +51,7 @@
         hippo:modes: []
         hippo:values: []
     /news-item-one[2]:
-      jcr:primaryType: hee:newsItem
+      jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 42cc15c0-32e9-43c1-bf2b-4a561310530f
       hee:author: Author
@@ -87,7 +88,7 @@
         hippo:modes: []
         hippo:values: []
     /news-item-one[3]:
-      jcr:primaryType: hee:newsItem
+      jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 1582f76a-7f86-4cad-8233-5e5c52facea3
       hee:author: Author

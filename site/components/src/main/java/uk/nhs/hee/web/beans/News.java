@@ -7,9 +7,9 @@ import uk.nhs.hee.web.beans.ContentCards;
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
-@HippoEssentialsGenerated(internalName = "hee:newsItem")
-@Node(jcrType = "hee:newsItem")
-public class NewsItem extends BaseDocument {
+@HippoEssentialsGenerated(internalName = "hee:news")
+@Node(jcrType = "hee:news")
+public class News extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:title")
     public String getTitle() {
         return getSingleProperty("hee:title");

@@ -118,6 +118,9 @@ definitions:
           /newslisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/newslisting-main.ftl
+          /news-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/news-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -154,7 +157,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin & Blog]
+              hst:label: Category based Listing Page [Bulletin, Blog & News]
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -186,6 +189,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: News Listing Page
               hst:template: newslisting-main
+            /news:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: News
+              hst:template: news-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

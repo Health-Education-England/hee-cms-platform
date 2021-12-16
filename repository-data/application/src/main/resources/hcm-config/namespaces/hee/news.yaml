@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/newsItem:
+    /hippo:namespaces/hee/news:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: 3ee9cb76-9bac-4c0d-9b6a-e8f2d1349414
@@ -91,7 +91,7 @@ definitions:
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:newsItem
+          jcr:primaryType: hee:news
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -186,18 +186,20 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /categories:
             jcr:primaryType: frontend:plugin
-            caption: categories
+            caption: Categories
             field: categories
             multiselect.type: selectlist
             palette.alloworder: false
             palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            plugin.class: uk.nhs.hee.web.selection.frontend.plugin.ChannelBasedDynamicMultiSelectPlugin
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/lks/newscategories
+              nameProvider: uk.nhs.hee.web.selection.frontend.provider.ChannelBasedValueListNameProvider
+              valueListBasePathFormat: /content/documents/administration/valuelists/${channel}
+              valueListName: newscategories
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
