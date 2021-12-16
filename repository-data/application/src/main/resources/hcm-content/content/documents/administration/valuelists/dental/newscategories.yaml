@@ -1,16 +1,28 @@
 /content/documents/administration/valuelists/dental/newscategories:
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
-  jcr:uuid: ed47cb0e-bbba-4ae6-887a-87df9aedb039
+  jcr:uuid: 777f834a-09aa-42c9-9c7a-0d38c6646688
   hippo:name: NewsCategories
   /newscategories:
     jcr:primaryType: selection:valuelist
     jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
-    jcr:uuid: f3d4ff44-29f4-4baa-85be-bcc7e41aae66
+    jcr:uuid: 42835900-dd9b-44a4-8397-719074f5a765
     hippo:availability: [live, preview]
-    hippotranslation:id: 5969c448-f45c-447b-98d9-b62e2d75dbeb
+    hippotranslation:id: 1ab3345c-cfda-433e-8552-9b285037b5d8
     hippotranslation:locale: inherited - from query
-    /selection:listitem:
+    /selection:listitem[1]:
       jcr:primaryType: selection:listitem
-      selection:key: add-key
-      selection:label: Add label
+      selection:key: add-key1
+      selection:label: Add label1
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: add-key2
+      selection:label: Add label2
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: add-key3
+      selection:label: Add label3
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: add-key4
+      selection:label: Add label4

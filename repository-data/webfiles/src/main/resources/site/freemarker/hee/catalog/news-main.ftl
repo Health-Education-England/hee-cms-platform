@@ -18,7 +18,7 @@
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
             <#if showHero=false>
                 <div class="nhsuk-grid-row">
-                    <div class="nhsuk-grid-column-two-thirds">
+                    <div class="nhsuk-grid-column-full">
                         <h1>${document.title}</h1>
                     </div>
                 </div>
