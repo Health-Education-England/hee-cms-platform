@@ -9,3 +9,13 @@ definitions:
         hst:parameternames: [document]
         hst:parametervalues: [listing-pages/search-results]
         hst:template: searchresults-main
+      /header:
+        jcr:primaryType: hst:component
+        /top:
+          jcr:primaryType: hst:component
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+            hst:parameternames: [document]
+            hst:parametervalues: [listing-pages/search-results]
+            hst:template: multi-org-logo

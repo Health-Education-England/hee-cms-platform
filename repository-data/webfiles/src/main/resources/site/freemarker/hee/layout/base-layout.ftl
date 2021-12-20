@@ -1,12 +1,11 @@
 <!doctype html>
 <#include "../../include/imports.ftl">
 <@hst.defineObjects />
-<#assign organizationName = "${hstRequestContext.resolvedMount.mount.channelInfo.organizationName}">
-<#assign GTMContainerID = "${hstRequestContext.resolvedMount.mount.channelInfo.GTMContainerID}">
+<#assign gtmContainerId = "${hstRequestContext.resolvedMount.mount.channelInfo.GTMContainerID}">
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, hstRequestContext.contentBean.title?has_content?then(hstRequestContext.contentBean.title, document.title?has_content?then(document.title, '')))} | ${organizationName}</title>
+    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, hstRequestContext.contentBean.title?has_content?then(hstRequestContext.contentBean.title, document.title?has_content?then(document.title, '')))} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -29,12 +28,12 @@
     <meta name="msapplication-square310x310logo" content="<@hst.link path='/static/assets/favicons/largetile-310x310.png'/>">
 
     <!-- Google Tag Manager -->
-    <#if GTMContainerID?has_content>
+    <#if gtmContainerId?has_content>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','${GTMContainerID}');</script>
+      })(window,document,'script','dataLayer','${gtmContainerId}');</script>
     </#if>
     <!-- End Google Tag Manager -->
 
@@ -45,8 +44,8 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <!-- Google Tag Manager (noscript) -->
-    <#if GTMContainerID?has_content>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTMContainerID}"
+    <#if gtmContainerId?has_content>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${gtmContainerId}"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </#if>
     <!-- End Google Tag Manager (noscript) -->
