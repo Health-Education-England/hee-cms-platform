@@ -22,4 +22,10 @@ public class Link extends HippoCompound {
     public HippoBean getDocument() {
         return getLinkedBean("hee:document", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:openLinkUrlNewWindow", allowModifications = false)
+    public Boolean getOpenLinkUrlNewWindow() {
+        if (getSingleProperty("hee:openLinkUrlNewWindow") == null) return false;
+        return getSingleProperty("hee:openLinkUrlNewWindow");
+    }
 }
