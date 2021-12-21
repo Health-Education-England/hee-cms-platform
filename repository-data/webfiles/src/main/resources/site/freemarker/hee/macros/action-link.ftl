@@ -2,14 +2,16 @@
 
 <#macro actionLink actionLink>
     <#if actionLink??>
+        <#assign openInNewWindow=false/>
         <#if actionLink.link.document??>
             <#assign link>
                 <@hst.link hippobean=actionLink.link.document/>
             </#assign>
-            <#assign openInNewWindow=false/>
         <#else>
             <#assign link = "${actionLink.link.url}">
-            <#assign openInNewWindow=true/>
+            <#if actionLink.link.openLinkUrlNewWindow>
+                <#assign openInNewWindow=true/>
+            </#if>
         </#if>
 
         <#if link?has_content>

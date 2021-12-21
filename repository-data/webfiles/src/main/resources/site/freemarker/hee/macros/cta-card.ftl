@@ -2,14 +2,16 @@
 
 <#macro ctaCard ctaCard>
     <#if ctaCard??>
+        <#assign openInNewWindow=false/>
         <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
             <#assign link>
                 <@hst.link hippobean=ctaCard.ctaCardContentBlock.ctaLink.document/>
             </#assign>
-            <#assign openInNewWindow=false/>
         <#else>
             <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
-            <#assign openInNewWindow=true/>
+            <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
+                <#assign openInNewWindow=true/>
+            </#if>
         </#if>
         <#if link?has_content>
             <div class="nhsuk-card nhsuk-card--clickable">
