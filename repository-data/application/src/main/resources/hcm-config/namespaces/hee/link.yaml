@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9363c383-a630-43e1-ae46-739385131390
+          jcr:uuid: 8ae97d54-f167-4199-bcbe-e4ec0a547861
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -40,6 +40,15 @@ definitions:
             hipposysedit:path: hee:document
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /openLinkUrlNewWindow:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:openLinkUrlNewWindow
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -53,9 +62,10 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:text: ''
           hee:url: ''
-          jcr:uuid: cfbdf36c-86b1-4c7b-b014-4c30794542c1
+          jcr:uuid: 1f368864-13dd-45b4-990c-d2bfce662c6e
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hee:openLinkUrlNewWindow: false
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -94,5 +104,15 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /openLinkUrlNewWindow:
+            jcr:primaryType: frontend:plugin
+            caption: Open link url in new window
+            field: openLinkUrlNewWindow
+            hint: This only applies to links in the Link URL field. This for most
+              cases will be external links, or direct links to a Mini-hub inner pages.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

@@ -1,0 +1,115 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/BuildMultiOrgLogoContainerItemComponentForWorkspacePages:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Builds 'header/top/multi-org-logo/multi-org-logo' ContainerItemComponent
+        (hst:containeritemcomponent) for existing workspace pages
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(*,
+        hst:containeritemcomponent)[@hst:template = 'afterform-main' or @hst:template
+        = 'formpage-main' or @hst:template = 'cookies-main' or @hst:template = 'blogpost-main'
+        or @hst:template = 'casestudylisting-main' or @hst:template = 'categorybasedlisting-main'
+        or (@hst:template = 'eforms.default' and @hst:componentclassname != 'uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent')
+        or @hst:template = 'eventlisting-main' or @hst:template = 'guidance-main'
+        or @hst:template = 'landingpage-main' or @hst:template = 'minihub-main' or
+        @hst:template = 'searchbanklisting-main' or @hst:template = 'searchresults-main']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.jackrabbit.util.ISO8601\r\nimport org.hippoecm.hst.configuration.HstNodeTypes\r\
+        \nimport org.hippoecm.repository.api.HippoNodeType\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\nimport javax.jcr.PathNotFoundException\r\n\
+        import javax.jcr.Value\r\n\r\nclass BuildMultiOrgLogoContainerItemComponentForWorkspacePages\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Processing '${node.path}'\"\r\n\r\n        Value[] paramNames\r\
+        \n        Value[] paramValues\r\n        try {\r\n            paramNames =\
+        \ node.getProperty(\"hst:parameternames\").getValues()\r\n            paramValues\
+        \ = node.getProperty(\"hst:parametervalues\").getValues()\r\n        } catch\
+        \ (PathNotFoundException e) {\r\n            log.warn \"Can't find 'hst:parameternames/hst:parametervalues'\
+        \ properties on the node = ${node.path}. \" +\r\n                    \"Please\
+        \ add 'header/top/multi-org-logo/multi-org-logo' hst:containeritemcomponent\
+        \ manually.\"\r\n            return true\r\n        }\r\n\r\n        // Finding\
+        \ 'document' path of existing workspace pages\r\n        String documentPath\
+        \ = \"\"\r\n        for (int i = 0; i < paramNames.length; i++) {\r\n    \
+        \        if (\"document\" == paramNames[i].getString()) {\r\n            \
+        \    documentPath = paramValues[i].getString()\r\n            }\r\n      \
+        \  }\r\n\r\n        if (documentPath == \"\") {\r\n            log.warn \"\
+        Can't find 'document' parameter on the node = ${node.path}. \" +\r\n     \
+        \               \"Please add 'header/top/multi-org-logo/multi-org-logo' hst:containeritemcomponent\
+        \ manually.\"\r\n            return true\r\n        }\r\n\r\n        // Finding\
+        \ 'main' hst:containercomponent node (goes up to 3 levels of parent to find\
+        \ the 'main' node)\r\n        Node mainContainerComponentNode = isMainContainerComponent(node.getParent())\
+        \ ? node.getParent() :\r\n                (isMainContainerComponent(node.getParent().getParent())\
+        \ ? node.getParent().getParent() :\r\n                        (isMainContainerComponent(node.getParent().getParent().getParent())\
+        \ ?\r\n                                node.getParent().getParent().getParent()\
+        \ : null))\r\n\r\n        if (mainContainerComponentNode == null) {\r\n  \
+        \          log.warn \"Can't find 'main' ${HstNodeTypes.NODETYPE_HST_CONTAINERCOMPONENT}\
+        \ \" +\r\n                    \"under '${node.parent.parent.parent.path}'\
+        \ node. \" +\r\n                    \"Please add 'header/top/multi-org-logo/multi-org-logo'\
+        \ hst:containeritemcomponent manually.\"\r\n            return true\r\n  \
+        \      }\r\n\r\n        // Checks if the 'main' hst:containercomponent node\
+        \ has already got 'header/top/multi-org-logo/multi-org-logo'\r\n        Node\
+        \ pageComponentNode = mainContainerComponentNode.getParent()\r\n        if\
+        \ (pageComponentNode.hasNode(\"header/top/multi-org-logo/multi-org-logo\"\
+        )\r\n                && HstNodeTypes.NODETYPE_HST_CONTAINERITEMCOMPONENT ==\r\
+        \n                pageComponentNode.getNode(\"header/top/multi-org-logo/multi-org-logo\"\
+        )\r\n                        .getPrimaryNodeType().getName()) {\r\n      \
+        \      log.info \"Page '${pageComponentNode.path}' ${HstNodeTypes.NODETYPE_HST_CONTAINERCOMPONENT}\
+        \ node \" +\r\n                    \"has already got 'header/top/multi-org-logo/multi-org-logo'\
+        \ \" +\r\n                    \"${HstNodeTypes.NODETYPE_HST_COMPONENT} node.\
+        \ Skipping...\"\r\n            return true\r\n        }\r\n\r\n        //\
+        \ builds 'header' hst:component node under '${node}'\r\n        Node headerComponentNode\
+        \ = pageComponentNode.addNode(\"header\", HstNodeTypes.NODETYPE_HST_COMPONENT)\r\
+        \n\r\n        // builds 'top' hst:component node under '${node}/header' node\r\
+        \n        Node topComponentNode = headerComponentNode.addNode(\"top\", HstNodeTypes.NODETYPE_HST_COMPONENT)\r\
+        \n\r\n        // builds 'multi-org-logo' hst:containercomponent node under\
+        \ '${node}/header/top' node\r\n        Node multiOrgLogoContainerComponentNode\
+        \ =\r\n                topComponentNode.addNode(\"multi-org-logo\", HstNodeTypes.NODETYPE_HST_CONTAINERCOMPONENT)\r\
+        \n        multiOrgLogoContainerComponentNode\r\n                .setProperty(HippoNodeType.HIPPO_IDENTIFIER,\
+        \ \"f2a42c7a-42e2-45a0-bd69-a31516459acf\")\r\n        multiOrgLogoContainerComponentNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Multi org logo\")\r\n        multiOrgLogoContainerComponentNode\r\n  \
+        \              .setProperty(HstNodeTypes.GENERAL_PROPERTY_LAST_MODIFIED, ISO8601.format(new\
+        \ Date()))\r\n        multiOrgLogoContainerComponentNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_XTYPE,\
+        \ \"hst.vbox\")\r\n\r\n        // builds 'multi-org-logo' hst:containeritemcomponent\
+        \ node under '${node}/header/top/multi-org-logo' node\r\n        Node multiOrgLogoContainerItemComponentNode\
+        \ = multiOrgLogoContainerComponentNode.addNode(\r\n                \"multi-org-logo\"\
+        , HstNodeTypes.NODETYPE_HST_CONTAINERITEMCOMPONENT)\r\n        multiOrgLogoContainerItemComponentNode.setProperty(\r\
+        \n                HstNodeTypes.COMPONENT_PROPERTY_COMPONENT_CLASSNAME, \"\
+        uk.nhs.hee.web.components.MultiOrgLogoComponent\")\r\n        multiOrgLogoContainerItemComponentNode\r\
+        \n                .setProperty(HstNodeTypes.COMPONENT_PROPERTY_ICON_PATH,\
+        \ \"images/catalog-component-icons/carousel.svg\")\r\n        multiOrgLogoContainerItemComponentNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Multi org logo\")\r\n        multiOrgLogoContainerItemComponentNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_TEMPLATE,\
+        \ \"multi-org-logo\")\r\n        multiOrgLogoContainerItemComponentNode\r\n\
+        \                .setProperty(HstNodeTypes.GENERAL_PROPERTY_PARAMETER_NAMES,\
+        \ [\"document\"] as String[])\r\n        multiOrgLogoContainerItemComponentNode\r\
+        \n                .setProperty(HstNodeTypes.GENERAL_PROPERTY_PARAMETER_VALUES,\
+        \ [documentPath] as String[])\r\n\r\n        log.debug \"Successfully added\
+        \ '${node.path}/header/top/multi-org-logo/multi-org-logo' hst:containeritemcomponent\
+        \ \" +\r\n                \"node.\"\r\n        return true\r\n    }\r\n\r\n\
+        \    /**\r\n     * Returns {@code true} if the given {@code node} is a main\
+        \ container component node i.e.\r\n     * if the given {@code node} name is\
+        \ 'main' and it is of 'hst:containercomponent' type.\r\n     * Otherwise,\
+        \ returns {@code false}.\r\n     *\r\n     * @param node the {@link javax.jcr.Node}\
+        \ instance.\r\n     * @return Returns {@code true} if the given {@code node}\
+        \ is a main container component node.\r\n     * Otherwise, returns {@code\
+        \ false}.\r\n     */\r\n    static boolean isMainContainerComponent(Node node)\
+        \ {\r\n        if (\"main\" == node.getName()\r\n                && (HstNodeTypes.NODETYPE_HST_CONTAINERCOMPONENT\
+        \ == node.getPrimaryNodeType().getName() ||\r\n                HstNodeTypes.NODETYPE_HST_COMPONENT\
+        \ == node.getPrimaryNodeType().getName())) {\r\n            return true\r\n\
+        \        }\r\n\r\n        return false\r\n    }\r\n\r\n    /**\r\n     * Returns\
+        \ {@code true} if the given main container component node {@code mainContainerComponentNode}\
+        \ is a main container component node i.e.\r\n     * if the given {@code node}\
+        \ name is 'main' and it is of 'hst:containercomponent' type.\r\n     * Otherwise,\
+        \ returns {@code false}.\r\n     *\r\n     * @param node the {@link javax.jcr.Node}\
+        \ instance.\r\n     * @return Returns {@code true} if the given {@code node}\
+        \ is a main container component node.\r\n     * Otherwise, returns {@code\
+        \ false}.\r\n     */\r\n    static boolean hasHeaderComponent(Node mainContainerComponentNode)\
+        \ {\r\n\r\n        try {\r\n            mainContainerComponentNode.getNode(\"\
+        header\")\r\n        } catch (PathNotFoundException e) {\r\n\r\n        }\r\
+        \n        if (\"header\" == mainContainerComponentNode.getName()\r\n     \
+        \           && HstNodeTypes.NODETYPE_HST_COMPONENT == mainContainerComponentNode.getPrimaryNodeType().getName())\
+        \ {\r\n            return true\r\n        }\r\n\r\n        return false\r\n\
+        \    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
