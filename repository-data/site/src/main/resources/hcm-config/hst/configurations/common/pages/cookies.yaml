@@ -9,3 +9,13 @@ definitions:
         hst:template: cookies-main
         hst:parameternames: [document, fallbackSiteContentBasePath, fallbackChannelDomainWithProtocol]
         hst:parametervalues: [cookies, /content/documents/lks, 'https://library.hee.nhs.uk']
+      /header:
+        jcr:primaryType: hst:component
+        /top:
+          jcr:primaryType: hst:component
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+            hst:parameternames: [document]
+            hst:parametervalues: [cookies]
+            hst:template: multi-org-logo

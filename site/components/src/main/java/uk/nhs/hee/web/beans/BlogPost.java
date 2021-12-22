@@ -5,6 +5,7 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import java.util.Calendar;
 import java.util.List;
 import uk.nhs.hee.web.beans.BlogComment;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -49,5 +50,10 @@ public class BlogPost extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:comments")
     public List<BlogComment> getComments() {
         return getChildBeansByName("hee:comments", BlogComment.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 }
