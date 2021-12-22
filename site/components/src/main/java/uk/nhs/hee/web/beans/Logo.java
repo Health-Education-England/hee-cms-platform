@@ -8,11 +8,6 @@ import uk.nhs.hee.web.beans.Link;
 @HippoEssentialsGenerated(internalName = "hee:logo")
 @Node(jcrType = "hee:logo")
 public class Logo extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:image")
-    public HippoBean getImage() {
-        return getLinkedBean("hee:image", HippoBean.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:linkURL")
     public String getLinkURL() {
         return getSingleProperty("hee:linkURL");
@@ -26,5 +21,10 @@ public class Logo extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:linkTitle")
     public String getLinkTitle() {
         return getSingleProperty("hee:linkTitle");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoType")
+    public String getLogoType() {
+        return getSingleProperty("hee:logoType");
     }
 }

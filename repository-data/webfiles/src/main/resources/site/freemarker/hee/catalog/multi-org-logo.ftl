@@ -14,6 +14,7 @@
     <#--  Multi org logo: START  -->
     <div class="nhsuk-header__multi-logo">
         <#list document.logoGroup.logos as logo>
+            <#--  Builds link  -->
             <#if logo.linkDocument??>
                 <#assign href>
                     <@hst.link hippobean=logo.linkDocument/>
@@ -24,12 +25,32 @@
                 <#assign openInNewWindow=true/>
             </#if>
 
+            <#--  Builds logo source and alt text  -->
+            <#switch logo.logoType>
+                <#case "hee">
+                    <#assign logoFileName="hee-logo.png">
+                    <#break>
+                <#case "nimdta">
+                    <#assign logoFileName="nimdta-logo.png">
+                    <#break>
+                <#case "nes">
+                    <#assign logoFileName="nhs-scotland-logo.png">
+                    <#break>
+                <#case "heiw">
+                    <#assign logoFileName="heiw-logo.png">
+                    <#break>
+            </#switch>
+
+            <@hst.link path="/static/assets/images/logos/${logoFileName}" var="logoSrc"/>
+            <#assign logoAltText="Logo for ${logoTypes[logo.logoType]}">
+
+            <#--  Renders logo  -->
             <#if href?has_content>
                 <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}" ${openInNewWindow?then('target="_blank"', '')}>
-                    <img src="<@hst.link hippobean=logo.image/>" alt="${logo.image.description!}">
+                    <img src="${logoSrc}" alt="${logoAltText}">
                 </a>
             <#else>
-                <img src="<@hst.link hippobean=logo.image/>" alt="${logo.image.description!}">
+                <img src="${logoSrc}" alt="${logoAltText}">
             </#if>
         </#list>
     </div>

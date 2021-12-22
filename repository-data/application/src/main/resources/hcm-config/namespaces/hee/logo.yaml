@@ -11,19 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f3afcfa7-c2cb-44f6-9492-b257164a2ef0
+          jcr:uuid: a6038b86-0141-496b-ac8b-944105431a7e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /imagelink:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:image
-            hipposysedit:primary: false
-            hipposysedit:type: hippogallerypicker:imagelink
-            hipposysedit:validators: [required]
           /linkURL:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -48,6 +39,15 @@ definitions:
             hipposysedit:path: hee:linkTitle
             hipposysedit:primary: false
             hipposysedit:type: String
+          /logoType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoType
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -59,17 +59,12 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 38a28b13-958f-495d-aa2b-d887dfbf69b4
+          jcr:uuid: 3f9cfc3d-872c-4beb-8b3c-94debb443b30
           hippostdpubwf:lastModificationDate: 2021-12-15T20:30:09.192Z
           hippostdpubwf:creationDate: 2021-12-15T20:30:09.192Z
           hee:linkURL: ''
           hee:linkTitle: ''
-          /hee:image:
-            jcr:primaryType: hippogallerypicker:imagelink
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-            hippo:facets: []
-            hippo:values: []
-            hippo:modes: []
+          hee:logoType: ''
           /hee:linkDocument:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -84,14 +79,19 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /image:
+          /logoType:
             jcr:primaryType: frontend:plugin
-            caption: Image
-            field: imagelink
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Logo type
+            field: logoType
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              sortBy: label
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              sortOrder: ascending
+              source: /content/documents/administration/valuelists/logotypes
           /linkTitle:
             jcr:primaryType: frontend:plugin
             caption: Link title
