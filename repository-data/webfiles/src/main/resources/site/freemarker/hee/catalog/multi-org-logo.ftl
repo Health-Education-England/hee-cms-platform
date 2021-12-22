@@ -45,17 +45,15 @@
             <#assign logoAltText="Logo for ${logoTypes[logo.logoType]}">
 
             <#--  Renders logo  -->
-            <#if href?has_content>
-                <span>
+            <span>
+                <#if href?has_content>
                     <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}" ${openInNewWindow?then('target="_blank"', '')}>
                         <img src="${logoSrc}" alt="${logoAltText}">
                     </a>
-                </span>
-            <#else>
-                <span>
+                <#else>
                     <img src="${logoSrc}" alt="${logoAltText}">
-                </span>
-            </#if>
+                </#if>
+            </span>
         </#list>
     </div>
     <#--  Multi org logo: END  -->
