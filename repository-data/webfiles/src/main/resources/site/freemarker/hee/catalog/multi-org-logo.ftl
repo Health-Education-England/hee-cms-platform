@@ -46,11 +46,15 @@
 
             <#--  Renders logo  -->
             <#if href?has_content>
-                <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}" ${openInNewWindow?then('target="_blank"', '')}>
-                    <img src="${logoSrc}" alt="${logoAltText}">
-                </a>
+                <span>
+                    <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}" ${openInNewWindow?then('target="_blank"', '')}>
+                        <img src="${logoSrc}" alt="${logoAltText}">
+                    </a>
+                </span>
             <#else>
-                <img src="${logoSrc}" alt="${logoAltText}">
+                <span>
+                    <img src="${logoSrc}" alt="${logoAltText}">
+                </span>
             </#if>
         </#list>
     </div>
