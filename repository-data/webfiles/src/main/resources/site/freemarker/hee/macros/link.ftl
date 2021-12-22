@@ -5,7 +5,7 @@
         <#if link.document??>
             <a class="${cssClassName}" href="<@hst.link hippobean=link.document/>"><#nested></a>
         <#else>
-            <a class="${cssClassName}" href="${link.url}" target="_blank"><#nested></a>
+            <a class="${cssClassName}" href="${link.url}"${link.openLinkUrlNewWindow?then(' target="_blank"','')}><#nested></a>
         </#if>
     </#if>
 </#macro>

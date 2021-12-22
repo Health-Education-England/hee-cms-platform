@@ -23,4 +23,9 @@ public class MiniHub extends BaseDocument {
     public ContentCards getRelatedContent() {
         return getBean("hee:relatedContent", ContentCards.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
+    }
 }

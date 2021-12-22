@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8038270b-636e-48c6-b0e8-076e5025a594
+          jcr:uuid: 55ab2303-fc96-41f2-8a9a-49a9e9b411ff
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -41,6 +41,15 @@ definitions:
             hipposysedit:path: hee:relatedContent
             hipposysedit:primary: false
             hipposysedit:type: hee:contentCards
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -53,7 +62,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 744ea334-2527-4411-9865-b21e90a97bdc
+          jcr:uuid: 7275a3c9-5723-41fb-af6e-a4ad92a697a6
           hippostdpubwf:lastModificationDate: 2021-03-03T10:42:34.081+07:00
           hippostdpubwf:creationDate: 2021-03-03T10:42:34.081+07:00
           /hee:guidancePages:
@@ -66,6 +75,9 @@ definitions:
             /hee:cards:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -86,6 +98,16 @@ definitions:
             hint: Page title must be 60 characters or fewer.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
           /guidancePages:
             jcr:primaryType: frontend:plugin
             caption: Standard content pages

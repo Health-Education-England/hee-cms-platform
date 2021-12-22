@@ -36,6 +36,11 @@ public enum ValueListIdentifier {
     CASE_STUDY_REGIONS("caseStudyRegions"),
 
     /**
+     * {@code logoTypes} value-list identifier.
+     */
+    LOGO_TYPES("logoTypes"),
+
+    /**
      * {@code navMapRegions} value-list identifier.
      */
     NAV_MAP_REGIONS("navMapRegions"),

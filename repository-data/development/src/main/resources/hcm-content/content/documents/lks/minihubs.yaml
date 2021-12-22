@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 97382d63-4ebb-4a77-9d37-bf3873b871dd
     hippo:name: Working With The Public
-    hippo:versionHistory: d5c31bbd-0077-4145-859f-95ae6e77d90e
+    hippo:versionHistory: a70e8bba-2521-4cfd-b5f2-75de83e52380
     /working-with-the-public[1]:
       jcr:primaryType: hee:MiniHub
       jcr:mixinTypes: ['mix:referenceable']
@@ -23,7 +23,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T14:11:43.181+07:00
+      hippostdpubwf:lastModificationDate: 2021-12-20T06:47:59.408Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
       hippotranslation:locale: en
@@ -33,6 +33,16 @@
       /hee:guidancePages[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
     /working-with-the-public[2]:
       jcr:primaryType: hee:MiniHub
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -43,7 +53,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T14:11:59.463+07:00
+      hippostdpubwf:lastModificationDate: 2021-12-20T06:48:06.540Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
       hippotranslation:locale: en
@@ -53,6 +63,16 @@
       /hee:guidancePages[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
     /working-with-the-public[3]:
       jcr:primaryType: hee:MiniHub
       jcr:mixinTypes: ['mix:referenceable']
@@ -63,9 +83,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
-      hippostdpubwf:lastModificationDate: 2021-03-29T14:11:59.463+07:00
+      hippostdpubwf:lastModificationDate: 2021-12-20T06:48:06.540Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-03-29T14:12:01.192+07:00
+      hippostdpubwf:publicationDate: 2021-12-20T06:48:08.757Z
       hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
       hippotranslation:locale: en
       /hee:guidancePages[1]:
@@ -74,3 +94,13 @@
       /hee:guidancePages[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
