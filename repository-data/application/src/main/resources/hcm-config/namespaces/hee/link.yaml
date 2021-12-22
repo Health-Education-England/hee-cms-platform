@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9b8f972c-ecc8-483c-ba7e-fc70d0cb17a6
+          jcr:uuid: 8ae97d54-f167-4199-bcbe-e4ec0a547861
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -48,7 +48,7 @@ definitions:
             hipposysedit:path: hee:openLinkUrlNewWindow
             hipposysedit:primary: false
             hipposysedit:type: Boolean
-            hipposysedit:validators: [required]
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -62,7 +62,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:text: ''
           hee:url: ''
-          jcr:uuid: 7f7e1d93-d88c-40ce-82f5-ba94be65af1f
+          jcr:uuid: 1f368864-13dd-45b4-990c-d2bfce662c6e
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hee:openLinkUrlNewWindow: false
@@ -110,7 +110,8 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Open link url in new window
             field: openLinkUrlNewWindow
-            hint: ''
+            hint: This only applies to links in the Link URL field. This for most
+              cases will be external links, or direct links to a Mini-hub inner pages.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
