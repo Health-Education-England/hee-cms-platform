@@ -73,9 +73,11 @@
                     <p class="nhsuk-body-s">
                         <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </p>
-                    <p class="nhsuk-body-s">
-                        <@fmt.message key="by.text"/> ${item.author}
-                    </p>
+                    <#if item.author?has_content>
+                        <p class="nhsuk-body-s">
+                            <@fmt.message key="by.text"/> ${item.author}
+                        </p>
+                    </#if>
                 </div>
             </li>
         </#if>

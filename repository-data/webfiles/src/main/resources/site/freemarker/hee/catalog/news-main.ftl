@@ -33,7 +33,7 @@
                                     <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
                                         <@fmt.message key="publication.by" var="byLabel" />
                                         <@fmt.message key="published.on" var="publishedOnLabel"/>
-                                        ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}, ${byLabel} ${document.author}
+                                        ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}<#if document.author?has_content>, ${byLabel} ${document.author}</#if>
                                     </p>
                                 <#-- End Author and published date -->
 
