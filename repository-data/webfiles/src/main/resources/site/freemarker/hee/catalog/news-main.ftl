@@ -130,6 +130,11 @@
                             </#list>
                         </div>
                     </#if>
+                    <#if document.relatedContent??>
+                        <div class="nhsuk-grid-column-full nhsuk-section__content">
+                            <@hee.contentCards contentCards=document.relatedContent/>
+                        </div>
+                    </#if>
                 </div>
             </article>
         </main>
