@@ -8,7 +8,7 @@
     <#assign hasMultiOrgLogo=true>
 </#if>
 
-<header class="nhsuk-header nhsuk-header--organisation${hasMultiOrgLogo?then(' nhsuk-header__multi', '')}" role="banner">
+<header class="nhsuk-header--white nhsuk-header nhsuk-header--organisation${hasMultiOrgLogo?then(' nhsuk-header__multi', '')}" role="banner">
     ${topHTML}
     ${hasMultiOrgLogo?then(menuHTML?replace('nhsuk-header__navigation-list', 'nhsuk-header__navigation-list nhsuk-header__multiLogo'), menuHTML)}
 </header>
