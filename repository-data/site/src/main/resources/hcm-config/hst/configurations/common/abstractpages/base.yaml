@@ -31,3 +31,9 @@ definitions:
         hst:template: base-banner
         hst:parameternames: [document]
         hst:parametervalues: [site-banner]
+      /cookies:
+        jcr:primaryType: hst:component
+        hst:componentclassname: uk.nhs.hee.web.components.CookieComponent
+        hst:template: base-cookies
+        hst:parameternames: [document]
+        hst:parametervalues: [cookies]
