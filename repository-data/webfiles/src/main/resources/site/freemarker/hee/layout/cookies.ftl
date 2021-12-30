@@ -4,8 +4,6 @@
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 <#assign gtmContainerId = "${hstRequestContext.resolvedMount.mount.channelInfo.GTMContainerID}">
 
-allowcookies: ${allowCookies?c}<br>
-showbanner: ${showBanner?c}
 <#if showBanner>
     <div class="nhsuk-cookie-banner" style="display: block;">
         <div class="nhsuk-width-container">
@@ -22,20 +20,17 @@ showbanner: ${showBanner?c}
 <#if allowCookies>
     <#if gtmContainerId?has_content>
         <@hst.headContribution category="gtmScript">
-            <!-- Google Tag Manager -->
-                <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            <script><![CDATA[(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                    })(window,document,'script','dataLayer','${gtmContainerId}');</script>
-            <!-- End Google Tag Manager -->
+                    })(window,document,'script','dataLayer','${gtmContainerId}');]]>
+            </script>
         </@hst.headContribution>
 
         <@hst.headContribution category="gtmNoScript">
-            <!-- Google Tag Manager (noscript) -->
-                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${gtmContainerId}"
-                                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->
+            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${gtmContainerId}"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </@hst.headContribution>
     </#if>
 </#if>

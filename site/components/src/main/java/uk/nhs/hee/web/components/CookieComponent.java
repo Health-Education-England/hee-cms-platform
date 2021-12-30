@@ -13,19 +13,25 @@ import javax.servlet.http.Cookie;
  */
 @ParametersInfo(type = EssentialsDocumentComponentInfo.class)
 public class CookieComponent extends EssentialsDocumentComponent {
-    private boolean allowCookies = false;
-    private boolean showBanner = true;
+    private static final String ANALYTICS_COOKIE_NAME = "analyticsCookie";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
-        Cookie cookies[] = request.getCookies();
-        for(int i=0; cookies!=null && i<cookies.length; i++) {
-            if (cookies[i].getName().equals("analyticsCookie")){
-                allowCookies = Boolean.parseBoolean((cookies[i].getValue()));
-                showBanner = false;
+
+        boolean allowCookies = false;
+        boolean showBanner = true;
+
+        final Cookie[] cookies = request.getCookies();
+        if (cookies != null && cookies.length > 0) {
+            for (final Cookie cookie : cookies) {
+                if (cookie.getName().equals(ANALYTICS_COOKIE_NAME)) {
+                    allowCookies = Boolean.parseBoolean((cookie.getValue()));
+                    showBanner = false;
+                }
             }
         }
+
         request.setModel("allowCookies", allowCookies);
         request.setModel("showBanner", showBanner);
     }
