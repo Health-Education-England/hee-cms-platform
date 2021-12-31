@@ -67,7 +67,7 @@
                                     </#list>
                                 </#if>
                                 <#if showCookiesButton>
-                                    <@hee.cookieButton />
+                                    <#include "../../include/cookie-button.ftl">
                                 </#if>
                                 <@hee.lastNextReviewedDate lastNextReviewedDate=guidanceDocument.pageLastNextReview/>
                             </div>
