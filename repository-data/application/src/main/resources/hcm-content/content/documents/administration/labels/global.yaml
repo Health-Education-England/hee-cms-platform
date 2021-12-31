@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ddea0877-7b8c-47f3-8780-e2b0065519d4
   hippo:name: Global
-  hippo:versionHistory: 563625f3-22f0-4716-b200-6f8afef67994
+  hippo:versionHistory: 23af6f3a-e4df-4ec9-a5ca-6fdcc56f6cfd
   /global[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -14,15 +14,15 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2021-12-24T00:25:01.081Z
+    hippostdpubwf:lastModificationDate: 2021-12-31T10:57:24.896Z
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-12-24T00:25:06.806Z
+    hippostdpubwf:publicationDate: 2021-12-31T10:57:28.561Z
     resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
-        [for mobile]', '', '', '', '', '', '']
+        [for mobile]', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.global
     resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
       next, previous, breadcrumb.backto, media-last-reviewed, media-next-review, cookie.banner.title,
-      cookie.banner.text, cookie.button.accept, cookie.button.reject]
+      cookie.banner.text, cookie.button.accept, cookie.button.reject, cookie.toggle.text]
     resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
       Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
       <p>We use some essential cookies to make this website work. We’d like to set
@@ -30,7 +30,8 @@
         it. We also use cookies set by other sites to help us deliver content from
         their services. <a href="/lks/cookie-policy" title="Cookie Policy">You can
         read more about our cookies</a> before you choose.</p>, Accept additional
-        cookies, Reject additional cookies]
+        cookies, Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+        to</span><span class="nhsuk__cookiesOut">out of</span> using additional cookies.]
   /global[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -40,14 +41,14 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2021-12-24T00:25:01.081Z
+    hippostdpubwf:lastModificationDate: 2021-12-31T10:57:24.896Z
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
-        [for mobile]', '', '', '', '', '', '']
+        [for mobile]', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.global
     resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
       next, previous, breadcrumb.backto, media-last-reviewed, media-next-review, cookie.banner.title,
-      cookie.banner.text, cookie.button.accept, cookie.button.reject]
+      cookie.banner.text, cookie.button.accept, cookie.button.reject, cookie.toggle.text]
     resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
       Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
       <p>We use some essential cookies to make this website work. We’d like to set
@@ -55,13 +56,13 @@
         it. We also use cookies set by other sites to help us deliver content from
         their services. <a href="/lks/cookie-policy" title="Cookie Policy">You can
         read more about our cookies</a> before you choose.</p>, Accept additional
-        cookies, Reject additional cookies]
+        cookies, Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+        to</span><span class="nhsuk__cookiesOut">out of</span> using additional cookies.]
   /global[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 19aa068d-7375-43f5-be42-ce1919302d03
     hippo:availability: []
-    hippostd:holder: admin
     hippostd:retainable: false
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
@@ -69,11 +70,11 @@
     hippostdpubwf:lastModificationDate: 2021-12-24T00:44:05.515Z
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
-        [for mobile]', '', '', '', '', '', '']
+        [for mobile]', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.global
     resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
       next, previous, breadcrumb.backto, media-last-reviewed, media-next-review, cookie.banner.title,
-      cookie.banner.text, cookie.button.accept, cookie.button.reject]
+      cookie.banner.text, cookie.button.accept, cookie.button.reject, cookie.toggle.text]
     resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
       Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
       <p>We use some essential cookies to make this website work. We’d like to set
@@ -81,4 +82,5 @@
         it. We also use cookies set by other sites to help us deliver content from
         their services. <a href="/lks/cookie-policy" title="Cookie Policy">You can
         read more about our cookies</a> before you choose.</p>, Accept additional
-        cookies, Reject additional cookies]
+        cookies, Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+        to</span><span class="nhsuk__cookiesOut">out of</span> using additional cookies.]

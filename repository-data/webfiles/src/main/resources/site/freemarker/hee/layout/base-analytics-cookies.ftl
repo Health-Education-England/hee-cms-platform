@@ -4,8 +4,8 @@
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 <#assign gtmContainerId = "${hstRequestContext.resolvedMount.mount.channelInfo.GTMContainerID}">
 
-<#if showBanner>
-    <div class="nhsuk-cookie-banner" style="display: block;">
+<div class="nhsuk-cookie-banner">
+    <#if showCookiesBanner>
         <div class="nhsuk-width-container">
             <h2 id="cookies0"><@fmt.message key="cookie.banner.title"/></h2>
             <@fmt.message key="cookie.banner.text"/>
@@ -14,10 +14,10 @@
                 <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3"><@fmt.message key="cookie.button.reject"/></button></li>
             </ul>
         </div>
-    </div>
-</#if>
+    </#if>
+</div>
 
-<#if allowCookies>
+<#if allowAnalyticsCookies>
     <#if gtmContainerId?has_content>
         <@hst.headContribution category="gtmScript">
             <script><![CDATA[(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

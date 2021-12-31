@@ -30,7 +30,7 @@
     <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript" xhtml=true/>
   </head>
   <body>
-    <@hst.include ref="cookies"/>
+    <@hst.include ref="cookies-banner"/>
 
     <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
@@ -46,7 +46,7 @@
     <@hst.include ref="main"/>
 
     <@hst.include ref="footer"/>
-
+ 
     <!-- Scripts -->
     <script src="<@hst.link path='/static/js/nhsuk-4.1.0.min.js'/>" defer></script>
     <script src="<@hst.link path='/static/js/main.min.js'/>" defer></script>
