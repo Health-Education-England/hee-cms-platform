@@ -6,9 +6,13 @@
 
 <div class="nhsuk-cookie-banner">
     <#if showCookiesBanner>
+        <@fmt.message var="cookieBannerText" key="cookie.banner.text"/>
+        <@hst.link var="cookiesPageLink" siteMapItemRefId="cookies"/>
+
         <div class="nhsuk-width-container">
             <h2 id="cookies0"><@fmt.message key="cookie.banner.title"/></h2>
-            <@fmt.message key="cookie.banner.text"/>
+            <#--  Replacing '##COOKIES_PAGE##' PlaceHolder dynamically with channel specific cookies page link  -->
+            <@hst.html formattedText="${cookieBannerText?replace('##COOKIES_PAGE##', cookiesPageLink)}"/>
             <ul>
                 <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_accept_analytics" tabindex="2"><@fmt.message key="cookie.button.accept"/></button></li>
                 <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3"><@fmt.message key="cookie.button.reject"/></button></li>
