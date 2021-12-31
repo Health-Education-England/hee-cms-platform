@@ -1,55 +1,33 @@
 definitions:
   config:
-    /hippo:namespaces/hee/blockLinksReference:
+    /hippo:namespaces/hee/buttonReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 6ec6d9de-c784-4219-aa30-43c7eea8bbfc
+      jcr:uuid: 3669bad1-a4c4-4e1e-858a-ec435c6d9e21
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: cae32b9f-bd6a-4bd8-97be-fa408bb2ab3d
+        jcr:uuid: 0a151b49-58db-41aa-9bfa-75bcdd4091f2
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ba540909-3877-4bb4-bda2-96c5f6e69b90
+          jcr:uuid: cef407eb-cae1-4fb5-8cfa-7f6874a0889c
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /blockLinksContentBlock:
+          /buttonContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:blockLinksContentBlock
+            hipposysedit:path: hee:buttonContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [required]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 65a62c5d-988f-47bf-91bd-618e33259e01
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
-          /blockLinksContentBlock:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:blockLinksContentBlock
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:blockLinksReference
-          /hee:blockLinksContentBlock:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:relaxed']
-          /hee:blockLinksContentBlock:
+          jcr:primaryType: hee:buttonReference
+          /hee:buttonContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -63,13 +41,13 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /blockLinksContentBlock:
+          /buttonContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Select block links
-            field: blockLinksContentBlock
+            caption: Select button
+            field: buttonContentBlock
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:blockLinks']
+              nodetypes: ['hee:button']

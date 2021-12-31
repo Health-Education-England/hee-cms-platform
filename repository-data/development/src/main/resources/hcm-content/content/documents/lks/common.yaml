@@ -1156,9 +1156,9 @@
         jcr:uuid: 87be5878-5d83-4725-82f8-5ebdaaaea51a
         hee:description: Duis aute irure dolor in reprehenderit in voluptate.
         hippo:availability: []
-        hippostd:holder: admin
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
         hippostdpubwf:lastModificationDate: 2021-12-07T00:58:09.569Z
@@ -1167,6 +1167,7 @@
         hippotranslation:locale: en
         /hee:header:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Resource Discovery Groups
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -4238,3 +4239,60 @@
         /hee:logos[2]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+  /buttons:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 5aee864b-cb74-4004-8c87-da4e5b87397c
+    hippo:name: Buttons
+    hippostd:foldertype: [new-button-document, new-button-folder]
+    hippotranslation:id: 5d65f5c7-27e7-4521-97df-d078c628c81e
+    hippotranslation:locale: en
+    /testbutton:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 438a53a7-8782-435a-8c71-78e9f3c90ea8
+      hippo:name: TestButton
+      hippo:versionHistory: 8d8422a2-abfd-43cc-8f78-7fc990da922c
+      /testbutton[1]:
+        jcr:primaryType: hee:button
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 3a287820-036a-45c4-a675-6bc2a61ca853
+        hee:label: Left Aligned Button Name
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-31T14:58:04.576Z
+        hippostdpubwf:lastModificationDate: 2021-12-31T14:58:04.576Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4f4da895-fed0-4545-9324-8eb6d2868b75
+        hippotranslation:locale: en
+      /testbutton[2]:
+        jcr:primaryType: hee:button
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 8e788311-83de-410e-87b2-eb3676e7fc11
+        hee:label: Left Aligned Button Name
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-31T14:58:04.576Z
+        hippostdpubwf:lastModificationDate: 2021-12-31T14:58:22.713Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4f4da895-fed0-4545-9324-8eb6d2868b75
+        hippotranslation:locale: en
+      /testbutton[3]:
+        jcr:primaryType: hee:button
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: bf3a2f19-3594-4bbd-9b62-dd5a1fabd88a
+        hee:label: Left Aligned Button Name
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-31T14:58:04.576Z
+        hippostdpubwf:lastModificationDate: 2021-12-31T14:58:22.713Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-12-31T14:58:27.294Z
+        hippotranslation:id: 4f4da895-fed0-4545-9324-8eb6d2868b75
+        hippotranslation:locale: en

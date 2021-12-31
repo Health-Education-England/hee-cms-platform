@@ -15,3 +15,4 @@
 <#include "anchor-links.ftl">
 <#include "media.ftl">
 <#include "tabs.ftl">
+<#include "button.ftl">
