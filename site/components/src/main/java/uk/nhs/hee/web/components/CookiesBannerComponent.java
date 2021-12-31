@@ -11,7 +11,6 @@ import javax.servlet.http.Cookie;
 /**
  * Component class for {@code cookies} abstract base component
  */
-@ParametersInfo(type = EssentialsDocumentComponentInfo.class)
 public class CookiesBannerComponent extends CommonComponent {
     private static final String ANALYTICS_COOKIE_NAME = "analyticsCookie";
 
