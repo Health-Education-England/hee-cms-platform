@@ -1,3 +1,6 @@
+<#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
+
 <div class="nhsuk__cookieStatus">
     <h2>
         <@fmt.message key="cookie.toggle.text"/>
