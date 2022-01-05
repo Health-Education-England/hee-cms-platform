@@ -15,7 +15,8 @@ definitions:
         or (@hst:template = 'eforms.default' and @hst:componentclassname != 'uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent')
         or @hst:template = 'eventlisting-main' or @hst:template = 'guidance-main'
         or @hst:template = 'landingpage-main' or @hst:template = 'minihub-main' or
-        @hst:template = 'searchbanklisting-main' or @hst:template = 'searchresults-main']
+        @hst:template = 'searchbanklisting-main' or @hst:template = 'searchresults-main'
+        or @hst:template = 'news-main']
       hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
         \r\nimport org.apache.jackrabbit.util.ISO8601\r\nimport org.hippoecm.hst.configuration.HstNodeTypes\r\
         \nimport org.hippoecm.repository.api.HippoNodeType\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\

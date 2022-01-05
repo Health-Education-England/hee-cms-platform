@@ -5,6 +5,8 @@ import org.hippoecm.hst.content.beans.Node;
 import uk.nhs.hee.web.beans.ContentCards;
 import java.util.Calendar;
 import uk.nhs.hee.web.beans.PageLastNextReview;
+import uk.nhs.hee.web.beans.ImageSetWithCaption;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -45,5 +47,15 @@ public class News extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
     public PageLastNextReview getPageLastNextReview() {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:heroImage")
+    public ImageSetWithCaption getHeroImage() {
+        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 }
