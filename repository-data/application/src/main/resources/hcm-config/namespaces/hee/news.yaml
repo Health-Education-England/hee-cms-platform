@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5d865ca8-9d18-464c-8bc8-9ac82aa47791
+          jcr:uuid: 90c1a04a-b97d-455a-9259-468915ca14e6
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -79,7 +79,6 @@ definitions:
             hipposysedit:path: hee:author
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /categories:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -97,6 +96,15 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Date
             hipposysedit:validators: [required]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -109,7 +117,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: d83894db-11e4-40e2-a812-dd531f748987
+          jcr:uuid: b5030cf5-597b-4fbd-ba39-455b8e5e857b
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:summary: ''
@@ -135,6 +143,9 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -173,6 +184,7 @@ definitions:
             field: author
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /publicationDate:
@@ -193,6 +205,14 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /heroImage:
             jcr:primaryType: frontend:plugin
             caption: Hero image
@@ -202,6 +222,18 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /rightHandBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Right hand objects
+            compoundList: hee:contactCardReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:QuickLinks
+            contentPickerType: links
+            field: rightHandBlocks
+            hint: ''
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /categories:
             jcr:primaryType: frontend:plugin
             caption: Categories
@@ -218,18 +250,6 @@ definitions:
               nameProvider: uk.nhs.hee.web.selection.frontend.provider.ChannelBasedValueListNameProvider
               valueListBasePathFormat: /content/documents/administration/valuelists/${channel}
               valueListName: newscategories
-          /rightHandBlocks:
-            jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:contactCardReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:QuickLinks
-            contentPickerType: links
-            field: rightHandBlocks
-            hint: ''
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
