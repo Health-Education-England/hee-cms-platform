@@ -40,37 +40,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [optional]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: b8fc92bf-06b3-4558-9733-29aefb5d180b
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
-          /header:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:header
-            hipposysedit:primary: false
-            hipposysedit:type: hee:link
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /cardImage:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:cardImage
-            hipposysedit:primary: false
-            hipposysedit:type: hippogallerypicker:imagelink
-            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -109,44 +78,6 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 0765eefd-7b64-4b22-a937-5a3e11f5d7a6
-          hee:description: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-02-25T15:31:01.327+07:00
-          hippostdpubwf:lastModificationDate: 2021-02-25T15:31:01.327+07:00
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:header:
-            jcr:primaryType: hee:link
-            jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 8b5032bd-5852-4227-a371-a1e87f3b3417
-            hee:text: ''
-            hee:url: ''
-            hippostd:holder: holder
-            hippostd:state: draft
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            hee:openLinkUrlNewWindow: false
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:cardImage:
-            jcr:primaryType: hippogallerypicker:imagelink
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-            hippo:facets: []
-            hippo:modes: []
-            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -164,7 +95,6 @@ definitions:
             field: header
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /description:

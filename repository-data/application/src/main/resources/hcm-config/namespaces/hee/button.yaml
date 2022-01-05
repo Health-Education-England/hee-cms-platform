@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1e9a5e8e-497d-44ff-a487-bb0579f91f9c
+          jcr:uuid: 38391ccc-d966-47a4-984e-6ed7445a706a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -61,7 +61,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:label: ''
-          jcr:uuid: 442d736c-ee2b-431a-a158-3675c6a8e896
+          jcr:uuid: 630315ee-6f69-4793-a5a0-f8ec3a95df6b
           hippostdpubwf:lastModificationDate: 2021-12-31T14:46:44.123Z
           hippostdpubwf:creationDate: 2021-12-31T14:46:44.123Z
           hee:url: ''
@@ -94,6 +94,7 @@ definitions:
             field: mirror
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /url:

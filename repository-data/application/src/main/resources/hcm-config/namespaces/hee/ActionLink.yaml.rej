@@ -1,0 +1,23 @@
+diff a/repository-data/application/src/main/resources/hcm-config/namespaces/hee/ActionLink.yaml b/repository-data/application/src/main/resources/hcm-config/namespaces/hee/ActionLink.yaml	(rejected hunks)
+@@ -24,6 +24,21 @@
+             hipposysedit:primary: false
+             hipposysedit:type: hee:link
+             hipposysedit:validators: [required]
++        /hipposysedit:nodetype[2]:
++          jcr:primaryType: hipposysedit:nodetype
++          jcr:mixinTypes: ['mix:referenceable']
++          jcr:uuid: 0edaaccf-3605-4435-95f7-327e0a7d2570
++          hipposysedit:node: true
++          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
++          /Link:
++            jcr:primaryType: hipposysedit:field
++            hipposysedit:mandatory: false
++            hipposysedit:multiple: false
++            hipposysedit:ordered: false
++            hipposysedit:path: hee:link
++            hipposysedit:primary: false
++            hipposysedit:type: hee:link
++            hipposysedit:validators: [required]
+       /hipposysedit:prototypes:
+         jcr:primaryType: hipposysedit:prototypeset
+         /hipposysedit:prototype:
