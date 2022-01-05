@@ -24,10 +24,31 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 0c1b1402-0073-435e-9224-b5e520299dd7
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          /content:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:content
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:relaxed']
           /hee:content:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

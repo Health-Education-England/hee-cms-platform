@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ade82481-2f99-49f1-98cf-460958ac0a17
+          jcr:uuid: 1e9a5e8e-497d-44ff-a487-bb0579f91f9c
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,32 @@ definitions:
             hipposysedit:path: hee:label
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /mirror:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:document
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /string:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:url
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /buttontype:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:buttontype
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -35,9 +61,13 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:label: ''
-          jcr:uuid: d9a95b5b-23d4-4c88-a180-d1e539f1660f
+          jcr:uuid: 442d736c-ee2b-431a-a158-3675c6a8e896
           hippostdpubwf:lastModificationDate: 2021-12-31T14:46:44.123Z
           hippostdpubwf:creationDate: 2021-12-31T14:46:44.123Z
+          hee:url: ''
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -51,10 +81,37 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /label:
             jcr:primaryType: frontend:plugin
-            caption: Label
+            caption: Button label
             field: label
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /document:
+            jcr:primaryType: frontend:plugin
+            caption: Link document
+            field: mirror
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /url:
+            jcr:primaryType: frontend:plugin
+            caption: Link url
+            field: string
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /buttontype:
+            jcr:primaryType: frontend:plugin
+            caption: Button type
+            field: buttontype
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: primary,secondary,reverse

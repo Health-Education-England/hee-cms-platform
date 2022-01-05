@@ -33,6 +33,30 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hee:externalLink
             hipposysedit:validators: [required]
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 44932e29-09b9-44f0-8df7-5e2c30548658
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /externalLinks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:externalLinks
+            hipposysedit:primary: false
+            hipposysedit:type: hee:externalLink
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -48,6 +72,24 @@ definitions:
           jcr:uuid: a8fc045b-b6aa-44c2-a070-10c0998b53ab
           hippostdpubwf:lastModificationDate: 2021-05-21T12:59:41.192+01:00
           hippostdpubwf:creationDate: 2021-05-21T12:59:41.192+01:00
+          /hee:externalLinks:
+            jcr:primaryType: hee:externalLink
+            hee:text: ''
+            hee:url: ''
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
+            'hippotranslation:translated', 'mix:referenceable']
+          jcr:uuid: 8802b284-8b82-4ef0-8b01-865d01c417c3
+          hee:title: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-05-21T12:59:41.192+01:00
+          hippostdpubwf:lastModificationDate: 2021-05-21T12:59:41.192+01:00
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
           /hee:externalLinks:
             jcr:primaryType: hee:externalLink
             hee:text: ''

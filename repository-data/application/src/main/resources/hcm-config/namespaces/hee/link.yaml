@@ -49,6 +49,46 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Boolean
             hipposysedit:validators: [required]
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 19645a34-c398-43aa-bf34-76811f3d7dfe
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          /text:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:text
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /url:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:url
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /document:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:document
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /openLinkUrlNewWindow:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:openLinkUrlNewWindow
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -66,6 +106,24 @@ definitions:
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hee:openLinkUrlNewWindow: false
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:relaxed', 'mix:referenceable']
+          jcr:uuid: 7af044cd-4a78-4435-af13-3a5e7f5653e2
+          hee:openLinkUrlNewWindow: false
+          hee:text: ''
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

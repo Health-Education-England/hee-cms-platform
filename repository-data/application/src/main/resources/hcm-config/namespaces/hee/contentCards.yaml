@@ -39,6 +39,36 @@ definitions:
             hipposysedit:path: hee:cardGroupSummary
             hipposysedit:primary: false
             hipposysedit:type: Text
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 528a02bc-5448-48f5-83d4-53cd4eba7002
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          /header:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:header
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /mirror:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:cards
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /cardGroupSummary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:cardGroupSummary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -46,6 +76,20 @@ definitions:
           hee:header: ''
           hee:cardGroupSummary: ''
           /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:relaxed']
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:cards[3]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:

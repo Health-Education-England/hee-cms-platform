@@ -24,6 +24,21 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hee:link
             hipposysedit:validators: [required]
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 0edaaccf-3605-4435-95f7-327e0a7d2570
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          /Link:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:link
+            hipposysedit:primary: false
+            hipposysedit:type: hee:link
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -42,6 +57,27 @@ definitions:
             hippostdpubwf:lastModifiedBy: ''
             hippotranslation:id: document-type-locale-id
             hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:relaxed']
+          /hee:link:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 16258647-605c-4752-a2f1-72594b2c724a
+            hee:text: ''
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            hee:openLinkUrlNewWindow: false
             /hee:document:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
