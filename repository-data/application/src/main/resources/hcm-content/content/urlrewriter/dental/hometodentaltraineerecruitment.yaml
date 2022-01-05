@@ -1,0 +1,65 @@
+/content/urlrewriter/dental/hometodentaltraineerecruitment:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: de4aad88-5f72-4e90-8bb7-58d636fc58f9
+  hippo:name: HomeToDentalTraineeRecruitment
+  hippo:versionHistory: ee6714ac-c970-45dd-9910-6f1efe950a6c
+  /hometodentaltraineerecruitment[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 818bccbb-13e1-4993-a329-dc2398e06e67
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2021-12-23T14:26:22.162Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Home to Dental Trainee Recruitment for 'library.hee.nhs.uk'</name>\r\
+      \n<condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n<from>^/$</from>\r\n<to type=\"permanent-redirect\" last=\"true\">/dental-trainee-recruitment</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Home to Dental Trainee Recruitment for hosts\
+      \ other than 'dental.hee.nhs.uk' host</name>\r\n<condition name=\"host\" operator=\"\
+      notequal\">dental.hee.nhs.uk</condition>\r\n<from>^/dental[/]?$</from>\r\n<to\
+      \ type=\"permanent-redirect\" last=\"true\">/site/dental/dental-trainee-recruitment</to>\r\
+      \n</rule>"
+  /hometodentaltraineerecruitment[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: a46fe898-ab09-4290-80b8-965a7a440597
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2021-12-23T14:26:34.805Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n<name>Home to Dental Trainee Recruitment for 'library.hee.nhs.uk'</name>\r\
+      \n<condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n<from>^/$</from>\r\n<to type=\"permanent-redirect\" last=\"true\">/dental-trainee-recruitment</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Home to Dental Trainee Recruitment for hosts\
+      \ other than 'dental.hee.nhs.uk' host</name>\r\n<condition name=\"host\" operator=\"\
+      notequal\">dental.hee.nhs.uk</condition>\r\n<from>^/dental[/]?$</from>\r\n<to\
+      \ type=\"permanent-redirect\" last=\"true\">/site/dental/dental-trainee-recruitment</to>\r\
+      \n</rule>"
+  /hometodentaltraineerecruitment[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 9dabfc54-ede0-4580-abcd-a8fc4adb2cba
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2021-12-23T14:26:34.805Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2021-12-23T14:26:36.791Z
+    urlrewriter:rule: "<rule>\r\n<name>Home to Dental Trainee Recruitment for 'library.hee.nhs.uk'</name>\r\
+      \n<condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n<from>^/$</from>\r\n<to type=\"permanent-redirect\" last=\"true\">/dental-trainee-recruitment</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Home to Dental Trainee Recruitment for hosts\
+      \ other than 'dental.hee.nhs.uk' host</name>\r\n<condition name=\"host\" operator=\"\
+      notequal\">dental.hee.nhs.uk</condition>\r\n<from>^/dental[/]?$</from>\r\n<to\
+      \ type=\"permanent-redirect\" last=\"true\">/site/dental/dental-trainee-recruitment</to>\r\
+      \n</rule>"

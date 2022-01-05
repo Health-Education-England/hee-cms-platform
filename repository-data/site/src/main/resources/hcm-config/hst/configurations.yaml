@@ -110,14 +110,17 @@ definitions:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/cookies-main.ftl
           /base-banner:
-            jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/layout/banner.ftl
+            jcr:primaryType: hst:template            
+            hst:renderpath: webfile:/freemarker/hee/layout/base-banner.ftl
           /news-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/news-main.ftl
           /multi-org-logo:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/multi-org-logo.ftl
+          /base-cookies-banner:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/layout/base-cookies-banner.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
