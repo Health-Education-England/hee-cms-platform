@@ -1,4 +1,4 @@
-package uk.nhs.hee.web.eform.behaviors;
+package uk.nhs.hee.web.eforms.hst.behaviors;
 
 import com.google.common.base.Strings;
 import com.onehippo.cms7.eforms.hst.api.OnValidationSuccessBehavior;
