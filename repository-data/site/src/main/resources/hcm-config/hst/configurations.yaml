@@ -110,8 +110,11 @@ definitions:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/cookies-main.ftl
           /base-banner:
-            jcr:primaryType: hst:template
+            jcr:primaryType: hst:template            
             hst:renderpath: webfile:/freemarker/hee/layout/base-banner.ftl
+          /news-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/news-main.ftl
           /multi-org-logo:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/multi-org-logo.ftl
@@ -154,7 +157,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin & Blog]
+              hst:label: Category based Listing Page [Bulletin, Blog & News]
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -180,6 +183,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Search Bank Listing Page
               hst:template: searchbanklisting-main
+            /news:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: News
+              hst:template: news-main
             /multi-org-logo:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
