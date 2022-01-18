@@ -62,6 +62,9 @@
                                             <#case "uk.nhs.hee.web.beans.ContentCards">
                                                 <@hee.contentCards contentCards=block size="half"/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                                <@hee.details block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
