@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8b6b4009-c01f-47d9-9a0c-ce090283fa09
+          jcr:uuid: 3c9d8523-ece7-47db-af62-e49c3e09426e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -80,6 +80,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
+          /addToAZ:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:addToAZ
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -93,9 +101,10 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 1f01f41f-1108-4807-9e5c-d0645657fcbb
+          jcr:uuid: 7d44215f-3adb-44bb-b658-3da78a7674ab
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
+          hee:addToAZ: false
           /hee:relatedContent:
             jcr:primaryType: hee:contentCards
             hee:header: ''
@@ -219,5 +228,13 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /addToAZ:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: addToAZ
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
