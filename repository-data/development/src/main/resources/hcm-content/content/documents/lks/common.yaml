@@ -4238,3 +4238,69 @@
         /hee:logos[2]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+  /insettext-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 2d91228c-be97-4de0-bccb-7924a8257564
+    hippo:name: InsetText Blocks
+    hippostd:foldertype: [new-Inset-folder, new-Inset-document]
+    hippotranslation:id: f8112648-39cf-4334-9119-16c9cfe91911
+    hippotranslation:locale: en
+    /insettest:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c8396cf8-7507-4508-845e-9a3c47e79572
+      hippo:name: InsetTest
+      hippo:versionHistory: bf7c77ea-e106-433a-9382-574b2b9158b4
+      /insettest[1]:
+        jcr:primaryType: hee:Inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 80f3004c-683e-4329-a219-451d98ce1445
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+      /insettest[2]:
+        jcr:primaryType: hee:Inset
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: d127076d-169a-4885-a414-51c0b0f0d248
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-01-19T14:54:48.691Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+      /insettest[3]:
+        jcr:primaryType: hee:Inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 84e04b67-f1c4-44bf-9053-f58e8bed985b
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-01-19T14:54:48.691Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-19T14:55:22.139Z
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
