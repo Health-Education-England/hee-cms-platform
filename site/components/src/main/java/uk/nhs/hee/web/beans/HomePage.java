@@ -5,6 +5,7 @@ import org.hippoecm.hst.content.beans.Node;
 import uk.nhs.hee.web.beans.HeroSection;
 import java.util.List;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -29,5 +30,10 @@ public class HomePage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:heroImage")
     public ImageSetWithCaption getHeroImage() {
         return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 }

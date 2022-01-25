@@ -33,9 +33,26 @@
         hst:label: Blog comment form
         hst:parameternames: [form, behaviors, eforms-mailsession, eforms-use-freemarker,
           eforms-from-name, eforms-from-email]
-        hst:parametervalues: [/content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
-            uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
-          mail/Session, 'true', 'CMS Admin', cms.admin@hee.nhs.uk]
+        hst:parametervalues: [/content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior, uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
+          mail/Session, 'true', CMS Admin, cms.admin@hee.nhs.uk]
         hst:resourcetemplate: eforms.validation.default
         hst:template: eforms.default
         hst:xtype: HST.Item
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2021-12-20T10:23:00.128Z
+        hst:xtype: hst.vbox
+        /multi-org-logo:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+          hst:iconpath: images/catalog-component-icons/carousel.svg
+          hst:label: Multi org logo
+          hst:parameternames: [document]
+          hst:parametervalues: [blogposts/expertssearch]
+          hst:template: multi-org-logo

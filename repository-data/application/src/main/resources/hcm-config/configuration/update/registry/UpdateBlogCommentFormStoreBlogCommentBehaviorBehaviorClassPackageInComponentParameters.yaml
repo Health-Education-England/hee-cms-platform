@@ -1,0 +1,35 @@
+definitions:
+  config:
+    ? /hippo:configuration/hippo:update/hippo:registry/UpdateBlogCommentFormStoreBlogCommentBehaviorBehaviorClassPackageInComponentParameters
+    : jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Updates blog-comment-form (container) component 'StoreBlogCommentBehavior'
+        behaviour class from 'uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior'
+        to 'uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior' under 'hst:parametervalues'
+        property
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(blog-comment-form,
+        hst:containeritemcomponent)[jcr:contains(@hst:parametervalues, 'uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior')]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\n\
+        import javax.jcr.Node\r\nimport javax.jcr.Value\r\n\r\nclass UpdateBlogCommentFormBehaviorClassesInComponentParameters\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        Value[] paramNames\
+        \ = node.getProperty(\"hst:parameternames\").getValues()\r\n        Value[]\
+        \ paramValues = node.getProperty(\"hst:parametervalues\").getValues()\r\n\r\
+        \n        def behaviorsParamIndex = paramNames.findIndexOf { it.getString()\
+        \ == 'behaviors' }\r\n        paramValues[behaviorsParamIndex] = node.getSession().getValueFactory().createValue(\r\
+        \n                paramValues[behaviorsParamIndex].getString().replace(\r\n\
+        \                        \"uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior\"\
+        ,\r\n                        \"uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior\"\
+        \r\n                )\r\n        )\r\n\r\n        node.setProperty(\"hst:parametervalues\"\
+        , paramValues)\r\n        log.debug \"Successfully updated behavior class\
+        \ \" +\r\n                \"from 'uk.nhs.hee.web.eform.behaviors.StoreBlogCommentBehavior'\
+        \ \" +\r\n                \"to 'uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior'\
+        \ \" +\r\n                \"on the blog comment form container component node\
+        \ '${node.path}'\"\r\n        \r\n        return true\r\n    }\r\n\r\n   \
+        \ boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

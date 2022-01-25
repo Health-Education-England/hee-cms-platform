@@ -1,10 +1,9 @@
 package uk.nhs.hee.web.beans;
 
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import java.util.List;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
-import uk.nhs.hee.web.beans.ContentCards;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -40,8 +39,13 @@ public class Guidance extends BaseDocument {
         return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
+    @HippoEssentialsGenerated(internalName = "hee:relatedContent", allowModifications = false)
     public ContentCards getRelatedContent() {
         return getBean("hee:relatedContent", ContentCards.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 }

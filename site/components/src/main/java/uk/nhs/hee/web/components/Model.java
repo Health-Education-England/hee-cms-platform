@@ -21,9 +21,19 @@ public enum Model {
     CANONICAL_URL("canonicalURL"),
 
     /**
+     * Model key for Logo Types
+     */
+    LOGO_TYPES("logoTypes"),
+
+    /**
      * Model key for navMapRegions ValueList Map
      */
-    NAV_MAP_REGION_MAP("navMapRegionMap");
+    NAV_MAP_REGION_MAP("navMapRegionMap"),
+
+    /**
+     * Model key for News Listing Page URL
+     */
+    NEWS_LISTING_PAGE_URL("newsListingPageURL");
 
     private final String key;
 

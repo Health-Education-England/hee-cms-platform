@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f0304b55-7e0d-4fb8-9838-868ca9ef3164
+          jcr:uuid: ccde5cf2-f801-4b9e-8fa6-c1b05295c484
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,7 +39,7 @@ definitions:
             hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-            hipposysedit:validators: [required]
+            hipposysedit:validators: [optional]
           /heroImage:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -48,6 +48,15 @@ definitions:
             hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
@@ -60,7 +69,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: c4fc8fd2-91ef-47d6-b16a-7ac2ac36605b
+          jcr:uuid: d60cae92-7a78-42e7-b522-57dee90ab2e5
           hippostdpubwf:lastModificationDate: 2021-03-24T17:00:07.151+07:00
           hippostdpubwf:creationDate: 2021-03-24T17:00:07.151+07:00
           hee:title: ''
@@ -71,6 +80,9 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -97,6 +109,7 @@ definitions:
             field: summary
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /heroImage:
@@ -108,6 +121,16 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects

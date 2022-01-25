@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<#macro guidance guidanceDocument showTitle=true showHero=false>
+<#macro guidance guidanceDocument showTitle=true showHero=false showCookiesButton=false>
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
     <#if guidanceDocument??>
         <div class="nhsuk-width-container">
@@ -18,8 +18,8 @@
                     <div class="nhsuk-grid-column-two-thirds">
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
-                                <#if showHero=false>
-                                    <p><@hst.html formattedText="${guidanceDocument.summary?replace('\n', '<br>')}"/></p>
+                                <#if showHero=false && guidanceDocument.summary??>
+                                    <p class="nhsuk-body-l"><@hst.html formattedText="${guidanceDocument.summary!?replace('\n', '<br>')}"/></p>
                                 </#if>
                                 <#if guidanceDocument.contentBlocks??>
                                     <#list guidanceDocument.contentBlocks as block>
@@ -66,7 +66,9 @@
                                         </#switch>
                                     </#list>
                                 </#if>
-
+                                <#if showCookiesButton>
+                                    <#include "../../include/cookie-button.ftl">
+                                </#if>
                                 <@hee.lastNextReviewedDate lastNextReviewedDate=guidanceDocument.pageLastNextReview/>
                             </div>
                         </section>

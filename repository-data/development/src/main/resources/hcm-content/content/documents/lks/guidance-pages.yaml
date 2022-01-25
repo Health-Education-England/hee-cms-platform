@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 9e336d48-f97a-42a9-8ea5-515c0521f276
+    hippo:versionHistory: 1d6d5a3a-c4cf-4df2-9190-ca2646ec562d
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -25,7 +25,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-09-30T12:34:59.786+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-17T16:29:03.600Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -353,6 +353,9 @@
         /hee:cards:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
       /hee:rightHandBlocks[7]:
         jcr:primaryType: hee:internalLinksCardReference
         /hee:internalLinksCard:
@@ -368,9 +371,10 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-09-30T12:34:37.364+01:00
+      hippostdpubwf:lastModificationDate: 2022-01-25T08:11:46.112Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -487,6 +491,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Internal Link
           hee:url: ''
           hippostdpubwf:createdBy: ''
@@ -502,6 +507,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: External Link
           hee:url: https://service-manual.nhs.uk/design-system/components/action-link
           hippostdpubwf:createdBy: ''
@@ -517,6 +523,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: An other internal link
           hee:url: ''
           hippostdpubwf:createdBy: ''
@@ -543,6 +550,7 @@
         hee:title: Related posts
         /hee:links[1]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Expert searching
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -556,6 +564,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[2]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search bank
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -569,6 +578,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[3]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Costing
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -582,6 +592,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[4]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search training
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -598,6 +609,7 @@
         hee:title: Second Quick Links
         /hee:links:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search bank
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -698,6 +710,9 @@
         /hee:cards:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
       /hee:rightHandBlocks[7]:
         jcr:primaryType: hee:internalLinksCardReference
         /hee:internalLinksCard:
@@ -715,9 +730,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-09-30T12:34:59.786+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-17T16:29:03.600Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-09-30T12:35:03.590+01:00
+      hippostdpubwf:publicationDate: 2021-12-17T16:29:07.522Z
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1044,6 +1059,9 @@
         /hee:cards:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
       /hee:rightHandBlocks[7]:
         jcr:primaryType: hee:internalLinksCardReference
         /hee:internalLinksCard:
@@ -1801,9 +1819,9 @@
         Youtube, Vimeo and Anchor FM.
       hee:title: Test Media Component
       hippo:availability: []
-      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-10-08T12:16:13.061+01:00
       hippostdpubwf:lastModificationDate: 2021-11-15T00:15:49.515Z

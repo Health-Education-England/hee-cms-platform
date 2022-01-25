@@ -7,7 +7,7 @@ definitions:
       hipposys:dryrun: true
       hipposys:loglevel: DEBUG
       hipposys:parameters: ''
-      hipposys:query: /jcr:root/content/documents/lks//element(hee:contentCards)
+      hipposys:query: /jcr:root/content/documents//element(hee:contentCards)
       hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
         import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport javax.jcr.Node\r\
         \n\r\nclass RenameRelatedContentToContentBlocks extends BaseNodeUpdateVisitor\
