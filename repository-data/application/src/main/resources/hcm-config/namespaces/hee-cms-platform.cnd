@@ -118,6 +118,15 @@
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
+[hee:internalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:internalLinksCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:internalLinksCardReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -146,6 +155,9 @@
   orderable
 
 [hee:navMapLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:news] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed

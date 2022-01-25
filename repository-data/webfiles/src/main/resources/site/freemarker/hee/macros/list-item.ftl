@@ -58,6 +58,32 @@
     </#list>
 </#macro>
 
+<#macro newsListItem items categoriesMap>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+
+    <#list items as item>
+        <@hst.link hippobean=item var="pageURL"/>
+
+        <#if pageURL != pageNotFoundURL>
+            <li>
+                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
+                <h3><a href="${pageURL}">${item.title}</a></h3>
+                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+                <div class="nhsuk-review-date">
+                    <p class="nhsuk-body-s">
+                        <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
+                    </p>
+                    <#if item.author?has_content>
+                        <p class="nhsuk-body-s">
+                            <@fmt.message key="by.text"/> ${item.author}
+                        </p>
+                    </#if>
+                </div>
+            </li>
+        </#if>
+    </#list>
+</#macro>
+
 <#macro casestudyListItem items impactGroupMap impactTypesMap sectorMap regionMap>
     <#list items as item>
         <@hst.link var="casestudyDocumentURL" hippobean=item.document>

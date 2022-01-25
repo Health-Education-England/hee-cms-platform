@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 3e5c8fac-e733-40e0-8151-f78e9d2253de
   hippo:name: KFHToLKSRedirects
-  hippo:versionHistory: b00ff53a-2848-448c-8eb2-4f6f50e93920
+  hippo:versionHistory: 70bdd253-321f-4060-9e82-df71879999dc
   /kfhtolksredirects[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:versionable']
@@ -14,7 +14,7 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-07-01T10:19:53.417+01:00
+    hippostdpubwf:lastModificationDate: 2022-01-05T09:48:21.076Z
     hippostdpubwf:lastModifiedBy: admin
     urlrewriter:rule: "<rule>\r\n  <name>kfh.libraryservices.nhs.uk to library.hee.nhs.uk\
       \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
@@ -486,10 +486,6 @@
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/covid-19-coronavirus/evidence-sources/?$</from>\r\n  <to type=\"\
       permanent-redirect\" last=\"true\">/site/covid-19/coronavirus-evidence-sources</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n  <from>^/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n  <from>^/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">/site/knowledge-staff</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/covid-19-coronavirus/for-lks-staff/literature-searches/?$</from>\r\
       \n  <to type=\"permanent-redirect\" last=\"true\">/covid-19/covid-19-search-bank</to>\r\
@@ -1690,7 +1686,7 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-07-01T10:19:46.754+01:00
+    hippostdpubwf:lastModificationDate: 2022-01-05T09:48:03.417Z
     hippostdpubwf:lastModifiedBy: admin
     urlrewriter:rule: "<rule>\r\n  <name>kfh.libraryservices.nhs.uk to library.hee.nhs.uk\
       \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
@@ -2162,10 +2158,6 @@
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/covid-19-coronavirus/evidence-sources/?$</from>\r\n  <to type=\"\
       permanent-redirect\" last=\"true\">/site/covid-19/coronavirus-evidence-sources</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n  <from>^/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n  <from>^/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">/site/knowledge-staff</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/covid-19-coronavirus/for-lks-staff/literature-searches/?$</from>\r\
       \n  <to type=\"permanent-redirect\" last=\"true\">/covid-19/covid-19-search-bank</to>\r\
@@ -3366,9 +3358,9 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-07-01T10:19:53.417+01:00
+    hippostdpubwf:lastModificationDate: 2022-01-05T09:48:21.076Z
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-07-01T10:19:55.845+01:00
+    hippostdpubwf:publicationDate: 2022-01-05T09:48:24.454Z
     urlrewriter:rule: "<rule>\r\n  <name>kfh.libraryservices.nhs.uk to library.hee.nhs.uk\
       \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
       \ in order to ensure that the domain level redirect happens first before any\
@@ -3839,10 +3831,6 @@
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/covid-19-coronavirus/evidence-sources/?$</from>\r\n  <to type=\"\
       permanent-redirect\" last=\"true\">/site/covid-19/coronavirus-evidence-sources</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n  <from>^/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n  <from>^/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">/site/knowledge-staff</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/covid-19-coronavirus/for-lks-staff/literature-searches/?$</from>\r\
       \n  <to type=\"permanent-redirect\" last=\"true\">/covid-19/covid-19-search-bank</to>\r\
