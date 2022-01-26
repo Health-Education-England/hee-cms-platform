@@ -5,6 +5,7 @@
 <#include "external-links-card.ftl">
 <#include "file-links-card.ftl">
 <#include "image-with-caption.ftl">
+<#include "internal-links-card.ftl">
 <#include "last-next-reviewed-date.ftl">
 <#include "nav-map.ftl">
 <#include "quick-links.ftl">
@@ -15,3 +16,5 @@
 <#include "anchor-links.ftl">
 <#include "media.ftl">
 <#include "tabs.ftl">
+<#include "button.ftl">
+<#include "details.ftl">

@@ -128,6 +128,49 @@ definitions:
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
+            'hippotranslation:translated', 'mix:referenceable']
+          jcr:uuid: 81802108-fbe8-492d-8295-c695e99e52e1
+          hee:summary: ''
+          hee:title: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:rightHandBlocks:
+            jcr:primaryType: hee:ctaCardReference
+            /hee:ctaCardContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -191,7 +234,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:contact,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:richTextReference,hee:StatementBlock,hee:tabsReference,hee:YellowAlertBlock
+            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:buttonReference,hee:contact,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:richTextReference,hee:StatementBlock,hee:tabsReference,hee:YellowAlertBlock,hee:detailsReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -203,7 +246,7 @@ definitions:
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
-            compoundList: hee:contactCardReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:QuickLinks
+            compoundList: hee:contactCardReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
             contentPickerType: links
             field: rightHandBlocks
             hint: ''

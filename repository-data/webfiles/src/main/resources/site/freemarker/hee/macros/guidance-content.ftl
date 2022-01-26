@@ -62,6 +62,12 @@
                                             <#case "uk.nhs.hee.web.beans.ContentCards">
                                                 <@hee.contentCards contentCards=block size="half"/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.ButtonReference">
+                                                <@hee.button button=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                                <@hee.details block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
@@ -92,6 +98,9 @@
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.CtaCardReference">
                                         <@hee.ctaCard ctaCard=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
+                                        <@hee.internalLinksCard card=block.internalLinksCard/>
                                         <#break>
                                     <#default>
                                 </#switch>

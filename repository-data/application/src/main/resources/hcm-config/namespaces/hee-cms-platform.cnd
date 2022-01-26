@@ -62,6 +62,12 @@
 [hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:button] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:buttonReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:caseStudy] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -89,6 +95,12 @@
 [hee:department] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:details] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:detailsReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -114,6 +126,15 @@
   orderable
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
+
+[hee:internalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:internalLinksCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:internalLinksCardReference] > hippo:compound, hippostd:relaxed
+  orderable
 
 [hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable

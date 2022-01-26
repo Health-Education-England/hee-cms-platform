@@ -1,67 +1,58 @@
 definitions:
   config:
-    /hippo:namespaces/hee/HomePage:
+    /hippo:namespaces/hee/button:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 12ab6231-8cbb-441b-9448-cbcc9071e011
+      jcr:uuid: 468bd152-5fae-4070-8533-0edef2ee4c7b
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: b8df7384-2375-4e33-b3e2-b9c5a131db90
+        jcr:uuid: e679bb9a-cd61-4595-bc3c-19ebd8e1f874
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ccde5cf2-f801-4b9e-8fa6-c1b05295c484
+          jcr:uuid: 74d4f7c9-a60b-4d5b-ad83-6576ff42af12
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /contentBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:contentBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
-          /title:
+          /label:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:label
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /summary:
+          /mirror:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:summary
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [optional]
-          /heroImage:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:heroImage
-            hipposysedit:primary: false
-            hipposysedit:type: hippogallerypicker:imagelink
-            hipposysedit:validators: [optional]
-          /logoGroup:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:logoGroup
+            hipposysedit:path: hee:document
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [optional]
+          /string:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:url
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /buttontype:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:buttontype
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:HomePage
+          jcr:primaryType: hee:button
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -69,18 +60,12 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: d60cae92-7a78-42e7-b522-57dee90ab2e5
-          hippostdpubwf:lastModificationDate: 2021-03-24T17:00:07.151+07:00
-          hippostdpubwf:creationDate: 2021-03-24T17:00:07.151+07:00
-          hee:title: ''
-          hee:summary: ''
-          /hee:heroImage:
-            jcr:primaryType: hippogallerypicker:imagelink
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-            hippo:facets: []
-            hippo:modes: []
-            hippo:values: []
-          /hee:logoGroup:
+          hee:label: ''
+          jcr:uuid: 5f5acf9c-5089-46ae-bfba-1207429e8404
+          hippostdpubwf:lastModificationDate: 2021-12-31T14:46:44.123Z
+          hippostdpubwf:creationDate: 2021-12-31T14:46:44.123Z
+          hee:url: ''
+          /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -94,52 +79,40 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /label:
             jcr:primaryType: frontend:plugin
-            caption: Page title
-            field: title
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Page title must be 60 characters or fewer.
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /summary:
-            jcr:primaryType: frontend:plugin
-            caption: Summary
-            field: summary
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            caption: Button label
+            field: label
             hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /heroImage:
+          /document:
             jcr:primaryType: frontend:plugin
-            caption: Hero image
-            field: heroImage
+            caption: Link document
+            field: mirror
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /logoGroup:
+          /url:
             jcr:primaryType: frontend:plugin
-            caption: Logo group
-            field: logoGroup
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
+            caption: Link url
+            field: string
             hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:logoGroup']
-          /contentBlocks:
+          /buttontype:
             jcr:primaryType: frontend:plugin
-            caption: Main content objects
-            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:contact,hee:contentCards,hee:detailsReference,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:navMap,hee:richTextReference,hee:StatementBlock,hee:tabsReference,hee:YellowAlertBlock
-            contentPickerType: links
-            field: contentBlocks
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.field
+            caption: Button type
+            field: buttontype
             hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
+              selectable.options: primary,secondary,reverse

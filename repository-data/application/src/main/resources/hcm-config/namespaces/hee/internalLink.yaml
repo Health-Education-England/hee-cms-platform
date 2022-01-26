@@ -1,55 +1,44 @@
 definitions:
   config:
-    /hippo:namespaces/hee/blockLinksReference:
+    /hippo:namespaces/hee/internalLink:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 6ec6d9de-c784-4219-aa30-43c7eea8bbfc
+      jcr:uuid: de29d9e2-0987-4d6d-b742-97af694b8d2d
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: cae32b9f-bd6a-4bd8-97be-fa408bb2ab3d
+        jcr:uuid: 1b97d75a-6b4e-43dc-919a-ecfa893e2f61
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ba540909-3877-4bb4-bda2-96c5f6e69b90
+          jcr:uuid: 44194db7-6cfd-487c-86c1-462e4977ab9f
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /blockLinksContentBlock:
+          /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:blockLinksContentBlock
+            hipposysedit:path: hee:text
             hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
+            hipposysedit:type: String
             hipposysedit:validators: [required]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 65a62c5d-988f-47bf-91bd-618e33259e01
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
-          /blockLinksContentBlock:
+          /document:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:blockLinksContentBlock
+            hipposysedit:path: hee:document
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:blockLinksReference
-          /hee:blockLinksContentBlock:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:relaxed']
-          /hee:blockLinksContentBlock:
+          jcr:primaryType: hee:internalLink
+          hee:text: ''
+          /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -63,13 +52,22 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /blockLinksContentBlock:
+          /text:
             jcr:primaryType: frontend:plugin
-            caption: Select block links
-            field: blockLinksContentBlock
+            caption: Link text
+            field: text
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /document:
+            jcr:primaryType: frontend:plugin
+            caption: Link document
+            field: document
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:blockLinks']
+              nodetypes: ['hee:blogPost', 'hee:guidance', 'hee:HomePage', 'hee:landingPage',
+                'hee:listingPage', 'hee:MiniHub']
