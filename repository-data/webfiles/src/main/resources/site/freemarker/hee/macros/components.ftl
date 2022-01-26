@@ -17,3 +17,4 @@
 <#include "media.ftl">
 <#include "tabs.ftl">
 <#include "button.ftl">
+<#include "details.ftl">

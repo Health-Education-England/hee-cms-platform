@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 1d6d5a3a-c4cf-4df2-9190-ca2646ec562d
+    hippo:versionHistory: 48f4e1b5-9005-427e-9d6c-352cb377f1af
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -25,7 +25,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-17T16:29:03.600Z
+      hippostdpubwf:lastModificationDate: 2022-01-26T10:45:45.401Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -142,6 +142,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Internal Link
           hee:url: ''
           hippostdpubwf:createdBy: ''
@@ -157,6 +158,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: External Link
           hee:url: https://service-manual.nhs.uk/design-system/components/action-link
           hippostdpubwf:createdBy: ''
@@ -172,6 +174,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: An other internal link
           hee:url: ''
           hippostdpubwf:createdBy: ''
@@ -198,6 +201,7 @@
         hee:title: Related posts
         /hee:links[1]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Expert searching
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -211,6 +215,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[2]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search bank
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -224,6 +229,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[3]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Costing
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -237,6 +243,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[4]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search training
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -253,6 +260,7 @@
         hee:title: Second Quick Links
         /hee:links:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search bank
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -361,6 +369,26 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:contentBlocks[16]:
+        jcr:primaryType: hee:buttonReference
+        /hee:buttonContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 438a53a7-8782-435a-8c71-78e9f3c90ea8
+      /hee:contentBlocks[17]:
+        jcr:primaryType: hee:buttonReference
+        /hee:buttonContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4e8934cc-f77d-4b5b-b602-2425f7934bca
+      /hee:contentBlocks[18]:
+        jcr:primaryType: hee:buttonReference
+        /hee:buttonContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 335a1882-5d19-4e01-a557-97c7da9225e6
     /copyright[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -371,10 +399,9 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-25T08:11:46.112Z
+      hippostdpubwf:lastModificationDate: 2022-01-26T10:45:45.697Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -718,6 +745,26 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:contentBlocks[16]:
+        jcr:primaryType: hee:buttonReference
+        /hee:buttonContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 438a53a7-8782-435a-8c71-78e9f3c90ea8
+      /hee:contentBlocks[17]:
+        jcr:primaryType: hee:buttonReference
+        /hee:buttonContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4e8934cc-f77d-4b5b-b602-2425f7934bca
+      /hee:contentBlocks[18]:
+        jcr:primaryType: hee:buttonReference
+        /hee:buttonContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 335a1882-5d19-4e01-a557-97c7da9225e6
     /copyright[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -730,9 +777,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-17T16:29:03.600Z
+      hippostdpubwf:lastModificationDate: 2022-01-18T09:48:43.138Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-12-17T16:29:07.522Z
+      hippostdpubwf:publicationDate: 2022-01-18T09:48:48.972Z
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -848,6 +895,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Internal Link
           hee:url: ''
           hippostdpubwf:createdBy: ''
@@ -863,6 +911,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: External Link
           hee:url: https://service-manual.nhs.uk/design-system/components/action-link
           hippostdpubwf:createdBy: ''
@@ -878,6 +927,7 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: An other internal link
           hee:url: ''
           hippostdpubwf:createdBy: ''
@@ -904,6 +954,7 @@
         hee:title: Related posts
         /hee:links[1]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Expert searching
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -917,6 +968,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[2]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search bank
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -930,6 +982,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[3]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Costing
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -943,6 +996,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[4]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search training
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -959,6 +1013,7 @@
         hee:title: Second Quick Links
         /hee:links:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Search bank
           hee:url: /
           hippostdpubwf:createdBy: ''
@@ -1067,6 +1122,11 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
   /introduction:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
