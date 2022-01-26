@@ -64,6 +64,8 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.InsetReference">
                                                 <@hee.inset inset=block/>                                             
+                                            <#case "uk.nhs.hee.web.beans.ButtonReference">
+                                                <@hee.button button=block/>
                                                 <#break>
                                             <#default>
                                         </#switch>
@@ -95,6 +97,9 @@
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.CtaCardReference">
                                         <@hee.ctaCard ctaCard=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
+                                        <@hee.internalLinksCard card=block.internalLinksCard/>
                                         <#break>
                                     <#default>
                                 </#switch>
