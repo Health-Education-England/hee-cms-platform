@@ -1542,15 +1542,17 @@
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 15d5ad76-8fb7-443b-8f8b-3c7ce709ffc8
+      hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
         printed and digital work in the following ways.
       hee:title: Introduction
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2021-10-08T10:44:01.214+01:00
+      hippostdpubwf:lastModificationDate: 2022-01-24T12:46:48.190Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1766,11 +1768,13 @@
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /hee:contentBlocks[10]:
-        jcr:primaryType: hee:anchorLinks
-        hee:headings: h2,h3
-        hee:title: On this page
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
       /hee:contentBlocks[11]:
         jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
         hee:header: Related content
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
@@ -1781,6 +1785,31 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:contentBlocks[12]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:contentBlocks[13]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:contentBlocks[14]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
   /test-media:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

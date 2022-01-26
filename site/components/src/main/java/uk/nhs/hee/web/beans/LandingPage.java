@@ -35,4 +35,9 @@ public class LandingPage extends BaseDocument {
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:boolean")
+    public Boolean getBoolean() {
+        return getSingleProperty("hee:boolean");
+    }
 }

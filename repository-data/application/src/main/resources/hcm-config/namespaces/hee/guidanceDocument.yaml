@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 3c9d8523-ece7-47db-af62-e49c3e09426e
+          jcr:uuid: 66d40b33-5a8e-49d2-8958-34b4f4a5067a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -101,7 +101,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 7d44215f-3adb-44bb-b658-3da78a7674ab
+          jcr:uuid: 9a9943e6-f673-48d7-9397-f3af10775918
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:addToAZ: false
@@ -236,5 +236,6 @@ definitions:
             field: addToAZ
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

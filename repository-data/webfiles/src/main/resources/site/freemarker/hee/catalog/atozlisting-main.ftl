@@ -1,52 +1,51 @@
 <#ftl output_format="HTML">
-
 <#include "../../include/imports.ftl">
-<#include "../macros/list-item.ftl">
-<#include "../macros/hero-section.ftl">
 
-<@hst.setBundle basename="uk.nhs.hee.web.listing"/>
-
-<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.ListingPage" -->
-<#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
-<#-- @ftlvariable name="categoriesMap" type="java.util.Map" -->
-<#-- @ftlvariable name="selectedCategories" type="java.util.List" -->
+<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.AtozPage" -->
+<#-- @ftlvariable name="atozmap" type="java.util.Map" -->
 
 <#if document??>
-    <#assign showHero=false>
-    <#if document.heroImage??>
-        <#assign showHero=true>
-        <@heroSection document=document />
-    </#if>
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
-        <div class="nhsuk-width-container">
-            <#if showHero=false>
-                <h1>${document.title}</h1>
-            <#if searchText??>
-                <h2>${searchText}</h2>123
-                </#if>
-                <#if document.summary??>
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                </#if>
-            </#if>
-            <div class="nhsuk-listing">
-                <div class="nhsuk-grid-row">
-                    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
-                            <#-- Results number -->
-                            <@fmt.message key="results.count.text" var="resultsCountText"/>
-                            <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
-                                ${pageable.total} ${resultsCountText}
-                            </h2>
-                            <#-- End Results number -->
-
-                        <#if pageable??>
-                            <ul class="nhsuk-list nhsuk-list--border">
-                                <@searchListItem items=pageable.items miniHubGuidancePathToURLMap=miniHubGuidancePathToURLMap/>
-                            </ul>
-                            <#include "../../include/pagination-nhs.ftl">
-                        </#if>
-                    </div>
+    <div class="nhsuk-width-container">
+        <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <h1>${document.title}</h1>
+                    <#if document.summary??>
+                        <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                    </#if>
+                    <#if atozmap??>
+                        <nav class="nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
+                            <ol class="nhsuk-list nhsuk-u-clear nhsuk-u-margin-0" role="list">
+                                <#list atozmap?keys as letter>
+                                    <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1" style="float:left">
+                                        <#if atozmap[letter]??>
+                                            <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#${letter}">${letter}</a>
+                                        <#else>
+                                            <span class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block nhsuk-u-secondary-text-color">${letter}</span>
+                                        </#if>
+                                    </li>
+                                </#list>
+                            </ol>
+                        </nav>
+                        <#list atozmap?keys as letter>
+                            <#if atozmap[letter]??>
+                                <div class="nhsuk-card nhsuk-card--feature">
+                                    <div class="nhsuk-card__content nhsuk-card__content--feature">
+                                        <h2 id="${letter}" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
+                                            ${letter}
+                                        </h2>
+                                        <ul class='nhsuk-list nhsuk-list--border'>
+                                            <#list atozmap[letter] as page>
+                                                <li><a href="${page.value}">${page.key}</a></li>
+                                            </#list>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </#if>
+                        </#list>
+                    </#if>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </#if>

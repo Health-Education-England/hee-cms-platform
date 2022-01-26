@@ -18,11 +18,11 @@ public enum ListingPageType {
      */
     ATOZ_LISTING(
             "atoz",
-            new String[]{"hee:guidance"},
-            Boolean.TRUE,
+            new String[]{"hee:guidance","hee:landingPage","hee:listingPage","hee:MiniHub"},
+            Boolean.FALSE,
             HEEField.PUBLICATION_DATE.getName(),
             StringUtils.EMPTY,
-            Boolean.TRUE),
+            Boolean.FALSE),
 
     /**
      * Blog Listing
