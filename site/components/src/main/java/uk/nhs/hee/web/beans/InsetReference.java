@@ -5,8 +5,8 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoCompound;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
-@HippoEssentialsGenerated(internalName = "hee:InsetReference")
-@Node(jcrType = "hee:InsetReference")
+@HippoEssentialsGenerated(internalName = "hee:insetReference")
+@Node(jcrType = "hee:insetReference")
 public class InsetReference extends HippoCompound {
     @HippoEssentialsGenerated(internalName = "hee:insetTextBlock")
     public HippoBean getInsetTextBlock() {

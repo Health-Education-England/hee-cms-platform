@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/InsetReference:
+    /hippo:namespaces/hee/insetReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: 61f4261e-42d4-43d7-ae9f-db2c2025cb18
@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 888137c9-ab84-4fdc-9e68-ed2ee98679c6
+          jcr:uuid: 37f3af06-bb39-4284-a9a6-4a00ae8dc6eb
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -27,7 +27,7 @@ definitions:
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:InsetReference
+          jcr:primaryType: hee:insetReference
           /hee:insetTextBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -51,4 +51,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:Inset']
+              nodetypes: ['hee:inset']

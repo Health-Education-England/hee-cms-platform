@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/Inset:
+    /hippo:namespaces/hee/inset:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: 1c18793b-7f52-4a0b-9fe9-d540a920a063
@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 936e9832-8eb5-4c78-8d2f-a3871df37e61
+          jcr:uuid: e78f4f56-fd5c-41ab-9552-41e7ea08ba37
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -27,7 +27,7 @@ definitions:
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:Inset
+          jcr:primaryType: hee:inset
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -35,7 +35,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 6970e525-8a0d-443d-b7b5-e37151e5eace
+          jcr:uuid: 8b5ce072-f678-4cf8-b5db-75d077cc344b
           hippostdpubwf:lastModificationDate: 2022-01-19T14:36:41.316Z
           hippostdpubwf:creationDate: 2022-01-19T14:36:41.316Z
           /hee:html:

@@ -4,8 +4,8 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 
-@HippoEssentialsGenerated(internalName = "hee:Inset")
-@Node(jcrType = "hee:Inset")
+@HippoEssentialsGenerated(internalName = "hee:inset")
+@Node(jcrType = "hee:inset")
 public class Inset extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:html")
     public HippoHtml getHtml() {
