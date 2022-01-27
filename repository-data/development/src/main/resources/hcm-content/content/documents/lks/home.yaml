@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ef78c935-2f90-48d2-919f-5f99073f1832
   hippo:name: Home
-  hippo:versionHistory: 3ecb1d25-6174-4fa1-bba4-286b45564396
+  hippo:versionHistory: 3869c3c5-cd2f-4933-a109-6b8fea9ce5f6
   /home[1]:
     jcr:primaryType: hee:HomePage
     jcr:mixinTypes: ['mix:referenceable']
@@ -14,9 +14,10 @@
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-11-14T23:19:13.404Z
+    hippostdpubwf:lastModificationDate: 2022-01-18T10:10:14.951Z
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -485,11 +486,16 @@
         jcr:primaryType: hippo:mirror
         hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
     /hee:contentBlocks[11]:
+      jcr:primaryType: hee:detailsReference
+      /hee:detailsContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+    /hee:contentBlocks[12]:
       jcr:primaryType: hee:mediaEmbedReference
       /hee:mediaEmbedContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
-    /hee:contentBlocks[12]:
+    /hee:contentBlocks[13]:
       jcr:primaryType: hee:contentCards
       hee:cardGroupSummary: "Eros tristique tincidunt massa consectetur aliquam mi\
         \ tempus maximus ac suspendisse erat nisi rutrum mi orci phasellus euismod\
@@ -517,7 +523,7 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-11-14T23:20:30.555Z
+    hippostdpubwf:lastModificationDate: 2022-01-18T10:09:37.155Z
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
@@ -986,11 +992,16 @@
         jcr:primaryType: hippo:mirror
         hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
     /hee:contentBlocks[11]:
+      jcr:primaryType: hee:detailsReference
+      /hee:detailsContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+    /hee:contentBlocks[12]:
       jcr:primaryType: hee:mediaEmbedReference
       /hee:mediaEmbedContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
-    /hee:contentBlocks[12]:
+    /hee:contentBlocks[13]:
       jcr:primaryType: hee:contentCards
       hee:cardGroupSummary: "Eros tristique tincidunt massa consectetur aliquam mi\
         \ tempus maximus ac suspendisse erat nisi rutrum mi orci phasellus euismod\
@@ -1018,9 +1029,9 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-03-24T17:00:56.449+07:00
-    hippostdpubwf:lastModificationDate: 2021-11-14T23:20:30.555Z
+    hippostdpubwf:lastModificationDate: 2022-01-18T10:09:37.155Z
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-11-14T23:20:35.669Z
+    hippostdpubwf:publicationDate: 2022-01-18T10:09:41.160Z
     hippotranslation:id: 104788bb-9ba3-4f82-87d8-2157f09cbf6c
     hippotranslation:locale: en
     /hee:contentBlocks[1]:
@@ -1488,11 +1499,16 @@
         jcr:primaryType: hippo:mirror
         hippo:docbase: d53bd083-c132-4db4-888c-dacf5314b9af
     /hee:contentBlocks[11]:
+      jcr:primaryType: hee:detailsReference
+      /hee:detailsContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+    /hee:contentBlocks[12]:
       jcr:primaryType: hee:mediaEmbedReference
       /hee:mediaEmbedContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
-    /hee:contentBlocks[12]:
+    /hee:contentBlocks[13]:
       jcr:primaryType: hee:contentCards
       hee:cardGroupSummary: "Eros tristique tincidunt massa consectetur aliquam mi\
         \ tempus maximus ac suspendisse erat nisi rutrum mi orci phasellus euismod\

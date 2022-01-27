@@ -67,6 +67,9 @@
                                             <#case "uk.nhs.hee.web.beans.ButtonReference">
                                                 <@hee.button button=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                                <@hee.details block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
