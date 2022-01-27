@@ -27,9 +27,9 @@
         <#assign cssname>${buttonTypeBySelection(button.buttonContentBlock.buttontype)}
         </#assign>
         <#if link?has_content>
-			<a class="${cssname}" href="${link}" >
-				${button.buttonContentBlock.label}
-			</a>       
+				<button class="${cssname}" type="submit"  onclick="location.href ='${link}'"> 
+					${button.buttonContentBlock.label}
+				</button>			
         </#if>
     </#if>
 </#macro>
