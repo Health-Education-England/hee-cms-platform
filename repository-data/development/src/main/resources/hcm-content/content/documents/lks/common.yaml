@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: bace2536-0ecc-4fde-b30e-2947e5e29300
   hippo:name: Common
-  hippostd:foldertype: [new-translated-folder, new-document]
+  hippostd:foldertype: [new-folder, new-document]
   hippotranslation:id: 5c454ded-acfc-4f4b-8b53-2569e160b5c9
   hippotranslation:locale: en
   /content-cards:
@@ -4654,3 +4654,363 @@
             </ul>
 
             <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+  /expanders:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 36b2eff2-3af3-427d-b217-de779e6f670a
+    hippo:name: Expanders
+    hippostd:foldertype: [new-expanderGroup-folder, new-expanderGroup-document]
+    /expander1:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 3f88b353-f714-486a-90c9-4efbf0634566
+      hippo:name: ExpanderDemo1
+      hippo:versionHistory: 9b82c1e6-475e-4d59-b99e-3e288df6495c
+      /expander1[1]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d8ed9e7b-6f9e-4f55-8d81-f99bdcb4855b
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:18:53.950Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 9fb159db-7418-4411-a15c-2b1dc30b1d9c
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>1 You can see your GP records by:</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>2 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[3]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 3
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>3 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+      /expander1[2]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 9aa805ba-69a0-4fe3-8015-a3e2ab895fb8
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:20:26.859Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 9fb159db-7418-4411-a15c-2b1dc30b1d9c
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>1 You can see your GP records by:</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>2 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[3]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 3
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>3 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+      /expander1[3]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: de14189d-9209-406b-93c0-994be9ed8bd2
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:20:26.859Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-27T16:21:57.930Z
+        hippotranslation:id: 9fb159db-7418-4411-a15c-2b1dc30b1d9c
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>1 You can see your GP records by:</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>2 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[3]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 3
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>3 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+    /expanderdemo2:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 4f7589d4-0cbd-43e7-b616-8d65d0e650f8
+      hippo:name: ExpanderDemo2
+      hippo:versionHistory: 77dee3e6-b4cb-4b9a-9ea7-0b97fec3995b
+      /expanderdemo2[1]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: e69f3af6-2bc6-400b-89a4-d00ad5c52cc5
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:21:48.976Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a64669ea-cd07-4f11-b212-31b4f0d191be
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 4
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>4 You can see your GP records by:</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 5
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>5 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+      /expanderdemo2[2]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 040c82d7-40ca-4bf9-b11f-4324645a919e
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:21:16.037Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a64669ea-cd07-4f11-b212-31b4f0d191be
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 4
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>4 You can see your GP records by:</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 5
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>5 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+      /expanderdemo2[3]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 34f22741-698f-4155-9c28-e4317e8c547e
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:21:48.976Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-27T16:21:57.868Z
+        hippotranslation:id: a64669ea-cd07-4f11-b212-31b4f0d191be
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 4
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>4 You can see your GP records by:</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 5
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>5 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+    /expanderdemo3:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 84b193f3-d976-459c-9a0c-a300d5c7ef2e
+      hippo:name: ExpanderDemo3
+      hippo:versionHistory: 11d1f2e4-0bb6-4a7e-857e-da80f1f9c08c
+      /expanderdemo3[1]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 9273ee2a-315b-4abd-ae35-24c9d982a7bc
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:57:05.522Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1c978776-65d3-4337-b06f-7a37cb5f64fd
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 6
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>6 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+      /expanderdemo3[2]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 08deccc8-26db-488a-9e8c-1d180bb51ccf
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T17:02:26.780Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1c978776-65d3-4337-b06f-7a37cb5f64fd
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 6
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>6 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>
+      /expanderdemo3[3]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a9a3f434-eecb-4fa6-bb63-9a25dfeb9e29
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
+        hippostdpubwf:lastModificationDate: 2022-01-27T16:57:05.522Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-27T16:57:08.505Z
+        hippotranslation:id: 1c978776-65d3-4337-b06f-7a37cb5f64fd
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: Get your medical records 6
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>6 You can see your GP records by:&nbsp;</p>
+
+              <ul>
+               <li>asking for them at your GP surgery</li>
+               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+              </ul>

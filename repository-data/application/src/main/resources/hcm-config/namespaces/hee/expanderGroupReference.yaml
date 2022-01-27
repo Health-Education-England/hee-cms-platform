@@ -1,33 +1,33 @@
 definitions:
   config:
-    /hippo:namespaces/hee/tabsReference:
+    /hippo:namespaces/hee/expanderGroupReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 47949ddc-ed47-4cbc-a0d1-cc067a55c142
+      jcr:uuid: 2a8b4d25-942e-4c72-8032-83c1906d9a45
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 95a076e9-dfb0-4ebd-ac19-1d65868d37ed
+        jcr:uuid: ae35e8c2-9a93-4e17-a390-72e15dcadcc3
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1d33a216-da7f-4b33-b9ed-827ee5ca2966
+          jcr:uuid: 93c20ba7-3f5c-4ee7-ac62-530fc78fb803
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /tabsContentBlock:
+          /expanderContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:tabsContentBlock
+            hipposysedit:path: hee:expanderContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:tabsReference
-          /hee:tabsContentBlock:
+          jcr:primaryType: hee:expanderGroupReference
+          /hee:expanderContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -41,13 +41,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /tabsContentBlock:
+          /expanderContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Select tabs
-            field: tabsContentBlock
-            hint: ''
+            caption: Select Expander
+            field: expanderContentBlock
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:tabs']

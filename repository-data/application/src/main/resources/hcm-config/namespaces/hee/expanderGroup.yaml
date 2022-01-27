@@ -1,35 +1,49 @@
 definitions:
   config:
-    /hippo:namespaces/hee/tabsReference:
+    /hippo:namespaces/hee/expanderGroup:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 47949ddc-ed47-4cbc-a0d1-cc067a55c142
+      jcr:uuid: d965f915-0e63-431f-b6a5-1b56b533be7c
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 95a076e9-dfb0-4ebd-ac19-1d65868d37ed
+        jcr:uuid: d77c85e8-1314-4b8f-9168-8e087624b223
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1d33a216-da7f-4b33-b9ed-827ee5ca2966
+          jcr:uuid: c3558316-7a51-4365-943a-75a72500b551
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /tabsContentBlock:
+          /expanderPanel:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:tabsContentBlock
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:expanderPanel
             hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
+            hipposysedit:type: hee:expanderPanel
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:tabsReference
-          /hee:tabsContentBlock:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          jcr:primaryType: hee:expanderGroup
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 08ce0c35-3a91-4ded-b339-e4b650a56d99
+          hippostdpubwf:lastModificationDate: 2022-01-27T16:00:31.179Z
+          hippostdpubwf:creationDate: 2022-01-27T16:00:31.179Z
+          /hee:expanderPanel:
+            jcr:primaryType: hee:expanderPanel
+            hee:expanderSummary: ''
+            /hee:expanderDetails:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -41,13 +55,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /tabsContentBlock:
+          /expanderPanel:
             jcr:primaryType: frontend:plugin
-            caption: Select tabs
-            field: tabsContentBlock
-            hint: ''
+            caption: Expander Panel
+            field: expanderPanel
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:tabs']
