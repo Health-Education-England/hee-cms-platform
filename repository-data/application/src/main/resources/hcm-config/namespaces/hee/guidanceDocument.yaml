@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8b6b4009-c01f-47d9-9a0c-ce090283fa09
+          jcr:uuid: 66d40b33-5a8e-49d2-8958-34b4f4a5067a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -80,77 +80,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 44db4d0e-2184-4d0b-9d93-1e04aa9f17eb
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
-          /title:
+          /addToAZ:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:addToAZ
             hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /summary:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:summary
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [optional]
-          /contentBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:contentBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
-          /relatedContent:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:relatedContent
-            hipposysedit:primary: false
-            hipposysedit:type: hee:contentCards
-          /pageLastNextReview:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:pageLastNextReview
-            hipposysedit:primary: false
-            hipposysedit:type: hee:pageLastNextReview
-          /rightHandBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:rightHandBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
-          /heroImage:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:heroImage
-            hipposysedit:primary: false
-            hipposysedit:type: hippogallerypicker:imagelink
-          /logoGroup:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:logoGroup
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [optional]
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -164,9 +101,10 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 1f01f41f-1108-4807-9e5c-d0645657fcbb
+          jcr:uuid: 9a9943e6-f673-48d7-9397-f3af10775918
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
+          hee:addToAZ: false
           /hee:relatedContent:
             jcr:primaryType: hee:contentCards
             hee:header: ''
@@ -331,6 +269,15 @@ definitions:
             caption: Related content
             field: relatedContent
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /addToAZ:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: addToAZ
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
             /cluster.options:
