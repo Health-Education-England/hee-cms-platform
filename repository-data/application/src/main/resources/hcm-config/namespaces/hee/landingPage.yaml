@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: bc71b8ca-fa24-41cd-8857-bf9188290099
+          jcr:uuid: 13c5819c-7916-4a5f-b31b-99c6c885f9b5
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -62,7 +62,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:boolean
+            hipposysedit:path: hee:addToAZ
             hipposysedit:primary: false
             hipposysedit:type: Boolean
       /hipposysedit:prototypes:
@@ -78,10 +78,10 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 45b986e1-6064-4a11-827c-c818e77c4f60
+          jcr:uuid: 0b60676e-a8f9-4779-ac2f-be4dbec864ef
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
-          hee:boolean: false
+          hee:addToAZ: false
           /hee:heroImage:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -149,11 +149,12 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /boolean:
+          /addToAZ:
             jcr:primaryType: frontend:plugin
             caption: Add to A to Z
             field: boolean
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
