@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 74d4f7c9-a60b-4d5b-ad83-6576ff42af12
+          jcr:uuid: 10f8b46d-c166-4633-8a69-435b89f13c9f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -32,14 +32,7 @@ definitions:
             hipposysedit:path: hee:document
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-          /string:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:url
-            hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:validators: [required]
           /buttontype:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -61,10 +54,9 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:label: ''
-          jcr:uuid: 5f5acf9c-5089-46ae-bfba-1207429e8404
+          jcr:uuid: 85fb0a31-8df4-4485-a225-39e4103b309c
           hippostdpubwf:lastModificationDate: 2021-12-31T14:46:44.123Z
           hippostdpubwf:creationDate: 2021-12-31T14:46:44.123Z
-          hee:url: ''
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -95,15 +87,6 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /url:
-            jcr:primaryType: frontend:plugin
-            caption: Link url
-            field: string
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /buttontype:
