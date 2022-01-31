@@ -10,7 +10,7 @@
         <@hst.link var="cookiesPageLink" siteMapItemRefId="cookies"/>
 
         <div class="nhsuk-width-container">
-            <h2 id="cookies0"><@fmt.message key="cookie.banner.title"/></h2>
+            <h2 data-anchorlinksignore="true" id="cookies0"><@fmt.message key="cookie.banner.title"/></h2>
             <#--  Replacing '##COOKIES_PAGE##' PlaceHolder dynamically with channel specific cookies page link  -->
             <@hst.html formattedText="${cookieBannerText?replace('##COOKIES_PAGE##', cookiesPageLink)}"/>
             <ul>

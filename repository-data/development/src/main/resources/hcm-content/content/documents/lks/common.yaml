@@ -4429,7 +4429,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 4e8934cc-f77d-4b5b-b602-2425f7934bca
       hippo:name: ReverseTest
-      hippo:versionHistory: 3b09b773-1df2-48c5-afff-f022091c7ebb
+      hippo:versionHistory: cfedfde3-f5b6-48e6-84d6-d0734087f69f
       /defaultbutton[1]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable']
@@ -4442,13 +4442,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.160Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:00.506Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
       /defaultbutton[2]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -4461,13 +4461,13 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.137Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:17.525Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
       /defaultbutton[3]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable']
@@ -4480,14 +4480,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.137Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:17.525Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-26T10:47:56.124Z
+        hippostdpubwf:publicationDate: 2022-01-31T16:24:21.010Z
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
     /secondarbutton:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -4654,363 +4654,217 @@
             </ul>
 
             <p>Ask your GP surgery for help if you can't find your NHS number.</p>
-  /expanders:
+  /insettext-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 2d91228c-be97-4de0-bccb-7924a8257564
+    hippo:name: InsetText Blocks
+    hippostd:foldertype: [new-Inset-folder, new-Inset-document]
+    hippotranslation:id: f8112648-39cf-4334-9119-16c9cfe91911
+    hippotranslation:locale: en
+    /insettest:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c8396cf8-7507-4508-845e-9a3c47e79572
+      hippo:name: InsetTest
+      hippo:versionHistory: bf7c77ea-e106-433a-9382-574b2b9158b4
+      /insettest[1]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 80f3004c-683e-4329-a219-451d98ce1445
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+      /insettest[2]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: d127076d-169a-4885-a414-51c0b0f0d248
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-01-19T14:54:48.691Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+      /insettest[3]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 84e04b67-f1c4-44bf-9053-f58e8bed985b
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-01-19T14:54:48.691Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-19T14:55:22.139Z
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+  /expander-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'mix:versionable']
-    jcr:uuid: 36b2eff2-3af3-427d-b217-de779e6f670a
-    hippo:name: Expanders
+    jcr:uuid: 08be959d-d412-48ae-8dd4-1458cd4c8b64
+    hippo:name: Expander Blocks
     hippostd:foldertype: [new-expanderGroup-folder, new-expanderGroup-document]
-    /expander1:
+    /expander-demo:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 3f88b353-f714-486a-90c9-4efbf0634566
-      hippo:name: ExpanderDemo1
-      hippo:versionHistory: 9b82c1e6-475e-4d59-b99e-3e288df6495c
-      /expander1[1]:
+      jcr:uuid: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      hippo:name: Expander Demo
+      hippo:versionHistory: dc3f629e-c3ef-422a-8e0c-d54711959f64
+      /expander-demo[1]:
         jcr:primaryType: hee:expanderGroup
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: d8ed9e7b-6f9e-4f55-8d81-f99bdcb4855b
+        jcr:uuid: 158899bd-eda7-433f-a4f1-ea2dd8a323a4
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:18:53.950Z
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:38:14.537Z
         hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 9fb159db-7418-4411-a15c-2b1dc30b1d9c
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
         hippotranslation:locale: document-type-locale
         /hee:expanderPanel[1]:
           jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 1
+          hee:expanderSummary: How to measure your blood glucose levels 1
           /hee:expanderDetails:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <p>1 You can see your GP records by:</p>
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
 
               <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
               </ul>
         /hee:expanderPanel[2]:
           jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 2
+          hee:expanderSummary: How to measure your blood glucose levels 2
           /hee:expanderDetails:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <p>2 You can see your GP records by:&nbsp;</p>
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
 
               <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
               </ul>
-        /hee:expanderPanel[3]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 3
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>3 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-      /expander1[2]:
+      /expander-demo[2]:
         jcr:primaryType: hee:expanderGroup
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-        jcr:uuid: 9aa805ba-69a0-4fe3-8015-a3e2ab895fb8
+        jcr:uuid: daf293cc-fc87-48a6-887d-05257fb89a17
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:20:26.859Z
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:39:37.173Z
         hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 9fb159db-7418-4411-a15c-2b1dc30b1d9c
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
         hippotranslation:locale: document-type-locale
         /hee:expanderPanel[1]:
           jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 1
+          hee:expanderSummary: How to measure your blood glucose levels 1
           /hee:expanderDetails:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <p>1 You can see your GP records by:</p>
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
 
               <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
               </ul>
         /hee:expanderPanel[2]:
           jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 2
+          hee:expanderSummary: How to measure your blood glucose levels 2
           /hee:expanderDetails:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <p>2 You can see your GP records by:&nbsp;</p>
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
 
               <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
               </ul>
-        /hee:expanderPanel[3]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 3
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>3 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-      /expander1[3]:
+      /expander-demo[3]:
         jcr:primaryType: hee:expanderGroup
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: de14189d-9209-406b-93c0-994be9ed8bd2
+        jcr:uuid: 2fa85cfb-8466-49ae-905a-fa7e75a0eac7
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:20:26.859Z
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:39:37.173Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-27T16:21:57.930Z
-        hippotranslation:id: 9fb159db-7418-4411-a15c-2b1dc30b1d9c
+        hippostdpubwf:publicationDate: 2022-01-31T16:39:40.726Z
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
         hippotranslation:locale: document-type-locale
         /hee:expanderPanel[1]:
           jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 1
+          hee:expanderSummary: How to measure your blood glucose levels 1
           /hee:expanderDetails:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <p>1 You can see your GP records by:</p>
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
 
               <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
               </ul>
         /hee:expanderPanel[2]:
           jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 2
+          hee:expanderSummary: How to measure your blood glucose levels 2
           /hee:expanderDetails:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <p>2 You can see your GP records by:&nbsp;</p>
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
 
               <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-        /hee:expanderPanel[3]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 3
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>3 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-    /expanderdemo2:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 4f7589d4-0cbd-43e7-b616-8d65d0e650f8
-      hippo:name: ExpanderDemo2
-      hippo:versionHistory: 77dee3e6-b4cb-4b9a-9ea7-0b97fec3995b
-      /expanderdemo2[1]:
-        jcr:primaryType: hee:expanderGroup
-        jcr:mixinTypes: ['mix:versionable']
-        jcr:uuid: e69f3af6-2bc6-400b-89a4-d00ad5c52cc5
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:21:48.976Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: a64669ea-cd07-4f11-b212-31b4f0d191be
-        hippotranslation:locale: document-type-locale
-        /hee:expanderPanel[1]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 4
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>4 You can see your GP records by:</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-        /hee:expanderPanel[2]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 5
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>5 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-      /expanderdemo2[2]:
-        jcr:primaryType: hee:expanderGroup
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 040c82d7-40ca-4bf9-b11f-4324645a919e
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:21:16.037Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: a64669ea-cd07-4f11-b212-31b4f0d191be
-        hippotranslation:locale: document-type-locale
-        /hee:expanderPanel[1]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 4
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>4 You can see your GP records by:</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-        /hee:expanderPanel[2]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 5
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>5 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-      /expanderdemo2[3]:
-        jcr:primaryType: hee:expanderGroup
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 34f22741-698f-4155-9c28-e4317e8c547e
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:21:48.976Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-27T16:21:57.868Z
-        hippotranslation:id: a64669ea-cd07-4f11-b212-31b4f0d191be
-        hippotranslation:locale: document-type-locale
-        /hee:expanderPanel[1]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 4
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>4 You can see your GP records by:</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-        /hee:expanderPanel[2]:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 5
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>5 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-    /expanderdemo3:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 84b193f3-d976-459c-9a0c-a300d5c7ef2e
-      hippo:name: ExpanderDemo3
-      hippo:versionHistory: 11d1f2e4-0bb6-4a7e-857e-da80f1f9c08c
-      /expanderdemo3[1]:
-        jcr:primaryType: hee:expanderGroup
-        jcr:mixinTypes: ['mix:versionable']
-        jcr:uuid: 9273ee2a-315b-4abd-ae35-24c9d982a7bc
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:57:05.522Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 1c978776-65d3-4337-b06f-7a37cb5f64fd
-        hippotranslation:locale: document-type-locale
-        /hee:expanderPanel:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 6
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>6 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-      /expanderdemo3[2]:
-        jcr:primaryType: hee:expanderGroup
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 08deccc8-26db-488a-9e8c-1d180bb51ccf
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T17:02:26.780Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 1c978776-65d3-4337-b06f-7a37cb5f64fd
-        hippotranslation:locale: document-type-locale
-        /hee:expanderPanel:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 6
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>6 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
-              </ul>
-      /expanderdemo3[3]:
-        jcr:primaryType: hee:expanderGroup
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: a9a3f434-eecb-4fa6-bb63-9a25dfeb9e29
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2022-01-27T16:17:25.907Z
-        hippostdpubwf:lastModificationDate: 2022-01-27T16:57:05.522Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-27T16:57:08.505Z
-        hippotranslation:id: 1c978776-65d3-4337-b06f-7a37cb5f64fd
-        hippotranslation:locale: document-type-locale
-        /hee:expanderPanel:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: Get your medical records 6
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>6 You can see your GP records by:&nbsp;</p>
-
-              <ul>
-               <li>asking for them at your GP surgery</li>
-               <li>going online to see them (if you have signed up for&nbsp;<a href="https://service-manual.nhs.uk/using-the-nhs/nhs-services/gps/gp-online-services/">GP online services</a>)</li>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
               </ul>

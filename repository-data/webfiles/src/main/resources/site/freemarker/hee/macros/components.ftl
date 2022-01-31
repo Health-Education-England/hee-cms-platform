@@ -16,6 +16,7 @@
 <#include "anchor-links.ftl">
 <#include "media.ftl">
 <#include "tabs.ftl">
+<#include "inset.ftl">
 <#include "button.ftl">
 <#include "details.ftl">
 <#include "expander.ftl">
