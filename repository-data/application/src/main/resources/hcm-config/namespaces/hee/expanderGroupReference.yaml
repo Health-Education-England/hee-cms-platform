@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 93c20ba7-3f5c-4ee7-ac62-530fc78fb803
+          jcr:uuid: 4a1dec50-d064-4adc-ae3f-6d00fb114e75
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,7 @@ definitions:
             hipposysedit:path: hee:expanderContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -43,10 +44,11 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /expanderContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Select Expander
+            caption: Select expander group
             field: expanderContentBlock
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:expanderGroup']
