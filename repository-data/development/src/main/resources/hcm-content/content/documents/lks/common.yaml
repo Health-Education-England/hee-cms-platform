@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: bace2536-0ecc-4fde-b30e-2947e5e29300
   hippo:name: Common
-  hippostd:foldertype: [new-translated-folder, new-document]
+  hippostd:foldertype: [new-folder, new-document]
   hippotranslation:id: 5c454ded-acfc-4f4b-8b53-2569e160b5c9
   hippotranslation:locale: en
   /content-cards:
@@ -4429,7 +4429,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 4e8934cc-f77d-4b5b-b602-2425f7934bca
       hippo:name: ReverseTest
-      hippo:versionHistory: 3b09b773-1df2-48c5-afff-f022091c7ebb
+      hippo:versionHistory: cfedfde3-f5b6-48e6-84d6-d0734087f69f
       /defaultbutton[1]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable']
@@ -4442,13 +4442,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.160Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:00.506Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
       /defaultbutton[2]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -4461,13 +4461,13 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.137Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:17.525Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
       /defaultbutton[3]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable']
@@ -4480,14 +4480,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.137Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:17.525Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-26T10:47:56.124Z
+        hippostdpubwf:publicationDate: 2022-01-31T16:24:21.010Z
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
     /secondarbutton:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -4719,4 +4719,152 @@
         /hee:html:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
-            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>  
+            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+  /expander-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 08be959d-d412-48ae-8dd4-1458cd4c8b64
+    hippo:name: Expander Blocks
+    hippostd:foldertype: [new-expanderGroup-folder, new-expanderGroup-document]
+    /expander-demo:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      hippo:name: Expander Demo
+      hippo:versionHistory: dc3f629e-c3ef-422a-8e0c-d54711959f64
+      /expander-demo[1]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 158899bd-eda7-433f-a4f1-ea2dd8a323a4
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+      /expander-demo[2]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: daf293cc-fc87-48a6-887d-05257fb89a17
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:39:37.173Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+      /expander-demo[3]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2fa85cfb-8466-49ae-905a-fa7e75a0eac7
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:39:37.173Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-31T16:39:40.726Z
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
