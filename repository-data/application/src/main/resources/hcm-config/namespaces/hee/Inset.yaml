@@ -1,36 +1,46 @@
 definitions:
   config:
-    /hippo:namespaces/hee/blockLinksReference:
+    /hippo:namespaces/hee/inset:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 6ec6d9de-c784-4219-aa30-43c7eea8bbfc
+      jcr:uuid: 1c18793b-7f52-4a0b-9fe9-d540a920a063
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: cae32b9f-bd6a-4bd8-97be-fa408bb2ab3d
+        jcr:uuid: 37d15981-fdd7-4c9b-b36d-e5dba957c16b
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 65a62c5d-988f-47bf-91bd-618e33259e01
+          jcr:uuid: e78f4f56-fd5c-41ab-9552-41e7ea08ba37
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /blockLinksContentBlock:
+          /html:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:blockLinksContentBlock
+            hipposysedit:path: hee:html
             hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
+            hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:blockLinksReference
-          /hee:blockLinksContentBlock:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          jcr:primaryType: hee:inset
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 8b5ce072-f678-4cf8-b5db-75d077cc344b
+          hippostdpubwf:lastModificationDate: 2022-01-19T14:36:41.316Z
+          hippostdpubwf:creationDate: 2022-01-19T14:36:41.316Z
+          /hee:html:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -42,13 +52,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /blockLinksContentBlock:
+          /html:
             jcr:primaryType: frontend:plugin
-            caption: Select block links
-            field: blockLinksContentBlock
-            hint: ''
+            caption: Text
+            field: html
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:blockLinks']

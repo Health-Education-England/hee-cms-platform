@@ -1,51 +1,41 @@
 definitions:
   config:
-    /hippo:namespaces/hee/button:
+    /hippo:namespaces/hee/atozPage:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 468bd152-5fae-4070-8533-0edef2ee4c7b
+      jcr:uuid: 8037a1ef-bb5e-40c5-95d1-b59c825ca211
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: e679bb9a-cd61-4595-bc3c-19ebd8e1f874
+        jcr:uuid: e4a42240-8102-4af2-afe5-62fb593fc19e
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 10f8b46d-c166-4633-8a69-435b89f13c9f
+          jcr:uuid: 08f3eafe-d41e-4c57-8443-264f2464e82e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /label:
+          /string:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:label
+            hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /mirror:
+          /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:document
+            hipposysedit:path: hee:summary
             hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [required]
-          /buttontype:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:buttontype
-            hipposysedit:primary: false
-            hipposysedit:type: StaticDropdown
-            hipposysedit:validators: [required]
+            hipposysedit:type: Text
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:button
+          jcr:primaryType: hee:atozPage
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -53,13 +43,11 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:label: ''
-          jcr:uuid: 85fb0a31-8df4-4485-a225-39e4103b309c
-          hippostdpubwf:lastModificationDate: 2021-12-31T14:46:44.123Z
-          hippostdpubwf:creationDate: 2021-12-31T14:46:44.123Z
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          jcr:uuid: dae1c55f-cb4b-45bc-a90a-761626b4e480
+          hippostdpubwf:lastModificationDate: 2022-01-26T15:27:07.267Z
+          hippostdpubwf:creationDate: 2022-01-26T15:27:07.268Z
+          hee:title: ''
+          hee:summary: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -71,31 +59,21 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /label:
+          /title:
             jcr:primaryType: frontend:plugin
-            caption: Button label
-            field: label
+            caption: Page title
+            field: string
+            hint: Page title must be 60 characters or fewer.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /summary:
+            jcr:primaryType: frontend:plugin
+            caption: Summary
+            field: text
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /document:
-            jcr:primaryType: frontend:plugin
-            caption: Link document
-            field: mirror
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /buttontype:
-            jcr:primaryType: frontend:plugin
-            caption: Button type
-            field: buttontype
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              selectable.options: primary,secondary,reverse

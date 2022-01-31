@@ -12,11 +12,12 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 97382d63-4ebb-4a77-9d37-bf3873b871dd
     hippo:name: Working With The Public
-    hippo:versionHistory: 4f4ef90a-c62e-498e-ad51-7d87c26a08a8
+    hippo:versionHistory: 620673fc-9e06-4d71-aefc-cf39886c9071
     /working-with-the-public[1]:
       jcr:primaryType: hee:MiniHub
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 9f3e339a-2a38-4e10-aa3c-a343bf4ab505
+      hee:addToAZ: true
       hee:title: Patient and public information
       hippo:availability: []
       hippostd:holder: admin
@@ -24,7 +25,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-27T15:48:43.843Z
+      hippostdpubwf:lastModificationDate: 2022-01-26T01:43:00.392Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
       hippotranslation:locale: en
@@ -54,13 +55,14 @@
       jcr:primaryType: hee:MiniHub
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 3710f949-a31e-4d9f-839b-ecda26621471
+      hee:addToAZ: true
       hee:title: Patient and public information
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-27T15:44:30.818Z
+      hippostdpubwf:lastModificationDate: 2022-01-26T01:43:18.631Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
       hippotranslation:locale: en
@@ -90,15 +92,16 @@
       jcr:primaryType: hee:MiniHub
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 4db45efb-7fa3-4091-bcd3-211582574ff9
+      hee:addToAZ: true
       hee:title: Patient and public information
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-03T14:17:22.133+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-27T15:44:30.818Z
+      hippostdpubwf:lastModificationDate: 2022-01-26T01:43:18.631Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-01-27T15:44:33.308Z
+      hippostdpubwf:publicationDate: 2022-01-26T01:43:21.173Z
       hippotranslation:id: 6f0e4265-bce0-48a0-960a-0b1f015950ef
       hippotranslation:locale: en
       /hee:guidancePages[1]:
