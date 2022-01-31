@@ -11,19 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 6acedbaf-2c8e-4752-944d-aeb0696ed01a
+          jcr:uuid: 1dff74de-dd6b-41ad-b349-61070d5eaf79
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:title
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
           /contentItem:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -32,14 +23,7 @@ definitions:
             hipposysedit:path: hee:contentItem
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-          /display:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:display
-            hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -51,8 +35,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:title: ''
-          jcr:uuid: ed3b25a5-89a4-4398-b1de-f8398aa03614
+          jcr:uuid: a8adc7b9-25bf-4296-8d20-09df1a9be467
           hippostdpubwf:lastModificationDate: 2021-05-14T09:37:59.039+07:00
           hippostdpubwf:creationDate: 2021-05-14T09:37:59.039+07:00
           /hee:contentItem:
@@ -69,14 +52,6 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
-            jcr:primaryType: frontend:plugin
-            caption: Title
-            field: title
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /contentItem:
             jcr:primaryType: frontend:plugin
             caption: Content item
@@ -87,17 +62,3 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:person', 'hee:department']
-          /display:
-            jcr:primaryType: frontend:plugin
-            caption: Display
-            field: display
-            multiselect.type: checkboxes
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/contactcarddisplays
