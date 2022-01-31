@@ -1,10 +1,10 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#import "./link.ftl" as hlink>
 
-<#macro contentCards contentCards size="third">
+<#macro contentCards contentCards size="third" relatedContent=false>
     <#if contentCards.header?has_content>
         <div class="nhsuk-u-reading-width">
-            <h2>${contentCards.header}</h2>
+            <h2<#if relatedContent> data-anchorlinksignore="true"</#if>>${contentCards.header}</h2>
         </div>
     </#if>
     <#if contentCards.cardGroupSummary?has_content>
