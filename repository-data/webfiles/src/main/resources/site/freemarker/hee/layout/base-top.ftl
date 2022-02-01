@@ -13,6 +13,7 @@
     ${multiOrgLogoHTML}
 
     <#--  Base logo and org name & descriptor: START  -->
+    <div class="nhsuk-header__clear"></div>
     <div class="${hasMultiOrgLogo?then('nhsuk-header__multi-logo-organisation-name', 'nhsuk-header__logo')}">
         <a class="nhsuk-header__link" href="<@hst.link siteMapItemRefId="root"/>" aria-label="Home">
             <#if !hasMultiOrgLogo>
