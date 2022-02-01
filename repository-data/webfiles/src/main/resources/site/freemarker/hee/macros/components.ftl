@@ -19,3 +19,4 @@
 <#include "inset.ftl">
 <#include "button.ftl">
 <#include "details.ftl">
+<#include "expander.ftl">
