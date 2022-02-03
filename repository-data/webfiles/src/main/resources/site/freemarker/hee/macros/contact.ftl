@@ -2,16 +2,16 @@
 
 <#macro contact block>
     <#if block??>
-        <#if block.contentItems?size gt 1>
+        <#if block.contactItems?size gt 1>
             <ul class="nhsuk-grid-row nhsuk-contact-group">
-                <#list block.contentItems as item>
+                <#list block.contactItems as item>
                     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-                        <@contactItem.contactItem item=item />
+                            <@contactItem.contactItem item=item />
                     </li>
                 </#list>
             </ul>
         <#else>
-            <@contactItem.contactItem item=block.contentItems[0]/>
+            <@contactItem.contactItem item=block.contactItems[0] />
         </#if>
     </#if>
 </#macro>

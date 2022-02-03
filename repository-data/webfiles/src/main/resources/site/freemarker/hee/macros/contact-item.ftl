@@ -4,10 +4,10 @@
 
 <#macro contactItem item>
     <div class="nhsuk-contact">
-        <#if hst.isBeanType(item.contentItem, 'uk.nhs.hee.web.beans.Person')>
-            <@personContact.personContact person=item.contentItem isAuthor=true />
-        <#elseif hst.isBeanType(item.contentItem, 'uk.nhs.hee.web.beans.Department')>
-            <@departmentContact.departmentContact department=item.contentItem/>
+        <#if hst.isBeanType(item, 'uk.nhs.hee.web.beans.Person')>
+            <@personContact.personContact person=item isAuthor=true />
+        <#elseif hst.isBeanType(item, 'uk.nhs.hee.web.beans.Department')>
+            <@departmentContact.departmentContact department=item/>
         </#if>
     </div>
 </#macro>
