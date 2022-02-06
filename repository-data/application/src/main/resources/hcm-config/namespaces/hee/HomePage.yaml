@@ -11,18 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a7309c09-0252-44a1-aecf-5edb39320054
+          jcr:uuid: ccde5cf2-f801-4b9e-8fa6-c1b05295c484
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /HeroSection:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:HeroSection
-            hipposysedit:primary: false
-            hipposysedit:type: hee:HeroSection
           /contentBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -30,6 +22,42 @@ definitions:
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /summary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:summary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [optional]
+          /heroImage:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:heroImage
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -41,13 +69,20 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 7bcd3d43-bc55-434f-b7e1-3f9247a42782
+          jcr:uuid: d60cae92-7a78-42e7-b522-57dee90ab2e5
           hippostdpubwf:lastModificationDate: 2021-03-24T17:00:07.151+07:00
           hippostdpubwf:creationDate: 2021-03-24T17:00:07.151+07:00
-          /hee:HeroSection:
-            jcr:primaryType: hee:HeroSection
-            hee:header: ''
-            hee:text: ''
+          hee:title: ''
+          hee:summary: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -59,23 +94,52 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /HeroSection:
+          /title:
             jcr:primaryType: frontend:plugin
-            caption: Hero
-            field: HeroSection
+            caption: Page title
+            field: title
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Page title must be 60 characters or fewer.
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /summary:
+            jcr:primaryType: frontend:plugin
+            caption: Summary
+            field: summary
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /heroImage:
+            jcr:primaryType: frontend:plugin
+            caption: Hero image
+            field: heroImage
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:contact,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:navMap,hee:richTextReference,hee:StatementBlock,hee:tabsReference,hee:YellowAlertBlock
+            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:contact,hee:contentCards,hee:detailsReference,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:navMap,hee:richTextReference,hee:StatementBlock,hee:tabsReference,hee:YellowAlertBlock
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'

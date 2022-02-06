@@ -4,6 +4,7 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
+<#include "../macros/hero-section.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
@@ -13,13 +14,20 @@
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 
 <#if document??>
+    <#assign showHero=false>
+    <#if document.heroImage??>
+        <#assign showHero=true>
+        <@heroSection document=document />
+    </#if>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html"
           xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
-            <h1>
-                ${document.title}
-            </h1>
-            <p class="nhsuk-lede-text">${document.summary}</p>
+            <#if showHero=false>
+                <h1>${document.title}</h1>
+                <#if document.summary??>
+                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                </#if>
+            </#if>
             <form method="get" action="">
                 <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
                     <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>

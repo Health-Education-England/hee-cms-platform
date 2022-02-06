@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b8984fdd-80f0-40ea-81e2-c08a6b388c02
+          jcr:uuid: 0628360c-5145-4811-962a-4007b86575ab
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -89,6 +89,15 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -100,7 +109,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 22d4d85c-4e18-4bc6-85fb-342eb3c77a85
+          jcr:uuid: 87a5e8fc-b6cd-425a-bac9-cd7fde57c78a
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -116,6 +125,7 @@ definitions:
             jcr:primaryType: hee:blogComment
             hee:message: ''
             hee:postedDate: 0001-01-01T12:00:00Z
+            hee:moderated: false
             /hee:author:
               jcr:primaryType: hee:blogCommentAuthor
               hee:email: ''
@@ -123,6 +133,9 @@ definitions:
               hee:string_: ''
               hee:firstName: ''
               hee:lastName: ''
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -196,10 +209,20 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:anchorLinks,hee:mediaEmbedReference,hee:blockLinksReference,hee:contact,hippostd:html,hippogallerypicker:imagelink,hee:richTextReference,hee:tabsReference
+            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contact,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:richTextReference,hee:tabsReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -217,6 +240,17 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /rightHandBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Right hand objects
+            compoundList: hee:contactCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
+            contentPickerType: links
+            field: rightHandBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /comments:
             jcr:primaryType: frontend:plugin
             caption: Comments
@@ -226,14 +260,3 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /rightHandBlocks:
-            jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:QuickLinks,hee:contactCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference
-            contentPickerType: links
-            field: rightHandBlocks
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'

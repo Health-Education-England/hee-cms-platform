@@ -36,6 +36,11 @@ public enum ValueListIdentifier {
     CASE_STUDY_REGIONS("caseStudyRegions"),
 
     /**
+     * {@code logoTypes} value-list identifier.
+     */
+    LOGO_TYPES("logoTypes"),
+
+    /**
      * {@code navMapRegions} value-list identifier.
      */
     NAV_MAP_REGIONS("navMapRegions"),
@@ -53,7 +58,12 @@ public enum ValueListIdentifier {
     /**
      * {@code searchBankTopics} value-list identifier.
      */
-    SEARCH_BANK_TOPICS("searchBankTopics");
+    SEARCH_BANK_TOPICS("searchBankTopics"),
+
+    /**
+     * {@code newsCategories} value-list identifier.
+     */
+    NEWS_CATEGORIES("newsCategories");
 
 
     private final String name;

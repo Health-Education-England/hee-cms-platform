@@ -1,0 +1,66 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/expanderGroup:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: d965f915-0e63-431f-b6a5-1b56b533be7c
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d77c85e8-1314-4b8f-9168-8e087624b223
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 53977fde-e48b-4b37-b11f-02fe60937a18
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /expanderPanel:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:expanderPanel
+            hipposysedit:primary: false
+            hipposysedit:type: hee:expanderPanel
+            hipposysedit:validators: [required]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:expanderGroup
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 0740643c-2e93-459a-b29c-b0e37bcf0c47
+          hippostdpubwf:lastModificationDate: 2022-01-27T16:00:31.179Z
+          hippostdpubwf:creationDate: 2022-01-27T16:00:31.179Z
+          /hee:expanderPanel:
+            jcr:primaryType: hee:expanderPanel
+            hee:expanderSummary: ''
+            /hee:expanderDetails:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /expanderPanel:
+            jcr:primaryType: frontend:plugin
+            caption: Expander panel
+            field: expanderPanel
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

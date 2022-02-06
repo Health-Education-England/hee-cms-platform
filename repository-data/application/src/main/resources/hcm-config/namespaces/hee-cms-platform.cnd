@@ -23,6 +23,12 @@
 [hee:HomePage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:inset] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:insetReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:MiniHub] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -38,10 +44,10 @@
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
   orderable
 
-[hee:mediaEmbed] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+[hee:atozPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:mediaEmbedReference] > hippo:compound, hippostd:relaxed
+[hee:banner] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:blockLinks] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -60,6 +66,12 @@
   orderable
 
 [hee:bulletin] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:button] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:buttonReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:caseStudy] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -89,7 +101,22 @@
 [hee:department] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:details] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:detailsReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:expanderGroup] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:expanderGroupReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:expanderPanel] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:externalLink] > hippo:compound, hippostd:relaxed
@@ -115,6 +142,15 @@
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
+[hee:internalLink] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:internalLinksCard] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:internalLinksCardReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:landingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -127,19 +163,31 @@
 [hee:listingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:logo] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:logoGroup] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:mediaEmbed] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:mediaEmbedReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:navMap] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:navMapLink] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:news] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:person] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:banner] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:richTextBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated

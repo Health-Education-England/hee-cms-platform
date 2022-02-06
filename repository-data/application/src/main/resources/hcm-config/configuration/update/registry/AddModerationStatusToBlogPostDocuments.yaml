@@ -1,0 +1,23 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/AddModerationStatusToBlogPostDocuments:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Adds moderation status i.e. 'hee:moderated' property to
+        existing comments of the blog post documents (hee:blogPost).
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(hee:comments, hee:blogComment)[not(@hee:moderated
+        != '')]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\n\
+        import javax.jcr.Node\r\n\r\nclass AddModerationStatusToBlogPostDocuments\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Updating node ${node.path}\"\r\n        node.setProperty(\"\
+        hee:moderated\", Boolean.TRUE)\r\n        log.debug \"Successfully added 'hee:moderated=true'\
+        \ property to the blog post comment node '${node.path}'\"\r\n        return\
+        \ true\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw\
+        \ new UnsupportedOperationException('Updater does not implement undoUpdate\
+        \ method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

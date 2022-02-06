@@ -17,4 +17,9 @@ public class ContentCards extends HippoCompound {
     public List<ContentCard> getCards() {
         return getLinkedBeans("hee:cards", ContentCard.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:cardGroupSummary")
+    public String getCardGroupSummary() {
+        return getSingleProperty("hee:cardGroupSummary");
+    }
 }

@@ -143,9 +143,6 @@ definitions:
           /base-breadcrumb:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-breadcrumb.ftl
-          /base-parent-link:
-            jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/layout/base-parent-link.ftl
           /minihub-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/pages/minihub-main.ftl
@@ -184,7 +181,19 @@ definitions:
             hst:renderpath: webfile:/freemarker/hee/catalog/cookies-main.ftl
           /base-banner:
             jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/layout/banner.ftl
+            hst:renderpath: webfile:/freemarker/hee/layout/base-banner.ftl
+          /news-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/news-main.ftl
+          /multi-org-logo:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/multi-org-logo.ftl
+          /base-cookies-banner:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/layout/base-cookies-banner.ftl
+          /atozlisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/atozlisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -221,7 +230,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin & Blog]
+              hst:label: Category based Listing Page [Bulletin, Blog & News]
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -247,6 +256,24 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Search Bank Listing Page
               hst:template: searchbanklisting-main
+            /news:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: News
+              hst:template: news-main
+            /multi-org-logo:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+              hst:iconpath: images/catalog-component-icons/carousel.svg
+              hst:label: Multi org logo
+              hst:template: multi-org-logo
+            /a-to-z-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.AToZListingPageComponent
+              hst:iconpath: images/catalog-component-icons/generic-list.svg
+              hst:label: A to Z Listing Page
+              hst:template: atozlisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

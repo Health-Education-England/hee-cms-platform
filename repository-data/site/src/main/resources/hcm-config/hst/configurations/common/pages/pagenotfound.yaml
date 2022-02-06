@@ -10,3 +10,11 @@ definitions:
         /container:
           jcr:primaryType: hst:containercomponentreference
           hst:referencecomponent: pagenotfound/main
+      /header:
+        jcr:primaryType: hst:component
+        /top:
+          jcr:primaryType: hst:component
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+            hst:template: multi-org-logo

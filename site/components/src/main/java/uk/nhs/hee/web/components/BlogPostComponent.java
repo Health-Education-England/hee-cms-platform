@@ -35,7 +35,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
 
             addBlogListingPageURLToModel(request);
 
-            final List<BlogComment> comments = blogPost.getComments();
+            final List<BlogComment> comments = getModeratedComments(blogPost.getComments());
             request.setModel("totalComments", comments.size());
 
             if (comments.isEmpty()) {
@@ -95,6 +95,19 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                 blogCategories.stream()
                         .filter(category -> allBlogCategoriesValueListMap.get(category) != null)
                         .collect(Collectors.toMap(category -> category, allBlogCategoriesValueListMap::get)));
+    }
+
+}
+    /**
+     * Returns moderated comments i.e. the comments whose {@code hee:moderated} property is {@code true}.
+     *
+     * @param comments the list of all blog comments.
+     * @return the moderated comments.
+     */
+    private List<BlogComment> getModeratedComments(final List<BlogComment> comments) {
+        return comments.stream()
+                .filter(comment -> Boolean.TRUE.equals(comment.getModerated()))
+                .collect(Collectors.toList());
     }
 
 }

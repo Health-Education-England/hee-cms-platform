@@ -7,3 +7,13 @@ definitions:
         jcr:primaryType: hst:component
         hst:componentclassname: uk.nhs.hee.web.components.HomePageComponent
         hst:template: homepage-main
+      /header:
+        jcr:primaryType: hst:component
+        /top:
+          jcr:primaryType: hst:component
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+            hst:template: multi-org-logo
+            hst:parameternames: [document]
+            hst:parametervalues: [home]
