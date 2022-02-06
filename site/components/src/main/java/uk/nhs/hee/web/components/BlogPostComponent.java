@@ -97,7 +97,6 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                         .collect(Collectors.toMap(category -> category, allBlogCategoriesValueListMap::get)));
     }
 
-}
     /**
      * Returns moderated comments i.e. the comments whose {@code hee:moderated} property is {@code true}.
      *
