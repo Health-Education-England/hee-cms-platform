@@ -56,7 +56,12 @@ public class AToZListingPageComponent extends EssentialsDocumentComponent {
         for (char ch = 'A'; ch <= 'Z'; ++ch)
             atozmap.put(String.valueOf(ch), null);
 
-        final AtozPage atozPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+        AtozPage atozPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+
+        if (atozPage == null) {
+            atozPage = (AtozPage) request.getRequestContext().getContentBean();
+        }
+        request.setModel(REQUEST_ATTR_DOCUMENT, atozPage);
 
         final HstQuery query = buildQuery(request, atozPage);
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));

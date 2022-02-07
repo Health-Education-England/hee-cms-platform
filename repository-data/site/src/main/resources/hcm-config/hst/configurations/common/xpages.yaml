@@ -26,3 +26,11 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
           hst:template: landingpage-main
+      /atoz-page:
+        jcr:primaryType: hst:xpage
+        hst:label: A to Z page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.AToZListingPageComponent
+          hst:template: atozlisting-main

@@ -398,11 +398,12 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 142c94a0-791f-4cba-91b0-e36fc149a3e3
       hippo:name: Standard content page
-      hippo:versionHistory: 76485ac9-5876-4ae2-a3a6-6818069482d0
+      hippo:versionHistory: d01119f3-e7ab-455c-82d1-4a555c96b732
       /standard-content-page[1]:
         jcr:primaryType: hee:guidance
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
         jcr:uuid: e06df73c-328c-4cfa-b3bb-010f6379b26c
+        hee:addToAZ: true
         hee:summary: Example standard content page
         hee:title: 'Page type: Standard content page'
         hippo:availability: []
@@ -410,12 +411,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-20T00:12:04.711Z
-        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:04.711Z
+        hippostdpubwf:lastModificationDate: 2022-02-07T00:06:19.368Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 6fc4cb6c-6c4d-4cb7-8a48-d1df6baa0241
         hippotranslation:locale: document-type-locale
         /hee:relatedContent:
           jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
           hee:header: ''
           /hee:cards:
             jcr:primaryType: hippo:mirror
@@ -427,10 +429,17 @@
         /hee:contentBlocks:
           jcr:primaryType: hippostd:html
           hippostd:content: ''
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
       /standard-content-page[2]:
         jcr:primaryType: hee:guidance
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
         jcr:uuid: 60a5efc5-2aee-4beb-8847-edb3003ca24b
+        hee:addToAZ: true
         hee:summary: Example standard content page
         hee:title: 'Page type: Standard content page'
         hippo:availability: [preview]
@@ -438,12 +447,17 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-20T00:12:04.711Z
-        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:29.488Z
+        hippostdpubwf:lastModificationDate: 2022-02-07T00:06:24.929Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 6fc4cb6c-6c4d-4cb7-8a48-d1df6baa0241
         hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 6dd72abc-503e-4c27-8994-119519893df4
+          hst:pageref: guidance-page
         /hee:relatedContent:
           jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
           hee:header: ''
           /hee:cards:
             jcr:primaryType: hippo:mirror
@@ -455,14 +469,17 @@
         /hee:contentBlocks:
           jcr:primaryType: hippostd:html
           hippostd:content: ''
-        /hst:xpage:
-          jcr:primaryType: hst:xpage
-          jcr:uuid: 6dd72abc-503e-4c27-8994-119519893df4
-          hst:pageref: guidance-page
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
       /standard-content-page[3]:
         jcr:primaryType: hee:guidance
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
         jcr:uuid: 1dd2510b-7a3f-4ce7-a75e-1f528c19b95c
+        hee:addToAZ: true
         hee:summary: Example standard content page
         hee:title: 'Page type: Standard content page'
         hippo:availability: [live]
@@ -470,13 +487,18 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-20T00:12:04.711Z
-        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:29.488Z
+        hippostdpubwf:lastModificationDate: 2022-02-07T00:06:24.929Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-11-20T00:12:31.431Z
+        hippostdpubwf:publicationDate: 2022-02-07T00:06:27.507Z
         hippotranslation:id: 6fc4cb6c-6c4d-4cb7-8a48-d1df6baa0241
         hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 617ed349-49a1-4751-b9d2-fe10287924b8
+          hst:pageref: guidance-page
         /hee:relatedContent:
           jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
           hee:header: ''
           /hee:cards:
             jcr:primaryType: hippo:mirror
@@ -488,10 +510,75 @@
         /hee:contentBlocks:
           jcr:primaryType: hippostd:html
           hippostd:content: ''
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+    /a-to-z:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 90cdffef-80d1-429d-9bd3-0d473f3b102b
+      hippo:name: A to Z
+      hippo:versionHistory: 16b23cad-27e0-4285-8bba-abb6527d99c0
+      /a-to-z[1]:
+        jcr:primaryType: hee:atozPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 45520358-9a20-4f39-b924-183d4a4a6ffe
+        hee:summary: Displays Standard content pages, Landing pages, Listing pages
+          and Minihubs that have been added to the A to Z.
+        hee:title: A to Z Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-06T23:18:16.156Z
+        hippostdpubwf:lastModificationDate: 2022-02-06T23:18:16.156Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: ff70e4c2-9f70-41aa-922c-6f638a75fdd4
+        hippotranslation:locale: document-type-locale
+      /a-to-z[2]:
+        jcr:primaryType: hee:atozPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: 54bfca0a-2876-4c51-83d0-04e76eade05e
+        hee:summary: Displays Standard content pages, Landing pages, Listing pages
+          and Minihubs that have been added to the A to Z.
+        hee:title: A to Z Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-06T23:18:16.156Z
+        hippostdpubwf:lastModificationDate: 2022-02-06T23:20:12.331Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: ff70e4c2-9f70-41aa-922c-6f638a75fdd4
+        hippotranslation:locale: document-type-locale
         /hst:xpage:
           jcr:primaryType: hst:xpage
-          jcr:uuid: 7fbfb3ca-85b6-4890-967a-22c293d8fc88
-          hst:pageref: guidance-page
+          jcr:uuid: 12622f38-4c8d-4cd0-842e-80ee50600a37
+          hst:pageref: atoz-page
+      /a-to-z[3]:
+        jcr:primaryType: hee:atozPage
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 79af78f6-910b-4114-a1a6-034d0cc2e216
+        hee:summary: Displays Standard content pages, Landing pages, Listing pages
+          and Minihubs that have been added to the A to Z.
+        hee:title: A to Z Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-06T23:18:16.156Z
+        hippostdpubwf:lastModificationDate: 2022-02-06T23:20:12.331Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-06T23:20:15.114Z
+        hippotranslation:id: ff70e4c2-9f70-41aa-922c-6f638a75fdd4
+        hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 28b2eefd-ec7b-4cbe-a7b2-8d413507e2a9
+          hst:pageref: atoz-page
   /components-library:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
