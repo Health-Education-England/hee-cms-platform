@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: d83669e2-039e-4239-96fa-2b39ac7ba539
   hippo:name: HomeToKnowledgeStaffRedirect
-  hippo:versionHistory: e9ab657b-09a9-46c6-ad17-b6a90ad516a4
+  hippo:versionHistory: fca6f207-fe65-4fb9-ac00-30e41ba021b6
   /hometoknowledgestaffredirect[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -13,17 +13,17 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-05-25T15:08:26.297+01:00
+    hippostdpubwf:lastModificationDate: 2022-01-05T11:50:23.382Z
     hippostdpubwf:lastModifiedBy: admin
     hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
-    urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
-      \ other than 'library.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
-      equal\">library.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"\
-      permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\n</rule>\r\n\r\n\
-      <rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
-      \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/$</from>\r\n    <to type=\"permanent-redirect\" last=\"true\"\
-      >/site/knowledge-staff</to>\r\n</rule>"
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\" last=\"true\"\
+      >/knowledge-staff</to>\r\n</rule>\r\n\r\n<rule>\r\n    <name>Home to Knowledge\
+      \ Staff Redirect for hosts other than 'hee.nhs.uk'</name>\r\n    <condition\
+      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\
+      \n    <to type=\"temporary-redirect\" last=\"true\">/site/knowledge-staff</to>\r\
+      \n</rule>"
   /hometoknowledgestaffredirect[2]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -33,16 +33,16 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-05-25T15:08:29.434+01:00
+    hippostdpubwf:lastModificationDate: 2022-01-05T11:50:51.489Z
     hippostdpubwf:lastModifiedBy: admin
-    urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
-      \ other than 'library.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
-      equal\">library.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"\
-      permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\n</rule>\r\n\r\n\
-      <rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
-      \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/$</from>\r\n    <to type=\"permanent-redirect\" last=\"true\"\
-      >/site/knowledge-staff</to>\r\n</rule>"
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\" last=\"true\"\
+      >/knowledge-staff</to>\r\n</rule>\r\n\r\n<rule>\r\n    <name>Home to Knowledge\
+      \ Staff Redirect for hosts other than 'hee.nhs.uk'</name>\r\n    <condition\
+      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\
+      \n    <to type=\"temporary-redirect\" last=\"true\">/site/knowledge-staff</to>\r\
+      \n</rule>"
   /hometoknowledgestaffredirect[3]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -52,14 +52,14 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2021-05-25T15:08:29.434+01:00
+    hippostdpubwf:lastModificationDate: 2022-01-05T11:50:51.489Z
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-05-25T15:08:31.158+01:00
-    urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
-      \ other than 'library.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
-      equal\">library.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"\
-      permanent-redirect\" last=\"true\">/knowledge-staff</to>\r\n</rule>\r\n\r\n\
-      <rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
-      \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
-      \n    <from>^/$</from>\r\n    <to type=\"permanent-redirect\" last=\"true\"\
-      >/site/knowledge-staff</to>\r\n</rule>"
+    hippostdpubwf:publicationDate: 2022-01-05T11:50:53.415Z
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\" last=\"true\"\
+      >/knowledge-staff</to>\r\n</rule>\r\n\r\n<rule>\r\n    <name>Home to Knowledge\
+      \ Staff Redirect for hosts other than 'hee.nhs.uk'</name>\r\n    <condition\
+      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\
+      \n    <to type=\"temporary-redirect\" last=\"true\">/site/knowledge-staff</to>\r\
+      \n</rule>"

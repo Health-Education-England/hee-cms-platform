@@ -1,9 +1,10 @@
 /content/documents/administration/labels/global:
+  .meta:order-before: blogpost
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: ddea0877-7b8c-47f3-8780-e2b0065519d4
   hippo:name: Global
-  hippo:versionHistory: 888db744-d900-4ef4-b94b-de09d0cd663f
+  hippo:versionHistory: 51a263ed-afab-4a23-8d2c-a97608ac84ad
   /global[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -13,19 +14,24 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2021-10-07T18:55:37.426+01:00
+    hippostdpubwf:lastModificationDate: 2021-12-31T16:55:02.379Z
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-10-07T18:55:42.929+01:00
-    resourcebundle:descriptions: ['', '', '', '', '', '', 'Breadcrumb ''Back to''
-        text [for mobile]', '', '']
+    hippostdpubwf:publicationDate: 2021-12-31T16:55:04.436Z
+    resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
+        [for mobile]', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.global
     resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
-      header.parent-link, next, previous, breadcrumb.backto, media-last-reviewed,
-      media-next-review]
+      next, previous, breadcrumb.backto, media-last-reviewed, media-next-review, cookie.banner.title,
+      cookie.banner.text, cookie.button.accept, cookie.button.reject, cookie.toggle.text]
     resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
-      'Part of <a target="_blank" href="https://www.hee.nhs.uk/">NHS Health Education
-        England (opens in a new window)</a>', Next, Previous, Back to, Media last
-        reviewed, Media next review due]
+      Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
+      <p>We use some essential cookies to make this website work. We’d like to set
+        some additional cookies to understand how you use the website and to improve
+        it. We also use cookies set by other sites to help us deliver content from
+        their services. <a href="##COOKIES_PAGE##" title="Cookie Policy">You can read
+        more about our cookies</a> before you choose.</p>, Accept additional cookies,
+      Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+        to</span><span class="nhsuk__cookiesOut">out of</span> using additional cookies.]
   /global[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -35,18 +41,23 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2021-10-07T18:55:37.426+01:00
+    hippostdpubwf:lastModificationDate: 2021-12-31T16:55:02.379Z
     hippostdpubwf:lastModifiedBy: admin
-    resourcebundle:descriptions: ['', '', '', '', '', '', 'Breadcrumb ''Back to''
-        text [for mobile]', '', '']
+    resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
+        [for mobile]', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.global
     resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
-      header.parent-link, next, previous, breadcrumb.backto, media-last-reviewed,
-      media-next-review]
+      next, previous, breadcrumb.backto, media-last-reviewed, media-next-review, cookie.banner.title,
+      cookie.banner.text, cookie.button.accept, cookie.button.reject, cookie.toggle.text]
     resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
-      'Part of <a target="_blank" href="https://www.hee.nhs.uk/">NHS Health Education
-        England (opens in a new window)</a>', Next, Previous, Back to, Media last
-        reviewed, Media next review due]
+      Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
+      <p>We use some essential cookies to make this website work. We’d like to set
+        some additional cookies to understand how you use the website and to improve
+        it. We also use cookies set by other sites to help us deliver content from
+        their services. <a href="##COOKIES_PAGE##" title="Cookie Policy">You can read
+        more about our cookies</a> before you choose.</p>, Accept additional cookies,
+      Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+        to</span><span class="nhsuk__cookiesOut">out of</span> using additional cookies.]
   /global[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -56,15 +67,20 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
-    hippostdpubwf:lastModificationDate: 2021-10-07T18:49:04.087+01:00
+    hippostdpubwf:lastModificationDate: 2021-12-31T16:54:28.857Z
     hippostdpubwf:lastModifiedBy: admin
-    resourcebundle:descriptions: ['', '', '', '', '', '', 'Breadcrumb ''Back to''
-        text [for mobile]', '', '']
+    resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
+        [for mobile]', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.global
     resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
-      header.parent-link, next, previous, breadcrumb.backto, media-last-reviewed,
-      media-next-review]
+      next, previous, breadcrumb.backto, media-last-reviewed, media-next-review, cookie.banner.title,
+      cookie.banner.text, cookie.button.accept, cookie.button.reject, cookie.toggle.text]
     resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
-      'Part of <a target="_blank" href="https://www.hee.nhs.uk/">NHS Health Education
-        England (opens in a new window)</a>', Next, Previous, Back to, Media last
-        reviewed, Media next review due]
+      Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
+      <p>We use some essential cookies to make this website work. We’d like to set
+        some additional cookies to understand how you use the website and to improve
+        it. We also use cookies set by other sites to help us deliver content from
+        their services. <a href="##COOKIES_PAGE##" title="Cookie Policy">You can read
+        more about our cookies</a> before you choose.</p>, Accept additional cookies,
+      Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+        to</span><span class="nhsuk__cookiesOut">out of</span> using additional cookies.]

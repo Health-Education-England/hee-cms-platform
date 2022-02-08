@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8aee0794-c1b7-4b86-86b8-3df779ad3365
+          jcr:uuid: 13c5819c-7916-4a5f-b31b-99c6c885f9b5
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,7 @@ definitions:
             hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [required]
           /summary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -31,14 +32,39 @@ definitions:
             hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-          /contentCards:
+            hipposysedit:validators: [optional]
+          /heroImage:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:contentCards
+            hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
-            hipposysedit:type: hee:contentCards
+            hipposysedit:type: hippogallerypicker:imagelink
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
+          /boolean:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:addToAZ
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -52,15 +78,19 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 7dae64bf-4f8c-40f4-93b8-e098cbec1f31
+          jcr:uuid: 0b60676e-a8f9-4779-ac2f-be4dbec864ef
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
-          /hee:contentCards:
-            jcr:primaryType: hee:contentCards
-            hee:header: ''
-            /hee:cards:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hee:addToAZ: false
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -78,6 +108,7 @@ definitions:
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Page title must be 60 characters or fewer.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /summary:
@@ -86,13 +117,43 @@ definitions:
             field: summary
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /contentCards:
+          /heroImage:
             jcr:primaryType: frontend:plugin
-            caption: Navigation cards
-            field: contentCards
+            caption: Hero image
+            field: heroImage
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Main content blocks
+            compoundList: hee:contentCards
+            contentPickerType: links
+            field: contentBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /addToAZ:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: boolean
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:

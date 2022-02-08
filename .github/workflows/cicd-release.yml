@@ -103,7 +103,7 @@ jobs:
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'production' env
-        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
+        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.1
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -111,3 +111,4 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
+          configFilesAsSystemProperties: 'hee-smtp.properties'

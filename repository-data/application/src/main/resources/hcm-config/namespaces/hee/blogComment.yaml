@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 3b442b4b-c555-4cad-8421-2cc58baf23d5
+          jcr:uuid: 3a0bd648-b44f-42e1-bdc7-5ff935b8e76f
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -39,12 +39,21 @@ definitions:
             hipposysedit:path: hee:postedDate
             hipposysedit:primary: false
             hipposysedit:type: Date
+          /moderated:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:moderated
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:blogComment
           hee:message: ''
           hee:postedDate: 0001-01-01T19:00:00+07:00
+          hee:moderated: false
           /hee:author:
             jcr:primaryType: hee:blogCommentAuthor
             hee:email: ''
@@ -84,6 +93,15 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Posted date
             field: postedDate
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /moderated:
+            jcr:primaryType: frontend:plugin
+            caption: Moderated ?
+            field: moderated
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field

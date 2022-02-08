@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context>
+    <!-- Disable session persistence across Tomcat restarts -->
+    <Manager pathname="" />
+
+    <!-- Change the default repository storage location -->
+    <!--
+    <Parameter name="repository-directory" value="/data/storage" override="false"/>
+    -->
+
+    <!-- Start the repository as a remote server and bind it on the specified address -->
+    <!--
+    <Parameter name="start-remote-server" value="true" override="false"/>
+    <Parameter name="repository-address" value="rmi://127.0.0.1:1099/hipporepository" override="false"/>
+    -->
+
+    <!-- Enable this to let wicket output a wicketpath attribute for elements,
+         see: https://www.onehippo.org/library/development/create-a-selenium-test-case.html -->
+    <!--
+    <Parameter name="output-wicketpaths" value="true"/>
+    -->
+
+    <!-- 'mail/Session' JavaMail connection factory JNDI resource -->
+    <Resource name="mail/Session"
+              auth="Container"
+              type="javax.mail.Session"
+              mail.transport.protocol="smtp"
+              mail.smtp.host="${mail.smtp.host}"
+              mail.smtp.port="${mail.smtp.port}"
+              mail.smtp.user="${mail.smtp.user}"
+              password="${mail.smtp.password}"
+              mail.smtp.auth="${mail.smtp.auth}"
+              mail.smtp.starttls.enable="${mail.smtp.starttls.enable}"/>
+</Context>

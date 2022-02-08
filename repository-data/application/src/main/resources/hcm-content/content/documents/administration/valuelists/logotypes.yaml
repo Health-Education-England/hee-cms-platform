@@ -1,0 +1,28 @@
+/content/documents/administration/valuelists/logotypes:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 2bd43d5b-3d8f-43e3-8190-8807ab88abbe
+  hippo:name: LogoTypes
+  /logotypes:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: c7462958-ec9a-4112-ab0a-89d600b10572
+    hippo:availability: [live, preview]
+    hippotranslation:id: c426b916-89b1-4e8a-964e-922d70a14151
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: hee
+      selection:label: Health Education England
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: nimdta
+      selection:label: Northern Ireland Medical & Dental Training Agency
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: nes
+      selection:label: NHS Education for Scotland
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: heiw
+      selection:label: Health Education and Improvement Wales
