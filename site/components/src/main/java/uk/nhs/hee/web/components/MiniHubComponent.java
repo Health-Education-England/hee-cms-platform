@@ -23,7 +23,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
         request.setModel(REQUEST_ATTR_DOCUMENT, miniHub);
         if (miniHub != null) {
             // When the page accessed from URL minihubName/guidanceName, request will be forward to te related _default_ sitemap item
-            boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
+            boolean accessWithGuidancePath = false; //request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
             Guidance previousGuidance = null, nextGuidance = null, currentGuidance = null;
             boolean accessFromRootHub = false;
             List<Guidance> guidancePages = miniHub.getGuidancePages();
