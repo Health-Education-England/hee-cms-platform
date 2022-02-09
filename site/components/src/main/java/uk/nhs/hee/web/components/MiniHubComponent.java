@@ -17,6 +17,10 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
         super.doBeforeRender(request, response);
 
         MiniHub miniHub = request.getModel(REQUEST_ATTR_DOCUMENT);
+        if (miniHub == null) {
+            miniHub = (MiniHub) request.getRequestContext().getContentBean();
+        }
+        request.setModel(REQUEST_ATTR_DOCUMENT, miniHub);
         if (miniHub != null) {
             // When the page accessed from URL minihubName/guidanceName, request will be forward to te related _default_ sitemap item
             boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();

@@ -574,6 +574,232 @@
             /hee:document:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 142c94a0-791f-4cba-91b0-e36fc149a3e3
+      /minihub-page-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 1957ca6a-45a0-4540-9705-1b9f6ef5febf
+        hippo:name: Minihub page example
+        hippo:versionHistory: 5941cbc1-967a-4003-aa4e-ace5e87bda76
+        /minihub-page-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: f32f05be-33b8-4b6d-a446-067639ffa29f
+          hee:description: Example of page using Mnihub page document type
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-09T00:29:57.815Z
+          hippostdpubwf:lastModificationDate: 2022-02-09T00:29:57.815Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 183f40ba-0c3c-49bd-ab13-a8099cf07260
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 851027c3-34a9-4443-9d37-b0a88f990f12
+            hee:openLinkUrlNewWindow: false
+            hee:text: Minihub page example
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: fc919a83-5920-4a83-8747-76e54865ea9f
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /minihub-page-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: fd486561-848a-4330-8356-427b95d058cc
+          hee:description: Example of page using Mnihub page document type
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-09T00:29:57.815Z
+          hippostdpubwf:lastModificationDate: 2022-02-09T00:30:54.282Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 183f40ba-0c3c-49bd-ab13-a8099cf07260
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: Minihub page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: fc919a83-5920-4a83-8747-76e54865ea9f
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /minihub-page-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: c0b743e7-74cc-4211-8913-a6496e01a9c7
+          hee:description: Example of page using Mnihub page document type
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-09T00:29:57.815Z
+          hippostdpubwf:lastModificationDate: 2022-02-09T00:30:54.282Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-09T00:30:56.601Z
+          hippotranslation:id: 183f40ba-0c3c-49bd-ab13-a8099cf07260
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: Minihub page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: fc919a83-5920-4a83-8747-76e54865ea9f
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /a-to-z-page-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 883653f6-6f05-40b6-a767-fbb4686fbfb6
+        hippo:name: A to Z page example
+        hippo:versionHistory: ab67db69-bca8-4ba8-b5de-9bf6bd6c38fd
+        /a-to-z-page-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: faaf5e16-ae80-4909-86ad-c381840e5d5a
+          hee:description: Example of page using A to Z page document type
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-09T00:33:07.845Z
+          hippostdpubwf:lastModificationDate: 2022-02-09T00:33:07.845Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: a0bf86e3-c9c0-4a36-9ead-1523f53299ed
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: f674c001-481d-41e0-ba8e-915dfdc9d6da
+            hee:openLinkUrlNewWindow: false
+            hee:text: A to Z page example
+            hee:url: ''
+            hippostd:holder: holder
+            hippostd:state: draft
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 90cdffef-80d1-429d-9bd3-0d473f3b102b
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /a-to-z-page-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: e8350acb-14ab-4aac-8c06-85d16dabb22c
+          hee:description: Example of page using A to Z page document type
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-09T00:33:07.845Z
+          hippostdpubwf:lastModificationDate: 2022-02-09T00:33:40.998Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: a0bf86e3-c9c0-4a36-9ead-1523f53299ed
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: A to Z page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 90cdffef-80d1-429d-9bd3-0d473f3b102b
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /a-to-z-page-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: a281218b-4dd3-4b9b-9106-0d7c48514ed3
+          hee:description: Example of page using A to Z page document type
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-09T00:33:07.845Z
+          hippostdpubwf:lastModificationDate: 2022-02-09T00:33:40.998Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-09T00:33:42.941Z
+          hippotranslation:id: a0bf86e3-c9c0-4a36-9ead-1523f53299ed
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: A to Z page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 90cdffef-80d1-429d-9bd3-0d473f3b102b
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
   /richtext-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

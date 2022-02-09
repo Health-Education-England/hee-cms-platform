@@ -13,17 +13,19 @@
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 254e1c0c-1f31-4203-af5c-1b8b71092fba
-    hippo:versionHistory: 55862c76-4362-4d26-84b6-04fe9679395a
+    hippo:versionHistory: 1bd4bf4b-7dce-434d-af29-46a3bdf5e400
     /index[1]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
       jcr:uuid: bfdc9288-71a9-469c-a045-681c525769c9
+      hee:summary: Reference build for the nwps platform built on brXM.
+      hee:title: NWPS Application Reference
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
-      hippostdpubwf:lastModificationDate: 2021-11-20T00:05:25.626Z
+      hippostdpubwf:lastModificationDate: 2022-02-09T00:34:57.156Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: acbc524d-0f10-47da-9dcd-82ec88613a52
       hippotranslation:locale: en
@@ -33,9 +35,10 @@
         hee:text: Hero text
       /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
-        hippostd:content: <p>Main content objects rich text</p>
+        hippostd:content: ''
       /hee:contentBlocks[2]:
         jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
         hee:header: Navigation cards
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
@@ -50,12 +53,14 @@
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: d1121169-380d-42c9-851d-8a81d5906388
+      hee:summary: Reference build for the nwps platform built on brXM.
+      hee:title: NWPS Application Reference
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
-      hippostdpubwf:lastModificationDate: 2021-11-20T00:05:49.181Z
+      hippostdpubwf:lastModificationDate: 2022-02-09T00:36:19.290Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: acbc524d-0f10-47da-9dcd-82ec88613a52
       hippotranslation:locale: en
@@ -69,9 +74,10 @@
         hee:text: Hero text
       /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
-        hippostd:content: <p>Main content objects rich text</p>
+        hippostd:content: ''
       /hee:contentBlocks[2]:
         jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
         hee:header: Navigation cards
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
@@ -86,19 +92,21 @@
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
       jcr:uuid: ba33e558-4da2-4344-8e6d-6053e31bdb88
+      hee:summary: Reference build for the nwps platform built on brXM.
+      hee:title: NWPS Application Reference
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
-      hippostdpubwf:lastModificationDate: 2021-11-20T00:05:49.181Z
+      hippostdpubwf:lastModificationDate: 2022-02-09T00:36:19.290Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-11-20T00:05:50.723Z
+      hippostdpubwf:publicationDate: 2022-02-09T00:36:22.282Z
       hippotranslation:id: acbc524d-0f10-47da-9dcd-82ec88613a52
       hippotranslation:locale: en
       /hst:xpage:
         jcr:primaryType: hst:xpage
-        jcr:uuid: 9b3c7a4d-34da-4909-9d48-232fafffa520
+        jcr:uuid: 027f9f2f-50c9-4055-806c-0a733855157d
         hst:pageref: home-page
       /hee:HeroSection:
         jcr:primaryType: hee:HeroSection
@@ -106,9 +114,10 @@
         hee:text: Hero text
       /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
-        hippostd:content: <p>Main content objects rich text</p>
+        hippostd:content: ''
       /hee:contentBlocks[2]:
         jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
         hee:header: Navigation cards
         /hee:cards[1]:
           jcr:primaryType: hippo:mirror
@@ -131,11 +140,12 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: fd2d7077-4a0b-487e-8f11-779c1efa7ca9
       hippo:name: index
-      hippo:versionHistory: b6080cce-b366-4aa1-a584-0fc25c609993
+      hippo:versionHistory: f3e7c403-acef-41bc-83fb-12f21d04c76b
       /index[1]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
         jcr:uuid: e09a7feb-3635-4182-b26a-8ea12077fd21
+        hee:addToAZ: false
         hee:summary: Landing page for HEE's page types
         hee:title: Page types
         hippo:availability: []
@@ -143,7 +153,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2021-11-20T00:12:47.092Z
+        hippostdpubwf:lastModificationDate: 2022-02-09T00:34:18.677Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
@@ -168,10 +178,36 @@
           /hee:cards[6]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:contentBlocks:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c7a41b-b574-4ef0-8f95-90fc9538f1fe
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9e121cb3-30a2-4a97-a478-4465bdf84eb3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+          /hee:cards[4]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 883653f6-6f05-40b6-a767-fbb4686fbfb6
+          /hee:cards[5]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 1957ca6a-45a0-4540-9705-1b9f6ef5febf
       /index[2]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
         jcr:uuid: c55a5be4-716f-440f-a10c-8e8dd570c052
+        hee:addToAZ: false
         hee:summary: Landing page for HEE's page types
         hee:title: Page types
         hippo:availability: [preview]
@@ -179,7 +215,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2021-11-20T00:17:51.279Z
+        hippostdpubwf:lastModificationDate: 2022-02-09T00:34:35.242Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
@@ -208,10 +244,36 @@
           /hee:cards[6]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:contentBlocks:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c7a41b-b574-4ef0-8f95-90fc9538f1fe
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9e121cb3-30a2-4a97-a478-4465bdf84eb3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+          /hee:cards[4]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 883653f6-6f05-40b6-a767-fbb4686fbfb6
+          /hee:cards[5]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 1957ca6a-45a0-4540-9705-1b9f6ef5febf
       /index[3]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
         jcr:uuid: a34f6ebf-962a-4246-b55b-41704bc12b0c
+        hee:addToAZ: false
         hee:summary: Landing page for HEE's page types
         hee:title: Page types
         hippo:availability: [live]
@@ -219,14 +281,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2021-11-20T00:17:51.279Z
+        hippostdpubwf:lastModificationDate: 2022-02-09T00:34:35.242Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-11-20T00:17:52.927Z
+        hippostdpubwf:publicationDate: 2022-02-09T00:34:37.051Z
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
         /hst:xpage:
           jcr:primaryType: hst:xpage
-          jcr:uuid: 77f5e9d1-42cc-4d74-a1c4-0bb112039690
+          jcr:uuid: 5b0218f0-1450-4d85-8bc9-7fcbdf06c6da
           hst:pageref: landing-page
         /hee:contentCards:
           jcr:primaryType: hee:contentCards
@@ -249,6 +311,31 @@
           /hee:cards[6]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:contentBlocks:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c7a41b-b574-4ef0-8f95-90fc9538f1fe
+          /hee:cards[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9e121cb3-30a2-4a97-a478-4465bdf84eb3
+          /hee:cards[3]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 5d7efcec-de99-406d-a9ec-f38b3ae8b80b
+          /hee:cards[4]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 883653f6-6f05-40b6-a767-fbb4686fbfb6
+          /hee:cards[5]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 1957ca6a-45a0-4540-9705-1b9f6ef5febf
     /home-page:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -579,6 +666,123 @@
           jcr:primaryType: hst:xpage
           jcr:uuid: 28b2eefd-ec7b-4cbe-a7b2-8d413507e2a9
           hst:pageref: atoz-page
+    /minihub-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: fc919a83-5920-4a83-8747-76e54865ea9f
+      hippo:name: Minihub page
+      hippo:versionHistory: dad2ac6b-a34f-48d1-a63c-f11f6dd2a1c0
+      /minihub-page[1]:
+        jcr:primaryType: hee:MiniHub
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: db21d645-b45e-4210-8c5d-8b00eb5a7d0a
+        hee:addToAZ: false
+        hee:title: Minihub page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-09T00:23:25.406Z
+        hippostdpubwf:lastModificationDate: 2022-02-09T00:23:25.406Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4fd26401-b2f4-4e82-abb7-e3d568060d6f
+        hippotranslation:locale: document-type-locale
+        /hee:guidancePages[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:guidancePages[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
+        /hee:guidancePages[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /minihub-page[2]:
+        jcr:primaryType: hee:MiniHub
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: 46930b45-b578-48bb-bc5b-b6ca76242f53
+        hee:addToAZ: false
+        hee:title: Minihub page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-09T00:23:25.406Z
+        hippostdpubwf:lastModificationDate: 2022-02-09T00:27:14.678Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4fd26401-b2f4-4e82-abb7-e3d568060d6f
+        hippotranslation:locale: document-type-locale
+        /hee:guidancePages[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:guidancePages[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
+        /hee:guidancePages[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 3f51a83f-650e-46f5-b3e4-f17733db5b56
+          hst:pageref: minihub-page
+      /minihub-page[3]:
+        jcr:primaryType: hee:MiniHub
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: cbc653f2-33ce-41a0-aaad-55d5e8ecfafc
+        hee:addToAZ: false
+        hee:title: Minihub page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-09T00:23:25.406Z
+        hippostdpubwf:lastModificationDate: 2022-02-09T00:27:14.678Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-09T00:27:17.686Z
+        hippotranslation:id: 4fd26401-b2f4-4e82-abb7-e3d568060d6f
+        hippotranslation:locale: document-type-locale
+        /hee:guidancePages[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:guidancePages[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
+        /hee:guidancePages[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: a2520217-1951-4b1e-864f-7c0a67374857
+          hst:pageref: minihub-page
   /components-library:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
