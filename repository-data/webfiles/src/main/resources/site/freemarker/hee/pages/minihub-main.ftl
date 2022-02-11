@@ -9,7 +9,8 @@
 <#-- @ftlvariable name="currentGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="previousGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="nextGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
-<#-- @ftlvariable name="accessFromRootHub" type="java.lang.Boolean" -->
+<#-- @ftlvariable name="accessFromRootHub" type="java.lang.Boolean" --
+<#-- @ftlvariable name="miniHubSections" type="java.util.List" -->
 
 <#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?endsWith("/")/>
 <#if document??>
@@ -18,35 +19,32 @@
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-two-thirds">
                     <h1>
-                      <span role="text">${currentGuidance.title}
+                      <span role="text">${currentSection.selectDocument.title}
                         <span class="nhsuk-caption-xl nhsuk-caption--bottom">
                           ${document.title}
                         </span>
                       </span>
                     </h1>
-
                     <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
                         <h2>Contents</h2>
                         <ol class="nhsuk-contents-list__list">
-                            <#list document.guidancePages as guidance>
-                                <#if guidance == currentGuidance>
-                                    <li class="nhsuk-contents-list__item" aria-current="page">
-                                        <span class="nhsuk-contents-list__current">${guidance.title}</span>
-                                    </li>
+                            <#list miniHubSections as section>
+                                <#if section == currentSection>
+                                <li class="nhsuk-contents-list__item" aria-current="page">
+                                    <span class="nhsuk-contents-list__current">${section.selectDocument.title}</span>
+                                </li>
                                 <#else>
                                     <li class="nhsuk-contents-list__item">
                                         <a class="nhsuk-contents-list__link"
-                                           href="${(accessFromRootHub && !accessWithEndSlash)?then(minihubName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
+                                           href="<@hst.link hippobean=section/>">${section.selectDocument.title}</a>
                                     </li>
                                 </#if>
                             </#list>
                         </ol>
                     </nav>
                 </div>
-            </div>
-
-                <#if currentGuidance??>
-                    <@guidance guidanceDocument=currentGuidance showTitle=false/>
+                <#if currentSection??>
+                    <@guidance guidanceDocument=currentSection.selectDocument showTitle=false/>
                 </#if>
                 <nav class="nhsuk-pagination nhsuk-u-margin-top-0" role="navigation" aria-label="Pagination">
                     <ul class="nhsuk-list nhsuk-pagination__list">
@@ -64,7 +62,6 @@
                                 </a>
                             </li>
                         </#if>
-
                         <#if nextGuidance??>
                             <li class="nhsuk-pagination-item--next">
                                 <a class="nhsuk-pagination__link nhsuk-pagination__link--next"
@@ -86,6 +83,7 @@
                         <@hee.contentCards contentCards=document.relatedContent relatedContent=true />
                     </div>
                 </#if>
+            </div>
         </main>
     </div>
 </#if>

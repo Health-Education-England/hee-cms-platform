@@ -1,65 +1,54 @@
 package uk.nhs.hee.web.components;
 
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
-import uk.nhs.hee.web.beans.Guidance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.MiniHub;
+import uk.nhs.hee.web.beans.MinihubSection;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
 
 import java.util.List;
 
 @ParametersInfo(type = MiniHubComponentInfo.class)
 public class MiniHubComponent extends EssentialsDocumentComponent {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AToZListingPageComponent.class);
+
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
-
-        MiniHub miniHub = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (miniHub == null) {
-            miniHub = (MiniHub) request.getRequestContext().getContentBean();
+        HippoBean document = request.getModel(REQUEST_ATTR_DOCUMENT);
+        if (document == null) {
+            document = (HippoBean) request.getRequestContext().getContentBean();
         }
-        request.setModel(REQUEST_ATTR_DOCUMENT, miniHub);
-        if (miniHub != null) {
-            // When the page accessed from URL minihubName/guidanceName, request will be forward to te related _default_ sitemap item
-            boolean accessWithGuidancePath = false; //request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
-            Guidance previousGuidance = null, nextGuidance = null, currentGuidance = null;
-            boolean accessFromRootHub = false;
-            List<Guidance> guidancePages = miniHub.getGuidancePages();
+        request.setModel(REQUEST_ATTR_DOCUMENT, document.getParentBean().getChildBeans(MiniHub.class).get(0));
+        List<MinihubSection> miniHubSections = getMiniHubSections(document);
+        request.setModel("miniHubSections", miniHubSections);
+        MinihubSection currentSection = getCurrentSection(request, miniHubSections);
+        request.setModel("currentSection", currentSection);
+    }
 
-            if (accessWithGuidancePath) {
-                // The guidance name in URL will be resolved as "1" parameter name
-                String guidanceName = (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
-                for (int i = 0; i < guidancePages.size(); i++) {
-                    Guidance guidance = guidancePages.get(i);
-                    if (guidance.getName().equalsIgnoreCase(guidanceName)) {
-                        currentGuidance = guidance;
-                        if (i > 0) {
-                            previousGuidance = guidancePages.get(i - 1);
-                        }
-                        if (i < guidancePages.size() - 1) {
-                            nextGuidance = guidancePages.get(i + 1);
-                        }
-                        break;
-                    }
-                }
-            } else {
-                accessFromRootHub = true;
-                // There is restriction in the CMS to make sure having at least one guidance on hub
-                currentGuidance = guidancePages.get(0);
-                if (guidancePages.size() > 1) {
-                    nextGuidance = guidancePages.get(1);
-                }
+    List<MinihubSection> getMiniHubSections(HippoBean document) {
+        List<MinihubSection> miniHubSections = document.getParentBean().getChildBeans(MinihubSection.class);
+        miniHubSections.sort((section1, section2) -> section1.getDisplayName().compareTo(section2.getDisplayName()));
+        return miniHubSections;
+    }
 
-                String minihubName = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().getValue();
-                request.setModel("minihubName", minihubName);
+    MinihubSection getCurrentSection(final HstRequest request, List<MinihubSection> miniHubSections) {
+        MinihubSection currentSection = null;
+        if(request.getRequestContext().getContentBean().getContentType().equals("hee:MiniHub")) {
+            currentSection = miniHubSections.get(0);
+        }
+        else {
+            for (int i=0; i<miniHubSections.size(); i++) {
+                if(miniHubSections.get(i).getName().equalsIgnoreCase(request.getRequestContext().getContentBean().getName())){
+                    currentSection = miniHubSections.get(i);
+                }
             }
-
-            request.setModel("previousGuidance", previousGuidance);
-            request.setModel("currentGuidance", currentGuidance);
-            request.setModel("nextGuidance", nextGuidance);
-            request.setModel("accessFromRootHub", accessFromRootHub);
         }
+        return currentSection;
     }
 }

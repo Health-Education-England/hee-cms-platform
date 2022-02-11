@@ -4475,3 +4475,514 @@
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2021-10-08T00:00:00+01:00
             hee:nextReviewed: 2021-10-29T00:00:00+01:00
+  /minihub-sections:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 5b8a0be9-9eb0-4d71-8c6c-dc98366097a2
+    hippo:name: Minihub Sections
+    hippostd:foldertype: [new-guidance-document, new-guidance-folder]
+    hippotranslation:id: ff90ffa1-4cac-438c-8617-5259ba8d2a25
+    hippotranslation:locale: en
+    /standard-content-pages:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+      hippo:name: Standard content pages
+      hippostd:foldertype: [new-guidance-document, new-guidance-folder]
+      hippotranslation:id: dca6dd76-c713-4a6c-bc51-321c462e27bf
+      hippotranslation:locale: en
+      /section-1:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: ad355e0b-496d-475f-9412-4c3dfa9f7602
+        hippo:name: Section 1
+        hippo:versionHistory: 2e5450cc-f1ea-4c69-814e-43ef716108c8
+        /section-1[1]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: a7b2cc99-1e5e-4331-956a-3e5643b0042f
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 1
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: e604d53c-1792-4cf7-9f65-59173bac2d11
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-1[2]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 1e1756f9-b92e-4c0f-9b3c-f8a4c01323d7
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 1
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:45:58.471Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: e604d53c-1792-4cf7-9f65-59173bac2d11
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-1[3]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 7b14741b-df47-482a-8f62-639e6ad623f1
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 1
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:45:58.471Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-11T17:46:14.950Z
+          hippotranslation:id: e604d53c-1792-4cf7-9f65-59173bac2d11
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /section-2:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 5ae33dbe-08ca-487f-8b97-4153fbc2cf53
+        hippo:name: Section 2
+        hippo:versionHistory: 3e93290f-d1d3-4350-8917-77cb144020a4
+        /section-2[1]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:versionable']
+          jcr:uuid: b4ef4c9a-5ff0-49a0-b79c-770fe30a64f8
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 2
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:46:53.440Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 6bcce17d-e7bd-431d-b244-9563fefb51c7
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-2[2]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: a95f5f8f-e040-457c-89ea-cba9ff9c6ae7
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 2
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:46:49.384Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 6bcce17d-e7bd-431d-b244-9563fefb51c7
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-2[3]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: c4111cb3-1367-48d2-83bc-caaacfd0102e
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 2
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:46:53.440Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-11T17:49:14.497Z
+          hippotranslation:id: 6bcce17d-e7bd-431d-b244-9563fefb51c7
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /section-3:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: d2442f87-eb4e-4952-b774-2d47ce6e4bbf
+        hippo:name: Section 3
+        hippo:versionHistory: b48b20ad-2d8c-40b9-afdf-7db1c374969b
+        /section-3[1]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:versionable']
+          jcr:uuid: 6c4cc120-b413-4ef1-80dc-c4f2535b8a12
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 3
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:46:59.886Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: c7d19c46-4216-4d52-a807-33b05ef8e5f6
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-3[2]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 8494f23f-c729-489c-9d17-0cc227970135
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 3
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:46:56.906Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: c7d19c46-4216-4d52-a807-33b05ef8e5f6
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-3[3]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 4ea35fc7-4e15-44dc-a3dd-c9ec99537602
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 3
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:46:59.886Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-11T17:49:14.561Z
+          hippotranslation:id: c7d19c46-4216-4d52-a807-33b05ef8e5f6
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /section-4:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 2495b2b8-6a2a-463b-a104-78bb645a14a5
+        hippo:name: Section 4
+        hippo:versionHistory: 50d24a82-77c2-41fa-850d-5bb0604fcdaa
+        /section-4[1]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:versionable']
+          jcr:uuid: a0c3e0e5-369a-4ceb-a4e8-309d6c601642
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 4
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:47:05.314Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 0d4bee7d-c368-46ee-ad90-04027d3c08d2
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-4[2]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: fda38aba-6847-440a-a331-8763b9badb0c
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 4
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:47:01.978Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 0d4bee7d-c368-46ee-ad90-04027d3c08d2
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /section-4[3]:
+          jcr:primaryType: hee:guidance
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 2cb8b124-55da-407c-8a2b-ac3b5e85807c
+          hee:addToAZ: false
+          hee:summary: Example standard content page that's used to build up a minihub.
+          hee:title: Section 4
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-11T17:47:05.314Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-11T17:49:14.418Z
+          hippotranslation:id: 0d4bee7d-c368-46ee-ad90-04027d3c08d2
+          hippotranslation:locale: en
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
