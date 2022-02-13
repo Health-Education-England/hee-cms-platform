@@ -7,8 +7,8 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 @HippoEssentialsGenerated(internalName = "hee:minihubSection")
 @Node(jcrType = "hee:minihubSection")
 public class MinihubSection extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:selectDocument")
-    public HippoBean getSelectDocument() {
-        return getLinkedBean("hee:selectDocument", HippoBean.class);
+    @HippoEssentialsGenerated(internalName = "hee:document")
+    public HippoBean getDocument() {
+        return getLinkedBean("hee:document", HippoBean.class);
     }
 }

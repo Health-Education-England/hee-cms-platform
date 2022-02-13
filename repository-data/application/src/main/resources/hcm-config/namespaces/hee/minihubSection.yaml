@@ -15,12 +15,12 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /selectDocument:
+          /document:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:selectDocument
+            hipposysedit:path: hee:document
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
@@ -37,7 +37,7 @@ definitions:
           jcr:uuid: a4ca6dae-3bbc-472c-8c49-e6e92b4620cd
           hippostdpubwf:lastModificationDate: 2022-02-09T22:59:01.059Z
           hippostdpubwf:creationDate: 2022-02-09T22:59:01.059Z
-          /hee:selectDocument:
+          /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -51,10 +51,10 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /selectDocument:
+          /document:
             jcr:primaryType: frontend:plugin
             caption: Select document
-            field: selectDocument
+            field: document
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
