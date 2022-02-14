@@ -4604,7 +4604,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: ad355e0b-496d-475f-9412-4c3dfa9f7602
         hippo:name: Section 1
-        hippo:versionHistory: 2e5450cc-f1ea-4c69-814e-43ef716108c8
+        hippo:versionHistory: 84616b4f-8a76-4d77-87a7-54b5218e0134
         /section-1[1]:
           jcr:primaryType: hee:guidance
           jcr:mixinTypes: ['mix:referenceable']
@@ -4617,7 +4617,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
-          hippostdpubwf:lastModificationDate: 2022-02-11T17:45:07.948Z
+          hippostdpubwf:lastModificationDate: 2022-02-14T12:13:20.829Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: e604d53c-1792-4cf7-9f65-59173bac2d11
           hippotranslation:locale: en
@@ -4634,7 +4634,14 @@
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks:
             jcr:primaryType: hippostd:html
-            hippostd:content: ''
+            hippostd:content: <p>This rick text block has a link to a <a href="minihub-section-3">middle
+              section</a> of a Minihub.</p>
+            /minihub-section-3:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: 8565ad02-333f-4afe-8e9c-5a5c3bacee9e
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
           /hee:heroImage:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -4644,6 +4651,45 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:rightHandBlocks:
+            jcr:primaryType: hee:QuickLinks
+            hee:title: Quick links
+            /hee:links[1]:
+              jcr:primaryType: hee:link
+              jcr:mixinTypes: ['mix:referenceable']
+              jcr:uuid: c9612978-ab7c-46a1-842c-e72620711860
+              hee:openLinkUrlNewWindow: false
+              hee:text: Minihub Section 3
+              hee:url: ''
+              hippostd:holder: holder
+              hippostd:state: draft
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 8565ad02-333f-4afe-8e9c-5a5c3bacee9e
+            /hee:links[2]:
+              jcr:primaryType: hee:link
+              jcr:mixinTypes: ['mix:referenceable']
+              jcr:uuid: ee3be0ac-39b3-4b8e-803d-8e4017d93e42
+              hee:openLinkUrlNewWindow: true
+              hee:text: Minihub Section 4
+              hee:url: ''
+              hippostd:holder: holder
+              hippostd:state: draft
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 7646241f-5538-4889-b86e-1d7c4b266437
         /section-1[2]:
           jcr:primaryType: hee:guidance
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -4656,7 +4702,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
-          hippostdpubwf:lastModificationDate: 2022-02-11T17:45:58.471Z
+          hippostdpubwf:lastModificationDate: 2022-02-14T12:16:24.301Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: e604d53c-1792-4cf7-9f65-59173bac2d11
           hippotranslation:locale: en
@@ -4673,7 +4719,14 @@
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks:
             jcr:primaryType: hippostd:html
-            hippostd:content: ''
+            hippostd:content: <p>This rick text block has a link to a <a href="minihub-section-3">middle
+              section</a> of a Minihub.</p>
+            /minihub-section-3:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: 8565ad02-333f-4afe-8e9c-5a5c3bacee9e
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
           /hee:heroImage:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -4683,6 +4736,37 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:rightHandBlocks:
+            jcr:primaryType: hee:QuickLinks
+            hee:title: Quick links
+            /hee:links[1]:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: Minihub Section 3
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 8565ad02-333f-4afe-8e9c-5a5c3bacee9e
+            /hee:links[2]:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: true
+              hee:text: Minihub Section 4
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 7646241f-5538-4889-b86e-1d7c4b266437
         /section-1[3]:
           jcr:primaryType: hee:guidance
           jcr:mixinTypes: ['mix:referenceable']
@@ -4695,9 +4779,9 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-02-11T17:45:07.948Z
-          hippostdpubwf:lastModificationDate: 2022-02-11T17:45:58.471Z
+          hippostdpubwf:lastModificationDate: 2022-02-14T12:16:24.301Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-02-11T17:46:14.950Z
+          hippostdpubwf:publicationDate: 2022-02-14T12:16:27.819Z
           hippotranslation:id: e604d53c-1792-4cf7-9f65-59173bac2d11
           hippotranslation:locale: en
           /hee:relatedContent:
@@ -4713,7 +4797,14 @@
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks:
             jcr:primaryType: hippostd:html
-            hippostd:content: ''
+            hippostd:content: <p>This rick text block has a link to a <a href="minihub-section-3">middle
+              section</a> of a Minihub.</p>
+            /minihub-section-3:
+              jcr:primaryType: hippo:facetselect
+              hippo:docbase: 8565ad02-333f-4afe-8e9c-5a5c3bacee9e
+              hippo:facets: []
+              hippo:modes: []
+              hippo:values: []
           /hee:heroImage:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -4723,6 +4814,37 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:rightHandBlocks:
+            jcr:primaryType: hee:QuickLinks
+            hee:title: Quick links
+            /hee:links[1]:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: Minihub Section 3
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 8565ad02-333f-4afe-8e9c-5a5c3bacee9e
+            /hee:links[2]:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: true
+              hee:text: Minihub Section 4
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 7646241f-5538-4889-b86e-1d7c4b266437
       /section-2:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
