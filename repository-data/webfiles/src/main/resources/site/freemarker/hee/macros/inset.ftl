@@ -2,8 +2,6 @@
 <#macro inset inset>       
     <div class="nhsuk-inset-text">
      <span class="nhsuk-u-visually-hidden">Information: </span>
-        <p>
             ${inset.insetTextBlock.html.getContent()}
-        </p>
     </div>    
 </#macro>

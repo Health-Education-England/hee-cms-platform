@@ -1649,9 +1649,9 @@
         printed and digital work in the following ways.
       hee:title: Introduction
       hippo:availability: []
-      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
       hippostdpubwf:lastModificationDate: 2022-01-26T11:01:29.296Z
@@ -1785,21 +1785,8 @@
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Block copy</p>
       /hee:contentBlocks[12]:
-        jcr:primaryType: hee:ActionLink
-        /hee:link:
-          jcr:primaryType: hee:link
-          hee:openLinkUrlNewWindow: false
-          hee:text: Internal Link
-          hee:url: ''
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
       /hee:contentBlocks[13]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
@@ -1894,18 +1881,6 @@
         /hee:cards:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[12]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: ''
-      /hee:contentBlocks[13]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: ''
-      /hee:contentBlocks[14]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: ''
-      /hee:contentBlocks[15]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: ''
   /test-media:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

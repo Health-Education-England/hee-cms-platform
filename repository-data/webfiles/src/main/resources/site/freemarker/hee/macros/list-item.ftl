@@ -84,7 +84,7 @@
     </#list>
 </#macro>
 
-<#macro casestudyListItem items impactGroupMap impactTypesMap sectorMap regionMap>
+<#macro casestudyListItem items impactGroupMap impactTypesMap sectorMap regionMap providerMap>
     <#list items as item>
         <@hst.link var="casestudyDocumentURL" hippobean=item.document>
             <@hst.param name="forceDownload" value="true"/>
@@ -128,6 +128,14 @@
                     ${regionMap[item.region]}
                 </@listItemRow>
             </#if>
+
+            <#if item.provider?has_content>
+                <@fmt.message key="casestudy.provider" var="providerLabel"/>
+                <@listItemRow key="${providerLabel}">
+                    ${providerMap[item.provider]}
+                </@listItemRow>
+            </#if>
+
         </dl>
     </#list>
 </#macro>

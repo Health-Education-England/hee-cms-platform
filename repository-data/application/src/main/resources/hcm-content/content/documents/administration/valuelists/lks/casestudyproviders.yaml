@@ -1,15 +1,14 @@
-/content/documents/administration/valuelists/lks/searchbankproviders:
-  .meta:order-before: casestudyproviders
+/content/documents/administration/valuelists/lks/casestudyproviders:
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
-  jcr:uuid: cbf7aeef-8a62-4dce-94a6-69f455179392
-  hippo:name: SearchBankProviders
-  /searchbankproviders:
+  jcr:uuid: f2060443-af6e-4a5b-bed7-e986126c82e9
+  hippo:name: CaseStudyProviders
+  /casestudyproviders:
     jcr:primaryType: selection:valuelist
     jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
-    jcr:uuid: 6fa0e2f3-47ff-4712-ba45-a9e615e94366
+    jcr:uuid: f13fb01a-a926-4c1d-b608-ed4327c19bb5
     hippo:availability: [live, preview]
-    hippotranslation:id: 062960e4-4dbf-40d6-bd7a-4b0207db5f00
+    hippotranslation:id: 7a42fb3c-89ae-4a15-882e-7764722d31d8
     hippotranslation:locale: inherited - from query
     /selection:listitem[1]:
       jcr:primaryType: selection:listitem
