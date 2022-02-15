@@ -52,7 +52,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
     }
 
     /**
-     * Gets siblings of current document of type MinihubSection
+     * Gets the current document of type MinihubSection
      *
      * @param request the {@link HstRequest} instance.
      * @param miniHubSections the {@link List<MinihubSection>} instance.
