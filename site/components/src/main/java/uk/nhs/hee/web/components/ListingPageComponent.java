@@ -30,8 +30,6 @@ import uk.nhs.hee.web.utils.ValueListUtils;
 import java.util.*;
 import java.util.stream.StreamSupport;
 
-import static uk.nhs.hee.web.repository.HEEField.DOCUMENT_TITLE;
-
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
  */
@@ -65,7 +63,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @throws QueryException thrown when an error occurs during execution of the query built.
      */
     private Pageable<HippoBean> executeQuery(final HstRequest request) throws QueryException {
-        final ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+        ListingPage listingPage = getListingPageModel(request);
 
         final HstQuery query = buildQuery(request, listingPage);
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
@@ -312,7 +310,13 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @return the {@link ListingPage} instance of the current {@code request}.
      */
     protected ListingPage getListingPageModel(final HstRequest request) {
-        return request.getModel(REQUEST_ATTR_DOCUMENT);
+        ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+        if (listingPage == null) {
+            listingPage = (ListingPage) request.getRequestContext().getContentBean();
+            request.setModel(REQUEST_ATTR_DOCUMENT, listingPage);
+        }
+
+        return listingPage;
     }
 
     /**
