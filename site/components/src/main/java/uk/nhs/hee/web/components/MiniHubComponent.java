@@ -1,27 +1,21 @@
 package uk.nhs.hee.web.components;
 
-import org.apache.commons.lang3.tuple.Pair;
-import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.beans.MinihubSection;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Base component for the MiniHub Page.
  */
 @ParametersInfo(type = MiniHubComponentInfo.class)
 public class MiniHubComponent extends EssentialsDocumentComponent {
-    private static final Logger LOGGER = LoggerFactory.getLogger(AToZListingPageComponent.class);
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
