@@ -2,7 +2,7 @@
 <#import "./link.ftl" as hlink>
 
 <#macro contentCards contentCards size="third" relatedContent=false>
-    <#if contentCards.cards??>
+    <#if contentCards?has_content>
         <#if contentCards.header?has_content>
             <div class="nhsuk-u-reading-width">
                 <h2<#if relatedContent> data-anchorlinksignore="true"</#if>>${contentCards.header}</h2>
@@ -26,7 +26,7 @@
                             <img class="nhsuk-card__img" src="${cardImageLink}" alt="${contentCard.cardImage.description!}">
                         </#if>
                         <div class="nhsuk-card__content">
-                            <#if clickableCard>
+                            <#if clickableCard??>
                                 <h3 class="nhsuk-card__heading nhsuk-heading-m">
                                     <@hlink.link link=contentCard.header cssClassName="nhsuk-card__link">
                                         ${contentCard.header.text}
