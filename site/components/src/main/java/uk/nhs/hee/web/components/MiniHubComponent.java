@@ -39,7 +39,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
      * @param document the {@link HippoBean} instance.
      * @return the {@link List <MinihubSection>} instance sorted by Display Name
      */
-    List<MinihubSection> getMiniHubSections(HippoBean document) {
+    private List<MinihubSection> getMiniHubSections(HippoBean document) {
         List<MinihubSection> miniHubSections = document.getParentBean().getChildBeans(MinihubSection.class);
         miniHubSections.sort((section1, section2) -> section1.getDisplayName().compareTo(section2.getDisplayName()));
         return miniHubSections;
@@ -52,7 +52,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
      * @param miniHubSections the {@link List<MinihubSection>} instance.
      * @return the {@link MinihubSection} instance matching the current position
      */
-    MinihubSection getCurrentSection(final HstRequest request, List<MinihubSection> miniHubSections) {
+    private MinihubSection getCurrentSection(final HstRequest request, List<MinihubSection> miniHubSections) {
         MinihubSection currentSection = null;
         if(request.getRequestContext().getContentBean().getContentType().equals("hee:MiniHub")) {
             currentSection = miniHubSections.get(0);
