@@ -29,7 +29,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
         List<MinihubSection> miniHubSections = getMiniHubSections(document);
         request.setModel("miniHubSections", miniHubSections);
 
-        MinihubSection currentSection = getCurrentSection(request, miniHubSections);
+        MinihubSection currentSection = getCurrentSection(document, miniHubSections);
         request.setModel("currentSection", currentSection);
     }
 
@@ -48,18 +48,18 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
     /**
      * Gets the current document of type MinihubSection
      *
-     * @param request the {@link HstRequest} instance.
+     * @param document the {@link HippoBean} instance.
      * @param miniHubSections the {@link List<MinihubSection>} instance.
      * @return the {@link MinihubSection} instance matching the current position
      */
-    private MinihubSection getCurrentSection(final HstRequest request, List<MinihubSection> miniHubSections) {
+    private MinihubSection getCurrentSection(final HippoBean document, List<MinihubSection> miniHubSections) {
         MinihubSection currentSection = null;
-        if(request.getRequestContext().getContentBean().getContentType().equals("hee:MiniHub")) {
+        if(document.getContentType().equals("hee:MiniHub")) {
             currentSection = miniHubSections.get(0);
         }
         else {
             for (int i=0; i<miniHubSections.size(); i++) {
-                if(miniHubSections.get(i).getName().equalsIgnoreCase(request.getRequestContext().getContentBean().getName())){
+                if(miniHubSections.get(i).getName().equalsIgnoreCase(document.getName())){
                     currentSection = miniHubSections.get(i);
                 }
             }
