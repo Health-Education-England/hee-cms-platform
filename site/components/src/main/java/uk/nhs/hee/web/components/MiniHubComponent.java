@@ -9,6 +9,7 @@ import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.beans.MinihubSection;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
 
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -41,7 +42,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
      */
     private List<MinihubSection> getMiniHubSections(HippoBean document) {
         List<MinihubSection> miniHubSections = document.getParentBean().getChildBeans(MinihubSection.class);
-        miniHubSections.sort((section1, section2) -> section1.getDisplayName().compareTo(section2.getDisplayName()));
+        miniHubSections.sort(Comparator.comparing(MinihubSection::getDisplayName));
         return miniHubSections;
     }
 
