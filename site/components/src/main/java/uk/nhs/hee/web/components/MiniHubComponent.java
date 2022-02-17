@@ -25,13 +25,26 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
         if (document == null) {
             document = (HippoBean) request.getRequestContext().getContentBean();
         }
-        request.setModel(REQUEST_ATTR_DOCUMENT, document.getParentBean().getChildBeans(MiniHub.class).get(0));
+        request.setModel(REQUEST_ATTR_DOCUMENT, getMiniHubDocument(document));
 
         List<MinihubSection> miniHubSections = getMiniHubSections(document);
         request.setModel("miniHubSections", miniHubSections);
 
         MinihubSection currentSection = getCurrentSection(document, miniHubSections);
         request.setModel("currentSection", currentSection);
+    }
+
+    /**
+     * Finds the relevant Minihub document if not already on request
+     *
+     * @param document the {@link HippoBean} instance.
+     * @return the {@link HippoBean} instance of type hee:MiniHub
+     */
+    private HippoBean getMiniHubDocument(HippoBean document) {
+        if(document.getContentType().equals("hee:MiniHub")) {
+            return document;
+        }
+        return document.getParentBean().getChildBeans(MiniHub.class).get(0);
     }
 
     /**
