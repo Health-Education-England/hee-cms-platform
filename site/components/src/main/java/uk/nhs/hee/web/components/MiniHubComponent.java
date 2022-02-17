@@ -5,6 +5,8 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.beans.MinihubSection;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
@@ -17,6 +19,7 @@ import java.util.List;
  */
 @ParametersInfo(type = MiniHubComponentInfo.class)
 public class MiniHubComponent extends EssentialsDocumentComponent {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MiniHubComponent.class);
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -25,13 +28,21 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
         if (document == null) {
             document = (HippoBean) request.getRequestContext().getContentBean();
         }
-        request.setModel(REQUEST_ATTR_DOCUMENT, getMiniHubDocument(document));
+        if (document.getParentBean() != null) {
+            if (document.getParentBean().getChildBeans(MiniHub.class).size() > 0
+                && document.getParentBean().getChildBeans(MinihubSection.class).size() > 0) {
+                request.setModel(REQUEST_ATTR_DOCUMENT, getMiniHubDocument(document));
 
-        List<MinihubSection> miniHubSections = getMiniHubSections(document);
-        request.setModel("miniHubSections", miniHubSections);
+                List<MinihubSection> miniHubSections = getMiniHubSections(document);
+                request.setModel("miniHubSections", miniHubSections);
 
-        MinihubSection currentSection = getCurrentSection(document, miniHubSections);
-        request.setModel("currentSection", currentSection);
+                MinihubSection currentSection = getCurrentSection(document, miniHubSections);
+                request.setModel("currentSection", currentSection);
+            }
+            else {
+                LOGGER.warn("Check Minihub document exists, and at least one Minihub section in the same folder for: " + document.getPath());
+            }
+        }
     }
 
     /**
