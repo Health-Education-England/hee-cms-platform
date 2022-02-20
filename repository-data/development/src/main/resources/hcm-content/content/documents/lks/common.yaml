@@ -4667,7 +4667,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: c8396cf8-7507-4508-845e-9a3c47e79572
       hippo:name: InsetTest
-      hippo:versionHistory: bf7c77ea-e106-433a-9382-574b2b9158b4
+      hippo:versionHistory: a644274a-7398-484e-89cf-e6d3767f4c8d
       /insettest[1]:
         jcr:primaryType: hee:inset
         jcr:mixinTypes: ['mix:referenceable']
@@ -4677,14 +4677,21 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
-        hippostdpubwf:lastModificationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-02-20T22:24:58.504Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
         hippotranslation:locale: en
         /hee:html:
           jcr:primaryType: hippostd:html
-          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
-            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+          hippostd:content: <p>You can <a href="copyright">report</a> any suspected
+            side effect to the&nbsp;<a href="https://yellowcard.mhra.gov.uk/">UK safety
+            scheme</a></p>
+          /copyright:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /insettest[2]:
         jcr:primaryType: hee:inset
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -4694,14 +4701,21 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
-        hippostdpubwf:lastModificationDate: 2022-01-19T14:54:48.691Z
+        hippostdpubwf:lastModificationDate: 2022-02-20T22:24:56.793Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
         hippotranslation:locale: en
         /hee:html:
           jcr:primaryType: hippostd:html
-          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
-            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+          hippostd:content: <p>You can <a href="copyright">report</a> any suspected
+            side effect to the&nbsp;<a href="https://yellowcard.mhra.gov.uk/">UK safety
+            scheme</a></p>
+          /copyright:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /insettest[3]:
         jcr:primaryType: hee:inset
         jcr:mixinTypes: ['mix:referenceable']
@@ -4711,15 +4725,22 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
-        hippostdpubwf:lastModificationDate: 2022-01-19T14:54:48.691Z
+        hippostdpubwf:lastModificationDate: 2022-02-20T22:24:56.793Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-19T14:55:22.139Z
+        hippostdpubwf:publicationDate: 2022-02-20T22:25:02.352Z
         hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
         hippotranslation:locale: en
         /hee:html:
           jcr:primaryType: hippostd:html
-          hippostd:content: <p>You can report any suspected side effect to the&nbsp;<a
-            href="https://yellowcard.mhra.gov.uk/">UK safety scheme</a></p>
+          hippostd:content: <p>You can <a href="copyright">report</a> any suspected
+            side effect to the&nbsp;<a href="https://yellowcard.mhra.gov.uk/">UK safety
+            scheme</a></p>
+          /copyright:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
   /expander-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'mix:versionable']
