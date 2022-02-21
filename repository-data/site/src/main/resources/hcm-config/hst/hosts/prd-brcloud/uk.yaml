@@ -59,6 +59,10 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/website-testing
+              hst:responseheaders: ['robots: noindex, nofollow', 'Content-Security-Policy:
+                  frame-ancestors ''self''', 'X-Frame-Options: SAMEORIGIN']
+              hst:roles: [site.viewer]
+              hst:authenticated: true
         /libraryservices:
           .meta:residual-child-node-category: content
           jcr:primaryType: hst:virtualhost
