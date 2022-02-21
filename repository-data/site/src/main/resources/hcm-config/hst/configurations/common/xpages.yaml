@@ -34,6 +34,14 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: uk.nhs.hee.web.components.AToZListingPageComponent
           hst:template: atozlisting-main
+      /minihub-page:
+        jcr:primaryType: hst:xpage
+        hst:label: MiniHub page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent
+          hst:template: minihub-main
       /category-based-listing-page:
         jcr:primaryType: hst:xpage
         hst:label: Category Based Listing page [Bulletin, Blog & News]
