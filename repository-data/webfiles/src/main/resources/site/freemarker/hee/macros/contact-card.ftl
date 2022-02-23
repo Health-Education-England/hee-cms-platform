@@ -4,13 +4,13 @@
 <#import "person-contact.ftl" as personContact>
 <#import "department-contact.ftl" as departmentContact>
 
-<#macro contactCard card>
-    <#if card??>
+<#macro contactCard contact>
+    <#if contact??>
         <div class="nhsuk-contact nhsuk-contact__card">
-            <#if hst.isBeanType(card.contentItem, 'uk.nhs.hee.web.beans.Person')>
-                <@personContact.personContact person=card.contentItem/>
-            <#elseif hst.isBeanType(card.contentItem, 'uk.nhs.hee.web.beans.Department')>
-                <@departmentContact.departmentContact department=card.contentItem/>
+            <#if hst.isBeanType(contact, 'uk.nhs.hee.web.beans.Person')>
+                <@personContact.personContact person=contact/>
+            <#elseif hst.isBeanType(contact, 'uk.nhs.hee.web.beans.Department')>
+                <@departmentContact.departmentContact department=contact/>
             </#if>
         </div>
     </#if>

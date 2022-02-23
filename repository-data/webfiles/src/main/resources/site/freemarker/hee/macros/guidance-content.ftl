@@ -88,7 +88,7 @@
                                         <@hee.quickLinks quickLinks=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                        <@hee.contactCard card=block.content/>
+                                        <@hee.contactCard contact=block.content/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                         <@hee.externalLinksCard card=block.externalLinksCard/>
