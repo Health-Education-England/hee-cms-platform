@@ -2086,68 +2086,6 @@
     hippostd:foldertype: [new-contact-card]
     hippotranslation:id: 4de2c8c8-e599-4514-9d99-526fbc324095
     hippotranslation:locale: en
-    /james-smith-contact-card:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: a352e94a-1e98-4280-abc5-b0853ae32e26
-      hippo:name: James Smith Contact Card
-      hippo:versionHistory: 9fd1a10f-33ad-4a60-80f0-24e34f25ca54
-      /james-smith-contact-card[1]:
-        jcr:primaryType: hee:contactCard
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 53abc77e-fc94-4509-a455-ca0f70d188eb
-        hee:display: [name, departmentName, jobTitle, phoneNumber, address]
-        hee:title: Contact
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostd:transferable: false
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-05-17T08:30:17.096+07:00
-        hippostdpubwf:lastModificationDate: 2021-05-20T20:11:45.992+01:00
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 948d14b8-abd9-4215-9503-66c0572093a7
-        hippotranslation:locale: en
-        /hee:contentItem:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-      /james-smith-contact-card[2]:
-        jcr:primaryType: hee:contactCard
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-        jcr:uuid: 77432d24-038e-4ffb-b0bb-c80440070a3d
-        hee:display: [name, departmentName, jobTitle, phoneNumber, address]
-        hee:title: Contact
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-05-17T08:30:17.096+07:00
-        hippostdpubwf:lastModificationDate: 2021-05-18T07:49:13.957+07:00
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 948d14b8-abd9-4215-9503-66c0572093a7
-        hippotranslation:locale: en
-        /hee:contentItem:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-      /james-smith-contact-card[3]:
-        jcr:primaryType: hee:contactCard
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 972b4a24-4511-40ea-8fed-dbc62014460a
-        hee:display: [name, departmentName, jobTitle, phoneNumber, address]
-        hee:title: Contact
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-05-17T08:30:17.096+07:00
-        hippostdpubwf:lastModificationDate: 2021-05-18T07:49:13.957+07:00
-        hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-05-18T07:49:15.398+07:00
-        hippotranslation:id: 948d14b8-abd9-4215-9503-66c0572093a7
-        hippotranslation:locale: en
-        /hee:contentItem:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
   /external-links-cards:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
