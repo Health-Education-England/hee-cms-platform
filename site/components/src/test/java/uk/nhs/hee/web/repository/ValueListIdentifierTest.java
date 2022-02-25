@@ -15,6 +15,7 @@ public class ValueListIdentifierTest {
         assertThat(ValueListIdentifier.CASE_STUDY_IMPACT_TYPES.getName()).isEqualTo("caseStudyImpactTypes");
         assertThat(ValueListIdentifier.CASE_STUDY_SECTORS.getName()).isEqualTo("caseStudySectors");
         assertThat(ValueListIdentifier.CASE_STUDY_REGIONS.getName()).isEqualTo("caseStudyRegions");
+        assertThat(ValueListIdentifier.CASE_STUDY_PROVIDERS.getName()).isEqualTo("caseStudyProviders");
         assertThat(ValueListIdentifier.LOGO_TYPES.getName()).isEqualTo("logoTypes");
         assertThat(ValueListIdentifier.NAV_MAP_REGIONS.getName()).isEqualTo("navMapRegions");
         assertThat(ValueListIdentifier.SEARCH_BANK_KEY_TERMS.getName()).isEqualTo("searchBankKeyTerms");

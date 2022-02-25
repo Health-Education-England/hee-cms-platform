@@ -53,7 +53,7 @@ public enum ListingPageType {
             "casestudy",
             new String[]{"hee:caseStudy"},
             Boolean.TRUE,
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_CREATION_DATE,
             ValueListIdentifier.CASE_STUDY_IMPACT_GROUPS.getName(),
             Boolean.FALSE),
 

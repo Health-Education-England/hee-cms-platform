@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 72696360-7c99-47ce-a6e7-3efe321f102e
+          jcr:uuid: 0984bba9-7965-4771-820e-f7835270a756
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -66,6 +66,14 @@ definitions:
             hipposysedit:path: hee:region
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
+          /provider:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:provider
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -78,13 +86,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 253b7a5e-41ed-4037-b38b-8feafb41b37f
+          jcr:uuid: 642893cb-44ca-4684-8e67-3bc3f21cb3de
           hippostdpubwf:lastModificationDate: 2021-05-07T20:02:42.163+01:00
           hippostdpubwf:creationDate: 2021-05-07T20:02:42.164+01:00
           hee:sector: ''
           hee:region: ''
           hee:impactGroup: ''
-          hee:impactTypes: ['']
+          hee:impactTypes: []
+          hee:provider: ''
           /hee:document:
             jcr:primaryType: hippo:resource
             hippo:filename: hippo:resource
@@ -156,6 +165,16 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudysectors
+          /provider:
+            jcr:primaryType: frontend:plugin
+            caption: Provider
+            field: provider
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/lks/casestudyproviders
           /region:
             jcr:primaryType: frontend:plugin
             caption: Region
