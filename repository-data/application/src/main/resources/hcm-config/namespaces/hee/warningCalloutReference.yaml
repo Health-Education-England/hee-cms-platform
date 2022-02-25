@@ -1,46 +1,36 @@
 definitions:
   config:
-    /hippo:namespaces/hee/YellowAlertBlock:
+    /hippo:namespaces/hee/warningCalloutReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: add6bd75-b158-4830-a577-1290daa76667
+      jcr:uuid: 5e503f55-7a22-4713-8efe-bd67353fae12
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 28b12ba3-ce43-4142-ac76-cbabcb002990
+        jcr:uuid: 5cba1ce1-7023-4c71-85f6-6e0b3ff07c31
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5203fc5b-9b00-41b7-8457-0624c675defa
+          jcr:uuid: 375f251a-e776-47bb-bbb1-588bb7604341
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
+          /warningCalloutContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:warningCalloutContentBlock
             hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /richAlertText:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:richAlertText
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
+            hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:YellowAlertBlock
-          hee:title: ''
-          /hee:richAlertText:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          jcr:primaryType: hee:warningCalloutReference
+          /hee:warningCalloutContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -52,21 +42,13 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /warningCalloutContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: title
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            caption: Select warning callout
+            field: warningCalloutContentBlock
             hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /richAlertText:
-            jcr:primaryType: frontend:plugin
-            caption: Content
-            field: richAlertText
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:warningCallout']
