@@ -4889,3 +4889,125 @@
                <li>a plastic pen to hold the lancets</li>
                <li>small test strips</li>
               </ul>
+  /warningcallout:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 2de7e52c-9988-4d36-bdb7-ab23b7636184
+    hippo:name: WarningCallout
+    hippostd:foldertype: [new-YellowAlertBlock-folder, new-YellowAlertBlock-document]
+    /wardemo:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 72de7352-d028-4e04-b28e-5e8731653981
+      hippo:name: WarningDemo1
+      hippo:versionHistory: 91fb4d30-d862-4d0b-a3f0-de77c9bdecfa
+      /wardemo[1]:
+        jcr:primaryType: hee:YellowAlertBlock
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 799417a8-2a2f-4012-93d1-84c9ae5b87ea
+        hee:title: Test Title Warning Callout 1
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T14:51:57.470Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T15:01:23.945Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: d5f86dff-99ff-491c-a43c-b5723de7f11b
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Test Content Warning Callout 1</p>
+      /wardemo[2]:
+        jcr:primaryType: hee:YellowAlertBlock
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: ada7a707-46e8-4835-9927-a9528dcbcd15
+        hee:title: Test Title Warning Callout 1
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T14:51:57.470Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T15:01:34.434Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: d5f86dff-99ff-491c-a43c-b5723de7f11b
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Test Content Warning Callout 1</p>
+      /wardemo[3]:
+        jcr:primaryType: hee:YellowAlertBlock
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 9c853c0b-38c8-46a8-843d-629b34da57c7
+        hee:title: Test Title Warning Callout 1
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T14:51:57.470Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T15:01:34.434Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-16T15:02:13.226Z
+        hippotranslation:id: d5f86dff-99ff-491c-a43c-b5723de7f11b
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Test Content Warning Callout 1</p>
+    /warningdemo2:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: f48c1cdc-c356-4716-bd9f-0684d5b93c71
+      hippo:name: WarningDemo2
+      hippo:versionHistory: 1546f68c-bd35-47a7-a70c-1f5d6db96f0f
+      /warningdemo2[1]:
+        jcr:primaryType: hee:YellowAlertBlock
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: baf0c27f-9f2c-4c27-b641-50694a32295c
+        hee:title: Test Title Warning Callout 2
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T14:51:57.470Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T15:01:54.215Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: fae5a23c-101c-4a00-9df0-feae46c7ce3f
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Test Content Warning Callout 2</p>
+      /warningdemo2[2]:
+        jcr:primaryType: hee:YellowAlertBlock
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 9704a0ea-bdb0-4ef4-b689-91b9591966de
+        hee:title: Test Title Warning Callout 2
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T14:51:57.470Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T15:01:49.353Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: fae5a23c-101c-4a00-9df0-feae46c7ce3f
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Test Content Warning Callout 2</p>
+      /warningdemo2[3]:
+        jcr:primaryType: hee:YellowAlertBlock
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0a9aaf37-3b0d-4bc7-b6b6-cd8702ca7bc0
+        hee:title: Test Title Warning Callout 2
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T14:51:57.470Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T15:01:54.215Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-16T15:01:56.332Z
+        hippotranslation:id: fae5a23c-101c-4a00-9df0-feae46c7ce3f
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Test Content Warning Callout 2</p>

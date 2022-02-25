@@ -41,7 +41,7 @@
                                             <#case "uk.nhs.hee.web.beans.ActionLink">
                                                 <@hee.actionLink actionLink=block/>
                                                 <#break>
-                                            <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
+                                            <#case "uk.nhs.hee.web.beans.YellowAlertBlockReference">
                                                 <@hee.yellowAlertBlock block=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.Contact">
