@@ -23,12 +23,6 @@
 [hee:HomePage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:inset] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:insetReference] > hippo:compound, hippostd:relaxed
-  orderable
-
 [hee:MiniHub] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -38,7 +32,7 @@
 [hee:StatementBlock] > hippo:compound, hippostd:relaxed
   orderable
 
-[hee:YellowAlertBlock] > hippo:compound, hippostd:relaxed
+[hee:YellowAlertBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
@@ -142,6 +136,12 @@
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
+[hee:inset] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:insetReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:internalLink] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -206,5 +206,8 @@
   orderable
 
 [hee:tabsReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:yellowAlertBlockReference] > hippo:compound, hippostd:relaxed
   orderable
 

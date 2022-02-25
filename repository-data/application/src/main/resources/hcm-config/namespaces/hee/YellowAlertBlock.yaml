@@ -11,9 +11,9 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a3ff504c-9887-44e4-bf02-ac991e690315
+          jcr:uuid: 9c3156c0-91a9-415d-93a8-d394600f933e
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -38,6 +38,16 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:YellowAlertBlock
           hee:title: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-06-14T20:23:53.390+01:00
+          hippostdpubwf:lastModificationDate: 2021-06-14T20:23:53.390+01:00
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: e909ec53-2e73-4a39-81ae-40ced5dad081
           /hee:richAlertText:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
