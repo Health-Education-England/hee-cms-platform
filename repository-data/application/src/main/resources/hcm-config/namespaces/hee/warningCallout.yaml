@@ -1,19 +1,19 @@
 definitions:
   config:
-    /hippo:namespaces/hee/YellowAlertBlock:
+    /hippo:namespaces/hee/warningCallout:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: add6bd75-b158-4830-a577-1290daa76667
+      jcr:uuid: b0185a85-8dd9-4cd0-8725-928f91df911c
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 28b12ba3-ce43-4142-ac76-cbabcb002990
+        jcr:uuid: d81511fa-06d3-4faf-aac1-f3e99353a372
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5203fc5b-9b00-41b7-8457-0624c675defa
+          jcr:uuid: 57ff0c4b-a157-44f8-a97a-08ffeff28cf9
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -36,8 +36,18 @@ definitions:
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:YellowAlertBlock
+          jcr:primaryType: hee:warningCallout
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
+          jcr:uuid: 361af013-7691-464e-ae49-b605b0707d61
+          hippostdpubwf:lastModificationDate: 2022-02-25T14:52:32.020Z
+          hippostdpubwf:creationDate: 2022-02-25T14:52:32.020Z
           /hee:richAlertText:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -58,7 +68,6 @@ definitions:
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /richAlertText:

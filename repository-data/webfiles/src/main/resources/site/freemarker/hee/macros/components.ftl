@@ -20,3 +20,4 @@
 <#include "button.ftl">
 <#include "details.ftl">
 <#include "expander.ftl">
+<#include "warning-callout.ftl">
