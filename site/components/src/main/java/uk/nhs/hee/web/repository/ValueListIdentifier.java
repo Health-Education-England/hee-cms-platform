@@ -36,6 +36,11 @@ public enum ValueListIdentifier {
     CASE_STUDY_REGIONS("caseStudyRegions"),
 
     /**
+     * {@code caseStudyRegions} value-list identifier.
+     */
+    CASE_STUDY_PROVIDERS("caseStudyProviders"),
+
+    /**
      * {@code logoTypes} value-list identifier.
      */
     LOGO_TYPES("logoTypes"),

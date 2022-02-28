@@ -28,4 +28,9 @@ public class MiniHub extends BaseDocument {
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:addToAZ")
+    public Boolean getAddToAZ() {
+        return getSingleProperty("hee:addToAZ");
+    }
 }

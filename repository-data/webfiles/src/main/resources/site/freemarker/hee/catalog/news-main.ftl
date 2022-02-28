@@ -3,7 +3,7 @@
 <#include "../macros/hero-section.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<@hst.setBundle basename="uk.nhs.hee.web.blogpost"/>
+<@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.News" -->
 <#-- @ftlvariable name="categoriesValueListMap" type="java.util.Map" -->

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 55ab2303-fc96-41f2-8a9a-49a9e9b411ff
+          jcr:uuid: 00d5e3b1-f7aa-41af-b555-e2eb18e8f2e2
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -50,6 +50,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
+          /addToAZ:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:addToAZ
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -62,9 +70,10 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 7275a3c9-5723-41fb-af6e-a4ad92a697a6
+          jcr:uuid: 92e107d4-fc2d-4b36-a967-c4ed34228d03
           hippostdpubwf:lastModificationDate: 2021-03-03T10:42:34.081+07:00
           hippostdpubwf:creationDate: 2021-03-03T10:42:34.081+07:00
+          hee:addToAZ: false
           /hee:guidancePages:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -123,6 +132,15 @@ definitions:
             caption: Related content
             field: relatedContent
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /addToAZ:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: addToAZ
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:

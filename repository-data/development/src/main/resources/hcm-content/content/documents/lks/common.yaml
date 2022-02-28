@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: bace2536-0ecc-4fde-b30e-2947e5e29300
   hippo:name: Common
-  hippostd:foldertype: [new-translated-folder, new-document]
+  hippostd:foldertype: [new-folder, new-document]
   hippotranslation:id: 5c454ded-acfc-4f4b-8b53-2569e160b5c9
   hippotranslation:locale: en
   /content-cards:
@@ -3345,11 +3345,14 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 02090386-3700-441e-8e27-e3e67780fc1a
       hippo:name: Test YouTube
-      hippo:versionHistory: 64e8479f-a270-49b1-b982-912151e7a71b
+      hippo:versionHistory: fb79d89d-a470-403f-be2d-22fbafa61cbf
       /test-youtube[1]:
         jcr:primaryType: hee:mediaEmbed
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: cd31a9d8-d648-4531-b302-90122a0a0214
+        hee:description: Nisl aliquam gravida urna purus elit erat id id nunc lorem
+          metus proin proin congue eu leo quis magna vel leo rutrum condimentum nulla
+          dolor.
         hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -3361,7 +3364,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-20T14:52:47.910+01:00
+        hippostdpubwf:lastModificationDate: 2022-02-25T11:11:05.175Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
         hippotranslation:locale: en
@@ -3393,6 +3396,9 @@
         jcr:primaryType: hee:mediaEmbed
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 35ea91e3-3087-4f59-ac75-cdea623fe9dc
+        hee:description: Nisl aliquam gravida urna purus elit erat id id nunc lorem
+          metus proin proin congue eu leo quis magna vel leo rutrum condimentum nulla
+          dolor.
         hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -3404,7 +3410,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-20T14:53:08.330+01:00
+        hippostdpubwf:lastModificationDate: 2022-02-25T11:11:22.470Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
         hippotranslation:locale: en
@@ -3436,6 +3442,9 @@
         jcr:primaryType: hee:mediaEmbed
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 66e4a18c-d83d-4b82-a0d8-e8191aa017c3
+        hee:description: Nisl aliquam gravida urna purus elit erat id id nunc lorem
+          metus proin proin congue eu leo quis magna vel leo rutrum condimentum nulla
+          dolor.
         hee:embedCode: <iframe width="560" height="315" src="https://www.youtube.com/embed/dHKakIxQVZc"
           title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
           clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -3447,9 +3456,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-10-08T12:00:56.289+01:00
-        hippostdpubwf:lastModificationDate: 2021-10-20T14:53:08.330+01:00
+        hippostdpubwf:lastModificationDate: 2022-02-25T11:11:22.470Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-10-20T14:53:10.578+01:00
+        hippostdpubwf:publicationDate: 2022-02-25T11:11:25.537Z
         hippotranslation:id: 528e75fe-5c35-469f-8118-ec222582cf8c
         hippotranslation:locale: en
         /hee:transcript:
@@ -4439,7 +4448,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 4e8934cc-f77d-4b5b-b602-2425f7934bca
       hippo:name: ReverseTest
-      hippo:versionHistory: 3b09b773-1df2-48c5-afff-f022091c7ebb
+      hippo:versionHistory: cfedfde3-f5b6-48e6-84d6-d0734087f69f
       /defaultbutton[1]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable']
@@ -4452,13 +4461,13 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.160Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:00.506Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
       /defaultbutton[2]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -4471,13 +4480,13 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.137Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:17.525Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
       /defaultbutton[3]:
         jcr:primaryType: hee:button
         jcr:mixinTypes: ['mix:referenceable']
@@ -4490,14 +4499,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-04T23:20:13.481Z
-        hippostdpubwf:lastModificationDate: 2022-01-26T10:47:52.137Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:24:17.525Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-26T10:47:56.124Z
+        hippostdpubwf:publicationDate: 2022-01-31T16:24:21.010Z
         hippotranslation:id: cefa9b32-d514-4c53-a388-a1aec3d0ed70
         hippotranslation:locale: en
         /hee:document:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
+          hippo:docbase: 17ff5ad6-f93d-45b7-84b0-3680ef7f5068
     /secondarbutton:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -4664,3 +4673,360 @@
             </ul>
 
             <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+  /insettext-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 2d91228c-be97-4de0-bccb-7924a8257564
+    hippo:name: InsetText Blocks
+    hippostd:foldertype: [new-Inset-folder, new-Inset-document]
+    hippotranslation:id: f8112648-39cf-4334-9119-16c9cfe91911
+    hippotranslation:locale: en
+    /insettest:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c8396cf8-7507-4508-845e-9a3c47e79572
+      hippo:name: InsetTest
+      hippo:versionHistory: a644274a-7398-484e-89cf-e6d3767f4c8d
+      /insettest[1]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 80f3004c-683e-4329-a219-451d98ce1445
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-02-20T22:24:58.504Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can <a href="copyright">report</a> any suspected
+            side effect to the&nbsp;<a href="https://yellowcard.mhra.gov.uk/">UK safety
+            scheme</a></p>
+          /copyright:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /insettest[2]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: d127076d-169a-4885-a414-51c0b0f0d248
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-02-20T22:24:56.793Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can <a href="copyright">report</a> any suspected
+            side effect to the&nbsp;<a href="https://yellowcard.mhra.gov.uk/">UK safety
+            scheme</a></p>
+          /copyright:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /insettest[3]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 84e04b67-f1c4-44bf-9053-f58e8bed985b
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-19T14:53:51.509Z
+        hippostdpubwf:lastModificationDate: 2022-02-20T22:24:56.793Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-20T22:25:02.352Z
+        hippotranslation:id: eeea0c10-3cea-4cd1-9fd5-9495a2479118
+        hippotranslation:locale: en
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You can <a href="copyright">report</a> any suspected
+            side effect to the&nbsp;<a href="https://yellowcard.mhra.gov.uk/">UK safety
+            scheme</a></p>
+          /copyright:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+  /expander-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 08be959d-d412-48ae-8dd4-1458cd4c8b64
+    hippo:name: Expander Blocks
+    hippostd:foldertype: [new-expanderGroup-folder, new-expanderGroup-document]
+    /expander-demo:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      hippo:name: Expander Demo
+      hippo:versionHistory: dc3f629e-c3ef-422a-8e0c-d54711959f64
+      /expander-demo[1]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 158899bd-eda7-433f-a4f1-ea2dd8a323a4
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+      /expander-demo[2]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: daf293cc-fc87-48a6-887d-05257fb89a17
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:39:37.173Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+      /expander-demo[3]:
+        jcr:primaryType: hee:expanderGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2fa85cfb-8466-49ae-905a-fa7e75a0eac7
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-01-31T16:38:14.537Z
+        hippostdpubwf:lastModificationDate: 2022-01-31T16:39:37.173Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-31T16:39:40.726Z
+        hippotranslation:id: 770d3b46-3213-491d-84ca-454acc37059b
+        hippotranslation:locale: document-type-locale
+        /hee:expanderPanel[1]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 1
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+        /hee:expanderPanel[2]:
+          jcr:primaryType: hee:expanderPanel
+          hee:expanderSummary: How to measure your blood glucose levels 2
+          /hee:expanderDetails:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>Testing your blood at home is quick and easy, although it can be uncomfortable. It does get better.</p>
+
+              <p>You would have been given:</p>
+
+              <ul>
+               <li>a blood glucose metre</li>
+               <li>small needles called lancets</li>
+               <li>a plastic pen to hold the lancets</li>
+               <li>small test strips</li>
+              </ul>
+  /warning-callouts:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: e9db9ff9-05f4-4f2e-8896-50d50ade1e2a
+    hippo:name: Warning callouts
+    hippostd:foldertype: [new-warningCallout-document, new-warningCallout-folder]
+    /warning-callout-reusable:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      hippo:name: Warning callout reusable
+      hippo:versionHistory: 7829ab7b-90c4-43d3-a308-572446153c89
+      /warning-callout-reusable[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 6808d572-325d-48b1-9f5c-8c11e539690c
+        hee:title: New warning callout reusable
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModificationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: d03aebba-a64e-4c2f-9c81-542a39ea6b1e
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Reusable version of the warning callout.</p>
+      /warning-callout-reusable[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 424e3029-5cb1-42d3-96fd-a2b7a8ad0864
+        hee:title: New warning callout reusable
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModificationDate: 2022-02-25T15:04:39.430Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: d03aebba-a64e-4c2f-9c81-542a39ea6b1e
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Reusable version of the warning callout.</p>
+      /warning-callout-reusable[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: c37d83d7-f84d-491c-98fb-cc508efa112f
+        hee:title: New warning callout reusable
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModificationDate: 2022-02-25T15:04:39.430Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-25T15:04:41.440Z
+        hippotranslation:id: d03aebba-a64e-4c2f-9c81-542a39ea6b1e
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Reusable version of the warning callout.</p>
+    /warning-callout-reusable-2:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: cabc00bf-bd7f-4d0f-89e3-920fa0729bf1
+      hippo:name: Warning callout reusable 2
+      hippo:versionHistory: 3f359913-ee60-4ebc-a36d-587ea2b8685b
+      /warning-callout-reusable-2[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: c5af3e8a-c185-4eda-a798-a58360ebe9f6
+        hee:title: Another New warning callout reusable
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModificationDate: 2022-02-25T15:05:00.546Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 5c8eef33-1321-4bf7-9c99-46c9d1d68e2a
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Reusable version of the warning callout.</p>
+      /warning-callout-reusable-2[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 35c48722-69fc-4c1b-b55f-d70b533ef73f
+        hee:title: Another New warning callout reusable
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModificationDate: 2022-02-25T15:04:55.866Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 5c8eef33-1321-4bf7-9c99-46c9d1d68e2a
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Reusable version of the warning callout.</p>
+      /warning-callout-reusable-2[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 087b8b48-069f-44f8-be21-e40551bc2145
+        hee:title: Another New warning callout reusable
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-25T15:04:19.374Z
+        hippostdpubwf:lastModificationDate: 2022-02-25T15:05:00.546Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-25T15:05:02.504Z
+        hippotranslation:id: 5c8eef33-1321-4bf7-9c99-46c9d1d68e2a
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Reusable version of the warning callout.</p>

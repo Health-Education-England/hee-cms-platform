@@ -67,11 +67,19 @@
                                             <#case "uk.nhs.hee.web.beans.ContentCards">
                                                 <@hee.contentCards contentCards=block size="half"/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.InsetReference">
+                                                <@hee.inset inset=block/>                                             
                                             <#case "uk.nhs.hee.web.beans.ButtonReference">
                                                 <@hee.button button=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.DetailsReference">
                                                 <@hee.details block=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
+                                                <@hee.expander expander=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
+                                                <@hee.warningCallout block=block/>
                                                 <#break>
                                             <#default>
                                         </#switch>

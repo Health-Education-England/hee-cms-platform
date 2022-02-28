@@ -14,6 +14,17 @@ import uk.nhs.hee.web.repository.ValueListIdentifier;
 public enum ListingPageType {
 
     /**
+     * A to Z Listing
+     */
+    ATOZ_LISTING(
+            "atoz",
+            new String[]{"hee:guidance","hee:landingPage","hee:listingPage","hee:MiniHub"},
+            Boolean.FALSE,
+            HEEField.PUBLICATION_DATE.getName(),
+            StringUtils.EMPTY,
+            Boolean.FALSE),
+
+    /**
      * Blog Listing
      */
     BLOG_LISTING(
@@ -42,7 +53,7 @@ public enum ListingPageType {
             "casestudy",
             new String[]{"hee:caseStudy"},
             Boolean.TRUE,
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_CREATION_DATE,
             ValueListIdentifier.CASE_STUDY_IMPACT_GROUPS.getName(),
             Boolean.FALSE),
 

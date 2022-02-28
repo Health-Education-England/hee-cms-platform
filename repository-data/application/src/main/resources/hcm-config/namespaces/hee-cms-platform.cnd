@@ -38,6 +38,9 @@
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:atozPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:banner] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -101,6 +104,15 @@
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:expanderGroup] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:expanderGroupReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:expanderPanel] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:externalLink] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -123,6 +135,12 @@
   orderable
 
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
+
+[hee:inset] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:insetReference] > hippo:compound, hippostd:relaxed
+  orderable
 
 [hee:internalLink] > hippo:compound, hippostd:relaxed
   orderable
@@ -188,5 +206,11 @@
   orderable
 
 [hee:tabsReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:warningCallout] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:warningCalloutReference] > hippo:compound, hippostd:relaxed
   orderable
 

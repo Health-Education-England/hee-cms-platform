@@ -38,4 +38,9 @@ public class MediaEmbed extends BaseDocument {
     public String getHideTranscriptButtonText() {
         return getSingleProperty("hee:hideTranscriptButtonText");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:description")
+    public String getDescription() {
+        return getSingleProperty("hee:description");
+    }
 }

@@ -110,7 +110,7 @@ definitions:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/cookies-main.ftl
           /base-banner:
-            jcr:primaryType: hst:template            
+            jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-banner.ftl
           /news-main:
             jcr:primaryType: hst:template
@@ -121,6 +121,9 @@ definitions:
           /base-cookies-banner:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-cookies-banner.ftl
+          /atozlisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/atozlisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -195,6 +198,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/carousel.svg
               hst:label: Multi org logo
               hst:template: multi-org-logo
+            /a-to-z-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.AToZListingPageComponent
+              hst:iconpath: images/catalog-component-icons/generic-list.svg
+              hst:label: A to Z Listing Page
+              hst:template: atozlisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
@@ -205,5 +214,8 @@ definitions:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
       /medical:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /website-testing:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

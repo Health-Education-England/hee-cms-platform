@@ -37,6 +37,8 @@ public class CaseStudyListingPageComponent extends ListingPageComponent {
                 ValueListUtils.getValueListMap(ValueListIdentifier.CASE_STUDY_SECTORS.getName()));
         request.setModel("regionMap",
                 ValueListUtils.getValueListMap(ValueListIdentifier.CASE_STUDY_REGIONS.getName()));
+        request.setModel("providerMap",
+                ValueListUtils.getValueListMap(ValueListIdentifier.CASE_STUDY_PROVIDERS.getName()));
     }
 
     @Override

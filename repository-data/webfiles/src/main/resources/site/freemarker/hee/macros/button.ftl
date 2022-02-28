@@ -18,23 +18,19 @@
 </#function>
 
 <#macro button button>
-    <#if button??>
+    <#if button?? && button.buttonContentBlock??>
         <#if button.buttonContentBlock.document??>
             <#assign link>
                 <@hst.link hippobean=button.buttonContentBlock.document/>
             </#assign>
-        <#else>
-            <#assign link = "${button.buttonContentBlock.url}">
+            <#assign cssname>
+            	${buttonTypeBySelection(button.buttonContentBlock.buttontype)}
+            </#assign>
         </#if>
-            <#assign cssname>${buttonTypeBySelection(button.buttonContentBlock.buttontype)}</#assign>
         <#if link?has_content>
-			<a class="${cssname}" href="${link}" >
-				${button.buttonContentBlock.label}
-			</a>
-        <#else>
-            <a class="${cssname}" >
-				${button.buttonContentBlock.label}
-			</a>
+				<button class="${cssname}" type="submit"  onclick="location.href ='${link}'"> 
+					${button.buttonContentBlock.label}
+				</button>			
         </#if>
     </#if>
 </#macro>

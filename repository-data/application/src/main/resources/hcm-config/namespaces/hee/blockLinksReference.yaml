@@ -11,25 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ba540909-3877-4bb4-bda2-96c5f6e69b90
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
-          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /blockLinksContentBlock:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:blockLinksContentBlock
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [required]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 65a62c5d-988f-47bf-91bd-618e33259e01
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /blockLinksContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -43,12 +28,6 @@ definitions:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:blockLinksReference
-          /hee:blockLinksContentBlock:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:relaxed']
           /hee:blockLinksContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

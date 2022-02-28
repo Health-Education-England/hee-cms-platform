@@ -12,11 +12,6 @@ public class Button extends BaseDocument {
         return getSingleProperty("hee:label");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:url")
-    public String getUrl() {
-        return getSingleProperty("hee:url");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:buttontype")
     public String getButtontype() {
         return getSingleProperty("hee:buttontype");
