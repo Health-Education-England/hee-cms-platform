@@ -1,16 +1,11 @@
 package uk.nhs.hee.web.beans;
 
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
-import uk.nhs.hee.web.beans.ContentCards;
 import java.util.Calendar;
-import uk.nhs.hee.web.beans.PageLastNextReview;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
-import org.hippoecm.hst.content.beans.standard.HippoBean;
+import java.util.List;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:news")
 @Node(jcrType = "hee:news")
 public class News extends BaseDocument {
@@ -34,28 +29,21 @@ public class News extends BaseDocument {
         return getMultipleProperty("hee:categories");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
-    public ContentCards getRelatedContent() {
-        return getBean("hee:relatedContent", ContentCards.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:publicationDate")
     public Calendar getPublicationDate() {
         return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
-    public PageLastNextReview getPageLastNextReview() {
-        return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    @HippoEssentialsGenerated(internalName = "hee:relatedContent")
+    public ContentCards getRelatedContent() {
+        return getBean("hee:relatedContent", ContentCards.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:heroImage")
-    public ImageSetWithCaption getHeroImage() {
-        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
+    public List<HippoBean> getRightHandBlocks() {
+        return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
-    public HippoBean getLogoGroup() {
-        return getLinkedBean("hee:logoGroup", HippoBean.class);
+    public List<HippoBean> getContentBlocks() {
+        return getChildBeansByName("hee:contentBlocks");
     }
 }

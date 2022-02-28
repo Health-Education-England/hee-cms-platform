@@ -1,7 +1,6 @@
 <#include "../../include/imports.ftl">
-<@hst.setBundle basename="uk.nhs.hee.web.contact,uk.nhs.hee.web.global"/>
 
-<#macro personContact person isAuthor=false>
+<#macro personContact person personTitlesMap personPronounsMap isAuthor=false>
     <div class="nhsuk-contact__content">
 
         <#-- Get Person Initials -->
@@ -22,14 +21,14 @@
         </div>
 
         <#if person.title?has_content>
-            <#assign nameWithTitle> ${person.title} ${person.name} </#assign>
+            <#assign nameWithTitle> ${personTitlesMap[person.title]} ${person.name} </#assign>
         <#else>
             <#assign nameWithTitle> ${person.name} </#assign>
         </#if>
         <h2 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${nameWithTitle}</h2>
 
         <#if person.pronouns?has_content>
-            <p class="nhsuk-contact__pronoun">${person.pronouns}</p>
+            <p class="nhsuk-contact__pronoun">${personPronounsMap[person.pronouns]}</p>
         </#if>
 
         <#if person.jobTitle?has_content>

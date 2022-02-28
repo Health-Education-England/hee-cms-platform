@@ -10,6 +10,7 @@ import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
@@ -48,6 +49,14 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                 request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
             } else
                 request.setModel("visibleComments", comments);
+
+            // the page content blocks needs valueLists to be set on the model
+            List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
+            pageContentBlocks.addAll(blogPost.getRightHandBlocks());
+
+            Map<String, Map<String, String>> modelToValueListMap =
+                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+            modelToValueListMap.forEach(request::setModel);
         }
     }
 
@@ -108,5 +117,4 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                 .filter(comment -> Boolean.TRUE.equals(comment.getModerated()))
                 .collect(Collectors.toList());
     }
-
 }
