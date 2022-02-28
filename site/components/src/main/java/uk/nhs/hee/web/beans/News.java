@@ -46,4 +46,19 @@ public class News extends BaseDocument {
     public List<HippoBean> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
+    public PageLastNextReview getPageLastNextReview() {
+        return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:heroImage")
+    public ImageSetWithCaption getHeroImage() {
+        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
+    }
 }

@@ -1,6 +1,6 @@
 <#import "contact-item.ftl" as contactItem>
 
-<#macro contact block personTitlesMap=[] personPronounsMap=[]>
+<#macro contact block personTitlesMap personPronounsMap>
     <#if block??>
         <#if block.contactItems?size gt 1>
             <ul class="nhsuk-grid-row nhsuk-contact-group">
