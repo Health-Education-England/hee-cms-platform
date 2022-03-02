@@ -5020,3 +5020,146 @@
         /hee:richAlertText:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Reusable version of the warning callout.</p>
+  /statement-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 20a36ed8-a258-4aff-a022-28631a18cd8a
+    hippo:name: Statement Cards
+    hippostd:foldertype: [new-statementCard-folder, new-statementCard-document]
+    /statement-card-demo-1:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
+      hippo:name: Statement Card Demo 1
+      hippo:versionHistory: be7f8f34-5ba8-41a5-a993-85a84eb3e3a2
+      /statement-card-demo-1[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 08d29d2c-c239-4f71-9901-9f1ce31ae629
+        hee:title: Statement Card Title 1
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-02T13:49:08.746Z
+        hippostdpubwf:lastModificationDate: 2022-03-02T14:09:23.845Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3683ca92-a3bf-4608-8a50-e4b80b512426
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Statement Card <a href="news">Title </a>1 -&nbsp;<a
+            href="http://www.gov.uk">Gov</a></p>
+          /news:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /statement-card-demo-1[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 1cf9eefb-4d67-466d-8aea-e14a8181d176
+        hee:title: Statement Card Title 1
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-02T13:49:08.746Z
+        hippostdpubwf:lastModificationDate: 2022-03-02T14:09:37.794Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 3683ca92-a3bf-4608-8a50-e4b80b512426
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Statement Card <a href="news">Title </a>1 -&nbsp;<a
+            href="http://www.gov.uk">Gov</a></p>
+          /news:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /statement-card-demo-1[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 10b8540c-8d41-42d3-9a26-d9e495780d08
+        hee:title: Statement Card Title 1
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-02T13:49:08.746Z
+        hippostdpubwf:lastModificationDate: 2022-03-02T14:09:37.794Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-03-02T14:09:39.866Z
+        hippotranslation:id: 3683ca92-a3bf-4608-8a50-e4b80b512426
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Statement Card <a href="news">Title </a>1 -&nbsp;<a
+            href="http://www.gov.uk">Gov</a></p>
+          /news:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+    /statement-card-demo-2:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      hippo:name: Statement Card Demo 2
+      hippo:versionHistory: 93f94c47-7c3a-4733-a101-703406510e49
+      /statement-card-demo-2[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 03299fb3-3ae2-4cbb-abfd-18f059aca35e
+        hee:title: Statement Card Title 2
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-02T13:49:08.746Z
+        hippostdpubwf:lastModificationDate: 2022-03-02T13:49:58.265Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a8c3f37d-93bd-4d38-8e77-833eff7741ec
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Statement Card Title 2</p>
+      /statement-card-demo-2[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 75c0adf7-037b-4ac8-9dda-6d87a88a0de6
+        hee:title: Statement Card Title 2
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-02T13:49:08.746Z
+        hippostdpubwf:lastModificationDate: 2022-03-02T13:49:53.971Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a8c3f37d-93bd-4d38-8e77-833eff7741ec
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Statement Card Title 2</p>
+      /statement-card-demo-2[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f70f6e23-c7d2-4ac6-96dd-f1df147b5149
+        hee:title: Statement Card Title 2
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-02T13:49:08.746Z
+        hippostdpubwf:lastModificationDate: 2022-03-02T13:49:58.265Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-03-02T13:50:00.651Z
+        hippotranslation:id: a8c3f37d-93bd-4d38-8e77-833eff7741ec
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Statement Card Title 2</p>
