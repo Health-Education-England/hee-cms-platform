@@ -1,5 +1,6 @@
 package uk.nhs.hee.web.components;
 
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
@@ -7,8 +8,10 @@ import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
+import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
 import java.util.List;
+import java.util.Map;
 
 @ParametersInfo(type = MiniHubComponentInfo.class)
 public class MiniHubComponent extends EssentialsDocumentComponent {
@@ -56,6 +59,14 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
             request.setModel("currentGuidance", currentGuidance);
             request.setModel("nextGuidance", nextGuidance);
             request.setModel("accessFromRootHub", accessFromRootHub);
+
+            // the guidance page contains content blocks that need valueLists to be set on the model
+            List<HippoBean> pageContentBlocks = currentGuidance.getContentBlocks();
+            pageContentBlocks.addAll(currentGuidance.getRightHandBlocks());
+
+            Map<String, Map<String, String>> modelToValueListMap =
+                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+            modelToValueListMap.forEach(request::setModel);
         }
     }
 }

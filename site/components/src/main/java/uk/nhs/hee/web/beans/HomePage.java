@@ -12,7 +12,7 @@ import java.util.List;
 @HippoEssentialsGenerated(internalName = "hee:HomePage")
 @Node(jcrType = "hee:HomePage")
 public class HomePage extends BaseDocument {
-    public List<HippoBean> getContentBlocks() {
+    public <T extends HippoBean> List<T> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
     }
 

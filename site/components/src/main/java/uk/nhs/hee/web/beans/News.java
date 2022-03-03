@@ -39,11 +39,11 @@ public class News extends BaseDocument {
         return getBean("hee:relatedContent", ContentCards.class);
     }
 
-    public List<HippoBean> getRightHandBlocks() {
+    public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    public List<HippoBean> getContentBlocks() {
+    public <T extends HippoBean> List<T> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
     }
 
