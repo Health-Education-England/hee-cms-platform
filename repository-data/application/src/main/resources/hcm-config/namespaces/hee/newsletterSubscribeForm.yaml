@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/emailSubscribeForm:
+    /hippo:namespaces/hee/newsletterSubscribeForm:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: 70c33859-0427-4784-8969-1a4e0ce24124
@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 54955795-8b5e-410c-be84-dcfca54f5909
+          jcr:uuid: f112ec9b-d361-47f8-9456-ac76a80d43ec
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -67,10 +67,59 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
+          /consentText:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:consentText
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
+            hipposysedit:validators: [required]
+          /showOrganisationField:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showOrganisationField
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /showRegionField:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showRegionField
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /showProfessionField:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showProfessionField
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /enableDoubleOptIn:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:enableDoubleOptIn
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /enableCaptcha:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:enableCaptcha
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:emailSubscribeForm
+          jcr:primaryType: hee:newsletterSubscribeForm
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -81,12 +130,23 @@ definitions:
           hee:postSubmitUrl: https://response.pure360.com/interface/list.php
           hee:accName: NationalWebsitePlatform
           hee:listName: e.g. NWP Stakeholders and Users - Jan 2021
-          hee:successUrl: ''
+          hee:successUrl: NO-REDIRECT
           hee:errorUrl: ''
           hee:submitButtonText: Subscribe
-          jcr:uuid: 1a80bf02-c486-4a0b-bb9c-e2a1c54e9bb2
+          jcr:uuid: ab9457ae-4619-492a-bab9-ddd7ca51e7a6
           hippostdpubwf:lastModificationDate: 2022-03-03T14:51:00.347Z
           hippostdpubwf:creationDate: 2022-03-03T14:51:00.347Z
+          hee:showProfessionField: false
+          hee:showRegionField: false
+          hee:showOrganisationField: false
+          hee:enableDoubleOptIn: false
+          hee:enableCaptcha: false
+          /hee:consentText:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>By signing up here, you are agreeing to receive marketing and update emails from Health Education England (HEE) about our work, in line with our Privacy Notice.</p>
+
+              <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -124,12 +184,22 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /consentText:
+            jcr:primaryType: frontend:plugin
+            caption: Consent text
+            field: consentText
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /successUrl:
             jcr:primaryType: frontend:plugin
             caption: Success url
             field: successUrl
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /errorUrl:
@@ -139,6 +209,49 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /showRegionField:
+            jcr:primaryType: frontend:plugin
+            caption: Show region field
+            field: showRegionField
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /showOrganisationField:
+            jcr:primaryType: frontend:plugin
+            caption: Show organisation field
+            field: showOrganisationField
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /showProfessionField:
+            jcr:primaryType: frontend:plugin
+            caption: Show profession field
+            field: showProfessionField
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /enableDoubleOptIn:
+            jcr:primaryType: frontend:plugin
+            caption: Enable double opt in
+            field: enableDoubleOptIn
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /enableCaptcha:
+            jcr:primaryType: frontend:plugin
+            caption: Enable captcha
+            field: enableCaptcha
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /submitButtonText:

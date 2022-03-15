@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/emailSubscribeFormReference:
+    /hippo:namespaces/hee/newsletterSubscribeFormReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: eb098aa5-4a86-4d1f-a301-bbcbb5653b16
@@ -15,20 +15,20 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /emailSubscribeFormContentBlock:
+          /newsletterSubscribeFormContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:emailSubscribeFormContentBlock
+            hipposysedit:path: hee:newsletterSubscribeFormContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:emailSubscribeFormReference
-          /hee:emailSubscribeFormContentBlock:
+          jcr:primaryType: hee:newsletterSubscribeFormReference
+          /hee:newsletterSubscribeFormContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -42,13 +42,13 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /emailSubscribeFormContentBlock:
+          /newsletterSubscribeFormContentBlock:
             jcr:primaryType: frontend:plugin
             caption: Select email subscribe form
-            field: emailSubscribeFormContentBlock
+            field: newsletterSubscribeFormContentBlock
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:emailSubscribeForm']
+              nodetypes: ['hee:newsletterSubscribeForm']

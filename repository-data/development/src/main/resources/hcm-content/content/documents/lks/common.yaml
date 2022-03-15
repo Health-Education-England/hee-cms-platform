@@ -5020,3 +5020,109 @@
         /hee:richAlertText:
           jcr:primaryType: hippostd:html
           hippostd:content: <p>Reusable version of the warning callout.</p>
+  /email-subscribe-forms:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: a5a48779-86d9-4130-9727-7d90e87dfe90
+    hippo:name: Email subscribe forms
+    hippostd:foldertype: [new-newsletterSubscribeForm-document, new-newsletterSubscribeForm-folder]
+    /nwp-stakeholders-and-users---jan-2021:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: d65410bd-94b0-48f5-8a57-95c385d75d59
+      hippo:name: NWP Stakeholders and Users - Jan 2021
+      hippo:versionHistory: 3f676d59-28eb-4896-9348-8b3b7680829a
+      /nwp-stakeholders-and-users---jan-2021[1]:
+        jcr:primaryType: hee:newsletterSubscribeForm
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b3df4b74-5172-4341-a303-ab2d7d9dc92e
+        hee:accName: NationalWebsitePlatform
+        hee:enableCaptcha: true
+        hee:enableDoubleOptIn: true
+        hee:errorUrl: https://library.hee.nhs.uk/cookies
+        hee:listName: NWP Stakeholders and Users - Jan 2021
+        hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+        hee:showOrganisationField: true
+        hee:showProfessionField: true
+        hee:showRegionField: true
+        hee:submitButtonText: Subscribe
+        hee:successUrl: https://library.hee.nhs.uk
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-03T16:26:04.584Z
+        hippostdpubwf:lastModificationDate: 2022-03-15T01:09:23.533Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: ab138b31-92a0-4f36-94fc-2dbb1ec6f9e9
+        hippotranslation:locale: document-type-locale
+        /hee:consentText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
+
+            <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+      /nwp-stakeholders-and-users---jan-2021[2]:
+        jcr:primaryType: hee:newsletterSubscribeForm
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: d8ed5b65-453a-4f13-a90e-97fef725e2fa
+        hee:accName: NationalWebsitePlatform
+        hee:enableCaptcha: true
+        hee:enableDoubleOptIn: true
+        hee:errorUrl: https://library.hee.nhs.uk/cookies
+        hee:listName: NWP Stakeholders and Users - Jan 2021
+        hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+        hee:showOrganisationField: true
+        hee:showProfessionField: true
+        hee:showRegionField: true
+        hee:submitButtonText: Subscribe
+        hee:successUrl: https://library.hee.nhs.uk
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-03T16:26:04.584Z
+        hippostdpubwf:lastModificationDate: 2022-03-15T01:09:27.610Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: ab138b31-92a0-4f36-94fc-2dbb1ec6f9e9
+        hippotranslation:locale: document-type-locale
+        /hee:consentText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
+
+            <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+      /nwp-stakeholders-and-users---jan-2021[3]:
+        jcr:primaryType: hee:newsletterSubscribeForm
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8addf1c8-39b7-455e-a9eb-41082ad38793
+        hee:accName: NationalWebsitePlatform
+        hee:enableCaptcha: true
+        hee:enableDoubleOptIn: true
+        hee:errorUrl: https://library.hee.nhs.uk/cookies
+        hee:listName: NWP Stakeholders and Users - Jan 2021
+        hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+        hee:showOrganisationField: true
+        hee:showProfessionField: true
+        hee:showRegionField: true
+        hee:submitButtonText: Subscribe
+        hee:successUrl: https://library.hee.nhs.uk
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-03T16:26:04.584Z
+        hippostdpubwf:lastModificationDate: 2022-03-15T01:09:27.610Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-03-15T01:09:29.600Z
+        hippotranslation:id: ab138b31-92a0-4f36-94fc-2dbb1ec6f9e9
+        hippotranslation:locale: document-type-locale
+        /hee:consentText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
+
+            <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>

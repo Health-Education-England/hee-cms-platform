@@ -76,6 +76,9 @@
                                             <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
                                                 <@hee.warningCallout block=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.NewsletterSubscribeFormReference">
+                                                <@hee.newsletterSubscribeForm block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>

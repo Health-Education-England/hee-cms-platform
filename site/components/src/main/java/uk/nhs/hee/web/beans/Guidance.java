@@ -21,7 +21,7 @@ public class Guidance extends BaseDocument {
         return getSingleProperty("hee:summary");
     }
 
-    public List<?> getContentBlocks() {
+    public <T extends HippoBean> List<T> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
     }
 

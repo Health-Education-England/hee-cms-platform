@@ -1,0 +1,73 @@
+/content/documents/administration/valuelists/newsletterorganisations:
+  .meta:order-before: listingpagetypes
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 485b162f-9fab-4e03-85b9-f14948994f44
+  hippo:name: NewsletterOrganisations
+  /newsletterorganisations:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: abe8802c-b333-41c1-b2a3-a7fa72ca254d
+    hippo:availability: [live, preview]
+    hippotranslation:id: 6601ccc5-2e7c-41d7-8c07-2c53918c1d9c
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: Arms-length body e.g HEE, PHE
+      selection:label: Arms-length body e.g HEE, PHE
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: Dental practice
+      selection:label: Dental practice
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: Further education (e.g. Sixth form college)
+      selection:label: Further education (e.g. Sixth form college)
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: GP surgery
+      selection:label: GP surgery
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: Higher Education Institute
+      selection:label: Higher Education Institute
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: NHS England
+      selection:label: NHS England
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: NHS Trust
+      selection:label: NHS Trust
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: Pharmacy
+      selection:label: Pharmacy
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: Primary and Secondary education
+      selection:label: Primary and Secondary education
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: Private company (e.g. Pharmaceutical company)
+      selection:label: Private company (e.g. Pharmaceutical company)
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: Private health service
+      selection:label: Private health service
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: Professional body
+      selection:label: Professional body
+    /selection:listitem[13]:
+      jcr:primaryType: selection:listitem
+      selection:key: Regulatory body
+      selection:label: Regulatory body
+    /selection:listitem[14]:
+      jcr:primaryType: selection:listitem
+      selection:key: Research Institute
+      selection:label: Research Institute
+    /selection:listitem[15]:
+      jcr:primaryType: selection:listitem
+      selection:key: Royal College/Faculty (e.g. Faculty of Public Health)
+      selection:label: Royal College/Faculty (e.g. Faculty of Public Health)

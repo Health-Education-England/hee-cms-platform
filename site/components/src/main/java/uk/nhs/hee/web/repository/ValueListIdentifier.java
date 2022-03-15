@@ -68,7 +68,22 @@ public enum ValueListIdentifier {
     /**
      * {@code newsCategories} value-list identifier.
      */
-    NEWS_CATEGORIES("newsCategories");
+    NEWS_CATEGORIES("newsCategories"),
+
+    /**
+     * {@code newsletterRegions} value-list identifier.
+     */
+    NEWSLETTER_REGIONS("newsletterRegions"),
+
+    /**
+     * {@code newsletterOrganisations} value-list identifier.
+     */
+    NEWSLETTER_ORGANISATIONS("newsletterOrganisations"),
+
+    /**
+     * {@code newsletterProfessions} value-list identifier.
+     */
+    NEWSLETTER_PROFESSIONS("newsletterProfessions");
 
 
     private final String name;
