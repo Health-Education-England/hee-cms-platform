@@ -109,7 +109,7 @@
                     <div class="nhsuk-form-group">
                         <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item">
-                                <input class="nhsuk-checkboxes__input" id="consent" name="consent" type="checkbox">
+                                <input class="nhsuk-checkboxes__input" id="consent" name="consent" type="checkbox" required>
                                 <label class="nhsuk-label nhsuk-checkboxes__label" for="consent">
                                     <@hst.html hippohtml=block.newsletterSubscribeFormContentBlock.consentText/>
                                 </label>

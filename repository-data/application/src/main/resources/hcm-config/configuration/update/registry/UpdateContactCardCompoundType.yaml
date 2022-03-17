@@ -1,0 +1,30 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateContactCardCompoundType:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Update the content field from ContactCard compound type
+        to contain a direct link to a Person or Document type instead of a direct
+        link to a ContactCard document type.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:contactCardReference)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass UpdateContactCard extends BaseNodeUpdateVisitor\
+        \ {\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug(\"Start\
+        \ updating contactCardReference node at path '${node.getPath()}'\")\r\n  \
+        \    \r\n        Node contactCardContent = node.getNode(\"hee:content\")\r\
+        \n        String contactCardId = contactCardContent.getProperty(\"hippo:docbase\"\
+        ).getString()\r\n\r\n        Node contactCardNode = node.getSession().getNodeByIdentifier(contactCardId)\r\
+        \n        String personOrDepartmentId = contactCardNode.getNodes().nextNode().getNode(\"\
+        hee:contentItem\").getProperty(\"hippo:docbase\").getString()\r\n        log.debug(\"\
+        Found Person/Department ID '${personOrDepartmentId}' used by contactCard document\"\
+        )\r\n\r\n        contactCardContent.getProperty(\"hippo:docbase\").remove()\r\
+        \n        contactCardContent.setProperty(\"hippo:docbase\", personOrDepartmentId)\r\
+        \n        log.debug(\"Updated with success the contactCard docbase with document\
+        \ with ID '${personOrDepartmentId}'\")\r\n        \r\n        return true\r\
+        \n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

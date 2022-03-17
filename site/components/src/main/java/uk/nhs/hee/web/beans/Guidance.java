@@ -30,7 +30,7 @@ public class Guidance extends BaseDocument {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
     }
 
-    public List<?> getRightHandBlocks() {
+    public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 

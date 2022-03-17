@@ -29,11 +29,33 @@ public class ContentBlocksUtils {
         modelToValueListMap.putAll(
                 getValueListForBeanType(
                         contentBlocks,
+                        hippoBean -> hippoBean instanceof ContactCardReference || hippoBean instanceof Contact,
+                        ImmutableMap.of(
+                                Model.PERSON_TITLES_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.PERSON_TITLES.getName()),
+                                Model.PERSON_PRONOUNS_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.PERSON_PRONOUNS.getName())
+                        )
+                )
+        );
+
+        modelToValueListMap.putAll(
+                getValueListForBeanType(
+                        contentBlocks,
                         hippoBean -> hippoBean instanceof NewsletterSubscribeFormReference,
                         ImmutableMap.of(
                                 Model.NEWSLETTER_REGION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_REGIONS.getName()),
                                 Model.NEWSLETTER_ORGANISATION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_ORGANISATIONS.getName()),
                                 Model.NEWSLETTER_PROFESSION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_PROFESSIONS.getName())
+                        )
+                )
+        );                        
+
+        modelToValueListMap.putAll(
+                getValueListForBeanType(
+                        contentBlocks,
+                        hippoBean -> hippoBean instanceof NavMap,
+                        Collections.singletonMap(
+                                Model.NAV_MAP_REGION_MAP.getKey(),
+                                ValueListUtils.getValueListMap(ValueListIdentifier.NAV_MAP_REGIONS.getName())
                         )
                 )
         );

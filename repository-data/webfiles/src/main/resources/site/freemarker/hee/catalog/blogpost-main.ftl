@@ -2,7 +2,7 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
 
-<@hst.setBundle basename="uk.nhs.hee.web.blogpost"/>
+<@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.blogpost,uk.nhs.hee.web.contact"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.BlogPost" -->
 <#-- @ftlvariable name="categoriesValueListMap" type="java.util.Map" -->
@@ -70,7 +70,11 @@
                                         <@hst.html hippohtml=block.richTextBlock.html/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.Contact">
-                                        <@hee.contact block=block/>
+                                        <@hee.contact
+                                        block=block
+                                        personTitlesMap=personTitlesMap
+                                        personPronounsMap=personPronounsMap
+                                        />
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                         <@hee.blockLinks block=block/>
@@ -105,7 +109,11 @@
                                 <@hee.quickLinks quickLinks=block/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                <@hee.contactCard card=block.content/>
+                                <@hee.contactCard
+                                contact=block.content
+                                personTitlesMap=personTitlesMap
+                                personPronounsMap=personPronounsMap
+                                />
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                 <@hee.externalLinksCard card=block.externalLinksCard/>

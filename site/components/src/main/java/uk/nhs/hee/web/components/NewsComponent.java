@@ -9,6 +9,7 @@ import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.News;
 import uk.nhs.hee.web.components.info.NewsComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
@@ -29,6 +30,14 @@ public class NewsComponent extends EssentialsDocumentComponent {
         if (news != null) {
             addCategoriesValueListMapToModel(request, news);
             addNewsListingPageURLToModel(request);
+
+            // the page content blocks needs valueLists to be set on the model
+            List<HippoBean> pageContentBlocks = news.getContentBlocks();
+            pageContentBlocks.addAll(news.getRightHandBlocks());
+
+            Map<String, Map<String, String>> modelToValueListMap =
+                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+            modelToValueListMap.forEach(request::setModel);
         }
     }
 

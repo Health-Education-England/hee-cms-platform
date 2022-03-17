@@ -4,23 +4,13 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoCompound;
 import java.util.List;
-import uk.nhs.hee.web.beans.ContactWithCopy;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 
 @HippoEssentialsGenerated(internalName = "hee:contact")
 @Node(jcrType = "hee:contact")
 public class Contact extends HippoCompound {
-    @HippoEssentialsGenerated(internalName = "hee:title")
-    public String getTitle() {
-        return getSingleProperty("hee:title");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:display")
-    public String[] getDisplay() {
-        return getMultipleProperty("hee:display");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:contentItems")
-    public List<ContactWithCopy> getContentItems() {
-        return getChildBeansByName("hee:contentItems", ContactWithCopy.class);
+    @HippoEssentialsGenerated(internalName = "hee:contactItems")
+    public List<HippoBean> getContactItems() {
+        return getLinkedBeans("hee:contactItems", HippoBean.class);
     }
 }
