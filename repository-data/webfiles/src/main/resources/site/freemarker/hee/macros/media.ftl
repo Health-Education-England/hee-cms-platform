@@ -5,8 +5,13 @@
     <#if media??>
         <#if media.mediaEmbedContentBlock.embedCode??>
             <section class="nhsuk-page-content__section-one">
-                <h2>${ media.mediaEmbedContentBlock.title }</h2>
                 <div class="nhsuk-media">
+                    <h2>${ media.mediaEmbedContentBlock.title }</h2>
+                    <#if media.mediaEmbedContentBlock.description?has_content && media.mediaEmbedContentBlock.description?trim != ''>
+                        <div class="nhsuk-media__description">
+                            <p>${ media.mediaEmbedContentBlock.description }</p>
+                        </div>
+                    </#if>
                     ${ media.mediaEmbedContentBlock.embedCode }
                     <div class="nhsuk-media__info">
                         <#if media.mediaEmbedContentBlock.transcript.content?has_content && media.mediaEmbedContentBlock.transcript.content?trim != ''>

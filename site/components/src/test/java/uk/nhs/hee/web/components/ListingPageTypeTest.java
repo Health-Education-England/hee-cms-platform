@@ -40,7 +40,7 @@ public class ListingPageTypeTest {
         assertThat(caseStudyListing.getType()).isEqualTo("casestudy");
         assertThat(caseStudyListing.getDocumentTypes()).isEqualTo(new String[]{"hee:caseStudy"});
         assertThat(caseStudyListing.isSortingEnabled()).isTrue();
-        assertThat(caseStudyListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
+        assertThat(caseStudyListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_CREATION_DATE);
         assertThat(caseStudyListing.getFilterValueListIdentifier()).isEqualTo("caseStudyImpactGroups");
         assertThat(caseStudyListing.isChannelSpecificValueListIdentifier()).isFalse();
     }

@@ -1,17 +1,17 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 
 <#macro details block>
-    <#assign details = block.detailsContentBlock>
+    <#assign detailsDocument = block.detailsContentBlock>
 
-    <#if details.summary?? && details.richStatement?? >
+    <#if detailsDocument.summary?? && detailsDocument.richStatement?? >
         <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">
-               ${details.summary}
+               ${detailsDocument.summary}
             </span>
             </summary>
             <div class="nhsuk-details__text">
-                <@hst.html hippohtml=details.richStatement/>
+                <@hst.html hippohtml=detailsDocument.richStatement/>
             </div>
         </details>
     </#if>

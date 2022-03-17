@@ -16,6 +16,7 @@
 <#-- @ftlvariable name="sectorMap" type="java.util.Map" -->
 <#-- @ftlvariable name="regionMap" type="java.util.Map" -->
 <#-- @ftlvariable name="selectedImpactGroups" type="java.util.List" -->
+<#-- @ftlvariable name="providerMap" type="java.util.List" -->
 
 <#if document??>
     <#assign showHero=false>
@@ -101,7 +102,8 @@
                                     impactGroupMap=impactGroupMap
                                     impactTypesMap=impactTypesMap
                                     sectorMap=sectorMap
-                                    regionMap=regionMap/>
+                                    regionMap=regionMap
+                                    providerMap=providerMap/>
                             </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>
