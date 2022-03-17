@@ -116,6 +116,113 @@ definitions:
             hipposysedit:path: hee:enableCaptcha
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: cb80f98e-40a2-4658-a59f-e44a26cb426f
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          /postSubmitUrl:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:postSubmitUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /accName:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:accName
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /listName:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:listName
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /successUrl:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:successUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /errorUrl:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:errorUrl
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /submitButtonText:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:submitButtonText
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /consentText:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:consentText
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
+            hipposysedit:validators: [required]
+          /showOrganisationField:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showOrganisationField
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /showRegionField:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showRegionField
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /showProfessionField:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:showProfessionField
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /enableDoubleOptIn:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:enableDoubleOptIn
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /enableCaptcha:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:enableCaptcha
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -141,6 +248,35 @@ definitions:
           hee:showOrganisationField: false
           hee:enableDoubleOptIn: false
           hee:enableCaptcha: false
+          /hee:consentText:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p>By signing up here, you are agreeing to receive marketing and update emails from Health Education England (HEE) about our work, in line with our Privacy Notice.</p>
+
+              <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable', 'hippostd:relaxed']
+          jcr:uuid: 0ab16b8c-225b-478e-8b50-f32ffa345c08
+          hee:accName: NationalWebsitePlatform
+          hee:enableCaptcha: false
+          hee:enableDoubleOptIn: false
+          hee:errorUrl: ''
+          hee:listName: e.g. NWP Stakeholders and Users - Jan 2021
+          hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+          hee:showOrganisationField: false
+          hee:showProfessionField: false
+          hee:showRegionField: false
+          hee:submitButtonText: Subscribe
+          hee:successUrl: NO-REDIRECT
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2022-03-03T14:51:00.347Z
+          hippostdpubwf:lastModificationDate: 2022-03-03T14:51:00.347Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
           /hee:consentText:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
