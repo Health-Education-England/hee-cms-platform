@@ -41,4 +41,34 @@ public class Person extends BaseDocument {
     public ImageSetWithCaption getImage() {
         return getLinkedBean("hee:image", ImageSetWithCaption.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:organisation")
+    public String getOrganisation() {
+        return getSingleProperty("hee:organisation");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:pronouns")
+    public String getPronouns() {
+        return getSingleProperty("hee:pronouns");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:title")
+    public String getTitle() {
+        return getSingleProperty("hee:title");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:website")
+    public String getWebsite() {
+        return getSingleProperty("hee:website");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:bio")
+    public String getBio() {
+        return getSingleProperty("hee:bio");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:linkUrl")
+    public String getLinkUrl() {
+        return getSingleProperty("hee:linkUrl");
+    }
 }

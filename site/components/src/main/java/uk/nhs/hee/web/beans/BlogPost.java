@@ -28,8 +28,12 @@ public class BlogPost extends BaseDocument {
         return getSingleProperty("hee:summary");
     }
 
-    public List<?> getContentBlocks() {
+    public List<HippoBean> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
+    }
+
+    public List<HippoBean> getRightHandBlocks() {
+        return getChildBeansByName("hee:rightHandBlocks");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")

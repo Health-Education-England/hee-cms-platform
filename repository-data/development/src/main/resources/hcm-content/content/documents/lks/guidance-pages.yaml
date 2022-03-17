@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 298a12b6-7562-4956-9723-f6823497e7a9
+    hippo:versionHistory: d4ec323d-6795-4207-acb7-64390cbf7f78
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -277,30 +277,17 @@
         jcr:primaryType: hee:contactCardReference
         /hee:content:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
       /hee:contentBlocks[11]:
         jcr:primaryType: hee:contact
-        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
-        hee:title: Person Contact
-        /hee:contentItems:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Vivamus magna justo, lacinia eget consectetur sed, convallis at
-            tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non
-            nisi.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       /hee:contentBlocks[12]:
         jcr:primaryType: hee:contact
-        hee:display: [name, email, address, phoneNumber]
-        hee:title: Department Contact
-        /hee:contentItems:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
-            risus.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /hee:rightHandBlocks[5]:
         jcr:primaryType: hee:externalLinksCardReference
         /hee:externalLinksCard:
@@ -313,29 +300,15 @@
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
       /hee:contentBlocks[13]:
         jcr:primaryType: hee:contact
-        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
-        hee:title: Contact Group, Mixed Types
-        /hee:contentItems[1]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Pellentesque in ipsum id orci porta dapibus.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-        /hee:contentItems[2]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-            nibh.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
-        /hee:contentItems[3]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-            Vivamus suscipit tortor eget felis porttitor volutpat.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+        /hee:contactItems[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+        /hee:contactItems[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:contactItems[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /hee:contentBlocks[14]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
@@ -419,7 +392,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-02-25T15:05:08.372Z
+      hippostdpubwf:lastModificationDate: 2022-01-28T19:38:35.445Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -670,30 +643,17 @@
         jcr:primaryType: hee:contactCardReference
         /hee:content:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
       /hee:contentBlocks[11]:
         jcr:primaryType: hee:contact
-        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
-        hee:title: Person Contact
-        /hee:contentItems:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Vivamus magna justo, lacinia eget consectetur sed, convallis at
-            tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non
-            nisi.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       /hee:contentBlocks[12]:
         jcr:primaryType: hee:contact
-        hee:display: [name, email, address, phoneNumber]
-        hee:title: Department Contact
-        /hee:contentItems:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
-            risus.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /hee:rightHandBlocks[5]:
         jcr:primaryType: hee:externalLinksCardReference
         /hee:externalLinksCard:
@@ -706,29 +666,15 @@
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
       /hee:contentBlocks[13]:
         jcr:primaryType: hee:contact
-        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
-        hee:title: Contact Group, Mixed Types
-        /hee:contentItems[1]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Pellentesque in ipsum id orci porta dapibus.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-        /hee:contentItems[2]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-            nibh.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
-        /hee:contentItems[3]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-            Vivamus suscipit tortor eget felis porttitor volutpat.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+        /hee:contactItems[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+        /hee:contactItems[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:contactItems[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /hee:contentBlocks[14]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
@@ -812,9 +758,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-02-25T15:08:14.877Z
+      hippostdpubwf:lastModificationDate: 2022-01-26T10:45:45.401Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-02-25T15:08:18.061Z
+      hippostdpubwf:publicationDate: 2022-01-28T19:39:30.211Z
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1064,30 +1010,17 @@
         jcr:primaryType: hee:contactCardReference
         /hee:content:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: a352e94a-1e98-4280-abc5-b0853ae32e26
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
       /hee:contentBlocks[11]:
         jcr:primaryType: hee:contact
-        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
-        hee:title: Person Contact
-        /hee:contentItems:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Vivamus magna justo, lacinia eget consectetur sed, convallis at
-            tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non
-            nisi.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       /hee:contentBlocks[12]:
         jcr:primaryType: hee:contact
-        hee:display: [name, email, address, phoneNumber]
-        hee:title: Department Contact
-        /hee:contentItems:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur aliquet quam id dui posuere blandit. Proin eget tortor
-            risus.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /hee:rightHandBlocks[5]:
         jcr:primaryType: hee:externalLinksCardReference
         /hee:externalLinksCard:
@@ -1100,29 +1033,15 @@
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
       /hee:contentBlocks[13]:
         jcr:primaryType: hee:contact
-        hee:display: [name, image, departmentName, jobTitle, email, phoneNumber]
-        hee:title: Contact Group, Mixed Types
-        /hee:contentItems[1]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Pellentesque in ipsum id orci porta dapibus.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-        /hee:contentItems[2]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Cras ultricies ligula sed magna dictum porta. Sed porttitor lectus
-            nibh.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
-        /hee:contentItems[3]:
-          jcr:primaryType: hee:contactWithCopy
-          hee:copy: Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
-            Vivamus suscipit tortor eget felis porttitor volutpat.
-          /hee:contentItem:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+        /hee:contactItems[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+        /hee:contactItems[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:contactItems[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /hee:contentBlocks[14]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
@@ -1720,7 +1639,7 @@
       hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-26T11:01:29.296Z
+      hippostdpubwf:lastModificationDate: 2022-02-24T05:28:44.217Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
