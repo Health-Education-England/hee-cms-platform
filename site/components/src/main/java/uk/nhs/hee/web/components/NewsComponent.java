@@ -25,7 +25,12 @@ public class NewsComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        final News news = request.getModel(REQUEST_ATTR_DOCUMENT);
+        News news = request.getModel(REQUEST_ATTR_DOCUMENT);
+        if (news == null) {
+            news = (News) request.getRequestContext().getContentBean();
+            request.setModel(REQUEST_ATTR_DOCUMENT, news);
+        }
+
         if (news != null) {
             addCategoriesValueListMapToModel(request, news);
             addNewsListingPageURLToModel(request);
