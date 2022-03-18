@@ -42,3 +42,43 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent
           hst:template: minihub-main
+      /category-based-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Category Based Listing page [Bulletin, Blog & News]
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
+          hst:template: categorybasedlisting-main
+      /case-study-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Case Study Listing Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.CaseStudyListingPageComponent
+          hst:template: casestudylisting-main
+      /event-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Event Listing Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.EventListingPageComponent
+          hst:template: eventlisting-main
+      /search-bank-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Search Bank Listing Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.SearchBankListingPageComponent
+          hst:template: searchbanklisting-main
+      /news-page:
+        jcr:primaryType: hst:xpage
+        hst:label: News Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
+          hst:template: news-main

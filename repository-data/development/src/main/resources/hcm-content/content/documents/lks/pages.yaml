@@ -140,7 +140,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: fd2d7077-4a0b-487e-8f11-779c1efa7ca9
       hippo:name: index
-      hippo:versionHistory: 30b27aa0-98ab-4fe2-b5fd-13e96216cd2f
+      hippo:versionHistory: ad867ad3-f3a3-46f8-97f1-ddaacf83fca7
       /index[1]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
@@ -153,7 +153,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2022-02-11T18:52:56.916Z
+        hippostdpubwf:lastModificationDate: 2022-02-23T10:47:05.432Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
@@ -206,6 +206,9 @@
           /hee:cards[6]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 471efef6-5b56-4501-a85e-98ae6e2e223f
+          /hee:cards[7]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c5bf5a-6926-4a39-b3f7-2a9172e80c35
       /index[2]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
@@ -218,7 +221,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2022-02-11T18:53:16.604Z
+        hippostdpubwf:lastModificationDate: 2022-02-23T10:47:05.250Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
@@ -275,6 +278,9 @@
           /hee:cards[6]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 471efef6-5b56-4501-a85e-98ae6e2e223f
+          /hee:cards[7]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c5bf5a-6926-4a39-b3f7-2a9172e80c35
       /index[3]:
         jcr:primaryType: hee:landingPage
         jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
@@ -287,14 +293,14 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-11-19T23:43:54.985Z
-        hippostdpubwf:lastModificationDate: 2022-02-11T18:53:16.604Z
+        hippostdpubwf:lastModificationDate: 2022-02-23T10:47:05.250Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-02-11T18:53:18.375Z
+        hippostdpubwf:publicationDate: 2022-02-23T10:47:13.292Z
         hippotranslation:id: 4fcc0e3f-acf0-4145-bbc0-178285d2a793
         hippotranslation:locale: document-type-locale
         /hst:xpage:
           jcr:primaryType: hst:xpage
-          jcr:uuid: 701d37df-d666-4215-9d7e-44b7417674a6
+          jcr:uuid: 212a0dd3-dfb0-4964-9b77-6ca7a260298c
           hst:pageref: landing-page
         /hee:contentCards:
           jcr:primaryType: hee:contentCards
@@ -345,6 +351,9 @@
           /hee:cards[6]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 471efef6-5b56-4501-a85e-98ae6e2e223f
+          /hee:cards[7]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 01c5bf5a-6926-4a39-b3f7-2a9172e80c35
     /home-page:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1212,6 +1221,982 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 2495b2b8-6a2a-463b-a104-78bb645a14a5
+    /listing-pages:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
+      jcr:uuid: 920a6083-4b2e-4033-9cbb-226dcec4d8e3
+      hippo:name: Listing Pages
+      hippostd:channelid: lks
+      hippostd:foldertype: [new-experience-folder, new-experience-document]
+      /index:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: bd9a9a38-e0d5-498e-bb74-1889b9660108
+        hippo:versionHistory: db539b61-a9c2-470d-8d1f-208d7e4d9ad8
+        /index[1]:
+          jcr:primaryType: hee:landingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 02079ffa-ec5c-47ba-828c-fd12d6bc76c6
+          hee:addToAZ: false
+          hee:summary: ''
+          hee:title: Listing Pages Examples
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-23T10:38:04.327Z
+          hippostdpubwf:lastModificationDate: 2022-02-23T11:00:05.827Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: aead5b7e-e8a5-4284-bc9f-fcaf63610ff6
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 1881d564-639d-4bc8-829e-fb241e72c3f7
+            /hee:cards[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 0f46a5d1-c667-448b-ba11-c0c1182e7359
+            /hee:cards[3]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: d6aa8719-4075-43ed-83aa-c66344300e85
+            /hee:cards[4]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: bfb84909-eafa-47ab-83a4-fb8c55ee9f6f
+            /hee:cards[5]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: b8c8790d-dc2b-417e-b6c0-4177a52788f7
+            /hee:cards[6]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: f790d202-7450-498f-9a9f-c5aa0f45a14a
+        /index[2]:
+          jcr:primaryType: hee:landingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: b4840a94-2d5f-4f12-a205-b31574fe2f0d
+          hee:addToAZ: false
+          hee:summary: ''
+          hee:title: Listing Pages Examples
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-23T10:38:04.327Z
+          hippostdpubwf:lastModificationDate: 2022-02-23T11:00:05.774Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: aead5b7e-e8a5-4284-bc9f-fcaf63610ff6
+          hippotranslation:locale: document-type-locale
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 37e85e12-6280-4b24-97bf-e88270277199
+            hst:pageref: landing-page
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 1881d564-639d-4bc8-829e-fb241e72c3f7
+            /hee:cards[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 0f46a5d1-c667-448b-ba11-c0c1182e7359
+            /hee:cards[3]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: d6aa8719-4075-43ed-83aa-c66344300e85
+            /hee:cards[4]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: bfb84909-eafa-47ab-83a4-fb8c55ee9f6f
+            /hee:cards[5]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: b8c8790d-dc2b-417e-b6c0-4177a52788f7
+            /hee:cards[6]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: f790d202-7450-498f-9a9f-c5aa0f45a14a
+        /index[3]:
+          jcr:primaryType: hee:landingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: ba237671-690d-4e35-8b5d-96c9f56f6556
+          hee:addToAZ: false
+          hee:summary: ''
+          hee:title: Listing Pages Examples
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-23T10:38:04.327Z
+          hippostdpubwf:lastModificationDate: 2022-02-23T11:00:05.774Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T11:00:08.344Z
+          hippotranslation:id: aead5b7e-e8a5-4284-bc9f-fcaf63610ff6
+          hippotranslation:locale: document-type-locale
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: fa6e71f1-eb6c-4611-8039-897f757ef1ce
+            hst:pageref: landing-page
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 1881d564-639d-4bc8-829e-fb241e72c3f7
+            /hee:cards[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 0f46a5d1-c667-448b-ba11-c0c1182e7359
+            /hee:cards[3]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: d6aa8719-4075-43ed-83aa-c66344300e85
+            /hee:cards[4]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: bfb84909-eafa-47ab-83a4-fb8c55ee9f6f
+            /hee:cards[5]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: b8c8790d-dc2b-417e-b6c0-4177a52788f7
+            /hee:cards[6]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: f790d202-7450-498f-9a9f-c5aa0f45a14a
+      /case-studies:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: eb40bf8b-0b46-4176-921b-57d268bb6a46
+        hippo:name: Case studies Listing Page
+        hippo:versionHistory: 29861522-98ad-4d5f-beac-92a7cfb005e9
+        /case-studies[1]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 04efd7b0-6ce5-444a-8d5c-3fb789d85dee
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:caseStudy']
+          hee:listingPageType: casestudy
+          hee:pageSize: 10
+          hee:summary: Cras ultricies ligula sed magna dictum porta. Vivamus suscipit
+            tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a.
+          hee:title: Case studies
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:41:50.297Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:42:13.302Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 5813bdf4-0337-4706-9943-989ff421129d
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /case-studies[2]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: f015002d-1cc4-4b20-a717-1a412159f6ca
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:caseStudy']
+          hee:listingPageType: casestudy
+          hee:pageSize: 10
+          hee:summary: Cras ultricies ligula sed magna dictum porta. Vivamus suscipit
+            tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a.
+          hee:title: Case studies
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:41:50.297Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:42:13.230Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 5813bdf4-0337-4706-9943-989ff421129d
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 62cfdefd-6623-4991-ad3a-fadf2480393e
+            hst:pageref: case-study-listing-page
+        /case-studies[3]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 041ae75f-c0b7-4c38-84c6-a28af1d4cdd8
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:caseStudy']
+          hee:listingPageType: casestudy
+          hee:pageSize: 10
+          hee:summary: Cras ultricies ligula sed magna dictum porta. Vivamus suscipit
+            tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget
+            tincidunt nibh pulvinar a.
+          hee:title: Case studies
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:41:50.297Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:42:13.230Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T10:48:44.592Z
+          hippotranslation:id: 5813bdf4-0337-4706-9943-989ff421129d
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 900a1f1c-44c2-4399-877c-156b4ff21e63
+            hst:pageref: case-study-listing-page
+      /search-bank:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 339dfe75-e2cb-45b2-b0b1-6f4653980798
+        hippo:name: Search Bank Listing Page
+        hippo:versionHistory: 2e8c9e58-413e-4ba0-a6cc-ac90f9ab9555
+        /search-bank[1]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 307e4609-36b1-4610-bafe-2028a7dc0f82
+          hee:addToAZ: false
+          hee:documentTypes: []
+          hee:listingPageType: searchbank
+          hee:pageSize: 5
+          hee:summary: Welcome to the COVID-19 Literature Search Bank, a central repository
+            for literature searches on COVID-19.
+          hee:title: Search Bank
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:42:43.045Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:56:55.952Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 0dd8a13a-765e-40ee-a925-d8fa9f9536ef
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /search-bank[2]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: e4595a0f-cdac-4e79-b909-e6d1de506138
+          hee:addToAZ: false
+          hee:documentTypes: []
+          hee:listingPageType: searchbank
+          hee:pageSize: 5
+          hee:summary: Welcome to the COVID-19 Literature Search Bank, a central repository
+            for literature searches on COVID-19.
+          hee:title: Search Bank
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:42:43.045Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:56:55.843Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 0dd8a13a-765e-40ee-a925-d8fa9f9536ef
+          hippotranslation:locale: document-type-locale
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: c5606627-7a80-428c-8c7a-1e49548553e6
+            hst:pageref: search-bank-listing-page
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /search-bank[3]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: d9951bdf-4147-44de-aec8-7d248fb16f96
+          hee:addToAZ: false
+          hee:documentTypes: []
+          hee:listingPageType: searchbank
+          hee:pageSize: 5
+          hee:summary: Welcome to the COVID-19 Literature Search Bank, a central repository
+            for literature searches on COVID-19.
+          hee:title: Search Bank
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:42:43.045Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:56:55.843Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T10:48:47.318Z
+          hippotranslation:id: 0dd8a13a-765e-40ee-a925-d8fa9f9536ef
+          hippotranslation:locale: document-type-locale
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 8462c78a-af85-4933-a171-4325c8c3e4ba
+            hst:pageref: search-bank-listing-page
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /blogs:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: ea1b7da1-8498-42bf-bf06-bf9c1f281db8
+        hippo:name: Blogs Listing Page
+        hippo:versionHistory: 9730a32c-2f2c-44b5-bf74-459993b3fb78
+        /blogs[1]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 0361e094-0c1c-447e-8077-4e91522513d7
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:blogPost']
+          hee:listingPageType: blog
+          hee:pageSize: 10
+          hee:summary: Latest news and best practice from across NHS library work
+          hee:title: Blogs
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:41:04.156Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:41:28.516Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 07ad8e14-4d48-4c87-a2f7-0eaa245c3cf8
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /blogs[2]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: 6e5abf09-1512-48b4-882d-5ab3a8c1615e
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:blogPost']
+          hee:listingPageType: blog
+          hee:pageSize: 10
+          hee:summary: Latest news and best practice from across NHS library work
+          hee:title: Blogs
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:41:04.156Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:41:28.442Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 07ad8e14-4d48-4c87-a2f7-0eaa245c3cf8
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 8441674d-6bfd-4328-ab1a-4477e8e524e2
+            hst:pageref: category-based-listing-page
+        /blogs[3]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: cce3be4a-4c42-4318-aa49-a1ac6856f39a
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:blogPost']
+          hee:listingPageType: blog
+          hee:pageSize: 10
+          hee:summary: Latest news and best practice from across NHS library work
+          hee:title: Blogs
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:41:04.156Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:41:28.442Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T10:48:50.065Z
+          hippotranslation:id: 07ad8e14-4d48-4c87-a2f7-0eaa245c3cf8
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 7587b5ba-f27e-4597-95c0-b00b580d7ff4
+            hst:pageref: category-based-listing-page
+      /events:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: d32e978c-27f5-4a35-a364-65fd425965fe
+        hippo:name: Events Listing Page
+        hippo:versionHistory: f095de28-702e-4105-9d84-3431f33bcf1c
+        /events[1]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 6f9e8520-66f2-4f79-8fd8-afc79c2f388f
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:event']
+          hee:listingPageType: event
+          hee:pageSize: 5
+          hee:summary: Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+          hee:title: Events
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:43:49.732Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:44:09.367Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: a9aac0ed-2caf-4536-aa15-1d6c89190c0c
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /events[2]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: 4a359cea-cd45-4e7e-af65-3ac02b698670
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:event']
+          hee:listingPageType: event
+          hee:pageSize: 5
+          hee:summary: Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+          hee:title: Events
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:43:49.732Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:44:09.231Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: a9aac0ed-2caf-4536-aa15-1d6c89190c0c
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 710cb1e6-755b-4ee9-864b-585d57a7f759
+            hst:pageref: event-listing-page
+        /events[3]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 9bdf1767-5e51-4376-a1c9-3e7488423c55
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:event']
+          hee:listingPageType: event
+          hee:pageSize: 5
+          hee:summary: Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+          hee:title: Events
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:43:49.732Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:44:09.231Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T10:48:53.337Z
+          hippotranslation:id: a9aac0ed-2caf-4536-aa15-1d6c89190c0c
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 442e11ba-88cd-498c-b547-0603d8c1fe52
+            hst:pageref: event-listing-page
+      /bulletins:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 4f436d4f-635f-4394-b2ef-e63d91fdfc7b
+        hippo:name: Bulletins Listing Page
+        hippo:versionHistory: 29bb60b0-aeb5-4291-9e97-f449776dd8b3
+        /bulletins[1]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 5ef99920-c886-41ce-ae08-203865ca0065
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:bulletin']
+          hee:listingPageType: bulletin
+          hee:pageSize: 10
+          hee:summary: Find current awareness from our libraries and trusts across
+            the NHS.
+          hee:title: Bulletins
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostd:transferable: false
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:39:45.935Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:45:35.711Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: aa58a3c4-9f16-4e6b-9c18-5955aaf18b9e
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /bulletins[2]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: 2d7667df-dabf-4c5a-bb96-a529081e7716
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:bulletin']
+          hee:listingPageType: bulletin
+          hee:pageSize: 10
+          hee:summary: Find current awareness from our libraries and trusts across
+            the NHS.
+          hee:title: Bulletins
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:39:45.935Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:40:11.779Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: aa58a3c4-9f16-4e6b-9c18-5955aaf18b9e
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 65e4342e-deea-4d1e-a38a-acf6064586d9
+            hst:pageref: category-based-listing-page
+        /bulletins[3]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 6d6ffe75-06af-4b1b-8163-0c288681d6cc
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:bulletin']
+          hee:listingPageType: bulletin
+          hee:pageSize: 10
+          hee:summary: Find current awareness from our libraries and trusts across
+            the NHS.
+          hee:title: Bulletins
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-16T13:39:45.935Z
+          hippostdpubwf:lastModificationDate: 2022-02-16T13:40:11.779Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T10:49:21.736Z
+          hippotranslation:id: aa58a3c4-9f16-4e6b-9c18-5955aaf18b9e
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: b207ac30-1aa6-4476-8926-a83485b2811c
+            hst:pageref: category-based-listing-page
+      /news-listing-page:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: 670274f7-0b1f-48de-a803-28ec3a7f2ac2
+        hippo:name: News Listing Page
+        hippo:versionHistory: f2f8d26f-5921-455d-8347-0487fa5631ba
+        /news-listing-page[1]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: 4c1fd6dd-14b5-4ea5-b059-04f4eeff01f2
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:news']
+          hee:listingPageType: news
+          hee:pageSize: 10
+          hee:summary: ''
+          hee:title: News
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-23T10:57:40.755Z
+          hippostdpubwf:lastModificationDate: 2022-02-23T10:58:08.261Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 86f7d7b8-1dbb-49d4-84a2-4395a3205c27
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /news-listing-page[2]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+          jcr:uuid: 5bf74e56-6734-452d-bd1b-72116d780693
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:news']
+          hee:listingPageType: news
+          hee:pageSize: 10
+          hee:summary: ''
+          hee:title: News
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-23T10:57:40.755Z
+          hippostdpubwf:lastModificationDate: 2022-02-23T10:58:08.119Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 86f7d7b8-1dbb-49d4-84a2-4395a3205c27
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: 25bef154-1387-4448-8d0b-f1ccad633948
+            hst:pageref: category-based-listing-page
+        /news-listing-page[3]:
+          jcr:primaryType: hee:listingPage
+          jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+          jcr:uuid: a86982ec-4f2f-4f0d-9d0d-3c93617ecc60
+          hee:addToAZ: false
+          hee:documentTypes: ['hee:news']
+          hee:listingPageType: news
+          hee:pageSize: 10
+          hee:summary: ''
+          hee:title: News
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-02-23T10:57:40.755Z
+          hippostdpubwf:lastModificationDate: 2022-02-23T10:58:08.119Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-02-23T10:58:10.553Z
+          hippotranslation:id: 86f7d7b8-1dbb-49d4-84a2-4395a3205c27
+          hippotranslation:locale: document-type-locale
+          /hee:heroImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hst:xpage:
+            jcr:primaryType: hst:xpage
+            jcr:uuid: a44dbc44-9e0c-412c-a71f-864d617327b8
+            hst:pageref: category-based-listing-page
+    /news-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 8b60a6d4-d946-43b8-b7e8-89f9feff9738
+      hippo:name: News Page
+      hippo:versionHistory: 755cf67e-c3d2-425a-b48c-ab1f9e12e2d4
+      /news-page[1]:
+        jcr:primaryType: hee:news
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 6a164cae-9f36-4ea1-855a-b9efb582c5a3
+        hee:author: Joe Bloggs
+        hee:categories: []
+        hee:publicationDate: 2022-02-16T13:15:00Z
+        hee:summary: A record number of new trainees have accepted placements to become
+          GPs, new figures published by Health Education England reveal.
+        hee:title: Record number of 4,000 GPs accepted on training placements
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T13:15:02.294Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T13:17:06.118Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 872ea26b-bf2a-42fc-8250-79b0ffac8e7d
+        hippotranslation:locale: document-type-locale
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 2022-02-16T00:00:00Z
+          hee:nextReviewed: 2022-02-16T00:00:00Z
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>More than 4,000 new recruits have accepted places to begin specialist general practice training in 2021/ 22.</p>
+
+            <p>Health Education England has now hit the government’s target increased GP Specialty trainee recruitment every year since 2015 and hit or exceeded the Government target for four years<sup>1</sup>.</p>
+
+            <p>Health Education England is responsible for providing training places for GP specialty training recruits and managing the specialist training process.</p>
+
+            <p>Through the Choose GP campaign Health Education England is recruiting foundation year doctors as well as locally employed/ trust grade doctors and consultants who want to retrain as a GP.</p>
+
+            <p>Figures from NHS Digital show there are 8,664 GPs in training grade in GP placements across England as of September 2021.</p>
+
+            <p><strong>Professor Simon Gregory DL, Deputy Medical Director, Primary and Integrated Care</strong>&nbsp;at&nbsp;<strong>Health Education England, said:</strong>&nbsp;“It has been a challenging 18 months for the profession across the board. As a GP myself it is heart-warming to see so many trainees wanting to become family doctors.</p>
+
+            <p>“The fact that so many people are interested in joining general practice speciality training means we are doing all we can to help provide a sufficient and sustainable workforce.”</p>
+
+            <p><strong>Professor Wendy Reid, Director of Education and Quality and National Medical Director at Health Education England, said:</strong>&nbsp;“We are pleased that we have managed to hit the new target of recruiting 4,000 new GPs.</p>
+
+            <p>“We are committed at Health Education England to promoting a career as a GP for trainee doctors approaching the end of their foundation training.</p>
+
+            <p>“Recent GP workforce figures show that trainees are a valuable part of the primary care workforce. On a daily basis they see and treat patients and provide a great service across the country.”</p>
+
+            <p>ENDS</p>
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /news-page[2]:
+        jcr:primaryType: hee:news
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: 3401c897-b477-4b8a-b83c-c7aa7e1a93e4
+        hee:author: Joe Bloggs
+        hee:categories: []
+        hee:publicationDate: 2022-02-16T13:15:00Z
+        hee:summary: A record number of new trainees have accepted placements to become
+          GPs, new figures published by Health Education England reveal.
+        hee:title: Record number of 4,000 GPs accepted on training placements
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T13:15:02.294Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T13:17:05.996Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 872ea26b-bf2a-42fc-8250-79b0ffac8e7d
+        hippotranslation:locale: document-type-locale
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 2022-02-16T00:00:00Z
+          hee:nextReviewed: 2022-02-16T00:00:00Z
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>More than 4,000 new recruits have accepted places to begin specialist general practice training in 2021/ 22.</p>
+
+            <p>Health Education England has now hit the government’s target increased GP Specialty trainee recruitment every year since 2015 and hit or exceeded the Government target for four years<sup>1</sup>.</p>
+
+            <p>Health Education England is responsible for providing training places for GP specialty training recruits and managing the specialist training process.</p>
+
+            <p>Through the Choose GP campaign Health Education England is recruiting foundation year doctors as well as locally employed/ trust grade doctors and consultants who want to retrain as a GP.</p>
+
+            <p>Figures from NHS Digital show there are 8,664 GPs in training grade in GP placements across England as of September 2021.</p>
+
+            <p><strong>Professor Simon Gregory DL, Deputy Medical Director, Primary and Integrated Care</strong>&nbsp;at&nbsp;<strong>Health Education England, said:</strong>&nbsp;“It has been a challenging 18 months for the profession across the board. As a GP myself it is heart-warming to see so many trainees wanting to become family doctors.</p>
+
+            <p>“The fact that so many people are interested in joining general practice speciality training means we are doing all we can to help provide a sufficient and sustainable workforce.”</p>
+
+            <p><strong>Professor Wendy Reid, Director of Education and Quality and National Medical Director at Health Education England, said:</strong>&nbsp;“We are pleased that we have managed to hit the new target of recruiting 4,000 new GPs.</p>
+
+            <p>“We are committed at Health Education England to promoting a career as a GP for trainee doctors approaching the end of their foundation training.</p>
+
+            <p>“Recent GP workforce figures show that trainees are a valuable part of the primary care workforce. On a daily basis they see and treat patients and provide a great service across the country.”</p>
+
+            <p>ENDS</p>
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: f268c7a6-6477-4c28-b9d5-37656b5a56a8
+          hst:pageref: news-page
+      /news-page[3]:
+        jcr:primaryType: hee:news
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 9a8efe6f-1ccc-46c8-ad64-9cea9dabd7d3
+        hee:author: Joe Bloggs
+        hee:categories: []
+        hee:publicationDate: 2022-02-16T13:15:00Z
+        hee:summary: A record number of new trainees have accepted placements to become
+          GPs, new figures published by Health Education England reveal.
+        hee:title: Record number of 4,000 GPs accepted on training placements
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-02-16T13:15:02.294Z
+        hippostdpubwf:lastModificationDate: 2022-02-16T13:17:05.996Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-02-23T10:51:18.011Z
+        hippotranslation:id: 872ea26b-bf2a-42fc-8250-79b0ffac8e7d
+        hippotranslation:locale: document-type-locale
+        /hee:relatedContent:
+          jcr:primaryType: hee:contentCards
+          hee:cardGroupSummary: ''
+          hee:header: ''
+          /hee:cards:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 2022-02-16T00:00:00Z
+          hee:nextReviewed: 2022-02-16T00:00:00Z
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>More than 4,000 new recruits have accepted places to begin specialist general practice training in 2021/ 22.</p>
+
+            <p>Health Education England has now hit the government’s target increased GP Specialty trainee recruitment every year since 2015 and hit or exceeded the Government target for four years<sup>1</sup>.</p>
+
+            <p>Health Education England is responsible for providing training places for GP specialty training recruits and managing the specialist training process.</p>
+
+            <p>Through the Choose GP campaign Health Education England is recruiting foundation year doctors as well as locally employed/ trust grade doctors and consultants who want to retrain as a GP.</p>
+
+            <p>Figures from NHS Digital show there are 8,664 GPs in training grade in GP placements across England as of September 2021.</p>
+
+            <p><strong>Professor Simon Gregory DL, Deputy Medical Director, Primary and Integrated Care</strong>&nbsp;at&nbsp;<strong>Health Education England, said:</strong>&nbsp;“It has been a challenging 18 months for the profession across the board. As a GP myself it is heart-warming to see so many trainees wanting to become family doctors.</p>
+
+            <p>“The fact that so many people are interested in joining general practice speciality training means we are doing all we can to help provide a sufficient and sustainable workforce.”</p>
+
+            <p><strong>Professor Wendy Reid, Director of Education and Quality and National Medical Director at Health Education England, said:</strong>&nbsp;“We are pleased that we have managed to hit the new target of recruiting 4,000 new GPs.</p>
+
+            <p>“We are committed at Health Education England to promoting a career as a GP for trainee doctors approaching the end of their foundation training.</p>
+
+            <p>“Recent GP workforce figures show that trainees are a valuable part of the primary care workforce. On a daily basis they see and treat patients and provide a great service across the country.”</p>
+
+            <p>ENDS</p>
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 0552be1a-acb0-4adb-8412-ed8edb6bd47a
+          hst:pageref: news-page
   /components-library:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
