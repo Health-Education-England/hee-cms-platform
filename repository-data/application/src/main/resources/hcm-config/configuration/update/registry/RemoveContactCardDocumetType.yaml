@@ -1,0 +1,21 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RemoveContactCardDocumetType:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Remove contact card document type content.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:contactCard)[hippostd:state
+        = 'published' and hippostd:stateSummary = 'live']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass UpdateContactCard extends BaseNodeUpdateVisitor\
+        \ {\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug(\"Found\
+        \ contactCard at path '${node.getPath()}'\")\r\n        log.debug(\"Start\
+        \ removing contactCard document handle'${node.getParent().getPath()}'\")\r\
+        \n        node.getParent().remove()\r\n   \r\n        return true\r\n    }\r\
+        \n\r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

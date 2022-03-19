@@ -1,6 +1,7 @@
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.HomePage" -->
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
+<@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
 <@hst.link var="heroImage" hippobean=document.heroImage />
 <#assign heroImgClass=''>
@@ -69,7 +70,7 @@
                                         <@hee.media media=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.Contact">
-                                        <@hee.contact block=block/>
+                                        <@hee.contact block=block personTitlesMap=personTitlesMap personPronounsMap=personPronounsMap/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                         <@hee.blockLinks block=block/>

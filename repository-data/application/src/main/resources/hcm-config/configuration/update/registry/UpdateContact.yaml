@@ -1,0 +1,35 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateContact:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: "Update contact card content in the following manner:\r\
+        \n - removed Display and Title fields\r\n - replaced contentItems list of\
+        \ contactWithCopy elements with contactItems list of Person/Department elements"
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass UpdateContact extends BaseNodeUpdateVisitor\
+        \ {\r\n\r\n    boolean doUpdate(Node node) {\r\n     \r\n        log.debug(\"\
+        Start processing contact node from path '${node.getPath()}'\");\r\n      \r\
+        \n        for (def contactIt = node.getNodes(\"hee:contentItems\"); contactIt.hasNext();)\
+        \ {\r\n            def contactWithCopyNode = contactIt.nextNode()\r\n    \
+        \      \r\n            String personOrDepartmentDocId = contactWithCopyNode.getNode(\"\
+        hee:contentItem\")\r\n                    .getProperty(\"hippo:docbase\").getString()\r\
+        \n            log.debug(\"Found Person/Department with ID = '${personOrDepartmentDocId}\
+        \ used by contactWithCopy document.\");\r\n\r\n            // create new hee:contactItems\
+        \ with person or department document link\r\n            node.addNode(\"hee:contactItems\"\
+        , \"hippo:mirror\").setProperty(\"hippo:docbase\", personOrDepartmentDocId);\r\
+        \n            log.debug(\"Added new hee:contactItems node at path ${node.getPath()}\"\
+        );\r\n          \r\n            contactWithCopyNode.remove()\r\n        }\r\
+        \n        \r\n        // delete contactWithCopy and properties that are not\
+        \ used anymore\r\n        node.getProperty(\"hee:display\").remove();\r\n\
+        \        node.getProperty(\"hee:title\").remove();\r\n        log.debug(\"\
+        Deleted contactWithCopy from ${node.getPath()}\");\r\n      \r\n        return\
+        \ true\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw\
+        \ new UnsupportedOperationException('Updater does not implement undoUpdate\
+        \ method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: /jcr:root/content/documents//element(*, hee:contact)

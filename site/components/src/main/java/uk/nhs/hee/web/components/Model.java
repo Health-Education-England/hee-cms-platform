@@ -33,7 +33,17 @@ public enum Model {
     /**
      * Model key for News Listing Page URL
      */
-    NEWS_LISTING_PAGE_URL("newsListingPageURL");
+    NEWS_LISTING_PAGE_URL("newsListingPageURL"),
+
+    /**
+     * Model key for Person Pronouns ValueList Map
+     */
+    PERSON_PRONOUNS_MAP("personPronounsMap"),
+
+    /**
+     * Model key for Person Titles ValueList Map
+     */
+    PERSON_TITLES_MAP("personTitlesMap");
 
     private final String key;
 
