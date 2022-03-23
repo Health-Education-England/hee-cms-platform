@@ -82,3 +82,26 @@ definitions:
           jcr:primaryType: hst:component
           hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
           hst:template: news-main
+      /blogpost-page:
+        jcr:primaryType: hst:xpage
+        hst:referencecomponent: hst:abstractpages/base
+        hst:label: Blogpost Page
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+          hst:template: blogpage-main
+          /blog:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+            hst:template: blogpost-main
+          /comment:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent
+            hst:parameternames: [form, behaviors, eforms-mailsession, eforms-use-freemarker,
+              eforms-from-name, eforms-from-email]
+            hst:parametervalues: [/content/documents/lks/migrate/forms/blogcomment,
+              'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior, uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior,
+                uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
+              mail/Session, 'true', CMS Admin, cms.admin@hee.nhs.uk]
+            hst:template: eforms.default
+            hst:resourcetemplate: eforms.validation.default
