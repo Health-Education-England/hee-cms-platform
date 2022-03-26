@@ -76,14 +76,14 @@ jobs:
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
-        run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
+        run: mvn -B verify && mvn  -Pdist-with-development-data -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
         run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Manifesto-Digital/cleanup-distributions-from-BR-Cloud-action@v1.0
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.0
         id: cleanup
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -92,7 +92,7 @@ jobs:
           # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
       - name: Upload distribution to Bloomreach Cloud
-        uses: Manifesto-Digital/upload-distribution-to-BR-Cloud-action@v1.0
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.0
         id: upload
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -100,7 +100,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'test' env
-        uses: Manifesto-Digital/deploy-distribution-to-BR-Cloud-action@v1.0
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.0
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
