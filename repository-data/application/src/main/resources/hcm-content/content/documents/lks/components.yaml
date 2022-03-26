@@ -1802,7 +1802,199 @@
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
-  /minihub-sections:
+      /blogpost-page-example:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+        jcr:uuid: f0080f0a-77ac-4d4a-816e-c0423da64d6d
+        hippo:name: Blogpost page example
+        hippo:versionHistory: 54b5d561-69ba-49a8-8625-33b824265ef9
+        /blogpost-page-example[1]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: ca9a3bcb-a6c2-449a-bffd-725f179caa49
+          hee:description: Example of page using Blogpost document type with Blogpost
+            page layout.
+          hippo:availability: []
+          hippostd:retainable: false
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-03-24T08:52:04.530Z
+          hippostdpubwf:lastModificationDate: 2022-03-24T08:52:57.409Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 3519b02b-5122-4fba-85b8-cb6e932d59a6
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: Blogpost page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 446cad0f-b3c1-4e91-9261-70687d36c14f
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /blogpost-page-example[2]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 99c62590-3ef4-41a7-be3e-0d6a80525b60
+          hee:description: Example of page using Blogpost document type with Blogpost
+            page layout.
+          hippo:availability: [preview]
+          hippostd:retainable: false
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-03-24T08:52:04.530Z
+          hippostdpubwf:lastModificationDate: 2022-03-24T08:52:57.248Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: 3519b02b-5122-4fba-85b8-cb6e932d59a6
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: Blogpost page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 446cad0f-b3c1-4e91-9261-70687d36c14f
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /blogpost-page-example[3]:
+          jcr:primaryType: hee:ContentCard
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: c21d4742-1afb-41ef-84cf-eedb94135d65
+          hee:description: Example of page using Blogpost document type with Blogpost
+            page layout.
+          hippo:availability: [live]
+          hippostd:retainable: false
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2022-03-24T08:52:04.530Z
+          hippostdpubwf:lastModificationDate: 2022-03-24T08:52:57.248Z
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2022-03-24T08:53:00.314Z
+          hippotranslation:id: 3519b02b-5122-4fba-85b8-cb6e932d59a6
+          hippotranslation:locale: en
+          /hee:header:
+            jcr:primaryType: hee:link
+            hee:openLinkUrlNewWindow: false
+            hee:text: Blogpost page example
+            hee:url: ''
+            hippostdpubwf:createdBy: ''
+            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+            hippostdpubwf:lastModifiedBy: ''
+            hippotranslation:id: document-type-locale-id
+            hippotranslation:locale: document-type-locale
+            /hee:document:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 446cad0f-b3c1-4e91-9261-70687d36c14f
+          /hee:cardImage:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+  /richtext-blocks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 267c2f48-853e-4fa3-a846-6658631d5515
+    hippo:name: RichText Blocks
+    hippostd:foldertype: [new-richtext-block, new-translated-folder]
+    hippotranslation:id: 7fce9687-ee36-4a8b-80b2-048be80776b7
+    hippotranslation:locale: en
+  /people:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: ce2de996-2a61-47a9-8acc-0fed76507cd4
+    hippo:name: People
+    hippostd:foldertype: [new-translated-folder, new-person]
+    hippotranslation:id: 49f0dd5a-8b4a-4086-a992-774d2abd1871
+    hippotranslation:locale: en
+  /departments:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: c5d82668-fb4f-4943-a077-c344c4156acd
+    hippo:name: Departments
+    hippostd:foldertype: [new-translated-folder, new-department]
+    hippotranslation:id: e56e9f58-4c0f-424b-aa40-d5607f628e19
+    hippotranslation:locale: en
+  /contact-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: ee047ccb-7a9b-4118-8f5c-ab8e97522465
+    hippo:name: Contact Cards
+    hippostd:foldertype: [new-translated-folder, new-contact-card]
+    hippotranslation:id: 98966d93-b33d-4503-9696-41019c32928d
+    hippotranslation:locale: en
+  /external-links-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: fa021ad1-7bf5-4e31-b8b2-499bf0076bdd
+    hippo:name: External Links Cards
+    hippostd:foldertype: [new-externalLinksCard-folder, new-externalLinksCard-document]
+    hippotranslation:id: d0446cd8-0b83-4dec-a6cb-ca3e6c52ce09
+    hippotranslation:locale: en
+  /file-links-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 59d65bb3-bc12-4448-aa5f-924ffd641511
+    hippo:name: File Links Cards
+    hippostd:foldertype: [new-fileLinksCard-folder, new-fileLinksCard-document]
+    hippotranslation:id: ad276c67-6602-46e5-bd3a-9628414c1726
+    hippotranslation:locale: en
+  /cta-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: bb5e5451-1236-4f7c-aca5-7b64d1c57adb
+    hippo:name: CTA Cards
+    hippostd:foldertype: [new-ctaCard-folder, new-ctaCard-document]
+    hippotranslation:id: 135ee3ed-fdfa-4b79-a6ff-1a3bc30dd96c
+    hippotranslation:locale: en
+  /block-links:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: f3d6491f-98d1-4adb-9f4c-6aa9d9c611f0
+    hippo:name: Block Links
+    hippostd:foldertype: [new-blockLinks-folder, new-blockLinks-document]
+    hippotranslation:id: 6b1a66e5-79c8-4320-890f-b86b3e511dfd
+    hippotranslation:locale: en
+  /tabs:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 17c81ffc-b12b-4fe8-ae12-4d1036b70e35
+    hippo:name: Tabs
+    hippostd:foldertype: [new-tabs-folder, new-tabs-document]
+    hippotranslation:id: 7728ca6a-9e76-4fdf-a6ff-e6d7c82b67e0
+    hippotranslation:locale: en
+  /media-embeds:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 141af730-45b0-4062-a9e9-e8a130a40717
+    hippo:name: Media Embeds
+    hippostd:foldertype: [new-media-embed-folder, new-media-embed-document]
+    hippotranslation:id: d0df785a-b382-4370-abac-2420afc72dc5
+    hippotranslation:locale: en
+  /old:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
     jcr:uuid: 5b8a0be9-9eb0-4d71-8c6c-dc98366097a2

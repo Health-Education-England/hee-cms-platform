@@ -2175,6 +2175,273 @@
           jcr:primaryType: hst:xpage
           jcr:uuid: 0552be1a-acb0-4adb-8412-ed8edb6bd47a
           hst:pageref: news-page
+    /blogpost-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 446cad0f-b3c1-4e91-9261-70687d36c14f
+      hippo:name: Blogpost page
+      hippo:versionHistory: 16a77175-63f6-4538-a675-c01e5f3d40ba
+      /blogpost-page[1]:
+        jcr:primaryType: hee:blogPost
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 0468b311-68c4-46f8-a11a-3aca33590759
+        hee:author: Sam Sparks
+        hee:categories: [RD-eResources, RD-Emerging]
+        hee:publicationDate: 2022-03-23T15:51:00Z
+        hee:summary: Henrietta Mbeah-Bankas talks about leadership, challenges, and
+          her career so far.
+        hee:title: International Women’s Day
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-23T15:51:11.566Z
+        hippostdpubwf:lastModificationDate: 2022-03-24T08:46:11.994Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4e181d35-ef40-4288-be4c-9cf9c22861e7
+        hippotranslation:locale: document-type-locale
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 2022-03-23T00:00:00Z
+          hee:nextReviewed: 2022-03-23T00:00:00Z
+        /hee:comments[1]:
+          jcr:primaryType: hee:blogComment
+          hee:message: ''
+          hee:moderated: false
+          hee:postedDate: 0001-01-01T12:00:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: ''
+            hee:firstName: ''
+            hee:lastName: ''
+            hee:string: ''
+            hee:string_: ''
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+
+            <p>In recent years, reciprocal inter-lending and document supply has extended to cover the whole of England. The&nbsp;INC scheme&nbsp;is a great example of working collaboratively across the country. However, the underpinning systems haven’t necessarily kept up. ILL staff have developed smart ways of working, but it can still be unnecessarily time-consuming to check different catalogues, copy and paste data from one system to another, or maintain holdings data and library user information in more than one place. The need to ensure compliance with copyright and data protection legislation adds to the complexity. The mechanics of requesting items are also different for end users across the country.</p>
+        /hee:comments[2]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test comment
+          hee:moderated: true
+          hee:postedDate: 2022-03-23T16:05:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[3]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test Ada 2!
+          hee:moderated: true
+          hee:postedDate: 2022-03-23T17:32:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[4]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test final
+          hee:moderated: true
+          hee:postedDate: 2022-03-24T08:22:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[5]:
+          jcr:primaryType: hee:blogComment
+          hee:message: test 34
+          hee:moderated: true
+          hee:postedDate: 2022-03-24T08:45:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+      /blogpost-page[2]:
+        jcr:primaryType: hee:blogPost
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable', 'mix:versionable']
+        jcr:uuid: ef0c6f8f-b35f-4f33-9f28-6c437119d2a6
+        hee:author: Sam Sparks
+        hee:categories: [RD-eResources, RD-Emerging]
+        hee:publicationDate: 2022-03-23T15:51:00Z
+        hee:summary: Henrietta Mbeah-Bankas talks about leadership, challenges, and
+          her career so far.
+        hee:title: International Women’s Day
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-23T15:51:11.566Z
+        hippostdpubwf:lastModificationDate: 2022-03-24T08:46:11.744Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4e181d35-ef40-4288-be4c-9cf9c22861e7
+        hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: c166b7a1-7116-4dcd-bb61-a3a05ccf2f9c
+          hst:pageref: blogpost-page
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 2022-03-23T00:00:00Z
+          hee:nextReviewed: 2022-03-23T00:00:00Z
+        /hee:comments[1]:
+          jcr:primaryType: hee:blogComment
+          hee:message: ''
+          hee:moderated: false
+          hee:postedDate: 0001-01-01T12:00:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: ''
+            hee:firstName: ''
+            hee:lastName: ''
+            hee:string: ''
+            hee:string_: ''
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+
+            <p>In recent years, reciprocal inter-lending and document supply has extended to cover the whole of England. The&nbsp;INC scheme&nbsp;is a great example of working collaboratively across the country. However, the underpinning systems haven’t necessarily kept up. ILL staff have developed smart ways of working, but it can still be unnecessarily time-consuming to check different catalogues, copy and paste data from one system to another, or maintain holdings data and library user information in more than one place. The need to ensure compliance with copyright and data protection legislation adds to the complexity. The mechanics of requesting items are also different for end users across the country.</p>
+        /hee:comments[2]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test comment
+          hee:moderated: true
+          hee:postedDate: 2022-03-23T16:05:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[3]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test Ada 2!
+          hee:moderated: true
+          hee:postedDate: 2022-03-23T17:32:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[4]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test final
+          hee:moderated: true
+          hee:postedDate: 2022-03-24T08:22:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[5]:
+          jcr:primaryType: hee:blogComment
+          hee:message: test 34
+          hee:moderated: true
+          hee:postedDate: 2022-03-24T08:45:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+      /blogpost-page[3]:
+        jcr:primaryType: hee:blogPost
+        jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+        jcr:uuid: 1d0b03cc-ca88-43aa-a1c0-2229950bc2f8
+        hee:author: Sam Sparks
+        hee:categories: [RD-eResources, RD-Emerging]
+        hee:publicationDate: 2022-03-23T15:51:00Z
+        hee:summary: Henrietta Mbeah-Bankas talks about leadership, challenges, and
+          her career so far.
+        hee:title: International Women’s Day
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-03-23T15:51:11.566Z
+        hippostdpubwf:lastModificationDate: 2022-03-24T08:46:11.744Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-03-24T08:46:15.642Z
+        hippotranslation:id: 4e181d35-ef40-4288-be4c-9cf9c22861e7
+        hippotranslation:locale: document-type-locale
+        /hst:xpage:
+          jcr:primaryType: hst:xpage
+          jcr:uuid: 857a3ebd-a898-4253-bd23-21ea12b9a9b2
+          hst:pageref: blogpost-page
+        /hee:pageLastNextReview:
+          jcr:primaryType: hee:pageLastNextReview
+          hee:lastReviewed: 2022-03-23T00:00:00Z
+          hee:nextReviewed: 2022-03-23T00:00:00Z
+        /hee:comments[1]:
+          jcr:primaryType: hee:blogComment
+          hee:message: ''
+          hee:moderated: false
+          hee:postedDate: 0001-01-01T12:00:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: ''
+            hee:firstName: ''
+            hee:lastName: ''
+            hee:string: ''
+            hee:string_: ''
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:contentBlocks:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget.</p>
+
+            <p>In recent years, reciprocal inter-lending and document supply has extended to cover the whole of England. The&nbsp;INC scheme&nbsp;is a great example of working collaboratively across the country. However, the underpinning systems haven’t necessarily kept up. ILL staff have developed smart ways of working, but it can still be unnecessarily time-consuming to check different catalogues, copy and paste data from one system to another, or maintain holdings data and library user information in more than one place. The need to ensure compliance with copyright and data protection legislation adds to the complexity. The mechanics of requesting items are also different for end users across the country.</p>
+        /hee:comments[2]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test comment
+          hee:moderated: true
+          hee:postedDate: 2022-03-23T16:05:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[3]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test Ada 2!
+          hee:moderated: true
+          hee:postedDate: 2022-03-23T17:32:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[4]:
+          jcr:primaryType: hee:blogComment
+          hee:message: Test final
+          hee:moderated: true
+          hee:postedDate: 2022-03-24T08:22:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
+        /hee:comments[5]:
+          jcr:primaryType: hee:blogComment
+          hee:message: test 34
+          hee:moderated: true
+          hee:postedDate: 2022-03-24T08:45:00Z
+          /hee:author:
+            jcr:primaryType: hee:blogCommentAuthor
+            hee:email: adriana.miclos@gmail.com
+            hee:firstName: Adriana
+            hee:lastName: Miclos
   /components-library:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']

@@ -151,15 +151,21 @@ public class BlogPostCommentMailFormDataBehavior extends MailFormDataBehavior {
      * to which the given blog comment component {@code config} instance is associated to.
      */
     private BlogPost getBlogPost(final HstRequest request, final ComponentConfiguration config) {
-        final String blogPostDocumentRelativePath = getBlogPostDocumentRelativePath(config);
-        log.debug("Blog post (hee:blogPost) document relative path = {}", blogPostDocumentRelativePath);
+        BlogPost blogPost = (BlogPost) request.getRequestContext().getContentBean();
 
-        if (StringUtils.isEmpty(blogPostDocumentRelativePath)) {
-            return null;
+        if (blogPost == null) {
+            final String blogPostDocumentRelativePath = getBlogPostDocumentRelativePath(config);
+            log.debug("Blog post (hee:blogPost) document relative path = {}", blogPostDocumentRelativePath);
+
+            if (StringUtils.isEmpty(blogPostDocumentRelativePath)) {
+                return null;
+            }
+
+            final HippoBean root = request.getRequestContext().getSiteContentBaseBean();
+            blogPost = root.getBean(blogPostDocumentRelativePath);
         }
 
-        final HippoBean root = request.getRequestContext().getSiteContentBaseBean();
-        return root.getBean(blogPostDocumentRelativePath);
+        return blogPost;
     }
 
     /**

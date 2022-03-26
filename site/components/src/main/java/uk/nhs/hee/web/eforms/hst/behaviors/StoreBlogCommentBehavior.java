@@ -1,6 +1,5 @@
 package uk.nhs.hee.web.eforms.hst.behaviors;
 
-import com.google.common.base.Strings;
 import com.onehippo.cms7.eforms.hst.api.OnValidationSuccessBehavior;
 import com.onehippo.cms7.eforms.hst.beans.FormBean;
 import com.onehippo.cms7.eforms.hst.exceptions.EformBehaviorException;
@@ -45,23 +44,20 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
             final Form form,
             final FormMap map) {
         try {
-            final String documentPath = getBlogDocumentPath(config);
-            if (!Strings.isNullOrEmpty(documentPath)) {
-                final BlogPost blogPost = getBlogPost(request, documentPath);
-                final Session session = FormUtils.getWritableSession();
-                final WorkflowManager workflowManager = ((HippoWorkspace) session.getWorkspace()).getWorkflowManager();
-                final DocumentWorkflow documentWorkflow =
-                        (DocumentWorkflow) workflowManager.getWorkflow(
-                                "default", session.getNode(blogPost.getNode().getPath()).getParent());
+            final BlogPost blogPost = getBlogPost(request, config);
+            final Session session = FormUtils.getWritableSession();
+            final WorkflowManager workflowManager = ((HippoWorkspace) session.getWorkspace()).getWorkflowManager();
+            final DocumentWorkflow documentWorkflow =
+                    (DocumentWorkflow) workflowManager.getWorkflow(
+                            "default", session.getNode(blogPost.getNode().getPath()).getParent());
 
-                final Node editingNode = documentWorkflow.obtainEditableInstance().getNode(session);
-                addBlogCommentNode(editingNode, map);
+            final Node editingNode = documentWorkflow.obtainEditableInstance().getNode(session);
+            addBlogCommentNode(editingNode, map);
 
-                session.save();
-                documentWorkflow.commitEditableInstance();
-                if (Boolean.TRUE.equals(documentWorkflow.hints().get("publish"))) {
-                    documentWorkflow.publish();
-                }
+            session.save();
+            documentWorkflow.commitEditableInstance();
+            if (Boolean.TRUE.equals(documentWorkflow.hints().get("publish"))) {
+                documentWorkflow.publish();
             }
         } catch (final Exception e) {
             final String errorMsg = "Caught error '" + e.getMessage() + "' while processing/storing the submitted blog post comment.";
@@ -74,12 +70,12 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
     /**
      * Returns blog post document path for the current request.
      *
-     * @param config  the {@link ComponentConfiguration} instance.
+     * @param config the {@link ComponentConfiguration} instance.
      * @return the blog post document path for the current request.
-     * @throws NoSuchMethodException if {@code getComponentConfiguration} method is not found.
+     * @throws NoSuchMethodException     if {@code getComponentConfiguration} method is not found.
      * @throws InvocationTargetException if the underlying method throws an exception.
-     * @throws IllegalAccessException if {@code getComponentConfiguration} method object
-     * is enforcing Java language access control and the underlying method is inaccessible.
+     * @throws IllegalAccessException    if {@code getComponentConfiguration} method object
+     *                                   is enforcing Java language access control and the underlying method is inaccessible.
      */
     private String getBlogDocumentPath(final ComponentConfiguration config)
             throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
@@ -93,13 +89,20 @@ public class StoreBlogCommentBehavior implements OnValidationSuccessBehavior {
     /**
      * Returns {@link BlogPost} instance for the given {@code documentPath}.
      *
-     * @param request      the {@link HstRequest} instance.
-     * @param documentPath the document path for the current request.
+     * @param request the {@link HstRequest} instance.
      * @return the {@link BlogPost} instance for the given {@code documentPath}.
      */
-    private BlogPost getBlogPost(final HstRequest request, final String documentPath) {
-        final HippoBean root = request.getRequestContext().getSiteContentBaseBean();
-        return root.getBean(documentPath);
+    private BlogPost getBlogPost(final HstRequest request, final ComponentConfiguration configuration)
+            throws InvocationTargetException, NoSuchMethodException, IllegalAccessException {
+        BlogPost blogPost = (BlogPost) request.getRequestContext().getContentBean();
+
+        if (blogPost == null) {
+            String documentPath = getBlogDocumentPath(configuration);
+            final HippoBean root = request.getRequestContext().getSiteContentBaseBean();
+            blogPost = root.getBean(documentPath);
+        }
+
+        return blogPost;
     }
 
     /**
