@@ -1,0 +1,74 @@
+/content/documents/administration/labels/newsletter:
+  .meta:order-before: global
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 95fdda79-7311-493a-ad22-4abf0c7236c8
+  hippo:name: Newsletter
+  hippo:versionHistory: 75e9f7bc-73b2-4f23-b272-ef1d09ed571d
+  /newsletter[1]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: ccf3e11a-ca45-4e4d-9f0e-3b5961093ede
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
+    hippostdpubwf:lastModificationDate: 2022-03-10T13:05:45.503Z
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
+      '', '']
+    resourcebundle:id: uk.nhs.hee.web.newsletter
+    resourcebundle:keys: [error.title, error.firstname, error.lastname, error.email,
+      error.consent, label.firstname, label.lastname, label.email, label.region, label.organisation,
+      label.profession, select.region, select.organisation, select.profession]
+    resourcebundle:messages: [There is a problem, Enter your first name, Enter your
+        last name, Enter a valid email address, Privacy policy consent is required,
+      Enter your first name, Last name, Email address, Region (optional), Organisation
+        (optional), Profession or specialism (optional), Select your region, Select
+        your organisation, Select your profession or specialism]
+  /newsletter[2]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 98d8203b-f727-4fb4-b357-5b2f19211d76
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
+    hippostdpubwf:lastModificationDate: 2022-03-10T13:07:30.510Z
+    hippostdpubwf:lastModifiedBy: admin
+    resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
+      '', '']
+    resourcebundle:id: uk.nhs.hee.web.newsletter
+    resourcebundle:keys: [error.title, error.firstname, error.lastname, error.email,
+      error.consent, label.firstname, label.lastname, label.email, label.region, label.organisation,
+      label.profession, select.region, select.organisation, select.profession]
+    resourcebundle:messages: [There is a problem, Enter your first name, Enter your
+        last name, Enter a valid email address, Privacy policy consent is required,
+      Enter your first name, Last name, Email address, Region (optional), Organisation
+        (optional), Profession or specialism (optional), Select your region, Select
+        your organisation, Select your profession or specialism]
+  /newsletter[3]:
+    jcr:primaryType: resourcebundle:resourcebundle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: f5a57fbd-13b3-4b09-8be0-bd5945e4479a
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
+    hippostdpubwf:lastModificationDate: 2022-03-10T13:07:30.510Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2022-03-10T13:07:32.541Z
+    resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
+      '', '']
+    resourcebundle:id: uk.nhs.hee.web.newsletter
+    resourcebundle:keys: [error.title, error.firstname, error.lastname, error.email,
+      error.consent, label.firstname, label.lastname, label.email, label.region, label.organisation,
+      label.profession, select.region, select.organisation, select.profession]
+    resourcebundle:messages: [There is a problem, Enter your first name, Enter your
+        last name, Enter a valid email address, Privacy policy consent is required,
+      Enter your first name, Last name, Email address, Region (optional), Organisation
+        (optional), Profession or specialism (optional), Select your region, Select
+        your organisation, Select your profession or specialism]

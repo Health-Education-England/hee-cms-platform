@@ -71,6 +71,21 @@ public enum ValueListIdentifier {
     NEWS_CATEGORIES("newsCategories"),
 
     /**
+     * {@code newsletterRegions} value-list identifier.
+     */
+    NEWSLETTER_REGIONS("newsletterRegions"),
+
+    /**
+     * {@code newsletterOrganisations} value-list identifier.
+     */
+    NEWSLETTER_ORGANISATIONS("newsletterOrganisations"),
+
+    /**
+     * {@code newsletterProfessions} value-list identifier.
+     */
+    NEWSLETTER_PROFESSIONS("newsletterProfessions"),
+
+    /**
      * {@code personTitles} value-list identifier.
      */
     PERSON_TITLES("personTitles"),

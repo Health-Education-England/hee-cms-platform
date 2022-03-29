@@ -22,3 +22,4 @@
 <#include "expander.ftl">
 <#include "warning-callout.ftl">
 <#include "statement-card.ftl">
+<#include "newsletter-subscribe-form.ftl">

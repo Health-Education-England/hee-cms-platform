@@ -83,6 +83,9 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.StatementCardReference">
                                                 <@hee.statementCard block=block/>
+                                                <#break>    
+                                            <#case "uk.nhs.hee.web.beans.NewsletterSubscribeFormReference">
+                                                <@hee.newsletterSubscribeForm block=block/>
                                                 <#break>
                                             <#default>
                                         </#switch>

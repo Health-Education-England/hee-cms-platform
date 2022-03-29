@@ -5,6 +5,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import uk.nhs.hee.web.beans.Contact;
 import uk.nhs.hee.web.beans.ContactCardReference;
 import uk.nhs.hee.web.beans.NavMap;
+import uk.nhs.hee.web.beans.NewsletterSubscribeFormReference;
 import uk.nhs.hee.web.components.Model;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 
@@ -35,6 +36,18 @@ public class ContentBlocksUtils {
                         )
                 )
         );
+
+        modelToValueListMap.putAll(
+                getValueListForBeanType(
+                        contentBlocks,
+                        hippoBean -> hippoBean instanceof NewsletterSubscribeFormReference,
+                        ImmutableMap.of(
+                                Model.NEWSLETTER_REGION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_REGIONS.getName()),
+                                Model.NEWSLETTER_ORGANISATION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_ORGANISATIONS.getName()),
+                                Model.NEWSLETTER_PROFESSION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_PROFESSIONS.getName())
+                        )
+                )
+        );                        
 
         modelToValueListMap.putAll(
                 getValueListForBeanType(
