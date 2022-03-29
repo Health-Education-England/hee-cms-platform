@@ -72,7 +72,10 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
                                                 <@hee.expander expander=block/>
-                                                <#break>    
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
+                                                <@hee.warningCallout block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>

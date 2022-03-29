@@ -36,4 +36,9 @@ public class CaseStudy extends BaseDocument {
     public String getImpactGroup() {
         return getSingleProperty("hee:impactGroup");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:provider")
+    public String getProvider() {
+        return getSingleProperty("hee:provider");
+    }
 }

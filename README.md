@@ -4,7 +4,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Continuous Integration/Continuous Deployment Status (CI/CD)
 
-![](https://github.com/Manifesto-Digital/hee-cms-platform/workflows/CI/badge.svg)
+![](https://github.com/Health-Education-England/hee-cms-platform/workflows/CI/badge.svg)
 
 ## Built With
 
@@ -32,7 +32,7 @@ In order to get a development environment up and running you will need to work t
 Cloning the platform from source control
 
 ```
-git clone https://github.com/Manifesto-Digital/hee-cms-platform.git
+git clone https://github.com/Health-Education-England/hee-cms-platform.git
 ```
 
 To run the brXM project in a docker container, you must install the project, build the docker image and run the docker image respectively.
@@ -151,8 +151,8 @@ See also src/main/assembly/*.xml if you need to customize the distributions.
 Code is deployed automatically to Bloomreach Cloud (brCloud) by the CICD process defined using github workflow actions (./github/workflows/). 
 
 The github workflow actions are based on the following custom-made github actions:
-- https://github.com/Manifesto-Digital/upload-distribution-to-BR-Cloud-action 
-- https://github.com/Manifesto-Digital/deploy-distribution-to-BR-Cloud-action
+- https://github.com/Health-Education-England/upload-distribution-to-BR-Cloud-action 
+- https://github.com/Health-Education-England/deploy-distribution-to-BR-Cloud-action
 
 You can deploy to the following environments:
 
@@ -191,10 +191,13 @@ You can find deployments of this application in the following environments insid
 
 ## Releases and Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the releases available, see the [Releases/Tags on this repository](https://github.com/Manifesto-Digital/hee-cms-platform/releases).
+We use [SemVer](http://semver.org/) for versioning. For the releases available, see the [Releases/Tags on this repository](https://github.com/Health-Education-England/hee-cms-platform/releases).
 
 ## Authors
 
-* **Adriana Miclos** - *Sprint work* - [adriana.miclos@manifesto.co.uk](mailto:adriana.miclos@manifesto.co.uk)
-* **Le Tho** - *Sprint work* - [le.tho@manifesto.co.uk](mailto:le.tho@manifesto.co.uk)
-* **Selvandhan Manivasagam** - *Initial work* - [selvandhan.manivasagam@manifesto.co.uk](mailto:selvandhan.manivasagam@manifesto.co.uk)
+* Adriana Miclos
+* Dawn Taroni
+* Le Tho
+* Raq khan
+* Sankaralingam Shunmugasundaram
+* Selvandhan Manivasagam

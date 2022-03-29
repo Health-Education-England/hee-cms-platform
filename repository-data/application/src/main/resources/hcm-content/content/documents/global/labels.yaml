@@ -1,0 +1,324 @@
+/content/documents/global/labels:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['mix:referenceable']
+  jcr:uuid: 98939efc-e768-4a6c-b3b0-cb9ce2906a17
+  hippostd:foldertype: [new-resource-bundle, new-untranslated-folder]
+  /pagenotfound:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 691a261d-274e-484e-bddc-8f5e06d88394
+    hippo:name: Page not found
+    /pagenotfound:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 5cb21eda-8e83-4ed6-b764-e3f253fd03ba
+      hippo:availability: [live, preview]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
+      hippostdpubwf:lastModificationDate: 2014-08-21T17:11:53.242+02:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2014-08-21T17:11:55.239+02:00
+      resourcebundle:descriptions: [Title displayed when page is not found., Text
+          displayed when page is not found.]
+      resourcebundle:id: essentials.pagenotfound
+      resourcebundle:keys: [pagenotfound.title, pagenotfound.text]
+      resourcebundle:messages: [Page not found (404), 'The page you requested was
+          not found. - [This text can be edited here: http://localhost:8080/cms/?1&path=/content/documents/administration/labels/pagenotfound]']
+  /global:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: a5feffba-9633-4cd4-b711-df1d477215a9
+    hippo:name: Global
+    /global[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 22b36501-4713-4b8c-a1aa-cd4e58e09127
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+      hippostdpubwf:lastModificationDate: 2021-12-31T16:55:02.379Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-12-31T16:55:04.436Z
+      resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
+          [for mobile]', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.global
+      resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
+        next, previous, breadcrumb.backto, media-last-reviewed, media-next-review,
+        cookie.banner.title, cookie.banner.text, cookie.button.accept, cookie.button.reject,
+        cookie.toggle.text]
+      resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
+        Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
+        <p>We use some essential cookies to make this website work. We’d like to set
+          some additional cookies to understand how you use the website and to improve
+          it. We also use cookies set by other sites to help us deliver content from
+          their services. <a href="##COOKIES_PAGE##" title="Cookie Policy">You can
+          read more about our cookies</a> before you choose.</p>, Accept additional
+          cookies, Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+          to</span><span class="nhsuk__cookiesOut">out of</span> using additional
+          cookies.]
+    /global[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 5b6d9b51-2cbb-4613-a478-6bec2319cd82
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+      hippostdpubwf:lastModificationDate: 2021-12-31T16:55:02.379Z
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
+          [for mobile]', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.global
+      resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
+        next, previous, breadcrumb.backto, media-last-reviewed, media-next-review,
+        cookie.banner.title, cookie.banner.text, cookie.button.accept, cookie.button.reject,
+        cookie.toggle.text]
+      resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
+        Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
+        <p>We use some essential cookies to make this website work. We’d like to set
+          some additional cookies to understand how you use the website and to improve
+          it. We also use cookies set by other sites to help us deliver content from
+          their services. <a href="##COOKIES_PAGE##" title="Cookie Policy">You can
+          read more about our cookies</a> before you choose.</p>, Accept additional
+          cookies, Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+          to</span><span class="nhsuk__cookiesOut">out of</span> using additional
+          cookies.]
+    /global[3]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 243088ce-f830-4d21-8922-7d93fff547ea
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-08-21T22:10:13.443+02:00
+      hippostdpubwf:lastModificationDate: 2021-12-31T16:54:28.857Z
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: ['', '', '', '', '', 'Breadcrumb ''Back to'' text
+          [for mobile]', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.global
+      resourcebundle:keys: [page-last-reviewed, page-next-review, footer.copyright,
+        next, previous, breadcrumb.backto, media-last-reviewed, media-next-review,
+        cookie.banner.title, cookie.banner.text, cookie.button.accept, cookie.button.reject,
+        cookie.toggle.text]
+      resourcebundle:messages: [Page last reviewed, Next review due, © Crown copyright,
+        Next, Previous, Back to, Media last reviewed, Media next review due, Cookies,
+        <p>We use some essential cookies to make this website work. We’d like to set
+          some additional cookies to understand how you use the website and to improve
+          it. We also use cookies set by other sites to help us deliver content from
+          their services. <a href="##COOKIES_PAGE##" title="Cookie Policy">You can
+          read more about our cookies</a> before you choose.</p>, Accept additional
+          cookies, Reject additional cookies, You are currently opted <span class="nhsuk__cookiesIn">in
+          to</span><span class="nhsuk__cookiesOut">out of</span> using additional
+          cookies.]
+  /blogpost:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: e16476e9-0c3b-49ab-8ade-11110ef1414d
+    hippo:name: BlogPost
+    /blogpost[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2738330d-293f-4cb3-a452-02e52c6f5f22
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
+      hippostdpubwf:lastModificationDate: 2021-05-04T11:11:46.032+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: [Label that defined the text before the publication
+          date., Label that defined the text before the publication author name.,
+        '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.blogpost
+      resourcebundle:keys: [published.on, publication.by, comments, comment.posted_on,
+        comment.view_all, comment.view_less]
+      resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
+          less]
+    /blogpost[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 49c23568-6831-4850-9551-ce8badebe33e
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
+      hippostdpubwf:lastModificationDate: 2021-05-04T11:12:04.830+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: [Label that defined the text before the publication
+          date., Label that defined the text before the publication author name.,
+        '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.blogpost
+      resourcebundle:keys: [published.on, publication.by, comments, comment.posted_on,
+        comment.view_all, comment.view_less]
+      resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
+          less]
+    /blogpost[3]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: eb02a32d-41be-47bf-9c11-768343c328e6
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-31T14:18:08.542+01:00
+      hippostdpubwf:lastModificationDate: 2021-05-04T11:12:04.830+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-05-04T11:12:06.803+07:00
+      resourcebundle:descriptions: [Label that defined the text before the publication
+          date., Label that defined the text before the publication author name.,
+        '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.blogpost
+      resourcebundle:keys: [published.on, publication.by, comments, comment.posted_on,
+        comment.view_all, comment.view_less]
+      resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
+          less]
+  /listing:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 00ba002b-a55f-471d-aa61-8b1729faa5dd
+    hippo:name: Listing
+    /listing[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 9ff9219d-fcc1-43b7-9b82-06c8268ecf89
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+      hippostdpubwf:lastModificationDate: 2022-03-14T18:30:16.431Z
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+          item overview., Used in a Bulletin component to show a bulletin item website.,
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.listing
+      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
+        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
+        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
+        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
+        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
+        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
+        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
+        searchbank.key_terms, sort.option.az, casestudy.provider]
+      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
+        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
+        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
+          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+          Impacted, Impact Types, Key Terms, A to Z, Organisation]
+    /listing[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: a20e0e9f-9e20-4f97-a52d-e68dd3c82cd9
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+      hippostdpubwf:lastModificationDate: 2022-03-14T18:30:31.455Z
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+          item overview., Used in a Bulletin component to show a bulletin item website.,
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.listing
+      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
+        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
+        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
+        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
+        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
+        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
+        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
+        searchbank.key_terms, sort.option.az, casestudy.provider]
+      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
+        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
+        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
+          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+          Impacted, Impact Types, Key Terms, A to Z, Organisation]
+    /listing[3]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 514cfb9c-3c3f-47be-a66f-21f827aa50b4
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+      hippostdpubwf:lastModificationDate: 2022-03-14T18:30:31.455Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-03-14T18:30:34.887Z
+      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+          item overview., Used in a Bulletin component to show a bulletin item website.,
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.listing
+      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
+        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
+        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
+        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
+        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
+        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
+        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
+        searchbank.key_terms, sort.option.az, casestudy.provider]
+      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
+        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
+        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
+          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+          Impacted, Impact Types, Key Terms, A to Z, Organisation]
+  /pagination:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 4d0df30d-34ae-4521-babf-42be60438187
+    hippo:name: Pagination
+    /pagination[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 9f05c7bf-ea50-4eac-953c-aad13d1eb614
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-30T17:01:39.922+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-30T17:01:39.922+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: ['', '']
+      resourcebundle:id: uk.nhs.hee.web.pagination
+      resourcebundle:keys: [page.previous, page.next]
+      resourcebundle:messages: [Previous, Next]
+    /pagination[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 993d9c50-4d88-4221-bbf2-f61ce7551736
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-30T17:01:39.922+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-30T17:02:51.108+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: ['', '']
+      resourcebundle:id: uk.nhs.hee.web.pagination
+      resourcebundle:keys: [page.previous, page.next]
+      resourcebundle:messages: [Previous, Next]
+    /pagination[3]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 44739e7e-9ba2-4f64-af63-6566b7f7a201
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-03-30T17:01:39.922+07:00
+      hippostdpubwf:lastModificationDate: 2021-03-30T17:02:51.108+07:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-03-30T17:02:53.920+07:00
+      resourcebundle:descriptions: ['', '']
+      resourcebundle:id: uk.nhs.hee.web.pagination
+      resourcebundle:keys: [page.previous, page.next]
+      resourcebundle:messages: [Previous, Next]

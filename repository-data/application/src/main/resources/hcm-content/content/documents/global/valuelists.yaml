@@ -1,0 +1,2802 @@
+/content/documents/global/valuelists:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 49e8cd6c-43c8-4273-aa7b-656363786e33
+  hippo:name: valuelists
+  hippostd:foldertype: [new-document, new-untranslated-folder]
+  /anchorlinkstargets:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 867c272f-649e-44fa-a56c-130e8f493fc4
+    hippo:name: AnchorLinksTargets
+    /anchorlinkstargets:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: a524e755-7904-4363-8709-3c7d24090256
+      hippo:availability: [live, preview]
+      hippotranslation:id: dce9c032-22d3-4a23-b6ea-43af0b993f39
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: h2
+        selection:label: h2
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: h3
+        selection:label: h3
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: h4
+        selection:label: h4
+  /lks:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 351df434-e6b5-40f6-a83b-e7db4df97314
+    hippo:name: kls
+    hippostd:foldertype: [new-document]
+    /blogcategories:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 777c1e94-c5b5-456a-8575-d7eebc4c5534
+      hippo:name: BlogCategories
+      /blogcategories:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: df2d333f-d0ad-488b-bad8-5dee632286fd
+        hippo:availability: [live, preview]
+        hippotranslation:id: 622bd0cb-9a7e-4ebf-bdb1-1fdd076b817f
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: advocacy
+          selection:label: Advocacy
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Authentication
+          selection:label: Authentication
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: apprenticeship
+          selection:label: Apprenticeship
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: BP
+          selection:label: Best practice
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-Bursaries
+          selection:label: Bursaries, grants and awards
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: Case Studies
+          selection:label: Case studies
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: Cat
+          selection:label: Cataloguing
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: Circ
+          selection:label: Circulation and counter activities
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: HLPI-Collaboration
+          selection:label: Collaboration and partnership
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Copyright
+          selection:label: Copyright and licensing
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: COVID-19
+          selection:label: COVID-19
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: CPD
+          selection:label: CPD
+        /selection:listitem[13]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Databases
+          selection:label: Databases
+        /selection:listitem[14]:
+          jcr:primaryType: selection:listitem
+          selection:key: WDP-Dev
+          selection:label: Development needs
+        /selection:listitem[15]:
+          jcr:primaryType: selection:listitem
+          selection:key: Digital
+          selection:label: Digital literacy
+        /selection:listitem[16]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Discovery
+          selection:label: Discovery
+        /selection:listitem[17]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-eResources
+          selection:label: Electronic resources
+        /selection:listitem[18]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Emerging
+          selection:label: Emerging technology
+        /selection:listitem[19]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-EDI
+          selection:label: Equality, impact and diversity
+        /selection:listitem[20]:
+          jcr:primaryType: selection:listitem
+          selection:key: QI-Evaluation
+          selection:label: Evaluation framework
+        /selection:listitem[21]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-Events
+          selection:label: Events
+        /selection:listitem[22]:
+          jcr:primaryType: selection:listitem
+          selection:key: MEK-Self
+          selection:label: Evidence and knowledge self assessment
+        /selection:listitem[23]:
+          jcr:primaryType: selection:listitem
+          selection:key: Finance
+          selection:label: Finance, costing and budgets
+        /selection:listitem[24]:
+          jcr:primaryType: selection:listitem
+          selection:key: Groups
+          selection:label: Groups and communities of practice
+        /selection:listitem[25]:
+          jcr:primaryType: selection:listitem
+          selection:key: HLPI-HL
+          selection:label: Health literacy
+        /selection:listitem[26]:
+          jcr:primaryType: selection:listitem
+          selection:key: Help
+          selection:label: Help and guidance
+        /selection:listitem[27]:
+          jcr:primaryType: selection:listitem
+          selection:key: QI-Impact
+          selection:label: Impact and value
+        /selection:listitem[28]:
+          jcr:primaryType: selection:listitem
+          selection:key: QI-Innovation
+          selection:label: Innovation
+        /selection:listitem[29]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-ILDS
+          selection:label: Inter-library loan and document supply
+        /selection:listitem[30]:
+          jcr:primaryType: selection:listitem
+          selection:key: Policies
+          selection:label: KLS policies
+        /selection:listitem[31]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-Research
+          selection:label: KLS research
+        /selection:listitem[32]:
+          jcr:primaryType: selection:listitem
+          selection:key: Train
+          selection:label: KLS training
+        /selection:listitem[33]:
+          jcr:primaryType: selection:listitem
+          selection:key: KfH
+          selection:label: Knowledge for Healthcare
+        /selection:listitem[34]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-Learn
+          selection:label: Learning zone
+        /selection:listitem[35]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-LibKey
+          selection:label: LibKey Nomad
+        /selection:listitem[36]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-LMS
+          selection:label: Library management systems
+        /selection:listitem[37]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Link Resolver
+          selection:label: Link resolver
+        /selection:listitem[38]:
+          jcr:primaryType: selection:listitem
+          selection:key: literature_searching
+          selection:label: Literature searching
+        /selection:listitem[39]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-Talent
+          selection:label: Managing talent
+        /selection:listitem[40]:
+          jcr:primaryType: selection:listitem
+          selection:key: Marketing
+          selection:label: Marketing and campaigns
+        /selection:listitem[41]:
+          jcr:primaryType: selection:listitem
+          selection:key: QI-Mergers
+          selection:label: Mergers
+        /selection:listitem[42]:
+          jcr:primaryType: selection:listitem
+          selection:key: MEK-Mobilising
+          selection:label: Mobilising evidence and knowledge
+        /selection:listitem[43]:
+          jcr:primaryType: selection:listitem
+          selection:key: networking
+          selection:label: Networking
+        /selection:listitem[44]:
+          jcr:primaryType: selection:listitem
+          selection:key: nhs_wider
+          selection:label: NHS and healthcare system
+        /selection:listitem[45]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Open
+          selection:label: Open access
+        /selection:listitem[46]:
+          jcr:primaryType: selection:listitem
+          selection:key: HLPI-PI
+          selection:label: Patient information
+        /selection:listitem[47]:
+          jcr:primaryType: selection:listitem
+          selection:key: WPD-PKSB
+          selection:label: PKSB
+        /selection:listitem[48]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Procurement
+          selection:label: Procurement
+        /selection:listitem[49]:
+          jcr:primaryType: selection:listitem
+          selection:key: QI
+          selection:label: Quality
+        /selection:listitem[50]:
+          jcr:primaryType: selection:listitem
+          selection:key: QI-QIOF
+          selection:label: Quality and Improvement Outcomes
+        /selection:listitem[51]:
+          jcr:primaryType: selection:listitem
+          selection:key: RD-Repositories
+          selection:label: Repositories
+        /selection:listitem[52]:
+          jcr:primaryType: selection:listitem
+          selection:key: resource_discovery
+          selection:label: Resource Discovery
+        /selection:listitem[53]:
+          jcr:primaryType: selection:listitem
+          selection:key: Deliver
+          selection:label: Service delivery
+        /selection:listitem[54]:
+          jcr:primaryType: selection:listitem
+          selection:key: Qi-Stats
+          selection:label: Statistics and data
+        /selection:listitem[55]:
+          jcr:primaryType: selection:listitem
+          selection:key: Stream
+          selection:label: Streamlining
+        /selection:listitem[56]:
+          jcr:primaryType: selection:listitem
+          selection:key: sustainability
+          selection:label: Sustainability
+        /selection:listitem[57]:
+          jcr:primaryType: selection:listitem
+          selection:key: Tools
+          selection:label: Tools and techniques
+        /selection:listitem[58]:
+          jcr:primaryType: selection:listitem
+          selection:key: use-of-technology
+          selection:label: Use of technology
+        /selection:listitem[59]:
+          jcr:primaryType: selection:listitem
+          selection:key: User
+          selection:label: User experience
+        /selection:listitem[60]:
+          jcr:primaryType: selection:listitem
+          selection:key: Well
+          selection:label: Wellbeing
+        /selection:listitem[61]:
+          jcr:primaryType: selection:listitem
+          selection:key: wider_profession
+          selection:label: Wider profession
+        /selection:listitem[62]:
+          jcr:primaryType: selection:listitem
+          selection:key: workforce
+          selection:label: Workforce
+    /bulletincategories:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: e9108b06-0ce7-4822-b215-b2abd0d6af2f
+      hippo:name: BulletinCategories
+      /bulletincategories:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: a3980010-088c-4ad3-9985-8b6b516c3acd
+        hippo:availability: [live, preview]
+        hippotranslation:id: abcd75b7-2bf9-4346-84eb-c7c99b7877e1
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: evidence_and_resources_searching
+          selection:label: Evidence and resources, Searching
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: child_health
+          selection:label: Child Health
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: medical_oncology
+          selection:label: Medical Oncology
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: covid_19
+          selection:label: COVID-19
+    /casestudyimpactgroups:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: ab9506f1-1393-4565-ba84-a2d786fa3c12
+      hippo:name: CaseStudyImpactGroups
+      /casestudyimpactgroups:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: 5d421b6e-8546-41c4-9595-97d187e98ea9
+        hippo:availability: [live, preview]
+        hippotranslation:id: 176421a7-3387-4897-951f-f2ab338e2245
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: all_staff
+          selection:label: All Staff
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: additional_clinical_services
+          selection:label: Additional Clinical Services
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: admin_and_clerical
+          selection:label: Admin and Clerical
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: allied_health_professionals
+          selection:label: Allied Health Professionals
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: estates_and_ancilliary
+          selection:label: Estates and Ancilliary
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: healthcare_scientists
+          selection:label: Healthcare Scientists
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: medicine_and_dental
+          selection:label: Medical and Dental
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: multiprofessional
+          selection:label: Multiprofessional
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: nursing_and_midwifery
+          selection:label: Nursing and Midwifery
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: patients_carers_and_the_public
+          selection:label: Patients, carers and the public
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: scientific_and_technical
+          selection:label: Professional, Scientific and Technical
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: students
+          selection:label: Students
+    /casestudyimpacttypes:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: d69d5e0a-be96-4b48-8bb8-6b830c2ed0f2
+      hippo:name: CaseStudyImpactTypes
+      /casestudyimpacttypes:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: 1b83895d-1ce6-4672-8961-a1146971ef0f
+        hippo:availability: [live, preview]
+        hippotranslation:id: 45692d94-c896-452f-98f4-87a46dc36763
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: carers_and_the_public
+          selection:label: Carers and the Public
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: contributed_to_personal_or_professional_development
+          selection:label: Contributed to personal or professional development
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: contributed_to_service_development_or_delivery
+          selection:label: Contributed to service development or delivery
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: facilitated_collaborative_working
+          selection:label: Facilitated collaborative working
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: health_information_for_patients
+          selection:label: Health Information for Patients
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: improved_the_quality_of_patient_care
+          selection:label: Improved the quality of patient care
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: mobilising_evidence_and_organisational_knowledge
+          selection:label: Mobilising evidence and organisational knowledge
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: more_informed_decision_making
+          selection:label: More informed decision making
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: productivity_and_efficiency
+          selection:label: Productivity and efficiency
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: reduced_risk_or_improved_safety
+          selection:label: Reduced risk or improved safety
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: saved_money_or_contributed_to_financial_effectiveness
+          selection:label: Saved money or contributed to financial effectiveness
+    /casestudyproviders:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 1647a7fc-9d79-4638-a2fa-0b14ff97a4af
+      hippo:name: CaseStudyProviders
+      /casestudyproviders:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: 87f0a6f5-36e8-4424-ad06-4d7b9d26cc89
+        hippo:availability: [live, preview]
+        hippotranslation:id: 40d44496-3f6d-4b59-b772-a805e2341464
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: imperial_college_nhs_and_chelsea_and_westminster_hospital
+          selection:label: Imperial College NHS and Chelsea & Westminster Hospital
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: ashford_and_st_peters_nhs_foundation_trust
+          selection:label: Ashford and St Peters NHS Foundation Trust
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: aubrey_keep_library_and_knowledge_service
+          selection:label: Aubrey Keep Library and Knowledge Service
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_health
+          selection:label: Barts Health
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_health_nhs_trust
+          selection:label: Bart's Health NHS Trust
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_healthcare_library
+          selection:label: Barts Healthcare Library
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_hospital
+          selection:label: Barts Hospital
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: birmingham_womens_and_childrens_nhs
+          selection:label: Birmingham Women's and Children's NHS
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex
+          selection:label: Brighton and Sussex
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_healthcare
+          selection:label: Brighton and Sussex Healthcare
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_library
+          selection:label: Brighton and Sussex Library
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_library_and_knowledge_service
+          selection:label: Brighton and Sussex Library and Knowledge Service
+        /selection:listitem[13]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_lks
+          selection:label: Brighton and Sussex LKS
+        /selection:listitem[14]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_sussex
+          selection:label: Brighton & Sussex
+        /selection:listitem[15]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_sussex_healthcare
+          selection:label: Brighton & Sussex Healthcare
+        /selection:listitem[16]:
+          jcr:primaryType: selection:listitem
+          selection:key: bwrdd_iechyd_prifysgol_bae_abertawe_library_services
+          selection:label: Bwrdd Iechyd Prifysgol Bae Abertawe Library Services
+        /selection:listitem[17]:
+          jcr:primaryType: selection:listitem
+          selection:key: croydon_university_hospital
+          selection:label: Croydon University Hospital
+        /selection:listitem[18]:
+          jcr:primaryType: selection:listitem
+          selection:key: derby_and_burton_hospitals
+          selection:label: Derby and Burton Hospitals
+        /selection:listitem[19]:
+          jcr:primaryType: selection:listitem
+          selection:key: derby_and_burton_nhs_foundation_trust
+          selection:label: Derby and Burton NHS Foundation Trust
+        /selection:listitem[20]:
+          jcr:primaryType: selection:listitem
+          selection:key: dorset_county_hospital
+          selection:label: Dorset County Hospital
+        /selection:listitem[21]:
+          jcr:primaryType: selection:listitem
+          selection:key: dorset_nhs
+          selection:label: Dorset NHS
+        /selection:listitem[22]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_dorset
+          selection:label: East Dorset
+        /selection:listitem[23]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_dorset_library_and_knowledge_service
+          selection:label: East Dorset Library and Knowledge Service
+        /selection:listitem[24]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_dorset_library_knowledge_service
+          selection:label: East Dorset Library & Knowledge Service
+        /selection:listitem[25]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_kent_hospitals
+          selection:label: East Kent Hospitals
+        /selection:listitem[26]:
+          jcr:primaryType: selection:listitem
+          selection:key: george_eliot_hospital
+          selection:label: George Eliot Hospital
+        /selection:listitem[27]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloucestershire_health_and_care_nhs
+          selection:label: Gloucestershire Health and Care NHS
+        /selection:listitem[28]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloucestershire_health_and_care_nhs_foundation_trust
+          selection:label: Gloucestershire Health and Care NHS Foundation Trust
+        /selection:listitem[29]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloucestershire_hospitals
+          selection:label: Gloucestershire Hospitals
+        /selection:listitem[30]:
+          jcr:primaryType: selection:listitem
+          selection:key: hampshire_health_care
+          selection:label: Hampshire Health Care
+        /selection:listitem[31]:
+          jcr:primaryType: selection:listitem
+          selection:key: hampshire_healthcare
+          selection:label: Hampshire Healthcare
+        /selection:listitem[32]:
+          jcr:primaryType: selection:listitem
+          selection:key: health_education_england
+          selection:label: Health Education England
+        /selection:listitem[33]:
+          jcr:primaryType: selection:listitem
+          selection:key: hee_km_team
+          selection:label: HEE KM Team
+        /selection:listitem[34]:
+          jcr:primaryType: selection:listitem
+          selection:key: kings_fund
+          selection:label: Kings Fund
+        /selection:listitem[35]:
+          jcr:primaryType: selection:listitem
+          selection:key: lancashire_teaching_hospitals_nhs_foundation_trust
+          selection:label: Lancashire Teaching Hospitals NHS Foundation Trust
+        /selection:listitem[36]:
+          jcr:primaryType: selection:listitem
+          selection:key: leicester_royal_infirmary_glenfield_hospital
+          selection:label: Leicester Royal Infirmary / Glenfield Hospital
+        /selection:listitem[37]:
+          jcr:primaryType: selection:listitem
+          selection:key: library_and_ks_kings_mill_hospital
+          selection:label: Library and KS Kings Mill Hospital
+        /selection:listitem[38]:
+          jcr:primaryType: selection:listitem
+          selection:key: library_knowledge_service_kings_mill_hospital
+          selection:label: Library & Knowledge Service Kings Mill Hospital
+        /selection:listitem[39]:
+          jcr:primaryType: selection:listitem
+          selection:key: lks_for_nhs_ambulance_services_in_england
+          selection:label: LKS for NHS Ambulance Services in England
+        /selection:listitem[40]:
+          jcr:primaryType: selection:listitem
+          selection:key: national_institute_for_health_and_care_excellence_nice
+          selection:label: National Institute for Health and Care Excellence (NICE)
+        /selection:listitem[41]:
+          jcr:primaryType: selection:listitem
+          selection:key: nelft_nhs_foundation_trust
+          selection:label: NELFT NHS Foundation Trust
+        /selection:listitem[42]:
+          jcr:primaryType: selection:listitem
+          selection:key: newcomb_library_and_information_service
+          selection:label: Newcomb Library and Information Service
+        /selection:listitem[43]:
+          jcr:primaryType: selection:listitem
+          selection:key: newcomb_library_library_and_information_service
+          selection:label: Newcomb Library Library and Information Service
+        /selection:listitem[44]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_bristol_library_and_information_service
+          selection:label: North Bristol Library and Information Service
+        /selection:listitem[45]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_bristol_nhs_trust
+          selection:label: North Bristol NHS Trust
+        /selection:listitem[46]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east_london
+          selection:label: North East London
+        /selection:listitem[47]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east_london_nhs
+          selection:label: North East London NHS
+        /selection:listitem[48]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east_london_nhs_foundation_trust
+          selection:label: North East London NHS Foundation Trust
+        /selection:listitem[49]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_west_ambulance_service
+          selection:label: North West Ambulance Service
+        /selection:listitem[50]:
+          jcr:primaryType: selection:listitem
+          selection:key: northumbria_healthcare_library
+          selection:label: Northumbria Healthcare Library
+        /selection:listitem[51]:
+          jcr:primaryType: selection:listitem
+          selection:key: oxford_health_library
+          selection:label: Oxford Health Library
+        /selection:listitem[52]:
+          jcr:primaryType: selection:listitem
+          selection:key: oxford_health_library_and_knowledge_service
+          selection:label: Oxford Health Library and Knowledge Service
+        /selection:listitem[53]:
+          jcr:primaryType: selection:listitem
+          selection:key: poole_hospital_nhs
+          selection:label: Poole Hospital NHS
+        /selection:listitem[54]:
+          jcr:primaryType: selection:listitem
+          selection:key: public_health_bolton_council
+          selection:label: Public Health Bolton Council
+        /selection:listitem[55]:
+          jcr:primaryType: selection:listitem
+          selection:key: reay_house_library_and_knowledge_service
+          selection:label: Reay House Library and Knowledge Service
+        /selection:listitem[56]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_marsden_nhs
+          selection:label: Royal Marsden NHS
+        /selection:listitem[57]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_united_hospitals_bath_nhs
+          selection:label: Royal United Hospitals Bath NHS
+        /selection:listitem[58]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_wolverhampton
+          selection:label: Royal Wolverhampton
+        /selection:listitem[59]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_wolverhampton_nhs_trust
+          selection:label: Royal Wolverhampton NHS Trust
+        /selection:listitem[60]:
+          jcr:primaryType: selection:listitem
+          selection:key: salisbury_nhs
+          selection:label: Salisbury NHS
+        /selection:listitem[61]:
+          jcr:primaryType: selection:listitem
+          selection:key: salisbury_nhs_foundation_trust
+          selection:label: Salisbury NHS Foundation Trust
+        /selection:listitem[62]:
+          jcr:primaryType: selection:listitem
+          selection:key: sandwell_west_birmingham_hospitals
+          selection:label: Sandwell & West Birmingham Hospitals
+        /selection:listitem[63]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_and_telford_health
+          selection:label: Shrewsbury and Telford Health
+        /selection:listitem[64]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_and_telford_health_libraries
+          selection:label: Shrewsbury and Telford Health Libraries
+        /selection:listitem[65]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_and_telford_healthcare
+          selection:label: Shrewsbury and Telford Healthcare
+        /selection:listitem[66]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_telford_health_libraries
+          selection:label: Shrewsbury & Telford Health Libraries
+        /selection:listitem[67]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_london_and_maudsley_nhs_foundation_trust
+          selection:label: South London and Maudsley NHS Foundation Trust
+        /selection:listitem[68]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_london_maudsley_nhs
+          selection:label: South London & Maudsley NHS
+        /selection:listitem[69]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_london_maudsley_nhs_foundation_trust
+          selection:label: South London & Maudsley NHS Foundation Trust
+        /selection:listitem[70]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_and_sussex_healthcare
+          selection:label: Surrey and Sussex Healthcare
+        /selection:listitem[71]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_and_sussex_healthcare_nhs_trust
+          selection:label: Surrey and Sussex Healthcare NHS Trust
+        /selection:listitem[72]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_and_sussex_library
+          selection:label: Surrey and Sussex Library
+        /selection:listitem[73]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_sussex_healthcare
+          selection:label: Surrey & Sussex Healthcare
+        /selection:listitem[74]:
+          jcr:primaryType: selection:listitem
+          selection:key: swansea_bay_university_healthboard
+          selection:label: Swansea Bay University Healthboard
+        /selection:listitem[75]:
+          jcr:primaryType: selection:listitem
+          selection:key: the_royal_wolverhampton_nhs_trust_library_and_knowledge_service
+          selection:label: The Royal Wolverhampton NHS Trust Library and Knowledge
+            Service
+        /selection:listitem[76]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_birmingham_uhb_library_and_knowledge_service
+          selection:label: University Hospitals Birmingham (UHB) Library and Knowledge
+            Service
+        /selection:listitem[77]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_bristol_and_weston_nhs
+          selection:label: University Hospitals Bristol and Weston NHS
+        /selection:listitem[78]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_bristol_and_weston_nhs_foundation_trust
+          selection:label: University Hospitals Bristol and Weston NHS Foundation
+            Trust
+        /selection:listitem[79]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_leicester
+          selection:label: University Hospitals Leicester
+        /selection:listitem[80]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_and_burton
+          selection:label: University Hospitals of Derby and Burton
+        /selection:listitem[81]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_and_burton_nhs
+          selection:label: University Hospitals of Derby and Burton NHS
+        /selection:listitem[82]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_and_burton_nhs_foundation_trust
+          selection:label: University Hospitals of Derby and Burton NHS Foundation
+            Trust
+        /selection:listitem[83]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_burton
+          selection:label: University Hospitals of Derby & Burton
+        /selection:listitem[84]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_burton_nhs_foundation_trust
+          selection:label: University Hospitals of Derby & Burton NHS Foundation Trust
+        /selection:listitem[85]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_leicester_nhs_trust_libraries
+          selection:label: University Hospitals of Leicester NHS Trust Libraries
+        /selection:listitem[86]:
+          jcr:primaryType: selection:listitem
+          selection:key: warrington_and_halton_hospitals_nhs
+          selection:label: Warrington and Halton Hospitals NHS
+        /selection:listitem[87]:
+          jcr:primaryType: selection:listitem
+          selection:key: west_middlesex_university_hospital
+          selection:label: West Middlesex University Hospital
+        /selection:listitem[88]:
+          jcr:primaryType: selection:listitem
+          selection:key: west_suffolk_nhs
+          selection:label: West Suffolk NHS
+        /selection:listitem[89]:
+          jcr:primaryType: selection:listitem
+          selection:key: frimley_park_hospital
+          selection:label: Frimley Park Hospital
+        /selection:listitem[90]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_surrey_hospital
+          selection:label: East Surrey Hospital
+        /selection:listitem[91]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_sussex_county_hospital
+          selection:label: Royal Sussex County Hospital
+        /selection:listitem[92]:
+          jcr:primaryType: selection:listitem
+          selection:key: glenfield_hospital_leicester_royal_infirmary
+          selection:label: Glenfield Hospital Leicester Royal Infirmary
+        /selection:listitem[93]:
+          jcr:primaryType: selection:listitem
+          selection:key: heartlands_hospital
+          selection:label: Heartlands Hospital
+    /casestudysectors:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: ba8d78f6-3a9d-41e0-a44b-fe0f6fcc27f0
+      hippo:name: CaseStudySectors
+      /casestudysectors:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: dcecd34e-2aa0-452f-9318-0a137eb7be1c
+        hippo:availability: [live, preview]
+        hippotranslation:id: d7c247d7-6026-4e9d-bc44-78654400b24a
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: acute
+          selection:label: Acute
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: acute_and_community
+          selection:label: Acute and Community
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: ambulance
+          selection:label: Ambulance
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: care_trust
+          selection:label: Care Trust
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: ccg
+          selection:label: Clinical Commissioning Group
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: ccg_support
+          selection:label: Commissioning Support
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: comunity_trust
+          selection:label: Community Trust
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: cross_sector
+          selection:label: Cross Sector
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: mental_health
+          selection:label: Mental Health
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: mental_health_ld
+          selection:label: Mental Health (Learning Disability)
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: mental_health_sc
+          selection:label: Mental Health (Social Care)
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: primary_care
+          selection:label: Primary Care
+        /selection:listitem[13]:
+          jcr:primaryType: selection:listitem
+          selection:key: public_health
+          selection:label: Public Health
+        /selection:listitem[14]:
+          jcr:primaryType: selection:listitem
+          selection:key: shared_services
+          selection:label: Shared Services
+        /selection:listitem[15]:
+          jcr:primaryType: selection:listitem
+          selection:key: other
+          selection:label: Other
+    /casestudyregions:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 73abc461-ce32-4e71-968e-cb8f3eace5d7
+      hippo:name: CaseStudyRegions
+      /casestudyregions:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: e53a4ca0-b1b5-4f31-91c6-efa55da7e8bf
+        hippo:availability: [live, preview]
+        hippotranslation:id: 9b4facc5-27ed-4fce-aa3a-21c516b13cef
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_midlands
+          selection:label: Midlands
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_of_england
+          selection:label: East of England
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: kent_surrey_sussex
+          selection:label: South East
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: london
+          selection:label: London
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east
+          selection:label: North East and Yorkshire
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_west
+          selection:label: North West
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_west
+          selection:label: South West
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: thames_valley
+          selection:label: South East
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: Wessex
+          selection:label: South East
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: west_midlands
+          selection:label: Midlands
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: yorkshire_humber
+          selection:label: North East and Yorkshire
+    /searchbankkeyterms:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: e9c6fc65-0532-4f59-9bb5-4e0df1a5fabc
+      hippo:name: SearchBankKeyTerms
+      /searchbankkeyterms:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: 445d5fdb-a3d2-4826-879a-a31d0654548b
+        hippo:availability: [live, preview]
+        hippotranslation:id: b0888677-c7ce-49b1-9707-8be395c7051a
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: environmental_microbiology
+          selection:label: ENVIRONMENTAL MICROBIOLOGY
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: medical_records
+          selection:label: MEDICAL RECORDS
+    /searchbankproviders:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: a63a2098-e455-4aff-b7b6-0792c7f80183
+      hippo:name: SearchBankProviders
+      /searchbankproviders:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: f8c97b37-81ec-4a32-bfb9-7c9eead56c2e
+        hippo:availability: [live, preview]
+        hippotranslation:id: a06dac2f-304a-4c4e-9215-045c3fa190ca
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: imperial_college_nhs_and_chelsea_and_westminster_hospital
+          selection:label: Imperial College NHS and Chelsea & Westminster Hospital
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: ashford_and_st_peters_nhs_foundation_trust
+          selection:label: Ashford and St Peters NHS Foundation Trust
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: aubrey_keep_library_and_knowledge_service
+          selection:label: Aubrey Keep Library and Knowledge Service
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_health
+          selection:label: Barts Health
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_health_nhs_trust
+          selection:label: Bart's Health NHS Trust
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_healthcare_library
+          selection:label: Barts Healthcare Library
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: barts_hospital
+          selection:label: Barts Hospital
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: birmingham_womens_and_childrens_nhs
+          selection:label: Birmingham Women's and Children's NHS
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex
+          selection:label: Brighton and Sussex
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_healthcare
+          selection:label: Brighton and Sussex Healthcare
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_library
+          selection:label: Brighton and Sussex Library
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_library_and_knowledge_service
+          selection:label: Brighton and Sussex Library and Knowledge Service
+        /selection:listitem[13]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_and_sussex_lks
+          selection:label: Brighton and Sussex LKS
+        /selection:listitem[14]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_sussex
+          selection:label: Brighton & Sussex
+        /selection:listitem[15]:
+          jcr:primaryType: selection:listitem
+          selection:key: brighton_sussex_healthcare
+          selection:label: Brighton & Sussex Healthcare
+        /selection:listitem[16]:
+          jcr:primaryType: selection:listitem
+          selection:key: bwrdd_iechyd_prifysgol_bae_abertawe_library_services
+          selection:label: Bwrdd Iechyd Prifysgol Bae Abertawe Library Services
+        /selection:listitem[17]:
+          jcr:primaryType: selection:listitem
+          selection:key: croydon_university_hospital
+          selection:label: Croydon University Hospital
+        /selection:listitem[18]:
+          jcr:primaryType: selection:listitem
+          selection:key: derby_and_burton_hospitals
+          selection:label: Derby and Burton Hospitals
+        /selection:listitem[19]:
+          jcr:primaryType: selection:listitem
+          selection:key: derby_and_burton_nhs_foundation_trust
+          selection:label: Derby and Burton NHS Foundation Trust
+        /selection:listitem[20]:
+          jcr:primaryType: selection:listitem
+          selection:key: dorset_county_hospital
+          selection:label: Dorset County Hospital
+        /selection:listitem[21]:
+          jcr:primaryType: selection:listitem
+          selection:key: dorset_nhs
+          selection:label: Dorset NHS
+        /selection:listitem[22]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_dorset
+          selection:label: East Dorset
+        /selection:listitem[23]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_dorset_library_and_knowledge_service
+          selection:label: East Dorset Library and Knowledge Service
+        /selection:listitem[24]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_dorset_library_knowledge_service
+          selection:label: East Dorset Library & Knowledge Service
+        /selection:listitem[25]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_kent_hospitals
+          selection:label: East Kent Hospitals
+        /selection:listitem[26]:
+          jcr:primaryType: selection:listitem
+          selection:key: george_eliot_hospital
+          selection:label: George Eliot Hospital
+        /selection:listitem[27]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloucestershire_health_and_care_nhs
+          selection:label: Gloucestershire Health and Care NHS
+        /selection:listitem[28]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloucestershire_health_and_care_nhs_foundation_trust
+          selection:label: Gloucestershire Health and Care NHS Foundation Trust
+        /selection:listitem[29]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloucestershire_hospitals
+          selection:label: Gloucestershire Hospitals
+        /selection:listitem[30]:
+          jcr:primaryType: selection:listitem
+          selection:key: hampshire_health_care
+          selection:label: Hampshire Health Care
+        /selection:listitem[31]:
+          jcr:primaryType: selection:listitem
+          selection:key: hampshire_healthcare
+          selection:label: Hampshire Healthcare
+        /selection:listitem[32]:
+          jcr:primaryType: selection:listitem
+          selection:key: health_education_england
+          selection:label: Health Education England
+        /selection:listitem[33]:
+          jcr:primaryType: selection:listitem
+          selection:key: hee_km_team
+          selection:label: HEE KM Team
+        /selection:listitem[34]:
+          jcr:primaryType: selection:listitem
+          selection:key: kings_fund
+          selection:label: Kings Fund
+        /selection:listitem[35]:
+          jcr:primaryType: selection:listitem
+          selection:key: lancashire_teaching_hospitals_nhs_foundation_trust
+          selection:label: Lancashire Teaching Hospitals NHS Foundation Trust
+        /selection:listitem[36]:
+          jcr:primaryType: selection:listitem
+          selection:key: leicester_royal_infirmary_glenfield_hospital
+          selection:label: Leicester Royal Infirmary / Glenfield Hospital
+        /selection:listitem[37]:
+          jcr:primaryType: selection:listitem
+          selection:key: library_and_ks_kings_mill_hospital
+          selection:label: Library and KS Kings Mill Hospital
+        /selection:listitem[38]:
+          jcr:primaryType: selection:listitem
+          selection:key: library_knowledge_service_kings_mill_hospital
+          selection:label: Library & Knowledge Service Kings Mill Hospital
+        /selection:listitem[39]:
+          jcr:primaryType: selection:listitem
+          selection:key: lks_for_nhs_ambulance_services_in_england
+          selection:label: LKS for NHS Ambulance Services in England
+        /selection:listitem[40]:
+          jcr:primaryType: selection:listitem
+          selection:key: national_institute_for_health_and_care_excellence_nice
+          selection:label: National Institute for Health and Care Excellence (NICE)
+        /selection:listitem[41]:
+          jcr:primaryType: selection:listitem
+          selection:key: nelft_nhs_foundation_trust
+          selection:label: NELFT NHS Foundation Trust
+        /selection:listitem[42]:
+          jcr:primaryType: selection:listitem
+          selection:key: newcomb_library_and_information_service
+          selection:label: Newcomb Library and Information Service
+        /selection:listitem[43]:
+          jcr:primaryType: selection:listitem
+          selection:key: newcomb_library_library_and_information_service
+          selection:label: Newcomb Library Library and Information Service
+        /selection:listitem[44]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_bristol_library_and_information_service
+          selection:label: North Bristol Library and Information Service
+        /selection:listitem[45]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_bristol_nhs_trust
+          selection:label: North Bristol NHS Trust
+        /selection:listitem[46]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east_london
+          selection:label: North East London
+        /selection:listitem[47]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east_london_nhs
+          selection:label: North East London NHS
+        /selection:listitem[48]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_east_london_nhs_foundation_trust
+          selection:label: North East London NHS Foundation Trust
+        /selection:listitem[49]:
+          jcr:primaryType: selection:listitem
+          selection:key: north_west_ambulance_service
+          selection:label: North West Ambulance Service
+        /selection:listitem[50]:
+          jcr:primaryType: selection:listitem
+          selection:key: northumbria_healthcare_library
+          selection:label: Northumbria Healthcare Library
+        /selection:listitem[51]:
+          jcr:primaryType: selection:listitem
+          selection:key: oxford_health_library
+          selection:label: Oxford Health Library
+        /selection:listitem[52]:
+          jcr:primaryType: selection:listitem
+          selection:key: oxford_health_library_and_knowledge_service
+          selection:label: Oxford Health Library and Knowledge Service
+        /selection:listitem[53]:
+          jcr:primaryType: selection:listitem
+          selection:key: poole_hospital_nhs
+          selection:label: Poole Hospital NHS
+        /selection:listitem[54]:
+          jcr:primaryType: selection:listitem
+          selection:key: public_health_bolton_council
+          selection:label: Public Health Bolton Council
+        /selection:listitem[55]:
+          jcr:primaryType: selection:listitem
+          selection:key: reay_house_library_and_knowledge_service
+          selection:label: Reay House Library and Knowledge Service
+        /selection:listitem[56]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_marsden_nhs
+          selection:label: Royal Marsden NHS
+        /selection:listitem[57]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_united_hospitals_bath_nhs
+          selection:label: Royal United Hospitals Bath NHS
+        /selection:listitem[58]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_wolverhampton
+          selection:label: Royal Wolverhampton
+        /selection:listitem[59]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_wolverhampton_nhs_trust
+          selection:label: Royal Wolverhampton NHS Trust
+        /selection:listitem[60]:
+          jcr:primaryType: selection:listitem
+          selection:key: salisbury_nhs
+          selection:label: Salisbury NHS
+        /selection:listitem[61]:
+          jcr:primaryType: selection:listitem
+          selection:key: salisbury_nhs_foundation_trust
+          selection:label: Salisbury NHS Foundation Trust
+        /selection:listitem[62]:
+          jcr:primaryType: selection:listitem
+          selection:key: sandwell_west_birmingham_hospitals
+          selection:label: Sandwell & West Birmingham Hospitals
+        /selection:listitem[63]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_and_telford_health
+          selection:label: Shrewsbury and Telford Health
+        /selection:listitem[64]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_and_telford_health_libraries
+          selection:label: Shrewsbury and Telford Health Libraries
+        /selection:listitem[65]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_and_telford_healthcare
+          selection:label: Shrewsbury and Telford Healthcare
+        /selection:listitem[66]:
+          jcr:primaryType: selection:listitem
+          selection:key: shrewsbury_telford_health_libraries
+          selection:label: Shrewsbury & Telford Health Libraries
+        /selection:listitem[67]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_london_and_maudsley_nhs_foundation_trust
+          selection:label: South London and Maudsley NHS Foundation Trust
+        /selection:listitem[68]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_london_maudsley_nhs
+          selection:label: South London & Maudsley NHS
+        /selection:listitem[69]:
+          jcr:primaryType: selection:listitem
+          selection:key: south_london_maudsley_nhs_foundation_trust
+          selection:label: South London & Maudsley NHS Foundation Trust
+        /selection:listitem[70]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_and_sussex_healthcare
+          selection:label: Surrey and Sussex Healthcare
+        /selection:listitem[71]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_and_sussex_healthcare_nhs_trust
+          selection:label: Surrey and Sussex Healthcare NHS Trust
+        /selection:listitem[72]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_and_sussex_library
+          selection:label: Surrey and Sussex Library
+        /selection:listitem[73]:
+          jcr:primaryType: selection:listitem
+          selection:key: surrey_sussex_healthcare
+          selection:label: Surrey & Sussex Healthcare
+        /selection:listitem[74]:
+          jcr:primaryType: selection:listitem
+          selection:key: swansea_bay_university_healthboard
+          selection:label: Swansea Bay University Healthboard
+        /selection:listitem[75]:
+          jcr:primaryType: selection:listitem
+          selection:key: the_royal_wolverhampton_nhs_trust_library_and_knowledge_service
+          selection:label: The Royal Wolverhampton NHS Trust Library and Knowledge
+            Service
+        /selection:listitem[76]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_birmingham_uhb_library_and_knowledge_service
+          selection:label: University Hospitals Birmingham (UHB) Library and Knowledge
+            Service
+        /selection:listitem[77]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_bristol_and_weston_nhs
+          selection:label: University Hospitals Bristol and Weston NHS
+        /selection:listitem[78]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_bristol_and_weston_nhs_foundation_trust
+          selection:label: University Hospitals Bristol and Weston NHS Foundation
+            Trust
+        /selection:listitem[79]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_leicester
+          selection:label: University Hospitals Leicester
+        /selection:listitem[80]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_and_burton
+          selection:label: University Hospitals of Derby and Burton
+        /selection:listitem[81]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_and_burton_nhs
+          selection:label: University Hospitals of Derby and Burton NHS
+        /selection:listitem[82]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_and_burton_nhs_foundation_trust
+          selection:label: University Hospitals of Derby and Burton NHS Foundation
+            Trust
+        /selection:listitem[83]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_burton
+          selection:label: University Hospitals of Derby & Burton
+        /selection:listitem[84]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_derby_burton_nhs_foundation_trust
+          selection:label: University Hospitals of Derby & Burton NHS Foundation Trust
+        /selection:listitem[85]:
+          jcr:primaryType: selection:listitem
+          selection:key: university_hospitals_of_leicester_nhs_trust_libraries
+          selection:label: University Hospitals of Leicester NHS Trust Libraries
+        /selection:listitem[86]:
+          jcr:primaryType: selection:listitem
+          selection:key: warrington_and_halton_hospitals_nhs
+          selection:label: Warrington and Halton Hospitals NHS
+        /selection:listitem[87]:
+          jcr:primaryType: selection:listitem
+          selection:key: west_middlesex_university_hospital
+          selection:label: West Middlesex University Hospital
+        /selection:listitem[88]:
+          jcr:primaryType: selection:listitem
+          selection:key: west_suffolk_nhs
+          selection:label: West Suffolk NHS
+        /selection:listitem[89]:
+          jcr:primaryType: selection:listitem
+          selection:key: frimley_park_hospital
+          selection:label: Frimley Park Hospital
+        /selection:listitem[90]:
+          jcr:primaryType: selection:listitem
+          selection:key: east_surrey_hospital
+          selection:label: East Surrey Hospital
+        /selection:listitem[91]:
+          jcr:primaryType: selection:listitem
+          selection:key: royal_sussex_county_hospital
+          selection:label: Royal Sussex County Hospital
+        /selection:listitem[92]:
+          jcr:primaryType: selection:listitem
+          selection:key: glenfield_hospital_leicester_royal_infirmary
+          selection:label: Glenfield Hospital Leicester Royal Infirmary
+        /selection:listitem[93]:
+          jcr:primaryType: selection:listitem
+          selection:key: heartlands_hospital
+          selection:label: Heartlands Hospital
+    /searchbanktopics:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: c5f35bdd-cc78-494c-a702-46ed43f2234d
+      hippo:name: SearchBankTopics
+      /searchbanktopics:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: eca5a19c-4eb1-4e66-95c9-6deb9e8dcbb5
+        hippo:availability: [live, preview]
+        hippotranslation:id: b2081163-0fb6-40aa-bd71-32a17099da2e
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: 3d_printing
+          selection:label: 3D printing
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: abuse
+          selection:label: Abuse
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: acute_respiratory_distress_syndrome
+          selection:label: Acute respiratory distress syndrome
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: admission
+          selection:label: Admission
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: adverse_experience_children
+          selection:label: Adverse experience children
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: aerosol_generating_procedures
+          selection:label: Aerosol generating procedures
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: aged
+          selection:label: Aged
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: airway
+          selection:label: Airway
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: ambulances
+          selection:label: Ambulances
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: anaesthesia
+          selection:label: Anaesthesia
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: angiotensin-converting_enzyme_2
+          selection:label: Angiotensin-converting enzyme 2
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: angiotensin-converting_enzyme_inhibitors
+          selection:label: Angiotensin-converting enzyme inhibitors
+        /selection:listitem[13]:
+          jcr:primaryType: selection:listitem
+          selection:key: antibodies
+          selection:label: Antibodies
+        /selection:listitem[14]:
+          jcr:primaryType: selection:listitem
+          selection:key: asthma
+          selection:label: Asthma
+        /selection:listitem[15]:
+          jcr:primaryType: selection:listitem
+          selection:key: atrial_fibrillation
+          selection:label: Atrial fibrillation
+        /selection:listitem[16]:
+          jcr:primaryType: selection:listitem
+          selection:key: autism
+          selection:label: Autism
+        /selection:listitem[17]:
+          jcr:primaryType: selection:listitem
+          selection:key: bame
+          selection:label: BAME
+        /selection:listitem[18]:
+          jcr:primaryType: selection:listitem
+          selection:key: birth
+          selection:label: Birth
+        /selection:listitem[19]:
+          jcr:primaryType: selection:listitem
+          selection:key: blood
+          selection:label: Blood
+        /selection:listitem[20]:
+          jcr:primaryType: selection:listitem
+          selection:key: body_fluids
+          selection:label: Body Fluids
+        /selection:listitem[21]:
+          jcr:primaryType: selection:listitem
+          selection:key: bone_marrow
+          selection:label: Bone marrow
+        /selection:listitem[22]:
+          jcr:primaryType: selection:listitem
+          selection:key: business_continuity
+          selection:label: Business continuity
+        /selection:listitem[23]:
+          jcr:primaryType: selection:listitem
+          selection:key: cancer
+          selection:label: Cancer
+        /selection:listitem[24]:
+          jcr:primaryType: selection:listitem
+          selection:key: cardiac
+          selection:label: Cardiac
+        /selection:listitem[25]:
+          jcr:primaryType: selection:listitem
+          selection:key: cardiology
+          selection:label: Cardiology
+        /selection:listitem[26]:
+          jcr:primaryType: selection:listitem
+          selection:key: care
+          selection:label: Care
+        /selection:listitem[27]:
+          jcr:primaryType: selection:listitem
+          selection:key: chaplaincy
+          selection:label: Chaplaincy
+        /selection:listitem[28]:
+          jcr:primaryType: selection:listitem
+          selection:key: children
+          selection:label: Children
+        /selection:listitem[29]:
+          jcr:primaryType: selection:listitem
+          selection:key: circulation
+          selection:label: Circulation
+        /selection:listitem[30]:
+          jcr:primaryType: selection:listitem
+          selection:key: cleaning
+          selection:label: Cleaning
+        /selection:listitem[31]:
+          jcr:primaryType: selection:listitem
+          selection:key: clinical_training
+          selection:label: Clinical training
+        /selection:listitem[32]:
+          jcr:primaryType: selection:listitem
+          selection:key: communication
+          selection:label: Communication
+        /selection:listitem[33]:
+          jcr:primaryType: selection:listitem
+          selection:key: complications
+          selection:label: Complications
+        /selection:listitem[34]:
+          jcr:primaryType: selection:listitem
+          selection:key: consultations
+          selection:label: Consultations
+        /selection:listitem[35]:
+          jcr:primaryType: selection:listitem
+          selection:key: cortisone
+          selection:label: Cortisone
+        /selection:listitem[36]:
+          jcr:primaryType: selection:listitem
+          selection:key: cpap
+          selection:label: cpap
+        /selection:listitem[37]:
+          jcr:primaryType: selection:listitem
+          selection:key: cpe
+          selection:label: CPE
+        /selection:listitem[38]:
+          jcr:primaryType: selection:listitem
+          selection:key: cranial_nerves
+          selection:label: Cranial Nerves
+        /selection:listitem[39]:
+          jcr:primaryType: selection:listitem
+          selection:key: crises
+          selection:label: Crises
+        /selection:listitem[40]:
+          jcr:primaryType: selection:listitem
+          selection:key: critical_care
+          selection:label: Critical care
+        /selection:listitem[41]:
+          jcr:primaryType: selection:listitem
+          selection:key: ct_scan
+          selection:label: CT scan
+        /selection:listitem[42]:
+          jcr:primaryType: selection:listitem
+          selection:key: cvd
+          selection:label: CVD
+        /selection:listitem[43]:
+          jcr:primaryType: selection:listitem
+          selection:key: debriefing
+          selection:label: Debriefing
+        /selection:listitem[44]:
+          jcr:primaryType: selection:listitem
+          selection:key: dentistry
+          selection:label: Dentistry
+        /selection:listitem[45]:
+          jcr:primaryType: selection:listitem
+          selection:key: dermatology
+          selection:label: Dermatology
+        /selection:listitem[46]:
+          jcr:primaryType: selection:listitem
+          selection:key: diagnosis
+          selection:label: Diagnosis
+        /selection:listitem[47]:
+          jcr:primaryType: selection:listitem
+          selection:key: diet
+          selection:label: diet
+        /selection:listitem[48]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital_divide
+          selection:label: Digital divide
+        /selection:listitem[49]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital_inclusion
+          selection:label: Digital inclusion
+        /selection:listitem[50]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital_inequality
+          selection:label: Digital inequality
+        /selection:listitem[51]:
+          jcr:primaryType: selection:listitem
+          selection:key: disinfection
+          selection:label: Disinfection
+        /selection:listitem[52]:
+          jcr:primaryType: selection:listitem
+          selection:key: doctors
+          selection:label: Doctors
+        /selection:listitem[53]:
+          jcr:primaryType: selection:listitem
+          selection:key: domicilary_care
+          selection:label: Domicilary care
+        /selection:listitem[54]:
+          jcr:primaryType: selection:listitem
+          selection:key: drug_users
+          selection:label: Drug Users
+        /selection:listitem[55]:
+          jcr:primaryType: selection:listitem
+          selection:key: dvt
+          selection:label: DVT
+        /selection:listitem[56]:
+          jcr:primaryType: selection:listitem
+          selection:key: dysphagia
+          selection:label: Dysphagia
+        /selection:listitem[57]:
+          jcr:primaryType: selection:listitem
+          selection:key: e-cigarettes
+          selection:label: E-cigarettes
+        /selection:listitem[58]:
+          jcr:primaryType: selection:listitem
+          selection:key: early_warning_score
+          selection:label: Early Warning Score
+        /selection:listitem[59]:
+          jcr:primaryType: selection:listitem
+          selection:key: ecmo
+          selection:label: ECMO
+        /selection:listitem[60]:
+          jcr:primaryType: selection:listitem
+          selection:key: ectopic_pregnancy
+          selection:label: Ectopic pregnancy
+        /selection:listitem[61]:
+          jcr:primaryType: selection:listitem
+          selection:key: education
+          selection:label: Education
+        /selection:listitem[62]:
+          jcr:primaryType: selection:listitem
+          selection:key: embolism
+          selection:label: Embolism
+        /selection:listitem[63]:
+          jcr:primaryType: selection:listitem
+          selection:key: emergency
+          selection:label: Emergency
+        /selection:listitem[64]:
+          jcr:primaryType: selection:listitem
+          selection:key: emergency_department
+          selection:label: Emergency department
+        /selection:listitem[65]:
+          jcr:primaryType: selection:listitem
+          selection:key: end_of_life
+          selection:label: End of Life
+        /selection:listitem[66]:
+          jcr:primaryType: selection:listitem
+          selection:key: enteritis
+          selection:label: Enteritis
+        /selection:listitem[67]:
+          jcr:primaryType: selection:listitem
+          selection:key: epidemiology
+          selection:label: Epidemiology
+        /selection:listitem[68]:
+          jcr:primaryType: selection:listitem
+          selection:key: epidermolysis_bullosa
+          selection:label: Epidermolysis bullosa
+        /selection:listitem[69]:
+          jcr:primaryType: selection:listitem
+          selection:key: equipment_re-use
+          selection:label: Equipment re-use
+        /selection:listitem[70]:
+          jcr:primaryType: selection:listitem
+          selection:key: equipment_reuse
+          selection:label: Equipment reuse
+        /selection:listitem[71]:
+          jcr:primaryType: selection:listitem
+          selection:key: ethics
+          selection:label: Ethics
+        /selection:listitem[72]:
+          jcr:primaryType: selection:listitem
+          selection:key: exercise
+          selection:label: Exercise
+        /selection:listitem[73]:
+          jcr:primaryType: selection:listitem
+          selection:key: exit_strategy
+          selection:label: Exit Strategy
+        /selection:listitem[74]:
+          jcr:primaryType: selection:listitem
+          selection:key: extubation
+          selection:label: Extubation
+        /selection:listitem[75]:
+          jcr:primaryType: selection:listitem
+          selection:key: eye
+          selection:label: Eye
+        /selection:listitem[76]:
+          jcr:primaryType: selection:listitem
+          selection:key: falls
+          selection:label: Falls
+        /selection:listitem[77]:
+          jcr:primaryType: selection:listitem
+          selection:key: family
+          selection:label: Family
+        /selection:listitem[78]:
+          jcr:primaryType: selection:listitem
+          selection:key: financial_advice
+          selection:label: Financial advice
+        /selection:listitem[79]:
+          jcr:primaryType: selection:listitem
+          selection:key: food_parcels
+          selection:label: food parcels
+        /selection:listitem[80]:
+          jcr:primaryType: selection:listitem
+          selection:key: fractures
+          selection:label: Fractures
+        /selection:listitem[81]:
+          jcr:primaryType: selection:listitem
+          selection:key: frailty
+          selection:label: Frailty
+        /selection:listitem[82]:
+          jcr:primaryType: selection:listitem
+          selection:key: g6pd_deficiency
+          selection:label: G6PD deficiency
+        /selection:listitem[83]:
+          jcr:primaryType: selection:listitem
+          selection:key: general_practice
+          selection:label: General practice
+        /selection:listitem[84]:
+          jcr:primaryType: selection:listitem
+          selection:key: gloves
+          selection:label: Gloves
+        /selection:listitem[85]:
+          jcr:primaryType: selection:listitem
+          selection:key: grief
+          selection:label: Grief
+        /selection:listitem[86]:
+          jcr:primaryType: selection:listitem
+          selection:key: haematology
+          selection:label: Haematology
+        /selection:listitem[87]:
+          jcr:primaryType: selection:listitem
+          selection:key: hand_washing
+          selection:label: Hand washing
+        /selection:listitem[88]:
+          jcr:primaryType: selection:listitem
+          selection:key: handwashing
+          selection:label: Handwashing
+        /selection:listitem[89]:
+          jcr:primaryType: selection:listitem
+          selection:key: health_care_delivery
+          selection:label: Health care delivery
+        /selection:listitem[90]:
+          jcr:primaryType: selection:listitem
+          selection:key: healthcare_disparities
+          selection:label: Healthcare Disparities
+        /selection:listitem[91]:
+          jcr:primaryType: selection:listitem
+          selection:key: healthcare_staff
+          selection:label: healthcare staff
+        /selection:listitem[92]:
+          jcr:primaryType: selection:listitem
+          selection:key: heart
+          selection:label: Heart
+        /selection:listitem[93]:
+          jcr:primaryType: selection:listitem
+          selection:key: hydroxychloroquine_azithromycin_outcomes
+          selection:label: Hydroxychloroquine Azithromycin Outcomes
+        /selection:listitem[94]:
+          jcr:primaryType: selection:listitem
+          selection:key: hydroxyychloroquine
+          selection:label: Hydroxyychloroquine
+        /selection:listitem[95]:
+          jcr:primaryType: selection:listitem
+          selection:key: hypoxia
+          selection:label: Hypoxia
+        /selection:listitem[96]:
+          jcr:primaryType: selection:listitem
+          selection:key: icu
+          selection:label: ICU
+        /selection:listitem[97]:
+          jcr:primaryType: selection:listitem
+          selection:key: illicit_drugs
+          selection:label: Illicit Drugs
+        /selection:listitem[98]:
+          jcr:primaryType: selection:listitem
+          selection:key: immune_system
+          selection:label: Immune system
+        /selection:listitem[99]:
+          jcr:primaryType: selection:listitem
+          selection:key: impact
+          selection:label: Impact
+        /selection:listitem[100]:
+          jcr:primaryType: selection:listitem
+          selection:key: incubation
+          selection:label: Incubation
+        /selection:listitem[101]:
+          jcr:primaryType: selection:listitem
+          selection:key: infection
+          selection:label: Infection
+        /selection:listitem[102]:
+          jcr:primaryType: selection:listitem
+          selection:key: infection_control
+          selection:label: Infection Control
+        /selection:listitem[103]:
+          jcr:primaryType: selection:listitem
+          selection:key: infectious
+          selection:label: Infectious
+        /selection:listitem[104]:
+          jcr:primaryType: selection:listitem
+          selection:key: inflammation
+          selection:label: Inflammation
+        /selection:listitem[105]:
+          jcr:primaryType: selection:listitem
+          selection:key: inpatients
+          selection:label: Inpatients
+        /selection:listitem[106]:
+          jcr:primaryType: selection:listitem
+          selection:key: ipap
+          selection:label: ipap
+        /selection:listitem[107]:
+          jcr:primaryType: selection:listitem
+          selection:key: isolation
+          selection:label: Isolation
+        /selection:listitem[108]:
+          jcr:primaryType: selection:listitem
+          selection:key: it_equipment
+          selection:label: IT Equipment
+        /selection:listitem[109]:
+          jcr:primaryType: selection:listitem
+          selection:key: ivermectin
+          selection:label: Ivermectin
+        /selection:listitem[110]:
+          jcr:primaryType: selection:listitem
+          selection:key: kawasaki_disease
+          selection:label: Kawasaki disease
+        /selection:listitem[111]:
+          jcr:primaryType: selection:listitem
+          selection:key: kidney
+          selection:label: Kidney
+        /selection:listitem[112]:
+          jcr:primaryType: selection:listitem
+          selection:key: knowledge_capture
+          selection:label: Knowledge capture
+        /selection:listitem[113]:
+          jcr:primaryType: selection:listitem
+          selection:key: laboratory
+          selection:label: Laboratory
+        /selection:listitem[114]:
+          jcr:primaryType: selection:listitem
+          selection:key: learning
+          selection:label: Learning
+        /selection:listitem[115]:
+          jcr:primaryType: selection:listitem
+          selection:key: learning_disabilities
+          selection:label: Learning disabilities
+        /selection:listitem[116]:
+          jcr:primaryType: selection:listitem
+          selection:key: lessons_learned
+          selection:label: Lessons learned
+        /selection:listitem[117]:
+          jcr:primaryType: selection:listitem
+          selection:key: lockdown
+          selection:label: Lockdown
+        /selection:listitem[118]:
+          jcr:primaryType: selection:listitem
+          selection:key: long_covid
+          selection:label: Long COVID
+        /selection:listitem[119]:
+          jcr:primaryType: selection:listitem
+          selection:key: management
+          selection:label: Management
+        /selection:listitem[120]:
+          jcr:primaryType: selection:listitem
+          selection:key: masks
+          selection:label: Masks
+        /selection:listitem[121]:
+          jcr:primaryType: selection:listitem
+          selection:key: maternity
+          selection:label: Maternity
+        /selection:listitem[122]:
+          jcr:primaryType: selection:listitem
+          selection:key: mental_disorders
+          selection:label: Mental Disorders
+        /selection:listitem[123]:
+          jcr:primaryType: selection:listitem
+          selection:key: mental_health
+          selection:label: mental health
+        /selection:listitem[124]:
+          jcr:primaryType: selection:listitem
+          selection:key: mers
+          selection:label: MERS
+        /selection:listitem[125]:
+          jcr:primaryType: selection:listitem
+          selection:key: military
+          selection:label: Military
+        /selection:listitem[126]:
+          jcr:primaryType: selection:listitem
+          selection:key: minority_groups
+          selection:label: Minority Groups
+        /selection:listitem[127]:
+          jcr:primaryType: selection:listitem
+          selection:key: monitoring
+          selection:label: Monitoring
+        /selection:listitem[128]:
+          jcr:primaryType: selection:listitem
+          selection:key: morbidity
+          selection:label: morbidity
+        /selection:listitem[129]:
+          jcr:primaryType: selection:listitem
+          selection:key: mortality
+          selection:label: Mortality
+        /selection:listitem[130]:
+          jcr:primaryType: selection:listitem
+          selection:key: music
+          selection:label: Music
+        /selection:listitem[131]:
+          jcr:primaryType: selection:listitem
+          selection:key: nasopharyngeal
+          selection:label: nasopharyngeal
+        /selection:listitem[132]:
+          jcr:primaryType: selection:listitem
+          selection:key: nephrology
+          selection:label: Nephrology
+        /selection:listitem[133]:
+          jcr:primaryType: selection:listitem
+          selection:key: neurological_manifestations
+          selection:label: Neurological manifestations
+        /selection:listitem[134]:
+          jcr:primaryType: selection:listitem
+          selection:key: noninvasive_ventilation
+          selection:label: Noninvasive ventilation
+        /selection:listitem[135]:
+          jcr:primaryType: selection:listitem
+          selection:key: nutrition
+          selection:label: Nutrition
+        /selection:listitem[136]:
+          jcr:primaryType: selection:listitem
+          selection:key: occupational_health
+          selection:label: Occupational health
+        /selection:listitem[137]:
+          jcr:primaryType: selection:listitem
+          selection:key: osteoporosis
+          selection:label: Osteoporosis
+        /selection:listitem[138]:
+          jcr:primaryType: selection:listitem
+          selection:key: oulmonary_arteries
+          selection:label: Oulmonary arteries
+        /selection:listitem[139]:
+          jcr:primaryType: selection:listitem
+          selection:key: outcomes
+          selection:label: Outcomes
+        /selection:listitem[140]:
+          jcr:primaryType: selection:listitem
+          selection:key: oxygen
+          selection:label: Oxygen
+        /selection:listitem[141]:
+          jcr:primaryType: selection:listitem
+          selection:key: paediatric_inflammatory_multisystem_syndrome
+          selection:label: Paediatric inflammatory multisystem Syndrome
+        /selection:listitem[142]:
+          jcr:primaryType: selection:listitem
+          selection:key: palliative_care
+          selection:label: Palliative care
+        /selection:listitem[143]:
+          jcr:primaryType: selection:listitem
+          selection:key: paper
+          selection:label: Paper
+        /selection:listitem[144]:
+          jcr:primaryType: selection:listitem
+          selection:key: patient_assessment
+          selection:label: Patient assessment
+        /selection:listitem[145]:
+          jcr:primaryType: selection:listitem
+          selection:key: patient_referral
+          selection:label: Patient referral
+        /selection:listitem[146]:
+          jcr:primaryType: selection:listitem
+          selection:key: patient_transport
+          selection:label: Patient transport
+        /selection:listitem[147]:
+          jcr:primaryType: selection:listitem
+          selection:key: peripheral_nerve
+          selection:label: Peripheral nerve
+        /selection:listitem[148]:
+          jcr:primaryType: selection:listitem
+          selection:key: peripheral_neuropathy
+          selection:label: Peripheral neuropathy
+        /selection:listitem[149]:
+          jcr:primaryType: selection:listitem
+          selection:key: physiotherapy
+          selection:label: Physiotherapy
+        /selection:listitem[150]:
+          jcr:primaryType: selection:listitem
+          selection:key: position
+          selection:label: Position
+        /selection:listitem[151]:
+          jcr:primaryType: selection:listitem
+          selection:key: post-covid
+          selection:label: Post-COVID
+        /selection:listitem[152]:
+          jcr:primaryType: selection:listitem
+          selection:key: post-pandemic
+          selection:label: Post-pandemic
+        /selection:listitem[153]:
+          jcr:primaryType: selection:listitem
+          selection:key: post-traumatic_stress
+          selection:label: Post-traumatic stress
+        /selection:listitem[154]:
+          jcr:primaryType: selection:listitem
+          selection:key: ppe
+          selection:label: PPE
+        /selection:listitem[155]:
+          jcr:primaryType: selection:listitem
+          selection:key: prediction
+          selection:label: Prediction
+        /selection:listitem[156]:
+          jcr:primaryType: selection:listitem
+          selection:key: pregnancy
+          selection:label: Pregnancy
+        /selection:listitem[157]:
+          jcr:primaryType: selection:listitem
+          selection:key: prehabilitation
+          selection:label: Prehabilitation
+        /selection:listitem[158]:
+          jcr:primaryType: selection:listitem
+          selection:key: prevention
+          selection:label: Prevention
+        /selection:listitem[159]:
+          jcr:primaryType: selection:listitem
+          selection:key: primary_care
+          selection:label: Primary care
+        /selection:listitem[160]:
+          jcr:primaryType: selection:listitem
+          selection:key: prioritisation
+          selection:label: Prioritisation
+        /selection:listitem[161]:
+          jcr:primaryType: selection:listitem
+          selection:key: prognosis
+          selection:label: Prognosis
+        /selection:listitem[162]:
+          jcr:primaryType: selection:listitem
+          selection:key: prone
+          selection:label: Prone
+        /selection:listitem[163]:
+          jcr:primaryType: selection:listitem
+          selection:key: proned
+          selection:label: Proned
+        /selection:listitem[164]:
+          jcr:primaryType: selection:listitem
+          selection:key: proning
+          selection:label: Proning
+        /selection:listitem[165]:
+          jcr:primaryType: selection:listitem
+          selection:key: psychiatry
+          selection:label: Psychiatry
+        /selection:listitem[166]:
+          jcr:primaryType: selection:listitem
+          selection:key: psychology
+          selection:label: psychology
+        /selection:listitem[167]:
+          jcr:primaryType: selection:listitem
+          selection:key: public_health
+          selection:label: Public health
+        /selection:listitem[168]:
+          jcr:primaryType: selection:listitem
+          selection:key: pulmonary_arteries
+          selection:label: Pulmonary Arteries
+        /selection:listitem[169]:
+          jcr:primaryType: selection:listitem
+          selection:key: pulmonary_veins
+          selection:label: Pulmonary veins
+        /selection:listitem[170]:
+          jcr:primaryType: selection:listitem
+          selection:key: quality_improvement
+          selection:label: Quality improvement
+        /selection:listitem[171]:
+          jcr:primaryType: selection:listitem
+          selection:key: quarantine
+          selection:label: Quarantine
+        /selection:listitem[172]:
+          jcr:primaryType: selection:listitem
+          selection:key: records
+          selection:label: Records
+        /selection:listitem[173]:
+          jcr:primaryType: selection:listitem
+          selection:key: recovery
+          selection:label: Recovery
+        /selection:listitem[174]:
+          jcr:primaryType: selection:listitem
+          selection:key: recurrence
+          selection:label: Recurrence
+        /selection:listitem[175]:
+          jcr:primaryType: selection:listitem
+          selection:key: rehabilitation
+          selection:label: Rehabilitation
+        /selection:listitem[176]:
+          jcr:primaryType: selection:listitem
+          selection:key: renal
+          selection:label: Renal
+        /selection:listitem[177]:
+          jcr:primaryType: selection:listitem
+          selection:key: resilience
+          selection:label: resilience
+        /selection:listitem[178]:
+          jcr:primaryType: selection:listitem
+          selection:key: respiratory
+          selection:label: Respiratory
+        /selection:listitem[179]:
+          jcr:primaryType: selection:listitem
+          selection:key: reverse_transcriptase_polymerase_chain_reaction
+          selection:label: Reverse transcriptase polymerase chain reaction
+        /selection:listitem[180]:
+          jcr:primaryType: selection:listitem
+          selection:key: risk
+          selection:label: Risk
+        /selection:listitem[181]:
+          jcr:primaryType: selection:listitem
+          selection:key: risk_factors
+          selection:label: risk factors
+        /selection:listitem[182]:
+          jcr:primaryType: selection:listitem
+          selection:key: risk_score
+          selection:label: Risk Score
+        /selection:listitem[183]:
+          jcr:primaryType: selection:listitem
+          selection:key: sars
+          selection:label: SARS
+        /selection:listitem[184]:
+          jcr:primaryType: selection:listitem
+          selection:key: schools
+          selection:label: Schools
+        /selection:listitem[185]:
+          jcr:primaryType: selection:listitem
+          selection:key: screening
+          selection:label: Screening
+        /selection:listitem[186]:
+          jcr:primaryType: selection:listitem
+          selection:key: secondary_care
+          selection:label: Secondary care
+        /selection:listitem[187]:
+          jcr:primaryType: selection:listitem
+          selection:key: sense_of_smell
+          selection:label: Sense of smell
+        /selection:listitem[188]:
+          jcr:primaryType: selection:listitem
+          selection:key: service_provision
+          selection:label: Service provision
+        /selection:listitem[189]:
+          jcr:primaryType: selection:listitem
+          selection:key: simulation
+          selection:label: Simulation
+        /selection:listitem[190]:
+          jcr:primaryType: selection:listitem
+          selection:key: skin
+          selection:label: Skin
+        /selection:listitem[191]:
+          jcr:primaryType: selection:listitem
+          selection:key: smoking
+          selection:label: Smoking
+        /selection:listitem[192]:
+          jcr:primaryType: selection:listitem
+          selection:key: social_distancing
+          selection:label: social Distancing
+        /selection:listitem[193]:
+          jcr:primaryType: selection:listitem
+          selection:key: speech
+          selection:label: Speech
+        /selection:listitem[194]:
+          jcr:primaryType: selection:listitem
+          selection:key: spirometry
+          selection:label: Spirometry
+        /selection:listitem[195]:
+          jcr:primaryType: selection:listitem
+          selection:key: squamous_cell_carcinoma
+          selection:label: Squamous cell carcinoma
+        /selection:listitem[196]:
+          jcr:primaryType: selection:listitem
+          selection:key: staff_morale
+          selection:label: Staff morale
+        /selection:listitem[197]:
+          jcr:primaryType: selection:listitem
+          selection:key: statistics
+          selection:label: Statistics
+        /selection:listitem[198]:
+          jcr:primaryType: selection:listitem
+          selection:key: students
+          selection:label: students
+        /selection:listitem[199]:
+          jcr:primaryType: selection:listitem
+          selection:key: substance-related_disorders
+          selection:label: Substance-Related Disorders
+        /selection:listitem[200]:
+          jcr:primaryType: selection:listitem
+          selection:key: substance_related_disorders
+          selection:label: Substance related disorders
+        /selection:listitem[201]:
+          jcr:primaryType: selection:listitem
+          selection:key: surfaces
+          selection:label: Surfaces
+        /selection:listitem[202]:
+          jcr:primaryType: selection:listitem
+          selection:key: surgery
+          selection:label: Surgery
+        /selection:listitem[203]:
+          jcr:primaryType: selection:listitem
+          selection:key: surveillance
+          selection:label: Surveillance
+        /selection:listitem[204]:
+          jcr:primaryType: selection:listitem
+          selection:key: swab
+          selection:label: Swab
+        /selection:listitem[205]:
+          jcr:primaryType: selection:listitem
+          selection:key: symptom_control
+          selection:label: Symptom control
+        /selection:listitem[206]:
+          jcr:primaryType: selection:listitem
+          selection:key: technology
+          selection:label: Technology
+        /selection:listitem[207]:
+          jcr:primaryType: selection:listitem
+          selection:key: telehealth
+          selection:label: Telehealth
+        /selection:listitem[208]:
+          jcr:primaryType: selection:listitem
+          selection:key: test_accuracy
+          selection:label: Test accuracy
+        /selection:listitem[209]:
+          jcr:primaryType: selection:listitem
+          selection:key: testing
+          selection:label: Testing
+        /selection:listitem[210]:
+          jcr:primaryType: selection:listitem
+          selection:key: tests
+          selection:label: Tests
+        /selection:listitem[211]:
+          jcr:primaryType: selection:listitem
+          selection:key: theatres
+          selection:label: Theatres
+        /selection:listitem[212]:
+          jcr:primaryType: selection:listitem
+          selection:key: therapy
+          selection:label: Therapy
+        /selection:listitem[213]:
+          jcr:primaryType: selection:listitem
+          selection:key: thrombosis
+          selection:label: Thrombosis
+        /selection:listitem[214]:
+          jcr:primaryType: selection:listitem
+          selection:key: tracing
+          selection:label: Tracing
+        /selection:listitem[215]:
+          jcr:primaryType: selection:listitem
+          selection:key: transmission
+          selection:label: Transmission
+        /selection:listitem[216]:
+          jcr:primaryType: selection:listitem
+          selection:key: trauma_care
+          selection:label: Trauma care
+        /selection:listitem[217]:
+          jcr:primaryType: selection:listitem
+          selection:key: treatment
+          selection:label: Treatment
+        /selection:listitem[218]:
+          jcr:primaryType: selection:listitem
+          selection:key: treatment_withdrawal
+          selection:label: Treatment withdrawal
+        /selection:listitem[219]:
+          jcr:primaryType: selection:listitem
+          selection:key: trends
+          selection:label: Trends
+        /selection:listitem[220]:
+          jcr:primaryType: selection:listitem
+          selection:key: unintended_consequences
+          selection:label: Unintended consequences
+        /selection:listitem[221]:
+          jcr:primaryType: selection:listitem
+          selection:key: vaccination
+          selection:label: Vaccination
+        /selection:listitem[222]:
+          jcr:primaryType: selection:listitem
+          selection:key: vaping
+          selection:label: Vaping
+        /selection:listitem[223]:
+          jcr:primaryType: selection:listitem
+          selection:key: ventilation
+          selection:label: Ventilation
+        /selection:listitem[224]:
+          jcr:primaryType: selection:listitem
+          selection:key: video_consultation
+          selection:label: Video consultation
+        /selection:listitem[225]:
+          jcr:primaryType: selection:listitem
+          selection:key: violence
+          selection:label: Violence
+        /selection:listitem[226]:
+          jcr:primaryType: selection:listitem
+          selection:key: virtual_clinics
+          selection:label: Virtual clinics
+        /selection:listitem[227]:
+          jcr:primaryType: selection:listitem
+          selection:key: virus_survival
+          selection:label: Virus survival
+        /selection:listitem[228]:
+          jcr:primaryType: selection:listitem
+          selection:key: visiting
+          selection:label: Visiting
+        /selection:listitem[229]:
+          jcr:primaryType: selection:listitem
+          selection:key: vitamin_c
+          selection:label: Vitamin C
+        /selection:listitem[230]:
+          jcr:primaryType: selection:listitem
+          selection:key: vitamin_d
+          selection:label: Vitamin D
+        /selection:listitem[231]:
+          jcr:primaryType: selection:listitem
+          selection:key: ward_rounds
+          selection:label: Ward rounds
+        /selection:listitem[232]:
+          jcr:primaryType: selection:listitem
+          selection:key: ward_setup
+          selection:label: Ward setup
+        /selection:listitem[233]:
+          jcr:primaryType: selection:listitem
+          selection:key: weaning
+          selection:label: Weaning
+        /selection:listitem[234]:
+          jcr:primaryType: selection:listitem
+          selection:key: well-being
+          selection:label: Well-Being
+        /selection:listitem[235]:
+          jcr:primaryType: selection:listitem
+          selection:key: wellbeing
+          selection:label: Wellbeing
+  /documenttypes:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: ad48eab4-6db7-4afd-95f1-30562f5419f3
+    hippo:name: DocumentTypes
+    /documenttypes:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 7ef28b10-a14f-4c94-9ab4-235fc181fd29
+      hippo:availability: [live, preview]
+      hippotranslation:id: 835dfad2-9ac5-43b9-86fa-c5ed7d317f87
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:bulletin
+        selection:label: Bulletin
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:guidance
+        selection:label: Standard Content Page
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:landingPage
+        selection:label: Landing Page
+      /selection:listitem[4]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:MiniHub
+        selection:label: MiniHub
+      /selection:listitem[5]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:blogPost
+        selection:label: BlogPost
+      /selection:listitem[6]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:event
+        selection:label: Event
+      /selection:listitem[7]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:listingPage
+        selection:label: ListingPage
+      /selection:listitem[8]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:caseStudy
+        selection:label: CaseStudy
+      /selection:listitem[9]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:searchBank
+        selection:label: SearchBank
+      /selection:listitem[10]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee:news
+        selection:label: News
+  /contactcarddisplays:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: d2711e0f-152d-44a1-822e-ac2837901a8b
+    hippo:name: ContactCardDisplays
+    /contactcarddisplays:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: a1b56d67-db6f-4d4d-b14d-05bad7a17a1c
+      hippo:availability: [live, preview]
+      hippotranslation:id: 4d3b0104-e55f-4b7e-b769-cc1488f45713
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: name
+        selection:label: Name
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: departmentName
+        selection:label: Department Name
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: jobTitle
+        selection:label: Job Title
+      /selection:listitem[4]:
+        jcr:primaryType: selection:listitem
+        selection:key: phoneNumber
+        selection:label: Phone Number
+      /selection:listitem[5]:
+        jcr:primaryType: selection:listitem
+        selection:key: email
+        selection:label: Email
+      /selection:listitem[6]:
+        jcr:primaryType: selection:listitem
+        selection:key: address
+        selection:label: Address
+  /contactdisplays:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 60638450-7029-407b-bfbb-859cca9de876
+    hippo:name: ContactDisplays
+    /contactdisplays:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 09f122b4-0dd7-46a3-abd4-d06d803adcad
+      hippo:availability: [live, preview]
+      hippotranslation:id: d171832b-6afb-41e6-8923-80f16803eb17
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: name
+        selection:label: Name
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: image
+        selection:label: Image
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: departmentName
+        selection:label: Department Name
+      /selection:listitem[4]:
+        jcr:primaryType: selection:listitem
+        selection:key: jobTitle
+        selection:label: Job Title
+      /selection:listitem[5]:
+        jcr:primaryType: selection:listitem
+        selection:key: email
+        selection:label: Email
+      /selection:listitem[6]:
+        jcr:primaryType: selection:listitem
+        selection:key: address
+        selection:label: Address
+      /selection:listitem[7]:
+        jcr:primaryType: selection:listitem
+        selection:key: phoneNumber
+        selection:label: Phone Number
+  /dental:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 1c80f776-183a-4936-9856-48f6cba93893
+    hippostd:foldertype: [new-resource-bundle, new-untranslated-folder]
+  /digital-transformation:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 80c0da5d-9b16-459d-bc5f-e7b61ab3b010
+    hippostd:foldertype: [new-resource-bundle, new-untranslated-folder]
+    /newscategories:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 062726f5-c798-4d71-9da4-20e2a5a1fcb4
+      hippo:name: NewsCategories
+      /newscategories:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: f810a045-2713-4337-a7cf-a22be987036c
+        hippo:availability: [live, preview]
+        hippotranslation:id: cf09ab49-5e6d-468c-92ec-0540cd4f966c
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: learning-and-development
+          selection:label: Learning and development
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: school-leavers
+          selection:label: School leavers
+        /selection:listitem[3]:
+          jcr:primaryType: selection:listitem
+          selection:key: graduates
+          selection:label: Graduates
+        /selection:listitem[4]:
+          jcr:primaryType: selection:listitem
+          selection:key: blended-learning
+          selection:label: Blended learning
+        /selection:listitem[5]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital-health-leadership
+          selection:label: Digital health leadership
+        /selection:listitem[6]:
+          jcr:primaryType: selection:listitem
+          selection:key: nhs-digital-academy
+          selection:label: NHS Digital Academy
+        /selection:listitem[7]:
+          jcr:primaryType: selection:listitem
+          selection:key: fellowships-and-scholarships
+          selection:label: Fellowships and scholarships
+        /selection:listitem[8]:
+          jcr:primaryType: selection:listitem
+          selection:key: board-development
+          selection:label: Board development
+        /selection:listitem[9]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital-literacy
+          selection:label: Digital literacy
+        /selection:listitem[10]:
+          jcr:primaryType: selection:listitem
+          selection:key: regional-skills-development-networks
+          selection:label: Regional Skills Development Networks
+        /selection:listitem[11]:
+          jcr:primaryType: selection:listitem
+          selection:key: mentoring
+          selection:label: Mentoring
+        /selection:listitem[12]:
+          jcr:primaryType: selection:listitem
+          selection:key: placements
+          selection:label: Placements
+        /selection:listitem[13]:
+          jcr:primaryType: selection:listitem
+          selection:key: professional-networks
+          selection:label: Professional networks
+        /selection:listitem[14]:
+          jcr:primaryType: selection:listitem
+          selection:key: consultations-and-surveys
+          selection:label: Consultations and surveys
+        /selection:listitem[15]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital-roles-and-career-pathways
+          selection:label: Digital roles and career pathways
+        /selection:listitem[16]:
+          jcr:primaryType: selection:listitem
+          selection:key: occupational-frameworks
+          selection:label: Occupational frameworks
+        /selection:listitem[17]:
+          jcr:primaryType: selection:listitem
+          selection:key: digital-capability-frameworks
+          selection:label: Digital capability frameworks
+        /selection:listitem[18]:
+          jcr:primaryType: selection:listitem
+          selection:key: strategic-workforce-planning-and-modelling
+          selection:label: Strategic workforce planning and modelling
+        /selection:listitem[19]:
+          jcr:primaryType: selection:listitem
+          selection:key: industry
+          selection:label: Industry
+        /selection:listitem[20]:
+          jcr:primaryType: selection:listitem
+          selection:key: artificial-intelligence-and-robotics
+          selection:label: Artificial intelligence and robotics
+        /selection:listitem[21]:
+          jcr:primaryType: selection:listitem
+          selection:key: policy-and-strategy
+          selection:label: Policy and strategy
+        /selection:listitem[22]:
+          jcr:primaryType: selection:listitem
+          selection:key: nursing-and-midwifery
+          selection:label: Nursing and midwifery
+        /selection:listitem[23]:
+          jcr:primaryType: selection:listitem
+          selection:key: finance-and-procurement
+          selection:label: Finance and procurement
+        /selection:listitem[24]:
+          jcr:primaryType: selection:listitem
+          selection:key: allied-health-professions-ahps
+          selection:label: Allied Health Professions (AHPs)
+        /selection:listitem[25]:
+          jcr:primaryType: selection:listitem
+          selection:key: psychological-professions
+          selection:label: Psychological professions
+        /selection:listitem[26]:
+          jcr:primaryType: selection:listitem
+          selection:key: clinical-informatics
+          selection:label: Clinical informatics
+        /selection:listitem[27]:
+          jcr:primaryType: selection:listitem
+          selection:key: dental
+          selection:label: Dental
+        /selection:listitem[28]:
+          jcr:primaryType: selection:listitem
+          selection:key: estates-and-facilities
+          selection:label: Estates and facilities
+        /selection:listitem[29]:
+          jcr:primaryType: selection:listitem
+          selection:key: healthcare-science
+          selection:label: Healthcare science
+        /selection:listitem[30]:
+          jcr:primaryType: selection:listitem
+          selection:key: human-resources-od
+          selection:label: Human resources / OD
+        /selection:listitem[31]:
+          jcr:primaryType: selection:listitem
+          selection:key: medical
+          selection:label: Medical
+        /selection:listitem[32]:
+          jcr:primaryType: selection:listitem
+          selection:key: pharmacy
+          selection:label: Pharmacy
+        /selection:listitem[33]:
+          jcr:primaryType: selection:listitem
+          selection:key: social-care
+          selection:label: Social care
+  /navmapregions:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: d3ef092c-030b-4860-aac2-d3209a50bbc5
+    hippo:name: NavMapRegions
+    /navmapregions:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: e23b25b8-3298-4077-8683-a68eac93cd6a
+      hippo:availability: [live, preview]
+      hippotranslation:id: 287f5b08-00be-46ff-b75c-b86a71298745
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-lk
+        selection:label: '[DENTAL] London and Kent, Surrey and Sussex (KSS)'
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-me
+        selection:label: '[DENTAL] Midlands and the East'
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-nenc
+        selection:label: '[DENTAL] North East and North Cumbria'
+      /selection:listitem[4]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-nw
+        selection:label: '[DENTAL] North West'
+      /selection:listitem[5]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-sw
+        selection:label: '[DENTAL] South West'
+      /selection:listitem[6]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-tvw
+        selection:label: '[DENTAL] Thames Valley and Wessex'
+      /selection:listitem[7]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental-yh
+        selection:label: '[DENTAL] Yorkshire and the Humber'
+      /selection:listitem[8]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-east
+        selection:label: '[HIGHER] East of England'
+      /selection:listitem[9]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-lon
+        selection:label: '[HIGHER] London'
+      /selection:listitem[10]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-mid
+        selection:label: '[HIGHER] Midlands'
+      /selection:listitem[11]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-ney
+        selection:label: '[HIGHER] North East and Yorkshire'
+      /selection:listitem[12]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-nw
+        selection:label: '[HIGHER] North West'
+      /selection:listitem[13]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-se
+        selection:label: '[HIGHER] South East'
+      /selection:listitem[14]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher-sw
+        selection:label: '[HIGHER] South West'
+      /selection:listitem[15]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-east
+        selection:label: '[MEDICAL] East of England'
+      /selection:listitem[16]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-eMid
+        selection:label: '[MEDICAL] East Midlands'
+      /selection:listitem[17]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-kss
+        selection:label: '[MEDICAL] Kent, Surrey and Sussex'
+      /selection:listitem[18]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-lon
+        selection:label: '[MEDICAL] London'
+      /selection:listitem[19]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-nenc
+        selection:label: '[MEDICAL] North East and North Cumbria'
+      /selection:listitem[20]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-nw
+        selection:label: '[MEDICAL] North West'
+      /selection:listitem[21]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-sw
+        selection:label: '[MEDICAL] South West'
+      /selection:listitem[22]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-tv
+        selection:label: '[MEDICAL] Thames Valley'
+      /selection:listitem[23]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-wes
+        selection:label: '[MEDICAL] Wessex'
+      /selection:listitem[24]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-wMid
+        selection:label: '[MEDICAL] West Midlands'
+      /selection:listitem[25]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical-yh
+        selection:label: '[MEDICAL] Yorkshire and the Humber'
+  /navmapeducations:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 8cc7ceb5-d1e0-4041-85f6-40c11b442743
+    hippo:name: NavMapEducations
+    /navmapeducations:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 93ed4594-5015-41b0-97c0-a7aaab4afccb
+      hippo:availability: [live, preview]
+      hippotranslation:id: f5e09496-652c-4c9f-824f-2756a4e7b2c7
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: dental
+        selection:label: Dental
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: higher
+        selection:label: Higher
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: medical
+        selection:label: Medical
+  /listingpagetypes:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: ecfcc6d0-1c4f-4aed-8d14-081fb46ae5a8
+    hippo:name: ListingPageTypes
+    /listingpagetypes:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: b0d45ddb-9cf3-44ef-89ac-32c20495a394
+      hippo:availability: [live, preview]
+      hippotranslation:id: b21dd787-1c47-4115-b3bb-145fd81197a5
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: blog
+        selection:label: Blog
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: bulletin
+        selection:label: Bulletin
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: casestudy
+        selection:label: Case Study
+      /selection:listitem[4]:
+        jcr:primaryType: selection:listitem
+        selection:key: event
+        selection:label: Event
+      /selection:listitem[5]:
+        jcr:primaryType: selection:listitem
+        selection:key: search
+        selection:label: Search
+      /selection:listitem[6]:
+        jcr:primaryType: selection:listitem
+        selection:key: searchbank
+        selection:label: Search Bank
+      /selection:listitem[7]:
+        jcr:primaryType: selection:listitem
+        selection:key: news
+        selection:label: News
+  /logotypes:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 5d367524-3c91-4251-a07b-6127af81c984
+    hippo:name: LogoTypes
+    /logotypes:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 2fc36468-fe81-4e8f-853b-c91945985251
+      hippo:availability: [live, preview]
+      hippotranslation:id: 8b840a39-2409-41d6-a247-955f43a7f77d
+      hippotranslation:locale: inherited - from query
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: hee
+        selection:label: Health Education England
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: nimdta
+        selection:label: Northern Ireland Medical & Dental Training Agency
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: nes
+        selection:label: NHS Education for Scotland
+      /selection:listitem[4]:
+        jcr:primaryType: selection:listitem
+        selection:key: heiw
+        selection:label: Health Education and Improvement Wales

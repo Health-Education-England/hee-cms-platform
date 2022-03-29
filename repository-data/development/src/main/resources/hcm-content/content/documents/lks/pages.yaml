@@ -13,7 +13,7 @@
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 254e1c0c-1f31-4203-af5c-1b8b71092fba
-    hippo:versionHistory: 1bd4bf4b-7dce-434d-af29-46a3bdf5e400
+    hippo:versionHistory: 9acdb76f-d944-4fa5-8bb7-e3896de6b19a
     /index[1]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
@@ -94,7 +94,7 @@
       jcr:uuid: ba33e558-4da2-4344-8e6d-6053e31bdb88
       hee:summary: Reference build for the nwps platform built on brXM.
       hee:title: NWPS Application Reference
-      hippo:availability: [live]
+      hippo:availability: []
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
@@ -128,6 +128,8 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+<<<<<<< HEAD
+=======
   /page-types:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippostd:xpagefolder', 'mix:versionable']
@@ -2566,3 +2568,4 @@
           /hee:cards[3]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+>>>>>>> 7487c4f1aa65675ab967d69c70bcdd57792894da
