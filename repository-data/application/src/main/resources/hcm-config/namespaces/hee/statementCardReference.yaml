@@ -1,46 +1,36 @@
 definitions:
   config:
-    /hippo:namespaces/hee/StatementBlock:
+    /hippo:namespaces/hee/statementCardReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 234084e7-4659-466e-a6c7-2ac6237fc094
+      jcr:uuid: bf501b9a-f772-4454-b42b-80bf5e2c1f56
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2d86d2d6-4eb2-445d-bdcf-95ec99ace4f0
+        jcr:uuid: 62d2bf47-871f-450a-bd9f-dd7db9f55faa
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: a3e5ec63-d7c7-48bb-8c65-3393966c31fc
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: aa62e6a2-6c70-47cd-b481-319782233646
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /string:
+          /statementCardContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:statementCardContentBlock
             hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /richStatement:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:richStatement
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
+            hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:StatementBlock
-          hee:title: ''
-          /hee:richStatement:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          jcr:primaryType: hee:statementCardReference
+          /hee:statementCardContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -52,21 +42,14 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+            wicket.variant: row
+          /statementCardContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: string
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /richStatement:
-            jcr:primaryType: frontend:plugin
-            caption: Content
-            field: richStatement
-            hint: ''
+            caption: Select statement card
+            field: statementCardContentBlock
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:statementCard']
