@@ -21,5 +21,10 @@ public class ValueListIdentifierTest {
         assertThat(ValueListIdentifier.SEARCH_BANK_KEY_TERMS.getName()).isEqualTo("searchBankKeyTerms");
         assertThat(ValueListIdentifier.SEARCH_BANK_PROVIDERS.getName()).isEqualTo("searchBankProviders");
         assertThat(ValueListIdentifier.SEARCH_BANK_TOPICS.getName()).isEqualTo("searchBankTopics");
+        assertThat(ValueListIdentifier.NEWSLETTER_REGIONS.getName()).isEqualTo("newsletterRegions");
+        assertThat(ValueListIdentifier.NEWSLETTER_ORGANISATIONS.getName()).isEqualTo("newsletterOrganisations");
+        assertThat(ValueListIdentifier.NEWSLETTER_PROFESSIONS.getName()).isEqualTo("newsletterProfessions");
+        assertThat(ValueListIdentifier.PERSON_TITLES.getName()).isEqualTo("personTitles");
+        assertThat(ValueListIdentifier.PERSON_PRONOUNS.getName()).isEqualTo("personPronouns");
     }
 }

@@ -13,12 +13,16 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.onehippo.cms7.essentials.components.ext.DoBeforeRenderExtension;
 import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
 import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 import uk.nhs.hee.web.beans.Guidance;
+import uk.nhs.hee.web.utils.ContentBlocksUtils;
+
+import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -26,7 +30,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"javax.management.*", "javax.script.*"})
-@PrepareForTest({HstServices.class, RequestContextProvider.class})
+@PrepareForTest({HstServices.class, RequestContextProvider.class, ContentBlocksUtils.class})
 public class CookiesPageComponentTest {
 
     private static final String COMPONENT_PARAMETER_NAME_DOCUMENT = "document";
@@ -70,6 +74,9 @@ public class CookiesPageComponentTest {
         when(mockComponentManager.getComponent(DoBeforeRenderExtension.class.getName())).thenReturn(null);
         when(RequestContextProvider.get()).thenReturn(mockHstRequestContext);
         when(mockHstRequestContext.isChannelManagerPreviewRequest()).thenReturn(false);
+
+        mockStatic(ContentBlocksUtils.class);
+        when(ContentBlocksUtils.getValueListMaps(Mockito.anyList())).thenReturn(Collections.emptyMap());
 
         // Stubbing for org.onehippo.cms7.essentials.components.EssentialsDocumentComponent.doBeforeRender call
         when(mockEssentialsDocumentComponentInfo.getDocument()).thenReturn(COMPONENT_PARAMETER_VALUE_DOCUMENT);

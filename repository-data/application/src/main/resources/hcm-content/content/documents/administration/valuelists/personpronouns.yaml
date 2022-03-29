@@ -1,0 +1,24 @@
+/content/documents/administration/valuelists/personpronouns:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 92d6a17a-1697-4a52-a28b-ad7126ee2dd3
+  hippo:name: PersonPronouns
+  /personpronouns:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 22d9037a-401e-40ad-b993-04db316e087b
+    hippo:availability: [live, preview]
+    hippotranslation:id: 4e29d565-ca12-4fe0-9b3d-ed7406ec74a8
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: she-her
+      selection:label: She/Her
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: he-him
+      selection:label: He/Him
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: they-them
+      selection:label: They/Them

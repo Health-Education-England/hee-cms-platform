@@ -1,5 +1,6 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
+<@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
 <#macro guidance guidanceDocument showTitle=true showHero=false showCookiesButton=false>
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
@@ -45,7 +46,11 @@
                                                 <@hee.yellowAlertBlock block=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.Contact">
-                                                <@hee.contact block=block/>
+                                                <@hee.contact
+                                                block=block
+                                                personTitlesMap=personTitlesMap
+                                                personPronounsMap=personPronounsMap
+                                                />
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                                 <@hee.blockLinks block=block/>
@@ -76,6 +81,9 @@
                                             <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
                                                 <@hee.warningCallout block=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.NewsletterSubscribeFormReference">
+                                                <@hee.newsletterSubscribeForm block=block/>
+                                                <#break>
                                             <#default>
                                         </#switch>
                                     </#list>
@@ -96,7 +104,11 @@
                                         <@hee.quickLinks quickLinks=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                        <@hee.contactCard card=block.content/>
+                                        <@hee.contactCard
+                                        contact=block.content
+                                        personTitlesMap=personTitlesMap
+                                        personPronounsMap=personPronounsMap
+                                        />
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                         <@hee.externalLinksCard card=block.externalLinksCard/>
