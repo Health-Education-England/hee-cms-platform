@@ -10,9 +10,11 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.beans.MinihubSection;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
+import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Base component for the MiniHub Page.

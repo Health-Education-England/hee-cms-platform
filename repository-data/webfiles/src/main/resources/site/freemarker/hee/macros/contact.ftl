@@ -1,21 +1,25 @@
 <#import "contact-item.ftl" as contactItem>
 
-<#macro contact block>
+<#macro contact block personTitlesMap personPronounsMap>
     <#if block??>
-        <#if block.contentItems?size gt 1>
-            <div class="nhsuk-page-content">
-                <h2>${block.title}</h2>
-            </div>
-
+        <#if block.contactItems?size gt 1>
             <ul class="nhsuk-grid-row nhsuk-contact-group">
-                <#list block.contentItems as item>
+                <#list block.contactItems as item>
                     <li class="nhsuk-grid-column-one-half nhsuk-contact-group__item">
-                        <@contactItem.contactItem item=item block=block/>
+                        <@contactItem.contactItem
+                        item=item
+                        personTitlesMap=personTitlesMap
+                        personPronounsMap=personPronounsMap
+                        />
                     </li>
                 </#list>
             </ul>
         <#else>
-            <@contactItem.contactItem item=block.contentItems[0] block=block singleContact=true/>
+            <@contactItem.contactItem
+            item=block.contactItems[0]
+            personTitlesMap=personTitlesMap
+            personPronounsMap=personPronounsMap
+            />
         </#if>
     </#if>
 </#macro>
