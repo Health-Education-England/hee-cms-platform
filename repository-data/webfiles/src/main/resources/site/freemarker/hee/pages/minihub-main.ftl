@@ -1,5 +1,7 @@
 <#include "../../include/imports.ftl">
 <#include "../macros/guidance-content.ftl"/>
+<#include "../macros/micro-hero.ftl">
+
 <@hst.defineObjects />
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -10,9 +12,13 @@
 <#-- @ftlvariable name="previousGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="nextGuidance" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="accessFromRootHub" type="java.lang.Boolean" -->
+<#-- @ftlvariable name="isFirstPage" type="java.lang.Boolean" -->
 
 <#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?endsWith("/")/>
 <#if document??>
+    <#if document.microHero?? && isFirstPage>
+        <@microHero microHeroImage=document.microHero />
+    </#if>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
             <div class="nhsuk-grid-row">
@@ -46,7 +52,7 @@
             </div>
 
                 <#if currentGuidance??>
-                    <@guidance guidanceDocument=currentGuidance showTitle=false/>
+                    <@guidance guidanceDocument=currentGuidance showTitle=false />
                 </#if>
                 <nav class="nhsuk-pagination nhsuk-u-margin-top-0" role="navigation" aria-label="Pagination">
                     <ul class="nhsuk-list nhsuk-pagination__list">

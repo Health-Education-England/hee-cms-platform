@@ -1,23 +1,19 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
-<#include "../macros/hero-section.ftl">
+<#include "../macros/micro-hero.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.LandingPage" -->
 <#if document??>
-    <#assign showHero=false>
-    <#if document.heroImage??>
-        <#assign showHero=true>
-        <@heroSection document=document />
+    <#if document.microHero??>
+        <@microHero microHeroImage=document.microHero />
     </#if>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-            <#if showHero=false>
-                <h1>
-                    ${document.title}
-                </h1>
-                <#if document.summary??>
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                </#if>
+            <h1>
+                ${document.title}
+            </h1>
+            <#if document.summary??>
+                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </#if>
             <div class="nhsuk-grid-row">
                 <#if document.contentBlocks??>

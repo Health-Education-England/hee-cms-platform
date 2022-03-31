@@ -2,11 +2,11 @@
 <#import "../macros/components.ftl" as hee>
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
-<#macro guidance guidanceDocument showTitle=true showHero=false showCookiesButton=false>
+<#macro guidance guidanceDocument showTitle=true showCookiesButton=false>
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
     <#if guidanceDocument??>
         <div class="nhsuk-width-container">
-            <#if showTitle && showHero=false>
+            <#if showTitle>
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
                         <h1>${guidanceDocument.title}</h1>
@@ -19,7 +19,7 @@
                     <div class="nhsuk-grid-column-two-thirds">
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
-                                <#if showHero=false && guidanceDocument.summary??>
+                                <#if guidanceDocument.summary??>
                                     <p class="nhsuk-body-l"><@hst.html formattedText="${guidanceDocument.summary!?replace('\n', '<br>')}"/></p>
                                 </#if>
                                 <#if guidanceDocument.contentBlocks??>

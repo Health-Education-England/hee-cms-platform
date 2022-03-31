@@ -4,7 +4,7 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
-<#include "../macros/hero-section.ftl">
+<#include "../macros/micro-hero.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
@@ -19,18 +19,14 @@
 <#-- @ftlvariable name="providerMap" type="java.util.List" -->
 
 <#if document??>
-    <#assign showHero=false>
-    <#if document.heroImage??>
-        <#assign showHero=true>
-        <@heroSection document=document />
+    <#if document.microHero??>
+        <@microHero microHeroImage=document.microHero />
     </#if>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
-            <#if showHero=false>
-                <h1>${document.title}</h1>
-                <#if document.summary??>
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                </#if>
+            <h1>${document.title}</h1>
+            <#if document.summary??>
+                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </#if>
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
