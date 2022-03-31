@@ -4,7 +4,6 @@ import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerat
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import java.util.List;
-import uk.nhs.hee.web.beans.ContentCards;
 
 @HippoEssentialsGenerated(internalName = "hee:MiniHub")
 @Node(jcrType = "hee:MiniHub")
@@ -32,5 +31,10 @@ public class MiniHub extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:addToAZ")
     public Boolean getAddToAZ() {
         return getSingleProperty("hee:addToAZ");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:microHero")
+    public ImageSetWithCaption getMicroHero() {
+        return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
     }
 }

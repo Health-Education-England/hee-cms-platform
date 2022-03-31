@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ccde5cf2-f801-4b9e-8fa6-c1b05295c484
+          jcr:uuid: 154a1da4-0f93-4a6c-ab55-db2393990c96
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -48,7 +48,7 @@ definitions:
             hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
-            hipposysedit:validators: [optional]
+            hipposysedit:validators: [required]
           /logoGroup:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -69,7 +69,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: d60cae92-7a78-42e7-b522-57dee90ab2e5
+          jcr:uuid: 43389906-5398-4fee-b538-bcd47907bbc5
           hippostdpubwf:lastModificationDate: 2021-03-24T17:00:07.151+07:00
           hippostdpubwf:creationDate: 2021-03-24T17:00:07.151+07:00
           hee:title: ''
@@ -118,7 +118,7 @@ definitions:
             field: heroImage
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
+            hint: Add an image that's 380 pixels high and 1600 pixels wide.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /logoGroup:
