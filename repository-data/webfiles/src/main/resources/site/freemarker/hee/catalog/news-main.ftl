@@ -1,7 +1,7 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
-<#include "../macros/hero-section.ftl">
 <#include "../macros/micro-hero.ftl">
+<#import "../macros/components.ftl" as hee>
 
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
