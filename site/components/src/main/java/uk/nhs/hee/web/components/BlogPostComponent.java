@@ -33,6 +33,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
             addCategoriesValueListMapToModel(request, blogPost);
+            addValueListsForContentBlocks(request, blogPost);
 
             addBlogListingPageURLToModel(request);
 
@@ -49,14 +50,6 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                 request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
             } else
                 request.setModel("visibleComments", comments);
-
-            // the page content blocks needs valueLists to be set on the model
-            List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
-            pageContentBlocks.addAll(blogPost.getRightHandBlocks());
-
-            Map<String, Map<String, String>> modelToValueListMap =
-                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
-            modelToValueListMap.forEach(request::setModel);
         }
     }
 
@@ -104,6 +97,21 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                 blogCategories.stream()
                         .filter(category -> allBlogCategoriesValueListMap.get(category) != null)
                         .collect(Collectors.toMap(category -> category, allBlogCategoriesValueListMap::get)));
+    }
+
+    /**
+     * Gets all the valueLists required by the content blocks from the given blogPost page and
+     * sets them on the model.
+     */
+    private void addValueListsForContentBlocks(
+            final HstRequest request,
+            final BlogPost blogPost) {
+        List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
+        pageContentBlocks.addAll(blogPost.getRightHandBlocks());
+
+        Map<String, Map<String, String>> modelToValueListMap =
+                ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+        modelToValueListMap.forEach(request::setModel);
     }
 
     /**
