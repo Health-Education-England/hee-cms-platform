@@ -1,21 +1,21 @@
 definitions:
   config:
-    /hippo:namespaces/hee/StatementBlock:
+    /hippo:namespaces/hee/statementCard:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 234084e7-4659-466e-a6c7-2ac6237fc094
+      jcr:uuid: 72bad1ed-fa45-40e5-bddb-651e2a2fcd3f
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2d86d2d6-4eb2-445d-bdcf-95ec99ace4f0
+        jcr:uuid: c26cb56f-d930-4b75-8085-5ceb84820c26
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: a3e5ec63-d7c7-48bb-8c65-3393966c31fc
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 35411c20-48a0-445b-9576-e76ccc1a8065
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /string:
+          /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -36,8 +36,18 @@ definitions:
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:StatementBlock
+          jcr:primaryType: hee:statementCard
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
+          jcr:uuid: 640cf51e-761e-43cc-8aa6-b499fd9918f9
+          hippostdpubwf:lastModificationDate: 2022-03-02T12:38:21.353Z
+          hippostdpubwf:creationDate: 2022-03-02T12:38:21.353Z
           /hee:richStatement:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -55,8 +65,7 @@ definitions:
           /title:
             jcr:primaryType: frontend:plugin
             caption: Title
-            field: string
-            hint: ''
+            field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
