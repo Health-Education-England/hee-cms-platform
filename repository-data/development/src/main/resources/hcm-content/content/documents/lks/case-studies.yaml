@@ -121,23 +121,24 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: de17cf5d-7320-48eb-9c08-32ed7d6c30f5
     hippo:name: 'Search: Case Study'
-    hippo:versionHistory: 547072e2-3543-4c9c-b53f-3d7a3a6f33f4
+    hippo:versionHistory: d421b8e4-ba40-493e-ae41-1423c44723fb
     /search-case-study[1]:
       jcr:primaryType: hee:caseStudy
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: ca16231a-9f11-47c5-b6a8-34e31f1567a7
       hee:impactGroup: medicine_and_dental
       hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: ''
       hee:region: kent_surrey_sussex
       hee:sector: acute
+      hee:submittedDate: 0001-01-01T12:00:00Z
       hee:title: 'Search: Case Study'
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-07-21T07:31:06.473+01:00
-      hippostdpubwf:lastModificationDate: 2021-07-22T23:25:48.021+01:00
+      hippostdpubwf:lastModificationDate: 2022-04-12T16:38:32.079+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: fae55391-6894-40e3-9e53-2bedaf440822
       hippotranslation:locale: en
@@ -156,15 +157,17 @@
       jcr:uuid: aac11152-6322-43eb-9954-8dcf88047b8a
       hee:impactGroup: medicine_and_dental
       hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: ''
       hee:region: kent_surrey_sussex
       hee:sector: acute
+      hee:submittedDate: 0001-01-01T12:00:00Z
       hee:title: 'Search: Case Study'
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-07-21T07:31:06.473+01:00
-      hippostdpubwf:lastModificationDate: 2021-07-22T23:16:43.119+01:00
+      hippostdpubwf:lastModificationDate: 2022-04-12T16:38:27.183+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: fae55391-6894-40e3-9e53-2bedaf440822
       hippotranslation:locale: en
@@ -183,17 +186,19 @@
       jcr:uuid: 4f5ecd13-aa2a-4531-8fdf-068f411ee025
       hee:impactGroup: medicine_and_dental
       hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: ''
       hee:region: kent_surrey_sussex
       hee:sector: acute
+      hee:submittedDate: 0001-01-01T12:00:00Z
       hee:title: 'Search: Case Study'
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-07-21T07:31:06.473+01:00
-      hippostdpubwf:lastModificationDate: 2021-07-22T23:16:43.119+01:00
+      hippostdpubwf:lastModificationDate: 2022-04-12T16:38:27.183+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-02-14T17:51:48.960Z
+      hippostdpubwf:publicationDate: 2022-04-12T16:38:35.063+01:00
       hippotranslation:id: fae55391-6894-40e3-9e53-2bedaf440822
       hippotranslation:locale: en
       /hee:document:
@@ -296,194 +301,6 @@
         jcr:data:
           type: binary
           resource: /content/documents/lks/case-studies/testcasestudy/testcasestudy[3]/document/FileList.txt
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-02-14T16:09:23.639Z
-        jcr:mimeType: text/plain
-  /testcasestudy-copy:
-    jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-    jcr:uuid: 159565af-223d-421a-815d-08ea65c86111
-    hippo:name: TestCaseStudy (copy)
-    hippo:versionHistory: 57963e5a-1717-4f46-a197-838a557997de
-    /testcasestudy-copy[1]:
-      jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:versionable']
-      jcr:uuid: e660d171-b073-4c50-a2b6-5a83a43b6e17
-      hee:impactGroup: admin_and_clerical
-      hee:impactTypes: [contributed_to_personal_or_professional_development]
-      hee:provider: croydon_university_hospital
-      hee:region: Wessex
-      hee:sector: ccg_support
-      hee:submittedDate: 2022-04-19T00:00:00+01:00
-      hee:title: 1-Test Title
-      hippo:availability: [preview]
-      hippostd:retainable: false
-      hippostd:state: unpublished
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
-      hippostdpubwf:lastModificationDate: 2022-04-12T15:06:47.124+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: f3d0809e-de11-4a8c-918a-65c7ab8608bc
-      hippotranslation:locale: en
-      /hee:document:
-        jcr:primaryType: hippo:resource
-        hippo:filename: FileList.txt
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/case-studies/testcasestudy-copy/testcasestudy-copy[1]/document/FileList.txt
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-02-14T16:09:23.639Z
-        jcr:mimeType: text/plain
-    /testcasestudy-copy[2]:
-      jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: c100cbce-9ab6-41e0-a8db-097eec37fe65
-      hee:impactGroup: admin_and_clerical
-      hee:impactTypes: [contributed_to_personal_or_professional_development]
-      hee:provider: croydon_university_hospital
-      hee:region: Wessex
-      hee:sector: ccg_support
-      hee:submittedDate: 2022-04-19T00:00:00+01:00
-      hee:title: 1-Test Title
-      hippo:availability: []
-      hippostd:retainable: false
-      hippostd:state: draft
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
-      hippostdpubwf:lastModificationDate: 2022-04-12T15:06:35.371+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: f3d0809e-de11-4a8c-918a-65c7ab8608bc
-      hippotranslation:locale: en
-      /hee:document:
-        jcr:primaryType: hippo:resource
-        hippo:filename: FileList.txt
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/case-studies/testcasestudy-copy/testcasestudy-copy[2]/document/FileList.txt
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-02-14T16:09:23.639Z
-        jcr:mimeType: text/plain
-    /testcasestudy-copy[3]:
-      jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 131d04b0-5a88-4401-84c3-27587f5273ce
-      hee:impactGroup: admin_and_clerical
-      hee:impactTypes: [contributed_to_personal_or_professional_development]
-      hee:provider: croydon_university_hospital
-      hee:region: Wessex
-      hee:sector: ccg_support
-      hee:submittedDate: 2022-04-19T00:00:00+01:00
-      hee:title: 1-Test Title
-      hippo:availability: [live]
-      hippostd:retainable: false
-      hippostd:state: published
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
-      hippostdpubwf:lastModificationDate: 2022-04-12T15:06:47.124+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-04-12T15:06:49.083+01:00
-      hippotranslation:id: f3d0809e-de11-4a8c-918a-65c7ab8608bc
-      hippotranslation:locale: en
-      /hee:document:
-        jcr:primaryType: hippo:resource
-        hippo:filename: FileList.txt
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/case-studies/testcasestudy-copy/testcasestudy-copy[3]/document/FileList.txt
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-02-14T16:09:23.639Z
-        jcr:mimeType: text/plain
-  /testcasestudy-copy-2:
-    jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-    jcr:uuid: f2924fae-2cd1-4837-8fac-cd25a48f341b
-    hippo:name: TestCaseStudy (copy 2)
-    hippo:versionHistory: 363250b1-94c6-41e0-9cdc-f55e88dfa0c1
-    /testcasestudy-copy-2[1]:
-      jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:versionable']
-      jcr:uuid: b70fe345-ff2a-416b-b829-49657adb0517
-      hee:impactGroup: admin_and_clerical
-      hee:impactTypes: [contributed_to_personal_or_professional_development]
-      hee:provider: croydon_university_hospital
-      hee:region: Wessex
-      hee:sector: ccg_support
-      hee:submittedDate: 2022-03-07T00:00:00Z
-      hee:title: 001-Test Title
-      hippo:availability: [preview]
-      hippostd:retainable: false
-      hippostd:state: unpublished
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
-      hippostdpubwf:lastModificationDate: 2022-04-12T15:06:50.987+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: 3d7801ed-ef5c-40bc-b926-6fc7ea2c4a48
-      hippotranslation:locale: en
-      /hee:document:
-        jcr:primaryType: hippo:resource
-        hippo:filename: FileList.txt
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/case-studies/testcasestudy-copy-2/testcasestudy-copy-2[1]/document/FileList.txt
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-02-14T16:09:23.639Z
-        jcr:mimeType: text/plain
-    /testcasestudy-copy-2[2]:
-      jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 12e364c5-d1b4-43e5-a91b-471f5c536f30
-      hee:impactGroup: admin_and_clerical
-      hee:impactTypes: [contributed_to_personal_or_professional_development]
-      hee:provider: croydon_university_hospital
-      hee:region: Wessex
-      hee:sector: ccg_support
-      hee:submittedDate: 2022-03-07T00:00:00Z
-      hee:title: 001-Test Title
-      hippo:availability: []
-      hippostd:retainable: false
-      hippostd:state: draft
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
-      hippostdpubwf:lastModificationDate: 2022-04-12T15:06:40.913+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: 3d7801ed-ef5c-40bc-b926-6fc7ea2c4a48
-      hippotranslation:locale: en
-      /hee:document:
-        jcr:primaryType: hippo:resource
-        hippo:filename: FileList.txt
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/case-studies/testcasestudy-copy-2/testcasestudy-copy-2[2]/document/FileList.txt
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-02-14T16:09:23.639Z
-        jcr:mimeType: text/plain
-    /testcasestudy-copy-2[3]:
-      jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 80f8eab3-409a-4333-bcb1-8232033b2f8f
-      hee:impactGroup: admin_and_clerical
-      hee:impactTypes: [contributed_to_personal_or_professional_development]
-      hee:provider: croydon_university_hospital
-      hee:region: Wessex
-      hee:sector: ccg_support
-      hee:submittedDate: 2022-03-07T00:00:00Z
-      hee:title: 001-Test Title
-      hippo:availability: [live]
-      hippostd:retainable: false
-      hippostd:state: published
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
-      hippostdpubwf:lastModificationDate: 2022-04-12T15:06:50.987+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-04-12T15:06:52.699+01:00
-      hippotranslation:id: 3d7801ed-ef5c-40bc-b926-6fc7ea2c4a48
-      hippotranslation:locale: en
-      /hee:document:
-        jcr:primaryType: hippo:resource
-        hippo:filename: FileList.txt
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/case-studies/testcasestudy-copy-2/testcasestudy-copy-2[3]/document/FileList.txt
         jcr:encoding: UTF-8
         jcr:lastModified: 2022-02-14T16:09:23.639Z
         jcr:mimeType: text/plain
