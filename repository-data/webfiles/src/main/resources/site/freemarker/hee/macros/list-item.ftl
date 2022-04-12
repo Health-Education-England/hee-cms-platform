@@ -136,6 +136,13 @@
                 </@listItemRow>
             </#if>
 
+            <#if item.submittedDate??>
+                <@fmt.message key="casestudy.submitted_date" var="dateLabel"/>
+                <@listItemRow key="${dateLabel}">
+                    ${item.submittedDate.time?string['dd MMMM yyyy']}
+                </@listItemRow>
+            </#if>
+
         </dl>
     </#list>
 </#macro>

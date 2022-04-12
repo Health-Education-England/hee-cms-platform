@@ -40,6 +40,8 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
 
     private static final String ASCENDING_SORT_ORDER = "asc";
     private static final String DESCENDING_SORT_ORDER = "desc";
+    private static final String SUBMITTED_DATE_ASCENDING_SORT_ORDER = "submitted_date_oldest";
+    private static final String SUBMITTED_DATE_DESCENDING_SORT_ORDER = "submitted_date_newest";
     private static final String ATOZ_SORT_ORDER = "az";
     private static final String SORT_BY_QUERY_PARAM = "sortBy";
 
@@ -261,7 +263,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             query.addOrderByAscending(listingPageType.getSortByDateField());
         } else if (sortOrder.equals(ATOZ_SORT_ORDER)) {
             query.addOrderByAscending(HEEField.DOCUMENT_TITLE.getName());
-        } else {
+        }else {
             query.addOrderByDescending(listingPageType.getSortByDateField());
         }
     }
