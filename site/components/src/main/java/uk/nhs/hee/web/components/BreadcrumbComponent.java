@@ -1,11 +1,11 @@
 package uk.nhs.hee.web.components;
 
-import org.hippoecm.hst.configuration.hosting.Mount;
-import org.hippoecm.hst.configuration.sitemap.HstSiteMap;
-import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
+import org.hippoecm.hst.configuration.HstNodeTypes;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.core.request.ResolvedSiteMapItem;
 import org.onehippo.cms7.essentials.components.CommonComponent;
 import org.slf4j.Logger;
@@ -22,6 +22,14 @@ import java.util.List;
 public class BreadcrumbComponent extends CommonComponent {
     // Logger
     private static final Logger LOGGER = LoggerFactory.getLogger(BreadcrumbComponent.class);
+    /**
+     * The name of the root content folder where all the experience pages are created.
+     */
+    public static final String HOME_BEAN_NAME = "pages";
+    /**
+     * The breadcrumb link display name for the root content folder.
+     */
+    public static final String HOME = "Home";
 
     /**
      * {@inheritDoc}
@@ -30,124 +38,90 @@ public class BreadcrumbComponent extends CommonComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        final ResolvedSiteMapItem resolvedSiteMapItem =
-                request.getRequestContext().getResolvedSiteMapItem();
-
-        if (resolvedSiteMapItem == null) {
-            return;
-        }
-
-        final HstSiteMapItem siteMapItem = resolvedSiteMapItem.getHstSiteMapItem();
-
-        // Do not build Breadcrumb Links for Home (@hst:refId=root).
-        if (isHome(siteMapItem)) {
-            LOGGER.debug("Breadcrumb Links will not be built as the current page is Home");
-            return;
-        }
-
-        final List<BreadcrumbLink> breadcrumbLinks = buildBreadCrumbLinks(request, siteMapItem);
+        final List<BreadcrumbLink> breadcrumbLinks = buildBreadCrumbLinks(request);
 
         LOGGER.debug("Breadcrumb Links = {}", breadcrumbLinks);
         request.setModel("breadcrumbLinks", breadcrumbLinks);
     }
 
     /**
-     * Builds Breadcrumb List for the given {@code hstSiteMapItem}.
+     * Build breadcrumb links by iterating upwards from the current content bean and upwards till the content base.
      *
-     * @param request        the {@link HstRequest} instance.
-     * @param hstSiteMapItem the {@link HstSiteMapItem} instance for which
-     *                       the {@link List<BreadcrumbLink>} needs to be built
-     *                       up to the root note.
-     * @return the {@link List<BreadcrumbLink>} built for the given {@code hstSiteMapItem}.
+     * @param request the {@link HstRequest} instance.
+     * @return the {@link List<BreadcrumbLink>} built for the given {@code request}.
      */
-    private List<BreadcrumbLink> buildBreadCrumbLinks(
-            final HstRequest request,
-            final HstSiteMapItem hstSiteMapItem) {
-        final List<BreadcrumbLink> breadcrumbLinks = new ArrayList<>();
+    private List<BreadcrumbLink> buildBreadCrumbLinks(HstRequest request) {
+        final List<BreadcrumbLink> items = new ArrayList<>();
 
-        // Reassigning hstSiteMapItem here temporarily
-        // in order to avoid changing original reference
-        HstSiteMapItem siteMapItem = hstSiteMapItem;
-        while (siteMapItem.getParentItem() != null) {
-            siteMapItem = siteMapItem.getParentItem();
-            if(!Boolean.parseBoolean(siteMapItem.getParameter("excludedForBreadcrumb"))) {
-                addBreadCrumbLink(request, siteMapItem, breadcrumbLinks);
+        final ResolvedSiteMapItem currentSmi = request.getRequestContext().getResolvedSiteMapItem();
+        final HippoBean currentBean = getBeanForResolvedSiteMapItem(request, currentSmi);
+
+        if (currentBean != null) {
+            addContentBasedItems(items, currentBean, request);
+        }
+
+        Collections.reverse(items);
+
+        return items;
+    }
+
+    /**
+     * Add breadcrumb items based on content, from current upwards to the content
+     * base bean.
+     *
+     * @param items       list of breadcrumb items
+     * @param currentBean bean described by URL
+     * @param request     HST request
+     */
+    protected void addContentBasedItems(final List<BreadcrumbLink> items, HippoBean currentBean, final HstRequest request) {
+        final HippoBean baseBean = request.getRequestContext().getSiteContentBaseBean();
+        HippoBean bean = currentBean;
+
+        // go up to until site content base bean
+        while (!bean.getParentBean().isSelf(baseBean)) {
+            bean = bean.getParentBean();
+
+            final BreadcrumbLink item = getBreadcrumbLink(request, bean);
+            if (item.getUrl() != null) {
+                items.add(item);
+            }
+        }
+    }
+
+
+    private BreadcrumbLink getBreadcrumbLink(final HstRequest request, final HippoBean bean) {
+        final HstRequestContext context = request.getRequestContext();
+
+        final HstLink hstLink = context.getHstLinkCreator().create(bean, context);
+        String link = hstLink != null ? hstLink.toUrlForm(request.getRequestContext(), false) : null;
+
+        String linkDisplayName = isHome(bean) ? HOME : bean.getDisplayName();
+
+        return new BreadcrumbLink(linkDisplayName, link);
+    }
+
+    @Override
+    public HippoBean getBeanForResolvedSiteMapItem(final HstRequest request, final ResolvedSiteMapItem siteMapItem) {
+        HippoBean bean = super.getBeanForResolvedSiteMapItem(request, siteMapItem);
+
+        if (bean != null) {
+            // correction: one level up if it's an _index_ item, to prevent doubles
+            if (siteMapItem.getPathInfo().endsWith(HstNodeTypes.INDEX)) {
+                bean = bean.getParentBean();
             }
         }
 
-        addHomeBreadcrumbLink(request, breadcrumbLinks);
-        Collections.reverse(breadcrumbLinks);
-
-        return breadcrumbLinks;
+        return bean;
     }
 
     /**
-     * Adds Breadcrumb Link for {@code Home} to the given Breadcrumb List {@code breadcrumbLinks}.
+     * Returns {@code true} if the given {@code hippoBean} belongs to {@code Home}
+     * i.e. {@code @hst:name=pages}. Otherwise returns {@code false}.
      *
-     * @param request         the {@link HstRequest} instance.
-     * @param breadcrumbLinks the {@link List<BreadcrumbLink>} to which
-     *                        the {@link BreadcrumbLink} for {@code Home} needs to be added.
-     */
-    private void addHomeBreadcrumbLink(
-            final HstRequest request,
-            final List<BreadcrumbLink> breadcrumbLinks) {
-        final Mount mount = request.getRequestContext().getResolvedSiteMapItem()
-                .getResolvedMount().getMount();
-        if (mount.getHstSite() == null) {
-            return;
-        }
-
-        final HstSiteMap siteMap = mount.getHstSite().getSiteMap();
-        if (siteMap == null) {
-            return;
-        }
-
-        final HstSiteMapItem homeHstSiteMapItem = siteMap.getSiteMapItemByRefId("root");
-
-        addBreadCrumbLink(request, homeHstSiteMapItem, breadcrumbLinks);
-    }
-
-    /**
-     * Builds Breadcrumb Link for the given {@code hstSiteMapItem}
-     * and adds it to the given Breadcrumb Link List {@code breadcrumbLinks}.
-     *
-     * @param request         the {@link HstRequest} instance.
-     * @param hstSiteMapItem  the {@link HstSiteMapItem} instance for which
-     *                        the {@link BreadcrumbLink} needs to be built.
-     * @param breadcrumbLinks the {@link List<BreadcrumbLink>} to which
-     *                        the {@link BreadcrumbLink} built for
-     *                        the given {@link HstSiteMapItem} needs to be added
-     */
-    private void addBreadCrumbLink(
-            final HstRequest request,
-            final HstSiteMapItem hstSiteMapItem,
-            final List<BreadcrumbLink> breadcrumbLinks) {
-        final HstLink hstLink = request.getRequestContext().getHstLinkCreator().create(
-                hstSiteMapItem,
-                request.getRequestContext().getResolvedSiteMapItem().getResolvedMount().getMount());
-
-        if (hstLink == null) {
-            // Ignores the ones for which link can't be constructed
-            LOGGER.debug("URL/Link for the page with SiteMapItem={} cannot be constructed " +
-                    "and will be skipped from Breadcrumb for now. Please verify", hstSiteMapItem);
-            return;
-        }
-
-        breadcrumbLinks.add(new BreadcrumbLink(
-                hstSiteMapItem.getPageTitle(),
-                hstLink.toUrlForm(request.getRequestContext(), false)));
-    }
-
-    /**
-     * Returns {@code true} if the given {@code hstSiteMapItem} belongs to {@code Home}
-     * i.e. {@code @hst:refId=root}. Otherwise returns {@code false}.
-     *
-     * @param hstSiteMapItem the {@link HstSiteMapItem} instance which needs to be verified
-     *                       if it belongs to {@code Home}.
-     * @return {@code true} if the given {@code hstSiteMapItem} belongs to {@code Home}.
+     * @return {@code true} if the given {@code hippoBean} belongs to {@code Home}.
      * Otherwise returns {@code false}.
      */
-    private boolean isHome(final HstSiteMapItem hstSiteMapItem) {
-        return "root".equals(hstSiteMapItem.getRefId());
+    private boolean isHome(final HippoBean hippoBean) {
+        return HOME_BEAN_NAME.equals(hippoBean.getName());
     }
 }
