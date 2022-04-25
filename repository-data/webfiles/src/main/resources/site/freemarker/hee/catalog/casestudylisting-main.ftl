@@ -17,6 +17,7 @@
 <#-- @ftlvariable name="regionMap" type="java.util.Map" -->
 <#-- @ftlvariable name="selectedImpactGroups" type="java.util.List" -->
 <#-- @ftlvariable name="providerMap" type="java.util.List" -->
+<#-- @ftlvariable name="submittedDate" type="uk.nhs.hee.web.beans.ListingPage" -->
 
 <#if document??>
     <#if document.microHero??>
@@ -69,8 +70,10 @@
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
                                     <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
+                                    <@fmt.message key="sort.option.submitted_date_oldest" var="sortBySubmittedDateOldestLabel"/>
+                                    <@fmt.message key="sort.option.submitted_date_newest" var="sortBySubmittedDateNewestLabel"/>
                                     <@fmt.message key="sort.option.az" var="sortByAZ"/>
-                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
+                                    <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortBySubmittedDateNewestLabel}", "asc":"${sortBySubmittedDateOldestLabel}" } />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
                                 </div>
                             </form>

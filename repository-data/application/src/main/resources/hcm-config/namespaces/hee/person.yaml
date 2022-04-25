@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 844a4a40-540a-45c0-b0a1-5686c73a7c03
+          jcr:uuid: abbb6a5f-966b-437b-a9eb-898620e5f3f7
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -137,7 +137,7 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: db73a301-cf3c-4d87-99e0-05363489b7e9
+          jcr:uuid: ebe62eac-abc7-4a9e-930b-86dcb04eb384
           hippostdpubwf:lastModificationDate: 2021-05-13T16:45:32.265+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:45:32.266+07:00
           hee:bio: ''
@@ -263,9 +263,10 @@ definitions:
             field: bio
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '400'
+              maxlength: ''
           /linkUrl:
             jcr:primaryType: frontend:plugin
             caption: Link URL

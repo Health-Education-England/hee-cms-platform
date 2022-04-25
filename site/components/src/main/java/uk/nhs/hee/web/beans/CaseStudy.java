@@ -3,6 +3,7 @@ package uk.nhs.hee.web.beans;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoResourceBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import java.util.Calendar;
 
 @HippoEssentialsGenerated(internalName = "hee:caseStudy")
 @Node(jcrType = "hee:caseStudy")
@@ -40,5 +41,10 @@ public class CaseStudy extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:provider")
     public String getProvider() {
         return getSingleProperty("hee:provider");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:submittedDate")
+    public Calendar getSubmittedDate() {
+        return getSingleProperty("hee:submittedDate");
     }
 }
