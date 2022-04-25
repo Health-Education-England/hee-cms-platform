@@ -1,0 +1,52 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/ReplaceHeroImageWithMicroHero:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: "Replace \"hee:heroImage\" node with  \"hee:microHero\"\
+        \ node for all the documents with the type: \r\n - hee:news\r\n - hee:listingPage\r\
+        \n - hee:landingPage\r\n - hee:guidance\r\n\r\nIn production environment we\
+        \ should update the XPath query to execute the script only for one document\
+        \ type at a time because there is too much data."
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, nt:base)[@jcr:primaryType
+        = 'hee:guidance' or @jcr:primaryType = 'hee:landingPage' or @jcr:primaryType
+        = 'hee:listingPage'  or @jcr:primaryType = 'hee:news']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\nimport javax.jcr.PathNotFoundException\r\n\r\nclass RenameNodesFromHeroImageToMicroHero\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Start updating node ${node.path}\"\r\n\r\n        if\
+        \ (!node.hasNode(\"hee:heroImage\")) {\r\n            log.debug \"Skip node\
+        \ - Document ${node.path} does not contain hee:heroImage node.\"\r\n     \
+        \       return false\r\n        }\r\n\r\n        try {\r\n            // get\
+        \ image identifier from hee:heroImage node\r\n            Node heroImageNode\
+        \ = node.getNode(\"hee:heroImage\")\r\n            String heroImageIdentifier\
+        \ = heroImageNode.getProperty(\"hippo:docbase\").getString()\r\n\r\n     \
+        \       // validate image identifier has the correct format\r\n          \
+        \  UUID.fromString(heroImageIdentifier)\r\n\r\n            // skip heroImage\
+        \ nodes that have no image selected\r\n            if (heroImageIdentifier\
+        \ == \"cafebabe-cafe-babe-cafe-babecafebabe\") {\r\n                log.debug\
+        \ \"Skip node - heroImage has no image selected\"\r\n                return\
+        \ false\r\n            }\r\n\r\n            // create new hee:microHero node\
+        \ and set the image identifier\r\n            Node microHeroNode = node.addNode(\"\
+        hee:microHero\", \"hippogallerypicker:imagelink\")\r\n\r\n            microHeroNode.setProperty(\"\
+        hippo:docbase\", heroImageIdentifier)\r\n            microHeroNode.setProperty(\"\
+        hippo:values\", new String[0])\r\n            microHeroNode.setProperty(\"\
+        hippo:modes\", new String[0])\r\n            microHeroNode.setProperty(\"\
+        hippo:facets\", new String[0])\r\n\r\n            // remove heroImage node\r\
+        \n            heroImageNode.remove()\r\n\r\n            log.debug \"Node processed\
+        \ with success ${node.path}\"\r\n            return true\r\n        } catch\
+        \ (IllegalArgumentException exception) {\r\n            log.error(\"Invalid\
+        \ hero image identifier. \\n More details: ${exception.getStackTrace()}\"\
+        )\r\n        }\r\n        catch (PathNotFoundException ignored) {\r\n    \
+        \        log.error(\"Document ${node.path} does not contain node hee:heroImage.\"\
+        )\r\n        } catch (Exception exception) {\r\n            log.error \"Exception\
+        \ occurred while trying to rename heroImage node for document ${node.path}\"\
+        \r\n            log.error \"${exception.getStackTrace()}\"\r\n        }\r\n\
+        \r\n        return false\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
+        \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000

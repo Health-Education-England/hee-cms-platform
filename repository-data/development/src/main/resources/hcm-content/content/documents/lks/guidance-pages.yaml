@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: b3cf4094-92fc-47aa-8b7f-c2127151114b
+    hippo:versionHistory: 2e412cd7-57af-40d4-ab5e-04fb81d214cf
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -26,7 +26,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-03-02T13:50:59.264Z
+      hippostdpubwf:lastModificationDate: 2022-04-07T09:34:07.820+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -389,6 +389,12 @@
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /copyright[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -402,7 +408,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-03-02T13:50:59.476Z
+      hippostdpubwf:lastModificationDate: 2022-04-07T09:34:08.187+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -765,6 +771,12 @@
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /copyright[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -778,9 +790,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-03-02T13:50:59.264Z
+      hippostdpubwf:lastModificationDate: 2022-04-07T09:34:07.820+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-03-02T13:51:03.369Z
+      hippostdpubwf:publicationDate: 2022-04-07T09:34:13.396+01:00
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1142,6 +1154,12 @@
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
   /introduction:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1960,12 +1978,6 @@
         /hee:mediaEmbedContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
-      /hee:heroImage:
-        jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
-        hippo:facets: []
-        hippo:modes: []
-        hippo:values: []
       /hee:contentBlocks[6]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: "Accumsan suspendisse tristique varius euismod arcu\
@@ -1991,6 +2003,12 @@
         /hee:cards:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /test-media[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -2048,12 +2066,6 @@
         /hee:mediaEmbedContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
-      /hee:heroImage:
-        jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
-        hippo:facets: []
-        hippo:modes: []
-        hippo:values: []
       /hee:contentBlocks[6]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: "Accumsan suspendisse tristique varius euismod arcu\
@@ -2072,6 +2084,12 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
     /test-media[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -2130,12 +2148,6 @@
         /hee:mediaEmbedContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 065e8389-fd25-4966-8e28-173efeb943eb
-      /hee:heroImage:
-        jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
-        hippo:facets: []
-        hippo:modes: []
-        hippo:values: []
       /hee:contentBlocks[6]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: "Accumsan suspendisse tristique varius euismod arcu\
@@ -2154,6 +2166,12 @@
         /hee:cards[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ed76a6f3-7178-4c5e-9940-717d53c284fd
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
   /newsletter-sign-up:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

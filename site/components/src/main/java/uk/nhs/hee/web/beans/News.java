@@ -6,6 +6,9 @@ import org.hippoecm.hst.content.beans.Node;
 import java.util.Calendar;
 import java.util.List;
 
+/** 
+ * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
+ */
 @HippoEssentialsGenerated(internalName = "hee:news")
 @Node(jcrType = "hee:news")
 public class News extends BaseDocument {
@@ -52,13 +55,13 @@ public class News extends BaseDocument {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:heroImage")
-    public ImageSetWithCaption getHeroImage() {
-        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:logoGroup")
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:microHero")
+    public ImageSetWithCaption getMicroHero() {
+        return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
     }
 }

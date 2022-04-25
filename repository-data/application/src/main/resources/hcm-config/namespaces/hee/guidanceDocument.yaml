@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 66d40b33-5a8e-49d2-8958-34b4f4a5067a
+          jcr:uuid: db8d9e35-0e82-4582-8254-fb9a7937fea2
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -63,14 +63,6 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /heroImage:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:heroImage
-            hipposysedit:primary: false
-            hipposysedit:type: hippogallerypicker:imagelink
           /logoGroup:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -88,6 +80,15 @@ definitions:
             hipposysedit:path: hee:addToAZ
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /microHero:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:microHero
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -101,7 +102,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 9a9943e6-f673-48d7-9397-f3af10775918
+          jcr:uuid: 50afac95-396b-4c56-b09a-5787bb4341e3
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:addToAZ: false
@@ -119,20 +120,26 @@ definitions:
           /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /hee:heroImage:
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:rightHandBlocks:
+            jcr:primaryType: hee:ctaCardReference
+            /hee:ctaCardContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:microHero:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
-          /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hipposysedit:prototype[2]:
           jcr:primaryType: nt:unstructured
           jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
             'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 81802108-fbe8-492d-8295-c695e99e52e1
+          jcr:uuid: 2f73fabf-5b0a-4d11-aab4-7403c3f669c3
+          hee:addToAZ: false
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -157,12 +164,6 @@ definitions:
           /hee:contentBlocks:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /hee:heroImage:
-            jcr:primaryType: hippogallerypicker:imagelink
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-            hippo:facets: []
-            hippo:modes: []
-            hippo:values: []
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -171,6 +172,12 @@ definitions:
             /hee:ctaCardContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:microHero:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -212,11 +219,11 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /heroImage:
+          /microHero:
             jcr:primaryType: frontend:plugin
-            caption: Hero image
-            field: heroImage
-            hint: ''
+            caption: Micro-hero image
+            field: microHero
+            hint: Add an image that's 260 pixels high and 1600 pixels wide.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -233,7 +240,7 @@ definitions:
               nodetypes: ['hee:logoGroup']
           /contentBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Main content objects            
+            caption: Main content objects
             compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:buttonReference,hee:contact,hee:contentCards,hee:detailsReference,hee:newsletterSubscribeFormReference,hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:statementCardReference,hee:tabsReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks

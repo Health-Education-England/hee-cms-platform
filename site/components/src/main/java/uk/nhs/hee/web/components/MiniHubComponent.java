@@ -59,6 +59,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
             request.setModel("currentGuidance", currentGuidance);
             request.setModel("nextGuidance", nextGuidance);
             request.setModel("accessFromRootHub", accessFromRootHub);
+            request.setModel("isFirstPage", guidancePages.get(0).equals(currentGuidance));
 
             // the guidance page contains content blocks that need valueLists to be set on the model
             List<HippoBean> pageContentBlocks = currentGuidance.getContentBlocks();
