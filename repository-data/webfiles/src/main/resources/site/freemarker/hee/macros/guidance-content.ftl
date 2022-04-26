@@ -100,7 +100,7 @@
                     </div>
 
                     <#if guidanceDocument.rightHandBlocks??>
-                        <div class="nhsuk-grid-column-one-third">
+                        <div class="nhsuk-grid-column-one-third hee-layout-sidebar">
                             <#list guidanceDocument.rightHandBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "uk.nhs.hee.web.beans.QuickLinks">

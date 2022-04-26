@@ -31,7 +31,7 @@
             </#if>
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
-                    <div class="nhsuk-grid-column-one-third">
+                    <div class="nhsuk-grid-column-one-third hee-layout-sidebar">
                         <#-- Filters -->
                         <@hst.renderURL var="pagelink"/>
                         <form class="nhsuk-filter" method="get" action="${pagelink}">
