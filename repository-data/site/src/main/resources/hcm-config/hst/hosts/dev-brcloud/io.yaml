@@ -23,14 +23,34 @@ definitions:
             /dental:
               jcr:primaryType: hst:mount
               hst:mountpoint: /hst:hee/hst:sites/dental
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
             /digital-transformation:
               jcr:primaryType: hst:mount
               hst:mountpoint: /hst:hee/hst:sites/digital-transformation
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
             /medical:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
               hst:mountpoint: /hst:hee/hst:sites/medical
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
             /website-testing:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
               hst:mountpoint: /hst:hee/hst:sites/website-testing
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
+            /preview:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:type: preview
