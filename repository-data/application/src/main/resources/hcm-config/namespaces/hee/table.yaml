@@ -1,66 +1,64 @@
 definitions:
   config:
-    /hippo:namespaces/hee/fileLinksCard:
+    /hippo:namespaces/hee/table:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 3667f9c8-d2c3-4d0d-bb68-469c0394877a
+      jcr:uuid: e8dc12b7-a806-433a-ab47-cdb88af1f3b7
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: fb842c8f-19f9-43de-a5b1-e6fa23cac437
+        jcr:uuid: 495cb865-880f-491e-b6b7-70305b63724c
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a11c93f1-cef7-4e8d-ac83-8b129950b528
+          jcr:uuid: c1dcb22c-c8aa-4700-9ce9-af04c4236a7a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /title:
+          /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /fileLinks:
+          /content:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:fileLinks
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:content
             hipposysedit:primary: false
-            hipposysedit:type: hee:fileLink
+            hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
         /hipposysedit:nodetype[2]:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 88976e79-d9d3-4290-a33c-40cd9d9a74e7
+          jcr:uuid: 0af1f482-4554-44d0-84cf-56dd585d856f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
-          /title:
+          /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /fileLinks:
+          /content:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:fileLinks
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:content
             hipposysedit:primary: false
-            hipposysedit:type: hee:fileLink
+            hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:fileLinksCard
+          jcr:primaryType: hee:table
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -68,48 +66,30 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:title: ''
-          jcr:uuid: 70804920-36de-431c-95b8-2ecf2f0483c5
-          hippostdpubwf:lastModificationDate: 2021-05-21T13:01:16.365+01:00
-          hippostdpubwf:creationDate: 2021-05-21T13:01:16.365+01:00
-          /hee:fileLinks:
-            jcr:primaryType: hee:fileLink
-            hee:text: ''
-            /hee:file:
-              jcr:primaryType: hippo:resource
-              hippo:filename: hippo:resource
-              jcr:data:
-                type: binary
-                resource: /namespaces/hee/fileLinksCard/prototypes/prototype/fileLink/file/hippo-resource
-              jcr:encoding: UTF-8
-              jcr:lastModified: 2008-03-26T12:03:00+01:00
-              jcr:mimeType: application/vnd.hippo.blank
+          hee:caption: ''
+          jcr:uuid: f035060b-f1db-47a7-ae39-264c798acc56
+          hippostdpubwf:lastModificationDate: 2022-05-17T11:44:49.093+01:00
+          hippostdpubwf:creationDate: 2022-05-17T11:44:49.093+01:00
+          /hee:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
         /hipposysedit:prototype[2]:
           jcr:primaryType: nt:unstructured
           jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
             'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 2c323854-05a5-493b-810a-5aa6d863ae12
-          hee:title: ''
+          jcr:uuid: d1a2cf60-6771-4fb2-abaf-ab84cfb8ec30
+          hee:caption: ''
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-05-21T13:01:16.365+01:00
-          hippostdpubwf:lastModificationDate: 2021-05-21T13:01:16.365+01:00
+          hippostdpubwf:creationDate: 2022-05-17T11:44:49.093+01:00
+          hippostdpubwf:lastModificationDate: 2022-05-17T11:44:49.093+01:00
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          /hee:fileLinks:
-            jcr:primaryType: hee:fileLink
-            hee:text: ''
-            /hee:file:
-              jcr:primaryType: hippo:resource
-              hippo:filename: hippo:resource
-              jcr:data:
-                type: binary
-                resource: /namespaces/hee/fileLinksCard/prototypes/prototype[2]/fileLinks/file/hippo-resource
-              jcr:encoding: UTF-8
-              jcr:lastModified: 2008-03-26T12:03:00+01:00
-              jcr:mimeType: application/vnd.hippo.blank
+          /hee:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -121,20 +101,24 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /caption:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: title
+            caption: Caption
+            field: caption
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /fileLinks:
+          /content:
             jcr:primaryType: frontend:plugin
-            caption: File Links
-            field: fileLinks
+            caption: Table content
+            field: content
+            hint: Add a table using the table tool in the toolbar. Note that we don't
+              support vertical header cells at the moment
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage", removePlugins:
+                "basicstyles,justify,list,stylescombo,youtube,copyformatting,removeformat,indentblock,indentlist,indent"}'
+              ckeditor.config.overlayed.json: ''
