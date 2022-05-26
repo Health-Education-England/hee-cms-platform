@@ -23,6 +23,12 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/lks
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:authenticated: true
+                hst:roles: [site.viewer]
+                hst:type: preview
           /dental:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:virtualhost
@@ -32,6 +38,12 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/dental
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:authenticated: true
+                hst:roles: [site.viewer]
+                hst:type: preview
           /digital-transformation:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:virtualhost
@@ -41,6 +53,12 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/digital-transformation
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:authenticated: true
+                hst:roles: [site.viewer]
+                hst:type: preview
           /medical:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:virtualhost
@@ -50,6 +68,12 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/medical
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:authenticated: true
+                hst:roles: [site.viewer]
+                hst:type: preview
           /website-testing:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:virtualhost
@@ -63,6 +87,10 @@ definitions:
                   frame-ancestors ''self''', 'X-Frame-Options: SAMEORIGIN']
               hst:roles: [site.viewer]
               hst:authenticated: true
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
         /libraryservices:
           .meta:residual-child-node-category: content
           jcr:primaryType: hst:virtualhost
