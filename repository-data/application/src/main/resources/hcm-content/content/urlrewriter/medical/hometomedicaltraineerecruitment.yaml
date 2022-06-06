@@ -1,0 +1,64 @@
+/content/urlrewriter/medical/hometomedicaltraineerecruitment:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 2a34a1ff-25ea-4e79-ae63-b3cbfd3af32b
+  hippo:name: HomeToMedicalTraineeRecruitment
+  hippo:versionHistory: 2e31e2c7-b42b-4c40-b7be-ba536c8e5a81
+  /hometomedicaltraineerecruitment[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 68956c79-cafe-482a-aeca-e96aa4a888cd
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2022-06-06T11:32:32.504+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ 'medical.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"equal\"\
+      >medical.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\"\
+      \ last=\"true\">/medical-trainee-recruitment</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n    <name>Home to Medical Trainee Recruitment for hosts other than 'hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical[/]?$</from>\r\n    <to type=\"temporary-redirect\" last=\"\
+      true\">/site/medical/medical-trainee-recruitment</to>\r\n</rule>"
+  /hometomedicaltraineerecruitment[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 4fe987da-c66f-4a8e-b9f1-c3db69cbfb48
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2022-06-06T11:31:05.891+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ 'medical.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"equal\"\
+      >medical.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\"\
+      \ last=\"true\">/medical-trainee-recruitment</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n    <name>Home to Medical Trainee Recruitment for hosts other than 'hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical[/]?$</from>\r\n    <to type=\"temporary-redirect\" last=\"\
+      true\">/site/medical/medical-trainee-recruitment</to>\r\n</rule>"
+  /hometomedicaltraineerecruitment[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 1ea7e330-ec00-4bee-b527-22ed53b8db54
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2022-06-06T11:32:32.504+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2022-06-06T11:33:28.225+01:00
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ 'medical.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"equal\"\
+      >medical.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\"\
+      \ last=\"true\">/medical-trainee-recruitment</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n    <name>Home to Medical Trainee Recruitment for hosts other than 'hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical[/]?$</from>\r\n    <to type=\"temporary-redirect\" last=\"\
+      true\">/site/medical/medical-trainee-recruitment</to>\r\n</rule>"
