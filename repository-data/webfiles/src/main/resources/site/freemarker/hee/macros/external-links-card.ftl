@@ -9,9 +9,14 @@
 
                 <ul class="nhsuk-related-links-card__list">
                     <#list card.externalLinks as link>
+                        <#assign openInNewWindow=false/>
+                        <#if link.openLinkUrlNewWindow?? && link.openLinkUrlNewWindow>
+                            <#assign openInNewWindow=true/>
+                        </#if>
+
                         <li>
-                            <a class="nhsuk-related-links-card__link" href="${link.url}" target="_blank">
-                                ${link.text} (opens in new window)
+                            <a class="nhsuk-related-links-card__link" href="${link.url}" ${openInNewWindow?then('target="_blank"', '')}>
+                                ${link.text}${openInNewWindow?then(' (opens in new window)', '')}
                             </a>
                         </li>
                     </#list>
