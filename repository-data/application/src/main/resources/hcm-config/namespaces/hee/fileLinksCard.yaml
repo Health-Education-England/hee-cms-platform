@@ -33,30 +33,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hee:fileLink
             hipposysedit:validators: [required]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 88976e79-d9d3-4290-a33c-40cd9d9a74e7
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:title
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /fileLinks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:fileLinks
-            hipposysedit:primary: false
-            hipposysedit:type: hee:fileLink
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -81,32 +57,6 @@ definitions:
               jcr:data:
                 type: binary
                 resource: /namespaces/hee/fileLinksCard/prototypes/prototype/fileLink/file/hippo-resource
-              jcr:encoding: UTF-8
-              jcr:lastModified: 2008-03-26T12:03:00+01:00
-              jcr:mimeType: application/vnd.hippo.blank
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 2c323854-05a5-493b-810a-5aa6d863ae12
-          hee:title: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-05-21T13:01:16.365+01:00
-          hippostdpubwf:lastModificationDate: 2021-05-21T13:01:16.365+01:00
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:fileLinks:
-            jcr:primaryType: hee:fileLink
-            hee:text: ''
-            /hee:file:
-              jcr:primaryType: hippo:resource
-              hippo:filename: hippo:resource
-              jcr:data:
-                type: binary
-                resource: /namespaces/hee/fileLinksCard/prototypes/prototype[2]/fileLinks/file/hippo-resource
               jcr:encoding: UTF-8
               jcr:lastModified: 2008-03-26T12:03:00+01:00
               jcr:mimeType: application/vnd.hippo.blank
