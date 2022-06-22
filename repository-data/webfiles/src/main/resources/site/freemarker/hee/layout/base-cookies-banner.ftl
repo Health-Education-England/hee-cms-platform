@@ -31,8 +31,11 @@
         </script>
     </@hst.headContribution>
 
+<#-- Commenting gtmnoscript code to allow page appearing when javascript is disabled on browsers -->
+<#--
     <@hst.headContribution category="gtmNoScript">
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${gtmContainerId}"
             height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </@hst.headContribution>
+ -->
 </#if>
