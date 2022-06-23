@@ -1,10 +1,12 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]>
 <#macro table table>
-    <#assign tableData = tableComponentService.getTableCellsFromTableMarkup(table.tabledataContentBlock.content.content)>
+    <#--  To rewrite interal links, etc by the default content rewriter org.hippoecm.hst.content.rewriter.impl.SimpleContentRewriter  -->
+    <@hst.html hippohtml=table.tabledataContentBlock.content var="contentRewrittenTable"/>
+    <#assign tableData = tableComponentService.getTableCellsFromTableMarkup(contentRewrittenTable)>
     <#if tableData.headerCount gt 3>
-        <#assign cssname='nhsuk-hee-table--multicols'/>
+        <#assign cssname='nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols'/>
     <#else>
-        <#assign cssname='nhsuk-table nhsuk-hee-table'/>
+        <#assign cssname='nhsuk-hee-table nhsuk-table-responsive'/>
     </#if>
     <table role="table" class="${cssname}">
         <caption class="nhsuk-table__caption">${table.tabledataContentBlock.caption}</caption>

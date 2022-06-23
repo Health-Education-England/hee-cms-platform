@@ -22,15 +22,17 @@ public class TableUtils {
     /**
      * Look for a table element in a pre-supplied DOM. We assume it's syntactically correct but
      * if we have any issues we return an empty Node.
+     *
      * @param textContent is that content we want to parse
      * @return will be a {@link Node}, with a name of 'table' that we can reference later
      */
-    public static Optional<Element> findFirstTable(String textContent) {
-        Document parsed = Jsoup.parse(textContent);
-        Elements tableNodes = parsed.getElementsByTag("table");
+    public static Optional<Element> findFirstTable(final String textContent) {
+        final Document parsed = Jsoup.parse(textContent);
+        final Elements tableNodes = parsed.getElementsByTag("table");
 
-        if (tableNodes.size() > 0) {
-            Element e = tableNodes.get(0);
+        if (!tableNodes.isEmpty()) {
+            final Element e = tableNodes.get(0);
+
             return Optional.of(e);
         }
 
@@ -39,20 +41,21 @@ public class TableUtils {
 
     /**
      * Find the rows and columns in a table and store them as cells
+     *
      * @param tableContent is an Optional<Node> that contains the table element from a XHTML document
      * @return A {@link List} of rows, each element of which contains the columns for that row
      */
-    public static HeeTable findHeadersRowsAndCols(Element tableContent) {
-        List<List<String>> rowsAndCols = new ArrayList<>();
+    public static HeeTable findHeadersRowsAndCols(final Element tableContent) {
+        final List<List<String>> rowsAndCols = new ArrayList<>();
         List<String> headers = new ArrayList<>();
 
         if (tableContent != null && "table".equals(tableContent.tagName())) {
             // First child may be thead, or caption or straight into tbody
-            Elements tXXXElements = tableContent.children();
+            final Elements tXXXElements = tableContent.children();
             Element tbodyElement = null;
 
             // Check for thead and tbody and ignore anything else (like caption)
-            for (Element element: tXXXElements) {
+            for (final Element element : tXXXElements) {
                 if ("thead".equals(element.tagName())) {
                     headers = getHeaders(element);
                 }
@@ -63,16 +66,16 @@ public class TableUtils {
 
             // tbodyElement will be set to tbody (or empty) now
             if (tbodyElement != null && tbodyElement.children().size() > 0) {
-                Elements rows = tbodyElement.children();
+                final Elements rows = tbodyElement.children();
 
-                if (rows.size() > 0 && "tr".equals(rows.get(0).tagName())) {
-                    for (Element row : rows) {
-                        Elements cols = row.children();
+                if (!rows.isEmpty() && "tr".equals(rows.get(0).tagName())) {
+                    for (final Element row : rows) {
+                        final Elements cols = row.children();
 
                         List<String> colList = null;
 
-                        for (Element col : cols) {
-                            String value = col.text();
+                        for (final Element col : cols) {
+                            final String value = col.html();
 
                             if (colList == null) {
                                 colList = new ArrayList<>();
@@ -92,17 +95,18 @@ public class TableUtils {
 
     /**
      * Locate nd process headers in a table
+     *
      * @param theadElement is the {@link Element} that we believe contains header information
      * @return A list of table headers, as text
      */
-    private static List<String> getHeaders(Element theadElement) {
-        Elements headers = theadElement.children();
-        List<String> headerText = new ArrayList<>();
+    private static List<String> getHeaders(final Element theadElement) {
+        final Elements headers = theadElement.children();
+        final List<String> headerText = new ArrayList<>();
 
-        if (headers.size() > 0) {
-            Elements headerCells = headers.get(0).children();
+        if (!headers.isEmpty()) {
+            final Elements headerCells = headers.get(0).children();
 
-            for (Element headerCell : headerCells) {
+            for (final Element headerCell : headerCells) {
                 if ("th".equals(headerCell.tagName())) {
                     headerText.add(headerCell.text());
                 }

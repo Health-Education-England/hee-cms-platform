@@ -11,33 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c1dcb22c-c8aa-4700-9ce9-af04c4236a7a
+          jcr:uuid: 61cb9f6c-1e5c-41dc-8cd6-fbf1e1332ec0
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /caption:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:caption
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /content:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:content
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
-            hipposysedit:validators: [required]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 0af1f482-4554-44d0-84cf-56dd585d856f
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -67,26 +44,9 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:caption: ''
-          jcr:uuid: f035060b-f1db-47a7-ae39-264c798acc56
+          jcr:uuid: 71a42ca0-0297-4852-8720-b194d94e08b0
           hippostdpubwf:lastModificationDate: 2022-05-17T11:44:49.093+01:00
           hippostdpubwf:creationDate: 2022-05-17T11:44:49.093+01:00
-          /hee:content:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: d1a2cf60-6771-4fb2-abaf-ab84cfb8ec30
-          hee:caption: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2022-05-17T11:44:49.093+01:00
-          hippostdpubwf:lastModificationDate: 2022-05-17T11:44:49.093+01:00
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
           /hee:content:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
