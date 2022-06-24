@@ -125,6 +125,9 @@
                                     <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
                                         <@hee.internalLinksCard card=block.internalLinksCard/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.RightHandImageReference">
+                                        <@hee.rightHandImage image=block/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
