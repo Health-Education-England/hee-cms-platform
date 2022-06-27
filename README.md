@@ -186,7 +186,7 @@ The GitHub action workflows that handle the CICD process require the following s
 
 ## Environments
 
-You can find deployments of this application in the following environments inside Bloomreach Cloud Platform(https://missioncontrol-hee.bloomreach.cloud/#/login)
+You can find deployments of this application in the following environments inside Bloomreach Cloud Platform(https://missioncontrol.hee.bloomreach.cloud/#/login)
 
 | Name           | Platform  |
 | -------------- | --------- |
