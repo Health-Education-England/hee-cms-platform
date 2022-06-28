@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 2c63bbe8-4f49-44ef-abd2-0cd38e482067
+          jcr:uuid: b12d935d-26c3-4765-ad9d-0ed69849668c
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -41,6 +41,7 @@ definitions:
             hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: Text
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -54,7 +55,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:caption: ''
           hee:alternateText: ''
-          jcr:uuid: fd0f7be2-8e11-4227-a6d0-8737c1f59652
+          jcr:uuid: d290bf04-1a10-4f5f-a221-b3f69cd7c3b6
           hippostdpubwf:lastModificationDate: 2022-06-24T13:02:18.674+01:00
           hippostdpubwf:creationDate: 2022-06-24T13:02:18.674+01:00
           /hee:imageLink:
@@ -82,14 +83,6 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /alternateText:
-            jcr:primaryType: frontend:plugin
-            caption: Description
-            field: alternateText
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /caption:
             jcr:primaryType: frontend:plugin
             caption: Caption
@@ -97,5 +90,14 @@ definitions:
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /alternateText:
+            jcr:primaryType: frontend:plugin
+            caption: Alternative Information for an Image
+            field: alternateText
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
