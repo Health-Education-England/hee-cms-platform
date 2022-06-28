@@ -23,6 +23,7 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/lks
+              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -38,6 +39,7 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/dental
+              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -53,6 +55,7 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/digital-transformation
+              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -68,6 +71,7 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/medical
+              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -87,6 +91,7 @@ definitions:
                   frame-ancestors ''self''', 'X-Frame-Options: SAMEORIGIN']
               hst:roles: [site.viewer]
               hst:authenticated: true
+              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -103,3 +108,4 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/lks
+              hst:nochannelinfo: true
