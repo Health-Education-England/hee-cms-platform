@@ -75,6 +75,9 @@
                                     <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                         <@hee.blockLinks block=block/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.TableReference">
+                                        <@hee.table table=block/>
+                                        <#break>
                                     <#case "uk.nhs.hee.web.beans.TabsReference">
                                         <@hee.tabs tabs=block/>
                                         <#break>

@@ -4593,7 +4593,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: fdf33d93-cb1f-4a12-a954-c5f187e767d2
       hippo:name: DemoDetails
-      hippo:versionHistory: 993fefcb-e718-4901-8ca6-445f6149ead7
+      hippo:versionHistory: 36e11912-1152-43bd-9caf-1b10335f65cb
       /demodetails[1]:
         jcr:primaryType: hee:details
         jcr:mixinTypes: ['mix:referenceable']
@@ -4604,7 +4604,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-18T09:47:21.148Z
-        hippostdpubwf:lastModificationDate: 2022-01-18T09:49:52.654Z
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:14:48.390+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 64fabb6b-7848-48bd-8062-c76f72946310
         hippotranslation:locale: en
@@ -4623,6 +4623,9 @@
             </ul>
 
             <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
       /demodetails[2]:
         jcr:primaryType: hee:details
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -4633,7 +4636,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-18T09:47:21.148Z
-        hippostdpubwf:lastModificationDate: 2022-01-18T09:49:52.624Z
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:14:58.615+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 64fabb6b-7848-48bd-8062-c76f72946310
         hippotranslation:locale: en
@@ -4652,6 +4655,9 @@
             </ul>
 
             <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
       /demodetails[3]:
         jcr:primaryType: hee:details
         jcr:mixinTypes: ['mix:referenceable']
@@ -4662,9 +4668,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-01-18T09:47:21.148Z
-        hippostdpubwf:lastModificationDate: 2022-01-18T09:49:52.624Z
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:14:58.615+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-18T09:49:56.170Z
+        hippostdpubwf:publicationDate: 2022-05-23T17:15:01.939+01:00
         hippotranslation:id: 64fabb6b-7848-48bd-8062-c76f72946310
         hippotranslation:locale: en
         /hee:richStatement:
@@ -4682,6 +4688,144 @@
             </ul>
 
             <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+    /detailstwo:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 35a8e7f3-89aa-432c-9352-77d2f66fda7b
+      hippo:name: DetailsTwo
+      hippo:versionHistory: 4b18134b-e259-4082-951c-b833e9a69110
+      /detailstwo[1]:
+        jcr:primaryType: hee:details
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 621a59b8-211a-4e80-851d-47b7e4d7cded
+        hee:summary: wewewe
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T17:23:04.785+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:30:26.205+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1611355d-8f68-4c7c-96f3-5b9eabff92a8
+        hippotranslation:locale: en
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>asasasas</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /detailstwo[2]:
+        jcr:primaryType: hee:details
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 69302ff6-8fb9-4ace-9814-d92ac8635fe5
+        hee:summary: wewewe
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T17:23:04.785+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:30:34.600+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1611355d-8f68-4c7c-96f3-5b9eabff92a8
+        hippotranslation:locale: en
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>asasasas</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /detailstwo[3]:
+        jcr:primaryType: hee:details
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 76cbe55d-0eb6-494a-80f0-47368f3364f0
+        hee:summary: wewewe
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T17:23:04.785+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:30:34.600+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-05-23T17:31:21.391+01:00
+        hippotranslation:id: 1611355d-8f68-4c7c-96f3-5b9eabff92a8
+        hippotranslation:locale: en
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>asasasas</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+    /detailsthree:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: d1a9a684-4567-42b4-a0f2-c696c17c9e37
+      hippo:name: DetailsThree
+      hippo:versionHistory: 1f4489c7-93ae-4b02-ba46-61ed1bcf0de7
+      /detailsthree[1]:
+        jcr:primaryType: hee:details
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8ee754a9-d814-4235-a4cc-f364d4cfb694
+        hee:summary: Three
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T17:30:55.958+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:43:11.934+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4edbc36b-2ae4-4ec2-ac89-d5c9964fcacc
+        hippotranslation:locale: en
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Three</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /detailsthree[2]:
+        jcr:primaryType: hee:details
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: ffae36b3-75ea-4ba8-85da-7aa4b2a80ac1
+        hee:summary: Three
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T17:30:55.958+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:32:40.393+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4edbc36b-2ae4-4ec2-ac89-d5c9964fcacc
+        hippotranslation:locale: en
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Three</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /detailsthree[3]:
+        jcr:primaryType: hee:details
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0cc77da8-8da6-46a5-bfe2-430688a5e909
+        hee:summary: Three
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T17:30:55.958+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T17:32:40.393+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-05-23T17:33:24.780+01:00
+        hippotranslation:id: 4edbc36b-2ae4-4ec2-ac89-d5c9964fcacc
+        hippotranslation:locale: en
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Three</p>
+        /hee:mirror:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
   /insettext-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
@@ -5210,7 +5354,6 @@
         hee:submitButtonText: Subscribe
         hee:successUrl: https://library.hee.nhs.uk
         hippo:availability: []
-        hippostd:holder: admin
         hippostd:retainable: false
         hippostd:state: draft
         hippostd:transferable: false
@@ -5289,3 +5432,155 @@
             <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
 
             <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+  /tables:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: c2190203-fdce-4870-a1c8-2875c34ebcae
+    hippo:name: Tables
+    hippostd:foldertype: [new-table-document]
+    /tableone:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      hippo:name: TableOne
+      hippo:versionHistory: e1bb8a22-870a-4851-8844-3bc9ac5202fe
+      /tableone[1]:
+        jcr:primaryType: hee:table
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a6e868ec-80a8-40fb-8e4f-fe0e9844b9f2
+        hee:caption: I am a table
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T16:08:48.068+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-24T11:13:56.343+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 508b98eb-076e-4368-b3ed-ab15c8a4b289
+        hippotranslation:locale: document-type-locale
+        /hee:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+             <thead>
+              <tr>
+               <th scope="col">AAA</th>
+               <th scope="col">BBB</th>
+               <th scope="col">CCC</th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>A</td>
+               <td>B</td>
+               <td>C</td>
+              </tr>
+              <tr>
+               <td><a href="home">AA</a></td>
+               <td><a rel="noopener noreferrer" href="https://www.hee.nhs.uk/" target="_blank">BB</a></td>
+               <td>CC</td>
+              </tr>
+             </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+          /home:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /tableone[2]:
+        jcr:primaryType: hee:table
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 39f6ec6a-3430-4b65-8c01-b16d6790e347
+        hee:caption: I am a table
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T16:08:48.068+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T16:09:25.076+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 508b98eb-076e-4368-b3ed-ab15c8a4b289
+        hippotranslation:locale: document-type-locale
+        /hee:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+             <thead>
+              <tr>
+               <th scope="col">AAA</th>
+               <th scope="col">BBB</th>
+               <th scope="col">CCC</th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>A</td>
+               <td>B</td>
+               <td>C</td>
+              </tr>
+              <tr>
+               <td><a href="home">AA</a></td>
+               <td><a rel="noopener noreferrer" href="https://www.hee.nhs.uk/" target="_blank">BB</a></td>
+               <td>CC</td>
+              </tr>
+             </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+          /home:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+      /tableone[3]:
+        jcr:primaryType: hee:table
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 18725b8f-69ba-4384-a4ca-52fa7dc2c928
+        hee:caption: I am a table
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-05-23T16:08:48.068+01:00
+        hippostdpubwf:lastModificationDate: 2022-05-23T16:09:25.076+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-05-23T16:09:29.934+01:00
+        hippotranslation:id: 508b98eb-076e-4368-b3ed-ab15c8a4b289
+        hippotranslation:locale: document-type-locale
+        /hee:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+             <thead>
+              <tr>
+               <th scope="col">AAA</th>
+               <th scope="col">BBB</th>
+               <th scope="col">CCC</th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr>
+               <td>A</td>
+               <td>B</td>
+               <td>C</td>
+              </tr>
+              <tr>
+               <td><a href="home">AA</a></td>
+               <td><a rel="noopener noreferrer" href="https://www.hee.nhs.uk/" target="_blank">BB</a></td>
+               <td>CC</td>
+              </tr>
+             </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+          /home:
+            jcr:primaryType: hippo:facetselect
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []

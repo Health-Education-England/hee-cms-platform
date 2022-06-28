@@ -10,6 +10,7 @@ import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -48,8 +49,11 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
             final boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
             if (!showAllComments) {
                 request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
-            } else
+            } else {
                 request.setModel("visibleComments", comments);
+            }
+
+            request.setAttribute("tableComponentService", new TableComponentService());
         }
     }
 

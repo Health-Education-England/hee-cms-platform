@@ -140,6 +140,7 @@
         hee:title: Related posts
         /hee:links[1]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Briefing for library staff on Library and inter-library document
             supply and copyright in the NHS
           hee:url: http://test
@@ -154,6 +155,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[2]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Decision Tree
           hee:url: http://test.com
           hippostdpubwf:createdBy: ''
@@ -194,6 +196,11 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[6]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -322,6 +329,7 @@
         hee:title: Related posts
         /hee:links[1]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Briefing for library staff on Library and inter-library document
             supply and copyright in the NHS
           hee:url: http://test
@@ -336,6 +344,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /hee:links[2]:
           jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
           hee:text: Decision Tree
           hee:url: http://test.com
           hippostdpubwf:createdBy: ''
@@ -376,6 +385,11 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[6]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
