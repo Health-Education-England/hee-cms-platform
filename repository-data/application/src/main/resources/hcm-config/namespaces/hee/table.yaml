@@ -1,53 +1,55 @@
 definitions:
   config:
-    /hippo:namespaces/hee/externalLink:
+    /hippo:namespaces/hee/table:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 037245c3-54f3-487e-a09d-d25700fe5a0f
+      jcr:uuid: e8dc12b7-a806-433a-ab47-cdb88af1f3b7
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 38c8d4b5-5b47-4feb-bfed-1aeed2652070
+        jcr:uuid: 495cb865-880f-491e-b6b7-70305b63724c
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c6dbf8e4-caee-46d5-b5f4-59f3846625b2
+          jcr:uuid: 61cb9f6c-1e5c-41dc-8cd6-fbf1e1332ec0
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /text:
+          /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:text
+            hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /url:
+          /content:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:url
+            hipposysedit:path: hee:content
             hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
-          /openLinkUrlNewWindow:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:openLinkUrlNewWindow
-            hipposysedit:primary: false
-            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:externalLink
-          hee:text: ''
-          hee:url: ''
-          hee:openLinkUrlNewWindow: false
+          jcr:primaryType: hee:table
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:caption: ''
+          jcr:uuid: 71a42ca0-0297-4852-8720-b194d94e08b0
+          hippostdpubwf:lastModificationDate: 2022-05-17T11:44:49.093+01:00
+          hippostdpubwf:creationDate: 2022-05-17T11:44:49.093+01:00
+          /hee:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -59,29 +61,24 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /text:
+          /caption:
             jcr:primaryType: frontend:plugin
-            caption: Link text
-            field: text
+            caption: Caption
+            field: caption
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /url:
+          /content:
             jcr:primaryType: frontend:plugin
-            caption: Link URL
-            field: url
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Table content
+            field: content
+            hint: Add a table using the table tool in the toolbar. Note that we don't
+              support vertical header cells at the moment
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /openLinkUrlNewWindow:
-            jcr:primaryType: frontend:plugin
-            caption: Open link url in new window
-            field: openLinkUrlNewWindow
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage", removePlugins:
+                "basicstyles,justify,list,stylescombo,youtube,copyformatting,removeformat,indentblock,indentlist,indent"}'
+              ckeditor.config.overlayed.json: ''

@@ -7,6 +7,7 @@ import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.components.info.GuidanceComponentInfo;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
 import java.util.List;
@@ -28,6 +29,8 @@ public class GuidanceComponent extends EssentialsDocumentComponent {
             Map<String, Map<String, String>> modelToValueListMap =
                     ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
+
+            request.setAttribute("tableComponentService", new TableComponentService());
         }
     }
 }

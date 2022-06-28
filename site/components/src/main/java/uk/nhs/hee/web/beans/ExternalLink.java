@@ -16,4 +16,9 @@ public class ExternalLink extends HippoCompound {
     public String getUrl() {
         return getSingleProperty("hee:url");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:openLinkUrlNewWindow")
+    public Boolean getOpenLinkUrlNewWindow() {
+        return getSingleProperty("hee:openLinkUrlNewWindow");
+    }
 }
