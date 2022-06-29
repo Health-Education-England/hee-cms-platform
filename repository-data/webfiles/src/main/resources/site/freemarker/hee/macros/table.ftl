@@ -4,9 +4,9 @@
     <@hst.html hippohtml=table.tabledataContentBlock.content var="contentRewrittenTable"/>
     <#assign tableData = tableComponentService.getTableCellsFromTableMarkup(contentRewrittenTable)>
     <#if tableData.headerCount gt 3>
-        <#assign cssname='nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols'/>
+        <#assign cssname='nhsuk-table nhsuk-hee-table nhsuk-table-responsive nhsuk-hee-table--multicols'/>
     <#else>
-        <#assign cssname='nhsuk-hee-table nhsuk-table-responsive'/>
+        <#assign cssname='nhsuk-table nhsuk-hee-table nhsuk-table-responsive'/>
     </#if>
     <table role="table" class="${cssname}">
         <caption class="nhsuk-table__caption">${table.tabledataContentBlock.caption}</caption>
