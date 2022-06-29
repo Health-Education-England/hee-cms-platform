@@ -157,7 +157,8 @@ See also src/main/assembly/*.xml if you need to customize the distributions.
 Code is deployed automatically to Bloomreach Cloud (brCloud) by the CICD process defined using github workflow actions (./github/workflows/). 
 
 The github workflow actions are based on the following custom-made github actions:
-- https://github.com/Health-Education-England/upload-distribution-to-BR-Cloud-action 
+- https://github.com/Health-Education-England/cleanup-distributions-from-BR-Cloud-action
+- https://github.com/Health-Education-England/upload-distribution-to-BR-Cloud-action
 - https://github.com/Health-Education-England/deploy-distribution-to-BR-Cloud-action
 
 You can deploy to the following environments:
