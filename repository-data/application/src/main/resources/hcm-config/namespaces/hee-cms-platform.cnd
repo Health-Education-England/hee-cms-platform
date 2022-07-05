@@ -38,6 +38,12 @@
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:appliesToBox] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:appliesToBoxReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:atozPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -217,13 +223,13 @@
 [hee:statementCardReference] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:tabPanel] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:table] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:tableReference] > hippo:compound, hippostd:relaxed
-  orderable
-
-[hee:tabPanel] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:tabs] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
