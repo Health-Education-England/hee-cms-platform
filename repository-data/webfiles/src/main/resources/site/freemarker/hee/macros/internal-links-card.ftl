@@ -1,5 +1,6 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
+<#include "internal-link.ftl">
 
 <#macro internalLinksCard card>
     <#if card??>
@@ -10,7 +11,7 @@
                 <ul class="nhsuk-related-links-card__list">
                     <#list card.internalLinks as link>
                         <li>
-                            <a class="nhsuk-related-links-card__link" href="<@hst.link hippobean=link.document/>">
+                            <a class="nhsuk-related-links-card__link" href="${getInternalLinkURL(link.document)}">
                                 ${link.text}
                             </a>
                         </li>

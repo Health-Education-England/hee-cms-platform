@@ -1,4 +1,6 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "internal-link.ftl">
+
 <#function buttonTypeBySelection buttontype>
     <#switch buttontype>
         <#case 'primary'>
@@ -20,17 +22,13 @@
 <#macro button button>
     <#if button?? && button.buttonContentBlock??>
         <#if button.buttonContentBlock.document??>
-            <#assign link>
-                <@hst.link hippobean=button.buttonContentBlock.document/>
-            </#assign>
-            <#assign cssname>
-            	${buttonTypeBySelection(button.buttonContentBlock.buttontype)}
-            </#assign>
+            <#assign link=getInternalLinkURL(button.buttonContentBlock.document)>
+            <#assign cssname=buttonTypeBySelection(button.buttonContentBlock.buttontype)>
         </#if>
         <#if link?has_content>
-				<button class="${cssname}" type="submit"  onclick="location.href ='${link}'"> 
+				<button class="${cssname}" type="submit" onclick="location.href ='${link}'">
 					${button.buttonContentBlock.label}
-				</button>			
+				</button>
         </#if>
     </#if>
 </#macro>

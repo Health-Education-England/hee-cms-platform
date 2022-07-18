@@ -1,5 +1,6 @@
 <#ftl output_format="HTML">
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "internal-link.ftl">
 
 <#macro bulletinListItem items categoriesMap>
     <#list items as item>
@@ -38,7 +39,7 @@
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
-        <@hst.link hippobean=item var="pageURL"/>
+        <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
             <li>
@@ -62,7 +63,7 @@
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
-        <@hst.link hippobean=item var="pageURL"/>
+        <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
             <li>
@@ -242,7 +243,7 @@
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
-        <@hst.link hippobean=item var="pageURL"/>
+        <#assign pageURL=getInternalLinkURL(item)>
 
         <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || (pageURL != pageNotFoundURL || ('uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??))>
             <li>

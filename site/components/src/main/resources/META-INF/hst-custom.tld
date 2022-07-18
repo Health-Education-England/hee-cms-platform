@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<taglib xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+        version="2.1"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+
+  <description>HST Custom Tag Library</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>hst-custom-tags</short-name>
+  <uri>http://www.hippoecm.org/jsp/hst/custom</uri>
+
+  <tag>
+    <description>An extension of OOTB HST core &lt;hst:link/&gt; tag to generate URL(s) for Mini-Hub Guidance document(s). Note that the tag (&lt;hstCustom:link/&gt;) supports 'hippobean' attribute only and so continue to use OOTB core &lt;hst:link/&gt; tag to generate links based on other attributes. Refer https://javadoc.onehippo.org/14.7/tlddocs/hst-core-tags/link.html for more details on the OOTB &lt;hst:link/&gt; tag.</description>
+    <name>getMiniHubGuidanceLink</name>
+    <tag-class>uk.nhs.hee.web.tag.GetMiniHubGuidanceLink</tag-class>
+    <tei-class>uk.nhs.hee.web.tag.GetMiniHubGuidanceLink$TEI</tei-class>
+    <body-content>JSP</body-content>
+    <attribute>
+      <description>The variable name of the link tag</description>
+      <name>var</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <attribute>
+      <description>An IdentifiableContentBean object. This is typically one of your bean mapped objects</description>
+      <name>hippobean</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>org.hippoecm.hst.content.beans.standard.IdentifiableContentBean</type>
+    </attribute>
+    <attribute>
+      <description>If value is 'true' the created link will be a fully qualified link (URLs), thus starting with
+        'http://' or 'https://' etc</description>
+      <name>fullyQualified</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Boolean</type>
+    </attribute>
+    <attribute>
+      <description>If the link that is created should be the canonical link, use this attr with value true</description>
+      <name>canonical</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+      <type>java.lang.Boolean</type>
+    </attribute>
+    <attribute>
+      <description>Whether or not to escape &amp;,&gt;,&lt;,", and '. When escapeXml = true, the link can be safely used as a tag attribute (e.g, href, src, etc.) value. By default escapeXml is set to true.</description>
+      <name>escapeXml</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <type>java.lang.Boolean</type>
+    </attribute>
+    <attribute>
+      <description>Scope of var or the localization context configuration variable. "page", "request", "session" or "application". "page" scope by default.</description>
+      <name>scope</name>
+      <required>false</required>
+      <rtexprvalue>false</rtexprvalue>
+      <type>java.lang.String</type>
+    </attribute>
+    <example><![CDATA[
+    <!-- In a body component: A list of document names with summaries and links to those documents: -->
+
+     <c:forEach var="child_document" items="${document_list}">
+       <tr>
+         <hstCustom:getMiniHubGuidanceLink var="link" hippobean="${child_document}"/>
+         <td class="title">
+           <a href="${link}">${child_document.name}</a>
+         </td>
+         <td>${child_document.summary}</td>
+       </tr>
+     </c:forEach>
+
+     <!-- Refer https://javadoc.onehippo.org/14.7/tlddocs/hst-core-tags/link.html for more details on the OOTB <hst:link/> usage -->
+
+     ]]></example>
+  </tag>
+
+</taglib>

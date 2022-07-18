@@ -1,12 +1,11 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "internal-link.ftl">
 
 <#macro ctaCard ctaCard>
     <#if ctaCard??>
         <#assign openInNewWindow=false/>
         <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
-            <#assign link>
-                <@hst.link hippobean=ctaCard.ctaCardContentBlock.ctaLink.document/>
-            </#assign>
+            <#assign link=getInternalLinkURL(ctaCard.ctaCardContentBlock.ctaLink.document)>
         <#else>
             <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
             <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
