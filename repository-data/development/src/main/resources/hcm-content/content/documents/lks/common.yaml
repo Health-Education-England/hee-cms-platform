@@ -5584,3 +5584,76 @@
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+  /applies-to:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 36c2b6fc-5a62-4967-b1ce-449a742d7362
+    hippo:name: Applies To
+    hippostd:foldertype: [new-appliesToBox-folder, new-appliesToBox-document]
+    /applies-to---copyright:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: d51b94d9-eb22-40f0-8f3c-0a03fa48b241
+      hippo:name: Applies to - Copyright
+      hippo:versionHistory: 1a2371b9-ca8c-4d48-b6ce-4339bbbb8237
+      /applies-to---copyright[1]:
+        jcr:primaryType: hee:appliesToBox
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 813be94d-427f-48a4-a66c-f0d177c6154c
+        hee:england: true
+        hee:northernIreland: false
+        hee:scotland: false
+        hee:urlNorthernIreland: https://www.nimdta.gov.uk/
+        hee:urlScotland: https://www.nes.scot.nhs.uk/
+        hee:urlWales: https://heiw.nhs.wales/
+        hee:wales: false
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-07-20T19:56:55.890+01:00
+        hippostdpubwf:lastModificationDate: 2022-07-20T21:11:49.304+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 6589bd1e-729a-449d-903a-359b222f6c43
+        hippotranslation:locale: document-type-locale
+      /applies-to---copyright[2]:
+        jcr:primaryType: hee:appliesToBox
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: f47920bf-13aa-4c24-b5d8-0567a0f8fb6e
+        hee:england: true
+        hee:northernIreland: false
+        hee:scotland: false
+        hee:urlNorthernIreland: https://www.nimdta.gov.uk/
+        hee:urlScotland: https://www.nes.scot.nhs.uk/
+        hee:urlWales: https://heiw.nhs.wales/
+        hee:wales: false
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-07-20T19:56:55.890+01:00
+        hippostdpubwf:lastModificationDate: 2022-07-20T21:11:52.141+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 6589bd1e-729a-449d-903a-359b222f6c43
+        hippotranslation:locale: document-type-locale
+      /applies-to---copyright[3]:
+        jcr:primaryType: hee:appliesToBox
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 177a9449-367d-494c-be7c-36ab3a56395c
+        hee:england: true
+        hee:northernIreland: false
+        hee:scotland: false
+        hee:urlNorthernIreland: https://www.nimdta.gov.uk/
+        hee:urlScotland: https://www.nes.scot.nhs.uk/
+        hee:urlWales: https://heiw.nhs.wales/
+        hee:wales: false
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-07-20T19:56:55.890+01:00
+        hippostdpubwf:lastModificationDate: 2022-07-20T21:11:52.141+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-07-20T21:11:53.587+01:00
+        hippotranslation:id: 6589bd1e-729a-449d-903a-359b222f6c43
+        hippotranslation:locale: document-type-locale
