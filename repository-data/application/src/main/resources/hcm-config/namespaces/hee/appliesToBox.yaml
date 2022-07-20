@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a76de4bc-53e4-4059-9fc6-a84703c4a688
+          jcr:uuid: f4e642e3-5a1d-48a3-9ac4-65399fdda664
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -89,7 +89,7 @@ definitions:
           hee:urlScotland: https://www.nes.scot.nhs.uk/
           hee:urlWales: https://heiw.nhs.wales/
           hee:urlNorthernIreland: https://www.nimdta.gov.uk/
-          jcr:uuid: bf52e3af-7c84-4e25-96d2-e27622f7c0bd
+          jcr:uuid: 6c4b8819-3d76-4322-b92e-440251fe9ee6
           hippostdpubwf:lastModificationDate: 2022-07-01T08:51:17.146+01:00
           hippostdpubwf:creationDate: 2022-07-01T08:51:17.146+01:00
       /editor:templates:
@@ -107,7 +107,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: England
             field: england
-            hint: Choose which UK nation the information on this page covers.
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

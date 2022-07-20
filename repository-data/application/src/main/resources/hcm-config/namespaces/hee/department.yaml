@@ -11,73 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: d92a5b20-94fb-4b78-b0ca-72567ac76150
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
-          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /name:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:name
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /phoneNumber:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:phoneNumber
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /email:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:email
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /address:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:address
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-          /organisation:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:organisation
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /website:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:website
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 9a5a4af2-cb1d-46e6-a624-479aec9f5dc6
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /name:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -150,32 +87,12 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: 4b06f8bb-9ed7-47b2-a02b-29928b65c86d
+          jcr:uuid: 92b2fa83-43a9-4cd6-a8cc-b2a3041655f8
           hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
           hee:organisation: ''
           hee:website: ''
           hee:description: ''
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 84b58910-fd62-460f-ab10-66f5eceeaac2
-          hee:address: ''
-          hee:description: ''
-          hee:email: ''
-          hee:name: ''
-          hee:organisation: ''
-          hee:phoneNumber: ''
-          hee:website: ''
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
-          hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:

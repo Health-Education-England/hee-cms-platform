@@ -2,7 +2,7 @@
 
 <#macro appliesToBox box>
     <#if box??>
-        <#assign item=box.appliesToBoxReference/>
+        <#assign item=box.appliesToContentBlock/>
         <#assign countryIdNameMap = { "scotland": "Scotland", "wales": "Wales", "northernIreland": "Northern Ireland" }>
         <#assign appliesToList = []>
         <#assign nonAppliesToList = []>

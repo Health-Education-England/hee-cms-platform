@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: fdc1d635-77dc-4305-9f98-2bf9f3704be2
+          jcr:uuid: 72f66f1c-5af1-4a69-95da-1c4d76335631
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -20,14 +20,15 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:appliesToBoxReference
+            hipposysedit:path: hee:appliesToContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:appliesToBoxReference
-          /hee:appliesToBoxReference:
+          /hee:appliesToContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -41,9 +42,9 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /appliesToBoxReference:
+          /appliesToContentBlock:
             jcr:primaryType: frontend:plugin
-            caption: Applies To Box Link
+            caption: Select applies to box
             field: appliesToBoxReference
             hint: Choose which UK nation the information on this page covers.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
