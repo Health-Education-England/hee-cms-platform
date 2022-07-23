@@ -11,66 +11,42 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f4e642e3-5a1d-48a3-9ac4-65399fdda664
+          jcr:uuid: 7ef96d06-7b96-4d2f-854c-37c5e22629b4
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /england:
+          /appliesToEngland:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:england
+            hipposysedit:path: hee:appliesToEngland
             hipposysedit:primary: false
-            hipposysedit:type: Boolean
-          /scotland:
+            hipposysedit:type: hee:appliesToCountry
+          /appliesToNorthernIreland:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:scotland
+            hipposysedit:path: hee:appliesToNorthernIreland
             hipposysedit:primary: false
-            hipposysedit:type: Boolean
-          /wales:
+            hipposysedit:type: hee:appliesToCountry
+          /appliesToScotland:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:wales
+            hipposysedit:path: hee:appliesToScotland
             hipposysedit:primary: false
-            hipposysedit:type: Boolean
-          /northernIreland:
+            hipposysedit:type: hee:appliesToCountry
+          /appliesToWales:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:northernIreland
+            hipposysedit:path: hee:appliesToWales
             hipposysedit:primary: false
-            hipposysedit:type: Boolean
-          /urlScotland:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:urlScotland
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /urlWales:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:urlWales
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /urlNorthernIreland:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:urlNorthernIreland
-            hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: hee:appliesToCountry
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -82,16 +58,25 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:scotland: false
-          hee:northernIreland: false
-          hee:wales: false
-          hee:england: true
-          hee:urlScotland: https://www.nes.scot.nhs.uk/
-          hee:urlWales: https://heiw.nhs.wales/
-          hee:urlNorthernIreland: https://www.nimdta.gov.uk/
-          jcr:uuid: 6c4b8819-3d76-4322-b92e-440251fe9ee6
+          jcr:uuid: b13ee75d-541f-446f-9e98-676babcb5887
           hippostdpubwf:lastModificationDate: 2022-07-01T08:51:17.146+01:00
           hippostdpubwf:creationDate: 2022-07-01T08:51:17.146+01:00
+          /hee:appliesToEngland:
+            jcr:primaryType: hee:appliesToCountry
+            hee:appliesTo: true
+            hee:linkURL: https://www.hee.nhs.uk
+          /hee:appliesToNorthernIreland:
+            jcr:primaryType: hee:appliesToCountry
+            hee:appliesTo: false
+            hee:linkURL: https://www.nimdta.gov.uk
+          /hee:appliesToScotland:
+            jcr:primaryType: hee:appliesToCountry
+            hee:appliesTo: false
+            hee:linkURL: https://www.nes.scot.nhs.uk
+          /hee:appliesToWales:
+            jcr:primaryType: hee:appliesToCountry
+            hee:appliesTo: false
+            hee:linkURL: https://heiw.nhs.wales
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -103,61 +88,36 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /england:
+          /appliesToEngland:
             jcr:primaryType: frontend:plugin
             caption: England
-            field: england
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            field: appliesToEngland
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /scotland:
-            jcr:primaryType: frontend:plugin
-            caption: Scotland
-            field: scotland
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /urlScotland:
-            jcr:primaryType: frontend:plugin
-            caption: Link URL Scotland
-            field: urlScotland
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /wales:
-            jcr:primaryType: frontend:plugin
-            caption: Wales
-            field: wales
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /urlWales:
-            jcr:primaryType: frontend:plugin
-            caption: Link URL Wales
-            field: urlWales
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /northernIreland:
+          /appliesToNorthernIreland:
             jcr:primaryType: frontend:plugin
             caption: Northern Ireland
-            field: northernIreland
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            field: appliesToNorthernIreland
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /urlNorthernIreland:
+          /appliesToScotland:
             jcr:primaryType: frontend:plugin
-            caption: Link URL Northern Ireland
-            field: urlNorthernIreland
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Scotland
+            field: appliesToScotland
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /appliesToWales:
+            jcr:primaryType: frontend:plugin
+            caption: Wales
+            field: appliesToWales
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

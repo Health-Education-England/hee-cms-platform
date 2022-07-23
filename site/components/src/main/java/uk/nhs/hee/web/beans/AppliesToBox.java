@@ -2,42 +2,28 @@ package uk.nhs.hee.web.beans;
 
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
+import uk.nhs.hee.web.beans.AppliesToCountry;
 
 @HippoEssentialsGenerated(internalName = "hee:appliesToBox")
 @Node(jcrType = "hee:appliesToBox")
 public class AppliesToBox extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:england")
-    public Boolean getEngland() {
-        return getSingleProperty("hee:england");
+    @HippoEssentialsGenerated(internalName = "hee:appliesToEngland")
+    public AppliesToCountry getAppliesToEngland() {
+        return getBean("hee:appliesToEngland", AppliesToCountry.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:scotland")
-    public Boolean getScotland() {
-        return getSingleProperty("hee:scotland");
+    @HippoEssentialsGenerated(internalName = "hee:appliesToScotland")
+    public AppliesToCountry getAppliesToScotland() {
+        return getBean("hee:appliesToScotland", AppliesToCountry.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:wales")
-    public Boolean getWales() {
-        return getSingleProperty("hee:wales");
+    @HippoEssentialsGenerated(internalName = "hee:appliesToWales")
+    public AppliesToCountry getAppliesToWales() {
+        return getBean("hee:appliesToWales", AppliesToCountry.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:northernIreland")
-    public Boolean getNorthernIreland() {
-        return getSingleProperty("hee:northernIreland");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:urlScotland")
-    public String getUrlScotland() {
-        return getSingleProperty("hee:urlScotland");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:urlWales")
-    public String getUrlWales() {
-        return getSingleProperty("hee:urlWales");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:urlNorthernIreland")
-    public String getUrlNorthernIreland() {
-        return getSingleProperty("hee:urlNorthernIreland");
+    @HippoEssentialsGenerated(internalName = "hee:appliesToNorthernIreland")
+    public AppliesToCountry getAppliesToNorthernIreland() {
+        return getBean("hee:appliesToNorthernIreland", AppliesToCountry.class);
     }
 }
