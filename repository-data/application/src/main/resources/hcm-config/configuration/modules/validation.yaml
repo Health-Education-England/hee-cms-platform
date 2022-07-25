@@ -6,3 +6,6 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:link-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.LinkValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:applies-to-country-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.AppliesToCountryValidator
