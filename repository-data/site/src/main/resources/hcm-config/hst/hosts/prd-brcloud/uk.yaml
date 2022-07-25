@@ -74,6 +74,24 @@ definitions:
                 hst:authenticated: true
                 hst:roles: [site.viewer]
                 hst:type: preview
+          /quality:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:virtualhost
+            /hst:root:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:homepage: root
+              hst:locale: en
+              hst:mountpoint: /hst:hee/hst:sites/quality
+              hst:nochannelinfo: true
+              hst:roles: [site.viewer]
+              hst:authenticated: true
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:authenticated: true
+                hst:roles: [site.viewer]
+                hst:type: preview
           /website-testing:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:virtualhost
