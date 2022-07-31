@@ -145,6 +145,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/lks/casestudyimpacttypes
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /document:
             jcr:primaryType: frontend:plugin
             caption: Document
@@ -164,6 +165,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudyimpactgroups
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /sector:
             jcr:primaryType: frontend:plugin
             caption: Sector
@@ -174,6 +176,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudysectors
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /provider:
             jcr:primaryType: frontend:plugin
             caption: Organisation
@@ -184,6 +187,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/lks/casestudyproviders
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /region:
             jcr:primaryType: frontend:plugin
             caption: Region
@@ -195,6 +199,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudyregions
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /submittedDate:
             jcr:primaryType: frontend:plugin
             caption: Date Submitted

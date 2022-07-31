@@ -147,6 +147,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/lks/searchbanktopics
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /keyTerms:
             jcr:primaryType: frontend:plugin
             caption: Key Terms
@@ -161,6 +162,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/lks/searchbankkeyterms
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /strategyDocument:
             jcr:primaryType: frontend:plugin
             caption: String / Strategies document
@@ -199,3 +201,4 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/searchbankproviders
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
