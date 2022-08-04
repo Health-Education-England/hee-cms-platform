@@ -5584,3 +5584,103 @@
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+  /applies-to:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 36c2b6fc-5a62-4967-b1ce-449a742d7362
+    hippo:name: Applies To
+    hippostd:foldertype: [new-appliesToBox-folder, new-appliesToBox-document]
+    /applies-to---copyright:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: ec2ddf5d-136e-4006-bc89-c9e1cee4e98f
+      hippo:name: Applies to - Copyright
+      hippo:versionHistory: 2a076848-b8db-493a-a053-5575fe93f245
+      /applies-to---copyright[1]:
+        jcr:primaryType: hee:appliesToBox
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0bab273c-3cd8-40ac-9c7e-692769f490d9
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-07-23T10:58:24.111+01:00
+        hippostdpubwf:lastModificationDate: 2022-07-23T12:20:16.567+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4cb12dc4-02b8-4413-a3ad-ee555b6f65cf
+        hippotranslation:locale: document-type-locale
+        /hee:appliesToEngland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: true
+          hee:linkURL: https://www.google.co.uk/
+        /hee:appliesToNorthernIreland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: false
+          hee:linkURL: https://www.nimdta.gov.uk
+        /hee:appliesToScotland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: true
+          hee:linkURL: https://www.nes.scot.nhs.uk
+        /hee:appliesToWales:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: false
+          hee:linkURL: https://heiw.nhs.wales
+      /applies-to---copyright[2]:
+        jcr:primaryType: hee:appliesToBox
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 4ba2cf9f-64fe-4ddb-9908-d98504743a24
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-07-23T10:58:24.111+01:00
+        hippostdpubwf:lastModificationDate: 2022-07-23T12:20:19.785+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4cb12dc4-02b8-4413-a3ad-ee555b6f65cf
+        hippotranslation:locale: document-type-locale
+        /hee:appliesToEngland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: true
+          hee:linkURL: https://www.google.co.uk/
+        /hee:appliesToNorthernIreland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: false
+          hee:linkURL: https://www.nimdta.gov.uk
+        /hee:appliesToScotland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: true
+          hee:linkURL: https://www.nes.scot.nhs.uk
+        /hee:appliesToWales:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: false
+          hee:linkURL: https://heiw.nhs.wales
+      /applies-to---copyright[3]:
+        jcr:primaryType: hee:appliesToBox
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f6c28cb2-13c4-4bf9-ab05-69e06b36b565
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-07-23T10:58:24.111+01:00
+        hippostdpubwf:lastModificationDate: 2022-07-23T12:20:19.785+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-07-23T12:20:21.792+01:00
+        hippotranslation:id: 4cb12dc4-02b8-4413-a3ad-ee555b6f65cf
+        hippotranslation:locale: document-type-locale
+        /hee:appliesToEngland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: true
+          hee:linkURL: https://www.google.co.uk/
+        /hee:appliesToNorthernIreland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: false
+          hee:linkURL: https://www.nimdta.gov.uk
+        /hee:appliesToScotland:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: true
+          hee:linkURL: https://www.nes.scot.nhs.uk
+        /hee:appliesToWales:
+          jcr:primaryType: hee:appliesToCountry
+          hee:appliesTo: false
+          hee:linkURL: https://heiw.nhs.wales
