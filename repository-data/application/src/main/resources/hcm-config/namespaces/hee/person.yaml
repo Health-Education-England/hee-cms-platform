@@ -181,6 +181,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/persontitles
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /pronouns:
             jcr:primaryType: frontend:plugin
             caption: Pronouns
@@ -192,6 +193,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/personpronouns
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /jobTitle:
             jcr:primaryType: frontend:plugin
             caption: Job Title
