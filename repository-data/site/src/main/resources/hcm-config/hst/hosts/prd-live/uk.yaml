@@ -1,13 +1,13 @@
 definitions:
   config:
-    /hst:hst/hst:hosts/prd-brcloud/uk:
+    /hst:hst/hst:hosts/prd-live/uk:
       .meta:residual-child-node-category: content
       jcr:primaryType: hst:virtualhost
+      hst:responseheaders: ['Content-Security-Policy: frame-ancestors ''self''', 'X-Frame-Options:
+          SAMEORIGIN']
       hst:scheme: https
       hst:showcontextpath: false
       hst:showport: false
-      hst:responseheaders: ['Content-Security-Policy: frame-ancestors ''self''', 'X-Frame-Options:
-          SAMEORIGIN']
       /nhs:
         .meta:residual-child-node-category: content
         jcr:primaryType: hst:virtualhost
@@ -23,7 +23,6 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/lks
-              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -39,7 +38,6 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/dental
-              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -55,7 +53,6 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/digital-transformation
-              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -71,7 +68,6 @@ definitions:
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/medical
-              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -84,12 +80,11 @@ definitions:
             /hst:root:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
+              hst:authenticated: true
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/quality
-              hst:nochannelinfo: true
-              hst:roles: [site.viewer]
-              hst:authenticated: true
+              hst:roles: site.viewer
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -102,41 +97,17 @@ definitions:
             /hst:root:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
+              hst:authenticated: true
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/website-testing
               hst:responseheaders: ['robots: noindex, nofollow', 'Content-Security-Policy:
                   frame-ancestors ''self''', 'X-Frame-Options: SAMEORIGIN']
               hst:roles: [site.viewer]
-              hst:authenticated: true
-              hst:nochannelinfo: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
                 hst:type: preview
-          /gprecruitment:
-            .meta:residual-child-node-category: content
-            jcr:primaryType: hst:virtualhost
-            /hst:root:
-              .meta:residual-child-node-category: content
-              jcr:primaryType: hst:mount
-              hst:homepage: root
-              hst:locale: en
-              hst:mountpoint: /hst:hee/hst:sites/medical
-              hst:nochannelinfo: true
-        /libraryservices:
-          .meta:residual-child-node-category: content
-          jcr:primaryType: hst:virtualhost
-          /kfh:
-            .meta:residual-child-node-category: content
-            jcr:primaryType: hst:virtualhost
-            /hst:root:
-              .meta:residual-child-node-category: content
-              jcr:primaryType: hst:mount
-              hst:homepage: root
-              hst:locale: en
-              hst:mountpoint: /hst:hee/hst:sites/lks
-              hst:nochannelinfo: true
         /healthcareers:
           .meta:residual-child-node-category: content
           jcr:primaryType: hst:virtualhost
@@ -146,12 +117,11 @@ definitions:
             /hst:root:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
+              hst:authenticated: true
               hst:homepage: root
               hst:locale: en
               hst:mountpoint: /hst:hee/hst:sites/health-careers
-              hst:nochannelinfo: true
               hst:roles: [site.viewer]
-              hst:authenticated: true
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount

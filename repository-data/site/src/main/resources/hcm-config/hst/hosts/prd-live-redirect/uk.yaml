@@ -1,0 +1,37 @@
+definitions:
+  config:
+    /hst:hst/hst:hosts/prd-live-redirect/uk:
+      .meta:residual-child-node-category: content
+      jcr:primaryType: hst:virtualhost
+      hst:responseheaders: ['Content-Security-Policy: frame-ancestors ''self''', 'X-Frame-Options:
+          SAMEORIGIN']
+      hst:scheme: https
+      hst:showcontextpath: false
+      hst:showport: false
+      /nhs:
+        .meta:residual-child-node-category: content
+        jcr:primaryType: hst:virtualhost
+        /hee:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:virtualhost
+          /gprecruitment:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:virtualhost
+            /hst:root:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:homepage: root
+              hst:locale: en
+              hst:mountpoint: /hst:hee/hst:sites/medical
+        /libraryservices:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:virtualhost
+          /kfh:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:virtualhost
+            /hst:root:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:homepage: root
+              hst:locale: en
+              hst:mountpoint: /hst:hee/hst:sites/lks
