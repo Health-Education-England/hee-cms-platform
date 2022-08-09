@@ -4,14 +4,23 @@
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.banner" -->
 
 <#if document??>
-    <div class="nhsuk-phase-banner">
-        <div class="nhsuk-width-container">
-            <p class="nhsuk-phase-banner__content">
-                <strong class="nhsuk-tag nhsuk-phase-banner__content__tag">${document.tag}</strong>
-                <span class="nhsuk-phase-banner__text">
-                    <@hst.html hippohtml=document.copy contentRewriter=bannerContentRewriter/>
-                </span>
-            </p>
+    <#if document.tag?? && document.tag?has_content>
+        <div class="nhsuk-hee-phasebanner">
+            <div class="nhsuk-width-container">
+                <p class="nhsuk-hee-phasebanner__content">
+                    <span class="nhsuk-hee-phasebanner__tag">${document.tag}</span>
+                     <@hst.html hippohtml=document.copy contentRewriter=bannerContentRewriter/>
+                </p>
+            </div>
         </div>
-    </div>
+    <#else>
+        <div class="nhsuk-hee-phasebanner nhsuk-hee-phasebanner--notag">
+            <div class="nhsuk-width-container">
+                <p class="nhsuk-hee-phasebanner__content">
+                    <span class="nhsuk-hee-phasebanner__tag"></span>
+                    <@hst.html hippohtml=document.copy contentRewriter=bannerContentRewriter/>
+                </p>
+            </div>
+        </div>
+    </#if>
 </#if>
