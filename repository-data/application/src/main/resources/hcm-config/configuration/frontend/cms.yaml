@@ -2,3 +2,5 @@ definitions:
   config:
     /hippo:configuration/hippo:frontend/cms/cms-services/localeProviderService/en:
       country: gb
+    /hippo:configuration/hippo:frontend/cms/cms-services/assetValidationService:
+      extensions.allowed: '*.pdf, *.doc, *.docx, *.ppt, *.pptx, *.xls, *.xlsx'
