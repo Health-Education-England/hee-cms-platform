@@ -5,4 +5,6 @@ definitions:
     /hippo:configuration/hippo:frontend/cms/cms-services/assetValidationService:
       extensions.allowed: ['*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
         '*.xlsx', '*.odt', '*.fodt', '*.odp', '*.fodp', '*.ods', '*.fods', '*.odg',
-        '*.fodg']
+        '*.fodg', '*.mrc', '*.txt']
+    /hippo:configuration/hippo:frontend/cms/cms-services/imageValidationService:
+      extensions.allowed: ['*.jpg', '*.jpeg', '*.gif', '*.png']
