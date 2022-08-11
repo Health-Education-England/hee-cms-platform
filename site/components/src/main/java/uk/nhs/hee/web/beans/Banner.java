@@ -16,4 +16,9 @@ public class Banner extends BaseDocument {
     public HippoHtml getCopy() {
         return getHippoHtml("hee:copy");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:copy1")
+    public HippoHtml getCopy1() {
+        return getHippoHtml("hee:copy1");
+    }
 }

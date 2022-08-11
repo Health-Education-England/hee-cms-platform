@@ -23,4 +23,13 @@
             </div>
         </div>
     </#if>
+    <#if document.copy1.getContent()?has_content >
+        <div class="nhsuk-hee-phasebanner">
+            <div class="nhsuk-width-container">
+                <p class="nhsuk-hee-phasebanner__content">
+                    <@hst.html hippohtml=document.copy1 contentRewriter=bannerContentRewriter/>
+                </p>
+            </div>
+        </div>
+    </#if>
 </#if>
