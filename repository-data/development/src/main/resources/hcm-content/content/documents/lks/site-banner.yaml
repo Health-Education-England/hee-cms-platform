@@ -1,61 +1,77 @@
 /content/documents/lks/site-banner:
+  .meta:order-before: minihubs
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 18641f55-6d9a-4d46-bbbb-687c535cdc2d
   hippo:name: Site Banner
-  hippo:versionHistory: b94313ab-6855-4348-a91a-55f02eaff9f5
+  hippo:versionHistory: 4223e70f-17d4-4712-9a62-9c3d04d65d2f
   /site-banner[1]:
     jcr:primaryType: hee:banner
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 5eabbc3f-859f-4ac8-bad7-a1fa91abaeac
     hee:tag: Alpha
+    hee:tag1: ''
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-09-21T16:36:32.961+01:00
-    hippostdpubwf:lastModificationDate: 2021-10-06T20:06:54.640+01:00
+    hippostdpubwf:lastModificationDate: 2022-08-10T20:45:12.149+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: f0bdbedb-d3db-4c5f-a32f-f48dd5eef76b
     hippotranslation:locale: en
     /hee:copy:
       jcr:primaryType: hippostd:html
-      hippostd:content: <p>This is a new service - your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
+      hippostd:content: <p>This is a new service - your <a rel="noopener noreferrer"
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
         target="_blank">feedback</a> will help us to improve it.</p>
+    /hee:copy1:
+      jcr:primaryType: hippostd:html
+      hippostd:content: ''
   /site-banner[2]:
     jcr:primaryType: hee:banner
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
     jcr:uuid: f04a2365-3126-4900-9e6d-09241e03ea90
     hee:tag: Alpha
+    hee:tag1: ''
     hippo:availability: [preview]
     hippostd:retainable: false
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-09-21T16:36:32.961+01:00
-    hippostdpubwf:lastModificationDate: 2021-10-06T20:06:59.095+01:00
+    hippostdpubwf:lastModificationDate: 2022-08-10T20:45:17.563+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippotranslation:id: f0bdbedb-d3db-4c5f-a32f-f48dd5eef76b
     hippotranslation:locale: en
     /hee:copy:
       jcr:primaryType: hippostd:html
-      hippostd:content: <p>This is a new service - your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
+      hippostd:content: <p>This is a new service - your <a rel="noopener noreferrer"
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
         target="_blank">feedback</a> will help us to improve it.</p>
+    /hee:copy1:
+      jcr:primaryType: hippostd:html
+      hippostd:content: ''
   /site-banner[3]:
     jcr:primaryType: hee:banner
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: f77f9eb6-057a-4dc1-8328-87d96b03a70f
     hee:tag: Alpha
+    hee:tag1: ''
     hippo:availability: [live]
     hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-09-21T16:36:32.961+01:00
-    hippostdpubwf:lastModificationDate: 2021-10-06T20:06:59.095+01:00
+    hippostdpubwf:lastModificationDate: 2022-08-10T20:45:17.563+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2021-10-06T20:07:00.899+01:00
+    hippostdpubwf:publicationDate: 2022-08-10T20:45:19.172+01:00
     hippotranslation:id: f0bdbedb-d3db-4c5f-a32f-f48dd5eef76b
     hippotranslation:locale: en
     /hee:copy:
       jcr:primaryType: hippostd:html
-      hippostd:content: <p>This is a new service - your <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
+      hippostd:content: <p>This is a new service - your <a rel="noopener noreferrer"
+        href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu"
         target="_blank">feedback</a> will help us to improve it.</p>
+    /hee:copy1:
+      jcr:primaryType: hippostd:html
+      hippostd:content: ''
