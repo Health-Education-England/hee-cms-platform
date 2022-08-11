@@ -78,6 +78,9 @@
                                             <#case "uk.nhs.hee.web.beans.AppliesToBoxReference">
                                                 <@hee.appliesToBox box=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.NavMap">
+                                                <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.DetailsReference">
                                                 <@hee.details block=block/>
                                                 <#break>

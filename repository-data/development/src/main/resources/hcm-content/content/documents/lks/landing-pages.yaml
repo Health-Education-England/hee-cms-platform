@@ -17,14 +17,16 @@
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 85363fcb-93f7-4d7b-8a8a-42f5c2a71544
+      hee:addToAZ: false
       hee:summary: Get the latest information and advice on LKS
       hee:title: Knowledge management
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:05:28.202Z
+      hippostdpubwf:lastModificationDate: 2022-08-10T14:27:27.349+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f903e996-a7ca-4587-a063-78f26159877e
       hippotranslation:locale: en
@@ -178,23 +180,136 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c00b5009-8337-4955-8d70-d173191133fe
     hippo:name: About
-    hippo:versionHistory: 75d7546b-6d7e-4922-b2ec-ac8a51bb89b5
+    hippo:versionHistory: f6e00ce0-7d25-43b3-b6d5-c9f8333b8a32
     /about[1]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:versionable']
       jcr:uuid: b9640efa-88d7-441e-81fb-2456f80875c7
-      hee:summary: Summary
+      hee:addToAZ: false
+      hee:summary: Summary ldkasl;kfhaslkfhaslk
       hee:title: About
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:57.197Z
+      hippostdpubwf:lastModificationDate: 2022-08-10T14:40:31.396+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:navMap
+        hee:mapEducation: higher
+        hee:title: Higher regions
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:links[1]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-east
+          hee:regionId: ''
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>eyrtjdgsakdsa</p>
+        /hee:links[2]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-lon
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[3]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-mid
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[4]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-ney
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[5]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-nw
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[6]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-se
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[7]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-sw
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:contentBlocks[2]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
         hee:header: Card group header
@@ -226,18 +341,131 @@
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 245b5461-d5a5-4e87-9cae-25c0933f18b1
-      hee:summary: Summary
+      hee:addToAZ: false
+      hee:summary: Summary ldkasl;kfhaslkfhaslk
       hee:title: About
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:08.344Z
+      hippostdpubwf:lastModificationDate: 2022-08-10T16:10:43.516+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:navMap
+        hee:mapEducation: higher
+        hee:title: Higher regions
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:links[1]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-east
+          hee:regionId: ''
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>eyrtjdgsakdsa</p>
+        /hee:links[2]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-lon
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[3]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-mid
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[4]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-ney
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[5]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-nw
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[6]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-se
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[7]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-sw
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:contentBlocks[2]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
         hee:header: Card group header
@@ -269,19 +497,132 @@
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 202deb78-815a-42fc-b43f-704cbfd2d852
-      hee:summary: Summary
+      hee:addToAZ: false
+      hee:summary: Summary ldkasl;kfhaslkfhaslk
       hee:title: About
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-05T11:06:13.862+07:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:59:57.197Z
+      hippostdpubwf:lastModificationDate: 2022-08-10T14:40:31.396+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-12-07T01:00:00.176Z
+      hippostdpubwf:publicationDate: 2022-08-10T14:40:34.759+01:00
       hippotranslation:id: 1af02435-3e4e-4686-891f-75605b70219d
       hippotranslation:locale: en
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:navMap
+        hee:mapEducation: higher
+        hee:title: Higher regions
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:links[1]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-east
+          hee:regionId: ''
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>eyrtjdgsakdsa</p>
+        /hee:links[2]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-lon
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[3]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-mid
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[4]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-ney
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[5]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-nw
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[6]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-se
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[7]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: higher-sw
+          hee:text: ''
+          hee:url: /
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:contentBlocks[2]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: "Card group summary\r\n\r\nCard group summary"
         hee:header: Card group header
