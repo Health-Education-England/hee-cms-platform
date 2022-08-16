@@ -1,17 +1,49 @@
 package uk.nhs.hee.web.beans;
 
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
+import java.util.List;
 
-/**
- * Extends from {@link Guidance} as {@code hee:report} DocumentType has essentially been duplicated
- * from {@code hee:guidance} DocumentType for now, but without {@code hee:addToAZ} field.
- *
- * This setup needs to be revisited and amended if required to accommodate
- * future updates to {@code hee:report} DocumentType.
- */
-@HippoEssentialsGenerated(internalName = "hee:report", allowModifications = false)
+@HippoEssentialsGenerated(internalName = "hee:report")
 @Node(jcrType = "hee:report")
-public class Report extends Guidance {
+public class Report extends BaseDocument {
+    @HippoEssentialsGenerated(internalName = "hee:title")
+    public String getTitle() {
+        return getSingleProperty("hee:title");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:summary")
+    public String getSummary() {
+        return getSingleProperty("hee:summary");
+    }
+
+    public <T extends HippoBean> List<T> getContentBlocks() {
+        return getChildBeansByName("hee:contentBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
+    public PageLastNextReview getPageLastNextReview() {
+        return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    }
+
+    public <T extends HippoBean> List<T> getRightHandBlocks() {
+        return getChildBeansByName("hee:rightHandBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:relatedContent", allowModifications = false)
+    public ContentCards getRelatedContent() {
+        return getBean("hee:relatedContent", ContentCards.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:microHero")
+    public ImageSetWithCaption getMicroHero() {
+        return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
+    }
 }

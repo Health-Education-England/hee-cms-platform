@@ -124,6 +124,9 @@ definitions:
           /atozlisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/atozlisting-main.ftl
+          /report-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/report-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -209,7 +212,7 @@ definitions:
               hst:componentclassname: uk.nhs.hee.web.components.ReportComponent
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Report
-              hst:template: guidance-main
+              hst:template: report-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
