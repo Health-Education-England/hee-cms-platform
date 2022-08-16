@@ -8,6 +8,7 @@ import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
 import java.util.List;
@@ -68,6 +69,8 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
             Map<String, Map<String, String>> modelToValueListMap =
                     ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
+
+            request.setAttribute("tableComponentService", new TableComponentService());
         }
     }
 }
