@@ -23,7 +23,7 @@
             </div>
         </div>
     </#if>
-    <#if document.copy1.getContent()?has_content >
+    <#if document.copy1?? && document.copy1.getContent()?has_content >
         <div class="nhsuk-hee-phasebanner">
             <div class="nhsuk-width-container">
                 <p class="nhsuk-hee-phasebanner__content">
