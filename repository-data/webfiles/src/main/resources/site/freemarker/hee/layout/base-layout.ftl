@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, hstRequestContext.contentBean.title?has_content?then(hstRequestContext.contentBean.title, document.title?has_content?then(document.title, '')))} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}</title>
+    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, document.title!)} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
