@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:configuration/hippo:domains/content-dental:
+    /hippo:configuration/hippo:domains/content-dental-local:
       jcr:primaryType: hipposys:domain
       /content-domain:
         jcr:primaryType: hipposys:domainrule
@@ -9,14 +9,14 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/dental
+          hipposys:value: /content/documents/dental/landing-pages
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [dental-author]
+          value: [dental-author-local]
         hipposys:role: author
         hipposys:users:
           .meta:category: system
@@ -29,7 +29,7 @@ definitions:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [dental-editor]
+          value: [dental-editor-local]
         hipposys:role: editor
         hipposys:users:
           .meta:category: system
@@ -43,7 +43,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/dental
+          hipposys:value: /content/gallery/dental/landing-pages
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /dental-assets-and-descendants:
@@ -51,14 +51,14 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/dental
+          hipposys:value: /content/assets/dental/landing-pages
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [dental-reader, dental-editor-local]
+          value: [dental-reader]
         hipposys:role: readonly
         hipposys:users:
           .meta:category: system

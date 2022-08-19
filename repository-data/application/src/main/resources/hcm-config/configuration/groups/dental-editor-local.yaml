@@ -1,0 +1,16 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:groups/dental-editor-local:
+      jcr:primaryType: hipposys:group
+      hipposys:securityprovider: internal
+      hipposys:userroles:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: [xm.dashboard.user, xm.channel.webmaster, xm.channel.user, xm.cms.user,
+          xm.content.user]
+      hipposys:members:
+        .meta:category: system
+        .meta:add-new-system-values: true
+        type: string
+        value: []
