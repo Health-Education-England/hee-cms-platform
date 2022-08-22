@@ -23,7 +23,7 @@
                         <#assign openInNewWindow=false/>
                     <#else>
                         <#assign linkHREF="${link.url}">
-                        <#assign openInNewWindow=true/>
+                        <#assign openInNewWindow=false/>
                     </#if>
 
                     <#if linkHREF?has_content>
