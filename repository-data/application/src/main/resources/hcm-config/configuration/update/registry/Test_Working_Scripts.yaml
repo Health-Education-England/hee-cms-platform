@@ -1,0 +1,30 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/Test_Working_Scripts:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: ''
+      hipposys:dryrun: true
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//*[@hippostd:state='published']/element(*,
+        hippostd:html)[jcr:contains(@hippostd:content, 'target="_blank"')]
+      hipposys:script: "// published \r\n// /jcr:root/content/documents/website-testing//element(*,\
+        \ hippo:document)[@hippostd:stateSummary = 'live' and @hippostd:state = 'published']\r\
+        \n\r\n// unpublished \r\n// /jcr:root/content/documents/website-testing//element(*,\
+        \ hippo:document)[@hippostd:stateSummary != 'live' and @hippostd:state = 'unpublished']\r\
+        \n\r\n// /jcr:root/content/documents/website-testing//element(*,hippo:mirror)\r\
+        \n// /jcr:root/content/documents/website-testing//element(*,hippo:mirror)[@hippo:docbase]\r\
+        \n\r\n// //element(*, hippo:resource)\r\n\r\n///jcr:root/content/documents//*[@hippostd:state='published']/element(*,\
+        \ hippostd:html)[jcr:contains(@hippostd:content, 'target=\"_blank\"')]\r\n\
+        \r\npackage org.hippoecm.frontend.plugins.cms.admin.updater\r\n\r\nimport\
+        \ org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nclass Test_Working_Scripts\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n  boolean doUpdate(Node node) {\r\
+        \n      \r\n      //log.debug \"${node.getPath()} \"\r\n      if (  node.hasProperty(\"\
+        hippostd:content\"))\r\n        log.debug \" ${node.getProperty(\"hippostd:content\"\
+        ).getString().replaceAll('target=\"_blank\"','')} }\"\r\n      else\r\n  \
+        \      log.debug \" - \"\r\n      \r\n      return false   \r\n  }\r\n\r\n\
+        \  boolean undoUpdate(Node node) {\r\n    throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n  }\r\n\r\n  \r\n\r\n}"
+      hipposys:throttle: 1000
