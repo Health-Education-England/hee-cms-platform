@@ -3,7 +3,7 @@
 <#macro ctaCard ctaCard>
     <#if ctaCard??>
         <#assign openInNewWindow=false/>
-        <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
+        <#if ctaCard.ctaCardContentBlock?? && ctaCard.ctaCardContentBlock.ctaLink.document??>
             <#assign link>
                 <@hst.link hippobean=ctaCard.ctaCardContentBlock.ctaLink.document/>
             </#assign>
@@ -13,7 +13,7 @@
                 <#assign openInNewWindow=true/>
             </#if>
         </#if>
-        <#if link?has_content>
+        <#if link?? && link?has_content>
             <div class="nhsuk-card nhsuk-card--clickable">
                 <@hst.link var="cardImageLink" hippobean=ctaCard.ctaCardContentBlock.cardImage />
                 <#if cardImageLink??>
