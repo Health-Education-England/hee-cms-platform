@@ -146,6 +146,8 @@
 
     <!-- project logging -->
     <Logger name="uk.nhs.hee.web" level="debug"/>
+    <!-- Added this as part of 14.7.3 to 14.7.8 to log updater script execution INFO output in case if the script has been run using "Log Files" Log Target -->
+    <Logger name="org.onehippo.repository.update.UpdaterExecutionReport" level="info"/>
     <Logger name="org.hippoecm.hst.core.container.DefaultPageErrorHandler" level="debug"/>
 
     <Root level="warn">

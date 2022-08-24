@@ -444,6 +444,11 @@
                   <project.basedir>${project.basedir}</project.basedir>
                   <send.usage.statistics.to.hippo>true</send.usage.statistics.to.hippo>
 
+                  <!-- Enables "Log Target" feature (to choose whether to log execution output on "Repository" or on "Log Files") for updater scripts. -->
+                  <!-- Refer "Log Target" section on https://xmdocumentation.bloomreach.com/library/concepts/update/run-an-updater-script.html#scroll_execution-options for more details. -->
+                  <!-- Note that "Log Target" is enabled by default for local environments and so "groovy.persist.logs.supported" property doesn't requires to be setting, but adding here for completeness. -->
+                  <groovy.persist.logs.supported>true</groovy.persist.logs.supported>
+
                   <!-- Example to pass JavaMail connection factory JNDI resource attribute values as system properties -->
                   <!-- Alternatively these could directly be configured on 'conf/context-dev.xml'  -->
                   <!-- <mail.smtp.host><<mail.smtp.host>></mail.smtp.host></mail.smtp.host>

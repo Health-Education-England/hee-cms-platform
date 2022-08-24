@@ -103,6 +103,8 @@
 
     <!-- project logging -->
     <Logger name="uk.nhs.hee.web" level="info"/>
+    <!-- Added this as part of 14.7.3 to 14.7.8 to log updater script execution INFO output in case if the script has been run using "Log Files" Log Target -->
+    <Logger name="org.onehippo.repository.update.UpdaterExecutionReport" level="info"/>
 
     <Root level="warn">
       <AppenderRef ref="site"/>
