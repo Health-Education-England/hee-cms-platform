@@ -103,7 +103,7 @@ jobs:
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'production' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2.1
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
