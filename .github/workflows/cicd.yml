@@ -100,7 +100,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'development' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2.1
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -169,7 +169,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'test' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2.1
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -238,7 +238,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'staging' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2.1
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
