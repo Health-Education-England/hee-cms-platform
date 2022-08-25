@@ -1,18 +1,17 @@
 definitions:
   config:
-    /hst:platform/hst:hosts/stg-brcloud/cloud:
+    /hst:platform/hst:hosts/br-cloud/cloud:
       jcr:primaryType: hst:virtualhost
       hst:scheme: https
       hst:showcontextpath: true
       hst:showport: false
       /bloomreach:
         jcr:primaryType: hst:virtualhost
-        /hee:
+        /${brc.namespace}:
           jcr:primaryType: hst:virtualhost
-          /staging:
+          /${brc.environmentname}:
             jcr:primaryType: hst:virtualhost
             /hst:root:
               jcr:primaryType: hst:mount
               hst:ismapped: false
               hst:namedpipeline: WebApplicationInvokingPipeline
-              hst:alias: cms-mount
