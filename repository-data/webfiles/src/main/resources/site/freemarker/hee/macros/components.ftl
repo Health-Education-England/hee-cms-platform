@@ -15,6 +15,7 @@
 <#include "block-links.ftl">
 <#include "anchor-links.ftl">
 <#include "media.ftl">
+<#include "table.ftl">
 <#include "tabs.ftl">
 <#include "inset.ftl">
 <#include "button.ftl">
@@ -23,3 +24,5 @@
 <#include "warning-callout.ftl">
 <#include "statement-card.ftl">
 <#include "newsletter-subscribe-form.ftl">
+<#include "rightHandImage.ftl">
+<#include "applies-to-box.ftl">

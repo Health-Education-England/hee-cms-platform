@@ -1,0 +1,28 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateHippoDocbaseValuesToUUID:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 100
+      hipposys:description: This script is to update all '/' docbase values under
+        hippo mirror to UUID value of 'cafebabe-cafe-babe-cafe-babecafebabe'
+      hipposys:dryrun: true
+      hipposys:loglevel: DEBUG
+      hipposys:parameters: ''
+      hipposys:query: //element(*,hippo:mirror)[jcr:like(@hippo:docbase,'/')]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport\
+        \ javax.jcr.Node\r\nimport javax.jcr.RepositoryException\r\nimport javax.jcr.Session\r\
+        \n\r\nclass UpdateHippoDocbaseValuesToUUID extends BaseNodeUpdateVisitor {\r\
+        \n\r\n    boolean doUpdate(Node node) {\r\n \r\n        /*\r\n        String\
+        \ docbaseValue = node.getProperty(\"hippo:docbase\").getString()\r\n     \
+        \   def docbasePath = node.getSession().getNodeByIdentifier(docbaseValue).getPath()\r\
+        \n        log.debug \"Before | ${node.getPath()} | ${docbaseValue} | ${docbasePath}\"\
+        \r\n        */\r\n      \r\n        node.setProperty(\"hippo:docbase\", \"\
+        cafebabe-cafe-babe-cafe-babecafebabe\")    \r\n\r\n        String docbaseValue1\
+        \ = node.getProperty(\"hippo:docbase\").getString()\r\n        def docbasePath1\
+        \ = node.getSession().getNodeByIdentifier(docbaseValue1).getPath()\r\n   \
+        \     log.debug \"After | ${node.getPath()} | ${docbaseValue1} | ${docbasePath1}\"\
+        \r\n        return true\r\n  }\r\n\r\n  boolean undoUpdate(Node node) {\r\n\
+        \    throw new UnsupportedOperationException('Updater does not implement undoUpdate\
+        \ method')\r\n  }\r\n\r\n}"
+      hipposys:throttle: 1000

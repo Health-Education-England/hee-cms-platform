@@ -61,6 +61,9 @@
                                             <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                                 <@hee.media media=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.TableReference">
+                                                <@hee.table table=block/>
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.TabsReference">
                                                 <@hee.tabs tabs=block/>
                                                 <#break>
@@ -71,6 +74,12 @@
                                                 <@hee.inset inset=block/>                                             
                                             <#case "uk.nhs.hee.web.beans.ButtonReference">
                                                 <@hee.button button=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.AppliesToBoxReference">
+                                                <@hee.appliesToBox box=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.NavMap">
+                                                <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.DetailsReference">
                                                 <@hee.details block=block/>
@@ -124,6 +133,9 @@
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
                                         <@hee.internalLinksCard card=block.internalLinksCard/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.RightHandImageReference">
+                                        <@hee.rightHandImage image=block/>
                                         <#break>
                                     <#default>
                                 </#switch>

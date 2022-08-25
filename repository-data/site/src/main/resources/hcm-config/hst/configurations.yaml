@@ -8,11 +8,12 @@ definitions:
           /pagenotfound:
             jcr:primaryType: hst:sitemapitem
             hst:componentconfigurationid: hst:pages/pagenotfound
-            hst:pagetitle: Not Found Page
+            hst:pagetitle: Page not found
             hst:refId: pagenotfound
           /_any_:
             jcr:primaryType: hst:sitemapitem
             hst:componentconfigurationid: hst:pages/pagenotfound
+            hst:pagetitle: Page not found
           /root:
             jcr:primaryType: hst:sitemapitem
             hst:componentconfigurationid: hst:pages/homepage
@@ -124,6 +125,9 @@ definitions:
           /atozlisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/atozlisting-main.ftl
+          /report-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/report-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -204,6 +208,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: A to Z Listing Page
               hst:template: atozlisting-main
+            /report:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.ReportComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Report
+              hst:template: report-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
@@ -214,6 +224,12 @@ definitions:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
       /medical:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /health-careers:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /quality:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
       /website-testing:

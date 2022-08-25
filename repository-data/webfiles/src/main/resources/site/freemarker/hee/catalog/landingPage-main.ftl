@@ -24,6 +24,9 @@
                                     <@hee.contentCards contentCards=block />
                                 </div>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.NavMap">
+                                <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
+                                <#break>
                             <#default>
                         </#switch>
                     </#list>
