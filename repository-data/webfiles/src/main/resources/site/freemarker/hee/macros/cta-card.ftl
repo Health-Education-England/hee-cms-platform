@@ -3,14 +3,16 @@
 <#macro ctaCard ctaCard>
     <#if ctaCard??>
         <#assign openInNewWindow=false/>
-        <#if ctaCard.ctaCardContentBlock?? && ctaCard.ctaCardContentBlock.ctaLink.document??>
-            <#assign link>
-                <@hst.link hippobean=ctaCard.ctaCardContentBlock.ctaLink.document/>
-            </#assign>
-        <#else>
-            <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
-            <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
-                <#assign openInNewWindow=true/>
+        <#if ctaCard.ctaCardContentBlock??>
+            <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
+                <#assign link>
+                    <@hst.link hippobean=ctaCard.ctaCardContentBlock.ctaLink.document/>
+                </#assign>
+            <#else>
+                <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
+                <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
+                    <#assign openInNewWindow=true/>
+                </#if>
             </#if>
         </#if>
         <#if link?? && link?has_content>
