@@ -103,7 +103,7 @@ jobs:
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'production' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2.1
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -111,4 +111,4 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: 'hee-smtp.properties'
+          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'
