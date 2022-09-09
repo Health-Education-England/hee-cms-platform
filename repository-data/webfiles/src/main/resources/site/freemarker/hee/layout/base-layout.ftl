@@ -38,7 +38,7 @@
       <div class="nhsuk-width-container">
         <div class="hee-globalalert__message">
           <h1 class="nhsuk-heading-xl">Her Majesty Queen Elizabeth II</h1>
-          <p>21 April 1926 to 8 September 2022</p><p><a href="https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii">Read about the arrangements following The Queen's death</a></p>
+          <p>21 April 1926 to 8 September 2022</p><p><a href="https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii">We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>
         </div>
       </div>
     </div>
