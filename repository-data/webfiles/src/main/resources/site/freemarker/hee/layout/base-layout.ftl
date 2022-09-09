@@ -31,8 +31,18 @@
     <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript" xhtml=true/>
   </head>
   <body>
+
     <@hst.include ref="cookies-banner"/>
 
+    <div class="hee-globalalert hee-globalalert--black" role="complementary">
+      <div class="nhsuk-width-container">
+        <div class="hee-globalalert__message">
+          <h1 class="nhsuk-heading-xl">Her Majesty Queen Elizabeth II</h1>
+          <p>21 April 1926 to 8 September 2022</p><p><a href="https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii">Read about the arrangements following The Queen's death</a></p>
+        </div>
+      </div>
+    </div>
+    
     <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
