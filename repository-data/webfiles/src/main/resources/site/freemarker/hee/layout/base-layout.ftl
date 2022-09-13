@@ -34,15 +34,6 @@
 
     <@hst.include ref="cookies-banner"/>
 
-    <div class="hee-globalalert hee-globalalert--black" role="complementary">
-      <div class="nhsuk-width-container">
-        <div class="hee-globalalert__message">
-          <h1 class="nhsuk-heading-xl">Her Majesty Queen Elizabeth II</h1>
-          <p>21 April 1926 to 8 September 2022</p><p><a href="https://www.hee.nhs.uk/news-blogs-events/news/her-majesty-queen-elizabeth-ii">We join with the people across HEE and the NHS in mourning the death of Queen Elizabeth II</a></p>
-        </div>
-      </div>
-    </div>
-    
     <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
