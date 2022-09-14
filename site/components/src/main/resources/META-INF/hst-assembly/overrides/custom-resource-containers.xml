@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  <bean id="customResourceContainers" class="org.springframework.beans.factory.config.ListFactoryBean">
+    <property name="sourceList">
+      <list>
+        <!-- Custom resource container for 'hee:fileLink' node type -->
+        <bean class="uk.nhs.hee.web.linking.FileLinkResourceContainer">
+          <!-- Add the following 'primaryItem' property in case interested
+               in removing '/hee:file' from the resource path  -->
+          <!-- <property name="primaryItem" value="hee:file"/> -->
+        </bean>
+      </list>
+    </property>
+  </bean>
+
+</beans>
