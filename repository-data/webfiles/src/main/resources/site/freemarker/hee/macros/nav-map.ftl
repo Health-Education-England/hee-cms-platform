@@ -20,19 +20,14 @@
                         <#assign linkHREF>
                             <@hst.link hippobean=link.document/>
                         </#assign>
-                        <#assign openInNewWindow=false/>
                     <#else>
                         <#assign linkHREF="${link.url}">
-                        <#assign openInNewWindow=true/>
                     </#if>
 
                     <#if linkHREF?has_content>
                         <li>
-                            <a id="${link.region?replace(educationPrefix, '')}" href="${linkHREF}" ${openInNewWindow?then('target="_blank"', '')}>
+                            <a id="${link.region?replace(educationPrefix, '')}" href="${linkHREF}">
                                 ${(link.text?has_content)?then(link.text, navMapRegionMap[link.region]?replace(educationLabelPrefix, ''))}
-                                <#if openInNewWindow>
-                                    <span class="nhsuk-u-visually-hidden">Opens in a new window</span>
-                                </#if>
                             </a>
                         </li>
                     </#if>
