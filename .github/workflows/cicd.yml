@@ -108,7 +108,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: "hee-smtp.properties,hee-platform.properties"
+          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
@@ -177,7 +177,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: "hee-smtp.properties,hee-platform.properties"
+          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'
 
   deploy-to-staging:
     name: Deploy to Staging Env. [on brCloud]
@@ -246,4 +246,4 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: "hee-smtp.properties,hee-platform.properties"
+          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'
