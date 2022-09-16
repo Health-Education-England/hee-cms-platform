@@ -1,15 +1,15 @@
 definitions:
   config:
-    /hst:platform/hst:hosts/prd-brcloud/cloud:
+    /hst:platform/hst:hosts/br-cloud/cloud:
       jcr:primaryType: hst:virtualhost
       hst:scheme: https
       hst:showcontextpath: true
       hst:showport: false
       /bloomreach:
         jcr:primaryType: hst:virtualhost
-        /hee:
+        /${brc.namespace}:
           jcr:primaryType: hst:virtualhost
-          /cms-prod:
+          /${brc.environmentname}:
             jcr:primaryType: hst:virtualhost
             /hst:root:
               jcr:primaryType: hst:mount

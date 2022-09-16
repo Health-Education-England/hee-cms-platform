@@ -84,7 +84,7 @@ jobs:
         run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.1
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.2
         id: cleanup
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -94,7 +94,7 @@ jobs:
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
 
       - name: Upload distribution to Bloomreach Cloud
-        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.1
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.2
         id: upload
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -103,7 +103,7 @@ jobs:
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'production' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.2.1
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.3
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
