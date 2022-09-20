@@ -6,5 +6,6 @@ definitions:
       extensions.allowed: ['*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
         '*.xlsx', '*.odt', '*.fodt', '*.odp', '*.fodp', '*.ods', '*.fods', '*.odg',
         '*.fodg', '*.mrc', '*.txt']
+      plugin.class: uk.nhs.hee.web.frontend.plugins.yui.upload.validation.CustomAssetUploadValidationPlugin
     /hippo:configuration/hippo:frontend/cms/cms-services/imageValidationService:
       extensions.allowed: ['*.jpg', '*.jpeg', '*.gif', '*.png']
