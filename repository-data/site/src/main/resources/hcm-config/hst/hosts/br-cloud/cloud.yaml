@@ -41,10 +41,30 @@ definitions:
                   .meta:residual-child-node-category: content
                   jcr:primaryType: hst:mount
                   hst:type: preview
+              /healthcareers:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:mountpoint: /hst:hee/hst:sites/health-careers
+                /preview:
+                  .meta:residual-child-node-category: content
+                  jcr:primaryType: hst:mount
+                  hst:type: preview
               /medical:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
                 hst:mountpoint: /hst:hee/hst:sites/medical
+                /preview:
+                  .meta:residual-child-node-category: content
+                  jcr:primaryType: hst:mount
+                  hst:type: preview
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
+              /quality:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:mountpoint: /hst:hee/hst:sites/quality
                 /preview:
                   .meta:residual-child-node-category: content
                   jcr:primaryType: hst:mount
@@ -57,7 +77,3 @@ definitions:
                   .meta:residual-child-node-category: content
                   jcr:primaryType: hst:mount
                   hst:type: preview
-              /preview:
-                .meta:residual-child-node-category: content
-                jcr:primaryType: hst:mount
-                hst:type: preview
