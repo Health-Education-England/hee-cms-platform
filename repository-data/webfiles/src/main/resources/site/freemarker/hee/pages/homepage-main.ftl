@@ -54,9 +54,6 @@
                                     <#case "uk.nhs.hee.web.beans.ActionLink">
                                         <@hee.actionLink actionLink=block/>
                                         <#break>
-                                    <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
-                                        <@hee.yellowAlertBlock block=block/>
-                                        <#break>
                                     <#case "uk.nhs.hee.web.beans.ContentCards">
                                         <@hee.contentCards contentCards=block/>
                                         <#break>
@@ -83,6 +80,12 @@
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.DetailsReference">
                                         <@hee.details block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
+                                        <@hee.warningCallout block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.StatementCardReference">
+                                        <@hee.statementCard block=block/>
                                         <#break>
                                     <#default>
                                 </#switch>

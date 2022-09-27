@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f85fa20a-0838-43f6-9fc9-6bd2e3f8175d
+          jcr:uuid: a1573969-c7ca-477f-a7fd-a7cb4b09c4b9
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -32,6 +32,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
+          /copy1:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:copy1
+            hipposysedit:primary: false
+            hipposysedit:type: hippostd:html
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -44,10 +52,13 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:tag: ''
-          jcr:uuid: 8da09c46-50d7-4e24-ac45-3252b1739f0d
+          jcr:uuid: 1f9a6380-cef8-4571-b0a0-b0f7dc4ea87c
           hippostdpubwf:lastModificationDate: 2021-09-21T16:31:53.916+01:00
           hippostdpubwf:creationDate: 2021-09-21T16:31:53.916+01:00
           /hee:copy:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:copy1:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
       /editor:templates:
@@ -74,6 +85,15 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Copy
             field: copy
+            hint: Make sure the copy doesn't contain more than one paragraph
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /copy1:
+            jcr:primaryType: frontend:plugin
+            caption: Bottom Copy
+            field: copy1
             hint: Make sure the copy doesn't contain more than one paragraph
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field

@@ -10,7 +10,6 @@
 <#include "nav-map.ftl">
 <#include "quick-links.ftl">
 <#include "statement-block.ftl">
-<#include "yellow-alert-block.ftl">
 <#include "cta-card.ftl">
 <#include "block-links.ftl">
 <#include "anchor-links.ftl">
@@ -25,3 +24,4 @@
 <#include "statement-card.ftl">
 <#include "newsletter-subscribe-form.ftl">
 <#include "rightHandImage.ftl">
+<#include "applies-to-box.ftl">

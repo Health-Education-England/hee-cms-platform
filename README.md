@@ -8,7 +8,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Built With
 
-* [BloomReach DXP 14.7.3](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
+* [BloomReach DXP 14.7.8](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
 * [brCloud](https://www.bloomreach.com/en/products/experience-manager/cloud-cms) - Bloomreach Cloud Managed Hosting
 
 ## Getting Started
@@ -157,7 +157,8 @@ See also src/main/assembly/*.xml if you need to customize the distributions.
 Code is deployed automatically to Bloomreach Cloud (brCloud) by the CICD process defined using github workflow actions (./github/workflows/). 
 
 The github workflow actions are based on the following custom-made github actions:
-- https://github.com/Health-Education-England/upload-distribution-to-BR-Cloud-action 
+- https://github.com/Health-Education-England/cleanup-distributions-from-BR-Cloud-action
+- https://github.com/Health-Education-England/upload-distribution-to-BR-Cloud-action
 - https://github.com/Health-Education-England/deploy-distribution-to-BR-Cloud-action
 
 You can deploy to the following environments:
@@ -186,7 +187,7 @@ The GitHub action workflows that handle the CICD process require the following s
 
 ## Environments
 
-You can find deployments of this application in the following environments inside Bloomreach Cloud Platform(https://missioncontrol-hee.onehippo.io/#/login) 
+You can find deployments of this application in the following environments inside Bloomreach Cloud Platform(https://missioncontrol.hee.bloomreach.cloud/#/login)
 
 | Name           | Platform  |
 | -------------- | --------- |

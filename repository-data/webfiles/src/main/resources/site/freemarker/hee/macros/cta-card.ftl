@@ -4,12 +4,17 @@
 <#macro ctaCard ctaCard>
     <#if ctaCard??>
         <#assign openInNewWindow=false/>
-        <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
-            <#assign link=getInternalLinkURL(ctaCard.ctaCardContentBlock.ctaLink.document)>
-        <#else>
-            <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
-            <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
-                <#assign openInNewWindow=true/>
+        <#assign link="">
+        <#if ctaCard.ctaCardContentBlock??>
+            <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
+                <#assign link>
+                    <#assign link=getInternalLinkURL(ctaCard.ctaCardContentBlock.ctaLink.document)>
+                </#assign>
+            <#else>
+                <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
+                <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
+                    <#assign openInNewWindow=true/>
+                </#if>
             </#if>
         </#if>
         <#if link?has_content>

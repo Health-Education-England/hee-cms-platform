@@ -40,7 +40,7 @@
                             <li class="nhsuk-header__navigation-item nhsuk-subheader" aria-haspopup="true" aria-expanded="false">
                                 <#--  The following <a> tag is mainly meant to get default nav functionality like focus, etc
                                       and not meant for user navigation. David confirmed that the default action on the following <a> tag has already been prevented via script and so this is being left with an href of '#'.  -->
-                                <a class="nhsuk-header__navigation-link" href="#">
+                                <a class="nhsuk-header__navigation-link" href="javascript:void(0);">
                                     <span class="nhsuk-header__link-text">${item.name}</span>
                                     <span class="nhsuk-header__back-text">Back</span>
                                     <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">

@@ -42,9 +42,6 @@
                                             <#case "uk.nhs.hee.web.beans.ActionLink">
                                                 <@hee.actionLink actionLink=block/>
                                                 <#break>
-                                            <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
-                                                <@hee.yellowAlertBlock block=block/>
-                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.Contact">
                                                 <@hee.contact
                                                 block=block
@@ -71,9 +68,15 @@
                                                 <@hee.contentCards contentCards=block size="half"/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.InsetReference">
-                                                <@hee.inset inset=block/>                                             
+                                                <@hee.inset inset=block/>
                                             <#case "uk.nhs.hee.web.beans.ButtonReference">
                                                 <@hee.button button=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.AppliesToBoxReference">
+                                                <@hee.appliesToBox box=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.NavMap">
+                                                <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.DetailsReference">
                                                 <@hee.details block=block/>
@@ -86,7 +89,7 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.StatementCardReference">
                                                 <@hee.statementCard block=block/>
-                                                <#break>    
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.NewsletterSubscribeFormReference">
                                                 <@hee.newsletterSubscribeForm block=block/>
                                                 <#break>

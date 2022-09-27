@@ -5,12 +5,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, hstRequestContext.contentBean.title?has_content?then(hstRequestContext.contentBean.title, document.title?has_content?then(document.title, '')))} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}</title>
+    <title>${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, document.title!)} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-4.1.0.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-4.1.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/hee.min.css'/>" type="text/css"/>
     <#if hstRequest.requestContext.channelManagerPreviewRequest>
       <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
     </#if>
@@ -30,6 +31,7 @@
     <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript" xhtml=true/>
   </head>
   <body>
+
     <@hst.include ref="cookies-banner"/>
 
     <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
