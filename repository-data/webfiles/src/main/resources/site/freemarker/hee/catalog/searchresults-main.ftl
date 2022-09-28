@@ -1,6 +1,7 @@
 <#ftl output_format="HTML">
 
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">

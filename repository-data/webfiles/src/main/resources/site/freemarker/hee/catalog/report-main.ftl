@@ -1,4 +1,5 @@
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#include "../macros/report-content.ftl">
 <#include "../macros/micro-hero.ftl">
 

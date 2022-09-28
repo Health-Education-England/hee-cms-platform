@@ -28,7 +28,8 @@
     <meta name="msapplication-wide310x150logo" content="<@hst.link path='/static/assets/favicons/widetile-310x150.png'/>">
     <meta name="msapplication-square310x310logo" content="<@hst.link path='/static/assets/favicons/largetile-310x310.png'/>">
 
-    <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript" xhtml=true/>
+    <@hst.headContributions categoryIncludes="pageMetaData" xhtml=true/>
+    <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript, pageMetaData" xhtml=true/>
   </head>
   <body>
 

@@ -1,5 +1,6 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.AtozPage" -->
 <#-- @ftlvariable name="atozmap" type="java.util.Map" -->
