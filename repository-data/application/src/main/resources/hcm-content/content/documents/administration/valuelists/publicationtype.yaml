@@ -1,0 +1,81 @@
+/content/documents/administration/valuelists/publicationtype:
+  .meta:order-before: professions
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: cb9fd289-f2ad-4cb2-ad2f-2d1c18004541
+  hippo:name: PublicationType
+  /publicationtype:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 2fbde73d-0340-4c3f-9e6a-81da6dcd9186
+    hippo:availability: [live, preview]
+    hippotranslation:id: 1a48fb0c-d3a1-4ccf-9680-3c8e0f049f3b
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: briefing
+      selection:label: Briefing
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: consultation
+      selection:label: Consultation
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: decision
+      selection:label: Decision
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: foi
+      selection:label: FOI Release
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: dataStatistics
+      selection:label: Data and Statistics
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: guidance
+      selection:label: Guidance
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: independentReport
+      selection:label: Independent Report
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: letter
+      selection:label: Letter
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: meetingPapers
+      selection:label: Meeting Papers and Minutes
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: contact
+      selection:label: Contact
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: policyStrategy
+      selection:label: Policy or Strategy
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: promoMaterial
+      selection:label: Promotional Material
+    /selection:listitem[13]:
+      jcr:primaryType: selection:listitem
+      selection:key: regulatory
+      selection:label: Regulatory
+    /selection:listitem[14]:
+      jcr:primaryType: selection:listitem
+      selection:key: report
+      selection:label: Report
+    /selection:listitem[15]:
+      jcr:primaryType: selection:listitem
+      selection:key: research
+      selection:label: Research
+    /selection:listitem[16]:
+      jcr:primaryType: selection:listitem
+      selection:key: statement
+      selection:label: Statement
+    /selection:listitem[17]:
+      jcr:primaryType: selection:listitem
+      selection:key: data
+      selection:label: Data
