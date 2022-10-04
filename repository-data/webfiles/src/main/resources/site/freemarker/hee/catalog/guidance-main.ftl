@@ -1,15 +1,15 @@
 <#include "../../include/imports.ftl">
 <#include "../macros/guidance-content.ftl">
-<#include "../macros/hero-section.ftl">
+<#include "../macros/micro-hero.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
-<#assign showHero=false>
-<#if document.heroImage??>
-    <#assign showHero=true>
-    <@heroSection document=document />
+<#if document??>
+    <#if document.microHero??>
+        <@microHero microHeroImage=document.microHero />
+    </#if>
+    <div class="nhsuk-width-container">
+        <main id="maincontent" role="main" class="nhsuk-main-wrapper">
+            <@guidance guidanceDocument=document />
+        </main>
+    </div>
 </#if>
-<div class="nhsuk-width-container">
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-        <@guidance guidanceDocument=document showHero=showHero/>
-    </main>
-</div>

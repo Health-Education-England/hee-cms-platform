@@ -1,6 +1,6 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
-<#include "../macros/hero-section.ftl">
+<#include "../macros/micro-hero.ftl">
 <#import "../macros/components.ftl" as hee>
 
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
@@ -9,20 +9,16 @@
 <#-- @ftlvariable name="categoriesValueListMap" type="java.util.Map" -->
 
 <#if document??>
-    <#assign showHero=false>
-    <#if document.heroImage??>
-        <#assign showHero=true>
-        <@heroSection document=document />
+    <#if document.microHero??>
+        <@microHero microHeroImage=document.microHero />
     </#if>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-            <#if showHero=false>
-                <div class="nhsuk-grid-row">
-                    <div class="nhsuk-grid-column-full">
-                        <h1>${document.title}</h1>
-                    </div>
+            <div class="nhsuk-grid-row">
+                <div class="nhsuk-grid-column-full">
+                    <h1>${document.title}</h1>
                 </div>
-            </#if>
+            </div>
             <article>
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
@@ -54,12 +50,10 @@
                                 <#--End News Categories -->
 
                                 <#--News Summary -->
-                                <#if showHero=false>
-                                    <#if document.summary??>
-                                        <p class="nhsuk-body-l">
-                                            <@hst.html formattedText="${document.summary?replace('\n', '<br>')}"/>
-                                        </p>
-                                    </#if>
+                                <#if document.summary??>
+                                    <p class="nhsuk-body-l">
+                                        <@hst.html formattedText="${document.summary?replace('\n', '<br>')}"/>
+                                    </p>
                                 </#if>
                                 <#-- End News Summary -->
 
@@ -93,6 +87,9 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                                 <@hee.media media=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.TableReference">
+                                                <@hee.table table=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.TabsReference">
                                                 <@hee.tabs tabs=block/>

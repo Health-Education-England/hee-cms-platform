@@ -2,11 +2,11 @@
 <#import "../macros/components.ftl" as hee>
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
-<#macro guidance guidanceDocument showTitle=true showHero=false showCookiesButton=false>
+<#macro guidance guidanceDocument showTitle=true showCookiesButton=false>
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
     <#if guidanceDocument??>
         <div class="nhsuk-width-container">
-            <#if showTitle && showHero=false>
+            <#if showTitle>
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
                         <h1>${guidanceDocument.title}</h1>
@@ -19,7 +19,7 @@
                     <div class="nhsuk-grid-column-two-thirds">
                         <section class="nhsuk-page-content__section-one">
                             <div class="nhsuk-page-content">
-                                <#if showHero=false && guidanceDocument.summary??>
+                                <#if guidanceDocument.summary??>
                                     <p class="nhsuk-body-l"><@hst.html formattedText="${guidanceDocument.summary!?replace('\n', '<br>')}"/></p>
                                 </#if>
                                 <#if guidanceDocument.contentBlocks??>
@@ -42,9 +42,6 @@
                                             <#case "uk.nhs.hee.web.beans.ActionLink">
                                                 <@hee.actionLink actionLink=block/>
                                                 <#break>
-                                            <#case "uk.nhs.hee.web.beans.YellowAlertBlock">
-                                                <@hee.yellowAlertBlock block=block/>
-                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.Contact">
                                                 <@hee.contact
                                                 block=block
@@ -61,6 +58,9 @@
                                             <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                                 <@hee.media media=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.TableReference">
+                                                <@hee.table table=block/>
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.TabsReference">
                                                 <@hee.tabs tabs=block/>
                                                 <#break>
@@ -68,9 +68,15 @@
                                                 <@hee.contentCards contentCards=block size="half"/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.InsetReference">
-                                                <@hee.inset inset=block/>                                             
+                                                <@hee.inset inset=block/>
                                             <#case "uk.nhs.hee.web.beans.ButtonReference">
                                                 <@hee.button button=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.AppliesToBoxReference">
+                                                <@hee.appliesToBox box=block/>
+                                                <#break>
+                                            <#case "uk.nhs.hee.web.beans.NavMap">
+                                                <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.DetailsReference">
                                                 <@hee.details block=block/>
@@ -83,7 +89,7 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.StatementCardReference">
                                                 <@hee.statementCard block=block/>
-                                                <#break>    
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.NewsletterSubscribeFormReference">
                                                 <@hee.newsletterSubscribeForm block=block/>
                                                 <#break>
@@ -124,6 +130,9 @@
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
                                         <@hee.internalLinksCard card=block.internalLinksCard/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.RightHandImageReference">
+                                        <@hee.rightHandImage image=block/>
                                         <#break>
                                     <#default>
                                 </#switch>

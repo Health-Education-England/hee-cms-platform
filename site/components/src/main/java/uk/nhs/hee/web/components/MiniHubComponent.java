@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.beans.MinihubSection;
 import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
 import java.util.Comparator;
@@ -44,6 +45,22 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
             else {
                 LOGGER.warn("Check Minihub document exists, and at least one Minihub section in the same folder for: " + document.getPath());
             }
+
+            /*
+            The following block will need to refactored based on Mini-hub XPage logic
+
+            request.setModel("isFirstPage", guidancePages.get(0).equals(currentGuidance));
+
+            // the guidance page contains content blocks that need valueLists to be set on the model
+            List<HippoBean> pageContentBlocks = currentGuidance.getContentBlocks();
+            pageContentBlocks.addAll(currentGuidance.getRightHandBlocks());
+
+            Map<String, Map<String, String>> modelToValueListMap =
+                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+            modelToValueListMap.forEach(request::setModel);
+
+            request.setAttribute("tableComponentService", new TableComponentService());
+            */
         }
     }
 

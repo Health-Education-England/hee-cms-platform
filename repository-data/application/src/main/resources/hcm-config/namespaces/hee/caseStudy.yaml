@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: d6860cc1-43a3-4590-a276-b16a41c4ea29
+          jcr:uuid: 168af4d2-25e8-477d-90a6-cfc3b9ad613b
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -74,6 +74,14 @@ definitions:
             hipposysedit:path: hee:provider
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
+          /calendardate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:submittedDate
+            hipposysedit:primary: false
+            hipposysedit:type: CalendarDate
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -86,7 +94,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 72a6d864-33f5-44f1-8438-9ed867a51f20
+          jcr:uuid: 4bc17814-2c82-426f-a263-4dc14310365d
           hippostdpubwf:lastModificationDate: 2021-05-07T20:02:42.163+01:00
           hippostdpubwf:creationDate: 2021-05-07T20:02:42.164+01:00
           hee:sector: ''
@@ -94,6 +102,7 @@ definitions:
           hee:impactGroup: ''
           hee:impactTypes: []
           hee:provider: ''
+          hee:submittedDate: 0001-01-01T12:00:00Z
           /hee:document:
             jcr:primaryType: hippo:resource
             hippo:filename: hippo:resource
@@ -136,6 +145,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/lks/casestudyimpacttypes
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /document:
             jcr:primaryType: frontend:plugin
             caption: Document
@@ -155,6 +165,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudyimpactgroups
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /sector:
             jcr:primaryType: frontend:plugin
             caption: Sector
@@ -165,6 +176,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudysectors
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /provider:
             jcr:primaryType: frontend:plugin
             caption: Organisation
@@ -175,6 +187,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/lks/casestudyproviders
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /region:
             jcr:primaryType: frontend:plugin
             caption: Region
@@ -186,3 +199,13 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               orientation: vertical
               source: /content/documents/administration/valuelists/lks/casestudyregions
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+          /submittedDate:
+            jcr:primaryType: frontend:plugin
+            caption: Date Submitted
+            field: calendardate
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

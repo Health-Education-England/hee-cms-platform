@@ -1,5 +1,6 @@
 <#include "../../include/imports.ftl">
 <#include "../macros/guidance-content.ftl"/>
+<#include "../macros/micro-hero.ftl">
 <@hst.defineObjects />
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -8,8 +9,13 @@
 <#-- @ftlvariable name="previousSection" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="nextSection" type="uk.nhs.hee.web.beans.Guidance" -->
 <#-- @ftlvariable name="miniHubSections" type="java.util.List" -->
+<#-- @ftlvariable name="isFirstSection" type="java.lang.Boolean" -->
 
 <#if document??>
+    <#if document.microHero?? && isFirstSection>
+        <@microHero microHeroImage=document.microHero />
+    </#if>
+
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
             <div class="nhsuk-grid-row">

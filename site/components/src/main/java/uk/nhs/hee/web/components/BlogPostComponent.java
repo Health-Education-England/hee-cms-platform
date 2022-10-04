@@ -10,6 +10,7 @@ import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -32,8 +33,10 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
 
         final BlogPost blogPost = getBlogPostBean(request);
         if (blogPost != null) {
+            m
             request.setModel(REQUEST_ATTR_DOCUMENT, blogPost);
             addCategoriesValueListMapToModel(request, blogPost);
+            addValueListsForContentBlocks(request, blogPost);
 
             addBlogListingPageURLToModel(request);
 
@@ -48,16 +51,11 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
             final boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
             if (!showAllComments) {
                 request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
-            } else
+            } else {
                 request.setModel("visibleComments", comments);
+            }
 
-            // the page content blocks needs valueLists to be set on the model
-            List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
-            pageContentBlocks.addAll(blogPost.getRightHandBlocks());
-
-            Map<String, Map<String, String>> modelToValueListMap =
-                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
-            modelToValueListMap.forEach(request::setModel);
+            request.setAttribute("tableComponentService", new TableComponentService());
         }
     }
 
@@ -114,6 +112,21 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
                 blogCategories.stream()
                         .filter(category -> allBlogCategoriesValueListMap.get(category) != null)
                         .collect(Collectors.toMap(category -> category, allBlogCategoriesValueListMap::get)));
+    }
+
+    /**
+     * Gets all the valueLists required by the content blocks from the given blogPost page and
+     * sets them on the model.
+     */
+    private void addValueListsForContentBlocks(
+            final HstRequest request,
+            final BlogPost blogPost) {
+        final List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
+        pageContentBlocks.addAll(blogPost.getRightHandBlocks());
+
+        final Map<String, Map<String, String>> modelToValueListMap =
+                ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+        modelToValueListMap.forEach(request::setModel);
     }
 
     /**

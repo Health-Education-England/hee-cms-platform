@@ -4,7 +4,7 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
-<#include "../macros/hero-section.ftl">
+<#include "../macros/micro-hero.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
 
@@ -17,20 +17,17 @@
 <#-- @ftlvariable name="regionMap" type="java.util.Map" -->
 <#-- @ftlvariable name="selectedImpactGroups" type="java.util.List" -->
 <#-- @ftlvariable name="providerMap" type="java.util.List" -->
+<#-- @ftlvariable name="submittedDate" type="uk.nhs.hee.web.beans.ListingPage" -->
 
 <#if document??>
-    <#assign showHero=false>
-    <#if document.heroImage??>
-        <#assign showHero=true>
-        <@heroSection document=document />
+    <#if document.microHero??>
+        <@microHero microHeroImage=document.microHero />
     </#if>
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
-            <#if showHero=false>
-                <h1>${document.title}</h1>
-                <#if document.summary??>
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                </#if>
+            <h1>${document.title}</h1>
+            <#if document.summary??>
+                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </#if>
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
@@ -73,8 +70,10 @@
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
                                     <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
+                                    <@fmt.message key="sort.option.submitted_date_oldest" var="sortBySubmittedDateOldestLabel"/>
+                                    <@fmt.message key="sort.option.submitted_date_newest" var="sortBySubmittedDateNewestLabel"/>
                                     <@fmt.message key="sort.option.az" var="sortByAZ"/>
-                                    <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
+                                    <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortBySubmittedDateNewestLabel}", "asc":"${sortBySubmittedDateOldestLabel}" } />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
                                 </div>
                             </form>

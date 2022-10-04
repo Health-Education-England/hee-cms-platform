@@ -1,0 +1,68 @@
+/content/urlrewriter/medical/hometomedicaltraineerecruitment:
+  .meta:order-before: searchtosearchresultsredirect
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 2a34a1ff-25ea-4e79-ae63-b3cbfd3af32b
+  hippo:name: HomeToMedicalTraineeRecruitment
+  hippo:versionHistory: 62787ec9-43c0-40f4-9bcd-2756a141ba56
+  /hometomedicaltraineerecruitment[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 68956c79-cafe-482a-aeca-e96aa4a888cd
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2022-07-13T11:45:17.828+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ 'medical.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"equal\"\
+      >medical.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\"\
+      \ last=\"true\">/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ hosts other than 'hee.nhs.uk' host</name>\r\n    <condition name=\"host\"\
+      \ operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/medical[/]?$</from>\r\
+      \n    <to type=\"temporary-redirect\" last=\"true\">/site/medical/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>"
+  /hometomedicaltraineerecruitment[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 4fe987da-c66f-4a8e-b9f1-c3db69cbfb48
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2022-07-13T12:43:12.934+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ 'medical.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"equal\"\
+      >medical.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\"\
+      \ last=\"true\">/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ hosts other than 'hee.nhs.uk' host</name>\r\n    <condition name=\"host\"\
+      \ operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/medical[/]?$</from>\r\
+      \n    <to type=\"temporary-redirect\" last=\"true\">/site/medical/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>"
+  /hometomedicaltraineerecruitment[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 1ea7e330-ec00-4bee-b527-22ed53b8db54
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+    hippostdpubwf:lastModificationDate: 2022-07-13T11:45:17.828+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2022-07-13T11:45:20.650+01:00
+    urlrewriter:rule: "<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ 'medical.hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"equal\"\
+      >medical.hee.nhs.uk</condition>\r\n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\"\
+      \ last=\"true\">/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Home to Medical Trainee Recruitment for\
+      \ hosts other than 'hee.nhs.uk' host</name>\r\n    <condition name=\"host\"\
+      \ operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/medical[/]?$</from>\r\
+      \n    <to type=\"temporary-redirect\" last=\"true\">/site/medical/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>"

@@ -38,6 +38,15 @@
 [hee:anchorLinks] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:appliesToBox] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:appliesToBoxReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:appliesToCountry] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:atozPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -99,12 +108,6 @@
   orderable
 
 [hee:detailsReference] > hippo:compound, hippostd:relaxed
-  orderable
-
-[hee:newsletterSubscribeForm] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
-  orderable
-
-[hee:newsletterSubscribeFormReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -193,16 +196,31 @@
 [hee:news] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:newsletterSubscribeForm] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:newsletterSubscribeFormReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:pageLastNextReview] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:person] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:report] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
 [hee:richTextBlock] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:richTextReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:rightHandImage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:rightHandImageReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:searchBank] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -215,6 +233,12 @@
   orderable
 
 [hee:tabPanel] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:table] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:tableReference] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:tabs] > hee:basedocument, hippostd:relaxed, hippotranslation:translated

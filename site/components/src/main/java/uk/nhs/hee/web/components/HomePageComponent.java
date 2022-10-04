@@ -1,17 +1,12 @@
 package uk.nhs.hee.web.components;
 
-import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
-import uk.nhs.hee.web.beans.Contact;
-import uk.nhs.hee.web.beans.ContactCardReference;
 import uk.nhs.hee.web.beans.HomePage;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -29,5 +24,7 @@ public class HomePageComponent extends EssentialsContentComponent {
         Map<String, Map<String, String>> modelToValueListMap =
                 ContentBlocksUtils.getValueListMaps(homePage.getContentBlocks());
         modelToValueListMap.forEach(request::setModel);
+
+        request.setAttribute("tableComponentService", new TableComponentService());
     }
 }

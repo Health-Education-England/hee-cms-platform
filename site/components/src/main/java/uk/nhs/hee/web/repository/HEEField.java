@@ -43,7 +43,12 @@ public enum HEEField {
     /**
      * {@code topics} field/property.
      */
-    TOPICS("hee:topics");
+    TOPICS("hee:topics"),
+
+    /**
+     * {@code submittedDate} field/property.
+     */
+    SUBMITTED_DATE("hee:submittedDate");
 
     private final String name;
 

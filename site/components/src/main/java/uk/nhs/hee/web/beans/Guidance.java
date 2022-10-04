@@ -34,11 +34,6 @@ public class Guidance extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:heroImage")
-    public ImageSetWithCaption getHeroImage() {
-        return getLinkedBean("hee:heroImage", ImageSetWithCaption.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:relatedContent", allowModifications = false)
     public ContentCards getRelatedContent() {
         return getBean("hee:relatedContent", ContentCards.class);
@@ -52,5 +47,10 @@ public class Guidance extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:addToAZ")
     public Boolean getAddToAZ() {
         return getSingleProperty("hee:addToAZ");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:microHero")
+    public ImageSetWithCaption getMicroHero() {
+        return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
     }
 }

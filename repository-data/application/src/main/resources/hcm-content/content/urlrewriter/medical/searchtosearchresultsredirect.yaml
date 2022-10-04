@@ -1,0 +1,62 @@
+/content/urlrewriter/medical/searchtosearchresultsredirect:
+  .meta:order-before: gpnrotomedicalgpredirects
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 76358952-6659-4bc3-9d4d-d370c8ec1b95
+  hippo:name: SearchToSearchResultsRedirect
+  hippo:versionHistory: a044f889-753d-4c5f-aaec-aac374bd9113
+  /searchtosearchresultsredirect[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 1c049526-868b-40b4-944b-eda230a6091f
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2022-06-06T11:33:22.943+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'medical.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/medical/search/results?%{query-string}</to>\r\n</rule>"
+  /searchtosearchresultsredirect[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: c24c9fc9-4640-454c-9514-0fcb3abb0b36
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2022-06-06T11:32:34.999+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'medical.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/medical/search/results?%{query-string}</to>\r\n</rule>"
+  /searchtosearchresultsredirect[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 7d6da980-4e7e-4fa8-8c16-3b0b23e25c57
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2022-06-06T11:33:22.943+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2022-06-06T11:33:25.717+01:00
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'medical.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/medical/search/results?%{query-string}</to>\r\n</rule>"

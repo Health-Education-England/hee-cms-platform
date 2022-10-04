@@ -97,7 +97,15 @@
                             <select class="nhsuk-select" id="profession" name="profession">
                                 <option selected="selected" value=""><@fmt.message key="select.profession"/></option>
                                 <#list newsletterProfessionMap?keys as profession>
-                                    <option value="${newsletterProfessionMap[profession]}">${newsletterProfessionMap[profession]}</option>
+                                    <#if newsletterProfessionMap[profession]?starts_with("~~")>
+                                        <#assign shortName1='${newsletterProfessionMap[profession]}'?split("~~")[1]>
+                                        <option value="${shortName1}">&nbsp;&nbsp;&nbsp;${shortName1}</option>
+                                    <#elseif newsletterProfessionMap[profession]?starts_with("~")>
+                                        <#assign shortName='${newsletterProfessionMap[profession]}'?split("~")[1]>
+                                        <optgroup label="${shortName}"></optgroup>
+                                    <#else>
+                                        <option value="${newsletterProfessionMap[profession]}">${newsletterProfessionMap[profession]}</option>
+                                    </#if>
                                 </#list>
                             </select>
                         </div>
