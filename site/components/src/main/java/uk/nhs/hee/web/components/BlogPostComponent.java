@@ -33,7 +33,6 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
 
         final BlogPost blogPost = getBlogPostBean(request);
         if (blogPost != null) {
-            m
             request.setModel(REQUEST_ATTR_DOCUMENT, blogPost);
             addCategoriesValueListMapToModel(request, blogPost);
             addValueListsForContentBlocks(request, blogPost);
