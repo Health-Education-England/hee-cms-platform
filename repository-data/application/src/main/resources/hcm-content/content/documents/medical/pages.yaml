@@ -1,0 +1,130 @@
+/content/documents/medical/pages:
+  .meta:order-before: components
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippostd:cmxpagefolder', 'hippotranslation:translated',
+    'mix:versionable']
+  jcr:uuid: 3d6193be-0f65-45c6-a7d6-a0b0ac52651b
+  hippo:name: Pages
+  hippostd:channelid: lks
+  hippostd:foldertype: [new-experience-folder, new-experience-document]
+  hippotranslation:id: a3c0f7d2-c453-4753-abe3-079bad567b9b
+  hippotranslation:locale: en
+  /index:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 500aaad3-6bf1-4781-a3e3-cb638d6f4aed
+    hippo:versionHistory: 5c3a4468-5388-49f4-9cb5-3cf08107faef
+    /index[1]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+      jcr:uuid: ded99408-89f0-430c-882f-ee0e7c1b45ff
+      hee:summary: Reference build for the nwps platform built on brXM.
+      hee:title: NWPS Application Reference
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
+      hippostdpubwf:lastModificationDate: 2022-02-09T00:34:57.156Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 65b801ab-94e2-4478-8463-f73c1bb9bb11
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Hero header
+        hee:text: Hero text
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: Navigation cards
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+    /index[2]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['hst:xpagemixin', 'mix:versionable']
+      jcr:uuid: 63e1a6ea-5b0e-4966-80d9-d18b4be7ea97
+      hee:summary: Reference build for the nwps platform built on brXM.
+      hee:title: NWPS Application Reference
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
+      hippostdpubwf:lastModificationDate: 2022-02-09T00:36:19.290Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 65b801ab-94e2-4478-8463-f73c1bb9bb11
+      hippotranslation:locale: en
+      /hst:xpage:
+        jcr:primaryType: hst:xpage
+        jcr:uuid: 72d6f121-b57e-402b-9ad0-25ae3e19843a
+        hst:pageref: home-page
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Hero header
+        hee:text: Hero text
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: Navigation cards
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220
+    /index[3]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['hst:xpagemixin', 'mix:referenceable']
+      jcr:uuid: cee5793a-acca-4257-8505-c8f556162b72
+      hee:summary: Reference build for the nwps platform built on brXM.
+      hee:title: NWPS Application Reference
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-11-18T11:43:56.563Z
+      hippostdpubwf:lastModificationDate: 2022-02-09T00:36:19.290Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-03-29T00:00:50.985+01:00
+      hippotranslation:id: 65b801ab-94e2-4478-8463-f73c1bb9bb11
+      hippotranslation:locale: en
+      /hst:xpage:
+        jcr:primaryType: hst:xpage
+        jcr:uuid: c1e74f1a-c002-4a55-985a-0888dc2615ae
+        hst:pageref: home-page
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Hero header
+        hee:text: Hero text
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: Navigation cards
+        /hee:cards[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8edc2ef9-5f0a-4f81-b488-d6a9ab5b9d41
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e6638e2-f761-4039-8ddb-a97850eaebd3
+        /hee:cards[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 7fec057f-16de-4f10-a1c0-de5e99515220

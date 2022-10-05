@@ -1,0 +1,107 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:xpages:
+      jcr:primaryType: hst:xpages
+      /home-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Home page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.HomePageComponent
+          hst:template: homepage-main
+      /guidance-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Standard content page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+          hst:template: guidance-main
+      /landing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Landing page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+          hst:template: landingpage-main
+      /atoz-page:
+        jcr:primaryType: hst:xpage
+        hst:label: A to Z page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.AToZListingPageComponent
+          hst:template: atozlisting-main
+      /minihub-page:
+        jcr:primaryType: hst:xpage
+        hst:label: MiniHub page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent
+          hst:template: minihub-main
+      /category-based-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Category Based Listing page [Bulletin, Blog & News]
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
+          hst:template: categorybasedlisting-main
+      /case-study-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Case Study Listing Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.CaseStudyListingPageComponent
+          hst:template: casestudylisting-main
+      /event-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Event Listing Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.EventListingPageComponent
+          hst:template: eventlisting-main
+      /search-bank-listing-page:
+        jcr:primaryType: hst:xpage
+        hst:label: Search Bank Listing Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.SearchBankListingPageComponent
+          hst:template: searchbanklisting-main
+      /news-page:
+        jcr:primaryType: hst:xpage
+        hst:label: News Page
+        hst:referencecomponent: hst:abstractpages/base
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
+          hst:template: news-main
+      /blogpost-page:
+        jcr:primaryType: hst:xpage
+        hst:referencecomponent: hst:abstractpages/base
+        hst:label: Blogpost Page
+        /main:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+          hst:template: blogpage-main
+          /blog:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+            hst:template: blogpost-main
+          /comment:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent
+            hst:parameternames: [form, behaviors, eforms-mailsession, eforms-use-freemarker,
+              eforms-from-name, eforms-from-email]
+            hst:parametervalues: [/content/documents/lks/migrate/forms/blogcomment,
+              'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior, uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior,
+                uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
+              mail/Session, 'true', CMS Admin, cms.admin@hee.nhs.uk]
+            hst:template: eforms.default
+            hst:resourcetemplate: eforms.validation.default

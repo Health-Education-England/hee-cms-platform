@@ -36,6 +36,76 @@ definitions:
             hst:componentconfigurationid: hst:pages/cookies
             hst:pagetitle: Cookies
             hst:refId: cookies
+          /pages:
+            jcr:primaryType: hst:sitemapitem
+            hst:hiddeninchannelmanager: true
+            hst:relativecontentpath: pages
+            /_default_:
+              jcr:primaryType: hst:sitemapitem
+              hst:relativecontentpath: ${parent}/${1}
+              /_default_:
+                jcr:primaryType: hst:sitemapitem
+                hst:relativecontentpath: ${parent}/${2}
+                /_index_:
+                  jcr:primaryType: hst:sitemapitem
+                  hst:relativecontentpath: ${parent}/index
+                /_default_:
+                  jcr:primaryType: hst:sitemapitem
+                  hst:relativecontentpath: ${parent}/${3}
+                  /_index_:
+                    jcr:primaryType: hst:sitemapitem
+                    hst:relativecontentpath: ${parent}/index
+                  /_default_:
+                    jcr:primaryType: hst:sitemapitem
+                    hst:relativecontentpath: ${parent}/${4}
+                    /_index_:
+                      jcr:primaryType: hst:sitemapitem
+                      hst:relativecontentpath: ${parent}/index
+                    /_default_:
+                      jcr:primaryType: hst:sitemapitem
+                      hst:relativecontentpath: ${parent}/${5}
+                      /_index_:
+                        jcr:primaryType: hst:sitemapitem
+                        hst:relativecontentpath: ${parent}/index
+                      /_default_:
+                        jcr:primaryType: hst:sitemapitem
+                        hst:relativecontentpath: ${parent}/${6}
+                        /_index_:
+                          jcr:primaryType: hst:sitemapitem
+                          hst:relativecontentpath: ${parent}/index
+                        /_default_:
+                          jcr:primaryType: hst:sitemapitem
+                          hst:relativecontentpath: ${parent}/${7}
+                          /_index_:
+                            jcr:primaryType: hst:sitemapitem
+                            hst:relativecontentpath: ${parent}/index
+                          /_default_:
+                            jcr:primaryType: hst:sitemapitem
+                            hst:relativecontentpath: ${parent}/${8}
+                            /_index_:
+                              jcr:primaryType: hst:sitemapitem
+                              hst:relativecontentpath: ${parent}/index
+                            /_default_:
+                              jcr:primaryType: hst:sitemapitem
+                              hst:relativecontentpath: ${parent}/${9}
+                              /_index_:
+                                jcr:primaryType: hst:sitemapitem
+                                hst:relativecontentpath: ${parent}/index
+                              /_default_:
+                                jcr:primaryType: hst:sitemapitem
+                                hst:relativecontentpath: ${parent}/${10}
+                                /_index_:
+                                  jcr:primaryType: hst:sitemapitem
+                                  hst:relativecontentpath: ${parent}/index
+                                /_any_:
+                                  jcr:primaryType: hst:sitemapitem
+                                  hst:relativecontentpath: ${parent}/${11}
+              /_index_:
+                jcr:primaryType: hst:sitemapitem
+                hst:relativecontentpath: ${parent}/index
+            /_index_:
+              jcr:primaryType: hst:sitemapitem
+              hst:relativecontentpath: ${parent}/index
         /hst:abstractpages:
           jcr:primaryType: hst:pages
         /hst:pages:
