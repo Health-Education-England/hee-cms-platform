@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 493af6b2-1c75-44c1-8f4a-2562b8f710fb
+          jcr:uuid: 9bd44e49-f582-4a8b-9727-d71689c2c883
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -106,7 +106,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: fb5e706e-718d-482d-a0fa-bf1c548a92b9
+          jcr:uuid: 477b2fe5-da49-4d56-80d8-729f0ba4c161
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -127,6 +127,10 @@ definitions:
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks:
+            jcr:primaryType: hee:anchorLinks
+            hee:targetHeadings: [h2, h3, h4, h5]
+            hee:title: On this page
+          /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
           /hee:rightHandBlocks:
@@ -174,6 +178,28 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /summary:
+            jcr:primaryType: frontend:plugin
+            caption: Summary
+            field: summary
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '300'
+          /rightHandBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Right hand objects
+            compoundList: hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference
+            contentPickerType: links
+            field: rightHandBlocks
+            hint: ''
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /publicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication Type
@@ -185,18 +211,6 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtype
               sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-          /rightHandBlocks:
-            jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
-            contentPickerType: links
-            field: rightHandBlocks
-            hint: ''
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
           /publicationtopics:
             jcr:primaryType: frontend:plugin
             caption: Publication Topics
@@ -233,16 +247,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /summary:
-            jcr:primaryType: frontend:plugin
-            caption: Summary
-            field: summary
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              maxlength: '300'
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
