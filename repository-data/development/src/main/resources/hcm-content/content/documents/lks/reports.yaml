@@ -2,7 +2,7 @@
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: 9f4db34d-6a5b-4789-a645-a471c6543905
-  hippo:name: Reports
+  hippo:name: Publication
   hippostd:foldertype: [new-report-folder, new-report-document]
   hippotranslation:id: 3a69ab63-f78a-4c61-b3d8-e071f592ee78
   hippotranslation:locale: en
@@ -222,9 +222,9 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 462a7ed8-58df-4e6b-93d8-3b4a584ae755
       hee:publicationDate: 2022-10-07T00:00:00+01:00
+      hee:publicationProfessions: [public_health]
+      hee:publicationTopics: [long_term_conditions]
       hee:publicationType: report
-      hee:publicationprofessions: [publicHealth]
-      hee:publicationtopics: [longTermConditions]
       hee:subtitle: Demo
       hee:summary: Demo about Publication Page is working with the new requirements.
       hee:title: Publication
@@ -234,7 +234,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-07T10:22:48.555+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-07T13:48:10.135+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-09T09:45:39.290+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 39e45420-6207-4770-8dfd-0683954a66bc
       hippotranslation:locale: en
@@ -270,9 +270,9 @@
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: b83b2e28-a619-4ea7-8974-c5a8c4e9df4b
       hee:publicationDate: 2022-10-07T00:00:00+01:00
+      hee:publicationProfessions: [public_health]
+      hee:publicationTopics: [long_term_conditions]
       hee:publicationType: report
-      hee:publicationprofessions: [publicHealth]
-      hee:publicationtopics: [longTermConditions]
       hee:subtitle: Demo
       hee:summary: Demo about Publication Page is working with the new requirements.
       hee:title: Publication
@@ -317,9 +317,9 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 3d2e9752-d219-4194-8fd3-b2af6c1c893f
       hee:publicationDate: 2022-10-07T00:00:00+01:00
+      hee:publicationProfessions: [public_health]
+      hee:publicationTopics: [long_term_conditions]
       hee:publicationType: report
-      hee:publicationprofessions: [publicHealth]
-      hee:publicationtopics: [longTermConditions]
       hee:subtitle: Demo
       hee:summary: Demo about Publication Page is working with the new requirements.
       hee:title: Publication
@@ -360,44 +360,3 @@
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
-  /demo:
-    jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
-    jcr:uuid: 54a541c0-f0f0-4c93-9533-96ba59b5b3d2
-    hippo:name: Demo
-    /demo:
-      jcr:primaryType: hee:report
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 4da7eb7b-8d0c-4733-825f-5a6c97a5c378
-      hee:publicationDate: 0001-01-01T12:00:00Z
-      hee:publicationType: ''
-      hee:publicationprofessions: []
-      hee:publicationtopics: []
-      hee:subtitle: ''
-      hee:summary: ''
-      hee:title: ''
-      hippo:availability: []
-      hippostd:holder: admin
-      hippostd:state: draft
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2022-10-07T13:50:56.366+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-07T13:50:56.366+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: 065a2f5f-4baa-4c9a-827d-592695d46df6
-      hippotranslation:locale: en
-      /hee:pageLastNextReview:
-        jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 0001-01-01T12:00:00Z
-        hee:nextReviewed: 0001-01-01T12:00:00Z
-      /hee:contentBlocks[1]:
-        jcr:primaryType: hee:anchorLinks
-        hee:targetHeadings: [h2, h3, h4, h5]
-        hee:title: Contents
-      /hee:contentBlocks[2]:
-        jcr:primaryType: hippostd:html
-        hippostd:content: ''
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

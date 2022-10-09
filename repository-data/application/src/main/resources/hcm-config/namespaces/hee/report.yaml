@@ -56,7 +56,7 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /string:
+          /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -83,21 +83,21 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
-          /publicationtopics:
+          /publicationTopics:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationtopics
+            hipposysedit:path: hee:publicationTopics
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /publicationprofessions:
+          /publicationProfessions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationprofessions
+            hipposysedit:path: hee:publicationProfessions
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
@@ -120,8 +120,8 @@ definitions:
           hee:subtitle: ''
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationType: ''
-          hee:publicationtopics: []
-          hee:publicationprofessions: []
+          hee:publicationTopics: []
+          hee:publicationProfessions: []
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
@@ -173,7 +173,7 @@ definitions:
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
-            field: string
+            field: subtitle
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -202,19 +202,19 @@ definitions:
               showCompoundNames: 'true'
           /publicationType:
             jcr:primaryType: frontend:plugin
-            caption: Publication Type
+            caption: Publication type
             field: publicationType
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtype
+              source: /content/documents/administration/valuelists/publicationtypes
               sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-          /publicationtopics:
+          /publicationTopics:
             jcr:primaryType: frontend:plugin
-            caption: Publication Topics
-            field: publicationtopics
+            caption: Publication topics
+            field: publicationTopics
             multiselect.type: palette
             palette.alloworder: false
             palette.maxrows: '10'
@@ -225,10 +225,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtopics
-          /publicationprofessions:
+          /publicationProfessions:
             jcr:primaryType: frontend:plugin
-            caption: Publication Professions
-            field: publicationprofessions
+            caption: Publication professions
+            field: publicationProfessions
             multiselect.type: palette
             palette.alloworder: false
             palette.maxrows: '10'
@@ -241,7 +241,7 @@ definitions:
               source: /content/documents/administration/valuelists/publicationprofessions
           /publicationDate:
             jcr:primaryType: frontend:plugin
-            caption: Publication Date
+            caption: Publication date
             field: publicationDate
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
