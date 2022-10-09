@@ -11,11 +11,16 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 647a7800-d6bd-4331-9cfd-5f8a55020419
     hippo:name: Annual reports and accounts 2020-21
-    hippo:versionHistory: 62eb31c9-15a7-473f-84f7-25b59bf53906
+    hippo:versionHistory: 0fe913f9-916d-4e11-b5c4-50a2eefc3a04
     /annual-reports-and-accounts[1]:
       jcr:primaryType: hee:report
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: d9e6c2d4-1c84-4c60-9c9e-2ccc4868738a
+      hee:publicationDate: 2022-10-09T00:00:00+01:00
+      hee:publicationProfessions: [healthcare_science, pharmacy, public_health]
+      hee:publicationTopics: [mental_health]
+      hee:publicationType: report
+      hee:subtitle: ''
       hee:summary: Annual report and accounts for Health Education England (HEE).
       hee:title: 'Health Education England annual report and accounts: 2020 to 2021'
       hippo:availability: []
@@ -23,33 +28,22 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-08-15T13:21:31.852+01:00
-      hippostdpubwf:lastModificationDate: 2022-08-15T22:25:03.083+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-09T13:04:12.415+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 8c41a20f-3742-4b4e-97b5-8f0f9d703e7b
       hippotranslation:locale: en
-      /hee:relatedContent:
-        jcr:primaryType: hee:contentCards
-        hee:cardGroupSummary: Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
-          a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum
-          congue leo eget malesuada.
-        hee:header: Related content
-        /hee:cards[1]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
-        /hee:cards[2]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
-        /hee:cards[3]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2022-08-15T00:00:00+01:00
         hee:nextReviewed: 2022-09-14T00:00:00+01:00
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:anchorLinks
+        hee:targetHeadings: [h2, h3, h4, h5]
+        hee:title: On this page
+      /hee:contentBlocks[2]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
-          <h2>Details</h2>
+          <h2>H2: Details</h2>
 
           <p>HEE’s annual report and accounts for 2020 to 2021 includes:</p>
 
@@ -64,24 +58,89 @@
            </li>
            <li>an accountability report – this explains&nbsp;HEE’s composition and governance structures and how they support the achievement of&nbsp;HEE’s objectives</li>
           </ul>
-      /hee:logoGroup:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:microHero:
+
+          <p>&nbsp;</p>
+
+          <h3>H3: Vivamus magna justo</h3>
+
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+
+          <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+
+          <h4>H4: elementum sed sit</h4>
+
+          <p>Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+
+          <p>Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+
+          <h5>H5: malesuada feugiat</h5>
+
+          <p>Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+          <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh.</p>
+
+          <h6>H6: porttitor at sem</h6>
+
+          <p>Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+          <p>Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
+      /hee:contentBlocks[5]:
+        jcr:primaryType: hee:statementCardReference
+        /hee:statementCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      /hee:contentBlocks[6]:
+        jcr:primaryType: hee:warningCalloutReference
+        /hee:warningCalloutContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[7]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:contentBlocks[8]:
         jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
+      /hee:contentBlocks[9]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: e6109626-b9ea-4f1c-a908-0f041aff20f7
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /hee:contentBlocks[11]:
+        jcr:primaryType: hee:tabsReference
+        /hee:tabsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 01128cc5-221f-4894-a953-22acb3f8b2a7
     /annual-reports-and-accounts[2]:
       jcr:primaryType: hee:report
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 1dce29c3-6880-40bd-9b8f-f82724e8649b
+      hee:publicationDate: 2022-10-09T00:00:00+01:00
+      hee:publicationProfessions: [healthcare_science, pharmacy, public_health]
+      hee:publicationTopics: [mental_health]
+      hee:publicationType: report
+      hee:subtitle: ''
       hee:summary: Annual report and accounts for Health Education England (HEE).
       hee:title: 'Health Education England annual report and accounts: 2020 to 2021'
       hippo:availability: [preview]
@@ -89,33 +148,22 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-08-15T13:21:31.852+01:00
-      hippostdpubwf:lastModificationDate: 2022-08-15T22:26:05.775+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-09T13:05:48.988+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 8c41a20f-3742-4b4e-97b5-8f0f9d703e7b
       hippotranslation:locale: en
-      /hee:relatedContent:
-        jcr:primaryType: hee:contentCards
-        hee:cardGroupSummary: Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
-          a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum
-          congue leo eget malesuada.
-        hee:header: Related content
-        /hee:cards[1]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
-        /hee:cards[2]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
-        /hee:cards[3]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2022-08-15T00:00:00+01:00
         hee:nextReviewed: 2022-09-14T00:00:00+01:00
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:anchorLinks
+        hee:targetHeadings: [h2, h3, h4, h5]
+        hee:title: On this page
+      /hee:contentBlocks[2]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
-          <h2>Details</h2>
+          <h2>H2: Details</h2>
 
           <p>HEE’s annual report and accounts for 2020 to 2021 includes:</p>
 
@@ -130,24 +178,89 @@
            </li>
            <li>an accountability report – this explains&nbsp;HEE’s composition and governance structures and how they support the achievement of&nbsp;HEE’s objectives</li>
           </ul>
-      /hee:logoGroup:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:microHero:
+
+          <p>&nbsp;</p>
+
+          <h3>H3: Vivamus magna justo</h3>
+
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+
+          <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+
+          <h4>H4: elementum sed sit</h4>
+
+          <p>Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+
+          <p>Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+
+          <h5>H5: malesuada feugiat</h5>
+
+          <p>Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+          <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh.</p>
+
+          <h6>H6: porttitor at sem</h6>
+
+          <p>Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+          <p>Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
+      /hee:contentBlocks[5]:
+        jcr:primaryType: hee:statementCardReference
+        /hee:statementCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      /hee:contentBlocks[6]:
+        jcr:primaryType: hee:warningCalloutReference
+        /hee:warningCalloutContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[7]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:contentBlocks[8]:
         jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
+      /hee:contentBlocks[9]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: e6109626-b9ea-4f1c-a908-0f041aff20f7
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /hee:contentBlocks[11]:
+        jcr:primaryType: hee:tabsReference
+        /hee:tabsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 01128cc5-221f-4894-a953-22acb3f8b2a7
     /annual-reports-and-accounts[3]:
       jcr:primaryType: hee:report
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e24e44b7-b997-4ce3-b39c-39ebe43e393e
+      hee:publicationDate: 2022-10-09T00:00:00+01:00
+      hee:publicationProfessions: [healthcare_science, pharmacy, public_health]
+      hee:publicationTopics: [mental_health]
+      hee:publicationType: report
+      hee:subtitle: ''
       hee:summary: Annual report and accounts for Health Education England (HEE).
       hee:title: 'Health Education England annual report and accounts: 2020 to 2021'
       hippo:availability: [live]
@@ -155,34 +268,23 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-08-15T13:21:31.852+01:00
-      hippostdpubwf:lastModificationDate: 2022-08-15T22:26:05.775+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-09T13:05:48.988+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-08-15T22:26:07.729+01:00
+      hippostdpubwf:publicationDate: 2022-10-09T13:05:51.047+01:00
       hippotranslation:id: 8c41a20f-3742-4b4e-97b5-8f0f9d703e7b
       hippotranslation:locale: en
-      /hee:relatedContent:
-        jcr:primaryType: hee:contentCards
-        hee:cardGroupSummary: Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
-          a. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum
-          congue leo eget malesuada.
-        hee:header: Related content
-        /hee:cards[1]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
-        /hee:cards[2]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 997a56a9-77e9-4895-a0ac-810ed12f5293
-        /hee:cards[3]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2022-08-15T00:00:00+01:00
         hee:nextReviewed: 2022-09-14T00:00:00+01:00
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
+        jcr:primaryType: hee:anchorLinks
+        hee:targetHeadings: [h2, h3, h4, h5]
+        hee:title: On this page
+      /hee:contentBlocks[2]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
-          <h2>Details</h2>
+          <h2>H2: Details</h2>
 
           <p>HEE’s annual report and accounts for 2020 to 2021 includes:</p>
 
@@ -197,20 +299,80 @@
            </li>
            <li>an accountability report – this explains&nbsp;HEE’s composition and governance structures and how they support the achievement of&nbsp;HEE’s objectives</li>
           </ul>
-      /hee:logoGroup:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:microHero:
+
+          <p>&nbsp;</p>
+
+          <h3>H3: Vivamus magna justo</h3>
+
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Proin eget tortor risus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+
+          <p>Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+
+          <h4>H4: elementum sed sit</h4>
+
+          <p>Donec rutrum congue leo eget malesuada. Nulla quis lorem ut libero malesuada feugiat. Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+
+          <p>Pellentesque in ipsum id orci porta dapibus. Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+
+          <h5>H5: malesuada feugiat</h5>
+
+          <p>Pellentesque in ipsum id orci porta dapibus. Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+          <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla quis lorem ut libero malesuada feugiat. Sed porttitor lectus nibh.</p>
+
+          <h6>H6: porttitor at sem</h6>
+
+          <p>Cras ultricies ligula sed magna dictum porta. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
+
+          <p>Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat.</p>
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:mediaEmbedReference
+        /hee:mediaEmbedContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 02090386-3700-441e-8e27-e3e67780fc1a
+      /hee:contentBlocks[5]:
+        jcr:primaryType: hee:statementCardReference
+        /hee:statementCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5caf1978-dae0-4af0-8025-c9c68cb87cf9
+      /hee:contentBlocks[6]:
+        jcr:primaryType: hee:warningCalloutReference
+        /hee:warningCalloutContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[7]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:contentBlocks[8]:
         jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
+      /hee:contentBlocks[9]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: e6109626-b9ea-4f1c-a908-0f041aff20f7
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:contentBlocks[10]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /hee:contentBlocks[11]:
+        jcr:primaryType: hee:tabsReference
+        /hee:tabsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 01128cc5-221f-4894-a953-22acb3f8b2a7
   /demopublication:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -234,7 +396,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-07T10:22:48.555+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-09T09:45:39.290+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-09T12:15:56.584+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 39e45420-6207-4770-8dfd-0683954a66bc
       hippotranslation:locale: en
@@ -260,11 +422,6 @@
           <h3>header 4</h3>
 
           <h5>header 5</h5>
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
     /demopublication[2]:
       jcr:primaryType: hee:report
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -307,11 +464,6 @@
           <h3>header 4</h3>
 
           <h5>header 5</h5>
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
     /demopublication[3]:
       jcr:primaryType: hee:report
       jcr:mixinTypes: ['mix:referenceable']
@@ -355,8 +507,3 @@
           <h3>header 4</h3>
 
           <h5>header 5</h5>
-      /hee:rightHandBlocks:
-        jcr:primaryType: hee:fileLinksCardReference
-        /hee:fileLinksCard:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3

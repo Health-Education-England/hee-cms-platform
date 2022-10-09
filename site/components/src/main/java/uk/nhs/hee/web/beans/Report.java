@@ -4,8 +4,12 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
+import java.util.Calendar;
 import java.util.List;
 
+/**
+ * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
+ */
 @HippoEssentialsGenerated(internalName = "hee:report")
 @Node(jcrType = "hee:report")
 public class Report extends BaseDocument {
@@ -28,22 +32,28 @@ public class Report extends BaseDocument {
         return getBean("hee:pageLastNextReview", PageLastNextReview.class);
     }
 
-    public <T extends HippoBean> List<T> getRightHandBlocks() {
-        return getChildBeansByName("hee:rightHandBlocks");
+    @HippoEssentialsGenerated(internalName = "hee:subtitle")
+    public String getSubtitle() {
+        return getSingleProperty("hee:subtitle");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:relatedContent", allowModifications = false)
-    public ContentCards getRelatedContent() {
-        return getBean("hee:relatedContent", ContentCards.class);
+    @HippoEssentialsGenerated(internalName = "hee:publicationDate")
+    public Calendar getPublicationDate() {
+        return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
-    public HippoBean getLogoGroup() {
-        return getLinkedBean("hee:logoGroup", HippoBean.class);
+    @HippoEssentialsGenerated(internalName = "hee:publicationType")
+    public String getPublicationType() {
+        return getSingleProperty("hee:publicationType");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:microHero")
-    public ImageSetWithCaption getMicroHero() {
-        return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
+    @HippoEssentialsGenerated(internalName = "hee:publicationTopics")
+    public String[] getPublicationTopics() {
+        return getMultipleProperty("hee:publicationTopics");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:publicationProfessions")
+    public String[] getPublicationProfessions() {
+        return getMultipleProperty("hee:publicationProfessions");
     }
 }

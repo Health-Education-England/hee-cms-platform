@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9bd44e49-f582-4a8b-9727-d71689c2c883
+          jcr:uuid: cc7336da-5cf3-4c89-93c9-920732d1a019
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -49,13 +49,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
             hipposysedit:validators: [required]
-          /rightHandBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:rightHandBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
           /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -64,7 +57,6 @@ definitions:
             hipposysedit:path: hee:subtitle
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [optional]
           /publicationDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -106,7 +98,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 477b2fe5-da49-4d56-80d8-729f0ba4c161
+          jcr:uuid: 06b0bf83-0141-4585-84f8-184ff27a96be
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -133,11 +125,6 @@ definitions:
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /hee:rightHandBlocks:
-            jcr:primaryType: hee:fileLinksCardReference
-            /hee:fileLinksCard:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -176,6 +163,7 @@ definitions:
             field: subtitle
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /summary:
@@ -188,18 +176,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '300'
-          /rightHandBlocks:
-            jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference
-            contentPickerType: links
-            field: rightHandBlocks
-            hint: ''
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.right.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
           /publicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
@@ -250,7 +226,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:ActionLink,hee:anchorLinks,hee:appliesToBoxReference,hee:blockLinksReference,hee:buttonReference,hee:contact,hee:contentCards,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:newsletterSubscribeFormReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
+            compoundList: hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             hint: ''
