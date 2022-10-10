@@ -11,7 +11,13 @@
             <div class="nhsuk-width-container">
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
-                        <h1>${document.title}</h1>
+                        <h1>
+                            <span role="text">${document.title}
+                                <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+                                    ${document.subtitle}
+                                </span>
+                            </span>
+                        </h1>
                     </div>
                 </div>
 
