@@ -38,20 +38,9 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
 
             addBlogListingPageURLToModel(request);
 
-            final List<BlogComment> comments = getModeratedComments(blogPost.getComments());
-            request.setModel("totalComments", comments.size());
-
-            if (comments.isEmpty()) {
-                return;
-            }
-
-            Collections.reverse(comments);
-            final boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
-            if (!showAllComments) {
-                request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
-            } else {
-                request.setModel("visibleComments", comments);
-            }
+            // NWPS-1125: Commenting the following line in order to stop adding blog comments to the model
+            // as it isn't required to be displayed on 'site/freemarker/hee/catalog/blogpost-main.ftl' template.
+            // addBlogCommentsToModel(request, blogPost);
 
             request.setAttribute("tableComponentService", new TableComponentService());
         }
@@ -110,12 +99,29 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     private void addValueListsForContentBlocks(
             final HstRequest request,
             final BlogPost blogPost) {
-        List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
+        final List<HippoBean> pageContentBlocks = blogPost.getContentBlocks();
         pageContentBlocks.addAll(blogPost.getRightHandBlocks());
 
-        Map<String, Map<String, String>> modelToValueListMap =
+        final Map<String, Map<String, String>> modelToValueListMap =
                 ContentBlocksUtils.getValueListMaps(pageContentBlocks);
         modelToValueListMap.forEach(request::setModel);
+    }
+
+    private void addBlogCommentsToModel(final HstRequest request, final BlogPost blogPost) {
+        final List<BlogComment> comments = getModeratedComments(blogPost.getComments());
+        request.setModel("totalComments", comments.size());
+
+        if (comments.isEmpty()) {
+            return;
+        }
+
+        Collections.reverse(comments);
+        final boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
+        if (!showAllComments) {
+            request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
+        } else {
+            request.setModel("visibleComments", comments);
+        }
     }
 
     /**

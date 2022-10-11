@@ -27,7 +27,6 @@ public class ReportComponent extends EssentialsDocumentComponent {
         if (reportPage != null) {
             // the page content blocks needs valueLists to be set on the model
             final List<HippoBean> pageContentBlocks = reportPage.getContentBlocks();
-            pageContentBlocks.addAll(reportPage.getRightHandBlocks());
 
             final Map<String, Map<String, String>> modelToValueListMap =
                     ContentBlocksUtils.getValueListMaps(pageContentBlocks);
