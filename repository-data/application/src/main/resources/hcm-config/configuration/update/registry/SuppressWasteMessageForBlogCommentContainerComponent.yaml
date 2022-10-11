@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/SuppressWasteMessageForBlogCommentContainerComponent:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Adds 'hst:suppresswastemessage = true' to all 'comment'
+        hst:containercomponent nodes in order to suppress logging comment component
+        waste message.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(comment,
+        hst:containercomponent)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.hippoecm.hst.configuration.HstNodeTypes\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass SuppressWasteMessageForBlogCommentContainerComponent\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug(\"Start updating comment [hst:containercomponent] node:\
+        \ '${node.getPath()}'\")\r\n        node.setProperty(HstNodeTypes.COMPONENT_PROPERTY_SUPPRESS_WASTE_MESSAGE,\
+        \ Boolean.TRUE)\r\n        log.debug(\"Successfully updated comment [hst:containercomponent]\
+        \ node '${node.getPath()}' \" +\r\n                \"with '${HstNodeTypes.COMPONENT_PROPERTY_SUPPRESS_WASTE_MESSAGE}=true'\
+        \ property\")\r\n\r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node\
+        \ node) {\r\n        throw new UnsupportedOperationException('Updater does\
+        \ not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

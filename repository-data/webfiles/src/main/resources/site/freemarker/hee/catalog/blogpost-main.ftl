@@ -135,7 +135,7 @@
         </div>
     </article>
 
-    <div class="nhsuk-grid-row">
+    <#--  <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
             <h2 data-anchorlinksignore="true">${totalComments} <@fmt.message key="comments"/></h2>
 
@@ -162,5 +162,5 @@
                 </#if>
             </#if>
         </div>
-    </div>
+    </div>  -->
 </#if>

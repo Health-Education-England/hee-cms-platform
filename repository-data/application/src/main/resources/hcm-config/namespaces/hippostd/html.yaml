@@ -2,3 +2,4 @@ definitions:
   config:
     /hippo:namespaces/hippostd/html/editor:templates/_default_:
       ckeditor.config.appended.json: '{ removeButtons: "PickImage" }'
+      ckeditor.config.overlayed.json: '{ allowedContent: true }'
