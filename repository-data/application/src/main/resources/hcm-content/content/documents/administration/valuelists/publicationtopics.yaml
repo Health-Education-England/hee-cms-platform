@@ -1,0 +1,81 @@
+/content/documents/administration/valuelists/publicationtopics:
+  .meta:order-before: publicationprofessions
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 95669793-7faa-4253-bc6c-dced4bed203d
+  hippo:name: PublicationTopics
+  /publicationtopics:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: c01adce1-4059-495a-bb6a-36527bffc73f
+    hippo:availability: [live, preview]
+    hippotranslation:id: 95b3fe36-ad5b-4a14-9d95-c9cca54685e1
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: mental_health
+      selection:label: Mental Health
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: cancer
+      selection:label: Cancer
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: maternity
+      selection:label: Maternity
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: workforce_planning
+      selection:label: Worforce Planning
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: workforce_transformation
+      selection:label: Workforce Transformation
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: quality
+      selection:label: Quality
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: learning_disabilities
+      selection:label: Learning Disabilities
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: armed_forces
+      selection:label: Armed Forces
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: dementia
+      selection:label: Dementia
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: genomics
+      selection:label: Genomics
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: pre_employment
+      selection:label: Pre-Employment
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: long_term_conditions
+      selection:label: Long term Conditions
+    /selection:listitem[13]:
+      jcr:primaryType: selection:listitem
+      selection:key: global
+      selection:label: Global
+    /selection:listitem[14]:
+      jcr:primaryType: selection:listitem
+      selection:key: knowledge_management
+      selection:label: Knowledge Management
+    /selection:listitem[15]:
+      jcr:primaryType: selection:listitem
+      selection:key: primary_care
+      selection:label: Primary Care
+    /selection:listitem[16]:
+      jcr:primaryType: selection:listitem
+      selection:key: health_academia
+      selection:label: Health Academia
+    /selection:listitem[17]:
+      jcr:primaryType: selection:listitem
+      selection:key: careers
+      selection:label: Careers

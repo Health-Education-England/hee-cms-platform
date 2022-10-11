@@ -19,19 +19,42 @@
   <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager">
     <constructor-arg>
       <map>
+        <!-- Bulletin categories -->
         <entry key="bulletinCategories" value="/content/documents/administration/valuelists/lks/bulletincategories"/>
+
+        <!-- Case study valuelists -->
         <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/lks/casestudyimpacttypes"/>
         <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/lks/casestudyimpactgroups"/>
         <entry key="caseStudySectors" value="/content/documents/administration/valuelists/lks/casestudysectors"/>
         <entry key="caseStudyRegions" value="/content/documents/administration/valuelists/lks/casestudyregions"/>
         <entry key="caseStudyProviders" value="/content/documents/administration/valuelists/lks/casestudyproviders"/>
-        <entry key="logoTypes" value="/content/documents/administration/valuelists/logotypes"/>
-        <entry key="navMapRegions" value="/content/documents/administration/valuelists/navmapregions"/>
+
+        <!-- Search bank valuelists -->
         <entry key="searchBankTopics" value="/content/documents/administration/valuelists/lks/searchbanktopics"/>
         <entry key="searchBankKeyTerms" value="/content/documents/administration/valuelists/lks/searchbankkeyterms"/>
         <entry key="searchBankProviders" value="/content/documents/administration/valuelists/lks/searchbankproviders"/>
 
-        <!-- Blog Categories [/content/documents/administration/valuelists/${channel}/blogcategories] -->
+        <!-- Logo types -->
+        <entry key="logoTypes" value="/content/documents/administration/valuelists/logotypes"/>
+
+        <!-- Napigation map regions -->
+        <entry key="navMapRegions" value="/content/documents/administration/valuelists/navmapregions"/>
+
+        <!-- Newsletter subscribe form valuelists -->
+        <entry key="newsletterRegions" value="/content/documents/administration/valuelists/newsletterregions"/>
+        <entry key="newsletterOrganisations" value="/content/documents/administration/valuelists/newsletterorganisations"/>
+        <entry key="newsletterProfessions" value="/content/documents/administration/valuelists/newsletterprofessions"/>
+
+        <!-- Person valuelists -->
+        <entry key="personTitles" value="/content/documents/administration/valuelists/persontitles"/>
+        <entry key="personPronouns" value="/content/documents/administration/valuelists/personpronouns"/>
+
+        <!-- Publication (or report) valuelists -->
+        <entry key="publicationTypes" value="/content/documents/administration/valuelists/publicationtypes"/>
+        <entry key="publicationTopics" value="/content/documents/administration/valuelists/publicationtopics"/>
+        <entry key="publicationProfessions" value="/content/documents/administration/valuelists/publicationprofessions"/>
+
+        <!-- Blog categories [/content/documents/administration/valuelists/${channel}/blogcategories] -->
         <entry key="blogCategories_lks" value="/content/documents/administration/valuelists/lks/blogcategories"/>
         <entry key="blogCategories_dental" value="/content/documents/administration/valuelists/dental/blogcategories"/>
         <entry key="blogCategories_digital-transformation" value="/content/documents/administration/valuelists/digital-transformation/blogcategories"/>
@@ -40,7 +63,7 @@
         <entry key="blogCategories_health-careers" value="/content/documents/administration/valuelists/health-careers/blogcategories"/>
         <entry key="blogCategories_quality" value="/content/documents/administration/valuelists/quality/blogcategories"/>
 
-        <!-- News Categories [/content/documents/administration/valuelists/${channel}/newscategories] -->
+        <!-- News categories [/content/documents/administration/valuelists/${channel}/newscategories] -->
         <entry key="newsCategories_lks" value="/content/documents/administration/valuelists/lks/newscategories"/>
         <entry key="newsCategories_dental" value="/content/documents/administration/valuelists/dental/newscategories"/>
         <entry key="newsCategories_digital-transformation" value="/content/documents/administration/valuelists/digital-transformation/newscategories"/>
@@ -48,14 +71,6 @@
         <entry key="newsCategories_website-testing" value="/content/documents/administration/valuelists/website-testing/newscategories"/>
         <entry key="newsCategories_health-careers" value="/content/documents/administration/valuelists/health-careers/newscategories"/>
         <entry key="newsCategories_quality" value="/content/documents/administration/valuelists/quality/newscategories"/>
-
-        <!-- Newsletter Subscribe Form Value Lists -->
-        <entry key="newsletterRegions" value="/content/documents/administration/valuelists/newsletterregions"/>
-        <entry key="newsletterOrganisations" value="/content/documents/administration/valuelists/newsletterorganisations"/>
-        <entry key="newsletterProfessions" value="/content/documents/administration/valuelists/newsletterprofessions"/>
-
-        <entry key="personTitles" value="/content/documents/administration/valuelists/persontitles"/>
-        <entry key="personPronouns" value="/content/documents/administration/valuelists/personpronouns"/>
       </map>
     </constructor-arg>
   </bean>

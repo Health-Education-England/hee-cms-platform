@@ -69,6 +69,7 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.InsetReference">
                                                 <@hee.inset inset=block/>
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.ButtonReference">
                                                 <@hee.button button=block/>
                                                 <#break>

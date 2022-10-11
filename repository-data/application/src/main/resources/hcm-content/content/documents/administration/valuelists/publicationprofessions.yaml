@@ -1,0 +1,60 @@
+/content/documents/administration/valuelists/publicationprofessions:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 97042244-1a07-42e3-8986-30c88756cea6
+  hippo:name: PublicationProfessions
+  /publicationprofessions:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: fe86ca20-d3da-4c56-869a-e63565ccd021
+    hippo:availability: [live, preview]
+    hippotranslation:id: 32f01b4d-a180-4aef-8829-75a1b0c77fcf
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: allied_health
+      selection:label: Allied health professionals
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: ambulance_service
+      selection:label: Ambulance Service Team
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: dental
+      selection:label: Dental
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: medical
+      selection:label: Medical
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: healthcare_science
+      selection:label: Healthcare Science
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: management
+      selection:label: Management
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: nursery
+      selection:label: Nursery
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: midwifery
+      selection:label: Midwifery
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: advanced_critial_care
+      selection:label: Advanced Critial Care Practitioner
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: pharmacy
+      selection:label: Pharmacy
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: psychology
+      selection:label: Psychology
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: public_health
+      selection:label: Public Health
