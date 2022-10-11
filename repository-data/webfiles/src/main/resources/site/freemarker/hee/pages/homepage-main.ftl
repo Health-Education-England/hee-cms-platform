@@ -1,5 +1,6 @@
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.HomePage" -->
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
