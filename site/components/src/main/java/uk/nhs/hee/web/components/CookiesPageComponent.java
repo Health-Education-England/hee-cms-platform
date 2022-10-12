@@ -40,6 +40,10 @@ public class CookiesPageComponent extends EssentialsDocumentComponent {
 
         cookieGuidance = request.getModel(REQUEST_ATTR_DOCUMENT);
 
+        if (cookieGuidance == null) {
+            return;
+        }
+
         // the page content blocks needs valueLists to be set on the model
         final List<HippoBean> pageContentBlocks = cookieGuidance.getContentBlocks();
         pageContentBlocks.addAll(cookieGuidance.getRightHandBlocks());
