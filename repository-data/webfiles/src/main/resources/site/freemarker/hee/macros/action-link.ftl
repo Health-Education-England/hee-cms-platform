@@ -1,12 +1,11 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "internal-link.ftl">
 
 <#macro actionLink actionLink>
     <#if actionLink??>
         <#assign openInNewWindow=false/>
         <#if actionLink.link.document??>
-            <#assign link>
-                <@hst.link hippobean=actionLink.link.document/>
-            </#assign>
+            <#assign link=getInternalLinkURL(actionLink.link.document)>
         <#else>
             <#assign link = "${actionLink.link.url}">
             <#if actionLink.link.openLinkUrlNewWindow>

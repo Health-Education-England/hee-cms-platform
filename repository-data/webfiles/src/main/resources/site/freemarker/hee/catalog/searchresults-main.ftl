@@ -50,7 +50,7 @@
 
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
-                                <@searchListItem items=pageable.items miniHubGuidancePathToURLMap=miniHubGuidancePathToURLMap/>
+                                <@searchListItem items=pageable.items/>
                             </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>
