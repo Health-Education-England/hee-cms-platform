@@ -5,12 +5,10 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.repository.HippoStdNodeType;
 import org.hippoecm.repository.util.DateTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.HstUtils;
 
@@ -24,7 +22,6 @@ import java.util.stream.Collectors;
 /**
  * Event Listing Page Component.
  */
-@ParametersInfo(type = ListingPageComponentInfo.class)
 public class EventListingPageComponent extends ListingPageComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(EventListingPageComponent.class);
 

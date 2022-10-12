@@ -5,8 +5,6 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
-import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.HstUtils;
 
@@ -15,7 +13,6 @@ import java.util.List;
 /**
  * Base component for all Categories based Listing Pages.
  */
-@ParametersInfo(type = ListingPageComponentInfo.class)
 public class CategoryBasedListingPageComponent extends ListingPageComponent {
 
     private static final String CATEGORY_QUERY_PARAM = "category";

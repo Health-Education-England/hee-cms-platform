@@ -5,20 +5,9 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
-import uk.nhs.hee.web.beans.ListingPage;
-import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.StringUtils;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 
-@ParametersInfo(type = EssentialsDocumentComponentInfo.class)
 public class SearchResultsComponent extends ListingPageComponent {
 
     private static final String SEARCH_TEXT_QUERY_PARAM = "q";

@@ -13,14 +13,12 @@ import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.AtozPage;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.MiniHub;
-import uk.nhs.hee.web.components.info.AToZPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.HstUtils;
 
@@ -29,10 +27,10 @@ import java.util.*;
 /**
  * Base component for A to Z Listing Page.
  */
-@ParametersInfo(type = AToZPageComponentInfo.class)
-public class AToZListingPageComponent extends EssentialsDocumentComponent {
+public class AToZListingPageComponent extends EssentialsContentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(AToZListingPageComponent.class);
 
+    @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
         final Map<String, List<Pair>> aToZMap;
@@ -56,12 +54,7 @@ public class AToZListingPageComponent extends EssentialsDocumentComponent {
         for (char ch = 'A'; ch <= 'Z'; ++ch)
             atozmap.put(String.valueOf(ch), null);
 
-        AtozPage atozPage = request.getModel(REQUEST_ATTR_DOCUMENT);
-
-        if (atozPage == null) {
-            atozPage = (AtozPage) request.getRequestContext().getContentBean();
-        }
-        request.setModel(REQUEST_ATTR_DOCUMENT, atozPage);
+        final AtozPage atozPage = request.getModel(REQUEST_ATTR_DOCUMENT);
 
         final HstQuery query = buildQuery(request, atozPage);
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
@@ -71,7 +64,7 @@ public class AToZListingPageComponent extends EssentialsDocumentComponent {
         while (beans.hasNext()) {
             final HippoBean bean = beans.nextHippoBean();
             if (bean != null) {
-                String firstChar = String.valueOf(bean.getSingleProperty("hee:title").toString().charAt(0)).toUpperCase();
+                final String firstChar = String.valueOf(bean.getSingleProperty("hee:title").toString().charAt(0)).toUpperCase();
                 final Pair<String, String> page = new ImmutablePair(bean.getSingleProperty("hee:title"), getPageUrl(request, bean));
                 if (atozmap.get(firstChar) == null) {
                     atozmap.put(firstChar, new ArrayList<>(Arrays.asList(page)));
@@ -105,11 +98,11 @@ public class AToZListingPageComponent extends EssentialsDocumentComponent {
     /**
      * Constructs the page url depending on whether the page is a MiniHub
      *
-     * @param request   the {@link HstRequest} instance.
-     * @param bean      the {@link HippoBean} instance.
+     * @param request the {@link HstRequest} instance.
+     * @param bean    the {@link HippoBean} instance.
      * @return the {@link String} instance.
      */
-    protected String getPageUrl(final HstRequest request, HippoBean bean) {
+    protected String getPageUrl(final HstRequest request, final HippoBean bean) {
         final boolean isMinihub = bean.getContentType().equals("hee:MiniHub");
         String pageUrl = "";
         if (isMinihub) {
@@ -145,7 +138,7 @@ public class AToZListingPageComponent extends EssentialsDocumentComponent {
      * @throws FilterException thrown when an error occurs during Query Filter build.
      */
     protected Filter createQueryFilter(final HstRequest request, final HstQuery query) throws FilterException {
-        Filter baseFilter = query.createFilter();
+        final Filter baseFilter = query.createFilter();
         baseFilter.addEqualTo("hee:addToAZ", true);
         return baseFilter;
     }

@@ -3,12 +3,10 @@ package uk.nhs.hee.web.components;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
-import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
-import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
@@ -22,8 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@ParametersInfo(type = BlogPostComponentInfo.class)
-public class BlogPostComponent extends EssentialsDocumentComponent {
+public class BlogPostComponent extends EssentialsContentComponent {
 
     private static final int DEFAULT_NUMBER_OF_VISIBLE_COMMENTS = 3;
 
@@ -31,9 +28,8 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        final BlogPost blogPost = getBlogPostBean(request);
+        final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
-            request.setModel(REQUEST_ATTR_DOCUMENT, blogPost);
             addCategoriesValueListMapToModel(request, blogPost);
             addValueListsForContentBlocks(request, blogPost);
 
@@ -58,14 +54,6 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         }
     }
 
-    private BlogPost getBlogPostBean(final HstRequest request) {
-        BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (blogPost == null) {
-            blogPost = (BlogPost) request.getRequestContext().getContentBean();
-        }
-
-        return blogPost;
-    }
 
     /**
      * Adds Blog Listing Page URL to model.

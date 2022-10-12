@@ -3,10 +3,8 @@ package uk.nhs.hee.web.components;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import uk.nhs.hee.web.beans.Report;
-import uk.nhs.hee.web.components.info.ReportComponentInfo;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
@@ -16,8 +14,7 @@ import java.util.Map;
 /**
  * Component class for {@code hee:report} document type pages.
  */
-@ParametersInfo(type = ReportComponentInfo.class)
-public class ReportComponent extends EssentialsDocumentComponent {
+public class ReportComponent extends EssentialsContentComponent {
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
