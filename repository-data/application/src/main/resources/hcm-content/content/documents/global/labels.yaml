@@ -3,28 +3,6 @@
   jcr:mixinTypes: ['mix:referenceable']
   jcr:uuid: 98939efc-e768-4a6c-b3b0-cb9ce2906a17
   hippostd:foldertype: [new-resource-bundle, new-untranslated-folder]
-  /pagenotfound:
-    jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
-    jcr:uuid: 691a261d-274e-484e-bddc-8f5e06d88394
-    hippo:name: Page not found
-    /pagenotfound:
-      jcr:primaryType: resourcebundle:resourcebundle
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 5cb21eda-8e83-4ed6-b764-e3f253fd03ba
-      hippo:availability: [live, preview]
-      hippostd:state: published
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
-      hippostdpubwf:lastModificationDate: 2014-08-21T17:11:53.242+02:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2014-08-21T17:11:55.239+02:00
-      resourcebundle:descriptions: [Title displayed when page is not found., Text
-          displayed when page is not found.]
-      resourcebundle:id: essentials.pagenotfound
-      resourcebundle:keys: [pagenotfound.title, pagenotfound.text]
-      resourcebundle:messages: [Page not found (404), 'The page you requested was
-          not found. - [This text can be edited here: http://localhost:8080/cms/?1&path=/content/documents/administration/labels/pagenotfound]']
   /global:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
@@ -178,99 +156,6 @@
         comment.view_all, comment.view_less]
       resourcebundle:messages: [Published on, by, comments, Posted on, View all, View
           less]
-  /listing:
-    jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
-    jcr:uuid: 00ba002b-a55f-471d-aa61-8b1729faa5dd
-    hippo:name: Listing
-    /listing[1]:
-      jcr:primaryType: resourcebundle:resourcebundle
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 9ff9219d-fcc1-43b7-9b82-06c8268ecf89
-      hippo:availability: []
-      hippostd:retainable: false
-      hippostd:state: draft
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-      hippostdpubwf:lastModificationDate: 2022-03-14T18:30:16.431Z
-      hippostdpubwf:lastModifiedBy: admin
-      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
-          item overview., Used in a Bulletin component to show a bulletin item website.,
-        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-        '', '', '', '', '', '', '', '', '', '', '', '']
-      resourcebundle:id: uk.nhs.hee.web.listing
-      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
-        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
-        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
-        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
-        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
-        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
-        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
-        searchbank.key_terms, sort.option.az, casestudy.provider]
-      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
-        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
-        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
-          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
-          Impacted, Impact Types, Key Terms, A to Z, Organisation]
-    /listing[2]:
-      jcr:primaryType: resourcebundle:resourcebundle
-      jcr:mixinTypes: ['mix:versionable']
-      jcr:uuid: a20e0e9f-9e20-4f97-a52d-e68dd3c82cd9
-      hippo:availability: [preview]
-      hippostd:retainable: false
-      hippostd:state: unpublished
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-      hippostdpubwf:lastModificationDate: 2022-03-14T18:30:31.455Z
-      hippostdpubwf:lastModifiedBy: admin
-      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
-          item overview., Used in a Bulletin component to show a bulletin item website.,
-        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-        '', '', '', '', '', '', '', '', '', '', '', '']
-      resourcebundle:id: uk.nhs.hee.web.listing
-      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
-        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
-        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
-        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
-        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
-        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
-        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
-        searchbank.key_terms, sort.option.az, casestudy.provider]
-      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
-        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
-        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
-          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
-          Impacted, Impact Types, Key Terms, A to Z, Organisation]
-    /listing[3]:
-      jcr:primaryType: resourcebundle:resourcebundle
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 514cfb9c-3c3f-47be-a66f-21f827aa50b4
-      hippo:availability: [live]
-      hippostd:retainable: false
-      hippostd:state: published
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-      hippostdpubwf:lastModificationDate: 2022-03-14T18:30:31.455Z
-      hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-03-14T18:30:34.887Z
-      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
-          item overview., Used in a Bulletin component to show a bulletin item website.,
-        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-        '', '', '', '', '', '', '', '', '', '', '', '']
-      resourcebundle:id: uk.nhs.hee.web.listing
-      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
-        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
-        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
-        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
-        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
-        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
-        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
-        searchbank.key_terms, sort.option.az, casestudy.provider]
-      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
-        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
-        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
-          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
-          Impacted, Impact Types, Key Terms, A to Z, Organisation]
   /pagination:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
@@ -322,3 +207,166 @@
       resourcebundle:id: uk.nhs.hee.web.pagination
       resourcebundle:keys: [page.previous, page.next]
       resourcebundle:messages: [Previous, Next]
+  /listing:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: f8790eda-2531-419d-9f64-6dc6be394b5a
+    hippo:name: Listing
+    hippo:versionHistory: c12308b0-b625-4cde-8c2c-4741ba0b4473
+    /listing[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 69d550d7-694f-40dc-afae-92fadaef3690
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+      hippostdpubwf:lastModificationDate: 2022-04-08T16:19:09.051+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+          item overview., Used in a Bulletin component to show a bulletin item website.,
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.listing
+      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
+        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
+        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
+        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
+        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
+        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
+        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
+        searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
+        sort.option.submitted_date_newest, sort.option.submitted_date_oldest]
+      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
+        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
+        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
+          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+          Impacted, Impact Types, Key Terms, A to Z, Organisation, Date Submitted,
+        Date Submitted - Newest, Date Submitted - Oldest]
+    /listing[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 351a46f1-1e44-4b87-8ecb-480975a64a9b
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
+      hippostdpubwf:lastModificationDate: 2022-04-08T16:19:09.051+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-10-07T06:52:26.195+01:00
+      resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
+          item overview., Used in a Bulletin component to show a bulletin item website.,
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+      resourcebundle:id: uk.nhs.hee.web.listing
+      resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
+        sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
+        filter.date.label, results.count.text, published_on.text, by.text, casestudy.sector,
+        casestudy.region, filter.topic.label, searchbank.topics, searchbank.strategies,
+        searchbank.get_strategy, searchbank.search, searchbank.get_search, searchbank.completed_on,
+        searchbank.provider, category.text, casestudy.document, searchbank.get_document,
+        filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
+        searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
+        sort.option.submitted_date_newest, sort.option.submitted_date_oldest]
+      resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
+        Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
+        Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed
+          on, Provider, Category, Document, Get Document, Year, Date, Location, Group
+          Impacted, Impact Types, Key Terms, A to Z, Organisation, Date Submitted,
+        Date Submitted - Newest, Date Submitted - Oldest]
+  /newsletter:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: be96a25c-bc47-457c-8da0-4ce7a93f8dd5
+    hippo:name: Newsletter
+    hippo:versionHistory: efb2a50f-d38b-46e4-b39b-28c4efe71314
+    /newsletter[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: a9a02e84-5292-4158-a321-493e635faec3
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
+      hippostdpubwf:lastModificationDate: 2022-04-19T12:01:45.098+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
+        '', '']
+      resourcebundle:id: uk.nhs.hee.web.newsletter
+      resourcebundle:keys: [error.title, error.firstname, error.lastname, error.email,
+        error.consent, label.firstname, label.lastname, label.email, label.region,
+        label.organisation, label.profession, select.region, select.organisation,
+        select.profession]
+      resourcebundle:messages: [There is a problem, Enter your first name, Enter your
+          last name, Enter a valid email address, Privacy policy consent is required,
+        Enter your first name, Last name, Email address, Region (optional), Organisation
+          type (optional), Profession or specialism (optional), Select your region,
+        Select your organisation type, Select your profession or specialism]
+    /newsletter[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 35a128fd-f11e-4bd2-9fe7-9bd332dc5a67
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
+      hippostdpubwf:lastModificationDate: 2022-04-19T12:01:45.098+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-10-07T06:54:29.568+01:00
+      resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
+        '', '']
+      resourcebundle:id: uk.nhs.hee.web.newsletter
+      resourcebundle:keys: [error.title, error.firstname, error.lastname, error.email,
+        error.consent, label.firstname, label.lastname, label.email, label.region,
+        label.organisation, label.profession, select.region, select.organisation,
+        select.profession]
+      resourcebundle:messages: [There is a problem, Enter your first name, Enter your
+          last name, Enter a valid email address, Privacy policy consent is required,
+        Enter your first name, Last name, Email address, Region (optional), Organisation
+          type (optional), Profession or specialism (optional), Select your region,
+        Select your organisation type, Select your profession or specialism]
+  /page-not-found:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 5ef206df-ab80-4db7-a67e-9d9eab9cf1e4
+    hippo:name: Page not found
+    hippo:versionHistory: b29b1bf5-2bf1-41e4-bf19-3943ee96c7d5
+    /page-not-found[1]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 6a7e2ced-f0ad-4aab-ac52-1b29a98e1e81
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
+      hippostdpubwf:lastModificationDate: 2022-07-24T08:18:12.726+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      resourcebundle:descriptions: [Title displayed when page is not found., Text
+          displayed when page is not found.]
+      resourcebundle:id: essentials.pagenotfound
+      resourcebundle:keys: [pagenotfound.title, pagenotfound.text]
+      resourcebundle:messages: [Page not found, 'If you entered a web address, check
+          it is correct. Error code: 404']
+    /page-not-found[2]:
+      jcr:primaryType: resourcebundle:resourcebundle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: abe2447c-e212-4909-a82e-9e9caf4a6c43
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2014-08-21T17:08:08.703+02:00
+      hippostdpubwf:lastModificationDate: 2022-07-24T08:18:12.726+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-10-07T06:56:59.477+01:00
+      resourcebundle:descriptions: [Title displayed when page is not found., Text
+          displayed when page is not found.]
+      resourcebundle:id: essentials.pagenotfound
+      resourcebundle:keys: [pagenotfound.title, pagenotfound.text]
+      resourcebundle:messages: [Page not found, 'If you entered a web address, check
+          it is correct. Error code: 404']

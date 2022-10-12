@@ -3,6 +3,7 @@ definitions:
     /hst:hst/hst:configurations/common/hst:abstractpages/base:
       jcr:primaryType: hst:component
       hst:template: base-layout
+      hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
       /footer:
         jcr:primaryType: hst:component
         hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsMenuComponent
@@ -15,6 +16,10 @@ definitions:
         /top:
           jcr:primaryType: hst:component
           hst:template: base-top
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:template: multi-org-logo
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
         /menu:
           jcr:primaryType: hst:component
           hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsMenuComponent

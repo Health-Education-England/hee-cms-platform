@@ -21,7 +21,7 @@ public class HomePageComponent extends EssentialsContentComponent {
         final HomePage homePage = request.getModel(REQUEST_ATTR_DOCUMENT);
 
         // the page content blocks needs valueLists to be set on the model
-        Map<String, Map<String, String>> modelToValueListMap =
+        final Map<String, Map<String, String>> modelToValueListMap =
                 ContentBlocksUtils.getValueListMaps(homePage.getContentBlocks());
         modelToValueListMap.forEach(request::setModel);
 

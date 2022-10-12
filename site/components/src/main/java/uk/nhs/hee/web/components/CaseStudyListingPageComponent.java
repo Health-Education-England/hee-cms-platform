@@ -5,8 +5,6 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
-import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -17,7 +15,6 @@ import java.util.List;
 /**
  * Base component for Case Study Listing Page.
  */
-@ParametersInfo(type = ListingPageComponentInfo.class)
 public class CaseStudyListingPageComponent extends ListingPageComponent {
 
     private static final String IMPACT_GROUP_QUERY_PARAM = "impactGroup";

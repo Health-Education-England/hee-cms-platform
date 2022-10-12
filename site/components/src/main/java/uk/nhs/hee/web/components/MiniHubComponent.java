@@ -3,14 +3,12 @@ package uk.nhs.hee.web.components;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.MiniHub;
 import uk.nhs.hee.web.beans.MinihubSection;
-import uk.nhs.hee.web.components.info.MiniHubComponentInfo;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
@@ -22,34 +20,30 @@ import java.util.stream.IntStream;
 /**
  * Base component for the MiniHub Page.
  */
-@ParametersInfo(type = MiniHubComponentInfo.class)
-public class MiniHubComponent extends EssentialsDocumentComponent {
+public class MiniHubComponent extends EssentialsContentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(MiniHubComponent.class);
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
-        HippoBean document = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (document == null) {
-            document = (HippoBean) request.getRequestContext().getContentBean();
-        }
+        final HippoBean documentBean = request.getModel(REQUEST_ATTR_DOCUMENT);
 
-        if (document.getParentBean() != null) {
-            if (!document.getParentBean().getChildBeans(MiniHub.class).isEmpty()
-                    && !document.getParentBean().getChildBeans(MinihubSection.class).isEmpty()) {
-                request.setModel(REQUEST_ATTR_DOCUMENT, getMiniHubDocument(document));
+        if (documentBean.getParentBean() != null) {
+            if (!documentBean.getParentBean().getChildBeans(MiniHub.class).isEmpty()
+                    && !documentBean.getParentBean().getChildBeans(MinihubSection.class).isEmpty()) {
+                request.setModel(REQUEST_ATTR_DOCUMENT, getMiniHubDocument(documentBean));
 
-                final List<MinihubSection> miniHubSections = getMiniHubSections(document);
+                final List<MinihubSection> miniHubSections = getMiniHubSections(documentBean);
                 request.setModel("miniHubSections", miniHubSections);
 
-                final MinihubSection currentSection = getCurrentSection(document, miniHubSections);
+                final MinihubSection currentSection = getCurrentSection(documentBean, miniHubSections);
                 request.setModel("currentSection", currentSection);
 
                 if (currentSection == null) {
                     return;
                 }
 
-                request.setModel("isFirstSection", isFirstSection(document.getName(), miniHubSections));
+                request.setModel("isFirstSection", isFirstSection(documentBean.getName(), miniHubSections));
 
                 // the guidance page contains content blocks that need valueLists to be set on the model
                 final HippoBean currentSectionDocumentBean = currentSection.getDocument();
@@ -66,7 +60,7 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
                 }
             } else {
                 LOGGER.warn("Check Minihub document exists, and at least one Minihub section " +
-                        "in the same folder for: {}", document.getPath());
+                        "in the same folder for: {}", documentBean.getPath());
             }
         }
     }

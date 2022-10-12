@@ -5,13 +5,19 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.Guidance;
-import uk.nhs.hee.web.components.info.GuidanceComponentInfo;
+import uk.nhs.hee.web.services.TableComponentService;
+import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
-@ParametersInfo(type = GuidanceComponentInfo.class)
-public class CookiesPageComponent extends GuidanceComponent {
+import java.util.List;
+import java.util.Map;
+
+@ParametersInfo(type = EssentialsDocumentComponentInfo.class)
+public class CookiesPageComponent extends EssentialsDocumentComponent {
     public static final String CHANNEL_PARAMETER_DOCUMENT = "document";
     public static final String CHANNEL_PARAMETER_FALLBACK_SITE_CONTENT_BASE_PATH = "fallbackSiteContentBasePath";
     public static final String CHANNEL_PARAMETER_FALLBACK_CHANNEL_DOMAIN_WITH_PROTOCOL =
@@ -22,18 +28,31 @@ public class CookiesPageComponent extends GuidanceComponent {
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
-        final Guidance cookieGuidance = request.getModel(REQUEST_ATTR_DOCUMENT);
+        Guidance cookieGuidance = request.getModel(REQUEST_ATTR_DOCUMENT);
 
-        if (cookieGuidance != null) {
+        if (cookieGuidance == null) {
+            LOGGER.debug("No 'Cookies' Guidance/Standard Content Page document exists on the current channel (root). " +
+                    "Checking if one exists on the fallback channel configured via 'fallbackSiteContentBasePath' " +
+                    "component parameter.");
+            addFallbackCookiePageToModel(request, response);
+            addCanonicalLink(request);
+        }
+
+        cookieGuidance = request.getModel(REQUEST_ATTR_DOCUMENT);
+
+        if (cookieGuidance == null) {
             return;
         }
 
-        LOGGER.debug("No 'Cookies' Guidance/Standard Content Page document exists on the current channel (root). " +
-                "Checking if one exists on the fallback channel configured via 'fallbackSiteContentBasePath' " +
-                "component parameter.");
+        // the page content blocks needs valueLists to be set on the model
+        final List<HippoBean> pageContentBlocks = cookieGuidance.getContentBlocks();
+        pageContentBlocks.addAll(cookieGuidance.getRightHandBlocks());
 
-        addFallbackCookiePageToModel(request, response);
-        addCanonicalLink(request);
+        final Map<String, Map<String, String>> modelToValueListMap =
+                ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+        modelToValueListMap.forEach(request::setModel);
+
+        request.setAttribute("tableComponentService", new TableComponentService());
     }
 
     private void addFallbackCookiePageToModel(final HstRequest request, final HstResponse response) {

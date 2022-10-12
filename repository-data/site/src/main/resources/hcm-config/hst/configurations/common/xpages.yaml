@@ -16,7 +16,7 @@ definitions:
         hst:referencecomponent: hst:abstractpages/base
         /main:
           jcr:primaryType: hst:component
-          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+          hst:componentclassname: uk.nhs.hee.web.components.GuidanceComponent
           hst:template: guidance-main
       /landing-page:
         jcr:primaryType: hst:xpage
@@ -24,7 +24,7 @@ definitions:
         hst:referencecomponent: hst:abstractpages/base
         /main:
           jcr:primaryType: hst:component
-          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsContentComponent
+          hst:componentclassname: uk.nhs.hee.web.components.LandingPageComponent
           hst:template: landingpage-main
       /atoz-page:
         jcr:primaryType: hst:xpage
@@ -88,7 +88,7 @@ definitions:
         hst:label: Blogpost Page
         /main:
           jcr:primaryType: hst:component
-          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+          hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
           hst:template: blogpage-main
           /blog:
             jcr:primaryType: hst:component

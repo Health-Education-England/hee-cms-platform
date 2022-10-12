@@ -2,9 +2,7 @@ package uk.nhs.hee.web.components;
 
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.CommonComponent;
-import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
 
 import javax.servlet.http.Cookie;
 

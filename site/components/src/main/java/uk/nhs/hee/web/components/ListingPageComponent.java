@@ -15,7 +15,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
-import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,7 +33,7 @@ import java.util.stream.StreamSupport;
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
  */
-public abstract class ListingPageComponent extends EssentialsDocumentComponent {
+public abstract class ListingPageComponent extends EssentialsContentComponent {
     private static final Logger LOGGER = LoggerFactory.getLogger(ListingPageComponent.class);
 
     private static final String ASCENDING_SORT_ORDER = "asc";
@@ -63,7 +63,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @throws QueryException thrown when an error occurs during execution of the query built.
      */
     private Pageable<HippoBean> executeQuery(final HstRequest request) throws QueryException {
-        ListingPage listingPage = getListingPageModel(request);
+        final ListingPage listingPage = getListingPageModel(request);
 
         final HstQuery query = buildQuery(request, listingPage);
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
@@ -310,13 +310,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @return the {@link ListingPage} instance of the current {@code request}.
      */
     protected ListingPage getListingPageModel(final HstRequest request) {
-        ListingPage listingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (listingPage == null) {
-            listingPage = (ListingPage) request.getRequestContext().getContentBean();
-            request.setModel(REQUEST_ATTR_DOCUMENT, listingPage);
-        }
-
-        return listingPage;
+        return request.getModel(REQUEST_ATTR_DOCUMENT);
     }
 
     /**
