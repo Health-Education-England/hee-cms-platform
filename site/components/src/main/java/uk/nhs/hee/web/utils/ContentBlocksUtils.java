@@ -31,8 +31,7 @@ public class ContentBlocksUtils {
                         contentBlocks,
                         hippoBean -> hippoBean instanceof ContactCardReference || hippoBean instanceof Contact,
                         ImmutableMap.of(
-                                Model.PERSON_TITLES_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.PERSON_TITLES.getName()),
-                                Model.PERSON_PRONOUNS_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.PERSON_PRONOUNS.getName())
+                                Model.PERSON_TITLES_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.PERSON_TITLES.getName())
                         )
                 )
         );
@@ -47,7 +46,7 @@ public class ContentBlocksUtils {
                                 Model.NEWSLETTER_PROFESSION_MAP.getKey(), ValueListUtils.getValueListMap(ValueListIdentifier.NEWSLETTER_PROFESSIONS.getName())
                         )
                 )
-        );                        
+        );
 
         modelToValueListMap.putAll(
                 getValueListForBeanType(

@@ -25,6 +25,5 @@ public class ValueListIdentifierTest {
         assertThat(ValueListIdentifier.NEWSLETTER_ORGANISATIONS.getName()).isEqualTo("newsletterOrganisations");
         assertThat(ValueListIdentifier.NEWSLETTER_PROFESSIONS.getName()).isEqualTo("newsletterProfessions");
         assertThat(ValueListIdentifier.PERSON_TITLES.getName()).isEqualTo("personTitles");
-        assertThat(ValueListIdentifier.PERSON_PRONOUNS.getName()).isEqualTo("personPronouns");
     }
 }

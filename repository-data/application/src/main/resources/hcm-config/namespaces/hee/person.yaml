@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: abbb6a5f-966b-437b-a9eb-898620e5f3f7
+          jcr:uuid: 6971ee7f-35c7-48f9-aaa9-790d3dd45492
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,14 +24,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /departmentName:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:departmentName
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /jobTitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -88,30 +80,7 @@ definitions:
             hipposysedit:path: hee:website
             hipposysedit:primary: false
             hipposysedit:type: String
-          /bio:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:bio
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-          /linkUrl:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:linkUrl
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /pronouns:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:pronouns
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [url]
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -120,6 +89,38 @@ definitions:
             hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
+          /department:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:department
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /string:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:pronouns
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /twitter:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:twitter
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /LinkedIn:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:linkedIn
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -132,26 +133,28 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:name: ''
-          hee:departmentName: ''
           hee:jobTitle: ''
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: ebe62eac-abc7-4a9e-930b-86dcb04eb384
+          jcr:uuid: 9d23736e-57ba-493b-9f30-b7d0e4848159
           hippostdpubwf:lastModificationDate: 2021-05-13T16:45:32.265+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:45:32.266+07:00
-          hee:bio: ''
           hee:organisation: ''
           hee:website: ''
-          hee:linkUrl: ''
           hee:pronouns: ''
           hee:title: ''
+          hee:twitter: ''
+          hee:linkedIn: ''
           /hee:image:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:department:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -185,15 +188,13 @@ definitions:
           /pronouns:
             jcr:primaryType: frontend:plugin
             caption: Pronouns
-            field: pronouns
+            field: string
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              orientation: vertical
-              source: /content/documents/administration/valuelists/personpronouns
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              maxlength: '50'
           /jobTitle:
             jcr:primaryType: frontend:plugin
             caption: Job Title
@@ -202,14 +203,16 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /departmentName:
+          /department:
             jcr:primaryType: frontend:plugin
-            caption: Department name
-            field: departmentName
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Department
+            field: department
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:department']
           /organisation:
             jcr:primaryType: frontend:plugin
             caption: Organisation
@@ -252,28 +255,27 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /address:
             jcr:primaryType: frontend:plugin
-            caption: Address
+            caption: Work address
             field: address
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /bio:
+          /twitter:
             jcr:primaryType: frontend:plugin
-            caption: Bio
-            field: bio
+            caption: Twitter
+            field: twitter
+            hint: Enter person’s Twitter handle
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: ''
-          /linkUrl:
+          /linkedIn:
             jcr:primaryType: frontend:plugin
-            caption: Link URL
-            field: linkUrl
-            hint: ''
+            caption: LinkedIn
+            field: LinkedIn
+            hint: Enter person’s LinkedIn URL name
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:

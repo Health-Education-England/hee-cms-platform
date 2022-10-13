@@ -1818,7 +1818,7 @@
         hee:name: James Smith
         hee:organisation: ''
         hee:phoneNumber: 0733 910 013
-        hee:pronouns: he-him
+        hee:pronouns: He/Him
         hee:title: dr
         hee:website: ''
         hippo:availability: []
@@ -1854,7 +1854,7 @@
         hee:name: James Smith
         hee:organisation: ''
         hee:phoneNumber: 0733 910 013
-        hee:pronouns: he-him
+        hee:pronouns: He/Him
         hee:title: dr
         hee:website: ''
         hippo:availability: [preview]
@@ -1890,7 +1890,7 @@
         hee:name: James Smith
         hee:organisation: ''
         hee:phoneNumber: 0733 910 013
-        hee:pronouns: he-him
+        hee:pronouns: He/Him
         hee:title: dr
         hee:website: ''
         hippo:availability: [live]
@@ -1914,7 +1914,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       hippo:name: John Doe
-      hippo:versionHistory: 5ef74f0f-56f0-4a5e-9bfa-72e6cfba7aad
+      hippo:versionHistory: 22aade3b-0e20-45af-a4c9-8b820060a5b0
       /john-doe[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1928,18 +1928,20 @@
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
+        hee:linkedIn: nhs
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
         hee:phoneNumber: 01234 567890
-        hee:pronouns: they-them
+        hee:pronouns: He/Him
         hee:title: mr
+        hee:twitter: '@NHS_HealthEdEng'
         hee:website: http://hee.dental
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T07:55:21.602Z
+        hippostdpubwf:lastModificationDate: 2022-10-13T13:04:09.025+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -1949,6 +1951,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /john-doe[2]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -1962,18 +1967,20 @@
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
+        hee:linkedIn: nhs
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
         hee:phoneNumber: 01234 567890
-        hee:pronouns: they-them
+        hee:pronouns: He/Him
         hee:title: mr
+        hee:twitter: '@NHS_HealthEdEng'
         hee:website: http://hee.dental
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T07:55:21.514Z
+        hippostdpubwf:lastModificationDate: 2022-10-13T13:04:14.482+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -1983,6 +1990,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /john-doe[3]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1996,20 +2006,22 @@
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
+        hee:linkedIn: nhs
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
         hee:phoneNumber: 01234 567890
-        hee:pronouns: they-them
+        hee:pronouns: He/Him
         hee:title: mr
+        hee:twitter: '@NHS_HealthEdEng'
         hee:website: http://hee.dental
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T07:55:21.514Z
+        hippostdpubwf:lastModificationDate: 2022-10-13T13:04:14.482+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-02-28T07:55:26.638Z
+        hippostdpubwf:publicationDate: 2022-10-13T13:04:16.202+01:00
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
         /hee:image:
@@ -2018,6 +2030,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
   /departments:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

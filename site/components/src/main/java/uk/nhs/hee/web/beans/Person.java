@@ -1,20 +1,16 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
 @HippoEssentialsGenerated(internalName = "hee:person")
 @Node(jcrType = "hee:person")
 public class Person extends BaseDocument {
+    @Override
     @HippoEssentialsGenerated(internalName = "hee:name")
     public String getName() {
         return getSingleProperty("hee:name");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:departmentName")
-    public String getDepartmentName() {
-        return getSingleProperty("hee:departmentName");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:jobTitle")
@@ -62,13 +58,18 @@ public class Person extends BaseDocument {
         return getSingleProperty("hee:website");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:bio")
-    public String getBio() {
-        return getSingleProperty("hee:bio");
+    @HippoEssentialsGenerated(internalName = "hee:twitter")
+    public String getTwitter() {
+        return getSingleProperty("hee:twitter");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:linkUrl")
-    public String getLinkUrl() {
-        return getSingleProperty("hee:linkUrl");
+    @HippoEssentialsGenerated(internalName = "hee:department")
+    public HippoBean getDepartment() {
+        return getLinkedBean("hee:department", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:linkedIn")
+    public String getLinkedIn() {
+        return getSingleProperty("hee:linkedIn");
     }
 }

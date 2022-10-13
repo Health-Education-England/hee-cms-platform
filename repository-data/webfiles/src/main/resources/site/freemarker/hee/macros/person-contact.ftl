@@ -1,6 +1,6 @@
 <#include "../../include/imports.ftl">
 
-<#macro personContact person personTitlesMap personPronounsMap isAuthor=false>
+<#macro personContact person personTitlesMap isAuthor=false>
     <div class="nhsuk-contact__content">
 
         <#-- Get Person Initials -->
@@ -28,15 +28,15 @@
         <h2 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${nameWithTitle}</h2>
 
         <#if person.pronouns?has_content>
-            <p class="nhsuk-contact__pronoun">${personPronounsMap[person.pronouns]}</p>
+            <p class="nhsuk-contact__pronoun">${person.pronouns}</p>
         </#if>
 
         <#if person.jobTitle?has_content>
             <h3 class="nhsuk-contact__job-title" aria-label="Job Title">${person.jobTitle}</h3>
         </#if>
 
-        <#if person.departmentName?has_content>
-            <h5 data-anchorlinksignore="true" aria-label="Department">${person.departmentName}</h5>
+        <#if person.department??>
+            <h5 data-anchorlinksignore="true" aria-label="Department">${person.department.name}</h5>
         </#if>
 
         <#if person.organisation?has_content>
@@ -72,16 +72,19 @@
                 <p aria-label="Address">${person.address?replace('\n', '<br>')}</p>
             </#if>
 
-            <#if person.bio?has_content>
-                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${person.bio}</p>
+            <#if person.twitter?has_content>
+                <p aria-label="Twitter">
+                    <a href="https://twitter.com/${person.twitter}">${person.twitter}</a>
+                </p>
+                <#--  <li class="hee-detailscard__twitter" aria-label="Twitter"><a href="https://twitter.com/${person.twitter}">${person.twitter}</a></li>  -->
             </#if>
 
-            <#if isAuthor>
-                <#if person.linkUrl?has_content>
-                    <p>
-                        <a href="${person.linkUrl}"> <@fmt.message key="authorPageURL.text"/> ${nameWithTitle}</a>
-                    </p>
-                </#if>
+            <#if person.linkedIn?has_content>
+                <#--  TODO: This currently constructs only company profile URL, but it may need to be refactored to accommodate user profile as well  -->
+                <p aria-label="Linkedin">
+                    <a href="https://www.linkedin.com/company/${person.linkedIn}">${person.linkedIn}</a>
+                </p>
+                <#--  <li class="hee-detailscard__linkedin" aria-label="Linkedin"><a href="https://www.linkedin.com/company/${person.linkedIn}">${person.linkedIn}</a></li>  -->
             </#if>
         </div>
     </div>

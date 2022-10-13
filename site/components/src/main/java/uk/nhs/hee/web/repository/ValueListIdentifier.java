@@ -88,12 +88,8 @@ public enum ValueListIdentifier {
     /**
      * {@code personTitles} value-list identifier.
      */
-    PERSON_TITLES("personTitles"),
+    PERSON_TITLES("personTitles");
 
-    /**
-     * {@code personTitles} value-list identifier.
-     */
-    PERSON_PRONOUNS("personPronouns");
 
     private final String name;
 

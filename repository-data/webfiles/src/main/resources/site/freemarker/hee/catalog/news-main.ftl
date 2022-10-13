@@ -74,9 +74,8 @@
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.Contact">
                                                 <@hee.contact
-                                                block=block
-                                                personTitlesMap=document.personTitlesMap
-                                                personPronounsMap=document.personPronounsMap
+                                                    block=block
+                                                    personTitlesMap=document.personTitlesMap
                                                 />
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.BlockLinksReference">
@@ -115,7 +114,10 @@
                                         <@hee.quickLinks quickLinks=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                        <@hee.contactCard contact=block.content personTitlesMap=personTitlesMap personPronounsMap=personPronounsMap/>
+                                        <@hee.contactCard
+                                            contact=block.content
+                                            personTitlesMap=personTitlesMap
+                                        />
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                         <@hee.externalLinksCard card=block.externalLinksCard/>
