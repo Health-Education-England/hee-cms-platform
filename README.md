@@ -129,7 +129,7 @@ mvn checkstyle:checkstyle
 To manually update the css and javascript files with the those built with [HEE prototype kit](https://github.com/Health-Education-England/hee-prototypes):
 
  - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\nhsuk-4.1.0.min.css
- - \hee-cms-platform\site\webapp\src\main\webapp\static\js\main.min.js
+ - \hee-cms-platform\site\webapp\src\main\webapp\static\js\hee.min.js
 
 ## Building a project distribution
 
