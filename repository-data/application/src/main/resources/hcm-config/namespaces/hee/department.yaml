@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ff8dd828-aefd-48de-8be1-31b051d08c26
+          jcr:uuid: 9a5a4af2-cb1d-46e6-a624-479aec9f5dc6
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -64,6 +64,14 @@ definitions:
             hipposysedit:path: hee:website
             hipposysedit:primary: false
             hipposysedit:type: String
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: Text
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -79,11 +87,12 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: cd4cff29-67ba-4f52-a657-27ba709c5046
+          jcr:uuid: 92b2fa83-43a9-4cd6-a8cc-b2a3041655f8
           hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
           hee:organisation: ''
           hee:website: ''
+          hee:description: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -140,6 +149,15 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Address
             field: address
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /description:
+            jcr:primaryType: frontend:plugin
+            caption: Description
+            field: description
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
