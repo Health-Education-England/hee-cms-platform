@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ff8dd828-aefd-48de-8be1-31b051d08c26
+          jcr:uuid: 9b7d31ab-8870-4697-b6fe-493db5069ca5
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -40,6 +40,7 @@ definitions:
             hipposysedit:path: hee:email
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [required, email]
           /address:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -64,6 +65,7 @@ definitions:
             hipposysedit:path: hee:website
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [url]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -79,7 +81,7 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: cd4cff29-67ba-4f52-a657-27ba709c5046
+          jcr:uuid: cb2c6086-4774-4481-a59f-242d8b3964bb
           hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
           hee:organisation: ''
@@ -101,7 +103,7 @@ definitions:
             field: name
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
+            hint: Please enter the name of the department
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /organisation:
@@ -110,6 +112,7 @@ definitions:
             field: organisation
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Please enter the departments organisation
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /phoneNumber:
@@ -118,12 +121,23 @@ definitions:
             field: phoneNumber
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Please enter the primary contact number for the department
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /email:
             jcr:primaryType: frontend:plugin
             caption: Email
             field: email
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Please enter the primary email for the department
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /address:
+            jcr:primaryType: frontend:plugin
+            caption: Address
+            field: address
+            hint: Enter departmental address
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -134,14 +148,6 @@ definitions:
             field: website
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /address:
-            jcr:primaryType: frontend:plugin
-            caption: Address
-            field: address
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            hint: Enter the url of the department website
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
