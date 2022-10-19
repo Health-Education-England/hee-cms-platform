@@ -34,8 +34,8 @@
     <@hst.link var="pageURL" siteMapItemRefId="pagenotfound" canonical=true fullyQualified=true />
 </#if>
 
-<#assign metaTitle>${pageTitle?truncate(60)} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</#assign>
-<#assign metaDescription="${pageSummary?truncate(160)}">
+<#assign metaTitle>${pageTitle} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</#assign>
+<#assign metaDescription="${pageSummary}">
 
 <@hst.headContribution category="pageMetaData">
     <meta name="title" content="${metaTitle}" />
