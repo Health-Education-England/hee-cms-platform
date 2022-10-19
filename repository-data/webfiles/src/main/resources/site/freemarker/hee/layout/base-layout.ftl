@@ -9,6 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Page meta data: START -->
+    <@hst.headContributions categoryIncludes="pageMetaData" xhtml=true/>
+    <!-- Page meta data: END -->
+
     <!-- Styles -->
     <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-4.1.min.css'/>" type="text/css"/>
     <link rel="stylesheet" href="<@hst.webfile path='/css/hee.min.css'/>" type="text/css"/>
@@ -28,7 +32,7 @@
     <meta name="msapplication-wide310x150logo" content="<@hst.link path='/static/assets/favicons/widetile-310x150.png'/>">
     <meta name="msapplication-square310x310logo" content="<@hst.link path='/static/assets/favicons/largetile-310x310.png'/>">
 
-    <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript" xhtml=true/>
+    <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript, pageMetaData" xhtml=true/>
   </head>
   <body>
 

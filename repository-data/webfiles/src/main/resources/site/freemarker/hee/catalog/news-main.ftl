@@ -1,5 +1,6 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#include "../macros/micro-hero.ftl">
 <#import "../macros/components.ftl" as hee>
 
