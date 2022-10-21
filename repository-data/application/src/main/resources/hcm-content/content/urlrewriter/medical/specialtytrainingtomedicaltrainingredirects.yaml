@@ -1,0 +1,58 @@
+/content/urlrewriter/medical/specialtytrainingtomedicaltrainingredirects:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 0991bc2a-aa2d-4f52-8505-ec333361a4c9
+  hippo:name: SpecialtyTrainingToMedicalTrainingRedirects
+  hippo:versionHistory: 621c8d09-faea-4ba5-9f60-780e91f6e24e
+  /specialtytrainingtomedicaltrainingredirects[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: ddf2c702-c91e-4ce3-95fe-27c0c6f5e13c
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
+    hippostdpubwf:lastModificationDate: 2022-10-21T14:38:48.664+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">specialtytraining.hee.nhs.uk</condition>\r\
+      \n  <from>^/Recruitment/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
+      true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n <condition name=\"host\" operator=\"equal\">specialtytraining.hee.nhs.uk</condition>\r\
+      \n <from>^(.*)$</from>\r\n <to type=\"permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>"
+  /specialtytrainingtomedicaltrainingredirects[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 97c3ef5a-f3bc-4b1e-bbd1-f319d078aa0d
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
+    hippostdpubwf:lastModificationDate: 2022-10-21T14:38:34.831+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">specialtytraining.hee.nhs.uk</condition>\r\
+      \n  <from>^/Recruitment/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
+      true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n <condition name=\"host\" operator=\"equal\">specialtytraining.hee.nhs.uk</condition>\r\
+      \n <from>^(.*)$</from>\r\n <to type=\"permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>"
+  /specialtytrainingtomedicaltrainingredirects[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: f864d5cb-68cb-447c-af3c-f531599dae57
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
+    hippostdpubwf:lastModificationDate: 2022-10-20T23:30:38.374+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2022-10-20T23:30:41.330+02:00
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">specialtytraining.hee.nhs.uk</condition>\r\
+      \n  <from>^/Recruitment/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
+      true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n <condition name=\"host\" operator=\"equal\">specialtytraining.hee.nhs.uk</condition>\r\
+      \n <from>^(.*)$</from>\r\n <to type=\"permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training</to>\r\
+      \n</rule>"
