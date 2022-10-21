@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 61919ba6-decd-4199-bbd0-0e8f9230c94a
+          jcr:uuid: bae09868-ba06-42e5-a451-5db35424f4e3
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -33,13 +33,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Text
             hipposysedit:validators: [required]
-          /contentBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:contentBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator, required]
           /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -126,12 +119,20 @@ definitions:
             hipposysedit:path: hee:languageVersions
             hipposysedit:primary: false
             hipposysedit:type: hippo:resource
+          /updatedDate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:updatedDate
+            hipposysedit:primary: false
+            hipposysedit:type: CalendarDate
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 116b89b3-56c9-476b-b03d-96abeaa52265
+          jcr:uuid: 8a333051-a8ad-4b46-8130-1ea7381930f7
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -148,9 +149,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           hee:readTime: ''
-          /hee:contentBlocks[1]:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          hee:updatedDate: 0001-01-01T12:00:00Z
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -220,7 +219,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Summary
             field: summary
-            hint: ''
+            hint: "Please summarise your publication. \t\r\n300 character limit."
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -273,18 +272,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /contentBlocks:
-            jcr:primaryType: frontend:plugin
-            caption: Main content objects
-            compoundList: hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
-            contentPickerType: links
-            field: contentBlocks
-            hint: ''
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
           /readTime:
             jcr:primaryType: frontend:plugin
             caption: Read Time
@@ -303,6 +290,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
           /webPublication:
             jcr:primaryType: frontend:plugin
             caption: Web Publication
@@ -312,6 +300,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:report']
           /documentVersions:
             jcr:primaryType: frontend:plugin
             caption: Document Versions
@@ -320,6 +309,14 @@ definitions:
               \n\r\nLimited to max file size of 15Mb and the following doc types:\
               \ \r\n\r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /updatedDate:
+            jcr:primaryType: frontend:plugin
+            caption: Updated Date
+            field: updatedDate
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

@@ -6,8 +6,7 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.PublicationLandingPage;
-import uk.nhs.hee.web.beans.Report;
-import uk.nhs.hee.web.components.info.ReportComponentInfo;
+import uk.nhs.hee.web.components.info.PublicationLandingPageComponentInfo;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
@@ -17,7 +16,7 @@ import java.util.Map;
 /**
  * Component class for {@code hee:publicationLandingPage} document type pages.
  */
-@ParametersInfo(type = ReportComponentInfo.class)
+@ParametersInfo(type = PublicationLandingPageComponentInfo.class)
 public class PublicationLandingPageComponent extends EssentialsDocumentComponent {
 
     @Override
