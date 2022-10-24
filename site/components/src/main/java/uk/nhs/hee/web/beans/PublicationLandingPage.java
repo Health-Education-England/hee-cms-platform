@@ -63,11 +63,6 @@ public class PublicationLandingPage extends BaseDocument {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:webPublication")
-    public HippoBean getWebPublication() {
-        return getLinkedBean("hee:webPublication", HippoBean.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:documentVersions")
     public List<HippoResourceBean> getDocumentVersions() {
         return getChildBeansByName("hee:documentVersions",
@@ -78,5 +73,15 @@ public class PublicationLandingPage extends BaseDocument {
     public List<HippoResourceBean> getLanguageVersions() {
         return getChildBeansByName("hee:languageVersions",
                 HippoResourceBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:updatedDate")
+    public Calendar getUpdatedDate() {
+        return getSingleProperty("hee:updatedDate");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:webPublication")
+    public List<HippoBean> getWebPublication() {
+        return getLinkedBeans("hee:webPublication", HippoBean.class);
     }
 }

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: bae09868-ba06-42e5-a451-5db35424f4e3
+          jcr:uuid: 15a0ab23-ea57-4027-b305-8eda3e075599
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -97,7 +97,7 @@ definitions:
           /webPublication:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: false
+            hipposysedit:multiple: true
             hipposysedit:ordered: false
             hipposysedit:path: hee:webPublication
             hipposysedit:primary: false
@@ -132,7 +132,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 8a333051-a8ad-4b46-8130-1ea7381930f7
+          jcr:uuid: 731f0cf3-d605-4b16-ab17-798c8ce8ebb5
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -201,7 +201,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page title
             field: title
-            hint: Page title must be 60 characters or fewer.
+            hint: Please enter the publication title.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -210,7 +210,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
             field: subtitle
-            hint: ''
+            hint: Please enter the publication subtitle.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -225,11 +225,21 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '300'
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo Group
+            field: logoGroup
+            hint: Please browse for the logos to override the default header
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
           /publicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
             field: publicationType
-            hint: ''
+            hint: Please select the publication type
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -270,6 +280,16 @@ definitions:
             field: publicationDate
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: Please enter the date of publication
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /updatedDate:
+            jcr:primaryType: frontend:plugin
+            caption: Updated Date
+            field: updatedDate
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /readTime:
@@ -281,16 +301,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /logoGroup:
-            jcr:primaryType: frontend:plugin
-            caption: Logo Group
-            field: logoGroup
-            hint: Please browse for the logos to override the default header
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:logoGroup']
           /webPublication:
             jcr:primaryType: frontend:plugin
             caption: Web Publication
@@ -309,14 +319,6 @@ definitions:
               \n\r\nLimited to max file size of 15Mb and the following doc types:\
               \ \r\n\r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /updatedDate:
-            jcr:primaryType: frontend:plugin
-            caption: Updated Date
-            field: updatedDate
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

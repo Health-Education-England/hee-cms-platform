@@ -1,0 +1,186 @@
+/content/documents/lks/publication-landing-pages:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 1fe20b9d-b46c-438e-a230-d55f5666e03e
+  hippo:name: Publication Landing Pages
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 5f4fdac1-13d6-4242-b3e1-6cb63437e359
+  hippotranslation:locale: en
+  /demo:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 9491a7b0-770d-4cb1-83d3-51914e2b8cee
+    hippo:name: Demo
+    hippo:versionHistory: e236ff38-efd4-466a-843c-8b426774f45a
+    /demo[1]:
+      jcr:primaryType: hee:publicationLandingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c96446c4-2e16-44af-b760-6de1757ff835
+      hee:publicationDate: 2022-10-21T00:00:00+01:00
+      hee:publicationProfessions: [management, public_health]
+      hee:publicationTopics: [workforce_planning, workforce_transformation, knowledge_management,
+        global]
+      hee:publicationType: guidance
+      hee:readTime: 20 minutes
+      hee:subtitle: Demo Landing Page
+      hee:summary: The Default page for each publication, this has links to the web
+        version of the publication and all associated document versions including
+        language versions,
+      hee:title: Publication Landing Page
+      hee:updatedDate: 2022-10-21T00:00:00+01:00
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-10-21T14:28:32.252+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-21T17:32:41.601+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 5b0b6471-9653-4f14-bdd1-dacc9ad66720
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
+      /hee:webPublication[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 647a7800-d6bd-4331-9cfd-5f8a55020419
+      /hee:webPublication[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
+      /hee:documentVersions:
+        jcr:primaryType: hippo:resource
+        jcr:mixinTypes: ['mix:created']
+        hippo:filename: 20210909 HEE Application Compliance Template.xlsx
+        jcr:data:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[1]/documentVersions/20210909-HEE-Application-Compliance-Template.xlsx
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-10-21T17:29:15.290+01:00
+        jcr:mimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      /hee:languageVersions:
+        jcr:primaryType: hippo:resource
+        jcr:mixinTypes: ['mix:created']
+        hippo:filename: Tips for remote usability evaluation observers.pdf
+        hippo:text:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[1]/languageVersions/Tips-for-remote-usability-evaluation-observers.pdf
+        jcr:data:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[1]/languageVersions/Tips-for-remote-usability-evaluation-observers-1.pdf
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-10-21T17:33:24.328+01:00
+        jcr:mimeType: application/pdf
+    /demo[2]:
+      jcr:primaryType: hee:publicationLandingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: f74b6d2e-a578-48a6-8bc7-804a9ca3ce2b
+      hee:publicationDate: 2022-10-21T00:00:00+01:00
+      hee:publicationProfessions: [management, public_health]
+      hee:publicationTopics: [workforce_planning, workforce_transformation, knowledge_management,
+        global]
+      hee:publicationType: guidance
+      hee:readTime: 20 minutes
+      hee:subtitle: Demo Landing Page
+      hee:summary: The Default page for each publication, this has links to the web
+        version of the publication and all associated document versions including
+        language versions,
+      hee:title: Publication Landing Page
+      hee:updatedDate: 2022-10-21T00:00:00+01:00
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-10-21T14:28:32.252+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-21T17:33:29.182+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 5b0b6471-9653-4f14-bdd1-dacc9ad66720
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
+      /hee:webPublication[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 647a7800-d6bd-4331-9cfd-5f8a55020419
+      /hee:webPublication[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
+      /hee:documentVersions:
+        jcr:primaryType: hippo:resource
+        jcr:mixinTypes: ['mix:created']
+        hippo:filename: 20210909 HEE Application Compliance Template.xlsx
+        jcr:data:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[2]/documentVersions/20210909-HEE-Application-Compliance-Template.xlsx
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-10-21T17:29:15.290+01:00
+        jcr:mimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      /hee:languageVersions:
+        jcr:primaryType: hippo:resource
+        jcr:mixinTypes: ['mix:created']
+        hippo:filename: Tips for remote usability evaluation observers.pdf
+        hippo:text:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[2]/languageVersions/Tips-for-remote-usability-evaluation-observers.pdf
+        jcr:data:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[2]/languageVersions/Tips-for-remote-usability-evaluation-observers-1.pdf
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-10-21T17:33:24.328+01:00
+        jcr:mimeType: application/pdf
+    /demo[3]:
+      jcr:primaryType: hee:publicationLandingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: a893c0c3-8fd4-4c84-82d8-d8a318b32916
+      hee:publicationDate: 2022-10-21T00:00:00+01:00
+      hee:publicationProfessions: [management, public_health]
+      hee:publicationTopics: [workforce_planning, workforce_transformation, knowledge_management,
+        global]
+      hee:publicationType: guidance
+      hee:readTime: 20 minutes
+      hee:subtitle: Demo Landing Page
+      hee:summary: The Default page for each publication, this has links to the web
+        version of the publication and all associated document versions including
+        language versions,
+      hee:title: Publication Landing Page
+      hee:updatedDate: 2022-10-21T00:00:00+01:00
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-10-21T14:28:32.252+01:00
+      hippostdpubwf:lastModificationDate: 2022-10-21T17:33:29.182+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-10-21T17:33:32.669+01:00
+      hippotranslation:id: 5b0b6471-9653-4f14-bdd1-dacc9ad66720
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
+      /hee:webPublication[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 647a7800-d6bd-4331-9cfd-5f8a55020419
+      /hee:webPublication[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
+      /hee:documentVersions:
+        jcr:primaryType: hippo:resource
+        jcr:mixinTypes: ['mix:created']
+        hippo:filename: 20210909 HEE Application Compliance Template.xlsx
+        jcr:data:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[3]/documentVersions/20210909-HEE-Application-Compliance-Template.xlsx
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-10-21T17:29:15.290+01:00
+        jcr:mimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+      /hee:languageVersions:
+        jcr:primaryType: hippo:resource
+        jcr:mixinTypes: ['mix:created']
+        hippo:filename: Tips for remote usability evaluation observers.pdf
+        hippo:text:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[3]/languageVersions/Tips-for-remote-usability-evaluation-observers.pdf
+        jcr:data:
+          type: binary
+          resource: /content/documents/lks/publication-landing-pages/demo/demo[3]/languageVersions/Tips-for-remote-usability-evaluation-observers-1.pdf
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-10-21T17:33:24.328+01:00
+        jcr:mimeType: application/pdf
