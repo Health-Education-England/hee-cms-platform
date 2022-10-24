@@ -42,18 +42,9 @@ public class Report extends BaseDocument {
         return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:publicationType")
-    public String getPublicationType() {
-        return getSingleProperty("hee:publicationType");
+    @HippoEssentialsGenerated(internalName = "hee:logoGroup")
+    public HippoBean getLogoGroup() {
+        return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:publicationTopics")
-    public String[] getPublicationTopics() {
-        return getMultipleProperty("hee:publicationTopics");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:publicationProfessions")
-    public String[] getPublicationProfessions() {
-        return getMultipleProperty("hee:publicationProfessions");
-    }
 }
