@@ -1799,7 +1799,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
       hippo:name: James Smith
-      hippo:versionHistory: 0d8ba0c9-12dd-43d5-9078-f68708a359a1
+      hippo:versionHistory: e0936763-6c09-4dda-bd27-0c788bf475fb
       /james-smith[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1811,22 +1811,22 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui
-        hee:departmentName: Developement
         hee:email: name.surname@mail.com
         hee:jobTitle: Developer
         hee:linkUrl: http://mypage
+        hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
         hee:phoneNumber: 0733 910 013
         hee:pronouns: He/Him
-        hee:title: dr
-        hee:website: ''
+        hee:title: Mr
+        hee:twitter: ''
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T11:10:36.582Z
+        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:26.657+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
@@ -1836,6 +1836,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /james-smith[2]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -1847,22 +1850,22 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui
-        hee:departmentName: Developement
         hee:email: name.surname@mail.com
         hee:jobTitle: Developer
         hee:linkUrl: http://mypage
+        hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
         hee:phoneNumber: 0733 910 013
         hee:pronouns: He/Him
-        hee:title: dr
-        hee:website: ''
+        hee:title: Mr
+        hee:twitter: ''
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T11:10:36.515Z
+        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:38.419+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
@@ -1872,6 +1875,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /james-smith[3]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1883,24 +1889,24 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui
-        hee:departmentName: Developement
         hee:email: name.surname@mail.com
         hee:jobTitle: Developer
         hee:linkUrl: http://mypage
+        hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
         hee:phoneNumber: 0733 910 013
         hee:pronouns: He/Him
-        hee:title: dr
-        hee:website: ''
+        hee:title: Mr
+        hee:twitter: ''
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T11:10:36.515Z
+        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:38.419+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-02-28T11:10:41.200Z
+        hippostdpubwf:publicationDate: 2022-10-25T08:14:41.354+01:00
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
         /hee:image:
@@ -1909,12 +1915,15 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
     /john-doe:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       hippo:name: John Doe
-      hippo:versionHistory: 22aade3b-0e20-45af-a4c9-8b820060a5b0
+      hippo:versionHistory: e870792c-5373-4a31-a3af-f5d580d9f7a4
       /john-doe[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1924,7 +1933,6 @@
           pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar
           ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam
           risus risus consectetur.
-        hee:departmentName: Dental
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
@@ -1933,7 +1941,7 @@
         hee:organisation: HEE Dental Organisation
         hee:phoneNumber: 01234 567890
         hee:pronouns: He/Him
-        hee:title: mr
+        hee:title: Prof
         hee:twitter: '@NHS_HealthEdEng'
         hee:website: http://hee.dental
         hippo:availability: []
@@ -1941,7 +1949,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-13T13:04:09.025+01:00
+        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:06.095+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -1963,7 +1971,6 @@
           pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar
           ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam
           risus risus consectetur.
-        hee:departmentName: Dental
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
@@ -1972,7 +1979,7 @@
         hee:organisation: HEE Dental Organisation
         hee:phoneNumber: 01234 567890
         hee:pronouns: He/Him
-        hee:title: mr
+        hee:title: Prof
         hee:twitter: '@NHS_HealthEdEng'
         hee:website: http://hee.dental
         hippo:availability: [preview]
@@ -1980,7 +1987,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-13T13:04:14.482+01:00
+        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:20.018+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -2002,7 +2009,6 @@
           pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar
           ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam
           risus risus consectetur.
-        hee:departmentName: Dental
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
@@ -2011,7 +2017,7 @@
         hee:organisation: HEE Dental Organisation
         hee:phoneNumber: 01234 567890
         hee:pronouns: He/Him
-        hee:title: mr
+        hee:title: Prof
         hee:twitter: '@NHS_HealthEdEng'
         hee:website: http://hee.dental
         hippo:availability: [live]
@@ -2019,9 +2025,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-13T13:04:14.482+01:00
+        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:20.018+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-10-13T13:04:16.202+01:00
+        hippostdpubwf:publicationDate: 2022-10-25T08:14:24.274+01:00
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
         /hee:image:
@@ -2046,7 +2052,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       hippo:name: Development
-      hippo:versionHistory: 4979c8c5-9026-4405-97bb-93151cba7a6f
+      hippo:versionHistory: affc49b7-59f3-416c-b643-a04be5667717
       /development[1]:
         jcr:primaryType: hee:department
         jcr:mixinTypes: ['mix:referenceable']
@@ -2064,7 +2070,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
-        hippostdpubwf:lastModificationDate: 2022-01-28T19:54:54.708Z
+        hippostdpubwf:lastModificationDate: 2022-10-24T19:36:57.774+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
         hippotranslation:locale: en
@@ -2085,7 +2091,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
-        hippostdpubwf:lastModificationDate: 2022-01-28T19:54:54.642Z
+        hippostdpubwf:lastModificationDate: 2022-10-24T19:37:03.058+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
         hippotranslation:locale: en
@@ -2106,9 +2112,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
-        hippostdpubwf:lastModificationDate: 2022-01-28T19:54:54.642Z
+        hippostdpubwf:lastModificationDate: 2022-10-24T19:37:03.058+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-01-28T19:54:59.296Z
+        hippostdpubwf:publicationDate: 2022-10-24T19:37:04.961+01:00
         hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
         hippotranslation:locale: en
   /contact-cards:
