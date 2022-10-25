@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9b7d31ab-8870-4697-b6fe-493db5069ca5
+          jcr:uuid: adb815e1-8524-4b7b-9203-05ebffd5a15a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -81,7 +81,7 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: cb2c6086-4774-4481-a59f-242d8b3964bb
+          jcr:uuid: 972772ae-a7d5-47b7-a4e9-81e6475d17a5
           hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
           hee:organisation: ''
@@ -103,7 +103,7 @@ definitions:
             field: name
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Please enter the name of the department
+            hint: Enter the name of the department e.g. Paediatrics
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /organisation:
@@ -112,7 +112,8 @@ definitions:
             field: organisation
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Please enter the departments organisation
+            hint: Enter the departments organisation e.g. University Hospitals Birmingham
+              NHS Foundation Trust
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /phoneNumber:
@@ -121,7 +122,8 @@ definitions:
             field: phoneNumber
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Please enter the primary contact number for the department
+            hint: Enter the primary contact number for the department e.g. +44 12345
+              1234
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /email:
@@ -130,7 +132,7 @@ definitions:
             field: email
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Please enter the primary email for the department
+            hint: Enter the primary email for the department e.g. email@nhs.uk
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /address:
@@ -148,6 +150,6 @@ definitions:
             field: website
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Enter the url of the department website
+            hint: Enter the url of the department website e.g. https://hee.nhs.uk/myurl
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
