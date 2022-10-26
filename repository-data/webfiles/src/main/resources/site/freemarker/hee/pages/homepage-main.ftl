@@ -67,7 +67,7 @@
                                         <@hee.media media=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.Contact">
-                                        <@hee.contact block=block personTitlesMap=personTitlesMap/>
+                                        <@hee.contact block=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                         <@hee.blockLinks block=block/>

@@ -1,6 +1,6 @@
 <#include "../../include/imports.ftl">
 
-<#macro personContact person personTitlesMap isAuthor=false>
+<#macro personContact person isAuthor=false>
     <div class="nhsuk-contact__content">
 
         <#-- Get Person Initials -->
@@ -21,7 +21,7 @@
         </div>
 
         <#if person.title?has_content>
-            <#assign nameWithTitle> ${personTitlesMap[person.title]} ${person.name} </#assign>
+            <#assign nameWithTitle> ${person.title} ${person.name} </#assign>
         <#else>
             <#assign nameWithTitle> ${person.name} </#assign>
         </#if>
@@ -76,15 +76,13 @@
                 <p aria-label="Twitter">
                     <a href="https://twitter.com/${person.twitter}">${person.twitter}</a>
                 </p>
-                <#--  <li class="hee-detailscard__twitter" aria-label="Twitter"><a href="https://twitter.com/${person.twitter}">${person.twitter}</a></li>  -->
             </#if>
 
             <#if person.linkedIn?has_content>
-                <#--  TODO: This currently constructs only company profile URL, but it may need to be refactored to accommodate user profile as well  -->
+                <#--  TODO: This currently constructs only person profile URL, but it may need to be refactored to accommodate company profiles as well in the future if required  -->
                 <p aria-label="Linkedin">
-                    <a href="https://www.linkedin.com/company/${person.linkedIn}">${person.linkedIn}</a>
+                    <a href="https://www.linkedin.com/in/${person.linkedIn}">${person.linkedIn}</a>
                 </p>
-                <#--  <li class="hee-detailscard__linkedin" aria-label="Linkedin"><a href="https://www.linkedin.com/company/${person.linkedIn}">${person.linkedIn}</a></li>  -->
             </#if>
         </div>
     </div>

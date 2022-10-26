@@ -73,10 +73,7 @@
                                                 <@hst.html hippohtml=block.richTextBlock.html/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.Contact">
-                                                <@hee.contact
-                                                    block=block
-                                                    personTitlesMap=document.personTitlesMap
-                                                />
+                                                <@hee.contact block=block/>
                                                 <#break>
                                             <#case "uk.nhs.hee.web.beans.BlockLinksReference">
                                                 <@hee.blockLinks block=block/>
@@ -114,10 +111,7 @@
                                         <@hee.quickLinks quickLinks=block/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                        <@hee.contactCard
-                                            contact=block.content
-                                            personTitlesMap=personTitlesMap
-                                        />
+                                        <@hee.contactCard contact=block.content/>
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                         <@hee.externalLinksCard card=block.externalLinksCard/>
