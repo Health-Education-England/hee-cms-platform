@@ -19,7 +19,7 @@
     </#function>
 
     <#-- Navigation: START -->
-    <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <nav class="nhsuk-header__navigation<#if menu.siteMenuItems?? && menu.siteMenuItems?size gt 3> nhsuk-header__navigation--more-items</#if>" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <div class="nhsuk-width-container">
             <#-- Nav toggle: START -->
             <p class="nhsuk-header__navigation-title">
