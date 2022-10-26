@@ -1,4 +1,5 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "internal-link.ftl">
 
 <#macro navMap block navMapRegionMap>
     <h2>${block.title}</h2>
@@ -17,9 +18,7 @@
             <ul id="regionList">
                 <#list block.links as link>
                     <#if link.document??>
-                        <#assign linkHREF>
-                            <@hst.link hippobean=link.document/>
-                        </#assign>
+                        <#assign linkHREF=getInternalLinkURL(link.document)>                        
                     <#else>
                         <#assign linkHREF="${link.url}">
                     </#if>

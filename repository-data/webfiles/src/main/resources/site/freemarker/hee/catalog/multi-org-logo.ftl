@@ -1,4 +1,5 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "../macros/internal-link.ftl">
 
 <#-- @ftlvariable name="document" type="[
                                             uk.nhs.hee.web.beans.BlogPost,

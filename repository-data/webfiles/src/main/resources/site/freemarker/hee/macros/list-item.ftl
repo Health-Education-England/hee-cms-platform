@@ -1,5 +1,6 @@
 <#ftl output_format="HTML">
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "internal-link.ftl">
 
 <#macro bulletinListItem items categoriesMap>
     <#list items as item>
@@ -38,7 +39,7 @@
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
-        <@hst.link hippobean=item var="pageURL"/>
+        <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
             <li>
@@ -62,7 +63,7 @@
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
-        <@hst.link hippobean=item var="pageURL"/>
+        <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
             <li>
@@ -238,13 +239,13 @@
     </#list>
 </#macro>
 
-<#macro searchListItem items miniHubGuidancePathToURLMap>
+<#macro searchListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
-        <@hst.link hippobean=item var="pageURL"/>
+        <#assign pageURL=getInternalLinkURL(item)>
 
-        <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || (pageURL != pageNotFoundURL || ('uk.nhs.hee.web.beans.Guidance' == item.getClass().getName() && miniHubGuidancePathToURLMap[item.path]??))>
+        <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || pageURL != pageNotFoundURL>
             <li>
                 <#switch item.getClass().getName()>
                     <#case "uk.nhs.hee.web.beans.Event">
@@ -265,10 +266,10 @@
                         </p>
                         <#break>
                     <#case "uk.nhs.hee.web.beans.CaseStudy">
-                        <@hst.link var="pageURL" hippobean=item.document>
+                        <@hst.link var="caseStudyDocumentURL" hippobean=item.document>
                             <@hst.param name="forceDownload" value="true"/>
                         </@hst.link>
-                        <h3><a href="${pageURL}" target="_blank">${item.title}</a></h3>
+                        <h3><a href="${caseStudyDocumentURL}" target="_blank">${item.title}</a></h3>
                         <div class="nhsuk-review-date">
                             <p class="nhsuk-body-s">
                                 <@fmt.message key="published_on.text"/> ${item.publishedDate}
@@ -281,29 +282,32 @@
                         <#break>
                     <#case "uk.nhs.hee.web.beans.SearchBank">
                         <#if item.searchDocument?? && item.searchDocument.mimeType != 'application/vnd.hippo.blank'>
-                            <@hst.link var="pageURL" hippobean=item.searchDocument>
+                            <@hst.link var="searchDocumentURL" hippobean=item.searchDocument>
                                 <@hst.param name="forceDownload" value="true"/>
                             </@hst.link>
-                            <h3><a href="${pageURL}">${item.title}</a></h3>
-                            <dl class="nhsuk-summary-list">
+                            <h3><a href="${searchDocumentURL}">${item.title}</a></h3>
 
-                                <#if item.strategyDocument?has_content>
-                                    <@hst.link var="strategyURL" hippobean=item.strategyDocument>
-                                        <@hst.param name="forceDownload" value="true"/>
-                                    </@hst.link>
-                                    <@fmt.message key="searchbank.strategies" var="strategiesLabel"/>
-                                    <@listItemRow key="${strategiesLabel}">
-                                        <a href="${strategyURL}" target="_blank"><@fmt.message key="searchbank.get_strategy"/></a>
-                                    </@listItemRow>
-                                </#if>
+                            <#assign isStrategyDocumentAvailable=(item.strategyDocument?? && item.strategyDocument.mimeType != 'application/vnd.hippo.blank')?then(true, false)>
+                            <#if isStrategyDocumentAvailable || item.completedDate??>
+                                <dl class="nhsuk-summary-list">
+                                    <#if isStrategyDocumentAvailable>
+                                        <@hst.link var="strategyDocumentURL" hippobean=item.strategyDocument>
+                                            <@hst.param name="forceDownload" value="true"/>
+                                        </@hst.link>
+                                        <@fmt.message key="searchbank.strategies" var="strategiesLabel"/>
+                                        <@listItemRow key="${strategiesLabel}">
+                                            <a href="${strategyDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_strategy"/></a>
+                                        </@listItemRow>
+                                    </#if>
 
-                                <#if item.completedDate??>
-                                    <@fmt.message key="searchbank.completed_on" var="completedOnLabel"/>
-                                    <@listItemRow key="${completedOnLabel}">
-                                        ${item.completedDate.time?string['dd MMMM yyyy']}
-                                    </@listItemRow>
-                                </#if>
-                            </dl>
+                                    <#if item.completedDate??>
+                                        <@fmt.message key="searchbank.completed_on" var="completedOnLabel"/>
+                                        <@listItemRow key="${completedOnLabel}">
+                                            ${item.completedDate.time?string['dd MMMM yyyy']}
+                                        </@listItemRow>
+                                    </#if>
+                                </dl>
+                            </#if>
                             <div class="nhsuk-review-date">
                                 <p class="nhsuk-body-s">
                                     <@fmt.message key="published_on.text"/> ${item.publishedDate}
@@ -311,17 +315,6 @@
                             </div>
                         </#if>
                         <#break>
-                    <#case "uk.nhs.hee.web.beans.Guidance">
-                        <#if miniHubGuidancePathToURLMap[item.path]??>
-                            <h3><a href="${miniHubGuidancePathToURLMap[item.path]}">${item.title}</a></h3>
-                            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                            <div class="nhsuk-review-date">
-                                <p class="nhsuk-body-s">
-                                    <@fmt.message key="published_on.text"/> ${item.publishedDate}
-                                </p>
-                            </div>
-                            <#break>
-                        </#if>
                     <#default>
                         <h3><a href="${pageURL}">${item.title}</a></h3>
                         <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>

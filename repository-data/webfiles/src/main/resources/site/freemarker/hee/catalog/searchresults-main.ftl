@@ -1,6 +1,7 @@
 <#ftl output_format="HTML">
 
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
@@ -50,7 +51,7 @@
 
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
-                                <@searchListItem items=pageable.items miniHubGuidancePathToURLMap=miniHubGuidancePathToURLMap/>
+                                <@searchListItem items=pageable.items/>
                             </ul>
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>

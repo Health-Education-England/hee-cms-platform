@@ -2,6 +2,7 @@
 <#include "../../include/imports.ftl">
 
 <@hst.setBundle basename="essentials.pagenotfound"/>
+<#include "../../include/page-meta-data.ftl">
 
 <div class="nhsuk-width-container">
     <main id="maincontent" role="main" class="nhsuk-main-wrapper">

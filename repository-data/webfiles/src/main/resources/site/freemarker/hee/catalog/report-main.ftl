@@ -1,5 +1,6 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
@@ -14,7 +15,7 @@
                         <h1>
                             <span role="text">${document.title}
                                 <span class="nhsuk-caption-xl nhsuk-caption--bottom">
-                                    ${document.subtitle}
+                                    ${document.subtitle!}
                                 </span>
                             </span>
                         </h1>
