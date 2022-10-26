@@ -4,13 +4,6 @@
 <div class="nhsuk-width-container nhsuk-header__container">
 
     <#-- Logos: START -->
-    <#assign hasMultiOrgLogo=false>
-    <@hst.include var="multiOrgLogoHTML" ref="multi-org-logo"/>
-
-    <#if (multiOrgLogoHTML?index_of('nhsuk-header__multi-logo')) != -1>
-        <#assign hasMultiOrgLogo=true>
-    </#if>
-
     <div class="nhsuk-header__multilogo">
     
         <#--  NHS/HEE logo and org name & descriptor: START  -->
@@ -42,6 +35,7 @@
         <#--  NHS/HEE logo and org name & descriptor: END  -->
 
         <#--  Multi org logo  -->
+        <@hst.include var="multiOrgLogoHTML" ref="multi-org-logo"/>
         ${multiOrgLogoHTML}
 
     </div>
