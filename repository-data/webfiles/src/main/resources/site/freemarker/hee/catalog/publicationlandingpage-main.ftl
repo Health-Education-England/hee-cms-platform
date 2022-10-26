@@ -43,7 +43,7 @@
                                                 <ul class="nhsuk-resources__list">
                                                     <#list document.webPublication as publication>
                                                         <a class="nhsuk-related-links-card__link" href="${getInternalLinkURL(publication)}">
-                                                            ${publication.name} - Web Version
+                                                            ${publication.title} - Web Version
                                                         </a>
                                                         <p>
                                                             Published: ${publication.publicationDate.getTime()?date?string["${datePattern}"]}
