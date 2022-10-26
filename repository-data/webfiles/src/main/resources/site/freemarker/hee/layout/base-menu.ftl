@@ -62,8 +62,8 @@
 
                                 <#if itemHref?has_content>
                                     <#--  Renders [main] nav as the first item in case if it has a link  -->
-                                    <li class="nhsuk-subnav-item">
-                                        <a class="nhsuk-subnav-link" href="${itemHref}" ${(item.externalLink??)?then('target="_blank"', '')}>${item.name}</a>
+                                    <li class="nhsuk-subnav__list-item">
+                                        <a class="nhsuk-subnav__list-link" href="${itemHref}" ${(item.externalLink??)?then('target="_blank"', '')}>${item.name}</a>
                                     </li>
                                 </#if>
 
