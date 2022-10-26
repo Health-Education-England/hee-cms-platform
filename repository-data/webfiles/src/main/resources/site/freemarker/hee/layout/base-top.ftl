@@ -45,9 +45,9 @@
     <#assign hasSearch=true>
     <#assign hasNav=true>
 
-    <#if item.hasSearch??>
+    <#if hasSearch>
         <div class="nhsuk-header__content" id="content-header">
-            <#if item.hasNav??>
+            <#if hasNav>
             <div class="nhsuk-header__menu">
                 <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
             </div>
@@ -82,7 +82,7 @@
             </div>
         </div>
     <#else>
-        <#if item.hasNav??>
+        <#if hasNav>
         <div class="nhsuk-header__content no-search" id="content-header">
             <div class="nhsuk-header__menu">
                 <button class="nhsuk-header__menu-toggle" id="toggle-menu" aria-controls="header-navigation" aria-label="Open menu">Menu</button>
