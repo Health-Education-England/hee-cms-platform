@@ -62,7 +62,7 @@
                 <div class="nhsuk-header__search-wrap" id="wrap-search">
                     <@hst.link var="searchLink" siteMapItemRefId="search"/>
                     <form class="nhsuk-header__search-form" id="search" action="${searchLink}" method="get" role="search">
-                        <label class="nhsuk-u-visually-hidden" for="search-field">Search the NHS website</label>
+                        <label class="nhsuk-u-visually-hidden" for="search-field">Search the HEE website</label>
                         <div class="autocomplete-container" id="autocomplete-container"></div>
                         <input class="nhsuk-search__input" id="search-field" name="{{ params.searchInputName if params.searchInputName else 'q' }}" type="search" placeholder="Search" autocomplete="off">
                         <button class="nhsuk-search__submit" type="submit">
