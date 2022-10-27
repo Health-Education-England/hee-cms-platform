@@ -79,7 +79,6 @@
             </#if>
 
             <#if person.linkedIn?has_content>
-                <#--  TODO: This currently constructs only person profile URL, but it may need to be refactored to accommodate company profiles as well in the future if required  -->
                 <p aria-label="Linkedin">
                     <a href="https://www.linkedin.com/in/${person.linkedIn}">${person.linkedIn}</a>
                 </p>
