@@ -16,9 +16,7 @@
     <#list document.logoGroup.logos as logo>
         <#--  Builds link  -->
         <#if logo.linkDocument??>
-            <#assign href>
-                <@hst.link hippobean=logo.linkDocument/>
-            </#assign>
+            <#assign href=getInternalLinkURL(logo.linkDocument)>
             <#assign openInNewWindow=false/>
         <#else>
             <#assign href="${logo.linkURL}">
