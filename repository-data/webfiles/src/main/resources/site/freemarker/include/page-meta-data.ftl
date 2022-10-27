@@ -34,27 +34,27 @@
     <@hst.link var="pageURL" siteMapItemRefId="pagenotfound" canonical=true fullyQualified=true />
 </#if>
 
-<#assign metaTitle>${pageTitle} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</#assign>
-<#assign metaDescription="${pageSummary}">
+<#assign metaTitle>${pageTitle!} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</#assign>
+<#assign metaDescription="${pageSummary!}">
 
 <@hst.headContribution category="pageMetaData">
-    <meta name="title" content="${metaTitle}" />
+    <meta name="title" content="${metaTitle!}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta name="description" content="${metaDescription}" />
+    <meta name="description" content="${metaDescription!}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:title" content="${metaTitle}" />
+    <meta property="og:title" content="${metaTitle!}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:description" content="${metaDescription}" />
+    <meta property="og:description" content="${metaDescription!}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:url" content="${pageURL}" />
+    <meta property="og:url" content="${pageURL!}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">

@@ -1,7 +1,7 @@
 <#include "internal-link.ftl">
 
 <#macro blockLinks block>
-    <#if block??>
+    <#if block?? && block.blockLinksContentBlock??>
         <#if block.blockLinksContentBlock.blockLinks?size gt 0>
             <div class="nhsuk-blocklinks">
                 <div class="nhsuk-u-reading-width">
