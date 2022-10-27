@@ -92,6 +92,7 @@
 
             </ul>
             </#if>
+            <@hst.cmseditmenu menu=menu/>
             <#-- Nav list: END -->
         </div>
     </nav>
