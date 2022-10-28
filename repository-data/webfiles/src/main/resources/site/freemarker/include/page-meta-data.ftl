@@ -38,19 +38,19 @@
 <#assign metaDescription="${pageSummary!}">
 
 <@hst.headContribution category="pageMetaData">
-    <meta name="title" content="${metaTitle!}" />
+    <meta name="title" content="${metaTitle}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta name="description" content="${metaDescription!}" />
+    <meta name="description" content="${metaDescription}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:title" content="${metaTitle!}" />
+    <meta property="og:title" content="${metaTitle}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:description" content="${metaDescription!}" />
+    <meta property="og:description" content="${metaDescription}" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
