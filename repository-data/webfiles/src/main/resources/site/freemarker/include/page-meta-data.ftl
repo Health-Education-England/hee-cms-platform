@@ -34,28 +34,37 @@
     <@hst.link var="pageURL" siteMapItemRefId="pagenotfound" canonical=true fullyQualified=true />
 </#if>
 
-<#assign metaTitle>${pageTitle!} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</#assign>
-<#assign metaDescription="${pageSummary!}">
+<#assign metaTitle>${(pageTitle?has_content)?then(pageTitle+' | '+hstRequestContext.resolvedMount.mount.channelInfo.organisationName, '')}</#assign>
 
-<@hst.headContribution category="pageMetaData">
-    <meta name="title" content="${metaTitle}" />
-</@hst.headContribution>
+<#if metaTitle?has_content>
+    <@hst.headContribution category="pageMetaData">
+        <meta name="title" content="${metaTitle}" />
+    </@hst.headContribution>
+</#if>
 
-<@hst.headContribution category="pageMetaData">
-    <meta name="description" content="${metaDescription}" />
-</@hst.headContribution>
+<#if pageSummary?has_content>
+    <@hst.headContribution category="pageMetaData">
+        <meta name="description" content="${pageSummary}" />
+    </@hst.headContribution>
+</#if>
 
-<@hst.headContribution category="pageMetaData">
-    <meta property="og:title" content="${metaTitle}" />
-</@hst.headContribution>
+<#if metaTitle?has_content>
+    <@hst.headContribution category="pageMetaData">
+        <meta property="og:title" content="${metaTitle}" />
+    </@hst.headContribution>
+</#if>
 
-<@hst.headContribution category="pageMetaData">
-    <meta property="og:description" content="${metaDescription}" />
-</@hst.headContribution>
+<#if pageSummary?has_content>
+    <@hst.headContribution category="pageMetaData">
+        <meta property="og:description" content="${pageSummary}" />
+    </@hst.headContribution>
+</#if>
 
-<@hst.headContribution category="pageMetaData">
-    <meta property="og:url" content="${pageURL!}" />
-</@hst.headContribution>
+<#if pageURL?? && pageURL?has_content>
+    <@hst.headContribution category="pageMetaData">
+        <meta property="og:url" content="${pageURL!}" />
+    </@hst.headContribution>
+</#if>
 
 <@hst.headContribution category="pageMetaData">
     <meta property="og:type" content="website" />
