@@ -20,7 +20,7 @@ public class PhoneNumberValidator implements Validator<String> {
     private static final Logger LOGGER = LoggerFactory.getLogger(PhoneNumberValidator.class);
 
     // CharMatcher instance of common multiple phone number separators
-    private static final CharMatcher MULTIPLE_PHONE_NUMBER_SEPARATOR_CHAR_MATCHER = CharMatcher.anyOf("/\\|,");
+    private static final CharMatcher MULTIPLE_PHONE_NUMBER_SEPARATOR_CHAR_MATCHER = CharMatcher.anyOf("/\\|,;:");
 
     // UK country code
     private static final String UK_COUNTRY_CODE = "+44";
