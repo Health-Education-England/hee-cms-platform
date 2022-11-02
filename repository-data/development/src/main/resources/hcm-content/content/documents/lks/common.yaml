@@ -1799,7 +1799,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
       hippo:name: James Smith
-      hippo:versionHistory: e0936763-6c09-4dda-bd27-0c788bf475fb
+      hippo:versionHistory: 5941f13c-d0d8-464f-8534-f74af63b7a13
       /james-smith[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1817,6 +1817,7 @@
         hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
+        hee:phoneExtension: ''
         hee:phoneNumber: +44 733 910 013
         hee:pronouns: he/him
         hee:title: Mr
@@ -1826,7 +1827,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:26.657+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:51:42.233Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
@@ -1856,6 +1857,7 @@
         hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
+        hee:phoneExtension: ''
         hee:phoneNumber: +44 733 910 013
         hee:pronouns: he/him
         hee:title: Mr
@@ -1865,7 +1867,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:38.419+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:51:54.364Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
@@ -1895,6 +1897,7 @@
         hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
+        hee:phoneExtension: ''
         hee:phoneNumber: +44 733 910 013
         hee:pronouns: he/him
         hee:title: Mr
@@ -1904,9 +1907,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-10-25T08:14:38.419+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:51:54.364Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-10-25T08:14:41.354+01:00
+        hippostdpubwf:publicationDate: 2022-11-02T16:51:56.198Z
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
         /hee:image:
@@ -1923,7 +1926,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       hippo:name: John Doe
-      hippo:versionHistory: e870792c-5373-4a31-a3af-f5d580d9f7a4
+      hippo:versionHistory: 9379ef5c-4bee-4fb9-8599-5f67a5c19657
       /john-doe[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1939,17 +1942,19 @@
         hee:linkedIn: john-doe
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
+        hee:phoneExtension: '1234'
         hee:phoneNumber: +44 1234 567890
         hee:pronouns: he/him
         hee:title: Prof
         hee:twitter: NHS_HealthEdEng
         hee:website: http://hee.dental
         hippo:availability: []
+        hippostd:holder: admin
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-26T08:51:44.151+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:05:22.959Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -1977,6 +1982,7 @@
         hee:linkedIn: john-doe
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
+        hee:phoneExtension: '1234'
         hee:phoneNumber: +44 1234 567890
         hee:pronouns: he/him
         hee:title: Prof
@@ -1987,7 +1993,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-26T08:55:22.473+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:04:24.659Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -2015,6 +2021,7 @@
         hee:linkedIn: john-doe
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
+        hee:phoneExtension: '1234'
         hee:phoneNumber: +44 1234 567890
         hee:pronouns: he/him
         hee:title: Prof
@@ -2025,9 +2032,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-26T08:55:22.473+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:04:24.659Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-10-26T08:55:25.535+01:00
+        hippostdpubwf:publicationDate: 2022-11-02T16:04:26.251Z
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
         /hee:image:

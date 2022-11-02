@@ -50,7 +50,8 @@
         <div class="nhsuk-contact__secondary-info">
             <#if person.phoneNumber?has_content>
                 <p aria-label="Telephone">
-                    <a href="tel:${person.phoneNumber}" title="Opens call">${person.phoneNumber}</a>
+                    <a href="tel:${person.phoneNumber?replace(' ', '')}" title="Opens call">${person.phoneNumber}</a>
+                    ${person.phoneExtension?has_content?then('(Ext: ' + person.phoneExtension + ')', '')}
                 </p>
             </#if>
 

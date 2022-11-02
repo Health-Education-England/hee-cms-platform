@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9e018287-7f60-4e71-8760-f4408fc73210
+          jcr:uuid: 9d966755-812c-4190-87be-7b8a082d850e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -123,6 +123,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
+          /phoneExtension:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:phoneExtension
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -139,7 +147,7 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: 5be216e3-8570-4917-9ef2-30feda480025
+          jcr:uuid: 1c9bd495-9d64-40fd-96a8-953098ddad02
           hippostdpubwf:lastModificationDate: 2021-05-13T16:45:32.265+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:45:32.266+07:00
           hee:organisation: ''
@@ -148,6 +156,7 @@ definitions:
           hee:title: ''
           hee:twitter: ''
           hee:linkedIn: ''
+          hee:phoneExtension: ''
           /hee:image:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -231,6 +240,15 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: e.g. +44 12345 1234
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /phoneExtension:
+            jcr:primaryType: frontend:plugin
+            caption: Phone extension
+            field: phoneExtension
+            hint: e.g. 1234
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /email:

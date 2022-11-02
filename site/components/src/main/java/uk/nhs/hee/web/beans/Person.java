@@ -72,4 +72,9 @@ public class Person extends BaseDocument {
     public String getLinkedIn() {
         return getSingleProperty("hee:linkedIn");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:phoneExtension")
+    public String getPhoneExtension() {
+        return getSingleProperty("hee:phoneExtension");
+    }
 }
