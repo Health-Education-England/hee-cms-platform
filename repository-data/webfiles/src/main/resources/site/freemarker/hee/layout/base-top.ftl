@@ -25,7 +25,7 @@
         <#--  Multi-org logos: START  -->
         <@hst.include ref="multi-org-logo" var="multiOrgLogoHTML"/>
         <#--  Workaround to remove additional wrapper div's introduced by 'multi-org-logo' container  -->
-        ${multiOrgLogoHTML!?replace('<div>', '')?replace('</div>', '')}
+        ${multiOrgLogoHTML}
         <#--  Multi-org logos: END  -->
     </div>
     <#--  Logo and org name & descriptor: END  -->
