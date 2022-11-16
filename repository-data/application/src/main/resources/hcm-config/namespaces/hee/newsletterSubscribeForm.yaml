@@ -193,6 +193,7 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.appended.json: '{ removeButtons: "Table"}'
           /successUrl:
             jcr:primaryType: frontend:plugin
             caption: Success url
