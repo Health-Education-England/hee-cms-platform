@@ -235,6 +235,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
+              ckeditor.config.appended.json: '{ removeButtons: "Table"}'
           /pageLastNextReview:
             jcr:primaryType: frontend:plugin
             caption: Page review dates

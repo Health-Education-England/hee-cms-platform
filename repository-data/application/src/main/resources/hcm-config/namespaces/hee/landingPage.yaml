@@ -151,6 +151,7 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.appended.json: '{ removeButtons: "Table"}'
           /addToAZ:
             jcr:primaryType: frontend:plugin
             caption: Add to A to Z
