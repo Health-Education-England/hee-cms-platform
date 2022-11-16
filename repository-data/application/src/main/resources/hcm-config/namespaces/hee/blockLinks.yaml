@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype[1]:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: 9d020927-5d62-4522-9ca5-da88d9583560
+          jcr:uuid: 517fca08-292b-4c7d-866e-72b525c8c7cb
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -53,7 +53,7 @@ definitions:
         /hipposysedit:prototype[1]:
           jcr:primaryType: hee:blockLinks
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 4cacd851-146e-4c23-8fab-b3f1597e510e
+          jcr:uuid: 640ac864-8de9-4cb5-bb2b-06bc340bbd08
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -102,6 +102,7 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.appended.json: '{ removeButtons: "Table"}'
           /blockLinks:
             jcr:primaryType: frontend:plugin
             caption: Block links
