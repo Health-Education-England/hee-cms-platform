@@ -13,22 +13,21 @@
 
 <#if document?? && document.logoGroup?? && document.logoGroup.logos?size gt 0>
     <#--  Multi org logo: START  -->
-    <div class="nhsuk-header__multi-logo">
         <#list document.logoGroup.logos as logo>
             <#--  Builds link  -->
             <#if logo.linkDocument??>
                 <#assign href=getInternalLinkURL(logo.linkDocument)>
-                <#assign openInNewWindow=false/>
             <#else>
                 <#assign href="${logo.linkURL}">
-                <#assign openInNewWindow=true/>
             </#if>
 
             <#--  Builds logo source and alt text  -->
             <#switch logo.logoType>
+                <#--
                 <#case "hee">
                     <#assign logoFileName="hee-logo.png">
                     <#break>
+                -->
                 <#case "nimdta">
                     <#assign logoFileName="nimdta-logo.png">
                     <#break>
@@ -44,9 +43,9 @@
             <#assign logoAltText="Logo for ${logoTypes[logo.logoType]}">
 
             <#--  Renders logo  -->
-            <span>
+            <span class="nhsuk-header__logo">
                 <#if href?has_content>
-                    <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}" ${openInNewWindow?then('target="_blank"', '')}>
+                    <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}">
                         <img src="${logoSrc}" alt="${logoAltText}">
                     </a>
                 <#else>
@@ -54,6 +53,5 @@
                 </#if>
             </span>
         </#list>
-    </div>
     <#--  Multi org logo: END  -->
 </#if>

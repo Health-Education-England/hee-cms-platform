@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-4.1.min.css'/>" type="text/css"/>
     <link rel="stylesheet" href="<@hst.webfile path='/css/hee.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/hee_custom_backend.css'/>" type="text/css"/>
     <#if hstRequest.requestContext.channelManagerPreviewRequest>
       <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
     </#if>
