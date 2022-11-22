@@ -40,4 +40,9 @@ public class Department extends BaseDocument {
     public String getPhoneExtension() {
         return getSingleProperty("hee:phoneExtension");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:description")
+    public String getDescription() {
+        return getSingleProperty("hee:description");
+    }
 }

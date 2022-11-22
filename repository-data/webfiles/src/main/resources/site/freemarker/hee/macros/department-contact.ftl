@@ -36,6 +36,10 @@
             <#if department.address?has_content>
                 <p aria-label="Address">${department.address?replace('\n', '<br>')}</p>
             </#if>
+
+            <#if department.description?has_content>
+                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${department.description}</p>
+            </#if>
         </div>
     </div>
 </#macro>
