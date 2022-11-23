@@ -128,6 +128,15 @@ definitions:
           /report-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/report-main.ftl
+          /publicationcollection-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/publicationcollection-main.ftl
+          /collection-filters:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/include/filters.ftl
+          /collection-content:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/contentlist.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -214,6 +223,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Publication
               hst:template: report-main
+            /publicationcollection:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.PublicationCollectionComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Publication Collection
+              hst:template: publicationcollection-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

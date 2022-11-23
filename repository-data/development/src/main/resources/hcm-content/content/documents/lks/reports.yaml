@@ -1,4 +1,5 @@
 /content/documents/lks/reports:
+  .meta:order-before: publicationcollection
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: 9f4db34d-6a5b-4789-a645-a471c6543905
@@ -378,25 +379,24 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
     hippo:name: DemoPublication
-    hippo:versionHistory: 49810440-2dd0-4b31-b0e0-a5c6e35d99c2
+    hippo:versionHistory: e2376f06-3cf3-4bf0-8bdb-eb08bbde5e89
     /demopublication[1]:
       jcr:primaryType: hee:report
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 462a7ed8-58df-4e6b-93d8-3b4a584ae755
       hee:publicationDate: 2022-10-07T00:00:00+01:00
       hee:publicationProfessions: [public_health]
-      hee:publicationTopics: [long_term_conditions]
-      hee:publicationType: report
+      hee:publicationTopics: [long_term_conditions, maternity]
+      hee:publicationType: decision
       hee:subtitle: Demo
       hee:summary: Demo about Publication Page is working with the new requirements.
       hee:title: Publication
       hippo:availability: []
-      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-07T10:22:48.555+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-09T12:15:56.584+01:00
+      hippostdpubwf:lastModificationDate: 2022-11-17T12:07:11.627Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 39e45420-6207-4770-8dfd-0683954a66bc
       hippotranslation:locale: en
@@ -428,8 +428,8 @@
       jcr:uuid: b83b2e28-a619-4ea7-8974-c5a8c4e9df4b
       hee:publicationDate: 2022-10-07T00:00:00+01:00
       hee:publicationProfessions: [public_health]
-      hee:publicationTopics: [long_term_conditions]
-      hee:publicationType: report
+      hee:publicationTopics: [long_term_conditions, maternity]
+      hee:publicationType: decision
       hee:subtitle: Demo
       hee:summary: Demo about Publication Page is working with the new requirements.
       hee:title: Publication
@@ -438,7 +438,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-07T10:22:48.555+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-07T13:19:47.403+01:00
+      hippostdpubwf:lastModificationDate: 2022-11-17T12:07:33.727Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 39e45420-6207-4770-8dfd-0683954a66bc
       hippotranslation:locale: en
@@ -470,8 +470,8 @@
       jcr:uuid: 3d2e9752-d219-4194-8fd3-b2af6c1c893f
       hee:publicationDate: 2022-10-07T00:00:00+01:00
       hee:publicationProfessions: [public_health]
-      hee:publicationTopics: [long_term_conditions]
-      hee:publicationType: report
+      hee:publicationTopics: [long_term_conditions, maternity]
+      hee:publicationType: decision
       hee:subtitle: Demo
       hee:summary: Demo about Publication Page is working with the new requirements.
       hee:title: Publication
@@ -480,9 +480,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-07T10:22:48.555+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-07T13:19:47.403+01:00
+      hippostdpubwf:lastModificationDate: 2022-11-17T12:07:33.727Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-10-07T13:19:50.451+01:00
+      hippostdpubwf:publicationDate: 2022-11-17T12:07:37.600Z
       hippotranslation:id: 39e45420-6207-4770-8dfd-0683954a66bc
       hippotranslation:locale: en
       /hee:pageLastNextReview:

@@ -8,3 +8,17 @@ definitions:
         hst:pagetitle: Knowledge Staff
         hst:refId: root
         hst:relativecontentpath: home
+      /publication-collection:
+        jcr:primaryType: hst:sitemapitem
+        hst:componentconfigurationid: hst:pages/publicationcollection
+        hst:pagetitle: Publication Collection
+        hst:refId: publication-collection
+        hst:relativecontentpath: publicationcollection/publication-collection
+        /_any_.html:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/publicationpage
+          hst:relativecontentpath: publication-collection/${1}
+        /_any_:
+          jcr:primaryType: hst:sitemapitem
+          hst:componentconfigurationid: hst:pages/publicationcollection
+          hst:relativecontentpath: ${parent}/${1}

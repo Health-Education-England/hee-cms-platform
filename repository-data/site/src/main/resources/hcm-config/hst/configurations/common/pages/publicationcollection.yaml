@@ -1,0 +1,35 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/publicationcollection:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:referencecomponent: hst:abstractpages/publication-main
+        /filters:
+          jcr:primaryType: hst:component
+          hst:template: collection-filters
+          hst:componentclassname: uk.nhs.hee.web.components.Faceted
+        /contentlist:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsListComponent
+          hst:template: collection-content
+          hst:parameternames: [documentTypes, sortField, sortOrder, showPagination,
+            path, pageSize]
+          hst:parametervalues: ['hee:report', '', desc, 'on', '', '10']
+        /intro:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.PublicationCollectionComponent
+          hst:parameternames: [document]
+          hst:parametervalues: [collectionDemo]
+          hst:template: publicationcollection-main
+      /header:
+        jcr:primaryType: hst:component
+        /top:
+          jcr:primaryType: hst:component
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+            hst:parameternames: [document]
+            hst:parametervalues: [publicationCollectionPage]
+            hst:template: multi-org-logo

@@ -1,0 +1,21 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/common/hst:pages/publicationpage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      /main:
+        jcr:primaryType: hst:component
+        hst:componentclassname: uk.nhs.hee.web.components.ReportComponent
+        hst:parameternames: [document]
+        hst:parametervalues: [report]
+        hst:template: report-main
+      /header:
+        jcr:primaryType: hst:component
+        /top:
+          jcr:primaryType: hst:component
+          /multi-org-logo:
+            jcr:primaryType: hst:component
+            hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+            hst:parameternames: [document]
+            hst:parametervalues: [publication-collection]
+            hst:template: multi-org-logo

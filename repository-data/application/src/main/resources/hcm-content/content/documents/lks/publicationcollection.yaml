@@ -1,0 +1,91 @@
+/content/documents/lks/publicationcollection:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 57963277-ff2b-4932-b921-13a7bab731f3
+  hippo:name: PublicationCollection
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: c91f1b4a-70fa-4074-a8f1-b1e965daf046
+  hippotranslation:locale: en
+  /collectiondemo:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 916d165e-40ab-4210-b420-b493b08943c6
+    hippo:name: CollectionDemo
+    hippo:versionHistory: d6ba0ec7-7699-4344-8588-e0178f44092c
+    /collectiondemo[1]:
+      jcr:primaryType: hee:publicationCollectionPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 70c29eac-f2cb-41fb-b453-4cdc987d935f
+      hee:pageSize: 10
+      hee:subtitle: Demo
+      hee:summary: 'If the customer is very specific on URLs and parameters, they
+        might demand that they don''t want namespaced parameters. You can achieve
+        that with one single setting in the hst-config.properties. Namely add:'
+      hee:title: Publication Collection
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-11-09T15:22:02.819Z
+      hippostdpubwf:lastModificationDate: 2022-11-17T12:05:56.215Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: acc0ed90-0c9e-4d79-a365-3bec0b4c791a
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
+    /collectiondemo[2]:
+      jcr:primaryType: hee:publicationCollectionPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 8bb73e94-e63c-44e8-9ebc-cc9f1947c89d
+      hee:pageSize: 10
+      hee:subtitle: Demo
+      hee:summary: 'If the customer is very specific on URLs and parameters, they
+        might demand that they don''t want namespaced parameters. You can achieve
+        that with one single setting in the hst-config.properties. Namely add:'
+      hee:title: Publication Collection
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-11-09T15:22:02.819Z
+      hippostdpubwf:lastModificationDate: 2022-11-09T15:22:53.021Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: acc0ed90-0c9e-4d79-a365-3bec0b4c791a
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
+    /collectiondemo[3]:
+      jcr:primaryType: hee:publicationCollectionPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: de67a253-94ea-4266-b3a8-fa0989d8e00a
+      hee:pageSize: 10
+      hee:subtitle: Demo
+      hee:summary: 'If the customer is very specific on URLs and parameters, they
+        might demand that they don''t want namespaced parameters. You can achieve
+        that with one single setting in the hst-config.properties. Namely add:'
+      hee:title: Publication Collection
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-11-09T15:22:02.819Z
+      hippostdpubwf:lastModificationDate: 2022-11-09T15:22:53.021Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-11-09T15:22:55.959Z
+      hippotranslation:id: acc0ed90-0c9e-4d79-a365-3bec0b4c791a
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
+  /publication-collection:
+    jcr:primaryType: hippofacnav:facetnavigation
+    hippo:docbase: 9f4db34d-6a5b-4789-a645-a471c6543905
+    hippofacnav:facetnodenames: [Publication Type, Publication Topics, Publication
+        Professions, Publication Date]
+    hippofacnav:facets: ['hee:publicationType', 'hee:publicationTopics', 'hee:publicationProfessions',
+      'hee:publicationDate']
+    hippofacnav:filters: ['hippo:availability = live', 'jcr:primaryType=hee:report']
+    hippofacnav:limit: 10
+    hippofacnav:sortby: ['hee:publicationType']
