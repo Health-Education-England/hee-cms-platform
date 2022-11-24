@@ -17,7 +17,7 @@ definitions:
         /_any_.html:
           jcr:primaryType: hst:sitemapitem
           hst:componentconfigurationid: hst:pages/publicationpage
-          hst:relativecontentpath: publication-collection/${1}
+          hst:relativecontentpath: ${parent}/${1}
         /_any_:
           jcr:primaryType: hst:sitemapitem
           hst:componentconfigurationid: hst:pages/publicationcollection

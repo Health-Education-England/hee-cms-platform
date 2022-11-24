@@ -17,7 +17,7 @@
 
     <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
-
+            <@hst.include ref="intro"/>
             <#if document??>
                 <h1>${document.title}</h1>
                 <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>

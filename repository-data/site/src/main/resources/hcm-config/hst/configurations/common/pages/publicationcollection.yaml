@@ -3,26 +3,6 @@ definitions:
     /hst:hst/hst:configurations/common/hst:pages/publicationcollection:
       jcr:primaryType: hst:component
       hst:referencecomponent: hst:abstractpages/base
-      /main:
-        jcr:primaryType: hst:component
-        hst:referencecomponent: hst:abstractpages/publication-main
-        /filters:
-          jcr:primaryType: hst:component
-          hst:template: collection-filters
-          hst:componentclassname: uk.nhs.hee.web.components.Faceted
-        /contentlist:
-          jcr:primaryType: hst:component
-          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsListComponent
-          hst:template: collection-content
-          hst:parameternames: [documentTypes, sortField, sortOrder, showPagination,
-            path, pageSize]
-          hst:parametervalues: ['hee:report', '', desc, 'on', '', '10']
-        /intro:
-          jcr:primaryType: hst:component
-          hst:componentclassname: uk.nhs.hee.web.components.PublicationCollectionComponent
-          hst:parameternames: [document]
-          hst:parametervalues: [collectionDemo]
-          hst:template: publicationcollection-main
       /header:
         jcr:primaryType: hst:component
         /top:
@@ -33,3 +13,22 @@ definitions:
             hst:parameternames: [document]
             hst:parametervalues: [publicationCollectionPage]
             hst:template: multi-org-logo
+      /main:
+        jcr:primaryType: hst:component
+        hst:template: publicationcollection-main
+        /filters:
+          jcr:primaryType: hst:component
+          hst:componentclassname: uk.nhs.hee.web.components.Faceted
+          hst:template: collection-filters
+        /contentlist:
+          jcr:primaryType: hst:component
+          hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsListComponent
+          hst:parameternames: [documentTypes, sortField, sortOrder, showPagination,
+            path, pageSize]
+          hst:parametervalues: ['hee:report', '', desc, 'on', '', '10']
+          hst:template: collection-content
+        /intro:
+          jcr:primaryType: hst:containercomponent
+          hippo:identifier: 4dc46ae3-f522-4961-9f43-6f0088ef1bb5
+          hst:xtype: hst.vbox
+          hst:label: Publication Collection Page
