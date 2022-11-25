@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: 1fe20b9d-b46c-438e-a230-d55f5666e03e
   hippo:name: Publication Landing Pages
-  hippostd:foldertype: [new-translated-folder, new-document]
+  hippostd:foldertype: [new-publication-landingpage-document, new-publication-landingpage-folder]
   hippotranslation:id: 5f4fdac1-13d6-4242-b3e1-6cb63437e359
   hippotranslation:locale: en
   /demo:
@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9491a7b0-770d-4cb1-83d3-51914e2b8cee
     hippo:name: Demo
-    hippo:versionHistory: e236ff38-efd4-466a-843c-8b426774f45a
+    hippo:versionHistory: 1b7f5b76-dac5-4117-94a4-cf388ab81f43
     /demo[1]:
       jcr:primaryType: hee:publicationLandingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -34,7 +34,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-21T14:28:32.252+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-25T16:51:07.123+01:00
+      hippostdpubwf:lastModificationDate: 2022-11-25T15:25:25.854Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 5b0b6471-9653-4f14-bdd1-dacc9ad66720
       hippotranslation:locale: en
@@ -47,16 +47,6 @@
       /hee:webPublication[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
-      /hee:documentVersions:
-        jcr:primaryType: hippo:resource
-        jcr:mixinTypes: ['mix:created']
-        hippo:filename: 20210909 HEE Application Compliance Template.xlsx
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[1]/documentVersions/20210909-HEE-Application-Compliance-Template.xlsx
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-10-21T17:29:15.290+01:00
-        jcr:mimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
       /hee:alternateVersions:
         jcr:primaryType: hippo:resource
         jcr:mixinTypes: ['mix:created']
@@ -67,19 +57,6 @@
         jcr:encoding: UTF-8
         jcr:lastModified: 2008-03-26T12:03:00+01:00
         jcr:mimeType: application/vnd.hippo.blank
-      /hee:languageVersions:
-        jcr:primaryType: hippo:resource
-        jcr:mixinTypes: ['mix:created']
-        hippo:filename: Tips for remote usability evaluation observers.pdf
-        hippo:text:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[1]/languageVersions/Tips-for-remote-usability-evaluation-observers.pdf
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[1]/languageVersions/Tips-for-remote-usability-evaluation-observers-1.pdf
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-10-25T16:43:37.946+01:00
-        jcr:mimeType: application/pdf
     /demo[2]:
       jcr:primaryType: hee:publicationLandingPage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -101,7 +78,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-21T14:28:32.252+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-25T16:43:44.038+01:00
+      hippostdpubwf:lastModificationDate: 2022-11-25T14:33:49.385Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 5b0b6471-9653-4f14-bdd1-dacc9ad66720
       hippotranslation:locale: en
@@ -114,16 +91,6 @@
       /hee:webPublication[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
-      /hee:documentVersions:
-        jcr:primaryType: hippo:resource
-        jcr:mixinTypes: ['mix:created']
-        hippo:filename: 20210909 HEE Application Compliance Template.xlsx
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[2]/documentVersions/20210909-HEE-Application-Compliance-Template.xlsx
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-10-21T17:29:15.290+01:00
-        jcr:mimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
       /hee:alternateVersions:
         jcr:primaryType: hippo:resource
         jcr:mixinTypes: ['mix:created']
@@ -134,19 +101,6 @@
         jcr:encoding: UTF-8
         jcr:lastModified: 2008-03-26T12:03:00+01:00
         jcr:mimeType: application/vnd.hippo.blank
-      /hee:languageVersions:
-        jcr:primaryType: hippo:resource
-        jcr:mixinTypes: ['mix:created']
-        hippo:filename: Tips for remote usability evaluation observers.pdf
-        hippo:text:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[2]/languageVersions/Tips-for-remote-usability-evaluation-observers.pdf
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[2]/languageVersions/Tips-for-remote-usability-evaluation-observers-1.pdf
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-10-25T16:43:37.946+01:00
-        jcr:mimeType: application/pdf
     /demo[3]:
       jcr:primaryType: hee:publicationLandingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -168,9 +122,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-10-21T14:28:32.252+01:00
-      hippostdpubwf:lastModificationDate: 2022-10-25T16:43:44.038+01:00
+      hippostdpubwf:lastModificationDate: 2022-11-25T14:33:49.385Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-10-25T16:43:50.338+01:00
+      hippostdpubwf:publicationDate: 2022-11-25T14:33:52.451Z
       hippotranslation:id: 5b0b6471-9653-4f14-bdd1-dacc9ad66720
       hippotranslation:locale: en
       /hee:logoGroup:
@@ -182,16 +136,6 @@
       /hee:webPublication[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 7095dfd3-cd60-4de2-95bd-0164ffb0215e
-      /hee:documentVersions:
-        jcr:primaryType: hippo:resource
-        jcr:mixinTypes: ['mix:created']
-        hippo:filename: 20210909 HEE Application Compliance Template.xlsx
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[3]/documentVersions/20210909-HEE-Application-Compliance-Template.xlsx
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-10-21T17:29:15.290+01:00
-        jcr:mimeType: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
       /hee:alternateVersions:
         jcr:primaryType: hippo:resource
         jcr:mixinTypes: ['mix:created']
@@ -202,16 +146,3 @@
         jcr:encoding: UTF-8
         jcr:lastModified: 2008-03-26T12:03:00+01:00
         jcr:mimeType: application/vnd.hippo.blank
-      /hee:languageVersions:
-        jcr:primaryType: hippo:resource
-        jcr:mixinTypes: ['mix:created']
-        hippo:filename: Tips for remote usability evaluation observers.pdf
-        hippo:text:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[3]/languageVersions/Tips-for-remote-usability-evaluation-observers.pdf
-        jcr:data:
-          type: binary
-          resource: /content/documents/lks/publication-landing-pages/demo/demo[3]/languageVersions/Tips-for-remote-usability-evaluation-observers-1.pdf
-        jcr:encoding: UTF-8
-        jcr:lastModified: 2022-10-25T16:43:37.946+01:00
-        jcr:mimeType: application/pdf
