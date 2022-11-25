@@ -36,6 +36,11 @@ public class Department extends BaseDocument {
         return getSingleProperty("hee:website");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:phoneExtension")
+    public String getPhoneExtension() {
+        return getSingleProperty("hee:phoneExtension");
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:description")
     public String getDescription() {
         return getSingleProperty("hee:description");

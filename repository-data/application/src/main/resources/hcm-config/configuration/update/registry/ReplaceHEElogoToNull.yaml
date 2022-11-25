@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/ReplaceHEElogoToNull:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 100
+      hipposys:description: ''
+      hipposys:dryrun: true
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nclass\
+        \ ReplaceHEElogoToNull extends BaseNodeUpdateVisitor {\r\n\r\n  boolean doUpdate(Node\
+        \ node) {\r\n      \r\n      //log.debug \"${node.getPath()} \"\r\n      if\
+        \ (  node.hasProperty(\"hippo:docbase\"))\r\n      {\r\n        log.debug\
+        \ \"${node.getPath()} | ${node.getProperty(\"hippo:docbase\").getString()}\
+        \ - Before }\"\r\n        \r\n        node.setProperty(\"hippo:docbase\",\
+        \ \"cafebabe-cafe-babe-cafe-babecafebabe\")\r\n                \r\n      \
+        \  log.debug \"${node.getPath()} | ${node.getProperty(\"hippo:docbase\").getString()}\
+        \ - After }\"\r\n      }\r\n      else\r\n        log.debug \"${node.getPath()}\
+        \ | - no docbase found}\"\r\n      \r\n      return true   \r\n  }\r\n\r\n\
+        \  boolean undoUpdate(Node node) {\r\n    throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n  }\r\n\r\n  \r\n\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: //element(*)/element(hee:logoGroup)[@hippo:docbase="426fb050-754a-41a3-9bc6-a41331b1b655"
+        or @hippo:docbase="54a23a7c-291d-402b-8e9e-19384a852948"]
