@@ -3,16 +3,50 @@
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/internal-link.ftl">
-<#include '../macros/file-links-card.ftl'>
+<#include '../utils/date-util.ftl'>
+
+<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
-<#assign datePattern = "d MMMM yyyy">
-<#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
+<#--  Renders document detail block which renders title as well  -->
+<#macro docDetailBlockForDocLink docLink readTime>
+    <@hst.link var="fileURL" hippobean=docLink>
+        <@hst.param name="forceDownload" value="true"/>
+    </@hst.link>
+
+    <li>
+        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}  (opens in new window)">
+            ${docLink.filename?keep_before_last(".")} - ${docLink.filename?keep_after_last(".")?upper_case}
+        </a>
+
+        <@docDetailBlock
+            publishedDate=docLink.properties['jcr:created']
+            updatedDate=docLink.lastModified
+            readTime=readTime
+            fileType=docLink.filename?keep_after_last(".")
+            fileLengthInKB=docLink.lengthKB />
+    </li>
+</#macro>
+
+<#--  Renders document detail block  -->
+<#macro docDetailBlock publishedDate updatedDate readTime fileType fileLengthInKB=0>
+    <div class="nhsuk-review-date" style="margin-top:0px">
+        <p class="nhsuk-body-s">
+            Published: ${getDefaultFormattedDate(publishedDate)}<br>
+            Updated: ${getDefaultFormattedDate(updatedDate)}<br>
+            ${fileType?upper_case}${(fileLengthInKB > 0)?then(', ' + fileLengthInKB + 'kB', '')}<br>
+            ${readTime} min read
+        </p>
+    </div>
+</#macro>
+
 <#if document??>
     <div class="nhsuk-width-container">
         <main id="maincontent" role="main" class="nhsuk-main-wrapper">
             <div class="nhsuk-width-container">
+
+                <#--  Renders title & subtitle  -->
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-grid-column-two-thirds">
                         <h1>
@@ -30,87 +64,61 @@
                         <div class="nhsuk-grid-column-two-thirds">
                             <section class="nhsuk-page-content__section-one">
                                 <div class="nhsuk-page-content">
+
+                                    <#--  Renders summary  -->
                                     <#if document.summary??>
                                         <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                                     </#if>
 
+                                    <#--  Renders documents  -->
                                     <div class="nhsuk-card">
                                         <div class="nhsuk-card__content">
                                             <h3 class="nhsuk-card__heading">Documents</h3>
 
-
                                             <#if document.webPublication?has_content>
                                                 <ul class="nhsuk-resources__list">
                                                     <#list document.webPublication as publication>
-                                                        <a class="nhsuk-related-links-card__link" href="${getInternalLinkURL(publication)}">
-                                                            ${publication.title} - Web Version
-                                                        </a>
-                                                        <p>
-                                                            Published: ${publication.publicationDate.getTime()?date?string["${datePattern}"]}
-                                                            </br>Updated: ${publication.pageLastNextReview.lastReviewed.getTime()?date?string["${datePattern}"]}
-                                                            </br>WEB
-                                                            </br>${document.readTime}
-                                                        </p>
+                                                        <li>
+                                                            <a class="nhsuk-resources__link" href="${getInternalLinkURL(publication)}">
+                                                                ${publication.title} - Web
+                                                            </a>
+                                                            <@docDetailBlock
+                                                                publishedDate=publication.publicationDate
+                                                                updatedDate=publication.pageLastNextReview.lastReviewed
+                                                                readTime=document.readTime
+                                                                fileType='WEB' />
+                                                        </li>
                                                     </#list>
                                                 </ul>
                                             </#if>
 
-                                            <#if document.documentVersions?has_content>
+                                            <#if document.documentVersions?has_content && !(document.documentVersions?size == 1 && document.documentVersions[0].mimeType == 'application/vnd.hippo.blank')>
                                                 <ul class="nhsuk-resources__list">
                                                     <#list document.documentVersions as link>
-                                                        <@hst.link var="fileURL" hippobean=link>
-                                                            <@hst.param name="forceDownload" value="true"/>
-                                                        </@hst.link>
-
-                                                        <#assign docType>${docTypeByMimeType(link.mimeType)}</#assign>
-
-                                                        <li>
-                                                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.filename}  (opens in new window)">
-                                                                ${link.filename?keep_before_last(".")} - ${link.filename?keep_after_last(".")?upper_case} Version
-                                                                <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span><span class="nhsuk-resources__docSize">${link.lengthMB}MB</span>
-                                                            </a>
-                                                            <p>
-                                                                Published: ${link.properties['jcr:created'].getTime()?date?string["${datePattern}"]}
-                                                                </br>Updated: ${link.lastModified.getTime()?date?string["${datePattern}"]}
-                                                                </br>${document.readTime}
-                                                            </p>
-                                                        </li>
+                                                        <@docDetailBlockForDocLink docLink=link readTime=document.readTime />
                                                     </#list>
                                                 </ul>
                                             </#if>
                                         </div>
                                     </div>
 
-
-                                    <#if document.languageVersions?has_content>
+                                    <#--  Renders language documents  -->
+                                    <#if document.languageVersions?has_content && !(document.languageVersions?size == 1 && document.languageVersions[0].mimeType == 'application/vnd.hippo.blank')>
                                         <div class="nhsuk-card">
                                             <div class="nhsuk-card__content">
                                                 <h3 class="nhsuk-card__heading">Languages</h3>
 
                                                 <ul class="nhsuk-resources__list">
                                                     <#list document.languageVersions as link>
-                                                        <@hst.link var="fileURL" hippobean=link>
-                                                            <@hst.param name="forceDownload" value="true"/>
-                                                        </@hst.link>
-
-                                                        <#assign docType>${docTypeByMimeType(link.mimeType)}</#assign>
-
-                                                        <li>
-                                                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.filename}  (opens in new window)">
-                                                                ${link.filename?keep_before_last(".")} - ${link.filename?keep_after_last(".")?upper_case} Version
-                                                                <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span><span class="nhsuk-resources__docSize">${link.lengthMB}MB</span>
-                                                            </a>
-                                                            <p>
-                                                                Published: ${link.properties['jcr:created'].getTime()?date?string["${datePattern}"]}
-                                                                </br>Updated: ${link.lastModified.getTime()?date?string["${datePattern}"]}
-                                                                </br>${document.readTime}
-                                                            </p>
-                                                        </li>
+                                                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                                            <@docDetailBlockForDocLink docLink=link readTime=document.readTime />
+                                                        </#if>
                                                     </#list>
                                                 </ul>
                                             </div>
                                         </div>
-                                    </#if>
+                                     </#if>
+
                                 </div>
                             </section>
                         </div>
