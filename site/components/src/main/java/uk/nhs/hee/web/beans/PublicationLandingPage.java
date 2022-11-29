@@ -80,8 +80,8 @@ public class PublicationLandingPage extends BaseDocument {
         return getSingleProperty("hee:updatedDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:webPublication")
-    public List<HippoBean> getWebPublication() {
-        return getLinkedBeans("hee:webPublication", HippoBean.class);
+    @HippoEssentialsGenerated(internalName = "hee:webPublications")
+    public List<HippoBean> getWebPublications() {
+        return getLinkedBeans("hee:webPublications", HippoBean.class);
     }
 }

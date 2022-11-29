@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 06c2bc9e-dd00-4670-a558-44f127ff49d3
+          jcr:uuid: 3b10648c-0473-4d99-b433-7212398b5760
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -99,7 +99,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:webPublication
+            hipposysedit:path: hee:webPublications
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
@@ -132,7 +132,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: d684ad04-2361-4095-b68d-413f17172504
+          jcr:uuid: 39dd8f40-450a-45d8-8666-284946be7cf6
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -151,9 +151,6 @@ definitions:
           hee:readTime: ''
           hee:updatedDate: 0001-01-01T12:00:00Z
           /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:webPublication:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:languageVersions:
@@ -176,6 +173,9 @@ definitions:
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
             jcr:mixinTypes: ['mix:created']
+          /hee:webPublications:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -305,11 +305,11 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /webPublication:
+          /webPublications:
             jcr:primaryType: frontend:plugin
-            caption: Web publication
+            caption: Web publications
             field: webPublication
-            hint: Browse to a publication document
+            hint: Browse to a publication document(s)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:

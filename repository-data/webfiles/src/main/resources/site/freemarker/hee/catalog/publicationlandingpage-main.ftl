@@ -75,9 +75,9 @@
                                         <div class="nhsuk-card__content">
                                             <h3 class="nhsuk-card__heading">Documents</h3>
 
-                                            <#if document.webPublication?has_content>
+                                            <#if document.webPublications?has_content>
                                                 <ul class="nhsuk-resources__list">
-                                                    <#list document.webPublication as publication>
+                                                    <#list document.webPublications as publication>
                                                         <li>
                                                             <a class="nhsuk-resources__link" href="${getInternalLinkURL(publication)}">
                                                                 ${publication.title} - Web
