@@ -25,7 +25,7 @@
     <@hst.headContribution category="gtmDLScript">
         <script>
             window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push ({ "cookie_consent": "${analyticsCookie?string('true','false')}" });
+            window.dataLayer.push ({ "cookie_consent": "${cookie_consent?string('true','false')}" });
         </script>
     </@hst.headContribution>
     <@hst.headContribution category="gtmScript">

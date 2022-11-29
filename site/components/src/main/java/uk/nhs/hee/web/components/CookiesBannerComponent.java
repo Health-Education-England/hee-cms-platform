@@ -12,7 +12,7 @@ import javax.servlet.http.Cookie;
  * Component class for {@code cookies} abstract base component
  */
 public class CookiesBannerComponent extends CommonComponent {
-    private static final String ANALYTICS_COOKIE_NAME = "analyticsCookie";
+    private static final String ANALYTICS_COOKIE_NAME = "cookie_consent";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -31,7 +31,7 @@ public class CookiesBannerComponent extends CommonComponent {
             }
         }
 
-        request.setModel("analyticsCookie", cookieConsent);
+        request.setModel("cookie_consent", cookieConsent);
         request.setModel("showCookiesBanner", showCookiesBanner);
     }
 }

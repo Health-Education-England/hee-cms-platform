@@ -54,8 +54,8 @@
     <@hst.include ref="footer"/>
  
     <!-- Scripts -->
-    <script src="<@hst.link path='/static/js/nhsuk-4.1.0.min.js'/>" defer></script>
-    <script src="<@hst.link path='/static/js/hee.min.js'/>" defer></script>
+    <script src="<@hst.webfile path='/js/nhsuk-4.1.0.min.js'/>" defer></script>
+    <script src="<@hst.webfile path='/js/hee.min.js'/>" defer></script>
     <@hst.headContributions categoryIncludes="htmlBodyEnd, scripts" xhtml=true/>
   </body>
 </html>
