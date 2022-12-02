@@ -7,9 +7,7 @@
         <#assign link="">
         <#if ctaCard.ctaCardContentBlock??>
             <#if ctaCard.ctaCardContentBlock.ctaLink.document??>
-                <#assign link>
-                    <#assign link=getInternalLinkURL(ctaCard.ctaCardContentBlock.ctaLink.document)>
-                </#assign>
+                <#assign link=getInternalLinkURL(ctaCard.ctaCardContentBlock.ctaLink.document)>
             <#else>
                 <#assign link = "${ctaCard.ctaCardContentBlock.ctaLink.url}">
                 <#if ctaCard.ctaCardContentBlock.ctaLink.openLinkUrlNewWindow>
