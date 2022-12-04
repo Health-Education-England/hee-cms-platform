@@ -3,6 +3,7 @@ package uk.nhs.hee.web.components;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.component.HstRequest;
@@ -103,7 +104,7 @@ public class PublicationListingPageComponent extends ListingPageComponent {
      * @param request the {@link HstRequest} instance.
      */
     private void addPublicationFilterFacetsToModel(final HstRequest request) {
-        final HippoFacetNavigationBean facetNavigation = getPublicationFacetedNavigation();
+        final HippoFacetNavigationBean facetNavigation = getPublicationFacetedNavigation(request);
 
         if (facetNavigation == null) {
             return;
@@ -129,10 +130,22 @@ public class PublicationListingPageComponent extends ListingPageComponent {
      *
      * @return the channel-specific faceted navigation ({@link HippoFacetNavigationBean}) for publication.
      */
-    private HippoFacetNavigationBean getPublicationFacetedNavigation() {
+    private HippoFacetNavigationBean getPublicationFacetedNavigation(final HstRequest request) {
         return ContentBeanUtils.getFacetNavigationBean(
+                request.getRequestContext().getSiteContentBaseBean().getParentBean().getPath(), // Global
                 PUBLICATION_FACET_NAVIGATION_RELATIVE_PATH,
                 null);
+    }
+
+    /**
+     * Returns root documents ({@code /content/documents}) folder.
+     *
+     * @param path the document path.
+     * @return the root documents ({@code /content/documents}) folder.
+     */
+    @Override
+    public HippoBean doGetScopeBean(final String path) {
+        return super.doGetScopeBean(path).getParentBean();
     }
 
 }
