@@ -70,6 +70,13 @@ public class PhoneNumberValidator implements Validator<String> {
             return Optional.of(context.createViolation("phone-number-extension-input-suggestion"));
         }
 
+        // Validates if the given phone number has minimum 13 digits
+        // UK Access Code (+44) = 3 digits + 10 digits ( for uk phone numbers) = 13
+        if (value.length() >0  && value.length() < 13) {
+            LOGGER.debug("The phone number '{}' should contain minimum 13 digits ",value);
+            return Optional.of(context.createViolation("phone-number-minimum-digits-input-suggestion"));
+        }
+
         return Optional.empty();
     }
 
