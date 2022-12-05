@@ -1,8 +1,8 @@
 package uk.nhs.hee.web.beans;
 
-import org.hippoecm.hst.content.beans.Node;
-import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import org.hippoecm.hst.content.beans.Node;
+
 
 @HippoEssentialsGenerated(internalName = "hee:person")
 @Node(jcrType = "hee:person")
@@ -11,6 +11,11 @@ public class Person extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:name")
     public String getName() {
         return getSingleProperty("hee:name");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:departmentName")
+    public String getDepartmentName() {
+        return getSingleProperty("hee:departmentName");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:jobTitle")
@@ -61,11 +66,6 @@ public class Person extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:twitter")
     public String getTwitter() {
         return getSingleProperty("hee:twitter");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:department")
-    public HippoBean getDepartment() {
-        return getLinkedBean("hee:department", HippoBean.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:linkedIn")

@@ -35,8 +35,8 @@
             <h3 class="nhsuk-contact__job-title" aria-label="Job Title">${person.jobTitle}</h3>
         </#if>
 
-        <#if person.department??>
-            <h5 data-anchorlinksignore="true" aria-label="Department">${person.department.name}</h5>
+        <#if person.departmentName?has_content>
+            <h5 data-anchorlinksignore="true" aria-label="Department">${person.departmentName}</h5>
         </#if>
 
         <#if person.organisation?has_content>
