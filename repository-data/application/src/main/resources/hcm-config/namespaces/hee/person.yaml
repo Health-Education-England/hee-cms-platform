@@ -56,6 +56,7 @@ definitions:
             hipposysedit:path: hee:phoneNumber
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:phone-number-validator']
           /email:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
