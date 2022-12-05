@@ -1,6 +1,6 @@
 definitions:
   config:
-    /hippo:namespaces/hee/resourcecustomized:
+    /hippo:namespaces/hee/publicationResource:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
       jcr:uuid: c80f0349-7079-4185-b5ea-6458470f149e
@@ -11,7 +11,8 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel']
-          hipposysedit:uri: http://www.onehippo.org/jcr/hippo/nt/2.0
+          hipposysedit:supertype: ['hippo:resource', 'hippogallery:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /data:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: true
@@ -59,7 +60,7 @@ definitions:
           /upload:
             jcr:primaryType: frontend:plugin
             plugin.class: org.hippoecm.frontend.editor.plugins.resource.ResourceUploadPlugin
-            validator.id: service.gallery.document.validation
+            validator.id: service.publication.document.validation
             wicket.id: ${cluster.id}.field
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
@@ -69,7 +70,7 @@ definitions:
           hippo:filename: hippo:resource
           jcr:data:
             type: binary
-            resource: /namespaces/hee/resourcecustomized/prototypes/prototype/hippo-resource
+            resource: /namespaces/hee/publicationResource/prototypes/prototype/hippo-resource
           jcr:encoding: UTF-8
           jcr:lastModified: 2008-03-26T12:03:00+01:00
           jcr:mimeType: application/vnd.hippo.blank
