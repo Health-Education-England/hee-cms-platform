@@ -118,15 +118,15 @@ definitions:
             hipposysedit:ordered: false
             hipposysedit:path: hee:languageVersions
             hipposysedit:primary: false
-            hipposysedit:type: hippo:resourcecustomized
-          /resourcecustomized:
+            hipposysedit:type: hee:publicationResource
+          /documentVersions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
             hipposysedit:path: hee:documentVersions
             hipposysedit:primary: false
-            hipposysedit:type: hippo:resourcecustomized
+            hipposysedit:type: hee:publicationResource
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -318,7 +318,7 @@ definitions:
           /documentVersions:
             jcr:primaryType: frontend:plugin
             caption: Document Versions
-            field: resourcecustomized
+            field: documentVersions
             hint: "Browse to a file to associate with this publication.\r\n  \r\n\
               Limited to a max file size of 10Mb and the following doc types: \r\n\
               \r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
