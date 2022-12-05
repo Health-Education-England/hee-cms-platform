@@ -1,5 +1,6 @@
 <#ftl output_format="HTML">
 <#include "../../include/imports.ftl">
+<#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
 
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.blogpost,uk.nhs.hee.web.contact"/>

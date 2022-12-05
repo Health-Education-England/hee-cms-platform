@@ -1825,6 +1825,7 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
         hippostdpubwf:lastModificationDate: 2022-11-02T16:51:42.233Z
@@ -4172,70 +4173,6 @@
         /hee:linkDocument:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-    /health-education-england:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 626365ca-f839-4535-a1fe-258977e49e8c
-      hippo:name: Health Education England
-      hippo:versionHistory: 9cdc99b7-34f8-46d6-9e0c-3f2498843c02
-      /health-education-england[1]:
-        jcr:primaryType: hee:logo
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: fad3dc29-c134-419f-a7d0-0d8f5fa7003d
-        hee:linkTitle: Opens Health Education England website in a new window
-        hee:linkURL: ''
-        hee:logoType: hee
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-12-16T08:54:55.689Z
-        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:56.149Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 87b7ebfa-f0d1-47a7-ba91-8d7d16b78ee2
-        hippotranslation:locale: en
-        /hee:linkDocument:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
-      /health-education-england[2]:
-        jcr:primaryType: hee:logo
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-        jcr:uuid: f893b907-7e60-4706-944b-1b8e63508ef8
-        hee:linkTitle: Opens Health Education England website in a new window
-        hee:linkURL: ''
-        hee:logoType: hee
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-12-16T08:54:55.689Z
-        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:56.126Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 87b7ebfa-f0d1-47a7-ba91-8d7d16b78ee2
-        hippotranslation:locale: en
-        /hee:linkDocument:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
-      /health-education-england[3]:
-        jcr:primaryType: hee:logo
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 173959c3-6fed-4717-a4bf-a9104a8d50f0
-        hee:linkTitle: Opens Health Education England website in a new window
-        hee:linkURL: ''
-        hee:logoType: hee
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-12-16T08:54:55.689Z
-        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:56.126Z
-        hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-12-22T08:17:03.054Z
-        hippotranslation:id: 87b7ebfa-f0d1-47a7-ba91-8d7d16b78ee2
-        hippotranslation:locale: en
-        /hee:linkDocument:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
   /logogroups:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
@@ -4249,7 +4186,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 40556fdc-a879-446a-ba43-11556315c17a
       hippo:name: LKS four nations group
-      hippo:versionHistory: 93efbd6e-64e5-413d-9d01-9a032fa87fb8
+      hippo:versionHistory: 97789668-f3e5-44a7-8b06-f1cfbae76c90
       /lks-four-nations-group[1]:
         jcr:primaryType: hee:logoGroup
         jcr:mixinTypes: ['mix:referenceable']
@@ -4259,20 +4196,17 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
-        hippostdpubwf:lastModificationDate: 2021-12-17T15:37:39.814Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:54.269Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 290f8ca7-f5e5-402e-9f36-e6bd4e706409
         hippotranslation:locale: en
         /hee:logos[1]:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: 626365ca-f839-4535-a1fe-258977e49e8c
+          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
         /hee:logos[2]:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
-        /hee:logos[3]:
-          jcr:primaryType: hippo:mirror
           hippo:docbase: 9fe281de-70f4-4eed-86a0-fc54fbd00394
-        /hee:logos[4]:
+        /hee:logos[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
       /lks-four-nations-group[2]:
@@ -4284,20 +4218,17 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
-        hippostdpubwf:lastModificationDate: 2021-12-17T15:37:45.401Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:58.237Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 290f8ca7-f5e5-402e-9f36-e6bd4e706409
         hippotranslation:locale: en
         /hee:logos[1]:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: 626365ca-f839-4535-a1fe-258977e49e8c
+          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
         /hee:logos[2]:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
-        /hee:logos[3]:
-          jcr:primaryType: hippo:mirror
           hippo:docbase: 9fe281de-70f4-4eed-86a0-fc54fbd00394
-        /hee:logos[4]:
+        /hee:logos[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
       /lks-four-nations-group[3]:
@@ -4309,21 +4240,18 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
-        hippostdpubwf:lastModificationDate: 2021-12-17T15:37:45.401Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:58.237Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-12-17T15:38:06.431Z
+        hippostdpubwf:publicationDate: 2022-11-27T12:43:00.088Z
         hippotranslation:id: 290f8ca7-f5e5-402e-9f36-e6bd4e706409
         hippotranslation:locale: en
         /hee:logos[1]:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: 626365ca-f839-4535-a1fe-258977e49e8c
+          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
         /hee:logos[2]:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
-        /hee:logos[3]:
-          jcr:primaryType: hippo:mirror
           hippo:docbase: 9fe281de-70f4-4eed-86a0-fc54fbd00394
-        /hee:logos[4]:
+        /hee:logos[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
     /lks-wales-only-group:
@@ -4331,7 +4259,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
       hippo:name: LKS wales only group
-      hippo:versionHistory: 734882f6-ccc3-4278-b3ce-8ff8f6ddf7a1
+      hippo:versionHistory: 9c57a2e8-9b9b-4690-bda9-fbca5820f93c
       /lks-wales-only-group[1]:
         jcr:primaryType: hee:logoGroup
         jcr:mixinTypes: ['mix:versionable']
@@ -4341,14 +4269,11 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
-        hippostdpubwf:lastModificationDate: 2021-12-17T15:36:24.890Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:49.626Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 031cfed0-2413-4e0f-8151-91c35314cec6
         hippotranslation:locale: en
-        /hee:logos[1]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 626365ca-f839-4535-a1fe-258977e49e8c
-        /hee:logos[2]:
+        /hee:logos:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
       /lks-wales-only-group[2]:
@@ -4358,17 +4283,13 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
-        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
-        hippostdpubwf:lastModificationDate: 2021-12-17T15:36:54.095Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:44.829Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 031cfed0-2413-4e0f-8151-91c35314cec6
         hippotranslation:locale: en
-        /hee:logos[1]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 626365ca-f839-4535-a1fe-258977e49e8c
-        /hee:logos[2]:
+        /hee:logos:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
       /lks-wales-only-group[3]:
@@ -4380,15 +4301,12 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
-        hippostdpubwf:lastModificationDate: 2021-12-17T15:36:24.890Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:49.626Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-12-17T15:38:06.355Z
+        hippostdpubwf:publicationDate: 2022-11-27T12:42:51.756Z
         hippotranslation:id: 031cfed0-2413-4e0f-8151-91c35314cec6
         hippotranslation:locale: en
-        /hee:logos[1]:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 626365ca-f839-4535-a1fe-258977e49e8c
-        /hee:logos[2]:
+        /hee:logos:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
   /internal-links-cards:
