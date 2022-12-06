@@ -16,12 +16,15 @@ definitions:
         \n   boolean doUpdate(Node node) {\r\n     \r\n      if (!node.hasProperty(\"\
         hee:twitter\")) node.setProperty(\"hee:twitter\", '')                    \r\
         \n      log.debug \"${node.getPath()} | ${node.getProperty(\"hee:twitter\"\
-        ).getString()} - Before }\"        \r\n      String twitter = node.getProperty(\"\
-        hee:linkUrl\").getString()\r\n      twitter= twitter.substring(twitter.lastIndexOf(\"\
-        /\")+1, twitter.length());\r\n      node.setProperty(\"hee:twitter\", twitter)\
-        \                \r\n      log.debug \"${node.getPath()} | ${node.getProperty(\"\
-        hee:twitter\").getString()} - After }\"      \r\n      return true \r\n  }\r\
-        \n\r\n  boolean undoUpdate(Node node) {\r\n    throw new UnsupportedOperationException('Updater\
-        \ does not implement undoUpdate method')\r\n  }\r\n\r\n}"
+        ).getString()} - Before }\" \r\n      log.debug \"${node.getPath()} | ${node.getProperty(\"\
+        hee:linkUrl\").getString()} - linkUrl }\" \r\n      String twitter = node.getProperty(\"\
+        hee:linkUrl\").getString()\r\n      if (twitter.contains(\"https://twitter.com/\"\
+        ))\r\n        twitter= twitter.replace(\"https://twitter.com/\",\"\")\r\n\
+        \      else\r\n        twitter=\"\"\r\n      node.setProperty(\"hee:twitter\"\
+        , twitter)                \r\n      log.debug \"${node.getPath()} | ${node.getProperty(\"\
+        hee:twitter\").getString()} - After }\"      \r\n      if (twitter != \"\"\
+        \ ) return true  else return false\r\n\r\n  }\r\n\r\n  boolean undoUpdate(Node\
+        \ node) {\r\n    throw new UnsupportedOperationException('Updater does not\
+        \ implement undoUpdate method')\r\n  }\r\n\r\n}"
       hipposys:throttle: 1000
       hipposys:query: //element(*,hee:person)[@hee:linkUrl!=""]
