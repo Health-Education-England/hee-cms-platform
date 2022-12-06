@@ -1,0 +1,16 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:queries/hippo:templates/new-publication-landingpage-folder:
+      jcr:primaryType: hippostd:templatequery
+      hippostd:modify: [./_name, $name, './hippotranslation:id', $uuid, './hippotranslation:locale',
+        $inherited]
+      jcr:language: xpath
+      jcr:statement: /jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-publication-landingpage-folder/hippostd:templates/node()
+      /hippostd:templates:
+        jcr:primaryType: hippostd:templates
+        /hippostd:folder:
+          jcr:primaryType: hippostd:folder
+          jcr:mixinTypes: ['hippotranslation:translated']
+          hippostd:foldertype: [new-publication-landingpage-folder]
+          hippotranslation:id: 3574b1d6-3c0e-4f2c-91b0-301b0e81550d
+          hippotranslation:locale: inherited locale

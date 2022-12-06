@@ -128,6 +128,9 @@ definitions:
           /report-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/report-main.ftl
+          /publicationlandingpage-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/publicationlandingpage-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -214,6 +217,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: Publication
               hst:template: report-main
+            /publication-landing-page:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.PublicationLandingPageComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Publication Landing Page
+              hst:template: publicationlandingpage-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
