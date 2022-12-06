@@ -1,0 +1,27 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateTwitterwithLinkUrl:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: This is to update Twitter property with deprecated LinkUrl
+        value in person content type
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport\
+        \ javax.jcr.Node\r\nimport javax.jcr.RepositoryException\r\nimport javax.jcr.Session\r\
+        \n\r\nclass UpdateTwitterwithLinkUrl extends BaseNodeUpdateVisitor {\r\n\r\
+        \n   boolean doUpdate(Node node) {\r\n     \r\n      if (!node.hasProperty(\"\
+        hee:twitter\")) node.setProperty(\"hee:twitter\", '')                    \r\
+        \n      log.debug \"${node.getPath()} | ${node.getProperty(\"hee:twitter\"\
+        ).getString()} - Before }\"        \r\n      String twitter = node.getProperty(\"\
+        hee:linkUrl\").getString()\r\n      twitter= twitter.substring(twitter.lastIndexOf(\"\
+        /\")+1, twitter.length());\r\n      node.setProperty(\"hee:twitter\", twitter)\
+        \                \r\n      log.debug \"${node.getPath()} | ${node.getProperty(\"\
+        hee:twitter\").getString()} - After }\"      \r\n      return true \r\n  }\r\
+        \n\r\n  boolean undoUpdate(Node node) {\r\n    throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n  }\r\n\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: //element(*,hee:person)[@hee:linkUrl!=""]
