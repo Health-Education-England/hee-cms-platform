@@ -16,6 +16,7 @@ public interface MultiOrgLogoComponentInfo extends EssentialsDocumentComponentIn
                     "hee:landingPage",
                     "hee:listingPage",
                     "hee:publicationLandingPage",
+                    "hee:publicationListingPage",
                     "hee:news",
                     "hee:MiniHub",
                     "hee:report"
