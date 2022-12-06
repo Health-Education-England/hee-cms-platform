@@ -63,6 +63,10 @@ public class Person extends BaseDocument {
         return getSingleProperty("hee:website");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:bio")
+    public String getBio() {
+        return getSingleProperty("hee:bio");
+    }
     @HippoEssentialsGenerated(internalName = "hee:twitter")
     public String getTwitter() {
         return getSingleProperty("hee:twitter");

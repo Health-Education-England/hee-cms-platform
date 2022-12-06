@@ -103,7 +103,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:pronouns
+            hipposysedit:path: hee:bio
             hipposysedit:primary: false
             hipposysedit:type: String
           /twitter:
@@ -161,6 +161,7 @@ definitions:
           jcr:uuid: 1c9bd495-9d64-40fd-96a8-953098ddad02
           hippostdpubwf:lastModificationDate: 2021-05-13T16:45:32.265+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:45:32.266+07:00
+          hee:bio: ''
           hee:organisation: ''
           hee:website: ''
           hee:pronouns: ''
@@ -311,3 +312,13 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /bio:
+            jcr:primaryType: frontend:plugin
+            caption: Bio
+            field: bio
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: ''

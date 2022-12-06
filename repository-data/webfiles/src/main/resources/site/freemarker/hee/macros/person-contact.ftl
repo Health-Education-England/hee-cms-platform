@@ -84,6 +84,10 @@
                     <a href="https://www.linkedin.com/in/${person.linkedIn}">${person.linkedIn}</a>
                 </p>
             </#if>
+
+            <#if person.bio?has_content>
+                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${person.bio}</p>
+            </#if>
         </div>
     </div>
 </#macro>
