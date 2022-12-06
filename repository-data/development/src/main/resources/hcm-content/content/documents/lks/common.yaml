@@ -1799,7 +1799,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
       hippo:name: James Smith
-      hippo:versionHistory: 0d8ba0c9-12dd-43d5-9078-f68708a359a1
+      hippo:versionHistory: 5941f13c-d0d8-464f-8534-f74af63b7a13
       /james-smith[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1811,23 +1811,24 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui
-        hee:departmentName: Developement
         hee:email: name.surname@mail.com
         hee:jobTitle: Developer
         hee:linkUrl: http://mypage
+        hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
+        hee:phoneExtension: ''
         hee:phoneNumber: +44 733 910 013
-        hee:pronouns: he-him
-        hee:title: dr
-        hee:website: ''
+        hee:pronouns: he/him
+        hee:title: Mr
+        hee:twitter: ''
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-12-02T14:32:37.763Z
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:51:42.233Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
@@ -1837,6 +1838,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /james-smith[2]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -1848,22 +1852,23 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui
-        hee:departmentName: Developement
         hee:email: name.surname@mail.com
         hee:jobTitle: Developer
         hee:linkUrl: http://mypage
+        hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
+        hee:phoneExtension: ''
         hee:phoneNumber: +44 733 910 013
-        hee:pronouns: he-him
-        hee:title: dr
-        hee:website: ''
+        hee:pronouns: he/him
+        hee:title: Mr
+        hee:twitter: ''
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T11:10:36.515Z
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:51:54.364Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
@@ -1873,6 +1878,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /james-smith[3]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1884,24 +1892,25 @@
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui
-        hee:departmentName: Developement
         hee:email: name.surname@mail.com
         hee:jobTitle: Developer
         hee:linkUrl: http://mypage
+        hee:linkedIn: ''
         hee:name: James Smith
         hee:organisation: ''
+        hee:phoneExtension: ''
         hee:phoneNumber: +44 733 910 013
-        hee:pronouns: he-him
-        hee:title: dr
-        hee:website: ''
+        hee:pronouns: he/him
+        hee:title: Mr
+        hee:twitter: ''
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T16:59:45.575+07:00
-        hippostdpubwf:lastModificationDate: 2022-02-28T11:10:36.515Z
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:51:54.364Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-02-28T11:10:41.200Z
+        hippostdpubwf:publicationDate: 2022-11-02T16:51:56.198Z
         hippotranslation:id: 423fafcb-edd2-415a-b464-ba34af1fe3f1
         hippotranslation:locale: en
         /hee:image:
@@ -1910,12 +1919,15 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
     /john-doe:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
       hippo:name: John Doe
-      hippo:versionHistory: 830e8674-e6ff-4421-a2b3-e84dfedc05ee
+      hippo:versionHistory: 9379ef5c-4bee-4fb9-8599-5f67a5c19657
       /john-doe[1]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1925,22 +1937,25 @@
           pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar
           ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam
           risus risus consectetur.
-        hee:departmentName: Dental
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
+        hee:linkedIn: john-doe
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
+        hee:phoneExtension: '1234'
         hee:phoneNumber: +44 1234 567890
-        hee:pronouns: they-them
-        hee:title: mr
+        hee:pronouns: he/him
+        hee:title: Prof
+        hee:twitter: NHS_HealthEdEng
         hee:website: http://hee.dental
         hippo:availability: []
+        hippostd:holder: admin
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-31T22:15:23.409Z
+        hippostdpubwf:lastModificationDate: 2022-12-05T22:09:26.546Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -1950,6 +1965,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /john-doe[2]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -1959,22 +1977,24 @@
           pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar
           ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam
           risus risus consectetur.
-        hee:departmentName: Dental
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
+        hee:linkedIn: john-doe
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
+        hee:phoneExtension: '1234'
         hee:phoneNumber: +44 1234 567890
-        hee:pronouns: they-them
-        hee:title: mr
+        hee:pronouns: he/him
+        hee:title: Prof
+        hee:twitter: NHS_HealthEdEng
         hee:website: http://hee.dental
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-31T22:15:21.256Z
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:04:24.659Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
@@ -1984,6 +2004,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       /john-doe[3]:
         jcr:primaryType: hee:person
         jcr:mixinTypes: ['mix:referenceable']
@@ -1993,24 +2016,26 @@
           pellentesque in sapien. Amet in ante libero a lobortis. Blandit sed pulvinar
           ultrices gravida vulputate at. Ipsum dolor condimentum habitasse aliquam
           risus risus consectetur.
-        hee:departmentName: Dental
         hee:email: john.doe@hee.co.uk
         hee:jobTitle: Head of Department
         hee:linkUrl: http://mypage
+        hee:linkedIn: john-doe
         hee:name: John Doe
         hee:organisation: HEE Dental Organisation
+        hee:phoneExtension: '1234'
         hee:phoneNumber: +44 1234 567890
-        hee:pronouns: they-them
-        hee:title: mr
+        hee:pronouns: he/him
+        hee:title: Prof
+        hee:twitter: NHS_HealthEdEng
         hee:website: http://hee.dental
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-20T20:20:28.038+01:00
-        hippostdpubwf:lastModificationDate: 2022-10-31T22:15:21.256Z
+        hippostdpubwf:lastModificationDate: 2022-11-02T16:04:24.659Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-10-31T22:16:21.732Z
+        hippostdpubwf:publicationDate: 2022-11-02T16:04:26.251Z
         hippotranslation:id: a994448f-582f-4073-913b-a3372cd5740b
         hippotranslation:locale: en
         /hee:image:
@@ -2019,6 +2044,9 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+        /hee:department:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
   /departments:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
@@ -2032,7 +2060,7 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
       hippo:name: Development
-      hippo:versionHistory: bf053166-2f3c-450b-9e2b-7091f5abb87e
+      hippo:versionHistory: affc49b7-59f3-416c-b643-a04be5667717
       /development[1]:
         jcr:primaryType: hee:department
         jcr:mixinTypes: ['mix:referenceable']
@@ -2043,15 +2071,14 @@
         hee:email: development@gmail.com
         hee:name: Development
         hee:organisation: HEE Development Organisation
-        hee:phoneExtension: '1234'
-        hee:phoneNumber: +44 78533 541
-        hee:website: http://google.com
+        hee:phoneNumber: +44 7575 731 776
+        hee:website: http://hee.development.org
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
-        hippostdpubwf:lastModificationDate: 2022-12-04T21:16:56.346Z
+        hippostdpubwf:lastModificationDate: 2022-10-24T19:36:57.774+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
         hippotranslation:locale: en
@@ -2065,15 +2092,14 @@
         hee:email: development@gmail.com
         hee:name: Development
         hee:organisation: HEE Development Organisation
-        hee:phoneExtension: '1234'
-        hee:phoneNumber: +44 78533 541
-        hee:website: http://google.com
+        hee:phoneNumber: +44 7575 731 776
+        hee:website: http://hee.development.org
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
-        hippostdpubwf:lastModificationDate: 2022-12-04T21:17:00.929Z
+        hippostdpubwf:lastModificationDate: 2022-10-24T19:37:03.058+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
         hippotranslation:locale: en
@@ -2087,17 +2113,16 @@
         hee:email: development@gmail.com
         hee:name: Development
         hee:organisation: HEE Development Organisation
-        hee:phoneExtension: '1234'
-        hee:phoneNumber: +44 78533 541
-        hee:website: http://google.com
+        hee:phoneNumber: +44 7575 731 776
+        hee:website: http://hee.development.org
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-05-13T17:02:14.997+07:00
-        hippostdpubwf:lastModificationDate: 2022-12-04T21:17:00.929Z
+        hippostdpubwf:lastModificationDate: 2022-10-24T19:37:03.058+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-12-04T21:17:03.945Z
+        hippostdpubwf:publicationDate: 2022-10-24T19:37:04.961+01:00
         hippotranslation:id: dd2936bb-ffea-47b4-ad39-4623cf91b2e1
         hippotranslation:locale: en
   /contact-cards:

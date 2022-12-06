@@ -1,6 +1,6 @@
 <#include "../../include/imports.ftl">
 
-<#macro personContact person personTitlesMap personPronounsMap isAuthor=false>
+<#macro personContact person isAuthor=false>
     <div class="nhsuk-contact__content">
 
         <#-- Get Person Initials -->
@@ -21,14 +21,14 @@
         </div>
 
         <#if person.title?has_content>
-            <#assign nameWithTitle> ${personTitlesMap[person.title]} ${person.name} </#assign>
+            <#assign nameWithTitle> ${person.title} ${person.name} </#assign>
         <#else>
             <#assign nameWithTitle> ${person.name} </#assign>
         </#if>
         <h2 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${nameWithTitle}</h2>
 
         <#if person.pronouns?has_content>
-            <p class="nhsuk-contact__pronoun">${personPronounsMap[person.pronouns]}</p>
+            <p class="nhsuk-contact__pronoun">${person.pronouns}</p>
         </#if>
 
         <#if person.jobTitle?has_content>
@@ -50,7 +50,8 @@
         <div class="nhsuk-contact__secondary-info">
             <#if person.phoneNumber?has_content>
                 <p aria-label="Telephone">
-                    <a href="tel:${person.phoneNumber}" title="Opens call">${person.phoneNumber}</a>
+                    <a href="tel:${person.phoneNumber?replace(' ', '')}" title="Opens call">${person.phoneNumber}</a>
+                    ${person.phoneExtension?has_content?then('(Ext: ' + person.phoneExtension + ')', '')}
                 </p>
             </#if>
 
@@ -72,16 +73,20 @@
                 <p aria-label="Address">${person.address?replace('\n', '<br>')}</p>
             </#if>
 
-            <#if person.bio?has_content>
-                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${person.bio}</p>
+            <#if person.twitter?has_content>
+                <p aria-label="Twitter">
+                    <a href="https://twitter.com/${person.twitter}">${person.twitter}</a>
+                </p>
             </#if>
 
-            <#if isAuthor>
-                <#if person.linkUrl?has_content>
-                    <p>
-                        <a href="${person.linkUrl}"> <@fmt.message key="authorPageURL.text"/> ${nameWithTitle}</a>
-                    </p>
-                </#if>
+            <#if person.linkedIn?has_content>
+                <p aria-label="Linkedin">
+                    <a href="https://www.linkedin.com/in/${person.linkedIn}">${person.linkedIn}</a>
+                </p>
+            </#if>
+
+            <#if person.bio?has_content>
+                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${person.bio}</p>
             </#if>
         </div>
     </div>
