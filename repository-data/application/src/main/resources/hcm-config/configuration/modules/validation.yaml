@@ -12,6 +12,13 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:phone-number-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.PhoneNumberValidator
-    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:website-url-validator:
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:optional-url-validator:
       jcr:primaryType: hipposys:moduleconfig
-      hipposys:className: uk.nhs.hee.web.validation.validator.WebsiteUrlValidator
+      hipposys:className: uk.nhs.hee.web.validation.validator.OptionalUrlValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-contact-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryContactValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:optional-email-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.OptionalEmailValidator
+      regexp.pattern: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$

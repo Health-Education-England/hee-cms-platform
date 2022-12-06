@@ -15,6 +15,7 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-contact-validator']
           /name:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -41,7 +42,7 @@ definitions:
             hipposysedit:path: hee:email
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required, email]
+            hipposysedit:validators: ['hee:optional-email-validator']
           /address:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -66,7 +67,7 @@ definitions:
             hipposysedit:path: hee:website
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: ['hee:website-url-validator']
+            hipposysedit:validators: ['hee:optional-url-validator']
           /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
