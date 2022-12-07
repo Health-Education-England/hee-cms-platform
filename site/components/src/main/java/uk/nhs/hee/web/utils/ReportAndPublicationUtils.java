@@ -25,7 +25,7 @@ public class ReportAndPublicationUtils {
         try {
             HstQuery query = ContentBeanUtils.createIncomingBeansQuery(reportBean,
                     requestContext.getSiteContentBaseBean(),
-                    "hee:webPublication/@hippo:docbase",
+                    "hee:webPublications/@hippo:docbase",
                     PublicationLandingPage.class,
                     false);
             HstQueryResult result = query.execute();

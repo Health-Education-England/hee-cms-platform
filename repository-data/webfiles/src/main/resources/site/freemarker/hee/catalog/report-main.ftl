@@ -4,8 +4,28 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/internal-link.ftl">
 <#include '../macros/file-links-card.ftl'>
-
+<#include 'publicationlandingpage-main.ftl'>
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
+
+<#macro docDetailBlockForDocLink docLink>
+    <@hst.link var="fileURL" hippobean=docLink>
+        <@hst.param name="forceDownload" value="true"/>
+    </@hst.link>
+    <#assign docType>${docLink.filename?keep_after_last(".")}</#assign>
+    <li>
+        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}  (opens in new window)">
+            ${docLink.filename?keep_before_last(".")} - <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${getDocumentFormat(docLink.filename?keep_after_last("."))}</span>
+        </a>
+        <#setting number_format="0.##">
+        <span class="nhsuk-resources__docSize">
+            <#if docLink.lengthMB < 0.3>
+                ${docLink.lengthKB}KB
+            <#else>
+                ${docLink.lengthMB}MB
+            </#if>
+        </span>
+    </li>
+</#macro>
 
 <#assign datePattern = "d MMMM yyyy">
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Report" -->
@@ -85,54 +105,38 @@
                                 <div class="nhsuk-card__content">
                                     <h3 class="nhsuk-heading-m">Publication Info</h3>
                                     <div class="heeuk-link-inactive-state-s">
-                                        Published: ${document.publicationDate.getTime()?date?string["${datePattern}"]}
+                                        <strong>Published: </strong> ${document.publicationDate.getTime()?date?string["${datePattern}"]}
                                     </div>
 
-                                    <div class="heeuk-link-inactive-state-s">Updated: ${document.properties['hippostdpubwf:lastModificationDate'].getTime()?date?string["${datePattern}"]}</div>
+                                    <div class="heeuk-link-inactive-state-s"><strong>Updated: </strong> ${document.properties['hippostdpubwf:lastModificationDate'].getTime()?date?string["${datePattern}"]}</div>
                                     <#if landingPage??>
-                                        <div class="heeuk-link-inactive-state-s">${landingPage.publicationType}</div>
-                                        <#if landingPage.publicationProfessions?has_content>
-                                            <div class="heeuk-link-inactive-state-s">
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Topics: </strong>
+                                            ${landingPage.publicationType}
+                                            <#if landingPage.publicationProfessions?has_content>
                                                 <#list landingPage.publicationProfessions as profession>
-                                                    <#if (profession?index > 0)>&nbsp;-&nbsp;</#if>
-                                                    ${profession}
+                                                    - ${profession}
                                                 </#list>
-                                            </div>
-                                        </#if>
-                                        <#if landingPage.publicationTopics?has_content>
-                                            <div class="heeuk-link-inactive-state-s">
+                                            </#if>
+                                            <#if landingPage.publicationTopics?has_content>
                                                 <#list landingPage.publicationTopics as topic>
-                                                    <#if (topic?index > 0)>&nbsp;-&nbsp;</#if>
-                                                    ${topic}
+                                                    - ${topic}
                                                 </#list>
+                                            </#if>
                                             </div>
-                                        </#if>
+                                        <strong>Estimated reading time:</strong> ${landingPage.readTime} min
                                     </#if>
                                 </div>
                             </div>
                             <#if landingPage?? && landingPage.documentVersions?has_content>
                                 <div class="nhsuk-card">
                                     <div class="nhsuk-card__content">
-
+                                        <h3 class="nhsuk-heading-m">Alternative versions</h3>
                                         <ul class="nhsuk-resources__list">
                                     <#list landingPage.documentVersions as link>
-                                        <@hst.link var="fileURL" hippobean=link>
-                                            <@hst.param name="forceDownload" value="true"/>
-                                        </@hst.link>
-
-                                        <#assign docType>${docTypeByMimeType(link.mimeType)}</#assign>
-
-                                        <li>
-                                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.filename}  (opens in new window)">
-                                                ${link.filename?keep_before_last(".")} - ${link.filename?keep_after_last(".")?upper_case} Version
-                                                <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span><span class="nhsuk-resources__docSize">${link.lengthMB}MB</span>
-                                            </a>
-                                            <p>
-                                                Published: ${link.properties['jcr:created'].getTime()?date?string["${datePattern}"]}
-                                                <br/>Updated: ${link.lastModified.getTime()?date?string["${datePattern}"]}
-                                                <br/>${landingPage.readTime}
-                                            </p>
-                                        </li>
+                                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                            <@docDetailBlockForDocLink docLink=link/>
+                                        </#if>
                                     </#list>
                                 </ul>
                                     </div>
@@ -142,26 +146,12 @@
                             <#if landingPage?? && landingPage.languageVersions?has_content>
                                 <div class="nhsuk-card">
                                     <div class="nhsuk-card__content">
-
+                                        <h3 class="nhsuk-heading-m">Languages</h3>
                                         <ul class="nhsuk-resources__list">
                                     <#list landingPage.languageVersions as link>
-                                        <@hst.link var="fileURL" hippobean=link>
-                                            <@hst.param name="forceDownload" value="true"/>
-                                        </@hst.link>
-
-                                        <#assign docType>${docTypeByMimeType(link.mimeType)}</#assign>
-
-                                        <li>
-                                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.filename}  (opens in new window)">
-                                                ${link.filename?keep_before_last(".")} - ${link.filename?keep_after_last(".")?upper_case} Version
-                                                <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span><span class="nhsuk-resources__docSize">${link.lengthMB}MB</span>
-                                            </a>
-                                            <p>
-                                                Published: ${link.properties['jcr:created'].getTime()?date?string["${datePattern}"]}
-                                                <br/>Updated: ${link.lastModified.getTime()?date?string["${datePattern}"]}
-                                                <br/>${landingPage.readTime}
-                                            </p>
-                                        </li>
+                                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                            <@docDetailBlockForDocLink docLink=link/>
+                                        </#if>
                                     </#list>
                                 </ul>
                                     </div>
