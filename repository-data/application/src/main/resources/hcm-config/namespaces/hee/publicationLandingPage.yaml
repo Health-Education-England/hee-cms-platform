@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a556273a-a431-478c-b7cf-0c0250e2af85
+          jcr:uuid: 3b10648c-0473-4d99-b433-7212398b5760
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -99,7 +99,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:webPublication
+            hipposysedit:path: hee:webPublications
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
@@ -118,21 +118,21 @@ definitions:
             hipposysedit:ordered: false
             hipposysedit:path: hee:languageVersions
             hipposysedit:primary: false
-            hipposysedit:type: hippo:resourcecustomized
-          /resourcecustomized:
+            hipposysedit:type: hee:publicationResource
+          /documentVersions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
             hipposysedit:path: hee:documentVersions
             hipposysedit:primary: false
-            hipposysedit:type: hippo:resourcecustomized
+            hipposysedit:type: hee:publicationResource
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 37fe3c4c-a7be-48d4-bcc1-af586f1eb79b
+          jcr:uuid: 39dd8f40-450a-45d8-8666-284946be7cf6
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -151,9 +151,6 @@ definitions:
           hee:readTime: ''
           hee:updatedDate: 0001-01-01T12:00:00Z
           /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:webPublication:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:languageVersions:
@@ -176,6 +173,9 @@ definitions:
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
             jcr:mixinTypes: ['mix:created']
+          /hee:webPublications:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -217,6 +217,17 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /publicationType:
+            jcr:primaryType: frontend:plugin
+            caption: Publication type
+            field: publicationType
+            hint: Select the publication type
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              source: /content/documents/administration/valuelists/publicationtypes
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -237,20 +248,9 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /publicationType:
-            jcr:primaryType: frontend:plugin
-            caption: Publication type
-            field: publicationType
-            hint: Select the publication type
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              source: /content/documents/administration/valuelists/publicationtypes
           /publicationTopics:
             jcr:primaryType: frontend:plugin
-            caption: Publication topics
+            caption: Topics
             field: publicationTopics
             multiselect.type: palette
             palette.alloworder: false
@@ -259,12 +259,13 @@ definitions:
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.left.item
+            hint: Select relevant topics
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtopics
           /publicationProfessions:
             jcr:primaryType: frontend:plugin
-            caption: Publication professions
+            caption: Professions
             field: publicationProfessions
             multiselect.type: palette
             palette.alloworder: false
@@ -273,6 +274,7 @@ definitions:
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.left.item
+            hint: Select professions relevant to this publication
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationprofessions
@@ -303,34 +305,34 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /webPublication:
+          /webPublications:
             jcr:primaryType: frontend:plugin
-            caption: Web Publication
+            caption: Web publications
             field: webPublication
-            hint: Browse to a publication document
+            hint: Browse to a publication document(s)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:report']
-          /languageVersions:
+          /documentVersions:
             jcr:primaryType: frontend:plugin
-            caption: Alternate Language Versions
-            field: alternateVersions
-            hint: "Browse to a alternate language version of this publication.\r\n\
-              \r\nLimited to max file size of 15Mb and the following doc types: \r\
-              \n\r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
+            caption: Document Versions
+            field: documentVersions
+            hint: "Browse to a file to associate with this publication.\r\n  \r\n\
+              Limited to a max file size of 10Mb and the following doc types: \r\n\
+              \r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /documentVersions:
+          /languageVersions:
             jcr:primaryType: frontend:plugin
-            caption: Document Versions
-            field: resourcecustomized
-            hint: "Browse to a file to associate with this publication.  \r\nLimited\
-              \ to max file size of 15Mb and the following doc types: \r\n\r\n.doc,\
-              \ .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
+            caption: Alternate language versions
+            field: alternateVersions
+            hint: "Browse to an alternate language version of this publication.\r\n\
+              \r\nLimited to a max file size of 10Mb and the following doc types:\
+              \ \r\n\r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
