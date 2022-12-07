@@ -14,8 +14,8 @@ definitions:
         \ {\r\n    // Person 'hee:pronouns' property\r\n    private static final PROPERTY_PERSON_PRONOUNS\
         \ = \"hee:pronouns\";\r\n\r\n    boolean doUpdate(Node node) {\r\n       \
         \ log.debug \"Updating node ${node.path}\"\r\n\r\n        def personPronounsMap\
-        \ = [\r\n                \"she-her\": \"She/Her\",\r\n                \"he-him\"\
-        : \"He/Him\",\r\n                \"they-them\": \"They/Them\"\r\n        ]\r\
+        \ = [\r\n                \"she-her\": \"she/her\",\r\n                \"he-him\"\
+        : \"he/him\",\r\n                \"they-them\": \"they/them\"\r\n        ]\r\
         \n\r\n        String personPronouns = node.getProperty(PROPERTY_PERSON_PRONOUNS).getString()\r\
         \n        if (personPronounsMap.containsKey(personPronouns)) {\r\n       \
         \     node.setProperty(PROPERTY_PERSON_PRONOUNS, personPronounsMap[personPronouns])\r\

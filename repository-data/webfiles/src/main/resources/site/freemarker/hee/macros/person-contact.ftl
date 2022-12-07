@@ -69,20 +69,20 @@
                 </p>
             </#if>
 
-            <#if person.address?has_content>
-                <p aria-label="Address">${person.address?replace('\n', '<br>')}</p>
-            </#if>
-
             <#if person.twitter?has_content>
                 <p aria-label="Twitter">
-                    <a href="https://twitter.com/${person.twitter}">${person.twitter}</a>
+                    <a href="https://twitter.com/${person.twitter}">Twitter</a>
                 </p>
             </#if>
 
             <#if person.linkedIn?has_content>
                 <p aria-label="Linkedin">
-                    <a href="https://www.linkedin.com/in/${person.linkedIn}">${person.linkedIn}</a>
+                    <a href="https://www.linkedin.com/in/${person.linkedIn}">LinkedIn</a>
                 </p>
+            </#if>
+
+            <#if person.address?has_content>
+                <p aria-label="Address">${person.address?replace('\n', '<br>')}</p>
             </#if>
 
             <#if person.bio?has_content>
