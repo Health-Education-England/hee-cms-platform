@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: cc7336da-5cf3-4c89-93c9-920732d1a019
+          jcr:uuid: 0389d84f-898a-47ca-832f-fbbc4442497a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -57,6 +57,7 @@ definitions:
             hipposysedit:path: hee:subtitle
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [optional]
           /publicationDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -66,39 +67,21 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
             hipposysedit:validators: [required]
-          /publicationType:
+          /logoGroup:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationType
+            hipposysedit:path: hee:logoGroup
             hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [required]
-          /publicationTopics:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationTopics
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /publicationProfessions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationProfessions
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 06b0bf83-0141-4585-84f8-184ff27a96be
+          jcr:uuid: 71fab618-5d97-43f8-bd6c-0b97212c707e
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -111,9 +94,6 @@ definitions:
           hippotranslation:locale: document-type-locale
           hee:subtitle: ''
           hee:publicationDate: 0001-01-01T12:00:00Z
-          hee:publicationType: ''
-          hee:publicationTopics: []
-          hee:publicationProfessions: []
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
@@ -125,6 +105,9 @@ definitions:
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -152,7 +135,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page title
             field: title
-            hint: Page title must be 60 characters or fewer.
+            hint: Enter the publication title (60 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -163,63 +146,44 @@ definitions:
             field: subtitle
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: ''
+            hint: Enter the publication subtitle
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
             field: summary
-            hint: ''
+            hint: Summarise your publication (300 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '300'
-          /publicationType:
+          /logoGroup:
             jcr:primaryType: frontend:plugin
-            caption: Publication type
-            field: publicationType
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtypes
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-          /publicationTopics:
-            jcr:primaryType: frontend:plugin
-            caption: Publication topics
-            field: publicationTopics
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: Logo Group
+            field: logoGroup
+            hint: Browse for the logos to override the default header
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtopics
-          /publicationProfessions:
-            jcr:primaryType: frontend:plugin
-            caption: Publication professions
-            field: publicationProfessions
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationprofessions
+              nodetypes: ['hee:logoGroup']
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date
             field: publicationDate
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Enter the date of publication
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /pageLastNextReview:
+            jcr:primaryType: frontend:plugin
+            caption: Page review dates
+            field: pageLastNextReview
+            hint: Please enter the last date and review date
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
@@ -229,18 +193,9 @@ definitions:
             compoundList: hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
-            hint: ''
+            hint: Please enter your content
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /pageLastNextReview:
-            jcr:primaryType: frontend:plugin
-            caption: Page review dates
-            field: pageLastNextReview
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig

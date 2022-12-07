@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9a5a4af2-cb1d-46e6-a624-479aec9f5dc6
+          jcr:uuid: 54d028fa-373e-4c5c-a13d-69f2c6362371
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-contact-validator']
           /name:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -32,6 +33,7 @@ definitions:
             hipposysedit:path: hee:phoneNumber
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:phone-number-validator']
           /email:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -40,6 +42,7 @@ definitions:
             hipposysedit:path: hee:email
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-email-validator']
           /address:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -64,6 +67,7 @@ definitions:
             hipposysedit:path: hee:website
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-url-validator']
           /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -72,6 +76,14 @@ definitions:
             hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: Text
+          /phoneExtension:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:phoneExtension
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -87,12 +99,13 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: 92b2fa83-43a9-4cd6-a8cc-b2a3041655f8
+          jcr:uuid: fc335b11-b6d1-486b-a473-63dbe95376c7
           hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
           hee:organisation: ''
           hee:website: ''
           hee:description: ''
+          hee:phoneExtension: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -110,7 +123,7 @@ definitions:
             field: name
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
+            hint: Enter the name of the department e.g. Paediatrics
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /organisation:
@@ -119,12 +132,25 @@ definitions:
             field: organisation
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Enter the departments organisation e.g. University Hospitals Birmingham
+              NHS Foundation Trust
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /phoneNumber:
             jcr:primaryType: frontend:plugin
             caption: Phone number
             field: phoneNumber
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Enter the primary contact number for the department e.g. +44 12345
+              1234
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /phoneExtension:
+            jcr:primaryType: frontend:plugin
+            caption: Phone extension
+            field: phoneExtension
+            hint: e.g. 1234
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -135,6 +161,16 @@ definitions:
             field: email
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Enter the primary email for the department e.g. email@nhs.uk
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /address:
+            jcr:primaryType: frontend:plugin
+            caption: Address
+            field: address
+            hint: Enter departmental address
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /website:
@@ -143,15 +179,7 @@ definitions:
             field: website
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /address:
-            jcr:primaryType: frontend:plugin
-            caption: Address
-            field: address
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            hint: Enter the url of the department website e.g. https://hee.nhs.uk/myurl
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /description:
