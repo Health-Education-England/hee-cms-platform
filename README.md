@@ -8,7 +8,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Built With
 
-* [BloomReach DXP 14.7.8](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
+* [BloomReach DXP 14.7.11](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
 * [brCloud](https://www.bloomreach.com/en/products/experience-manager/cloud-cms) - Bloomreach Cloud Managed Hosting
 
 ## Getting Started
