@@ -27,6 +27,7 @@
     </li>
 </#macro>
 
+    
 <#assign datePattern = "d MMMM yyyy">
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Report" -->
 <#-- @ftlvariable name="landingPage" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
