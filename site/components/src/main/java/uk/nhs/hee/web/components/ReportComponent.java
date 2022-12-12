@@ -5,11 +5,14 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import uk.nhs.hee.web.beans.PublicationLandingPage;
 import uk.nhs.hee.web.beans.Report;
 import uk.nhs.hee.web.components.info.ReportComponentInfo;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
+import uk.nhs.hee.web.utils.ReportAndPublicationUtils;
 
+import javax.jcr.RepositoryException;
 import java.util.List;
 import java.util.Map;
 
@@ -33,6 +36,14 @@ public class ReportComponent extends EssentialsDocumentComponent {
             modelToValueListMap.forEach(request::setModel);
 
             request.setAttribute("tableComponentService", new TableComponentService());
+        }
+
+        try {
+            ReportAndPublicationUtils reportUtils = new ReportAndPublicationUtils();
+            PublicationLandingPage landingPageParent = reportUtils.findMyParent(reportPage, request.getRequestContext());
+            request.setModel("landingPage", landingPageParent);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
         }
     }
 
