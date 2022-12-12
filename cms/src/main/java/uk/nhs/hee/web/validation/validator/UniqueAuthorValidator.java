@@ -98,9 +98,7 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
 
         if (referencedAuthorNode != null && !referencedAuthorNode.getPath().equals(node.getParent().getPath())) {
             final Violation violation = context.createViolation(ImmutableMap.of(
-                    "authorDocumentPath", referencedAuthorNode.getPath(),
-                    "personDocumentDisplayName", getDocumentDisplayName(node.getSession(), personId))
-            );
+                    "personDocumentDisplayName", getDocumentDisplayName(node.getSession(), personId)));
 
             LOGGER.debug(violation.getMessage());
             return Optional.of(violation);
