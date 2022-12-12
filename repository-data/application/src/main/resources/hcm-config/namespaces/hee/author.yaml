@@ -25,12 +25,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
-          /bio:
+          /bioSummary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:bio
+            hipposysedit:path: hee:bioSummary
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
       /hipposysedit:prototypes:
@@ -50,7 +50,7 @@ definitions:
           /hee:person:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:bio:
+          /hee:bioSummary:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
       /editor:templates:
@@ -74,10 +74,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:person']
-          /bio:
+          /bioSummary:
             jcr:primaryType: frontend:plugin
-            caption: Bio
-            field: bio
+            caption: Bio summary
+            field: bioSummary
             hint: Please summarise the authors experience
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field

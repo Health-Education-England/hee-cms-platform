@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 
 <#--  Renders Person for Author card  -->
-<#macro personAuthor person bio>
+<#macro personAuthor person bioSummary>
     <div class="nhsuk-contact__content">
 
         <#-- Get Person Initials -->
@@ -86,8 +86,8 @@
                 <p aria-label="Address">${person.address?replace('\n', '<br>')}</p>
             </#if>
 
-            <#if bio?has_content>
-                <@hst.html hippohtml=bio/>
+            <#if bioSummary?has_content>
+                <@hst.html hippohtml=bioSummary/>
             </#if>
         </div>
     </div>

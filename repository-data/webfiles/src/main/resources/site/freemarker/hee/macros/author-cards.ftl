@@ -5,7 +5,7 @@
 <#macro authorCards authors>
     <#list authors as author>
         <div class="nhsuk-contact">
-            <@personAuthor person=author.person bio=author.bio />
+            <@personAuthor person=author.person bioSummary=author.bioSummary />
         </div>
     </#list>
 </#macro>

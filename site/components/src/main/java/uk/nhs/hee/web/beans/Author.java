@@ -13,8 +13,8 @@ public class Author extends BaseDocument {
         return getLinkedBean("hee:person", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:bio")
-    public HippoHtml getBio() {
-        return getHippoHtml("hee:bio");
+    @HippoEssentialsGenerated(internalName = "hee:bioSummary")
+    public HippoHtml getBioSummary() {
+        return getHippoHtml("hee:bioSummary");
     }
 }
