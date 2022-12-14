@@ -15,6 +15,7 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -67,7 +68,6 @@ definitions:
             hipposysedit:path: hee:publicationTopics
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /publicationProfessions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -76,7 +76,6 @@ definitions:
             hipposysedit:path: hee:publicationProfessions
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /readTime:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
