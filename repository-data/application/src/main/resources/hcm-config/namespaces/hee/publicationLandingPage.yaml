@@ -277,6 +277,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtopics
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date
