@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 3b10648c-0473-4d99-b433-7212398b5760
+          jcr:uuid: 3219f314-0926-48ca-ac4a-2b6749c247e5
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -132,7 +132,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 39dd8f40-450a-45d8-8666-284946be7cf6
+          jcr:uuid: 68532e31-e951-48c8-9ca3-d17e342021c5
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -248,21 +248,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /publicationTopics:
-            jcr:primaryType: frontend:plugin
-            caption: Topics
-            field: publicationTopics
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.left.item
-            hint: Select relevant topics
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtopics
           /publicationProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
@@ -278,6 +263,21 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationprofessions
+          /publicationTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Topics
+            field: publicationTopics
+            multiselect.type: palette
+            palette.alloworder: false
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.left.item
+            hint: Select relevant topics
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/publicationtopics
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date
