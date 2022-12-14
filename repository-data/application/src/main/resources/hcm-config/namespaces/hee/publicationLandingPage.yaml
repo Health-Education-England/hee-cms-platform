@@ -307,9 +307,9 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /webPublications:
             jcr:primaryType: frontend:plugin
-            caption: Web publications
+            caption: Publication pages
             field: webPublication
-            hint: Browse to a publication document(s)
+            hint: Browse to a publication page(s)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
