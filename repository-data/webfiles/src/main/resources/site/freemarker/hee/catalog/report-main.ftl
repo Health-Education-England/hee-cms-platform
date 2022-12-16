@@ -2,7 +2,7 @@
 <#include "../../include/imports.ftl">
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
-<#include "../utils/document-formats.ftl">
+<#include "../utils/date-util.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -13,19 +13,10 @@
     <#assign docType>${docLink.filename?keep_after_last(".")}</#assign>
     <li>
         <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}  (opens in new window)">
-            ${docLink.filename?keep_before_last(".")} - <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${getDocumentFormat(docLink.filename?keep_after_last("."))}</span>
+            ${docLink.filename?keep_before_last(".")} - <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span>
         </a>
-        <#setting number_format="0.##">
-        <span class="nhsuk-resources__docSize">
-            <#if docLink.lengthMB < 0.3>
-                ${docLink.lengthKB}KB
-            <#else>
-                ${docLink.lengthMB}MB
-            </#if>
-        </span>
     </li>
 </#macro>
-<#assign datePattern = "d MMMM yyyy">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Report" -->
 <#-- @ftlvariable name="landingPage" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
@@ -107,21 +98,19 @@
                                 <div class="nhsuk-card__content">
                                     <h3 class="nhsuk-heading-m">Publication Info</h3>
                                     <div class="heeuk-link-inactive-state-s">
-                                        <strong>Published: </strong> ${document.publicationDate.getTime()?date?string["${datePattern}"]}
+                                        <strong>Published: </strong> ${getDefaultFormattedDate(document.publicationDate)}
                                     </div>
-                                    <div class="heeuk-link-inactive-state-s"><strong>Updated: </strong> ${document.properties['hippostdpubwf:lastModificationDate'].getTime()?date?string["${datePattern}"]}</div>
+                                    <div class="heeuk-link-inactive-state-s"><strong>Updated: </strong> ${getDefaultFormattedDate(document.properties['hippostdpubwf:lastModificationDate'])}</div>
                                     <#if landingPage??>
                                         <div class="heeuk-link-inactive-state-s">
                                             <strong>Topics: </strong>
-                                            ${landingPage.publicationType}
+                                            ${landingPage.publicationType},
                                             <#if landingPage.publicationProfessions?has_content>
-                                                <#list landingPage.publicationProfessions as profession>
-                                                    - ${profession}
+                                                <#list landingPage.publicationProfessions as profession> ${profession}<#sep>,</#sep>
                                                 </#list>
                                             </#if>
-                                            <#if landingPage.publicationTopics?has_content>
-                                                <#list landingPage.publicationTopics as topic>
-                                                    - ${topic}
+                                            <#if landingPage.publicationTopics?has_content>,
+                                                <#list landingPage.publicationTopics as topic>${topic}<#sep>,</#sep>
                                                 </#list>
                                             </#if>
                                         </div>
@@ -129,33 +118,51 @@
                                     </#if>
                                 </div>
                             </div>
+                            <#assign has_documents =false>
                             <#if landingPage?? && landingPage.documentVersions?has_content>
-                                <div class="nhsuk-card">
-                                    <div class="nhsuk-card__content">
-                                        <h3 class="nhsuk-heading-m">Alternative versions</h3>
-                                        <ul class="nhsuk-resources__list">
-                                            <#list landingPage.documentVersions as link>
-                                                <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                                    <@docDetailBlockForDocLink docLink=link/>
-                                                </#if>
-                                            </#list>
-                                        </ul>
+                                <#list landingPage.documentVersions as link>
+                                    <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                        <#assign has_documents=true>
+                                        <#break>
+                                    </#if>
+                                </#list>
+                                <#if has_documents!true>
+                                    <div class="nhsuk-card">
+                                        <div class="nhsuk-card__content">
+                                            <h3 class="nhsuk-heading-m">Alternative versions ${has_documents?string}</h3>
+                                            <ul class="nhsuk-resources__list">
+                                                <#list landingPage.documentVersions as link>
+                                                    <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                                        <@docDetailBlockForDocLink docLink=link/>
+                                                    </#if>
+                                                </#list>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
+                                </#if>
                             </#if>
+                            <#assign has_languages =false>
                             <#if landingPage?? && landingPage.languageVersions?has_content>
-                                <div class="nhsuk-card">
-                                    <div class="nhsuk-card__content">
-                                        <h3 class="nhsuk-heading-m">Languages</h3>
-                                        <ul class="nhsuk-resources__list">
-                                            <#list landingPage.languageVersions as link>
-                                                <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                                    <@docDetailBlockForDocLink docLink=link/>
-                                                </#if>
-                                            </#list>
-                                        </ul>
+                                <#list landingPage.languageVersions as link>
+                                    <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                        <#assign has_languages =true>
+                                        <#break>
+                                    </#if>
+                                </#list>
+                                <#if has_languages!true>
+                                    <div class="nhsuk-card">
+                                        <div class="nhsuk-card__content">
+                                            <h3 class="nhsuk-heading-m">Languages ${has_languages?string}</h3>
+                                            <ul class="nhsuk-resources__list">
+                                                <#list landingPage.languageVersions as link>
+                                                    <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                                        <@docDetailBlockForDocLink docLink=link/>
+                                                    </#if>
+                                                </#list>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
+                                </#if>
                             </#if>
                         </div>
 

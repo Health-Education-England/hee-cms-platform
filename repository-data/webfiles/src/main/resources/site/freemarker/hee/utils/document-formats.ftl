@@ -1,4 +1,4 @@
-<#--  Returns the given date formatted in 'd MMMM yyyy' format  -->
+<#--  Returns document format by extension  -->
 <#function getDocumentFormat extension>
     <#switch extension?upper_case>
         <#case 'PDF'>
