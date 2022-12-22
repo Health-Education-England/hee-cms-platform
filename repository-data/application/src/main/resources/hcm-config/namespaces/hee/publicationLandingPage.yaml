@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 3b10648c-0473-4d99-b433-7212398b5760
+          jcr:uuid: 3219f314-0926-48ca-ac4a-2b6749c247e5
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -67,7 +68,6 @@ definitions:
             hipposysedit:path: hee:publicationTopics
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /publicationProfessions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -76,7 +76,6 @@ definitions:
             hipposysedit:path: hee:publicationProfessions
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /readTime:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -85,7 +84,7 @@ definitions:
             hipposysedit:path: hee:readTime
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
+            hipposysedit:validators: [required, 'hee:numeric-validator']
           /logoGroup:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -111,6 +110,7 @@ definitions:
             hipposysedit:path: hee:updatedDate
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
+            hipposysedit:validators: [required]
           /alternateVersions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -140,7 +140,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 39dd8f40-450a-45d8-8666-284946be7cf6
+          jcr:uuid: 68532e31-e951-48c8-9ca3-d17e342021c5
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -269,21 +269,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /publicationTopics:
-            jcr:primaryType: frontend:plugin
-            caption: Topics
-            field: publicationTopics
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.left.item
-            hint: Select relevant topics
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtopics
           /publicationProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
@@ -299,6 +284,22 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationprofessions
+          /publicationTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Topics
+            field: publicationTopics
+            multiselect.type: palette
+            palette.alloworder: false
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.left.item
+            hint: Select relevant topics
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              source: /content/documents/administration/valuelists/publicationtopics
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date
@@ -328,9 +329,9 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /webPublications:
             jcr:primaryType: frontend:plugin
-            caption: Web publications
+            caption: Publication pages
             field: webPublication
-            hint: Browse to a publication document(s)
+            hint: Browse to a publication page(s)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:

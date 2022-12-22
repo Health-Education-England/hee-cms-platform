@@ -48,7 +48,6 @@ definitions:
             hipposysedit:path: hee:pageLastNextReview
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
-            hipposysedit:validators: [required]
           /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -140,6 +139,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
@@ -182,7 +182,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page review dates
             field: pageLastNextReview
-            hint: Please enter the last date and review date
+            hint: Enter the last and next review dates
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
