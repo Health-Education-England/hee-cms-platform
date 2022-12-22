@@ -141,6 +141,7 @@ definitions:
             hipposysedit:path: hee:phoneExtension
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:numeric-validator']
           /department:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -268,9 +269,10 @@ definitions:
             field: phoneNumber
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: e.g. +44 12345 1234
+            hint: e.g. 123 456 7891
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '13'
           /phoneExtension:
             jcr:primaryType: frontend:plugin
             caption: Phone extension
@@ -280,6 +282,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '5'
           /email:
             jcr:primaryType: frontend:plugin
             caption: Email

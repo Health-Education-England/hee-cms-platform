@@ -1,0 +1,31 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RemoveUKCountryCodeFromPhoneNumbers:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Removes UK country code (+44) prefixes from Person/Department
+        phone numbers
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//*[(@jcr:primaryType='hee:person'
+        or @jcr:primaryType='hee:department') and @hee:phoneNumber!='']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\n\
+        import javax.jcr.Node\r\n\r\nclass RemoveUKCountryCodeFromPhoneNumbers extends\
+        \ BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\n   \
+        \     log.debug \"Updating node ${node.path}\"\r\n\r\n        final String\
+        \ phoneNumber = node.getProperty(\"hee:phoneNumber\").getString()\r\n    \
+        \    log.debug \"Phone number [Before reformatting] = ${phoneNumber}\"\r\n\
+        \r\n        // Replaces '+44 '/'+44' with empty string\r\n        // i.e.\
+        \ essentially removes UK country code prefix (+44) from the phone number\r\
+        \n        final String reformattedPhoneNumber = phoneNumber.replaceAll(\"\\\
+        \\+44\\\\s?(.*)\", \"\\$1\")\r\n        log.debug \"Phone number [After reformatting]\
+        \ = ${reformattedPhoneNumber}\"\r\n\r\n        node.setProperty(\"hee:phoneNumber\"\
+        , reformattedPhoneNumber)\r\n\r\n        log.debug \"Successfully migrated/replaced\
+        \ '${node.path}' phone number from '${phoneNumber}' \" +\r\n             \
+        \   \"to '${reformattedPhoneNumber}'\"\r\n        return true\r\n    }\r\n\
+        \r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
