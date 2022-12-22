@@ -7,20 +7,10 @@
         </#if>
         <#switch block.headingType>
             <#case "H2">
-                <h2>${block.headingTitle}</h2>
-                <h2 hidden="true">${tocTitle}</h2>
+                <h2 class="toc_h2" data-short-title="${tocTitle}">${block.headingTitle}</h2>
                 <#break>
             <#case "H3">
-                <h3>${block.headingTitle}</h3>
-                <h3 hidden="true">${tocTitle}</h3>
-                <#break>
-            <#case "H4">
-                <h4>${block.headingTitle}</h4>
-                <h4 hidden="true">${tocTitle}</h4>
-                <#break>
-            <#case "H5">
-                <h5>${block.headingTitle}</h5>
-                <h5 hidden="true">${tocTitle}</h5>
+                <h3 class="toc_h3" data-short-title="${tocTitle}">${block.headingTitle}</h3>
                 <#break>
             <#default>
         </#switch>
