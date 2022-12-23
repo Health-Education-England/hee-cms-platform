@@ -4,7 +4,7 @@
 <#include "../../include/page-meta-data.ftl">
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
-<#include "../macros/checkbox-group.ftl">
+<#include "../macros/checkbox-group-with-filter-count.ftl">
 <#include "../macros/micro-hero.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
