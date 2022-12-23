@@ -5,7 +5,7 @@ import org.hippoecm.hst.core.parameters.Parameter;
 
 public interface PublicationListingPageComponentInfo extends ListingPageComponentInfo {
     @Override
-    @Parameter(name = "document", required = true, displayName = "Publication listing document")
+    @Parameter(name = "document", required = true, displayName = "Publication collection document")
     @JcrPath(isRelative = true, pickerSelectableNodeTypes = {"hee:publicationListingPage"})
     String getDocument();
 }
