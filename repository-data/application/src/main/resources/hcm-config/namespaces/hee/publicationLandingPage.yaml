@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 3219f314-0926-48ca-ac4a-2b6749c247e5
+          jcr:uuid: 032b4754-1fe8-48b2-af8f-f7b0277f8b1e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -132,7 +132,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 68532e31-e951-48c8-9ca3-d17e342021c5
+          jcr:uuid: 49454cc7-724b-4bab-bfa1-afb5b6ae318e
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -301,7 +301,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Read Time
             field: readTime
-            hint: Enter an estimate of the document read time. (e.g. 20 minutes)
+            hint: Estimate the document read time in minutes
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
