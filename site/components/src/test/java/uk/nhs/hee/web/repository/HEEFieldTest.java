@@ -16,9 +16,6 @@ public class HEEFieldTest {
         assertThat(HEEField.IMPACT_GROUP.getName()).isEqualTo("hee:impactGroup");
         assertThat(HEEField.LISTING_TYPE.getName()).isEqualTo("hee:listingPageType");
         assertThat(HEEField.PUBLICATION_DATE.getName()).isEqualTo("hee:publicationDate");
-        assertThat(HEEField.PUBLICATION_TYPE.getName()).isEqualTo("hee:publicationType");
-        assertThat(HEEField.PUBLICATION_TOPICS.getName()).isEqualTo("hee:publicationTopics");
-        assertThat(HEEField.PUBLICATION_PROFESSIONS.getName()).isEqualTo("hee:publicationProfessions");
         assertThat(HEEField.TOPICS.getName()).isEqualTo("hee:topics");
     }
 }

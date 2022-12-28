@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 03cc6eaf-ca38-4874-a8a5-22ae5ea2c643
   hippo:name: Listing
-  hippo:versionHistory: 4deefde3-8bbc-428b-a73b-92b3958dd089
+  hippo:versionHistory: acaeeec4-6fb3-4c28-8a2e-b4596c674c0d
   /listing[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -14,12 +14,12 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2022-11-27T20:11:13.675Z
+    hippostdpubwf:lastModificationDate: 2022-04-08T16:18:44.647+01:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -29,15 +29,13 @@
       searchbank.provider, category.text, casestudy.document, searchbank.get_document,
       filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
       searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
-      sort.option.submitted_date_newest, sort.option.submitted_date_oldest, publication.type,
-      publication.topic, publication.profession, publication.publish_date]
+      sort.option.submitted_date_newest, sort.option.submitted_date_oldest]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed on,
       Provider, Category, Document, Get Document, Year, Date, Location, Group Impacted,
       Impact Types, Key Terms, A to Z, Organisation, Date Submitted, Date Submitted
-        - Newest, Date Submitted - Oldest, Publication type, Topic, Profession, Publish
-        date]
+        - Newest, Date Submitted - Oldest]
   /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -47,12 +45,12 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2022-11-27T20:11:31.192Z
+    hippostdpubwf:lastModificationDate: 2022-04-08T16:19:09.051+01:00
     hippostdpubwf:lastModifiedBy: admin
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -62,15 +60,13 @@
       searchbank.provider, category.text, casestudy.document, searchbank.get_document,
       filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
       searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
-      sort.option.submitted_date_newest, sort.option.submitted_date_oldest, publication.type,
-      publication.topic, publication.profession, publication.publish_date]
+      sort.option.submitted_date_newest, sort.option.submitted_date_oldest]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed on,
       Provider, Category, Document, Get Document, Year, Date, Location, Group Impacted,
       Impact Types, Key Terms, A to Z, Organisation, Date Submitted, Date Submitted
-        - Newest, Date Submitted - Oldest, Publication type, Topic, Profession, Publish
-        date]
+        - Newest, Date Submitted - Oldest]
   /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -80,13 +76,13 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-02-24T17:37:06.731Z
-    hippostdpubwf:lastModificationDate: 2022-11-27T20:11:31.192Z
+    hippostdpubwf:lastModificationDate: 2022-04-08T16:19:09.051+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2022-11-27T20:11:32.898Z
+    hippostdpubwf:publicationDate: 2022-04-08T16:19:11.658+01:00
     resourcebundle:descriptions: [Used in a Bulletin component to show a bulletin
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -96,12 +92,10 @@
       searchbank.provider, category.text, casestudy.document, searchbank.get_document,
       filter.year.label, event.date, event.location, casestudy.impact_group, casestudy.impact_types,
       searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
-      sort.option.submitted_date_newest, sort.option.submitted_date_oldest, publication.type,
-      publication.topic, publication.profession, publication.publish_date]
+      sort.option.submitted_date_newest, sort.option.submitted_date_oldest]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get Strategy, Search, Get Search, Completed on,
       Provider, Category, Document, Get Document, Year, Date, Location, Group Impacted,
       Impact Types, Key Terms, A to Z, Organisation, Date Submitted, Date Submitted
-        - Newest, Date Submitted - Oldest, Publication type, Topic, Profession, Publish
-        date]
+        - Newest, Date Submitted - Oldest]

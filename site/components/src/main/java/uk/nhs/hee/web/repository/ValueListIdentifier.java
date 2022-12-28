@@ -51,21 +51,6 @@ public enum ValueListIdentifier {
     NAV_MAP_REGIONS("navMapRegions"),
 
     /**
-     * {@code publicationTypes} value-list identifier.
-     */
-    PUBLICATION_TYPES("publicationTypes"),
-
-    /**
-     * {@code publicationTopics} value-list identifier.
-     */
-    PUBLICATION_TOPICS("publicationTopics"),
-
-    /**
-     * {@code publicationProfessions} value-list identifier.
-     */
-    PUBLICATION_PROFESSIONS("publicationProfessions"),
-
-    /**
      * {@code searchBankKeyTerms} value-list identifier.
      */
     SEARCH_BANK_KEY_TERMS("searchBankKeyTerms"),
