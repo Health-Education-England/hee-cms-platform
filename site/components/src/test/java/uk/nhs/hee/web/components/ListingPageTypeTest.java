@@ -10,19 +10,6 @@ import static org.assertj.core.api.Assertions.*;
 public class ListingPageTypeTest {
 
     @Test
-    public void aToZ() {
-        // Verify
-        final ListingPageType aToZListing = ListingPageType.ATOZ_LISTING;
-        assertThat(aToZListing.getType()).isEqualTo("atoz");
-        assertThat(aToZListing.getDocumentTypes())
-                .isEqualTo(new String[]{"hee:guidance", "hee:landingPage", "hee:listingPage", "hee:MiniHub"});
-        assertThat(aToZListing.isSortingEnabled()).isFalse();
-        assertThat(aToZListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
-        assertThat(aToZListing.getFilterValueListIdentifier()).isEmpty();
-        assertThat(aToZListing.isChannelSpecificValueListIdentifier()).isFalse();
-    }
-
-    @Test
     public void blog() {
         // Verify
         final ListingPageType blogListing = ListingPageType.BLOG_LISTING;
@@ -68,30 +55,6 @@ public class ListingPageTypeTest {
         assertThat(eventListing.getSortByDateField()).isEqualTo(HEEField.DATE.getName());
         assertThat(eventListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
         assertThat(eventListing.isChannelSpecificValueListIdentifier()).isFalse();
-    }
-
-    @Test
-    public void news() {
-        // Verify
-        final ListingPageType newsListing = ListingPageType.NEWS_LISTING;
-        assertThat(newsListing.getType()).isEqualTo("news");
-        assertThat(newsListing.getDocumentTypes()).isEqualTo(new String[]{"hee:news"});
-        assertThat(newsListing.isSortingEnabled()).isTrue();
-        assertThat(newsListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
-        assertThat(newsListing.getFilterValueListIdentifier()).isEqualTo("newsCategories");
-        assertThat(newsListing.isChannelSpecificValueListIdentifier()).isTrue();
-    }
-
-    @Test
-    public void publication() {
-        // Verify
-        final ListingPageType publicationListing = ListingPageType.PUBLICATION_LISTING;
-        assertThat(publicationListing.getType()).isEqualTo("publication");
-        assertThat(publicationListing.getDocumentTypes()).isEqualTo(new String[]{"hee:publicationLandingPage"});
-        assertThat(publicationListing.isSortingEnabled()).isTrue();
-        assertThat(publicationListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
-        assertThat(publicationListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
-        assertThat(publicationListing.isChannelSpecificValueListIdentifier()).isFalse();
     }
 
     @Test

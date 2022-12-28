@@ -41,21 +41,6 @@ public enum HEEField {
     PUBLICATION_DATE("hee:publicationDate"),
 
     /**
-     * {@code publicationType} field/property.
-     */
-    PUBLICATION_TYPE("hee:publicationType"),
-
-    /**
-     * {@code publicationTopics} field/property.
-     */
-    PUBLICATION_TOPICS("hee:publicationTopics"),
-
-    /**
-     * {@code publicationProfessions} field/property.
-     */
-    PUBLICATION_PROFESSIONS("hee:publicationProfessions"),
-
-    /**
      * {@code topics} field/property.
      */
     TOPICS("hee:topics"),
