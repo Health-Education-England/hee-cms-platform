@@ -1,4 +1,5 @@
 <#include "../../include/imports.ftl">
+<#include "../utils/phone-number-util.ftl">
 
 <#macro departmentContact department>
     <div class="nhsuk-contact__content">
@@ -14,7 +15,7 @@
         <div class="nhsuk-contact__secondary-info">
             <#if department.phoneNumber?has_content>
                 <p aria-label="Telephone">
-                    <a href="tel:${department.phoneNumber?replace(' ', '')}" title="Opens call">${department.phoneNumber}</a>
+                    <a href="tel:${getUKCountryCodePrefixedPhoneNumber(department.phoneNumber)?replace(' ', '')}" title="Opens call">${getUKCountryCodePrefixedPhoneNumber(department.phoneNumber)}</a>
                     ${department.phoneExtension?has_content?then('(Ext: ' + department.phoneExtension + ')', '')}
                 </p>
             </#if>

@@ -84,6 +84,7 @@ definitions:
             hipposysedit:path: hee:phoneExtension
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:numeric-validator']
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -142,10 +143,11 @@ definitions:
             field: phoneNumber
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Enter the primary contact number for the department e.g. +44 12345
-              1234
+            hint: Enter the primary contact number for the department e.g. 123 456
+              7891
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '13'
           /phoneExtension:
             jcr:primaryType: frontend:plugin
             caption: Phone extension
@@ -155,6 +157,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '5'
           /email:
             jcr:primaryType: frontend:plugin
             caption: Email
@@ -184,10 +187,11 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /description:
             jcr:primaryType: frontend:plugin
-            caption: Description
+            caption: Description (This field is being removed)
             field: description
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
