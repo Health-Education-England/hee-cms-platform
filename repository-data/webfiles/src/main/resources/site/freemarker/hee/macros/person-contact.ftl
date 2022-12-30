@@ -1,4 +1,5 @@
 <#include "../../include/imports.ftl">
+<#include "../utils/phone-number-util.ftl">
 
 <#macro personContact person isAuthor=false>
     <div class="nhsuk-contact__content">
@@ -35,7 +36,9 @@
             <h3 class="nhsuk-contact__job-title" aria-label="Job Title">${person.jobTitle}</h3>
         </#if>
 
-        <#if person.departmentName?has_content>
+        <#if person.department??>
+            <h5 data-anchorlinksignore="true" aria-label="Department">${person.department.name}</h5>
+        <#elseif person.departmentName?has_content>
             <h5 data-anchorlinksignore="true" aria-label="Department">${person.departmentName}</h5>
         </#if>
 
@@ -50,7 +53,7 @@
         <div class="nhsuk-contact__secondary-info">
             <#if person.phoneNumber?has_content>
                 <p aria-label="Telephone">
-                    <a href="tel:${person.phoneNumber?replace(' ', '')}" title="Opens call">${person.phoneNumber}</a>
+                    <a href="tel:${getUKCountryCodePrefixedPhoneNumber(person.phoneNumber)?replace(' ', '')}" title="Opens call">${getUKCountryCodePrefixedPhoneNumber(person.phoneNumber)}</a>
                     ${person.phoneExtension?has_content?then('(Ext: ' + person.phoneExtension + ')', '')}
                 </p>
             </#if>
