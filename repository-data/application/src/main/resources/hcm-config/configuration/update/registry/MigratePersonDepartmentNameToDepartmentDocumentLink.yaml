@@ -1,0 +1,79 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/MigratePersonDepartmentNameToDepartmentDocumentLink:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Migrates 'hee:departmentName' on Person documents into
+        'hee:department' link [hippo:mirror] node.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:person)[@hee:departmentName!='']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.hippoecm.repository.api.HippoNodeType\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \nimport org.onehippo.repository.util.JcrConstants\r\n\r\nimport javax.jcr.Node\r\
+        \nimport javax.jcr.NodeIterator\r\nimport javax.jcr.RepositoryException\r\n\
+        import javax.jcr.query.Query\r\nimport javax.jcr.query.QueryManager\r\nimport\
+        \ javax.jcr.query.QueryResult\r\n\r\nclass MigratePersonDepartmentNameToDepartmentDocumentLink\
+        \ extends BaseNodeUpdateVisitor {\r\n    // Person 'hee:department' node\r\
+        \n    private static final NODE_PERSON_DEPARTMENT = \"hee:department\"\r\n\
+        \r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Updating node\
+        \ ${node.path}\"\r\n\r\n        // Checks if the Person document node has\
+        \ already got a 'hee:department' node\r\n        boolean hasDepartmentNode\
+        \ = (node.hasNode(NODE_PERSON_DEPARTMENT)\r\n                && HippoNodeType.NT_MIRROR\
+        \ == node.getNode(NODE_PERSON_DEPARTMENT).getPrimaryNodeType().getName())\r\
+        \n\r\n        if (hasDepartmentNode\r\n                && JcrConstants.ROOT_NODE_ID\r\
+        \n                != node.getNode(NODE_PERSON_DEPARTMENT).getProperty(HippoNodeType.HIPPO_DOCBASE).getString())\
+        \ {\r\n            // No update is required as the Person document has already\
+        \ got a (department) document linked to it\r\n            log.debug \"The\
+        \ Person document with path '${node.path}' has already got a Department linked\
+        \ to it \" +\r\n                    \"and so requires no update!\"\r\n   \
+        \         return false\r\n        }\r\n\r\n        // Gets current department\
+        \ name (from 'hee:departmentName' property)\r\n        // Note: The XPath\
+        \ query for this updater script ensures to pick only Person document nodes\
+        \ containing\r\n        // non-empty department names.\r\n        String departmentName\
+        \ = node.getProperty(\"hee:departmentName\").getString()\r\n\r\n        //\
+        \ Gets Department document handle node corresponding to the (current) department\
+        \ name ('departmentName')\r\n        Node departmentHandleNode = getDepartmentHandleNode(node.session.workspace.queryManager,\
+        \ departmentName)\r\n\r\n        if (!departmentHandleNode) {\r\n        \
+        \    // If the Department document corresponding to the current 'departmentName'\
+        \ isn't found in the repository,\r\n            // then adds a warning asking\
+        \ to manually associate the appropriate department to the Person Document\r\
+        \n            log.warn \"MANUAL: Can't find the Department document with name\
+        \ = '${departmentName}' in the repository. \" +\r\n                    \"\
+        Please manually associate the appropriate Department for the Person document\
+        \ with path \" +\r\n                    \"'${node.path}'\"\r\n           \
+        \ return false\r\n        }\r\n\r\n        if (hasDepartmentNode) {\r\n  \
+        \          // Sets Department handle identifier for 'hippo:docbase' property\r\
+        \n            node.getNode(NODE_PERSON_DEPARTMENT)\r\n                   \
+        \ .setProperty(HippoNodeType.HIPPO_DOCBASE, departmentHandleNode.identifier)\r\
+        \n        } else {\r\n            // builds 'hee:department' hippo:mirror\
+        \ type node under Person '${node}'\r\n            // with 'hippo:docbase'\
+        \ property set to Department handle node identifier.\r\n            Node personDepartmentNode\
+        \ = node.addNode(\"hee:department\", HippoNodeType.NT_MIRROR)\r\n        \
+        \    personDepartmentNode.setProperty(HippoNodeType.HIPPO_DOCBASE, departmentHandleNode.identifier)\r\
+        \n        }\r\n\r\n        log.debug \"Successfully linked '${departmentHandleNode.path}'\
+        \ Department \" +\r\n                \"(corresponding to the departmentName\
+        \ '${departmentName}') with the Person document \" +\r\n                \"\
+        with path '${node.path}'\"\r\n        return true\r\n    }\r\n\r\n    /**\r\
+        \n     * Returns Department handle node for the given {@code departmentName}\
+        \ if exists. Otherwise, returns {@code null}.\r\n     *\r\n     * @param queryManager\
+        \ the {@link QueryManager} instance.\r\n     * @param departmentName the name\
+        \ of the Department whose corresponding Department handle node needs to be\
+        \ returned.\r\n     * @return the Department handle node for the given {@code\
+        \ departmentName} if exists.\r\n     * Otherwise, returns {@code null}.\r\n\
+        \     * @throws RepositoryException thrown when an error occurs while querying\
+        \ the JCR repository.\r\n     */\r\n    static Node getDepartmentHandleNode(QueryManager\
+        \ queryManager, String departmentName) throws RepositoryException {\r\n  \
+        \      String departmentByNameFinderQuery = String.format(\r\n           \
+        \     \"/jcr:root/content/documents//element(*, hee:department)[hippostd:state\
+        \ = 'draft' and hee:name='%s']\",\r\n                departmentName)\r\n \
+        \       Query query = queryManager.createQuery(departmentByNameFinderQuery,\
+        \ Query.XPATH)\r\n        QueryResult results = query.execute();\r\n     \
+        \   NodeIterator departmentNodeIterator = results.getNodes();\r\n\r\n    \
+        \    if (departmentNodeIterator.hasNext()) {\r\n            return departmentNodeIterator.nextNode().getParent()\r\
+        \n        }\r\n\r\n        return null;\r\n    }\r\n\r\n    boolean undoUpdate(Node\
+        \ node) {\r\n        throw new UnsupportedOperationException('Updater does\
+        \ not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

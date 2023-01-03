@@ -1,0 +1,37 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/MigratePersonTitles:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Migrates/replaces Person title keys with labels
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass MigratePersonTitles extends BaseNodeUpdateVisitor\
+        \ {\r\n    // Person 'hee:title' property\r\n    private static final PROPERTY_PERSON_TITLE\
+        \ = \"hee:title\";\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug\
+        \ \"Updating node ${node.path}\"\r\n\r\n        def personTitleMap = [\r\n\
+        \                \"mr\": \"Mr\",\r\n                \"mrs\": \"Mrs\",\r\n\
+        \                \"miss\": \"Miss\",\r\n                \"ms\": \"Ms\",\r\n\
+        \                \"dr\": \"Dr\",\r\n                \"prof\": \"Prof\"\r\n\
+        \        ]\r\n\r\n        String personTitle = node.getProperty(PROPERTY_PERSON_TITLE).getString()\r\
+        \n        if (personTitleMap.containsKey(personTitle)) {\r\n            node.setProperty(PROPERTY_PERSON_TITLE,\
+        \ personTitleMap[personTitle])\r\n            log.debug \"Successfully migrated/replaced\
+        \ title key '${personTitle}' \" +\r\n                    \"with label '${personTitleMap[personTitle]}'\
+        \ for the Person document with path '${node.path}'\"\r\n            return\
+        \ true\r\n        } else if (personTitleMap.containsValue(personTitle)) {\r\
+        \n            log.debug \"Person document with path '${node.path}' already\
+        \ contains a valid title label '${personTitle}' \" +\r\n                 \
+        \   \"and so no action is required.\"\r\n            return false\r\n    \
+        \    } else {\r\n            log.warn \"MANUAL: Can't find a label for the\
+        \ title with key '${personTitle}' \" +\r\n                    \"for '${node.path}'\
+        \ Person document. \" +\r\n                    \"Please manually update the\
+        \ Person title with appropriate label if needed\"\r\n            return false\r\
+        \n        }\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n      \
+        \  throw new UnsupportedOperationException('Updater does not implement undoUpdate\
+        \ method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: /jcr:root/content/documents//element(*, hee:person)[@hee:title!='']
