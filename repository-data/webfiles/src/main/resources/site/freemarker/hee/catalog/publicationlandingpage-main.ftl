@@ -71,8 +71,8 @@
     <div class="nhsuk-review-date" style="margin-top:0px">
         <p class="nhsuk-body-s">
             Published: ${getDefaultFormattedDate(publishedDate)}<br>
-            Updated: ${getDefaultFormattedDate(updatedDate)}<br>
-            ${fileType?upper_case}${(fileLengthInKB > 0)?then(', ' + fileLengthInKB + 'kB', '')}
+            <#if updatedDate?has_content>Updated: ${getDefaultFormattedDate(updatedDate)}<br></#if>
+            ${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}
         </p>
     </div>
 </#macro>
@@ -120,7 +120,7 @@
                                                             </a>
                                                             <@docDetailBlock
                                                                 publishedDate=publication.publicationDate
-                                                                updatedDate=publication.pageLastNextReview.lastReviewed
+                                                                updatedDate=publication.pageLastNextReview.lastReviewed!
                                                                 fileType='WEB' />
                                                         </li>
                                                     </#list>
