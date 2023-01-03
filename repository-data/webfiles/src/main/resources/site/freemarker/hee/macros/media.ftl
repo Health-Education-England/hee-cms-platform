@@ -1,5 +1,6 @@
 <#include "last-next-reviewed-date.ftl">
 
+<#assign datePattern = "d MMMM yyyy">
 <#macro media media>
     <#if media??>
         <#if media.mediaEmbedContentBlock.embedCode??>
