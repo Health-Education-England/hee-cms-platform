@@ -71,7 +71,7 @@
     <div class="nhsuk-review-date" style="margin-top:0px">
         <p class="nhsuk-body-s">
             Published: ${getDefaultFormattedDate(publishedDate)}<br>
-            <#if updatedDate!='NULL'>Updated: ${getDefaultFormattedDate(updatedDate)}<br></#if>
+            <#if updatedDate?has_content>Updated: ${getDefaultFormattedDate(updatedDate)}<br></#if>
             ${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}
         </p>
     </div>
@@ -120,7 +120,7 @@
                                                             </a>
                                                             <@docDetailBlock
                                                                 publishedDate=publication.publicationDate
-                                                                updatedDate=(publication.pageLastNextReview.lastReviewed?has_content)?then(publication.pageLastNextReview.lastReviewed, 'NULL')
+                                                                updatedDate=publication.pageLastNextReview.lastReviewed!
                                                                 fileType='WEB' />
                                                         </li>
                                                     </#list>
