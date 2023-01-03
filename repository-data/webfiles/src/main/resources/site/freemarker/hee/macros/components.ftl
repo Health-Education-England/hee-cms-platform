@@ -25,3 +25,4 @@
 <#include "newsletter-subscribe-form.ftl">
 <#include "rightHandImage.ftl">
 <#include "applies-to-box.ftl">
+<#include "headings-toc.ftl">

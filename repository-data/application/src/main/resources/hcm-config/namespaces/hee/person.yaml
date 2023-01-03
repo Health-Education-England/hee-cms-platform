@@ -141,6 +141,15 @@ definitions:
             hipposysedit:path: hee:phoneExtension
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:numeric-validator']
+          /department:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:department
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -175,6 +184,9 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:department:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -225,12 +237,23 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /departmentName:
             jcr:primaryType: frontend:plugin
-            caption: Department name
+            caption: Department name (This field is being removed)
             field: departmentName
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /department:
+            jcr:primaryType: frontend:plugin
+            caption: Department
+            field: department
+            hint: Browse to a department document
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:department']
           /organisation:
             jcr:primaryType: frontend:plugin
             caption: Organisation
@@ -246,9 +269,10 @@ definitions:
             field: phoneNumber
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: e.g. +44 12345 1234
+            hint: e.g. 123 456 7891
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '13'
           /phoneExtension:
             jcr:primaryType: frontend:plugin
             caption: Phone extension
@@ -258,6 +282,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '5'
           /email:
             jcr:primaryType: frontend:plugin
             caption: Email
@@ -314,11 +339,12 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /bio:
             jcr:primaryType: frontend:plugin
-            caption: Bio
+            caption: Bio (This field is being removed)
             field: bio
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
+            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: ''

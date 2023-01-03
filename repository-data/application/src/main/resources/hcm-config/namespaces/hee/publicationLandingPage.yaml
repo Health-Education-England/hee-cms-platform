@@ -208,6 +208,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
@@ -217,6 +218,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: ''
           /publicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
