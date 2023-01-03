@@ -1,94 +1,83 @@
 definitions:
   config:
-    /hippo:namespaces/hee/department:
+    /hippo:namespaces/hee/publicationListingPage:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: aac799c3-5020-43c1-988c-3f7e90b8f37e
+      jcr:uuid: f8c9f976-82d7-424e-88c5-717b6ce98109
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2ea286fc-d91f-40b3-950f-b07fb52fa7e9
+        jcr:uuid: 2230545d-8f27-42f4-b498-cede0f6ae23f
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 54d028fa-373e-4c5c-a13d-69f2c6362371
+          jcr:uuid: af966f2a-6ed0-4ac7-a1ee-03abb98b2cbb
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-contact-validator']
-          /name:
+          /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:name
+            hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /phoneNumber:
+          /summary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:phoneNumber
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: ['hee:phone-number-validator']
-          /email:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:email
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: ['hee:optional-email-validator']
-          /address:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:address
+            hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-          /organisation:
+            hipposysedit:validators: [optional]
+          /microHero:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:organisation
+            hipposysedit:path: hee:microHero
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /pageSize:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:pageSize
+            hipposysedit:primary: false
+            hipposysedit:type: Long
+            hipposysedit:validators: [required]
+          /addToAZ:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:addToAZ
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /subtitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:subtitle
             hipposysedit:primary: false
             hipposysedit:type: String
-          /website:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:website
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: ['hee:optional-url-validator']
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-          /phoneExtension:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:phoneExtension
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: ['hee:numeric-validator']
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:department
+          jcr:primaryType: hee:publicationListingPage
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
@@ -96,17 +85,23 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:name: ''
-          hee:phoneNumber: ''
-          hee:email: ''
-          hee:address: ''
-          jcr:uuid: fc335b11-b6d1-486b-a473-63dbe95376c7
-          hippostdpubwf:lastModificationDate: 2021-05-13T16:54:57.592+07:00
-          hippostdpubwf:creationDate: 2021-05-13T16:54:57.593+07:00
-          hee:organisation: ''
-          hee:website: ''
-          hee:description: ''
-          hee:phoneExtension: ''
+          hee:title: ''
+          hee:summary: ''
+          hee:pageSize: 10
+          hee:addToAZ: false
+          hee:subtitle: ''
+          jcr:uuid: 2e117db9-3a99-462a-b022-8ab61ed35bcd
+          hippostdpubwf:lastModificationDate: 2022-12-02T14:26:11.069Z
+          hippostdpubwf:creationDate: 2022-12-02T14:26:11.069Z
+          /hee:microHero:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -118,80 +113,68 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /name:
+          /title:
             jcr:primaryType: frontend:plugin
-            caption: Department name
-            field: name
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Enter the name of the department e.g. Paediatrics
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /organisation:
-            jcr:primaryType: frontend:plugin
-            caption: Organisation
-            field: organisation
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Enter the departments organisation e.g. University Hospitals Birmingham
-              NHS Foundation Trust
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /phoneNumber:
-            jcr:primaryType: frontend:plugin
-            caption: Phone number
-            field: phoneNumber
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Enter the primary contact number for the department e.g. 123 456
-              7891
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              maxlength: '13'
-          /phoneExtension:
-            jcr:primaryType: frontend:plugin
-            caption: Phone extension
-            field: phoneExtension
-            hint: e.g. 1234
+            caption: Page title
+            field: title
+            hint: Enter the page title (60 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '5'
-          /email:
+              maxlength: '60'
+          /subtitle:
             jcr:primaryType: frontend:plugin
-            caption: Email
-            field: email
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Enter the primary email for the department e.g. email@nhs.uk
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /address:
-            jcr:primaryType: frontend:plugin
-            caption: Address
-            field: address
-            hint: Enter departmental address
+            caption: Page subtitle
+            field: subtitle
+            hint: Enter the page subtitle (60 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /website:
+              maxlength: '60'
+          /summary:
             jcr:primaryType: frontend:plugin
-            caption: Website
-            field: website
+            caption: Summary
+            field: summary
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Enter the url of the department website e.g. https://hee.nhs.uk/myurl
+            hint: Summarise this page (300 character limit)
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /description:
+              maxlength: '300'
+          /microHero:
             jcr:primaryType: frontend:plugin
-            caption: Description (This field is being removed)
-            field: description
+            caption: Micro-hero image
+            field: microHero
+            hint: Add an image that’s 260 pixels high and 1600 pixels wide
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Please browse for the logos to override the default header
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /pageSize:
+            jcr:primaryType: frontend:plugin
+            caption: Page size
+            field: pageSize
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /addToAZ:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: addToAZ
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

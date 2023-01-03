@@ -167,6 +167,32 @@
     </#list>
 </#macro>
 
+<#macro publicationListItem items publicationTypeMap>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+    <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
+    <@fmt.message key="publication.type" var="publicationTypeLabel"/>
+
+    <#list items as item>
+        <#assign pageURL=getInternalLinkURL(item)>
+
+        <#if pageURL != pageNotFoundURL>
+            <h3><a href="${pageURL}">${item.title}</a></h3>
+
+            <dl class="nhsuk-summary-list">
+                <@listItemRow key="${publicationTypeLabel}">
+                    ${item.publicationType}
+                </@listItemRow>
+
+                <@listItemRow key="${publishDateLabel}">
+                    ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </@listItemRow>
+            </dl>
+
+            <p>${item.summary}</p>
+        </#if>
+    </#list>
+</#macro>
+
 <#macro searchbankListItem items topicMap keyTermMap providerMap>
     <#list items as item>
         <#if item.strategyDocument?? && item.strategyDocument.mimeType != 'application/vnd.hippo.blank'>

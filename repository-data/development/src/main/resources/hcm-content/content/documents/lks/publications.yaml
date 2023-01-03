@@ -25,7 +25,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: 7500461d-b43f-4374-abd6-9e633f7c95aa
+        hippo:versionHistory: 3519537a-4012-4996-ad45-f36b35f8d3d5
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
@@ -49,7 +49,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2022-12-16T14:30:01.691Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:14:21.178Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -115,7 +115,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2022-12-16T14:30:11.735Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:45:17.903Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -181,9 +181,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2022-12-16T14:30:11.735Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:45:17.903Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-12-16T14:30:16.467Z
+          hippostdpubwf:publicationDate: 2022-12-23T14:45:20.900Z
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -230,34 +230,43 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: dec75cbc-43ed-468d-89f7-e6fd7cee024e
         hippo:name: Reasonable Adjustments Policy - Publication 1
-        hippo:versionHistory: 1152c647-ad9e-42fa-aa7b-3573aaa13fb8
+        hippo:versionHistory: 79f03354-1871-438b-9746-50b50b50d572
         /reasonable-adjustments-policy---publication-1[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: fe035321-e6fc-4583-8f38-a388ee190e8d
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:subtitle: Publication
-          hee:summary: Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu
-            erat, accumsan id imperdiet et, porttitor at sem.
+          hee:summary: "The Reasonable Adjustments Policy is part of a suite of policies\
+            \ designed to support fair and equitable assessment.\r\n\r\nWhere you\
+            \ have a condition or a disability and feel you have additional needs,\
+            \ this policy enables you to request reasonable adjustments in your final\
+            \ assessment that are aimed at min"
           hee:title: Reasonable Adjustments Policy - Publication 1
           hippo:availability: []
+          hippostd:holder: admin
           hippostd:retainable: false
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:56:01.924Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:44:48.424Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 2022-11-28T00:00:00Z
+            hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
             jcr:primaryType: hee:anchorLinks
             hee:targetHeadings: [h2, h3, h4, h5]
             hee:title: On this page
           /hee:contentBlocks[2]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document status
+            hee:headingType: H2
+            hee:shortTitle: Document
+          /hee:contentBlocks[3]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Document status</h2>
@@ -437,27 +446,35 @@
           jcr:uuid: 7044738d-dcd7-4d77-8fb3-a77760371aa1
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:subtitle: Publication
-          hee:summary: Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu
-            erat, accumsan id imperdiet et, porttitor at sem.
+          hee:summary: "The Reasonable Adjustments Policy is part of a suite of policies\
+            \ designed to support fair and equitable assessment.\r\n\r\nWhere you\
+            \ have a condition or a disability and feel you have additional needs,\
+            \ this policy enables you to request reasonable adjustments in your final\
+            \ assessment that are aimed at min"
           hee:title: Reasonable Adjustments Policy - Publication 1
           hippo:availability: [preview]
           hippostd:retainable: false
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:56:10.327Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:33:58.937Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 2022-11-28T00:00:00Z
+            hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
             jcr:primaryType: hee:anchorLinks
             hee:targetHeadings: [h2, h3, h4, h5]
             hee:title: On this page
           /hee:contentBlocks[2]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document status
+            hee:headingType: H2
+            hee:shortTitle: Document
+          /hee:contentBlocks[3]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Document status</h2>
@@ -637,28 +654,36 @@
           jcr:uuid: 7a588e28-a294-4aa2-8bb6-87ce1a3a1646
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:subtitle: Publication
-          hee:summary: Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu
-            erat, accumsan id imperdiet et, porttitor at sem.
+          hee:summary: "The Reasonable Adjustments Policy is part of a suite of policies\
+            \ designed to support fair and equitable assessment.\r\n\r\nWhere you\
+            \ have a condition or a disability and feel you have additional needs,\
+            \ this policy enables you to request reasonable adjustments in your final\
+            \ assessment that are aimed at min"
           hee:title: Reasonable Adjustments Policy - Publication 1
           hippo:availability: [live]
           hippostd:retainable: false
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:56:10.327Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:33:58.937Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-29T06:56:12.415Z
+          hippostdpubwf:publicationDate: 2022-12-23T14:34:01.332Z
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 2022-11-28T00:00:00Z
+            hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
             jcr:primaryType: hee:anchorLinks
             hee:targetHeadings: [h2, h3, h4, h5]
             hee:title: On this page
           /hee:contentBlocks[2]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document status
+            hee:headingType: H2
+            hee:shortTitle: Document
+          /hee:contentBlocks[3]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Document status</h2>
@@ -1362,3 +1387,94 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /publications:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 05d29c69-b571-43ba-994a-19a3a9601dcc
+    hippo:name: Publications
+    hippo:versionHistory: 7767d6d4-b828-445f-aaf4-8f2a1ed72190
+    /publications[1]:
+      jcr:primaryType: hee:publicationListingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: cca6894f-8d2e-4dec-b849-d8f9c52ccd84
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Curabitur non nulla sit
+      hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet
+        elit, eget tincidunt nibh pulvinar a.
+      hee:title: Publication listing/collection
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+      hippostdpubwf:lastModificationDate: 2022-12-04T17:17:43.238Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 127951c3-4d5a-44ae-a7b8-db9b81f2c738
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+    /publications[2]:
+      jcr:primaryType: hee:publicationListingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 3445486d-edb5-481f-998a-d22956d11c85
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Curabitur non nulla sit
+      hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet
+        elit, eget tincidunt nibh pulvinar a.
+      hee:title: Publication listing/collection
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+      hippostdpubwf:lastModificationDate: 2022-12-04T17:17:49.531Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 127951c3-4d5a-44ae-a7b8-db9b81f2c738
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+    /publications[3]:
+      jcr:primaryType: hee:publicationListingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f044efc6-5c13-4ef9-a44a-b618b5ddcd67
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Curabitur non nulla sit
+      hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet
+        elit, eget tincidunt nibh pulvinar a.
+      hee:title: Publication listing/collection
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+      hippostdpubwf:lastModificationDate: 2022-12-04T17:17:49.531Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-12-04T17:17:50.958Z
+      hippotranslation:id: 127951c3-4d5a-44ae-a7b8-db9b81f2c738
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
