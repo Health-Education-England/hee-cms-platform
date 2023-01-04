@@ -180,7 +180,7 @@
 
             <dl class="nhsuk-summary-list">
                 <@listItemRow key="${publicationTypeLabel}">
-                    ${item.publicationType}
+                    ${publicationTypeMap[item.publicationType]}
                 </@listItemRow>
 
                 <@listItemRow key="${publishDateLabel}">
