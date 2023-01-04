@@ -13,28 +13,32 @@ import uk.nhs.hee.web.beans.PublicationLandingPage;
 import javax.jcr.RepositoryException;
 
 public class ReportAndPublicationUtils {
+
+    private static final Logger log = LoggerFactory.getLogger(ReportAndPublicationUtils.class);
+
     /**
-     * Given a specific report bean, let's look for its parent as an associated bean
-     * @param reportBean is the one we are dealing with
+     * Given a specific report bean, let's look for its parent as an associated bean.
+     *
+     * @param reportBean     is the one we are dealing with
      * @param requestContext is from the request context that will l
      * @return a Landing page bean, we hope
      * @throws RepositoryException if there was an issue looking up the bean details or performing the query
      */
-
-    private static final Logger log = LoggerFactory.getLogger(ReportAndPublicationUtils.class);
-    public PublicationLandingPage findMyParent(HippoDocumentBean reportBean, HstRequestContext requestContext) throws RepositoryException {
+    public PublicationLandingPage findMyParent(final HippoDocumentBean reportBean, final HstRequestContext requestContext)
+            throws RepositoryException {
         try {
-            HstQuery query = ContentBeanUtils.createIncomingBeansQuery(reportBean,
+            final HstQuery query = ContentBeanUtils.createIncomingBeansQuery(reportBean,
                     requestContext.getSiteContentBaseBean(),
                     "hee:webPublications/@hippo:docbase",
                     PublicationLandingPage.class,
                     false);
-            HstQueryResult result = query.execute();
+            final HstQueryResult result = query.execute();
             if (result.getHippoBeans() != null && result.getHippoBeans().hasNext()) {
-                return (PublicationLandingPage)result.getHippoBeans().nextHippoBean();
+                return (PublicationLandingPage) result.getHippoBeans().nextHippoBean();
             }
-        } catch (QueryException e) {
-            log.error("Caught error '{}' while finding the Publication Landing Page related to the Publication (Report) Page ", e.getMessage(), e);
+        } catch (final QueryException e) {
+            log.error("Caught error '{}' while finding the Publication Landing Page " +
+                    "related to the Publication (Report) Page '{}' ", e.getMessage(), reportBean.getPath(), e);
         }
         return null;
     }

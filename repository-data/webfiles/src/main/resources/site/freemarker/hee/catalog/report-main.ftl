@@ -13,7 +13,7 @@
     <#assign docType>${docLink.filename?keep_after_last(".")}</#assign>
     <li>
         <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}  (opens in new window)">
-            ${docLink.filename?keep_before_last(".")} - <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span>
+            ${docLink.filename?keep_before_last(".")}<span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span>
         </a>
     </li>
 </#macro>
@@ -102,22 +102,47 @@
                                     <h3 class="nhsuk-heading-m">Publication Info</h3>
                                     <div class="heeuk-link-inactive-state-s">
                                         <strong>Published: </strong> ${getDefaultFormattedDate(document.publicationDate)}
-                                    </div>
-                                    <div class="heeuk-link-inactive-state-s"><strong>Updated: </strong> ${getDefaultFormattedDate(document.properties['hippostdpubwf:lastModificationDate'])}</div>
+                                    </div><br>
+
+                                    <#if document.pageLastNextReview.lastReviewed?has_content>
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Updated: </strong> ${getDefaultFormattedDate(document.pageLastNextReview.lastReviewed)}
+                                        </div><br>
+                                    </#if>
+
                                     <#if landingPage??>
                                         <div class="heeuk-link-inactive-state-s">
                                             <strong>Topics: </strong>
-                                            ${landingPage.publicationType},
+
+                                            <#--  Publication professions  -->
                                             <#if landingPage.publicationProfessions?has_content>
-                                                <#list landingPage.publicationProfessions as profession> ${profession}<#sep>,</#sep>
-                                                </#list>
+                                                <#if publicationListingPageURL?has_content>
+                                                    <#list landingPage.publicationProfessions as profession>
+                                                        <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
+                                                    </#list>
+                                                <#else>
+                                                    <#list landingPage.publicationProfessions as profession>
+                                                        ${publicationProfessionMap[profession]}<#sep>, </#sep>
+                                                    </#list>
+                                                </#if>
                                             </#if>
-                                            <#if landingPage.publicationTopics?has_content>,
-                                                <#list landingPage.publicationTopics as topic>${topic}<#sep>,</#sep>
-                                                </#list>
+
+                                            <#--  Publication topics  -->
+                                            <#if landingPage.publicationTopics?has_content>
+                                                <#if publicationListingPageURL?has_content>
+                                                    <#list landingPage.publicationTopics as topic>
+                                                        <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
+                                                    </#list>
+                                                <#else>
+                                                    <#list landingPage.publicationTopics as topic>
+                                                        ${publicationTopicMap[topic]}<#sep>, </#sep>
+                                                    </#list>
+                                                </#if>
                                             </#if>
-                                        </div>
-                                        <strong>Estimated reading time:</strong> ${landingPage.readTime} min
+                                        </div><br>
+
+                                        <#--  Read time  -->
+                                        <strong>Estimated reading time:</strong> ${landingPage.readTime} mins
                                     </#if>
                                 </div>
                             </div>
@@ -168,8 +193,6 @@
                                 </#if>
                             </#if>
                         </div>
-
-
                     </div>
                 </article>
             </div>
