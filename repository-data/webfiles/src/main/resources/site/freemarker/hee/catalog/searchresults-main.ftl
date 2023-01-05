@@ -40,15 +40,6 @@
             <div class="nhsuk-listing">
                 <div class="nhsuk-grid-row">
                     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
-                        <div class="nhsuk-listing__summary o-flex@tablet">
-                            <#-- Results number -->
-                            <@fmt.message key="results.count.text" var="resultsCountText"/>
-                            <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
-                                ${pageable.total} ${resultsCountText}
-                            </h2>
-                            <#-- End Results number -->
-                        </div>
-
                         <#if pageable??>
                             <ul class="nhsuk-list nhsuk-list--border">
                                 <@searchListItem items=pageable.items/>
