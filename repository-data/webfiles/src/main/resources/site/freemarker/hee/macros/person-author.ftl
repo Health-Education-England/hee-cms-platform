@@ -20,7 +20,7 @@
             <#assign imgBgClass=''>
             <#if person.image??>
                 <@hst.link var="personImage" hippobean=person.image/>
-                <#assign imgBgStyle=' style="background: url(\'${personImage}\')"'>
+                <#assign imgBgStyle=' style="background-image: url(\'${personImage}\')"'>
                 <#assign imgBgClass=' has-bg'>
             </#if>
             <div class="hee-card__image${imgBgClass}">
@@ -40,7 +40,7 @@
 
                 <#--  Pronouns  -->
                 <#if person.pronouns?has_content>
-                    <span class="hee-card__pronouns">${person.pronouns}</span>
+                    <span class="hee-card__pronouns" aria-label="Pronouns">${person.pronouns}</span>
                 </#if>
 
                 <#--  Job title  -->
@@ -80,21 +80,21 @@
             <#--  Website  -->
             <#if person.website?has_content>
                 <li class="hee-card__website hee-card__contact__item" aria-label="Website">
-                    <a href="${person.website}">${person.website}</a>
+                    <a href="${person.website}" title="Opens website">${person.website}</a>
                 </li>
             </#if>
 
             <#--  LinkedIn  -->
             <#if person.linkedIn?has_content>
                 <li class="hee-card__linkedin hee-card__contact__item" aria-label="Linkedin">
-                    <a href="https://www.linkedin.com/in/${person.linkedIn}">/${person.linkedIn}</a>
+                    <a href="https://www.linkedin.com/in/${person.linkedIn}" title="Opens LinkedIn">/${person.linkedIn}</a>
                 </li>
             </#if>
 
             <#--  Twitter  -->
             <#if person.twitter?has_content>
                 <li class="hee-card__twitter hee-card__contact__item" aria-label="Twitter">
-                    <a href="https://twitter.com/${person.twitter}">@${person.twitter}</a>
+                    <a href="https://twitter.com/${person.twitter}" title="Opens Twitter">@${person.twitter}</a>
                 </li>
             </#if>
         </ul>
