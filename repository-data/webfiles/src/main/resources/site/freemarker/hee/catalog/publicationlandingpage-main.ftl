@@ -6,48 +6,11 @@
 <#include "../macros/internal-link.ftl">
 <#include '../utils/author-util.ftl'>
 <#include '../utils/date-util.ftl'>
+<#include "../utils/document-formats.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
 
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.blogpost"/>
-
-<#--  Returns document format by extension  -->
-<#function getDocumentFormat extension>
-    <#switch extension?upper_case>
-        <#case 'PDF'>
-            <#assign documentFormat='Adobe Portable Document Format (PDF)'/>
-            <#break>
-        <#case 'DOC'>
-            <#assign documentFormat='Microsoft Word'/>
-            <#break>
-        <#case 'DOCX'>
-            <#assign documentFormat='Microsoft Word (OpenXML)'/>
-            <#break>
-        <#case 'PPT'>
-            <#assign documentFormat='Microsoft PowerPoint'/>
-            <#break>
-        <#case 'PPTX'>
-            <#assign documentFormat='Microsoft PowerPoint (OpenXML)'/>
-            <#break>
-        <#case 'XLS'>
-            <#assign documentFormat='Microsoft Excel'/>
-            <#break>
-        <#case 'XLSX'>
-            <#assign documentFormat='Microsoft Excel (OpenXML)'/>
-            <#break>
-        <#case 'ODS'>
-            <#assign documentFormat='OpenDocument Spreadsheet'/>
-            <#break>
-        <#case 'ODT'>
-            <#assign documentFormat='OpenDocument Text'/>
-            <#break>
-        <#default>
-            <#assign documentFormat=extension?upper_case/>
-            <#break>
-    </#switch>
-
-    <#return documentFormat>
-</#function>
 
 <#--  Renders document detail block which renders title as well  -->
 <#macro docDetailBlockForDocLink docLink>
@@ -73,8 +36,8 @@
     <div class="nhsuk-review-date" style="margin-top:0px">
         <p class="nhsuk-body-s">
             Published: ${getDefaultFormattedDate(publishedDate)}<br>
-            Updated: ${getDefaultFormattedDate(updatedDate)}<br>
-            ${fileType?upper_case}${(fileLengthInKB > 0)?then(', ' + fileLengthInKB + 'kB', '')}
+            <#if updatedDate?has_content>Updated: ${getDefaultFormattedDate(updatedDate)}<br></#if>
+            ${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}
         </p>
     </div>
 </#macro>
@@ -133,7 +96,7 @@
                                                             </a>
                                                             <@docDetailBlock
                                                                 publishedDate=publication.publicationDate
-                                                                updatedDate=publication.pageLastNextReview.lastReviewed
+                                                                updatedDate=publication.pageLastNextReview.lastReviewed!
                                                                 fileType='WEB' />
                                                         </li>
                                                     </#list>

@@ -167,6 +167,32 @@
     </#list>
 </#macro>
 
+<#macro publicationListItem items publicationTypeMap>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+    <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
+    <@fmt.message key="publication.type" var="publicationTypeLabel"/>
+
+    <#list items as item>
+        <#assign pageURL=getInternalLinkURL(item)>
+
+        <#if pageURL != pageNotFoundURL>
+            <h3><a href="${pageURL}">${item.title}</a></h3>
+
+            <dl class="nhsuk-summary-list">
+                <@listItemRow key="${publicationTypeLabel}">
+                    ${publicationTypeMap[item.publicationType]}
+                </@listItemRow>
+
+                <@listItemRow key="${publishDateLabel}">
+                    ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </@listItemRow>
+            </dl>
+
+            <p>${item.summary}</p>
+        </#if>
+    </#list>
+</#macro>
+
 <#macro searchbankListItem items topicMap keyTermMap providerMap>
     <#list items as item>
         <#if item.strategyDocument?? && item.strategyDocument.mimeType != 'application/vnd.hippo.blank'>
@@ -241,7 +267,19 @@
 
 <#macro searchListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
-
+    <#assign count = 0>
+    <#list items as item>
+        <#assign pageURL=getInternalLinkURL(item)>
+        <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || pageURL != pageNotFoundURL>
+            <#assign count = count + 1>
+        </#if>
+    </#list>
+    <div class="nhsuk-listing__summary o-flex@tablet">
+        <@fmt.message key="results.count.text" var="resultsCountText"/>
+        <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
+            ${count} ${resultsCountText}
+        </h2>
+    </div>
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
 

@@ -146,6 +146,9 @@
 [hee:guidance] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:headingsTOC] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:imagesetWithCaption] > hippogallery:imageset, hippogallery:relaxed
 
 [hee:inset] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
@@ -211,6 +214,11 @@
 [hee:publicationLandingPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:publicationListingPage] > hee:listingPage, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:publicationResource] > hippo:resource, hippogallery:relaxed
+
 [hee:report] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -255,5 +263,3 @@
 
 [hee:warningCalloutReference] > hippo:compound, hippostd:relaxed
   orderable
-
-[hee:publicationResource] > hippo:resource, hippogallery:relaxed

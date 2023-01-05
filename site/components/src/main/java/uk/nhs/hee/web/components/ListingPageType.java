@@ -14,7 +14,7 @@ import uk.nhs.hee.web.repository.ValueListIdentifier;
 public enum ListingPageType {
 
     /**
-     * A to Z Listing
+     * A to Z listing
      */
     ATOZ_LISTING(
             "atoz",
@@ -25,7 +25,7 @@ public enum ListingPageType {
             Boolean.FALSE),
 
     /**
-     * Blog Listing
+     * Blog listing
      */
     BLOG_LISTING(
             "blog",
@@ -36,7 +36,7 @@ public enum ListingPageType {
             Boolean.TRUE),
 
     /**
-     * Bulletin Listing
+     * Bulletin listing
      */
     BULLETIN_LISTING(
             "bulletin",
@@ -47,7 +47,7 @@ public enum ListingPageType {
             Boolean.FALSE),
 
     /**
-     * Case Study Listing
+     * Case study listing
      */
     CASE_STUDY_LISTING(
             "casestudy",
@@ -58,7 +58,7 @@ public enum ListingPageType {
             Boolean.FALSE),
 
     /**
-     * Event Listing
+     * Event listing
      */
     EVENT_LISTING(
             "event",
@@ -69,7 +69,7 @@ public enum ListingPageType {
             Boolean.FALSE),
 
     /**
-     * News Listing
+     * News listing
      */
     NEWS_LISTING(
             "news",
@@ -80,7 +80,18 @@ public enum ListingPageType {
             Boolean.TRUE),
 
     /**
-     * Search Listing
+     * Publication listing
+     */
+    PUBLICATION_LISTING(
+            "publication",
+            new String[]{"hee:publicationLandingPage"},
+            Boolean.TRUE,
+            HEEField.PUBLICATION_DATE.getName(),
+            StringUtils.EMPTY,
+            Boolean.FALSE),
+
+    /**
+     * Search listing
      */
     SEARCH_LISTING(
             "search",
@@ -91,7 +102,7 @@ public enum ListingPageType {
             Boolean.FALSE),
 
     /**
-     * Search Bank Listing
+     * Search bank Listing
      */
     SEARCH_BANK_LISTING(
             "searchbank",
