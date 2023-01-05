@@ -157,7 +157,7 @@
                                 <#if has_documents!true>
                                     <div class="nhsuk-card">
                                         <div class="nhsuk-card__content">
-                                            <h3 class="nhsuk-heading-m">Alternative versions ${has_documents?string}</h3>
+                                            <h3 class="nhsuk-heading-m">Alternative versions</h3>
                                             <ul class="nhsuk-resources__list">
                                                 <#list landingPage.documentVersions as link>
                                                     <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
@@ -180,7 +180,7 @@
                                 <#if has_languages!true>
                                     <div class="nhsuk-card">
                                         <div class="nhsuk-card__content">
-                                            <h3 class="nhsuk-heading-m">Languages ${has_languages?string}</h3>
+                                            <h3 class="nhsuk-heading-m">Languages</h3>
                                             <ul class="nhsuk-resources__list">
                                                 <#list landingPage.languageVersions as link>
                                                     <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
