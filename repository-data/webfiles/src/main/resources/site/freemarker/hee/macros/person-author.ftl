@@ -55,10 +55,6 @@
                     <p class="hee-card__department" aria-label="Department">${person.departmentName}</p>
                 </#if>
 
-                <#if person.departmentName?has_content>
-                    <p class="hee-card__department" aria-label="Department">${person.departmentName}</p>
-                </#if>
-
                 <#--  Organisation  -->
                 <#if person.organisation?has_content>
                     <p class="hee-card__organisation" aria-label="Organisation">${person.organisation}</p>
