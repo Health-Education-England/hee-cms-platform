@@ -13,16 +13,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print git config
+      - name: Print git config before
         run: git config --list
 
-      - name: Print git config
-        run: git submodule
         # run: git submodule foreach --quiet 'echo $name'
 
       - uses: actions/checkout@v3
         # with:
         #   submodules: false
+
+      - name: Print git config after
+        run: git config --list
+
+      - name: Print git config
+        run: git submodule
 
       - name: Set up JDK 8
         uses: actions/setup-java@v3
