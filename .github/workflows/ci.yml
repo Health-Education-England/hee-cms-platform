@@ -6,54 +6,9 @@ on:
     branches-ignore:
       - 'master'
 
-env:
-  BRC_STACK_NAME: hee
-  # BRC_MAX_DISTRIBUTIONS: 90
-  BRC_DISTRIBUTION_DELETE_COUNT: 10
-
 jobs:
-  # buildAndTest:
-  #   name: Build & Test
-
-  #   runs-on: ubuntu-latest
-
-  #   steps:
-  #     - uses: actions/checkout@v3
-
-  #     - name: Set up JDK 8
-  #       uses: actions/setup-java@v3
-  #       with:
-  #         distribution: 'zulu'
-  #         java-version: 8
-
-  #     - name: Cache maven packages
-  #       uses: actions/cache@v3
-  #       with:
-  #         path: ~/.m2
-  #         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-  #         restore-keys: ${{ runner.os }}-m2
-
-  #     - name: Configure maven settings
-  #       uses: whelk-io/maven-settings-xml-action@v21
-  #       with:
-  #         repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
-  #         plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
-  #         servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
-
-  #     - name: Compile
-  #       run: mvn -B clean compile -Pdefault --file pom.xml
-
-  #     - name: Test
-  #       run: mvn -B clean test -Pdefault --file pom.xml
-
-  # DELETE ME: Adding this temporarily for testing brCloud specific actions
-  deploy-to-dev:
-    name: Deploy to Dev Env. [on brCloud]
-    # needs: buildAndTest
-    environment: development
-
-    env:
-      BRC_ENV_NAME: development
+  buildAndTest:
+    name: Build & Test
 
     runs-on: ubuntu-latest
 
@@ -80,37 +35,8 @@ jobs:
           plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
-      - name: Package
-        run: mvn -B verify && mvn -Pdist-with-development-data -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
+      - name: Compile
+        run: mvn -B clean compile -Pdefault --file pom.xml
 
-      - name: Setting distribution path (distPath) as an output parameter
-        id: dist
-        run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
-
-      - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3.wip
-        id: cleanup
-        with:
-          brcStack: ${{ env.BRC_STACK_NAME }}
-          username: ${{ secrets.BRC_USERNAME }}
-          password: ${{ secrets.BRC_PASSWORD }}
-          # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
-          distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
-      - name: Upload distribution to Bloomreach Cloud
-        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3.wip
-        id: upload
-        with:
-          brcStack: ${{ env.BRC_STACK_NAME }}
-          username: ${{ secrets.BRC_USERNAME }}
-          password: ${{ secrets.BRC_PASSWORD }}
-          distPath: ${{ steps.dist.outputs.distPath }}
-      - name: Deploy distribution to 'development' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4.wip
-        id: deploy
-        with:
-          brcStack: ${{ env.BRC_STACK_NAME }}
-          username: ${{ secrets.BRC_USERNAME }}
-          password: ${{ secrets.BRC_PASSWORD }}
-          distId: ${{ steps.upload.outputs.distId }}
-          envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'
+      - name: Test
+        run: mvn -B clean test -Pdefault --file pom.xml
