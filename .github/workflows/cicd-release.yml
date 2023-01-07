@@ -83,7 +83,7 @@ jobs:
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
-        run: echo "::set-output name=distPath::$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)"
+        run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
         uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3.wip
