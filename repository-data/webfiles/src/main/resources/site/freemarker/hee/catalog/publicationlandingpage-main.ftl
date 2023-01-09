@@ -17,7 +17,7 @@
     </@hst.link>
 
     <li>
-        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}  (opens in new window)">
+        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}">
             ${docLink.filename?keep_before_last(".")} - ${getDocumentFormat(docLink.filename?keep_after_last("."))}
         </a>
 

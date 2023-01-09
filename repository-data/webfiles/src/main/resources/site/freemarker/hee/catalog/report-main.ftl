@@ -12,7 +12,7 @@
     </@hst.link>
     <#assign docType>${docLink.filename?keep_after_last(".")}</#assign>
     <li>
-        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}  (opens in new window)">
+        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}">
             ${docLink.filename?keep_before_last(".")}<span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType}</span>
         </a>
     </li>
