@@ -84,7 +84,7 @@ jobs:
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3.wip
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3
         id: cleanup
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -93,7 +93,7 @@ jobs:
           # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
       - name: Upload distribution to Bloomreach Cloud
-        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3.wip
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3
         id: upload
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -101,7 +101,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'development' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4.wip
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -153,7 +153,7 @@ jobs:
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3.wip
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3
         id: cleanup
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -162,7 +162,7 @@ jobs:
           # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
       - name: Upload distribution to Bloomreach Cloud
-        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3.wip
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3
         id: upload
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -170,7 +170,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'test' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4.wip
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -223,7 +223,7 @@ jobs:
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3.wip
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.3
         id: cleanup
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -232,7 +232,7 @@ jobs:
           # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
       - name: Upload distribution to Bloomreach Cloud
-        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3.wip
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.3
         id: upload
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -240,7 +240,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
       - name: Deploy distribution to 'staging' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4.wip
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
