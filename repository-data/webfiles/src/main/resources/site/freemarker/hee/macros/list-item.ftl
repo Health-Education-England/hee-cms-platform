@@ -267,19 +267,7 @@
 
 <#macro searchListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
-    <#assign count = 0>
-    <#list items as item>
-        <#assign pageURL=getInternalLinkURL(item)>
-        <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || pageURL != pageNotFoundURL>
-            <#assign count = count + 1>
-        </#if>
-    </#list>
-    <div class="nhsuk-listing__summary o-flex@tablet">
-        <@fmt.message key="results.count.text" var="resultsCountText"/>
-        <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
-            ${count} ${resultsCountText}
-        </h2>
-    </div>
+
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
 
