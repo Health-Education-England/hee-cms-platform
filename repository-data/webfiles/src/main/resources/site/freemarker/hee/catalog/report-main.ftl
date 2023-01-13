@@ -110,12 +110,14 @@
                                         </div><br>
                                     </#if>
 
+
                                     <#if landingPage??>
                                         <div class="heeuk-link-inactive-state-s">
-                                            <strong>Topics: </strong>
-
-                                            <#--  Publication professions  -->
-                                            <#if landingPage.publicationProfessions?has_content>
+                                            <strong>Publication Type: </strong>${landingPage.publicationType}
+                                        </div><br>
+                                        <#if landingPage.publicationProfessions?has_content>
+                                            <div class="heeuk-link-inactive-state-s">
+                                                <strong>Professions: </strong>
                                                 <#if publicationListingPageURL?has_content>
                                                     <#list landingPage.publicationProfessions as profession>
                                                         <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
@@ -125,10 +127,11 @@
                                                         ${publicationProfessionMap[profession]}<#sep>, </#sep>
                                                     </#list>
                                                 </#if>
-                                            </#if>
-
-                                            <#--  Publication topics  -->
-                                            <#if landingPage.publicationTopics?has_content>
+                                            </div><br>
+                                        </#if>
+                                        <#if landingPage.publicationTopics?has_content>
+                                            <div class="heeuk-link-inactive-state-s">
+                                                <strong>Topics: </strong>
                                                 <#if publicationListingPageURL?has_content>
                                                     <#list landingPage.publicationTopics as topic>
                                                         <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
@@ -138,11 +141,8 @@
                                                         ${publicationTopicMap[topic]}<#sep>, </#sep>
                                                     </#list>
                                                 </#if>
-                                            </#if>
-                                        </div><br>
-
-                                        <#--  Read time  -->
-                                        <strong>Estimated reading time:</strong> ${landingPage.readTime} mins
+                                            </div>
+                                        </#if>
                                     </#if>
                                 </div>
                             </div>
