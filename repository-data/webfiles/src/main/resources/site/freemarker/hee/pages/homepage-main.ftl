@@ -14,7 +14,7 @@
 <#else>
     <#assign heroType=' class="nhsuk-hero__wrapper"'>
 </#if>
-<main class="page page--fullwidth" id="maincontent" role="main">
+<main class="page" id="maincontent" role="main">
     <div class="page__header">
         <section class="nhsuk-hero${heroImgClass}"${backgroundImage}>
             <div class="nhsuk-width-container">
