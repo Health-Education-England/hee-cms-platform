@@ -1,0 +1,24 @@
+/content/documents/administration/valuelists/phasebannernames:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: f7fb1e17-0387-46c8-98eb-c7d0297274e9
+  hippo:name: PhaseBannerNames
+  /phasebannernames:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: fdecd47a-4a05-4f1d-b201-592f5a5558e2
+    hippo:availability: [live, preview]
+    hippotranslation:id: 5a2558d6-ccb4-4dec-8fe6-1e8b59b0aad2
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: alpha
+      selection:label: Alpha
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: beta
+      selection:label: Beta
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: live
+      selection:label: Live
