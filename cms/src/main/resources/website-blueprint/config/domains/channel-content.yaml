@@ -34,6 +34,12 @@
       hipposys:facet: jcr:path
       hipposys:type: Reference
       hipposys:value: /content/assets/{{ channelId }}
+    /exclude-{{ channelId }}-settings-folder-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: false
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/documents/{{ channelId }}/settings
   /readonly:
     jcr:primaryType: hipposys:authrole
     hipposys:groups: [ {{ channelId }}-reader ]
