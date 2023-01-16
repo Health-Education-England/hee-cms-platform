@@ -113,7 +113,12 @@
 
                                     <#if landingPage??>
                                         <div class="heeuk-link-inactive-state-s">
-                                            <strong>Publication Type: </strong>${landingPage.publicationType}
+                                            <strong>Publication Type: </strong>
+                                            <#if publicationListingPageURL?has_content>
+                                                <a href=${publicationListingPageURL}?publicationType=${landingPage.publicationType}>${publicationTypeMap[landingPage.publicationType]}</a>
+                                            <#else>
+                                                ${publicationTypeMap[landingPage.publicationType]}
+                                            </#if>
                                         </div><br>
                                         <#if landingPage.publicationProfessions?has_content>
                                             <div class="heeuk-link-inactive-state-s">
