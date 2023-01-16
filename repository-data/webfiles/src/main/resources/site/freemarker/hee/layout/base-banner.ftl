@@ -20,14 +20,14 @@
         <#--  Renders announcement/mourning/alert banners  -->
         <#assign bannerClass="">
         <#if bannerType = 'announcement'>
-            <#assign bannerClass=" hee-globalalert--dark-pink">
+            <#assign bannerClass=" hee-banner--announcement">
         <#elseif bannerType = 'mourning'>
-            <#assign bannerClass=" hee-globalalert--black">
+            <#assign bannerClass=" hee-banner--mourning">
         </#if>
 
-        <div class="hee-globalalert${bannerClass}" role="complementary">
+        <div class="hee-banner${bannerClass}" role="complementary">
             <div class="nhsuk-width-container">
-                <div class="hee-globalalert__message">
+                <div class="hee-banner__message">
                     <@hst.html hippohtml=document.bannerContent/>
                 </div>
             </div>
