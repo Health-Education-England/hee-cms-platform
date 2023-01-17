@@ -16,7 +16,7 @@ definitions:
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:banner-phase-name-validator']
-          /copy:
+          /bannerContent:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -78,7 +78,7 @@ definitions:
           /bannerContent:
             jcr:primaryType: frontend:plugin
             caption: Banner content
-            field: copy
+            field: bannerContent
             hint: Please enter your banner content. Maximum length 200 characters.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
