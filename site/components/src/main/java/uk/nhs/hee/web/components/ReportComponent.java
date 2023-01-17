@@ -79,6 +79,8 @@ public class ReportComponent extends EssentialsDocumentComponent {
                 ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName()));
         request.setModel("publicationProfessionMap",
                 ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName()));
+        request.setModel("publicationTypeMap",
+                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName()));
     }
 
     /**
