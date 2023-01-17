@@ -5,15 +5,16 @@
 <#if document??>
     <#if bannerType = 'phase'>
         <#--  Renders phase banner  -->
-        <div class="nhsuk-hee-phasebanner${(document.phase != 'live')?then('', ' nhsuk-hee-phasebanner--notag')}">
+        <div class="hee-phasebanner${(document.phase != 'live')?then('', ' hee-phasebanner--notag')}">
             <div class="nhsuk-width-container">
-                <p class="nhsuk-hee-phasebanner__content">
+                <div class="hee-phasebanner__wrapper">
                     <#if document.phase!='live'>
-                        <span class="nhsuk-hee-phasebanner__tag">${document.phase}</span>
+                        <span class="hee-phasebanner__tag">${document.phase}</span>
                     </#if>
-                    <@hst.html hippohtml=document.bannerContent var="bannerContentHTML"/>
-                    ${bannerContentHTML?replace('<p>', '')?replace('</p>', '<br><br>')?keep_before_last('<br><br>')?replace('<a ', '<a class=\'nhsuk-link\' ')}
-                </p>
+                    <div class="hee-phasebanner__content">
+                        <@hst.html hippohtml=document.bannerContent/>
+                    </div>
+                </div>
             </div>
         </div>
     <#else>
