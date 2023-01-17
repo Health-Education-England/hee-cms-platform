@@ -2,13 +2,15 @@
 <#include "../../include/imports.ftl">
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
+<#include "../macros/author-cards.ftl">
 <#include "../macros/internal-link.ftl">
+<#include '../utils/author-util.ftl'>
 <#include '../utils/date-util.ftl'>
 <#include "../utils/document-formats.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
 
-<@hst.setBundle basename="uk.nhs.hee.web.global"/>
+<@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.blogpost"/>
 
 <#--  Renders document detail block which renders title as well  -->
 <#macro docDetailBlockForDocLink docLink>
@@ -64,6 +66,17 @@
                             <section class="nhsuk-page-content__section-one">
                                 <div class="nhsuk-page-content">
 
+                                    <#-- Author and published date -->
+                                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+                                        <@fmt.message key="publication.by" var="byLabel" />
+                                        <@fmt.message key="published.on" var="publishedOnLabel"/>
+
+                                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(document.authors)}</#assign>
+
+                                        ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}<#if commaSeparatedAuthorNames?has_content>, ${byLabel} ${commaSeparatedAuthorNames}</#if>
+                                    </p>
+                                    <#-- End Author and published date -->
+
                                     <#--  Renders summary  -->
                                     <#if document.summary??>
                                         <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
@@ -117,6 +130,8 @@
                                         </div>
                                      </#if>
 
+                                    <#--  Author cards  -->
+                                    <@authorCards authors=document.authors/>
                                 </div>
                             </section>
                         </div>
