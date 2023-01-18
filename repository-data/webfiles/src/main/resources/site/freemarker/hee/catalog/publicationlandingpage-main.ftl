@@ -135,6 +135,64 @@
                                 </div>
                             </section>
                         </div>
+                        <div class="nhsuk-grid-column-one-third">
+                            <div class="nhsuk-card">
+                                <div class="nhsuk-card__content">
+                                    <h3 class="nhsuk-heading-m">Publication Info</h3>
+                                    <div class="heeuk-link-inactive-state-s">
+                                        <strong>Published: </strong> ${getDefaultFormattedDate(document.publicationDate)}
+                                    </div><br>
+
+                                    <#if document.updatedDate?has_content>
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Updated: </strong> ${getDefaultFormattedDate(document.updatedDate)}
+                                        </div><br>
+                                    </#if>
+
+                                    <div class="heeuk-link-inactive-state-s">
+                                        <strong>Publication Type: </strong>
+                                        <#if publicationListingPageURL?has_content>
+                                            <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
+                                        <#else>
+                                            ${publicationTypeMap[document.publicationType]}
+                                        </#if>
+                                    </div><br>
+
+                                    <#if document.publicationProfessions?has_content>
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Professions: </strong>
+                                            <#if publicationListingPageURL?has_content>
+                                                <#list document.publicationProfessions as profession>
+                                                    <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
+                                                </#list>
+                                            <#else>
+                                                <#list document.publicationProfessions as profession>
+                                                    ${publicationProfessionMap[profession]}<#sep>, </#sep>
+                                                </#list>
+                                            </#if>
+                                        </div><br>
+                                     </#if>
+
+                                    <#if document.publicationTopics?has_content>
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Topics: </strong>
+                                            <#if publicationListingPageURL?has_content>
+                                                <#list document.publicationTopics as topic>
+                                                    <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
+                                                </#list>
+                                            <#else>
+                                                <#list document.publicationTopics as topic>
+                                                    ${publicationTopicMap[topic]}<#sep>, </#sep>
+                                                </#list>
+                                            </#if>
+                                        </div><br>
+                                    </#if>
+
+                                    <#--  Read time  -->
+                                    <strong>Estimated reading time:</strong> ${document.readTime} mins
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </article>
             </div>
