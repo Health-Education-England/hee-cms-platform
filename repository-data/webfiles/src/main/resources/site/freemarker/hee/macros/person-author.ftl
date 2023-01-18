@@ -107,10 +107,17 @@
         </#if>
 
         <#--  Bio summary  -->
-        <#if bioSummary?has_content>
-            <@hst.html hippohtml=bioSummary var="bioSummaryHTML"/>
-            <#assign formattedBioSummaryHTML="${bioSummaryHTML?replace('<p>', '')?replace('</p>', '<br><br>')}">
-            <p class="hee-card__bio" aria-label="Bio">${formattedBioSummaryHTML?keep_before_last('<br><br>')}</p>
+        <#if (bioSummary.content?has_content || person.bio?has_content)>
+            <#assign formattedBioSummary>
+                <#if bioSummary.content?has_content>
+                    <@hst.html hippohtml=bioSummary var="bioSummaryHTML"/>
+                    ${bioSummaryHTML?replace('<p>', '')?replace('</p>', '<br><br>')?keep_before_last('<br><br>')}
+                <#else>
+                    ${person.bio}
+                </#if>
+            </#assign>
+
+            <p class="hee-card__bio" aria-label="Bio">${formattedBioSummary}</p>
         </#if>
     </div>
 </#macro>
