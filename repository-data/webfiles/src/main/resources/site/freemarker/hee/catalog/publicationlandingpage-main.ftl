@@ -143,11 +143,9 @@
                                         <strong>Published: </strong> ${getDefaultFormattedDate(document.publicationDate)}
                                     </div><br>
 
-                                    <#if document.updatedDate?has_content>
-                                        <div class="heeuk-link-inactive-state-s">
-                                            <strong>Updated: </strong> ${getDefaultFormattedDate(document.updatedDate)}
-                                        </div><br>
-                                    </#if>
+                                    <div class="heeuk-link-inactive-state-s">
+                                        <strong>Updated: </strong> ${getDefaultFormattedDate(document.updatedDate)}
+                                    </div><br>
 
                                     <div class="heeuk-link-inactive-state-s">
                                         <strong>Publication Type: </strong>
