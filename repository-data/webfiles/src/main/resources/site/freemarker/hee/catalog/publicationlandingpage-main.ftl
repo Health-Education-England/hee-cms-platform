@@ -131,7 +131,7 @@
                                      </#if>
 
                                     <#--  Author cards  -->
-                                    <@authorCards authors=document.authors/>
+                                    <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
                                 </div>
                             </section>
                         </div>

@@ -107,7 +107,7 @@
                                 </#list>
 
                                 <#--  Author cards  -->
-                                <@authorCards authors=document.authors/>
+                                <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
 
                                 <#-- End News content -->
                                 <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
