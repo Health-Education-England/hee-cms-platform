@@ -2,7 +2,7 @@
 <#include "../../include/imports.ftl">
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
-<#import "../macros/back-link.ftl">
+<#include "../macros/back-link.ftl">
 <#include "../utils/date-util.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
@@ -21,7 +21,6 @@
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Report" -->
 <#-- @ftlvariable name="landingPage" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
-
 <#if document??>
         <main id="maincontent" role="main" class="page page--rightbar">
                 <#--  Renders title & subtitle  -->
@@ -109,7 +108,7 @@
                                     <#else>
                                         ${publicationTypeMap[landingPage.publicationType]}
                                     </#if>
-                                </div><br>
+                                </div>
                                 <#if landingPage.publicationProfessions?has_content>
                                     <div class="hee-card--details__item">
                                         <span>Professions: </span>
@@ -122,7 +121,7 @@
                                                 ${publicationProfessionMap[profession]}<#sep>, </#sep>
                                             </#list>
                                         </#if>
-                                    </div><br>
+                                    </div>
                                 </#if>
                                 <#if landingPage.publicationTopics?has_content>
                                     <div class="hee-card--details__item">
