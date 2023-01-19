@@ -64,4 +64,9 @@ public class BlogPost extends BaseDocument {
     public ImageSetWithCaption getMicroHero() {
         return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:authors")
+    public List<HippoBean> getAuthors() {
+        return getLinkedBeans("hee:authors", HippoBean.class);
+    }
 }

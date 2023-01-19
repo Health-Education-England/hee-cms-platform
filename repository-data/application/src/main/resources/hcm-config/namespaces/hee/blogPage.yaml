@@ -32,7 +32,6 @@ definitions:
             hipposysedit:path: hee:author
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /summary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -107,6 +106,15 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [optional]
+          /authors:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:authors
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -151,6 +159,9 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:authors:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -184,12 +195,24 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /author:
             jcr:primaryType: frontend:plugin
-            caption: Author
+            caption: Author [This field is being removed]
             field: author
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
+            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /authors:
+            jcr:primaryType: frontend:plugin
+            caption: Authors
+            field: authors
+            hint: Browse to one or more author documents
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:author']
           /microHero:
             jcr:primaryType: frontend:plugin
             caption: Micro-hero image

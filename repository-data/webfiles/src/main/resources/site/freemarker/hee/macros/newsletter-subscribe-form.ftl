@@ -127,7 +127,7 @@
                     <#if block.newsletterSubscribeFormContentBlock.enableCaptcha>
                         <div class="nhsuk-form-group">
                             <script src=https://www.google.com/recaptcha/api.js></script>
-                            <div class="g-recaptcha" data-sitekey="6Lda1BAUAAAAABeemGvQod8rVNQQUSM2y9pFK_gS"></div>
+                            <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lda1BAUAAAAABeemGvQod8rVNQQUSM2y9pFK_gS"></div>
                         </div>
                     </#if>
 
@@ -138,7 +138,7 @@
                     <input type="hidden" name="doubleOptin" value="${block.newsletterSubscribeFormContentBlock.enableDoubleOptIn?c}" />
                 </fieldset>
 
-                <button class="nhsuk-button" type="submit">
+                <button class="nhsuk-button" disabled="disabled" type="submit">
                     ${block.newsletterSubscribeFormContentBlock.submitButtonText}
                 </button>
             </form>
