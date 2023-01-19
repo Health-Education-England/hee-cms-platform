@@ -22,6 +22,9 @@ definitions:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.OptionalEmailValidator
       regexp.pattern: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:unique-author-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.UniqueAuthorValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:numeric-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.NumericValidator

@@ -67,11 +67,11 @@
                             <#--  Renders Publication type checkbox filter  -->
                             <@renderCheckboxGroup name="publicationType" titleKey="publication.type" itemMap=publicationTypeMap selectedItemList=selectedPublicationTypes facet=publicationTypeFacet! />
 
-                            <#--  Renders Publication topics checkbox filter  -->
-                            <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=publicationTopicMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
-
                             <#--  Renders Publication professions checkbox filter  -->
                             <@renderCheckboxGroup name="publicationProfession" titleKey="publication.profession" itemMap=publicationProfessionMap selectedItemList=selectedPublicationProfessions facet=publicationProfessionFacet! />
+
+                            <#--  Renders Publication topics checkbox filter  -->
+                            <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=publicationTopicMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
 
                             <input type="hidden" name="sortBy" value="${selectedSortOrder}">
                         </form>

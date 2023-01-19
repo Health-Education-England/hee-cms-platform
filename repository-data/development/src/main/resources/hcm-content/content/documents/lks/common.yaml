@@ -2051,6 +2051,150 @@
         /hee:department:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
+  /authors:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: d5aa9b4d-8e13-4fbc-a934-2029c88d3dc0
+    hippo:name: Authors
+    hippostd:foldertype: [new-author-folder, new-author-document]
+    /james-smith:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+      hippo:name: James smith - Author
+      hippo:versionHistory: cae5f41b-1626-4cdf-823b-9606f86d39ba
+      /james-smith[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 525311c2-fcca-4e99-b1aa-6479055eb6be
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T11:36:27.442Z
+        hippostdpubwf:lastModificationDate: 2022-12-08T05:41:30.797Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 6fe9c757-1aa2-48fb-9f16-48aca5aa23bc
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+        /hee:bioSummary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Nulla porttitor accumsan tincidunt. Sed <strong>porttitor</strong> lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+            <p>Sed <a href="https://www.hee.nhs.uk/">porttitor</a> lectus nibh. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, <em>pretium ut lacinia in</em>, elementum id enim.</p>
+      /james-smith[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 8cf2418b-0e47-4b77-96bb-fedfbe70d191
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T11:36:27.442Z
+        hippostdpubwf:lastModificationDate: 2022-12-08T05:42:05.509Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 6fe9c757-1aa2-48fb-9f16-48aca5aa23bc
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+        /hee:bioSummary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Nulla porttitor accumsan tincidunt. Sed <strong>porttitor</strong> lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+            <p>Sed <a href="https://www.hee.nhs.uk/">porttitor</a> lectus nibh. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, <em>pretium ut lacinia in</em>, elementum id enim.</p>
+      /james-smith[3]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4ed860b3-e461-4953-afa2-0d8febec62b1
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T11:36:27.442Z
+        hippostdpubwf:lastModificationDate: 2022-12-08T05:42:05.509Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-12-08T05:42:08.037Z
+        hippotranslation:id: 6fe9c757-1aa2-48fb-9f16-48aca5aa23bc
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+        /hee:bioSummary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Nulla porttitor accumsan tincidunt. Sed <strong>porttitor</strong> lectus nibh. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+
+            <p>Sed <a href="https://www.hee.nhs.uk/">porttitor</a> lectus nibh. Cras ultricies ligula sed magna dictum porta. Quisque velit nisi, <em>pretium ut lacinia in</em>, elementum id enim.</p>
+    /john-doe---author:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      hippo:name: John doe - Author
+      hippo:versionHistory: b1cbfaf8-f8e5-4ec1-a0b2-e6bc18b6091e
+      /john-doe---author[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 9bb622c4-37a7-4f93-bc75-6a3d2b89464d
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T16:54:22.678Z
+        hippostdpubwf:lastModificationDate: 2022-12-07T18:14:59.825Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: aaa6db27-dd78-4b78-832b-e1d4886ab48e
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:bioSummary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: ''
+      /john-doe---author[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: ea09e392-45aa-4325-a27f-776c37c12deb
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T16:54:22.678Z
+        hippostdpubwf:lastModificationDate: 2022-12-07T18:14:56.637Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: aaa6db27-dd78-4b78-832b-e1d4886ab48e
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:bioSummary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: ''
+      /john-doe---author[3]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d2500265-28b0-4bc2-81c6-c5c0ddaff560
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T16:54:22.678Z
+        hippostdpubwf:lastModificationDate: 2022-12-07T18:14:56.637Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-12-08T05:42:11.959Z
+        hippotranslation:id: aaa6db27-dd78-4b78-832b-e1d4886ab48e
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+        /hee:bioSummary:
+          jcr:primaryType: hippostd:html
+          hippostd:content: ''
   /departments:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

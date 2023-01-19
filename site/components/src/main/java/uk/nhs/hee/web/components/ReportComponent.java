@@ -46,7 +46,7 @@ public class ReportComponent extends EssentialsDocumentComponent {
             request.setAttribute("tableComponentService", new TableComponentService());
 
             addRelatedPublicationLandingPageToModel(request, reportPage);
-            addPublicationTopicAndProfessionMapsToModel(request);
+            addPublicationTypeTopicAndProfessionMapsToModel(request);
             addPublicationListingPageURLToModel(request);
         }
     }
@@ -69,16 +69,18 @@ public class ReportComponent extends EssentialsDocumentComponent {
     }
 
     /**
-     * Adds Publication topic and profession value-list maps to model.
+     * Adds Publication type, topic and profession value-list maps to model.
      *
      * @param request the {@link HstRequest} instance.
      */
-    private void addPublicationTopicAndProfessionMapsToModel(final HstRequest request) {
+    private void addPublicationTypeTopicAndProfessionMapsToModel(final HstRequest request) {
         // Adds publications topic and profession value-lists
         request.setModel("publicationTopicMap",
                 ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName()));
         request.setModel("publicationProfessionMap",
                 ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName()));
+        request.setModel("publicationTypeMap",
+                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName()));
     }
 
     /**
