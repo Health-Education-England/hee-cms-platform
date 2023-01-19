@@ -10,6 +10,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/health-careers
+        /exclude-health-careers-settings-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/health-careers/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:

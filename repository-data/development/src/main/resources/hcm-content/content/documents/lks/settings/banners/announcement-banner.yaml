@@ -1,0 +1,91 @@
+/content/documents/lks/settings/banners/announcement-banner:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 30be7c6e-ad72-4fb2-a0dd-81b5b5a702bf
+  hippo:name: Announcement banner
+  hippo:versionHistory: 312a90bd-be5a-46aa-bde1-80c299bc237a
+  /announcement-banner[1]:
+    jcr:primaryType: hee:banner
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: e90b7e13-e23a-4b2c-9925-b0c3db71e63c
+    hee:phase: ''
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2023-01-10T15:38:07.541Z
+    hippostdpubwf:lastModificationDate: 2023-01-13T13:13:49.959Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: cfca07e6-19f1-4f8a-9029-bd60c69aa09f
+    hippotranslation:locale: en
+    /hee:bannerContent:
+      jcr:primaryType: hippostd:html
+      hippostd:content: |-
+        <h2>H2 - This is an Announcement.&nbsp;Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+
+        <h3>H3 - This is the alert text and&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></h3>
+
+        <p>Body&nbsp;- This is banner body copy&nbsp;<a href="home">this is the link</a></p>
+      /home:
+        jcr:primaryType: hippo:facetselect
+        hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /announcement-banner[2]:
+    jcr:primaryType: hee:banner
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 7177b67c-3791-4979-b31a-1dd5d48fc51a
+    hee:phase: ''
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2023-01-10T15:38:07.541Z
+    hippostdpubwf:lastModificationDate: 2023-01-13T16:26:39.841Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippotranslation:id: cfca07e6-19f1-4f8a-9029-bd60c69aa09f
+    hippotranslation:locale: en
+    /hee:bannerContent:
+      jcr:primaryType: hippostd:html
+      hippostd:content: |-
+        <h2>H2 - This is an Announcement.&nbsp;Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+
+        <h3>H3 - This is the alert text and&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></h3>
+
+        <p>Body&nbsp;- This is banner body copy&nbsp;<a href="home">this is the link</a></p>
+      /home:
+        jcr:primaryType: hippo:facetselect
+        hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /announcement-banner[3]:
+    jcr:primaryType: hee:banner
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 04a1f154-d381-43c7-9675-c2bb65c65033
+    hee:phase: ''
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2023-01-10T15:38:07.541Z
+    hippostdpubwf:lastModificationDate: 2023-01-13T13:13:49.959Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2023-01-16T09:44:48.076Z
+    hippotranslation:id: cfca07e6-19f1-4f8a-9029-bd60c69aa09f
+    hippotranslation:locale: en
+    /hee:bannerContent:
+      jcr:primaryType: hippostd:html
+      hippostd:content: |-
+        <h2>H2 - This is an Announcement.&nbsp;Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</h2>
+
+        <h3>H3 - This is the alert text and&nbsp;<a href="https://www.hee.nhs.uk/">this is the link</a></h3>
+
+        <p>Body&nbsp;- This is banner body copy&nbsp;<a href="home">this is the link</a></p>
+      /home:
+        jcr:primaryType: hippo:facetselect
+        hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []

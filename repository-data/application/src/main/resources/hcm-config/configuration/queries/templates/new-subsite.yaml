@@ -8,3 +8,17 @@ definitions:
       hippostd:foldertype: [new-translated-folder, new-document]
       hippotranslation:id: fbfc35cc-0fd3-496f-8145-8f0f7ae45b54
       hippotranslation:locale: en
+      /settings:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+        jcr:uuid: be5269a8-d7bf-48d9-9ecf-d93bbe0fa643
+        hippo:name: Settings
+        hippostd:foldertype: [new-folder]
+        hippotranslation:id: e79b221d-68ea-4866-9186-0cb46c67baf9
+        hippotranslation:locale: en
+        /banners:
+          jcr:primaryType: hippostd:folder
+          jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+          jcr:uuid: 57cc388f-c731-4b99-b021-60a50873f052
+          hippo:name: Banners
+          hippostd:foldertype: [new-banner-document]

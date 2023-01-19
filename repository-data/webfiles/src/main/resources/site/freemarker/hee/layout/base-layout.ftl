@@ -43,16 +43,26 @@
 
     <@hst.headContributions categoryIncludes="gtmNoScript" xhtml=true/>
 
+    <#--  Rendered below cookie consent, above header  -->
+    <@hst.include ref="announcement-banner"/>
+
     <@hst.include ref="header"/>
 
-    <@hst.include ref="banner"/>
+    <#--  Rendered between hub navigation and breadcrumbs  -->
+    <@hst.include ref="phase-banner"/>
 
     <@hst.include ref="breadcrumb"/>
+
+    <#--  Rendered below breadcrumbs  -->
+    <@hst.include ref="mourning-banner"/>
+
+    <#--  Rendered below breadcrumbs, below mourning  -->
+    <@hst.include ref="alert-banner"/>
 
     <@hst.include ref="main"/>
 
     <@hst.include ref="footer"/>
- 
+
     <!-- Scripts -->
     <script src="<@hst.webfile path='/js/nhsuk-4.1.0.min.js'/>" defer></script>
     <script src="<@hst.webfile path='/js/hee.min.js'/>" defer></script>
