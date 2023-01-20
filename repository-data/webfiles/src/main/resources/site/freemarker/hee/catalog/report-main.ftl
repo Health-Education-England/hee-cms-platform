@@ -87,6 +87,9 @@
                         <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
                     </div>
                     <aside class="page__rightbar">
+                        <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="h2,h3,h4,h5,h6">
+                            <h2 data-anchorlinksignore="true">Table of Contents</h2>
+                        </div>
                         <div class="hee-card hee-card--details">
                             <h3 class="nhsuk-heading-m">Publication Info</h3>
                             <div class="hee-card--details__item">

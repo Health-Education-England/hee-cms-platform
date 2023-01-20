@@ -18,8 +18,8 @@
         <@hst.param name="forceDownload" value="true"/>
     </@hst.link>
 
-    <@docIcon fileType=docLink.filename?keep_after_last(".")/>
     <div class="hee-publication-doc">
+        <@docIcon fileType=docLink.filename?keep_after_last(".")?upper_case/>
         <div class="hee-publication-doc__details">
             <h3>
                 <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}">
@@ -89,8 +89,8 @@
 
                     <#if document.webPublications?has_content>
                         <#list document.webPublications as publication>
-                            <@docIcon fileType='WEB'/>
                             <div class="hee-publication-doc">
+                                <@docIcon fileType='WEB'/>
                                 <div class="hee-publication-doc__details">
                                     <h3>
                                         <a class="nhsuk-resources__link" href="${getInternalLinkURL(publication)}">
@@ -176,7 +176,9 @@
                         </#if>
 
                         <#--  Read time  -->
-                        <span>Estimated reading time:</span> ${document.readTime} mins
+                        <div class="hee-card--details__item">
+                            <span>Estimated reading time:</span> ${document.readTime} mins
+                        </div>
                     </div>
                 </aside>
             </div>
