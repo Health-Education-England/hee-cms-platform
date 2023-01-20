@@ -20,8 +20,9 @@ import java.util.Optional;
 
 /**
  * Validates if unique Author {@code hee:author} documents are being created within CMS
- * i.e. one Author {@code hee:author} document Person {@code hee:person}. It does this by verifying
- * if there are no Author {@code hee:author} documents for the chosen Person {@code hee:person} document within CMS.
+ * i.e. one Author {@code hee:author} document per Person {@code hee:person}. It does this by verifying
+ * if there are no Author {@code hee:author} documents for the chosen Person {@code hee:person} document
+ * within the current channel.
  */
 public class UniqueAuthorValidator extends AbstractNodeValidator {
     // Logger
@@ -34,21 +35,23 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
     private static final String NODE_HEE_PERSON = "hee:person";
 
     /**
-     * Returns the Author document which references the given Person identified by {@code personId} if any.
-     * Otherwise, returns {@code null}.
+     * Returns the Author document which references the given Person identified by {@code personId} if any
+     * within the current channel identified {@code channelName}. Otherwise, returns {@code null}.
      *
-     * @param session  the {@link Session} instance.
-     * @param personId the Person Identifier/UUID whose referenced Author document needs to be returned.
-     * @return the Author document which references the given Person identified by {@code personId}.
+     * @param session     the {@link Session} instance.
+     * @param channelName the current channel name (e.g. dental, etc).
+     * @param personId    the Person Identifier/UUID whose referenced Author document needs to be returned.
+     * @return the Author document which references the given Person identified by {@code personId} if any
+     * within the current channel identified {@code channelName}. Otherwise, returns {@code null}.
      * @throws RepositoryException thrown when an error occurs while querying the referenced Author document
      *                             for the given {@code personId}.
      */
-    private static Node getReferencedAuthor(final Session session, final String personId)
+    private static Node getReferencedAuthor(final Session session, final String channelName, final String personId)
             throws RepositoryException {
         final String authorByPersonFinderQuery = String.format(
-                "/jcr:root/content/documents//element(*, hee:author)[hippostd:state = 'draft']" +
+                "/jcr:root/content/documents/%s//element(*, hee:author)[hippostd:state = 'draft']" +
                         "/element(hee:person, hippo:mirror)[@hippo:docbase='%s']/../..",
-                personId);
+                channelName, personId);
         LOGGER.debug("Formatted Author by Person Query: {}", authorByPersonFinderQuery);
 
         final Query query = session.getWorkspace().getQueryManager().createQuery(authorByPersonFinderQuery, Query.XPATH);
@@ -93,8 +96,9 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
             return Optional.empty();
         }
 
-        // Looks up for the referenced Author document/node if any
-        final Node referencedAuthorNode = getReferencedAuthor(personDocumentNode.getSession(), personId);
+        // Looks up for the referenced Author document/node if any within the current channel
+        final Node referencedAuthorNode =
+                getReferencedAuthor(personDocumentNode.getSession(), getChannelName(node.getPath()), personId);
 
         if (referencedAuthorNode != null && !referencedAuthorNode.getPath().equals(node.getParent().getPath())) {
             final Violation violation = context.createViolation(ImmutableMap.of(
@@ -105,5 +109,18 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
         }
 
         return Optional.empty();
+    }
+
+    /**
+     * Returns channel name extracted from the given {@code nodePath}.
+     *
+     * <p>If {@code /content/documents/lks/common/people/james-smith} is the node path, then it extracts
+     * and returns {@code lks} as the channel name.</p>
+     *
+     * @param nodePath the node path from which channel name needs to be extracted.
+     * @return the channel name extracted from the given {@code nodePath}.
+     */
+    private String getChannelName(final String nodePath) {
+        return nodePath.split("/")[3];
     }
 }
