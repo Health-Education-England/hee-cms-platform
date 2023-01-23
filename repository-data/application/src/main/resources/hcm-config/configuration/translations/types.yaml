@@ -4,7 +4,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Navigation cards
+        jcr:name: Card - Group
     /hippo:configuration/hippo:translations/hippo:types/hee:pageLastNextReview:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -56,7 +56,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Rich text (reusable)
+        jcr:name: Text block
     /hippo:configuration/hippo:translations/hippo:types/hee:contact:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -66,27 +66,27 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Contact card (reusable)
+        jcr:name: Card - Contact
     /hippo:configuration/hippo:translations/hippo:types/hee:blockLinksReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Block links (reusable)
+        jcr:name: Block Links
     /hippo:configuration/hippo:translations/hippo:types/hee:externalLinksCardReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: External links card (reusable)
+        jcr:name: Card - External Links
     /hippo:configuration/hippo:translations/hippo:types/hee:fileLinksCardReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Downloads card (reusable)
+        jcr:name: Card - Downloads
     /hippo:configuration/hippo:translations/hippo:types/hee:ctaCardReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Button card (reusable)
+        jcr:name: Card - Button
     /hippo:configuration/hippo:translations/hippo:types/hee:StatementBlock:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -96,7 +96,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Rich text
+        jcr:name: Free text (S)
     /hippo:configuration/hippo:translations/hippo:types/hippogallerypicker:imagelink:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -106,27 +106,27 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Action link
+        jcr:name: Action Link (S)
     /hippo:configuration/hippo:translations/hippo:types/hee:ctaCard:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Button card
+        jcr:name: '[Content Block][Sidebar] Card - Button'
     /hippo:configuration/hippo:translations/hippo:types/hee:AfterForm:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: After form
+        jcr:name: '[Settings] After form'
     /hippo:configuration/hippo:translations/hippo:types/hee:ContentCard:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Navigation card
+        jcr:name: '[Content Block][Main] Card - Group'
     /hippo:configuration/hippo:translations/hippo:types/hee:richTextBlock:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Rich text
+        jcr:name: '[Content Block][Main] Text'
     /hippo:configuration/hippo:translations/hippo:types/hee:person:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -141,22 +141,22 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Contact card
+        jcr:name: '[Content Block][Main] Card - Contact'
     /hippo:configuration/hippo:translations/hippo:types/hee:externalLinksCard:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: External links card
+        jcr:name: '[Content Block][Sidebar] Card - External Links'
     /hippo:configuration/hippo:translations/hippo:types/hee:fileLinksCard:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Downloads card
+        jcr:name: '[Content Block][Sidebar] Card - Downloads'
     /hippo:configuration/hippo:translations/hippo:types/hee:blockLinks:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Block links
+        jcr:name: '[Content Block][Main] Block Links'
     /hippo:configuration/hippo:translations/hippo:types/hee:MiniHub:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -196,7 +196,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Quick links
+        jcr:name: Card - Quick Links
     /hippo:configuration/hippo:translations/hippo:types/hee:anchorLinks:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -206,7 +206,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Navigation Map
+        jcr:name: Region Picker
     /hippo:configuration/hippo:translations/hippo:types/hee:HomePage:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -216,22 +216,22 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Banner
+        jcr:name: '[Settings] Banner'
     /hippo:configuration/hippo:translations/hippo:types/hee:mediaEmbedReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Media embed (reusable)
+        jcr:name: Media Embed
     /hippo:configuration/hippo:translations/hippo:types/hee:mediaEmbed:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Media embed
+        jcr:name: '[Content Block][Main] Media Embed'
     /hippo:configuration/hippo:translations/hippo:types/hee:tabsReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Tabs (reusable)
+        jcr:name: Tabs
     /hippo:configuration/hippo:translations/hippo:types/hee:tabPanel:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -241,7 +241,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Tabs
+        jcr:name: '[Content Block][Main] Tabs'
     /hippo:configuration/hippo:translations/hippo:types/hee:news:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -261,7 +261,7 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Inset (reusable)
+        jcr:name: Inset Text
     /hippo:configuration/hippo:translations/hippo:types/hee:atozPage:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -271,37 +271,37 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Button
+        jcr:name: '[Content Block][Main] Button'
     /hippo:configuration/hippo:translations/hippo:types/hee:buttonReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Button (reusable)
+        jcr:name: Button
     /hippo:configuration/hippo:translations/hippo:types/hee:internalLinksCard:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Internal links card
+        jcr:name: '[Content Block][Sidebar] Card - Internal Links'
     /hippo:configuration/hippo:translations/hippo:types/hee:internalLinksCardReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Internal links card (reusable)
+        jcr:name: Card - Internal Links
     /hippo:configuration/hippo:translations/hippo:types/hee:inset:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Inset
+        jcr:name: '[Content Block][Main] Inset Text'
     /hippo:configuration/hippo:translations/hippo:types/hee:details:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Details
+        jcr:name: '[Content block][Main] Details'
     /hippo:configuration/hippo:translations/hippo:types/hee:detailsReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Details (reusable)
+        jcr:name: Details
     /hippo:configuration/hippo:translations/hippo:types/hee:expanderPanel:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -311,72 +311,72 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Expander group
+        jcr:name: '[Content Block][Main] Expander Group'
     /hippo:configuration/hippo:translations/hippo:types/hee:expanderGroupReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Expander group (reusable)
+        jcr:name: Expander
     /hippo:configuration/hippo:translations/hippo:types/hee:warningCalloutReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Warning callout (reusable)
+        jcr:name: Warning Callout
     /hippo:configuration/hippo:translations/hippo:types/hee:statementCardReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Statement card (reusable)
+        jcr:name: Card - Highlight
     /hippo:configuration/hippo:translations/hippo:types/hee:statementCard:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Statement card
+        jcr:name: '[Content Block][Main] Card - Highlight'
     /hippo:configuration/hippo:translations/hippo:types/hee:newsletterSubscribeForm:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Newsletter subscribe form
+        jcr:name: '[Content Block][Main] Newsletter Signup'
     /hippo:configuration/hippo:translations/hippo:types/hee:newsletterSubscribeFormReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Newsletter subscribe form (reusable)
+        jcr:name: Newsletter Signup
     /hippo:configuration/hippo:translations/hippo:types/hee:warningCallout:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Warning callout
+        jcr:name: '[Content Block][Main] Warning Callout'
     /hippo:configuration/hippo:translations/hippo:types/hee:rightHandImage:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Righthand image
+        jcr:name: '[Content Block][Sidebar] Card - Image'
     /hippo:configuration/hippo:translations/hippo:types/hee:rightHandImageReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Righthand image (reusable)
+        jcr:name: Card - Image
     /hippo:configuration/hippo:translations/hippo:types/hee:table:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Table
+        jcr:name: '[Content Block][Main] Table'
     /hippo:configuration/hippo:translations/hippo:types/hee:tableReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Table (reusable)
+        jcr:name: Table
     /hippo:configuration/hippo:translations/hippo:types/hee:appliesToBox:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Applies to box
+        jcr:name: '[Content Block][Main] Applies To'
     /hippo:configuration/hippo:translations/hippo:types/hee:appliesToBoxReference:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Applies to box (reusable)
+        jcr:name: Applies to
     /hippo:configuration/hippo:translations/hippo:types/hee:appliesToCountry:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -411,4 +411,16 @@ definitions:
       jcr:primaryType: hipposys:resourcebundles
       /en:
         jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Headings
+        jcr:name: Table of Contents Heading
+    /hippo:configuration/hippo:translations/hippo:types/urlrewriter:xmlrule/en:
+      jcr:name: '[Settings] XML Rule'
+    /hippo:configuration/hippo:translations/hippo:types/resourcebundle:resourcebundle/en:
+      jcr:name: '[Settings] Resource Bundle'
+    /hippo:configuration/hippo:translations/hippo:types/selection:valuelist/en:
+      jcr:name: '[Settings] Value list'
+    /hippo:configuration/hippo:translations/hippo:types/urlrewriter:advancedrule/en:
+      jcr:name: '[Settings] Advanced Rule'
+    /hippo:configuration/hippo:translations/hippo:types/urlrewriter:rule/en:
+      jcr:name: '[Settings] Rule'
+    /hippo:configuration/hippo:translations/hippo:types/eforms:form/en:
+      jcr:name: '[Settings] Form'
