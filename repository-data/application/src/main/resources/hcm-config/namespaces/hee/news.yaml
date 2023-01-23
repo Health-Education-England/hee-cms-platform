@@ -114,6 +114,14 @@ definitions:
             hipposysedit:path: hee:authors
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /hideAuthorContactDetails:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:hideAuthorContactDetails
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -132,6 +140,7 @@ definitions:
           hee:summary: ''
           hee:author: ''
           hee:categories: []
+          hee:hideAuthorContactDetails: false
           /hee:relatedContent:
             jcr:primaryType: hee:contentCards
             hee:cardGroupSummary: ''
@@ -210,6 +219,15 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:author']
+          /hideAuthorContactDetails:
+            jcr:primaryType: frontend:plugin
+            caption: Hide Author contact details
+            field: hideAuthorContactDetails
+            hint: Check the box to hide the authors email address and work address.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date

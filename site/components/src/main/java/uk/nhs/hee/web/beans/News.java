@@ -69,4 +69,9 @@ public class News extends BaseDocument {
     public List<HippoBean> getAuthors() {
         return getLinkedBeans("hee:authors", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
+    public Boolean getHideAuthorContactDetails() {
+        return getSingleProperty("hee:hideAuthorContactDetails");
+    }
 }

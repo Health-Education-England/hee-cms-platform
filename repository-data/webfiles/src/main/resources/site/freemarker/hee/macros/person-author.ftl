@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 
 <#--  Renders Person for Author card  -->
-<#macro personAuthor person bioSummary>
+<#macro personAuthor person bioSummary hideAuthorContactDetails>
     <div class="hee-card hee-card--author">
 
         <#--  Author header  -->
@@ -64,19 +64,13 @@
 
         <#--  Author contact details  -->
         <ul class="hee-card__contact">
-            <#--  TODO: Phone number & extension  -->
-            <#--  <#if person.phoneNumber?has_content>
-                <li class="hee-card__phone hee-card__contact__item" aria-label="Telephone">
-                    <a href="tel:${person.phoneNumber?replace(' ', '')}" title="Opens call">${person.phoneNumber}</a>
-                    ${person.phoneExtension?has_content?then('(Ext: ' + person.phoneExtension + ')', '')}
-                </li>
-            </#if>  -->
-
-            <#--  Email  -->
-            <#if person.email?has_content>
-                <li class="hee-card__email hee-card__contact__item" aria-label="Email">
-                    <a href="mailto:${person.email}" title="Opens email">${person.email}</a>
-                </li>
+            <#if !hideAuthorContactDetails>
+                <#--  Email  -->
+                <#if person.email?has_content>
+                    <li class="hee-card__email hee-card__contact__item" aria-label="Email">
+                        <a href="mailto:${person.email}" title="Opens email">${person.email}</a>
+                    </li>
+                </#if>
             </#if>
 
             <#--  Website  -->
@@ -101,9 +95,11 @@
             </#if>
         </ul>
 
-        <#--  Address  -->
-        <#if person.address?has_content>
-            <p class="hee-card__address" aria-label="Address">${person.address?replace('\n', '<br>')}</p>
+        <#if !hideAuthorContactDetails>
+            <#--  Address  -->
+            <#if person.address?has_content>
+                <p class="hee-card__address" aria-label="Address">${person.address?replace('\n', '<br>')}</p>
+            </#if>
         </#if>
 
         <#--  Bio summary  -->
