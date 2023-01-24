@@ -128,6 +128,7 @@
                         <div class="nhsuk-form-group">
                             <script src=https://www.google.com/recaptcha/api.js></script>
                             <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lda1BAUAAAAABeemGvQod8rVNQQUSM2y9pFK_gS"></div>
+			    Please tick the reCAPTCHA box to enable the subscribe button	
                         </div>
                     </#if>
 

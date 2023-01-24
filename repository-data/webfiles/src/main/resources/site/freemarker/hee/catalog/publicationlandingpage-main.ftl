@@ -112,7 +112,7 @@
                      <#--  Documents section: END  -->
 
                     <#--  Author cards  -->
-                    <@authorCards authors=document.authors/>
+                    <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
                 </div>
 
                 <aside class="page__rightbar">
