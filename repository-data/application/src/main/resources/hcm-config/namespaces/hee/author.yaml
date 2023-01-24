@@ -25,7 +25,7 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
-          /Bio summary:
+          /bioSummary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -75,9 +75,8 @@ definitions:
           /bioSummary:
             jcr:primaryType: frontend:plugin
             caption: Bio summary
-            field: Bio summary
-            hint: Please summarise the authors experience ( maximum 250 characters
-              allowed )
+            field: bioSummary
+            hint: Please summarise the authors experience (250 characters limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
