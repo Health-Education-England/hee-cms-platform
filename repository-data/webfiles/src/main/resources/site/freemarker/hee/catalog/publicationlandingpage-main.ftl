@@ -18,166 +18,182 @@
         <@hst.param name="forceDownload" value="true"/>
     </@hst.link>
 
-    <div class="hee-publication-doc">
-        <@docIcon fileType=docLink.filename?keep_after_last(".")?upper_case/>
-        <div class="hee-publication-doc__details">
-            <h3>
-                <a href="${fileURL}" title="${docLink.filename}">
-                    ${docLink.filename?keep_before_last(".")} - ${getDocumentFormat(docLink.filename?keep_after_last("."))}
-                </a>
-            </h3>
+    <li>
+        <a class="nhsuk-resources__link" href="${fileURL}" title="${docLink.filename}">
+            ${docLink.filename?keep_before_last(".")} - ${getDocumentFormat(docLink.filename?keep_after_last("."))}
+        </a>
 
-            <@docDetailBlockPartial
-                publishedDate=docLink.properties['jcr:created']
-                updatedDate=docLink.lastModified
-                fileType=docLink.filename?keep_after_last(".")
-                fileLengthInKB=docLink.lengthKB />
-        </div>
-    </div>
+        <@docDetailBlock
+            publishedDate=docLink.properties['jcr:created']
+            updatedDate=docLink.lastModified
+            fileType=docLink.filename?keep_after_last(".")
+            fileLengthInKB=docLink.lengthKB />
+    </li>
 </#macro>
 
-<#--  Renders document detail block partial i.e. renders document published, updated, type and size  -->
-<#macro docDetailBlockPartial publishedDate updatedDate fileType fileLengthInKB=0>
-    <span>Published: ${getDefaultFormattedDate(publishedDate)}</span>
-    <#if updatedDate?has_content><span>Updated: ${getDefaultFormattedDate(updatedDate)}</span></#if>
-    <span>${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}</span>
-</#macro>
-
-<#--  Renders document icon block  -->
-<#macro docIcon fileType>
-    <div class="hee-publication-doc__wrapper">
-        <div class="hee-publication-doc__icon">
-            <div class="hee-publication-doc__icon__page"></div>
-            <div class="hee-publication-doc__icon__corner"></div>
-        </div>
-        <div class="hee-publication-doc__icon__title">${fileType}</div>
+<#--  Renders document detail block  -->
+<#macro docDetailBlock publishedDate updatedDate fileType fileLengthInKB=0>
+    <div class="nhsuk-review-date" style="margin-top:0px">
+        <p class="nhsuk-body-s">
+            Published: ${getDefaultFormattedDate(publishedDate)}<br>
+            <#if updatedDate?has_content>Updated: ${getDefaultFormattedDate(updatedDate)}<br></#if>
+            ${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}
+        </p>
     </div>
 </#macro>
 
 <#if document??>
-    <main id="maincontent" role="main" class="page page--rightbar">
-        <#--  Title & subtitle  -->
-        <div class="page__header">
+    <div class="nhsuk-width-container">
+        <main id="maincontent" role="main" class="nhsuk-main-wrapper">
             <div class="nhsuk-width-container">
-                <h1>${document.title}</h1>
-                <span class="nhsuk-caption-xl">${document.subtitle!}</span>
-            </div>
-        </div>
 
-        <div class="nhsuk-width-container">
-            <div class="page__layout">
-                <div class="page__main">
-                    <#--  Summary  -->
-                    <#if document.summary??>
-                        <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                    </#if>
-
-                    <#--  Documents section: START  -->
-                    <h2>Documents</h2>
-
-                    <#--  Publication pages [WEB versions]  -->
-                    <#if document.webPublications?has_content>
-                        <#list document.webPublications as publication>
-                            <div class="hee-publication-doc">
-                                <@docIcon fileType='WEB'/>
-                                <div class="hee-publication-doc__details">
-                                    <h3>
-                                        <a href="${getInternalLinkURL(publication)}">${publication.title} - Web</a>
-                                    </h3>
-                                    <@docDetailBlockPartial
-                                        publishedDate=publication.publicationDate
-                                        updatedDate=publication.pageLastNextReview.lastReviewed!
-                                        fileType='WEB' />
-                                </div>
-                            </div>
-                        </#list>
-                    </#if>
-
-                    <#--  Document versions  -->
-                    <#if document.documentVersions?has_content && !(document.documentVersions?size == 1 && document.documentVersions[0].mimeType == 'application/vnd.hippo.blank')>
-                        <#list document.documentVersions as link>
-                            <@docDetailBlockForDocLink docLink=link />
-                        </#list>
-                    </#if>
-
-                    <#--  Language versions  -->
-                    <#if document.languageVersions?has_content && !(document.languageVersions?size == 1 && document.languageVersions[0].mimeType == 'application/vnd.hippo.blank')>
-                        <h2>Languages</h2>
-                        <#list document.languageVersions as link>
-                            <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                <@docDetailBlockForDocLink docLink=link />
-                            </#if>
-                        </#list>
-                     </#if>
-                     <#--  Documents section: END  -->
-
-                    <#--  Author cards  -->
-                    <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
+                <#--  Renders title & subtitle  -->
+                <div class="nhsuk-grid-row">
+                    <div class="nhsuk-grid-column-two-thirds">
+                        <h1>
+                            <span role="text">${document.title}
+                                <span class="nhsuk-caption-xl nhsuk-caption--bottom">
+                                    ${document.subtitle!}
+                                </span>
+                            </span>
+                        </h1>
+                    </div>
                 </div>
 
-                <aside class="page__rightbar">
-                    <div class="hee-card hee-card--details">
-                        <h3>Publication Info</h3>
+                <article>
+                    <div class="nhsuk-grid-row">
+                        <div class="nhsuk-grid-column-two-thirds">
+                            <section class="nhsuk-page-content__section-one">
+                                <div class="nhsuk-page-content">
 
-                        <#--  Published date  -->
-                        <div class="hee-card--details__item">
-                            <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
+                                    <#-- Author and published date -->
+                                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+                                        <@fmt.message key="publication.by" var="byLabel" />
+                                        <@fmt.message key="published.on" var="publishedOnLabel"/>
+
+                                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(document.authors)}</#assign>
+
+                                        ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}<#if commaSeparatedAuthorNames?has_content>, ${byLabel} ${commaSeparatedAuthorNames}</#if>
+                                    </p>
+                                    <#-- End Author and published date -->
+
+                                    <#--  Renders summary  -->
+                                    <#if document.summary??>
+                                        <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                                    </#if>
+
+                                    <#--  Renders documents  -->
+                                    <div class="nhsuk-card">
+                                        <div class="nhsuk-card__content">
+                                            <h3 class="nhsuk-card__heading">Documents</h3>
+
+                                            <#if document.webPublications?has_content>
+                                                <ul class="nhsuk-resources__list">
+                                                    <#list document.webPublications as publication>
+                                                        <li>
+                                                            <a class="nhsuk-resources__link" href="${getInternalLinkURL(publication)}">
+                                                                ${publication.title} - Web
+                                                            </a>
+                                                            <@docDetailBlock
+                                                                publishedDate=publication.publicationDate
+                                                                updatedDate=publication.pageLastNextReview.lastReviewed!
+                                                                fileType='WEB' />
+                                                        </li>
+                                                    </#list>
+                                                </ul>
+                                            </#if>
+
+                                            <#if document.documentVersions?has_content && !(document.documentVersions?size == 1 && document.documentVersions[0].mimeType == 'application/vnd.hippo.blank')>
+                                                <ul class="nhsuk-resources__list">
+                                                    <#list document.documentVersions as link>
+                                                        <@docDetailBlockForDocLink docLink=link />
+                                                    </#list>
+                                                </ul>
+                                            </#if>
+                                        </div>
+                                    </div>
+
+                                    <#--  Renders language documents  -->
+                                    <#if document.languageVersions?has_content && !(document.languageVersions?size == 1 && document.languageVersions[0].mimeType == 'application/vnd.hippo.blank')>
+                                        <div class="nhsuk-card">
+                                            <div class="nhsuk-card__content">
+                                                <h3 class="nhsuk-card__heading">Languages</h3>
+
+                                                <ul class="nhsuk-resources__list">
+                                                    <#list document.languageVersions as link>
+                                                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                                            <@docDetailBlockForDocLink docLink=link />
+                                                        </#if>
+                                                    </#list>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                     </#if>
+
+                                    <#--  Author cards  -->
+                                    <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
+                                </div>
+                            </section>
                         </div>
+                        <div class="nhsuk-grid-column-one-third">
+                            <div class="nhsuk-card">
+                                <div class="nhsuk-card__content">
+                                    <h3 class="nhsuk-heading-m">Publication Info</h3>
+                                    <div class="heeuk-link-inactive-state-s">
+                                        <strong>Published: </strong> ${getDefaultFormattedDate(document.publicationDate)}
+                                    </div><br>
 
-                        <#--  Updated date  -->
-                        <div class="hee-card--details__item">
-                            <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
-                        </div>
+                                    <div class="heeuk-link-inactive-state-s">
+                                        <strong>Updated: </strong> ${getDefaultFormattedDate(document.updatedDate)}
+                                    </div><br>
 
-                        <#--  Publication type  -->
-                        <div class="hee-card--details__item">
-                            <span>Publication Type:</span>
-                            <#if publicationListingPageURL?has_content>
-                                <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
-                            <#else>
-                                ${publicationTypeMap[document.publicationType]}
-                            </#if>
-                        </div>
+                                    <div class="heeuk-link-inactive-state-s">
+                                        <strong>Publication Type: </strong>
+                                        <#if publicationListingPageURL?has_content>
+                                            <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
+                                        <#else>
+                                            ${publicationTypeMap[document.publicationType]}
+                                        </#if>
+                                    </div><br>
 
-                        <#--  Publication professions  -->
-                        <#if document.publicationProfessions?has_content>
-                            <div class="hee-card--details__item">
-                                <span>Professions:</span>
-                                <#if publicationListingPageURL?has_content>
-                                    <#list document.publicationProfessions as profession>
-                                        <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
-                                    </#list>
-                                <#else>
-                                    <#list document.publicationProfessions as profession>
-                                        ${publicationProfessionMap[profession]}<#sep>, </#sep>
-                                    </#list>
-                                </#if>
+                                    <#if document.publicationProfessions?has_content>
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Professions: </strong>
+                                            <#if publicationListingPageURL?has_content>
+                                                <#list document.publicationProfessions as profession>
+                                                    <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
+                                                </#list>
+                                            <#else>
+                                                <#list document.publicationProfessions as profession>
+                                                    ${publicationProfessionMap[profession]}<#sep>, </#sep>
+                                                </#list>
+                                            </#if>
+                                        </div><br>
+                                     </#if>
+
+                                    <#if document.publicationTopics?has_content>
+                                        <div class="heeuk-link-inactive-state-s">
+                                            <strong>Topics: </strong>
+                                            <#if publicationListingPageURL?has_content>
+                                                <#list document.publicationTopics as topic>
+                                                    <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
+                                                </#list>
+                                            <#else>
+                                                <#list document.publicationTopics as topic>
+                                                    ${publicationTopicMap[topic]}<#sep>, </#sep>
+                                                </#list>
+                                            </#if>
+                                        </div><br>
+                                    </#if>
+
+                                    <#--  Read time  -->
+                                    <strong>Estimated reading time:</strong> ${document.readTime} mins
+                                </div>
                             </div>
-                         </#if>
-
-                        <#--  Publication topics  -->
-                        <#if document.publicationTopics?has_content>
-                            <div class="hee-card--details__item">
-                                <span>Topics:</span>
-                                <#if publicationListingPageURL?has_content>
-                                    <#list document.publicationTopics as topic>
-                                        <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
-                                    </#list>
-                                <#else>
-                                    <#list document.publicationTopics as topic>
-                                        ${publicationTopicMap[topic]}<#sep>, </#sep>
-                                    </#list>
-                                </#if>
-                            </div>
-                        </#if>
-
-                        <#--  Read time  -->
-                        <div class="hee-card--details__item">
-                            <span>Estimated reading time:</span> ${document.readTime} mins
                         </div>
                     </div>
-                </aside>
+                </article>
             </div>
-        </div>
-    </main>
+        </main>
+    </div>
 </#if>
