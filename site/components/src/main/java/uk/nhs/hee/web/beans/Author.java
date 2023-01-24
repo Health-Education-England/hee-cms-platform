@@ -14,7 +14,7 @@ public class Author extends BaseDocument {
     }
 
     @HippoEssentialsGenerated(internalName = "hee:bioSummary")
-    public HippoHtml getBioSummary() {
-        return getHippoHtml("hee:bioSummary");
+    public String getBioSummary() {
+        return getSingleProperty("hee:bioSummary");
     }
 }
