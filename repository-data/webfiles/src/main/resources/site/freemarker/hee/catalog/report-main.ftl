@@ -30,7 +30,7 @@
         <#--  Title & subtitle  -->
         <div class="page__header">
             <div class="nhsuk-width-container">
-                <h1>${document.title}</h1>
+                <h1 id="publication-title">${document.title}</h1>
                 <span class="nhsuk-caption-xl">${document.subtitle!}</span>
             </div>
         </div>
