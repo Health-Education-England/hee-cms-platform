@@ -98,10 +98,14 @@ definitions:
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks:
+            jcr:primaryType: hee:anchorLinks
+            hee:targetHeadings: [h2, h3, h4, h5]
+            hee:title: On this page
+          /hee:contentBlocks[2]:
             jcr:primaryType: hee:headingsTOC
             hee:headingTitle: ''
             hee:shortTitle: ''
-          /hee:contentBlocks[2]:
+          /hee:contentBlocks[3]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
           /hee:logoGroup:
