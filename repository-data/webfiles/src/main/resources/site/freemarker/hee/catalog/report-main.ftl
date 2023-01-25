@@ -4,7 +4,6 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/back-link.ftl">
 <#include "../utils/date-util.ftl">
-<#include "../utils/document-formats.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -17,7 +16,7 @@
 
     <div class="hee-card--details__item">
         <a class="hee-resources__link" href="${fileURL}" title="${docLink.filename}">
-            <span class="hee-resources__text">${docLink.filename?keep_before_last(".")} - ${getDocumentFormat(docLink.filename?keep_after_last("."))}</span>
+            <span class="hee-resources__text">${docLink.filename?keep_before_last(".")}</span>
             <span class="hee-resources__tag hee-resources__${docType}">${docType?upper_case}</span>
         </a>
     </div>
