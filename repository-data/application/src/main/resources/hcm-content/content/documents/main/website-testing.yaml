@@ -1,0 +1,104 @@
+/content/documents/main/website-testing:
+  .meta:order-before: home
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 8a48e316-25a2-4545-89f3-4cd4f2606ac3
+  hippo:name: Website Testing
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: ce621d52-a5e5-4405-86e1-d169f1c080bb
+  hippotranslation:locale: en
+  /settings:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 3cb55cd8-1c39-4352-b086-9893d7fa974e
+    hippo:name: Settings
+    hippostd:foldertype: [new-translated-folder]
+    hippotranslation:id: 2c9b5fd8-1286-4738-b02f-4e56825cef02
+    hippotranslation:locale: en
+    /banners:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: 17d652e5-9061-4ab1-b24f-5e692e520524
+      hippo:name: Banners
+      hippostd:foldertype: [new-banner-document]
+      hippotranslation:id: 413aee68-e64f-4f8e-a86e-c91b4e6e587b
+      hippotranslation:locale: en
+  /home:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 642acbfb-d76f-44bf-baf9-93be86e4da63
+    hippo:name: Home
+    hippo:versionHistory: bfa5f7e6-e1e8-4162-bcca-f540ff6ef8b5
+    /home[1]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: cbc2c805-085c-4279-a73e-80c5306399d9
+      hee:summary: Website Testing Channel Summary
+      hee:title: Website Testing Channel Title
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-18T10:37:37.679Z
+      hippostdpubwf:lastModificationDate: 2022-02-18T10:37:37.680Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 11ec66ac-9ed8-41a6-be35-46710b4ceb6d
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /home[2]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 1a04e5f0-0781-4fb2-95fb-e877feb4f6c2
+      hee:summary: Website Testing Channel Summary
+      hee:title: Website Testing Channel Title
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-18T10:37:37.679Z
+      hippostdpubwf:lastModificationDate: 2022-02-18T10:38:05.259Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 11ec66ac-9ed8-41a6-be35-46710b4ceb6d
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /home[3]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c796416a-9485-427b-bb24-088677c836d1
+      hee:summary: Website Testing Channel Summary
+      hee:title: Website Testing Channel Title
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-18T10:37:37.679Z
+      hippostdpubwf:lastModificationDate: 2022-02-18T10:38:05.259Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-02-18T10:38:10.192Z
+      hippotranslation:id: 11ec66ac-9ed8-41a6-be35-46710b4ceb6d
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

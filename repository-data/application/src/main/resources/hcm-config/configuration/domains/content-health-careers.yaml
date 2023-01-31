@@ -9,13 +9,13 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/health-careers
+          hipposys:value: /content/documents/main/health-careers
         /exclude-health-careers-settings-folder-and-descendants:
           jcr:primaryType: hipposys:facetrule
           hipposys:equals: false
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/health-careers/settings
+          hipposys:value: /content/documents/main/health-careers/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -27,6 +27,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /editor:
@@ -40,6 +41,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /gallery-domain:
@@ -49,7 +51,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/health-careers
+          hipposys:value: /content/gallery/main/health-careers
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /health-careers-assets-and-descendants:
@@ -57,7 +59,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/health-careers
+          hipposys:value: /content/assets/main/health-careers
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -69,5 +71,6 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []

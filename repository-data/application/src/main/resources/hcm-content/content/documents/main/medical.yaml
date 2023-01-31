@@ -1,0 +1,343 @@
+/content/documents/main/medical:
+  .meta:order-before: health-careers
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 25e9ba43-0cee-4fb2-9c10-edb95c540cf0
+  hippo:name: Medical
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: b41f155a-a0d6-471b-80ad-64cbf789c1cd
+  hippotranslation:locale: en
+  /settings:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: c384ab99-2be0-453a-88a5-86db286b2b74
+    hippo:name: Settings
+    hippostd:foldertype: [new-translated-folder]
+    hippotranslation:id: 72ecc7ac-16c3-4da0-9986-8fbff14a1c8a
+    hippotranslation:locale: en
+    /banners:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: 45cca752-0ee0-41b7-9818-2abf8c53096b
+      hippo:name: Banners
+      hippostd:foldertype: [new-banner-document]
+      hippotranslation:id: 74696ee7-9164-4b01-b6ee-394d83e5fab9
+      hippotranslation:locale: en
+  /home:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 5be20824-9939-40c0-b6a3-e291fbba5f74
+    hippo:name: Home
+    hippo:versionHistory: 150dd121-fc25-4e8b-a4dc-cdbef58ed0a6
+    /home[1]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 439d508a-6002-4164-afd7-804783b533d5
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-08-16T13:21:13.933+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:59.506Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: a91e30b9-5e8e-44b8-8317-7d1aacde3be9
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Medical Home
+        hee:text: "Massa amet massa vivamus metus hendrerit maecenas gravida gravida\
+          \ ex commodo facilisis sem phasellus interdum nulla consectetur fusce bibendum\
+          \ sollicitudin portaest dolor tortor diam aliquam.\r\n\r\nAc consectetur\
+          \ bibendum euismod ipsum massa dolor urna enim interdum quis mi felis tincidunt\
+          \ id sit scelerisque maecenas eros fusce a bibendum ut mi leo."
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Accumsan eget consectetur eros et portaest lacus vivamus amet enim bibendum pellentesque hendrerit interdum ipsum ex adipiscing amet fusce quam felis nulla vel cursus quis.</p>
+
+          <p>Nisl nulla ac suspendisse bibendum purus nulla tortor amet orci quisque tempus proin cursus cursus nec felis aliquam sollicitudin arcu massa felis rutrum sem vivamus.</p>
+
+          <p>Sem ut orci adipiscing metus tortor sollicitudin enim euismod fusce ex tincidunt tristique commodo bibendum purus nunc aliquam ex maecenas fusce eget nulla ac maximus.</p>
+    /home[2]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 36da4d95-4dd8-4965-b076-aa0642f7deb4
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-08-16T13:21:13.933+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:13:06.617Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: a91e30b9-5e8e-44b8-8317-7d1aacde3be9
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Medical Home
+        hee:text: "Massa amet massa vivamus metus hendrerit maecenas gravida gravida\
+          \ ex commodo facilisis sem phasellus interdum nulla consectetur fusce bibendum\
+          \ sollicitudin portaest dolor tortor diam aliquam.\r\n\r\nAc consectetur\
+          \ bibendum euismod ipsum massa dolor urna enim interdum quis mi felis tincidunt\
+          \ id sit scelerisque maecenas eros fusce a bibendum ut mi leo."
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Accumsan eget consectetur eros et portaest lacus vivamus amet enim bibendum pellentesque hendrerit interdum ipsum ex adipiscing amet fusce quam felis nulla vel cursus quis.</p>
+
+          <p>Nisl nulla ac suspendisse bibendum purus nulla tortor amet orci quisque tempus proin cursus cursus nec felis aliquam sollicitudin arcu massa felis rutrum sem vivamus.</p>
+
+          <p>Sem ut orci adipiscing metus tortor sollicitudin enim euismod fusce ex tincidunt tristique commodo bibendum purus nunc aliquam ex maecenas fusce eget nulla ac maximus.</p>
+    /home[3]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 6047b9d2-e203-4b6c-bfcf-64d71bef3ee2
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-08-16T13:21:13.933+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:13:06.617Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-12-07T00:13:08.452Z
+      hippotranslation:id: a91e30b9-5e8e-44b8-8317-7d1aacde3be9
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Medical Home
+        hee:text: "Massa amet massa vivamus metus hendrerit maecenas gravida gravida\
+          \ ex commodo facilisis sem phasellus interdum nulla consectetur fusce bibendum\
+          \ sollicitudin portaest dolor tortor diam aliquam.\r\n\r\nAc consectetur\
+          \ bibendum euismod ipsum massa dolor urna enim interdum quis mi felis tincidunt\
+          \ id sit scelerisque maecenas eros fusce a bibendum ut mi leo."
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Accumsan eget consectetur eros et portaest lacus vivamus amet enim bibendum pellentesque hendrerit interdum ipsum ex adipiscing amet fusce quam felis nulla vel cursus quis.</p>
+
+          <p>Nisl nulla ac suspendisse bibendum purus nulla tortor amet orci quisque tempus proin cursus cursus nec felis aliquam sollicitudin arcu massa felis rutrum sem vivamus.</p>
+
+          <p>Sem ut orci adipiscing metus tortor sollicitudin enim euismod fusce ex tincidunt tristique commodo bibendum purus nunc aliquam ex maecenas fusce eget nulla ac maximus.</p>
+  /specialty-training-hub:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 6c0e043d-7dbd-4d41-be3a-a7548f51b0eb
+    hippo:name: Specialty Training Hub
+    hippo:versionHistory: d709eb25-6860-4eb3-a332-7e5506de19c9
+    /specialty-training-hub[1]:
+      jcr:primaryType: hee:landingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 7459e685-51e3-42af-bda7-162e0ae67fd0
+      hee:addToAZ: false
+      hee:summary: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+        sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
+        a.
+      hee:title: Specialty Training Hub
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-07-13T12:53:27.871+01:00
+      hippostdpubwf:lastModificationDate: 2022-07-13T12:53:27.871+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 51c7a4fc-cdfa-4c1a-b0cd-aa0352db5c10
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /specialty-training-hub[2]:
+      jcr:primaryType: hee:landingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 003cfce5-93cf-4331-9afd-67b54a9bb9b5
+      hee:addToAZ: false
+      hee:summary: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+        sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
+        a.
+      hee:title: Specialty Training Hub
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-07-13T12:53:27.871+01:00
+      hippostdpubwf:lastModificationDate: 2022-07-13T12:54:40.293+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 51c7a4fc-cdfa-4c1a-b0cd-aa0352db5c10
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /specialty-training-hub[3]:
+      jcr:primaryType: hee:landingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f80f5959-0088-43f1-b04d-3203e046983f
+      hee:addToAZ: false
+      hee:summary: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
+        sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
+        a.
+      hee:title: Specialty Training Hub
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-07-13T12:53:27.871+01:00
+      hippostdpubwf:lastModificationDate: 2022-07-13T12:54:40.293+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-07-13T12:54:42.397+01:00
+      hippotranslation:id: 51c7a4fc-cdfa-4c1a-b0cd-aa0352db5c10
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /medical-trainee-recruitment:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 744182a0-2152-43a3-9230-2f69b1e7f562
+    hippo:name: Medical Trainee Recruitment
+    hippo:versionHistory: ccc9a66a-460e-40bc-a0e6-c00157fc8a3c
+    /medical-trainee-recruitment[1]:
+      jcr:primaryType: hee:landingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 9fef39ce-1266-4e42-aeab-a97aa464a642
+      hee:addToAZ: true
+      hee:summary: Supporting  medical teams in their application for specialty training
+        in the NHS in the UK, and providing information on any changes to the national
+        recruitment and selection process.
+      hee:title: Medical Training Recruitment.
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
+      hippostdpubwf:lastModificationDate: 2022-07-13T12:48:05.065+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 925c989c-3a40-4a7d-bafd-3db1dac8e4e5
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: test Card group summary
+        hee:header: test header
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /medical-trainee-recruitment[2]:
+      jcr:primaryType: hee:landingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 85d3608a-2c1d-4ebe-acd0-7841f3662a34
+      hee:addToAZ: true
+      hee:summary: Supporting  medical teams in their application for specialty training
+        in the NHS in the UK, and providing information on any changes to the national
+        recruitment and selection process.
+      hee:title: Medical Training Recruitment.
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
+      hippostdpubwf:lastModificationDate: 2022-07-13T12:47:49.531+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 925c989c-3a40-4a7d-bafd-3db1dac8e4e5
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: test Card group summary
+        hee:header: test header
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /medical-trainee-recruitment[3]:
+      jcr:primaryType: hee:landingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: a04b7f69-9212-49cc-b333-73049fbc9742
+      hee:addToAZ: true
+      hee:summary: Supporting  medical teams in their application for specialty training
+        in the NHS in the UK, and providing information on any changes to the national
+        recruitment and selection process.
+      hee:title: Medical Training Recruitment.
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
+      hippostdpubwf:lastModificationDate: 2022-07-13T12:48:05.065+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-07-13T12:48:07.046+01:00
+      hippotranslation:id: 925c989c-3a40-4a7d-bafd-3db1dac8e4e5
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: test Card group summary
+        hee:header: test header
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

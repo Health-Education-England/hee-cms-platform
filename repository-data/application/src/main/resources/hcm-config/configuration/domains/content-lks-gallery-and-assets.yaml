@@ -21,7 +21,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/lks
+          hipposys:value: /content/gallery/main/lks
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /documents-only:
@@ -41,7 +41,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/lks
+          hipposys:value: /content/assets/main/lks
       /readwrite:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -53,5 +53,6 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []

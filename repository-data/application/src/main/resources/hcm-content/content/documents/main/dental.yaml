@@ -1,0 +1,278 @@
+/content/documents/main/dental:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: e52c098d-4c1e-40df-a48c-5422146ea3d5
+  hippo:name: Dental
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 0ba2f232-f88b-4646-b746-1366b35b201c
+  hippotranslation:locale: en
+  /settings:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: a8a4541e-de26-47a0-ad05-19a521a711d2
+    hippo:name: Settings
+    hippostd:foldertype: [new-translated-folder]
+    hippotranslation:id: 61829fef-7b29-4f23-b783-ad2ead3e5523
+    hippotranslation:locale: en
+    /banners:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: 8c2fef9d-bc88-4744-b960-e80d840b23b8
+      hippo:name: Banners
+      hippostd:foldertype: [new-banner-document]
+      hippotranslation:id: 5a0d44fc-ce45-4b32-9936-242cd1a56ecd
+      hippotranslation:locale: en
+  /home:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 1e0005cc-794d-47cb-9f8e-a1a0729de8b9
+    hippo:name: Home
+    hippo:versionHistory: e264326e-45ad-47dc-8ab2-700637a4f2f2
+    /home[1]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f7ce909f-0300-4004-969c-edff9fb33004
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-07-13T15:47:59.693+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:45.329Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 70bca06c-b94f-46b8-83af-663da5696850
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Dental Header
+        hee:text: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
+          ac diam sit amet quam vehicula elementum sed sit amet dui.
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
+
+          <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
+
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    /home[2]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 25c306f6-1690-46e5-94da-4eaf26d083c5
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-07-13T15:47:59.693+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:52.849Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 70bca06c-b94f-46b8-83af-663da5696850
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Dental Header
+        hee:text: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
+          ac diam sit amet quam vehicula elementum sed sit amet dui.
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
+
+          <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
+
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    /home[3]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 590c77ed-22b1-4618-a7ee-8764980c79a1
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-07-13T15:47:59.693+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:52.849Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-12-07T00:12:54.743Z
+      hippotranslation:id: 70bca06c-b94f-46b8-83af-663da5696850
+      hippotranslation:locale: en
+      /hee:HeroSection:
+        jcr:primaryType: hee:HeroSection
+        hee:header: Dental Header
+        hee:text: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
+          ac diam sit amet quam vehicula elementum sed sit amet dui.
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
+
+          <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
+
+          <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  /landing-pages:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: cb357f45-96e6-4c27-9ef9-8f2790b9e7d9
+    hippo:name: Landing Pages
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 4a0587df-cb94-48fb-9009-e6bfc9ef0a60
+    hippotranslation:locale: en
+    /dental-trainee-recruitment:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e0b514a3-4f9f-4523-bc1c-30b2a2fae24b
+      hippo:name: Dental Trainee Recruitment
+      hippo:versionHistory: 16f094bb-2603-4409-aa58-c5dfb5e1d7f1
+      /dental-trainee-recruitment[1]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: fe4004c4-e44a-4003-b0f2-d944c7c51eec
+        hee:summary: Supporting doctors and dentists in their application for specialty
+          training in the NHS in the UK, and providing information on any changes
+          to the national recruitment and selection process.
+        hee:title: Dental Trainee Recruitment.
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
+        hippostdpubwf:lastModificationDate: 2021-12-23T12:54:10.817Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1dca33bd-3684-4b88-8919-cab458d922e9
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /dental-trainee-recruitment[2]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: aaca8441-19bf-4d18-a1d6-318f93fc10e4
+        hee:summary: Supporting doctors and dentists in their application for specialty
+          training in the NHS in the UK, and providing information on any changes
+          to the national recruitment and selection process.
+        hee:title: Dental Trainee Recruitment.
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
+        hippostdpubwf:lastModificationDate: 2021-12-23T12:55:17.675Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1dca33bd-3684-4b88-8919-cab458d922e9
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /dental-trainee-recruitment[3]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 673556b3-28e8-4a76-b1a1-24e0c24f99a7
+        hee:summary: Supporting doctors and dentists in their application for specialty
+          training in the NHS in the UK, and providing information on any changes
+          to the national recruitment and selection process.
+        hee:title: Dental Trainee Recruitment.
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
+        hippostdpubwf:lastModificationDate: 2021-12-23T12:55:17.675Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-12-23T12:55:21.620Z
+        hippotranslation:id: 1dca33bd-3684-4b88-8919-cab458d922e9
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /listing-pages:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 1d39bb0d-94d9-48b2-b7b4-dafbbb8cd49d
+    hippo:name: Listing Pages
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 019d4fbe-b96c-45d9-b31e-b52425c2d426
+    hippotranslation:locale: en
+    /search-results:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: f0d7360b-7522-4efc-aa65-f18a3e0187fb
+      hippo:name: Search Results
+      hippo:versionHistory: 946fd226-229e-4721-a595-4a8c8f426ebc
+      /search-results[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 5d3acd10-82a7-454e-82aa-4af15b9d5147
+        hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
+          'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search for terms within Dental.
+        hee:title: Search
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
+        hippostdpubwf:lastModificationDate: 2021-11-08T01:00:16.780Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 08e188dd-bcf7-4916-b651-2655ac848014
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /search-results[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 23184c53-a999-427e-947e-74873385bbde
+        hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
+          'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search for terms within Dental.
+        hee:title: Search
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
+        hippostdpubwf:lastModificationDate: 2021-11-08T01:00:16.780Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-12-23T10:34:17.390Z
+        hippotranslation:id: 08e188dd-bcf7-4916-b651-2655ac848014
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []

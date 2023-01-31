@@ -1,0 +1,15 @@
+/content/documents/main/settings:
+  .meta:order-before: lks
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 3c4a995a-5a6f-44a2-81ec-065ed6f52419
+  hippo:name: Settings
+  hippostd:foldertype: [new-folder]
+  hippotranslation:id: e79b221d-68ea-4866-9186-0cb46c67baf9
+  hippotranslation:locale: en
+  /banners:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 70aa641f-d367-4ec6-b191-91329cc412eb
+    hippo:name: Banners
+    hippostd:foldertype: [new-banner-document]

@@ -9,13 +9,13 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/lks
+          hipposys:value: /content/documents/main/lks
         /exclude-lks-settings-folder-and-descendants:
           jcr:primaryType: hipposys:facetrule
           hipposys:equals: false
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/lks/settings
+          hipposys:value: /content/documents/main/lks/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -39,7 +39,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/lks
+          hipposys:value: /content/gallery/main/lks
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /lks-assets-and-descendants:
@@ -47,7 +47,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/lks
+          hipposys:value: /content/assets/main/lks
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:

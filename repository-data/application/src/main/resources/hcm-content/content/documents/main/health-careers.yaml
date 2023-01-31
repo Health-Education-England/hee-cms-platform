@@ -1,0 +1,103 @@
+/content/documents/main/health-careers:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: 7d530dbe-ed98-45e0-a5a1-66d34be1b9d3
+  hippo:name: Health Careers
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: bd6568ed-0372-427b-ad6a-5f33a8ff9a77
+  hippotranslation:locale: en
+  /settings:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: fd0dafab-79b5-43a4-9dbf-d50875e5c1c9
+    hippo:name: Settings
+    hippostd:foldertype: [new-translated-folder]
+    hippotranslation:id: fb2bf26d-7f2e-45e3-a99d-5c603e25e9aa
+    hippotranslation:locale: en
+    /banners:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: 0d663cf4-d791-4c58-9530-f976cca12985
+      hippo:name: Banners
+      hippostd:foldertype: [new-banner-document]
+      hippotranslation:id: 951da5cb-b656-4a8f-a8a4-82d90c3dae23
+      hippotranslation:locale: en
+  /home:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: afcd1210-2a65-40ad-9e5e-005c5698710d
+    hippo:name: Home
+    hippo:versionHistory: e07f7bf3-c7ef-4232-bd39-1a8a152488eb
+    /home[1]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2e32865c-a7de-40bb-94b7-98b1fa01cb0f
+      hee:summary: Health Careers Initial
+      hee:title: Health Careers
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-07-12T14:08:40.856+01:00
+      hippostdpubwf:lastModificationDate: 2022-07-12T14:08:40.856+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 9c609223-0c19-4304-9350-95839d5da646
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /home[2]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 429316b2-627d-456a-b2c8-e8fbaa7a2ff5
+      hee:summary: Health Careers Initial
+      hee:title: Health Careers
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-07-12T14:08:40.856+01:00
+      hippostdpubwf:lastModificationDate: 2022-07-12T14:09:18.749+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 9c609223-0c19-4304-9350-95839d5da646
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /home[3]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 8b525d81-f326-434c-8125-741454d69876
+      hee:summary: Health Careers Initial
+      hee:title: Health Careers
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-07-12T14:08:40.856+01:00
+      hippostdpubwf:lastModificationDate: 2022-07-12T14:09:18.749+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-07-12T14:09:23.366+01:00
+      hippotranslation:id: 9c609223-0c19-4304-9350-95839d5da646
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

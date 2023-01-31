@@ -1,0 +1,301 @@
+/content/urlrewriter/main/digital-transformation:
+  jcr:primaryType: urlrewriter:ruleset
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: d44902eb-f0aa-46d8-94d5-eb4324e83942
+  hippo:name: DIGITAL TRANSFORMATION
+  hippostd:foldertype: [new-urlrewriter-folder, new-urlrewriter-document]
+  /logicmodelreportpdfredirect:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 4bd15f43-9b33-46e9-9e7c-3c1a183795cf
+    hippo:name: LogicModelReportPDFRedirect
+    hippo:versionHistory: 0b5322fd-d9c8-474f-a2e2-e11b4454b1b5
+    /logicmodelreportpdfredirect[1]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 010ab8b0-a928-4c3b-b903-21de21a9bbbd
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+      hippostdpubwf:lastModificationDate: 2022-05-31T11:20:32.569+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      urlrewriter:rule: "<rule>\r\n    <name>Temporary redirect '/digital-academy/about/logic-model/'\
+        \ for host 'digital-transformation.hee.nhs.uk'</name>\r\n    <condition name=\"\
+        host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\n\
+        \    <from>^/digital-academy/about/logic-model/?$</from>\r\n   <to type=\"\
+        temporary-redirect\" last=\"true\">/learning-and-development/digital-academy/about-the-nhs-digital-academy/logic-model</to>\r\
+        \n</rule>\r\n\r\n<rule>\r\n    <name>Temporary redirect '/digital-academy/about/logic-model/'\
+        \ for hosts other than 'digital-transformation.hee.nhs.uk'</name>\r\n    <condition\
+        \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/digital-transformation/digital-academy/about/logic-model/?$</from>\r\
+        \n   <to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/learning-and-development/digital-academy/about-the-nhs-digital-academy/logic-model</to>\r\
+        \n</rule>"
+    /logicmodelreportpdfredirect[2]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 3bca016b-3d73-4c3a-b101-0f50a81a5bed
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+      hippostdpubwf:lastModificationDate: 2022-05-31T11:20:09.334+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      urlrewriter:rule: "<rule>\r\n    <name>Temporary redirect '/digital-academy/about/logic-model/'\
+        \ for host 'digital-transformation.hee.nhs.uk'</name>\r\n    <condition name=\"\
+        host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\n\
+        \    <from>^/digital-academy/about/logic-model/?$</from>\r\n   <to type=\"\
+        temporary-redirect\" last=\"true\">/learning-and-development/digital-academy/about-the-nhs-digital-academy/logic-model</to>\r\
+        \n</rule>\r\n\r\n<rule>\r\n    <name>Temporary redirect '/digital-academy/about/logic-model/'\
+        \ for hosts other than 'digital-transformation.hee.nhs.uk'</name>\r\n    <condition\
+        \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/digital-transformation/digital-academy/about/logic-model/?$</from>\r\
+        \n   <to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/learning-and-development/digital-academy/about-the-nhs-digital-academy/logic-model</to>\r\
+        \n</rule>"
+    /logicmodelreportpdfredirect[3]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 52ecf67b-8d06-4c1c-aa16-e2a8c2d9c05b
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+      hippostdpubwf:lastModificationDate: 2022-05-31T11:20:32.569+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-05-31T11:20:35.064+01:00
+      urlrewriter:rule: "<rule>\r\n    <name>Temporary redirect '/digital-academy/about/logic-model/'\
+        \ for host 'digital-transformation.hee.nhs.uk'</name>\r\n    <condition name=\"\
+        host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\n\
+        \    <from>^/digital-academy/about/logic-model/?$</from>\r\n   <to type=\"\
+        temporary-redirect\" last=\"true\">/learning-and-development/digital-academy/about-the-nhs-digital-academy/logic-model</to>\r\
+        \n</rule>\r\n\r\n<rule>\r\n    <name>Temporary redirect '/digital-academy/about/logic-model/'\
+        \ for hosts other than 'digital-transformation.hee.nhs.uk'</name>\r\n    <condition\
+        \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/digital-transformation/digital-academy/about/logic-model/?$</from>\r\
+        \n   <to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/learning-and-development/digital-academy/about-the-nhs-digital-academy/logic-model</to>\r\
+        \n</rule>"
+  /searchtosearchresultsredirect:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: b56f6194-092c-4fe9-8d35-f4c5bb9d6b8c
+    hippo:name: SearchToSearchResultsRedirect
+    /searchtosearchresultsredirect[1]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: fae1368a-d812-42f9-b156-95fb7a4628ee
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+      hippostdpubwf:lastModificationDate: 2022-01-05T11:48:54.839Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+      urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'digital-transformation.hee.nhs.uk'\
+        \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+        >/search/results?%{query-string}</to>\r\n</rule>\r\n\r\n<rule>\r\n    <name>Search\
+        \ Redirect for hosts other than 'hee.nhs.uk'</name>\r\n    <condition name=\"\
+        host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/digital-transformation/search/?$</from>\r\
+        \n    <to type=\"redirect\" last=\"true\">/site/digital-transformation/search/results?%{query-string}</to>\r\
+        \n</rule>"
+    /searchtosearchresultsredirect[2]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 27fb3f26-cfa2-44a5-9421-aaaec4f3f06d
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+      hippostdpubwf:lastModificationDate: 2022-01-05T11:49:39.324Z
+      hippostdpubwf:lastModifiedBy: admin
+      urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'digital-transformation.hee.nhs.uk'\
+        \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+        >/search/results?%{query-string}</to>\r\n</rule>\r\n\r\n<rule>\r\n    <name>Search\
+        \ Redirect for hosts other than 'hee.nhs.uk'</name>\r\n    <condition name=\"\
+        host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/digital-transformation/search/?$</from>\r\
+        \n    <to type=\"redirect\" last=\"true\">/site/digital-transformation/search/results?%{query-string}</to>\r\
+        \n</rule>"
+    /searchtosearchresultsredirect[3]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c9d74da9-e61d-4b56-b6d3-48d1331eeeb2
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+      hippostdpubwf:lastModificationDate: 2022-01-05T11:49:39.324Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-01-05T11:49:45.168Z
+      urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'digital-transformation.hee.nhs.uk'\
+        \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\"\
+        >/search/results?%{query-string}</to>\r\n</rule>\r\n\r\n<rule>\r\n    <name>Search\
+        \ Redirect for hosts other than 'hee.nhs.uk'</name>\r\n    <condition name=\"\
+        host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n    <from>^/digital-transformation/search/?$</from>\r\
+        \n    <to type=\"redirect\" last=\"true\">/site/digital-transformation/search/results?%{query-string}</to>\r\
+        \n</rule>"
+  /shorteneddigitalacademy:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: b8de65a1-c0c1-4cbd-bd5d-80c5a82928a1
+    hippo:name: ShortenedDigitalAcademy
+    hippo:versionHistory: 6a7810af-9d58-480f-a108-5989f2128a69
+    /shorteneddigitalacademy[1]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: e9a66a74-c472-45a3-b8ec-69791c12edf8
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+      hippostdpubwf:lastModificationDate: 2022-01-27T17:09:42.804Z
+      hippostdpubwf:lastModifiedBy: admin
+      urlrewriter:rule: "<rule>\r\n    <name>Shortened Digital Academy for host 'digital-transformation.hee.nhs.uk'</name>\r\
+        \n    <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n    <from>^/digital-academy$</from>\r\n    <to type=\"temporary-redirect\"\
+        \ last=\"true\">/learning-and-development/digital-academy</to>\r\n</rule>\r\
+        \n\r\n<rule>\r\n    <name>Shortened Digital Academy for hosts other than 'hee.nhs.uk'\
+        \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+        \n    <from>^/digital-transformation/digital-academy$</from>\r\n    <to type=\"\
+        temporary-redirect\" last=\"true\">/site/digital-transformation/learning-and-development/digital-academy</to>\r\
+        \n</rule>"
+    /shorteneddigitalacademy[2]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 48b5e376-5980-405f-85b4-801e63deb0b6
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+      hippostdpubwf:lastModificationDate: 2022-11-09T15:29:42.653Z
+      hippostdpubwf:lastModifiedBy: admin
+      urlrewriter:rule: "<rule>\r\n<name>Shortened Digital Academy for host 'digital-transformation.hee.nhs.uk'</name>\r\
+        \n<condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n<from>^/digital-academy$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+        true\">/learning-and-development/digital-academy</to>\r\n</rule>\r\n\r\n\r\
+        \n<rule>\r\n    <name>Shortened Digital Academy for host 'digital-transformation.hee.nhs.uk'</name>\r\
+        \n    <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n    <from>^/digital-academy$</from>\r\n    <to type=\"temporary-redirect\"\
+        \ last=\"true\">/learning-and-development/digital-academy</to>\r\n</rule>\r\
+        \n<rule>\r\n    <name>Shortened Digital Academy for hosts other than 'hee.nhs.uk'\
+        \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+        \n    <from>^/digital-transformation/digital-academy$</from>\r\n    <to type=\"\
+        temporary-redirect\" last=\"true\">/site/digital-transformation/learning-and-development/digital-academy</to>\r\
+        \n</rule>"
+    /shorteneddigitalacademy[3]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 3c73c571-1b0b-4295-9cdd-b594fac79cc7
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-23T12:44:13.900Z
+      hippostdpubwf:lastModificationDate: 2022-01-27T17:09:42.804Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-01-27T17:09:45.244Z
+      urlrewriter:rule: "<rule>\r\n    <name>Shortened Digital Academy for host 'digital-transformation.hee.nhs.uk'</name>\r\
+        \n    <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n    <from>^/digital-academy$</from>\r\n    <to type=\"temporary-redirect\"\
+        \ last=\"true\">/learning-and-development/digital-academy</to>\r\n</rule>\r\
+        \n\r\n<rule>\r\n    <name>Shortened Digital Academy for hosts other than 'hee.nhs.uk'\
+        \ host</name>\r\n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+        \n    <from>^/digital-transformation/digital-academy$</from>\r\n    <to type=\"\
+        temporary-redirect\" last=\"true\">/site/digital-transformation/learning-and-development/digital-academy</to>\r\
+        \n</rule>"
+  /revertshorteneddigitalacademy:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: edc760b6-7868-4668-9e58-4c28514fac17
+    hippo:name: RevertShortenedDigitalAcademy
+    hippo:versionHistory: 7c1c00e2-c738-4171-a1f5-464ca49c7658
+    /revertshorteneddigitalacademy[1]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: ae585b6d-3eb0-4191-bf23-b44e0c94dc61
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-11-09T15:29:28.256Z
+      hippostdpubwf:lastModificationDate: 2022-11-09T15:31:50.524Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+      urlrewriter:rule: "<rule>\r\n<name>Revert Shortened Digital Academy for host\
+        \ 'digital-transformation.hee.nhs.uk'</name>\r\n<condition name=\"host\" operator=\"\
+        equal\">digital-transformation.hee.nhs.uk</condition>\r\n<from>^/learning-and-development/digital-academy/?$</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/digital-academy</to>\r\n\
+        </rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n<from>^/learning-and-development/digital-academy</from>\r\n<to type=\"temporary-redirect\"\
+        \ last=\"true\">/digital-academy</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Revert\
+        \ Shortened Digital Academy for hosts other than 'hee.nhs.uk' host</name>\r\
+        \n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n\
+        <from>^/digital-transformation/learning-and-development/digital-academy/?$</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/digital-academy</to>\r\
+        \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+        \n<from>^/digital-transformation/learning-and-development/digital-academy</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/digital-academy</to>\r\
+        \n</rule>"
+    /revertshorteneddigitalacademy[2]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: a9a3d62e-1ab6-4cce-8cc3-f559858a9910
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-11-09T15:29:28.256Z
+      hippostdpubwf:lastModificationDate: 2022-11-09T15:34:27.031Z
+      hippostdpubwf:lastModifiedBy: admin
+      urlrewriter:rule: "<rule>\r\n<name>Revert Shortened Digital Academy for host\
+        \ 'digital-transformation.hee.nhs.uk'</name>\r\n<condition name=\"host\" operator=\"\
+        equal\">digital-transformation.hee.nhs.uk</condition>\r\n<from>^/learning-and-development/digital-academy/?$</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/digital-academy</to>\r\n\
+        </rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n<from>^/learning-and-development/digital-academy</from>\r\n<to type=\"temporary-redirect\"\
+        \ last=\"true\">/digital-academy</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Revert\
+        \ Shortened Digital Academy for hosts other than 'hee.nhs.uk' host</name>\r\
+        \n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n\
+        <from>^/digital-transformation/learning-and-development/digital-academy/?$</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/digital-academy</to>\r\
+        \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+        \n<from>^/digital-transformation/learning-and-development/digital-academy</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/digital-academy</to>\r\
+        \n</rule>"
+    /revertshorteneddigitalacademy[3]:
+      jcr:primaryType: urlrewriter:xmlrule
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 92357221-22a1-4b5f-8786-45e44aab5123
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-11-09T15:29:28.256Z
+      hippostdpubwf:lastModificationDate: 2022-11-09T15:34:27.031Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-11-09T15:34:29.286Z
+      urlrewriter:rule: "<rule>\r\n<name>Revert Shortened Digital Academy for host\
+        \ 'digital-transformation.hee.nhs.uk'</name>\r\n<condition name=\"host\" operator=\"\
+        equal\">digital-transformation.hee.nhs.uk</condition>\r\n<from>^/learning-and-development/digital-academy/?$</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/digital-academy</to>\r\n\
+        </rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+        \n<from>^/learning-and-development/digital-academy</from>\r\n<to type=\"temporary-redirect\"\
+        \ last=\"true\">/digital-academy</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Revert\
+        \ Shortened Digital Academy for hosts other than 'hee.nhs.uk' host</name>\r\
+        \n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n\
+        <from>^/digital-transformation/learning-and-development/digital-academy/?$</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/digital-academy</to>\r\
+        \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+        \n<from>^/digital-transformation/learning-and-development/digital-academy</from>\r\
+        \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/digital-academy</to>\r\
+        \n</rule>"

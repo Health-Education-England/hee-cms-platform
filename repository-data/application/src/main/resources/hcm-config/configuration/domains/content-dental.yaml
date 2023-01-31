@@ -9,13 +9,13 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/dental
+          hipposys:value: /content/documents/main/dental
         /exclude-dental-settings-folder-and-descendants:
           jcr:primaryType: hipposys:facetrule
           hipposys:equals: false
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/dental/settings
+          hipposys:value: /content/documents/main/dental/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -27,6 +27,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /editor:
@@ -40,6 +41,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /gallery-domain:
@@ -49,7 +51,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/dental
+          hipposys:value: /content/gallery/main/dental
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /dental-assets-and-descendants:
@@ -57,7 +59,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/dental
+          hipposys:value: /content/assets/main/dental
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -69,5 +71,6 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []

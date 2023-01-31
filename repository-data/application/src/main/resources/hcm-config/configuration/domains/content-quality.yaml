@@ -9,13 +9,13 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/quality
+          hipposys:value: /content/documents/main/quality
         /exclude-quality-settings-folder-and-descendants:
           jcr:primaryType: hipposys:facetrule
           hipposys:equals: false
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/quality/settings
+          hipposys:value: /content/documents/main/quality/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -27,6 +27,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /editor:
@@ -40,6 +41,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /gallery-domain:
@@ -49,7 +51,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/quality
+          hipposys:value: /content/gallery/main/quality
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /quality-assets-and-descendants:
@@ -57,7 +59,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/quality
+          hipposys:value: /content/assets/main/quality
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -69,5 +71,6 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []

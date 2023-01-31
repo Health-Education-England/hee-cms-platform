@@ -1,0 +1,315 @@
+/content/documents/main/digital-transformation:
+  .meta:order-before: dental
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:referenceable']
+  jcr:uuid: cc02274c-9ab2-4895-bd0d-ceaac3ba0e40
+  hippo:name: Digital Transformation
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 1aafd465-eb27-45e9-bef0-4417421ab281
+  hippotranslation:locale: en
+  /settings:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 7ea8f99a-b63f-408a-ab34-cfad7ffc560f
+    hippo:name: Settings
+    hippostd:foldertype: [new-translated-folder]
+    hippotranslation:id: 0208e127-386f-42f6-8baa-97145ebd27c7
+    hippotranslation:locale: en
+    /banners:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: b9322a93-4c4a-4e26-b794-8fafd6e17a26
+      hippo:name: Banners
+      hippostd:foldertype: [new-banner-document]
+      hippotranslation:id: 8b8912e4-3270-43f0-96b5-0a71bb6e66ae
+      hippotranslation:locale: en
+  /digital-academy:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: b98ba45f-c9ab-4a46-a60e-65574539d22a
+    hippo:name: Digital Academy
+    hippo:versionHistory: a1ae103c-aeb4-488f-9c04-3d666b703c6e
+    /digital-academy[1]:
+      jcr:primaryType: hee:guidance
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 508e8401-7fd8-441a-af7e-2747216124a1
+      hee:summary: ''
+      hee:title: Digital Academy
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-01-27T16:37:38.377Z
+      hippostdpubwf:lastModificationDate: 2022-01-27T16:37:38.378Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 297958d8-cfd7-4952-b324-f27d7cb3c2fe
+      hippotranslation:locale: en
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /digital-academy[2]:
+      jcr:primaryType: hee:guidance
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 754df7b5-254a-4059-8184-a6533305d36e
+      hee:summary: ''
+      hee:title: Digital Academy
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-01-27T16:37:38.377Z
+      hippostdpubwf:lastModificationDate: 2022-01-27T16:37:50.512Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 297958d8-cfd7-4952-b324-f27d7cb3c2fe
+      hippotranslation:locale: en
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /digital-academy[3]:
+      jcr:primaryType: hee:guidance
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 39a3f582-54c5-41a0-8ef1-40824fddb6bf
+      hee:summary: ''
+      hee:title: Digital Academy
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-01-27T16:37:38.377Z
+      hippostdpubwf:lastModificationDate: 2022-01-27T16:37:50.512Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-01-27T16:37:53.062Z
+      hippotranslation:id: 297958d8-cfd7-4952-b324-f27d7cb3c2fe
+      hippotranslation:locale: en
+      /hee:relatedContent:
+        jcr:primaryType: hee:contentCards
+        hee:cardGroupSummary: ''
+        hee:header: ''
+        /hee:cards:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: ''
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /home:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 083e6069-d0c9-4fb8-865a-af0fbf730116
+    hippo:name: Home
+    hippo:versionHistory: 4491b93f-f1e5-46e1-a5d3-f333880f83fe
+    /home[1]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: b3528681-b9d3-4801-810b-8cab91b2d4bc
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-07-13T15:46:57.349+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:27.728Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: cb459d2a-db6f-47c8-a975-e8a76d004777
+      hippotranslation:locale: en
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.</p>
+
+          <p>Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada.</p>
+
+          <p>Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+    /home[2]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: cd839266-fea0-4df7-9cb9-9c1a3a854e76
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-07-13T15:46:57.349+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:37.273Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: cb459d2a-db6f-47c8-a975-e8a76d004777
+      hippotranslation:locale: en
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.</p>
+
+          <p>Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada.</p>
+
+          <p>Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+    /home[3]:
+      jcr:primaryType: hee:HomePage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 9668d3b4-f1cb-48b2-a23b-666aa7e041f9
+      hee:summary: Summary
+      hee:title: Title
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-07-13T15:46:57.349+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:37.273Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2021-12-07T00:12:39.368Z
+      hippotranslation:id: cb459d2a-db6f-47c8-a975-e8a76d004777
+      hippotranslation:locale: en
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: |-
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Cras ultricies ligula sed magna dictum porta.</p>
+
+          <p>Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Donec rutrum congue leo eget malesuada.</p>
+
+          <p>Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Donec rutrum congue leo eget malesuada.</p>
+  /listing-pages:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 5026e51d-8dad-4d9f-9d6d-301fa00cdac6
+    hippo:name: Listing Pages
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 45a7ba1c-e384-438c-911a-82929ac6620e
+    hippotranslation:locale: en
+    /search-results:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 11f617a1-1326-4f68-bbbc-0752e4b0bbb0
+      hippo:name: Search Results
+      hippo:versionHistory: d4032447-bd55-4828-8a6e-9f7ad6bb9ac1
+      /search-results[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 221dfaa1-e846-4033-9c4f-c5efe2c9134d
+        hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
+          'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search for terms within Digital Transformation.
+        hee:title: Search
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
+        hippostdpubwf:lastModificationDate: 2022-01-27T13:55:49.348Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: da34c443-bc64-44e7-86ad-d085f83f6245
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /search-results[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b4ff559e-3d15-49d9-bb7c-3c6a1772f02b
+        hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
+          'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search for terms within Digital Transformation.
+        hee:title: Search
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
+        hippostdpubwf:lastModificationDate: 2022-01-27T13:55:49.348Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-01-27T13:55:51.712Z
+        hippotranslation:id: da34c443-bc64-44e7-86ad-d085f83f6245
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /search-results[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 26b3fe7c-22bf-4af4-b7ed-c78a711604a0
+        hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
+          'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search for terms within Digital Transformation.
+        hee:title: Search
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
+        hippostdpubwf:lastModificationDate: 2022-01-27T13:55:32.485Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: da34c443-bc64-44e7-86ad-d085f83f6245
+        hippotranslation:locale: en
+        /hee:heroImage:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []

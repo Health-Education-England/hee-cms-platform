@@ -9,13 +9,13 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/website-testing
+          hipposys:value: /content/documents/main/website-testing
         /exclude-website-testing-settings-folder-and-descendants:
           jcr:primaryType: hipposys:facetrule
           hipposys:equals: false
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/website-testing/settings
+          hipposys:value: /content/documents/main/website-testing/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -27,6 +27,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /editor:
@@ -40,6 +41,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /gallery-domain:
@@ -49,7 +51,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/website-testing
+          hipposys:value: /content/gallery/main/website-testing
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /website-testing-assets-and-descendants:
@@ -57,7 +59,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/website-testing
+          hipposys:value: /content/assets/main/website-testing
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -69,5 +71,6 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []

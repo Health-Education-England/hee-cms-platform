@@ -21,7 +21,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/website-testing
+          hipposys:value: /content/assets/main/website-testing
       /readwrite:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
@@ -33,6 +33,7 @@ definitions:
         hipposys:users:
           .meta:category: system
           .meta:add-new-system-values: true
+          operation: override
           type: string
           value: []
       /gallery-domain:
@@ -54,4 +55,4 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/website-testing
+          hipposys:value: /content/gallery/main/website-testing
