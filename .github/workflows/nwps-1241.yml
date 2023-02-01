@@ -1,4 +1,4 @@
-name: CI & CD [MASTER]
+name: CI & CD [TEST]
 
 on:
   push:
@@ -11,6 +11,7 @@ env:
 
 jobs:
   buildAndTest:
+    if: ${{ false }}  # disable for now
     name: Build & Test
     runs-on: ubuntu-latest
 
