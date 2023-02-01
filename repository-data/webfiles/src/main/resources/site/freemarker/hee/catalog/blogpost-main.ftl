@@ -103,7 +103,7 @@
                         </#list>
 
                         <#--  Author cards  -->
-                        <@authorCards authors=document.authors/>
+                        <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
 
                         <#-- End Blog content -->
                         <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>

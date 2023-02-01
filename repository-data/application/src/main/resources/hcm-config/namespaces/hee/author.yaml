@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9da79316-c155-488a-b4f5-9dd097efc7f7
+          jcr:uuid: 34968a71-63ab-46c4-a232-b774fcc03fd4
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -32,7 +32,7 @@ definitions:
             hipposysedit:ordered: false
             hipposysedit:path: hee:bioSummary
             hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
+            hipposysedit:type: Text
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -44,15 +44,13 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: facb31be-cd9d-4918-b069-5ef34c7e92c6
+          jcr:uuid: 5da09463-67fe-4116-9853-27e12511724a
           hippostdpubwf:lastModificationDate: 2022-11-22T09:17:52.534Z
           hippostdpubwf:creationDate: 2022-11-22T09:17:52.534Z
+          hee:bioSummary: ''
           /hee:person:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:bioSummary:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -78,8 +76,9 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Bio summary
             field: bioSummary
-            hint: Please summarise the authors experience
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            hint: Please summarise the authors experience (250 characters limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '250'

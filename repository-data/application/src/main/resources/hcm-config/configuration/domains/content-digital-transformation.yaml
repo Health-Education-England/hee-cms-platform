@@ -10,6 +10,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/digital-transformation
+        /exclude-digital-transformation-settings-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/digital-transformation/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:

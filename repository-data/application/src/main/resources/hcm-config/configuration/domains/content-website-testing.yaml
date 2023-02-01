@@ -10,6 +10,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/website-testing
+        /exclude-website-testing-settings-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/website-testing/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
