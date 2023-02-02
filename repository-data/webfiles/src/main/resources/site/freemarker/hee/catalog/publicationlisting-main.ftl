@@ -27,7 +27,7 @@
 <#macro renderCheckboxGroup name titleKey itemMap selectedItemList facet>
     <div class="nhsuk-filter__group">
         <@fmt.message key="${titleKey}" var="filterTitle"/>
-
+        <a class="nhsuk-filter__group__clear">Clear</a>
         <@checkboxGroup title="${filterTitle}" name="${name}" items=itemMap selectedItemsList=selectedItemList facet=facet! />
     </div>
 </#macro>
