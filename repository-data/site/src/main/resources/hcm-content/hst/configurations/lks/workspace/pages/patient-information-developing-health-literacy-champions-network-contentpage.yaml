@@ -1,0 +1,28 @@
+? /hst:hst/hst:configurations/lks/hst:workspace/hst:pages/patient-information-developing-health-literacy-champions-network-contentpage
+: jcr:primaryType: hst:component
+  hst:lastmodified: 2022-10-19T10:49:56.025+02:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
+    hst:label: Content Page Main
+    hst:lastmodified: 2022-10-19T10:50:46.885+02:00
+    hst:xtype: hst.vbox
+    /guidance:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.GuidanceComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: Standard Content Page
+      hst:parameternames: [document]
+      hst:parametervalues: [guidance-pages/patient-information/ideas-bank/health-literacy-champions-network]
+      hst:template: guidance-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2022-10-19T10:50:46.885+02:00
+        hst:xtype: hst.vbox

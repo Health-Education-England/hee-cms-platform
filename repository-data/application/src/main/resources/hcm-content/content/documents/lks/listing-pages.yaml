@@ -1,0 +1,410 @@
+/content/documents/lks/listing-pages:
+  .meta:order-before: global
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: dca58bdd-f8ef-4c6e-8709-a4acd1f6be67
+  hippo:name: listing-pages
+  hippostd:foldertype: [new-folder, new-listing-document]
+  /bulletins:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: a4e94945-954d-4aed-828a-316932890382
+    hippo:name: Bulletins
+    hippo:versionHistory: 05db8488-2441-4be9-baa3-edbfc79c4fec
+    /bulletins[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: de1f97d3-59bb-4687-ac91-bc3a1b5a2779
+      hee:documentTypes: []
+      hee:listingPageType: bulletin
+      hee:pageSize: 7
+      hee:path: ''
+      hee:summary: Latest bulletins from across the Knowledge and Library Services
+        network
+      hee:title: Bulletins
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: olivia.sperring-jones
+      hippostdpubwf:creationDate: 2021-04-01T15:16:48.008+02:00
+      hippostdpubwf:lastModificationDate: 2021-10-27T09:26:48.291+02:00
+      hippostdpubwf:lastModifiedBy: smanivasagam
+      hippotranslation:id: 946555cb-776d-4357-9012-f2f8aafacb1c
+      hippotranslation:locale: document-type-locale
+    /bulletins[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: f6611b80-5938-4ccb-bc7a-e0b9788180f9
+      hee:documentTypes: []
+      hee:listingPageType: bulletin
+      hee:pageSize: 7
+      hee:path: ''
+      hee:summary: Latest bulletins from across the Knowledge and Library Services
+        network
+      hee:title: Bulletins
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: olivia.sperring-jones
+      hippostdpubwf:creationDate: 2021-04-01T15:16:48.008+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-12T17:27:12.961+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 946555cb-776d-4357-9012-f2f8aafacb1c
+      hippotranslation:locale: document-type-locale
+    /bulletins[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: d2384cf3-8a47-4263-bc18-58f655ba0031
+      hee:documentTypes: []
+      hee:listingPageType: bulletin
+      hee:pageSize: 7
+      hee:path: ''
+      hee:summary: Latest bulletins from across the Knowledge and Library Services
+        network
+      hee:title: Bulletins
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: olivia.sperring-jones
+      hippostdpubwf:creationDate: 2021-04-01T15:16:48.008+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-12T17:27:12.961+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2021-08-12T17:27:22.006+02:00
+      hippotranslation:id: 946555cb-776d-4357-9012-f2f8aafacb1c
+      hippotranslation:locale: document-type-locale
+  /search-results:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 3871d318-b61f-4b6b-97de-e06a1b0340d4
+    hippo:name: Search Results
+    hippo:versionHistory: 82d2870d-7f32-4278-8be2-f5b6b3866aad
+    /search-results[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2cabe074-4c85-49e6-8321-a2f3be730e5d
+      hee:documentTypes: ['hee:blogPost', 'hee:guidance', 'hee:landingPage', 'hee:MiniHub',
+        'hee:searchBank', 'hee:caseStudy', 'hee:listingPage']
+      hee:listingPageType: search
+      hee:pageSize: 10
+      hee:path: ''
+      hee:summary: ''
+      hee:title: Search results
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: olivia.sperring-jones
+      hippostdpubwf:creationDate: 2021-04-06T12:16:00.362+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-23T16:06:18.436+02:00
+      hippostdpubwf:lastModifiedBy: phoebe.macindoe
+      hippotranslation:id: 04546f96-48a0-4a9f-83de-61d57594f872
+      hippotranslation:locale: document-type-locale
+    /search-results[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: e38a19e3-ee1b-4659-842d-d9a06d54c397
+      hee:documentTypes: ['hee:blogPost', 'hee:guidance', 'hee:landingPage', 'hee:MiniHub',
+        'hee:searchBank', 'hee:caseStudy', 'hee:listingPage']
+      hee:listingPageType: search
+      hee:pageSize: 10
+      hee:path: ''
+      hee:summary: ''
+      hee:title: Search results
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: olivia.sperring-jones
+      hippostdpubwf:creationDate: 2021-04-06T12:16:00.362+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-23T16:05:47.972+02:00
+      hippostdpubwf:lastModifiedBy: phoebe.macindoe
+      hippotranslation:id: 04546f96-48a0-4a9f-83de-61d57594f872
+      hippotranslation:locale: document-type-locale
+    /search-results[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: bffb084f-a473-493a-8049-0dde591234cf
+      hee:documentTypes: ['hee:blogPost', 'hee:guidance', 'hee:landingPage', 'hee:MiniHub',
+        'hee:searchBank', 'hee:caseStudy', 'hee:listingPage']
+      hee:listingPageType: search
+      hee:pageSize: 10
+      hee:path: ''
+      hee:summary: ''
+      hee:title: Search results
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: olivia.sperring-jones
+      hippostdpubwf:creationDate: 2021-04-06T12:16:00.362+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-23T16:05:47.972+02:00
+      hippostdpubwf:lastModifiedBy: phoebe.macindoe
+      hippostdpubwf:publicationDate: 2021-08-23T16:05:49.922+02:00
+      hippotranslation:id: 04546f96-48a0-4a9f-83de-61d57594f872
+      hippotranslation:locale: document-type-locale
+  /test:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 2e3d826f-1ded-43cc-9b1a-cb3a9ffa4b26
+  /blogs:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 8de33bc3-f110-4a21-82f2-e9c758a50352
+    hippo:name: Blogs
+    hippo:versionHistory: 27c06a11-0a5f-4219-a4f1-a2c857cbb150
+    /blogs[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 312f659e-ec28-493b-b582-0f6152387a90
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: blog
+      hee:pageSize: 5
+      hee:summary: For the latest news and best practice from and about NHS Knowledge
+        and Library Services.
+      hee:title: Blog
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: smanivasagam
+      hippostdpubwf:creationDate: 2021-04-29T13:16:22.935+02:00
+      hippostdpubwf:lastModificationDate: 2023-01-27T11:10:49.565+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 7536d6ba-b5be-4102-a540-d53d8ce41bdc
+      hippotranslation:locale: document-type-locale
+    /blogs[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: aa54d589-0aa8-4759-818e-1ff6b24a80dd
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: blog
+      hee:pageSize: 5
+      hee:summary: For the latest news and best practice from and about NHS Knowledge
+        and Library Services.
+      hee:title: Blog
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: smanivasagam
+      hippostdpubwf:creationDate: 2021-04-29T13:16:22.935+02:00
+      hippostdpubwf:lastModificationDate: 2023-01-27T11:10:59.557+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 7536d6ba-b5be-4102-a540-d53d8ce41bdc
+      hippotranslation:locale: document-type-locale
+    /blogs[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: e6780421-734e-43ed-9230-35dcda3ec97e
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: blog
+      hee:pageSize: 5
+      hee:summary: For the latest news and best practice from and about NHS Knowledge
+        and Library Services.
+      hee:title: Blog
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: smanivasagam
+      hippostdpubwf:creationDate: 2021-04-29T13:16:22.935+02:00
+      hippostdpubwf:lastModificationDate: 2023-01-27T11:10:59.557+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-27T11:11:01.278+01:00
+      hippotranslation:id: 7536d6ba-b5be-4102-a540-d53d8ce41bdc
+      hippotranslation:locale: document-type-locale
+  /search-bank:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 344e0c55-cf41-45f4-b5f6-8b6ebfe2ec81
+    hippo:name: Search Bank
+    hippo:versionHistory: a4517797-e46e-4736-bed1-26eb466ea514
+    /search-bank[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f31dfd92-f30c-4b9d-9252-a514697fb5ad
+      hee:documentTypes: []
+      hee:listingPageType: searchbank
+      hee:pageSize: 10
+      hee:summary: These searches were provided by library services in response to
+        specific queries during the pandemic.  When using search strategies please
+        be aware that additional terms are likely to have become available.
+      hee:title: Search bank database
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: matt.brooks
+      hippostdpubwf:creationDate: 2021-06-21T17:22:17.529+02:00
+      hippostdpubwf:lastModificationDate: 2022-01-05T11:10:37.271+01:00
+      hippostdpubwf:lastModifiedBy: phoebe.macindoe
+      hippotranslation:id: 60bf0ed3-f3d9-4f62-8dd3-de28c3a789ed
+      hippotranslation:locale: document-type-locale
+    /search-bank[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: f16444fa-a65b-44cd-b39c-961ce0e53274
+      hee:documentTypes: []
+      hee:listingPageType: searchbank
+      hee:pageSize: 10
+      hee:summary: These searches were provided by library services in response to
+        specific queries during the pandemic.  When using search strategies please
+        be aware that additional terms are likely to have become available.
+      hee:title: Search bank database
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: matt.brooks
+      hippostdpubwf:creationDate: 2021-06-21T17:22:17.529+02:00
+      hippostdpubwf:lastModificationDate: 2021-12-15T17:59:57.946+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 60bf0ed3-f3d9-4f62-8dd3-de28c3a789ed
+      hippotranslation:locale: document-type-locale
+    /search-bank[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 42619c20-5bfc-40e5-b6ba-5851829b06ba
+      hee:documentTypes: []
+      hee:listingPageType: searchbank
+      hee:pageSize: 10
+      hee:summary: These searches were provided by library services in response to
+        specific queries during the pandemic.  When using search strategies please
+        be aware that additional terms are likely to have become available.
+      hee:title: Search bank database
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: matt.brooks
+      hippostdpubwf:creationDate: 2021-06-21T17:22:17.529+02:00
+      hippostdpubwf:lastModificationDate: 2021-12-15T17:59:57.946+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2021-12-15T17:59:59.483+01:00
+      hippotranslation:id: 60bf0ed3-f3d9-4f62-8dd3-de28c3a789ed
+      hippotranslation:locale: document-type-locale
+  /impact-case-studies:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 2008ee13-62ec-4d26-9e81-6c2b17907450
+    hippo:name: Impact Case Studies
+    hippo:versionHistory: 837f8f28-1ab2-46b2-882d-5eca2a5cce40
+    /impact-case-studies[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 5da9f2db-2dfe-4dd5-a043-6c6b6be16b57
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: casestudy
+      hee:pageSize: 10
+      hee:summary: ''
+      hee:title: Impact case studies
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: matt.brooks
+      hippostdpubwf:creationDate: 2021-06-21T17:23:37.642+02:00
+      hippostdpubwf:lastModificationDate: 2022-04-29T16:25:59.865+02:00
+      hippostdpubwf:lastModifiedBy: emily.keens
+      hippotranslation:id: 539a49f2-dd78-4bef-802e-db60513516e3
+      hippotranslation:locale: document-type-locale
+    /impact-case-studies[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: fd55299e-929f-4653-a00f-95336cae92fd
+      hee:documentTypes: []
+      hee:listingPageType: casestudy
+      hee:pageSize: 10
+      hee:summary: ''
+      hee:title: Impact case studies
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: matt.brooks
+      hippostdpubwf:creationDate: 2021-06-21T17:23:37.642+02:00
+      hippostdpubwf:lastModificationDate: 2021-06-24T16:48:14.096+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 539a49f2-dd78-4bef-802e-db60513516e3
+      hippotranslation:locale: document-type-locale
+    /impact-case-studies[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 72c28566-9556-4239-b79d-89abd06bb814
+      hee:documentTypes: []
+      hee:listingPageType: casestudy
+      hee:pageSize: 10
+      hee:summary: ''
+      hee:title: Impact case studies
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: matt.brooks
+      hippostdpubwf:creationDate: 2021-06-21T17:23:37.642+02:00
+      hippostdpubwf:lastModificationDate: 2021-06-24T16:48:14.096+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2021-06-24T16:48:23.851+02:00
+      hippotranslation:id: 539a49f2-dd78-4bef-802e-db60513516e3
+      hippotranslation:locale: document-type-locale
+  /regional-meetings:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 86dd5c9d-67ef-4d48-b581-97d337475f47
+    hippo:name: regional meetings
+    hippo:versionHistory: c88ae0ac-0a40-49a3-bc78-2f2c7bbf7644
+    /regional-meetings[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: caf8c6a0-7bc6-41c7-acce-c147f3593944
+      hee:documentTypes: []
+      hee:pageSize: 10
+      hee:path: ''
+      hee:summary: ''
+      hee:title: Regional Meetings
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2021-08-11T17:02:00.262+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-11T17:05:21.169+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 3e9a0efd-a58a-46aa-a84f-527e78e328fb
+      hippotranslation:locale: document-type-locale
+    /regional-meetings[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: ce108ba4-1bd9-4ef4-b6c2-c9c7935f5e02
+      hee:documentTypes: []
+      hee:pageSize: 10
+      hee:path: ''
+      hee:summary: ''
+      hee:title: Regional Meetings
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2021-08-11T17:02:00.262+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-11T17:02:35.050+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 3e9a0efd-a58a-46aa-a84f-527e78e328fb
+      hippotranslation:locale: document-type-locale
+    /regional-meetings[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: face8b1b-08fc-486b-95c1-80112d28e3c6
+      hee:documentTypes: []
+      hee:pageSize: 10
+      hee:path: ''
+      hee:summary: ''
+      hee:title: Regional Meetings
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2021-08-11T17:02:00.262+02:00
+      hippostdpubwf:lastModificationDate: 2021-08-11T17:02:35.050+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2021-08-11T17:02:37.342+02:00
+      hippotranslation:id: 3e9a0efd-a58a-46aa-a84f-527e78e328fb
+      hippotranslation:locale: document-type-locale

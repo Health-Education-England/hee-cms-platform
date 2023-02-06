@@ -1,0 +1,22 @@
+/content/documents/lks/global:
+  .meta:order-before: bulletins
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['mix:versionable']
+  jcr:uuid: 66814156-1b4e-46f6-8957-e571578c27d7
+  hippostd:foldertype: [new-document, new-folder]
+  /covid-19-search-bank:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 854df711-0ce9-4a45-a6fd-7a09dc0df372
+    hippo:name: COVID-19 Search Bank
+    /covid-19-search-bank:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 8d71a7ed-ec57-4939-aac7-0893684e59f4
+      hippo:availability: [live, preview]
+      hippotranslation:id: 9ee8a0a6-ff44-4e0e-b0ef-eb8542a4e8bf
+      hippotranslation:locale: inherited - from query
+      /selection:listitem:
+        jcr:primaryType: selection:listitem
+        selection:key: ''
+        selection:label: ''

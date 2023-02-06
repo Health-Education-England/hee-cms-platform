@@ -1,4 +1,5 @@
 /content/documents/administration/labels/pagination:
+  .meta:order-before: newsletter
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 60f4e754-6c6a-44b5-92ac-8fe8e8de3190
@@ -21,7 +22,7 @@
     resourcebundle:messages: [Previous, Next]
   /pagination[2]:
     jcr:primaryType: resourcebundle:resourcebundle
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['mix:versionable']
     jcr:uuid: 2ae719cb-0f93-4a79-a9b8-f5857fbfefcb
     hippo:availability: [preview]
     hippostd:retainable: false

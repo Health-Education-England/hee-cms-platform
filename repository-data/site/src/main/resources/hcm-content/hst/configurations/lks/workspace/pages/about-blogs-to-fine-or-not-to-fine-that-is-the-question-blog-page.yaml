@@ -1,0 +1,59 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/about-blogs-to-fine-or-not-to-fine-that-is-the-question-blog-page:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-06-21T14:11:03.745Z
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+    hst:template: blogpage-main
+    /comment:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 3009ef19-c5f6-4583-876b-e2f0d52941ee
+      hst:label: Comment Form
+      hst:lastmodified: 2021-06-21T14:11:03.745Z
+      hst:xtype: hst.vbox
+      /blog-comment-form:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent
+        hst:iconpath: resources/addon/eforms/images/icons/form.svg
+        hst:label: Blog comment form
+        hst:parameternames: [form, behaviors, eforms-mailsession, eforms-use-freemarker,
+          eforms-from-name, eforms-from-email]
+        hst:parametervalues: [/content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
+            uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
+          mail/Session, 'true', CMS Admin, cms.admin@hee.nhs.uk]
+        hst:resourcetemplate: eforms.validation.default
+        hst:template: eforms.default
+        hst:xtype: HST.Item
+    /blog:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 9c5b2da6-9a3f-4964-8296-ac6af0793859
+      hst:label: Blog Post
+      hst:lastmodified: 2021-07-14T14:41:03.739+02:00
+      hst:xtype: hst.vbox
+      /blogpost:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+        hst:iconpath: images/catalog-component-icons/simple-content.svg
+        hst:label: BlogPost
+        hst:parameternames: [document]
+        hst:parametervalues: [blog/to-fine-or-not-to-fine-that-is-the-question]
+        hst:template: blogpost-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2021-12-22T15:52:44.249Z
+        hst:xtype: hst.vbox
+        /multi-org-logo:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+          hst:iconpath: images/catalog-component-icons/carousel.svg
+          hst:label: Multi org logo
+          hst:parameternames: [document]
+          hst:parametervalues: [blog/to-fine-or-not-to-fine-that-is-the-question]
+          hst:template: multi-org-logo

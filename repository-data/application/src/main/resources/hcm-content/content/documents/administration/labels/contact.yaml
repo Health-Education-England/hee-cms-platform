@@ -1,4 +1,5 @@
 /content/documents/administration/labels/contact:
+  .meta:order-before: blogpost
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: fd274a9d-dfa6-4016-8624-27f51c1717a1
@@ -21,7 +22,7 @@
     resourcebundle:messages: [View more about]
   /contact[2]:
     jcr:primaryType: resourcebundle:resourcebundle
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['mix:versionable']
     jcr:uuid: edf5ede3-dd25-4155-bb06-a7b498fd99f1
     hippo:availability: [preview]
     hippostd:retainable: false

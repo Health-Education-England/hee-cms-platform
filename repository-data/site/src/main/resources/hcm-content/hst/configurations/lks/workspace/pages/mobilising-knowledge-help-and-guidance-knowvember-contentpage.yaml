@@ -1,0 +1,36 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/mobilising-knowledge-help-and-guidance-knowvember-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-05-25T17:06:10.123+02:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
+    hst:label: Content Page Main
+    hst:lastmodified: 2021-05-25T17:06:34.379+02:00
+    hst:xtype: hst.vbox
+    /guidance:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.GuidanceComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: Guidance
+      hst:parameternames: [document]
+      hst:parametervalues: [guidance-pages/mobilising-knowledge/knowvember]
+      hst:template: guidance-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2021-12-22T15:51:57.876Z
+        hst:xtype: hst.vbox
+        /multi-org-logo:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+          hst:iconpath: images/catalog-component-icons/carousel.svg
+          hst:label: Multi org logo
+          hst:parameternames: [document]
+          hst:parametervalues: [guidance-pages/mobilising-knowledge/knowvember]
+          hst:template: multi-org-logo

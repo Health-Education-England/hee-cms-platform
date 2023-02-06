@@ -1,0 +1,1283 @@
+/content/documents/lks/external-links-cards:
+  .meta:order-before: expanders
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: f2b0b687-f414-4be7-aa30-92625996442c
+  hippo:name: External links cards
+  hippostd:foldertype: [new-externalLinksCard-document, new-externalLinksCard-folder]
+  /covid-19:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+    hippo:name: Covid 19
+    hippostd:foldertype: [new-externalLinksCard-folder, new-externalLinksCard-document]
+    hippotranslation:id: 13af975f-25fc-40ba-aced-057608995111
+    hippotranslation:locale: inherited locale
+    /nhs-home:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: da657d0e-1b6c-4752-b437-2e3d9eb9d22e
+      hippo:name: Nhs home
+      hippo:versionHistory: 3cacc10f-230d-476d-834c-c3f425987648
+      /nhs-home[1]:
+        jcr:primaryType: hee:externalLinksCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: eba1a2bb-14af-4446-adda-d2404c446433
+        hee:title: Email
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: phoebe.macindoe
+        hippostdpubwf:creationDate: 2021-12-13T16:54:40.643+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-05T16:29:53.074+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 6881b673-aec5-4e97-aa69-f8dab7e224ed
+        hippotranslation:locale: inherited locale
+        /hee:externalLinks:
+          jcr:primaryType: hee:externalLink
+          hee:openLinkUrlNewWindow: false
+          hee:text: kfh.england@hee.nhs.uk
+          hee:url: kfh.england@hee.nhs.uk
+      /nhs-home[2]:
+        jcr:primaryType: hee:externalLinksCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 063c289e-9856-4888-922e-cea30e5a19c9
+        hee:title: Email
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: phoebe.macindoe
+        hippostdpubwf:creationDate: 2021-12-13T16:54:40.643+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-22T12:34:35.885+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 6881b673-aec5-4e97-aa69-f8dab7e224ed
+        hippotranslation:locale: inherited locale
+        /hee:externalLinks:
+          jcr:primaryType: hee:externalLink
+          hee:openLinkUrlNewWindow: false
+          hee:text: kfh.england@hee.nhs.uk
+          hee:url: kfh.england@hee.nhs.uk
+      /nhs-home[3]:
+        jcr:primaryType: hee:externalLinksCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e11aa1b5-00a0-430a-a36f-5b0adb8ce131
+        hee:title: Email
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: phoebe.macindoe
+        hippostdpubwf:creationDate: 2021-12-13T16:54:40.643+01:00
+        hippostdpubwf:lastModificationDate: 2022-11-22T12:34:35.885+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2022-11-22T12:34:37.629+01:00
+        hippotranslation:id: 6881b673-aec5-4e97-aa69-f8dab7e224ed
+        hippotranslation:locale: inherited locale
+        /hee:externalLinks:
+          jcr:primaryType: hee:externalLink
+          hee:openLinkUrlNewWindow: false
+          hee:text: kfh.england@hee.nhs.uk
+          hee:url: kfh.england@hee.nhs.uk
+  /learning-and-development:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+    hippo:name: Learning and development
+    hippostd:foldertype: [new-externalLinksCard-folder]
+    hippotranslation:id: 5bcd6087-02b7-47c8-9706-b03be6b83469
+    hippotranslation:locale: inherited locale
+  /resources:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+    hippo:name: Resources
+    hippostd:foldertype: [new-externalLinksCard-folder]
+    hippotranslation:id: 7e649d46-aefd-4e18-ac86-553c83371009
+    hippotranslation:locale: inherited locale
+  /ilds:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: ef6d9fa9-3b06-4889-91e0-342d41684b05
+    hippo:name: ILDS
+    hippo:versionHistory: e261cf62-b481-421a-8a98-b0c4229e4bc6
+    /ilds[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 91183447-cc48-4ebb-90ae-aaead473657a
+      hee:title: INC Network Catalogues
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2021-12-13T17:09:52.674+01:00
+      hippostdpubwf:lastModificationDate: 2022-05-23T16:43:52.143+02:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 0a665560-b92a-4233-9c0d-3648bf9f0e24
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:text: EDEN
+        hee:url: https://eoen.ent.sirsidynix.net.uk/client/en_GB/ELMS
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:text: LENDS/MIDS
+        hee:url: http://www.lawmunion.nhs.uk/
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:text: KSS (SENDS)
+        hee:url: https://secn3.ent.sirsidynix.net.uk/client/en_GB/default/
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:text: PANDDA journals
+        hee:url: http://www.lksnorth.nhs.uk/resources/union-list-of-journals/holdings/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:text: PANDDA books
+        hee:url: https://www.lksnorth.nhs.uk/resources/union-list-of-journals/opac-links-for-the-north/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:text: SWIMS
+        hee:url: https://swims.inforlib.uk/iguana/www.main.cls?surl=HEE
+    /ilds[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 9b3b2cea-331f-4ec6-9429-bc7118f0cddf
+      hee:title: INC Network Catalogues
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2021-12-13T17:09:52.674+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-13T17:13:09.471+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 0a665560-b92a-4233-9c0d-3648bf9f0e24
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:text: EDEN
+        hee:url: https://eoen.ent.sirsidynix.net.uk/client/en_GB/ELMS
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:text: LENDS/MIDS
+        hee:url: http://www.lawmunion.nhs.uk/
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:text: KSS (SENDS)
+        hee:url: https://secn3.ent.sirsidynix.net.uk/client/en_GB/default/
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:text: PANDDA journals
+        hee:url: http://www.lksnorth.nhs.uk/resources/union-list-of-journals/holdings/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:text: PANDDA books
+        hee:url: https://www.lksnorth.nhs.uk/resources/union-list-of-journals/opac-links-for-the-north/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:text: SWIMS
+        hee:url: https://swims.inforlib.uk/iguana/www.main.cls?surl=HEE
+    /ilds[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 11748dca-e2b1-4d04-8f8e-852354dd22b8
+      hee:title: INC Network Catalogues
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2021-12-13T17:09:52.674+01:00
+      hippostdpubwf:lastModificationDate: 2021-12-13T17:13:09.471+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2021-12-13T17:13:36.572+01:00
+      hippotranslation:id: 0a665560-b92a-4233-9c0d-3648bf9f0e24
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:text: EDEN
+        hee:url: https://eoen.ent.sirsidynix.net.uk/client/en_GB/ELMS
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:text: LENDS/MIDS
+        hee:url: http://www.lawmunion.nhs.uk/
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:text: KSS (SENDS)
+        hee:url: https://secn3.ent.sirsidynix.net.uk/client/en_GB/default/
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:text: PANDDA journals
+        hee:url: http://www.lksnorth.nhs.uk/resources/union-list-of-journals/holdings/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:text: PANDDA books
+        hee:url: https://www.lksnorth.nhs.uk/resources/union-list-of-journals/opac-links-for-the-north/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:text: SWIMS
+        hee:url: https://swims.inforlib.uk/iguana/www.main.cls?surl=HEE
+  /research-toolkit-8:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 94c523ba-8c08-4a48-a059-5182026d36cb
+    hippo:name: research toolkit 8
+    hippo:versionHistory: b1c81fa0-b95e-43f0-8897-b09062e2e051
+    /research-toolkit-8[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 4e9dd5ce-be6f-4ba7-ac6b-8a49c79419eb
+      hee:title: Suggested reading
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-12T13:23:59.047+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-12T13:23:59.047+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 4d856a02-a95e-4bfe-a829-3ec9358bba41
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Bruce, N., Pope, D., & Stanistreet, D. (2018). Quantitative methods
+          for health research: a practical interactive guide to epidemiology and statistics
+          (2nd ed.). Oxford: Wiley.'
+        hee:url: https://www.wiley.com/en-gb/Quantitative+Methods+for+Health+Research:+A+Practical+Interactive+Guide+to+Epidemiology+and+Statistics,+2nd+Edition-p-9781118665411
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Cresswell, J. W., & Clark, V. L. P. (2006). Collecting data in
+          mixed methods research. In J. W. Cresswell & V. L. P. Clark (Eds.), Designing
+          and conducting mixed methods research (pp. 110-127). London: Sage.'
+        hee:url: https://uk.sagepub.com/en-gb/eur/designing-and-conducting-mixed-methods-research/book241842
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Denzin, N. K., & Lincoln, Y. S. (2017). The SAGE handbook of qualitative
+          research (5th ed.). London: Sage.'
+        hee:url: https://uk.sagepub.com/en-gb/eur/the-sage-handbook-of-qualitative-research/book242504
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Gorman, G. E., & Clayton, P. (2004). Qualitative research for the
+          information professional: a practical handbook (2nd ed.)'
+        hee:url: https://www.facetpublishing.co.uk/page/detail/qualitative-research-for-the-information-professional/?K=9781856044721
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'IBEC Outcomes Toolkit: STEP 3. Analyzing Data.'
+        hee:url: https://ibec.ischool.uw.edu/static/ibeccat.aspx@subcat=outcome%20toolkit&cat=tools%20and%20resources&tri=toolkitstep3.htm
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Pickard, A. J. (2013). Research methods in information (2nd ed.).
+          London: Facet Publishing.'
+        hee:url: https://www.facetpublishing.co.uk/page/detail/research-methods-in-information/?K=9781856048132
+      /hee:externalLinks[7]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Vaughan, L. (2001). Statistical methods for the information professional:
+          a practical, painless approach to understanding, using and interpreting
+          statistics.'
+        hee:url: https://books.infotoday.com/asist/statistic.shtml
+    /research-toolkit-8[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 5556bb73-5c01-4b10-9a5c-c1154bf7a47a
+      hee:title: Suggested reading
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-12T13:23:59.047+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-12T13:30:00.709+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 4d856a02-a95e-4bfe-a829-3ec9358bba41
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Bruce, N., Pope, D., & Stanistreet, D. (2018). Quantitative methods
+          for health research: a practical interactive guide to epidemiology and statistics
+          (2nd ed.). Oxford: Wiley.'
+        hee:url: https://www.wiley.com/en-gb/Quantitative+Methods+for+Health+Research:+A+Practical+Interactive+Guide+to+Epidemiology+and+Statistics,+2nd+Edition-p-9781118665411
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Cresswell, J. W., & Clark, V. L. P. (2006). Collecting data in
+          mixed methods research. In J. W. Cresswell & V. L. P. Clark (Eds.), Designing
+          and conducting mixed methods research (pp. 110-127). London: Sage.'
+        hee:url: https://uk.sagepub.com/en-gb/eur/designing-and-conducting-mixed-methods-research/book241842
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Denzin, N. K., & Lincoln, Y. S. (2017). The SAGE handbook of qualitative
+          research (5th ed.). London: Sage.'
+        hee:url: https://uk.sagepub.com/en-gb/eur/the-sage-handbook-of-qualitative-research/book242504
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Gorman, G. E., & Clayton, P. (2004). Qualitative research for the
+          information professional: a practical handbook (2nd ed.)'
+        hee:url: https://www.facetpublishing.co.uk/page/detail/qualitative-research-for-the-information-professional/?K=9781856044721
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'IBEC Outcomes Toolkit: STEP 3. Analyzing Data.'
+        hee:url: https://ibec.ischool.uw.edu/static/ibeccat.aspx@subcat=outcome%20toolkit&cat=tools%20and%20resources&tri=toolkitstep3.htm
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Pickard, A. J. (2013). Research methods in information (2nd ed.).
+          London: Facet Publishing.'
+        hee:url: https://www.facetpublishing.co.uk/page/detail/research-methods-in-information/?K=9781856048132
+      /hee:externalLinks[7]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Vaughan, L. (2001). Statistical methods for the information professional:
+          a practical, painless approach to understanding, using and interpreting
+          statistics.'
+        hee:url: https://books.infotoday.com/asist/statistic.shtml
+    /research-toolkit-8[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 63039ede-7659-4855-8890-3655c7c33f31
+      hee:title: Suggested reading
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-12T13:23:59.047+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-12T13:30:00.709+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2022-12-12T13:30:03.176+01:00
+      hippotranslation:id: 4d856a02-a95e-4bfe-a829-3ec9358bba41
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Bruce, N., Pope, D., & Stanistreet, D. (2018). Quantitative methods
+          for health research: a practical interactive guide to epidemiology and statistics
+          (2nd ed.). Oxford: Wiley.'
+        hee:url: https://www.wiley.com/en-gb/Quantitative+Methods+for+Health+Research:+A+Practical+Interactive+Guide+to+Epidemiology+and+Statistics,+2nd+Edition-p-9781118665411
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Cresswell, J. W., & Clark, V. L. P. (2006). Collecting data in
+          mixed methods research. In J. W. Cresswell & V. L. P. Clark (Eds.), Designing
+          and conducting mixed methods research (pp. 110-127). London: Sage.'
+        hee:url: https://uk.sagepub.com/en-gb/eur/designing-and-conducting-mixed-methods-research/book241842
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Denzin, N. K., & Lincoln, Y. S. (2017). The SAGE handbook of qualitative
+          research (5th ed.). London: Sage.'
+        hee:url: https://uk.sagepub.com/en-gb/eur/the-sage-handbook-of-qualitative-research/book242504
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Gorman, G. E., & Clayton, P. (2004). Qualitative research for the
+          information professional: a practical handbook (2nd ed.)'
+        hee:url: https://www.facetpublishing.co.uk/page/detail/qualitative-research-for-the-information-professional/?K=9781856044721
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'IBEC Outcomes Toolkit: STEP 3. Analyzing Data.'
+        hee:url: https://ibec.ischool.uw.edu/static/ibeccat.aspx@subcat=outcome%20toolkit&cat=tools%20and%20resources&tri=toolkitstep3.htm
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Pickard, A. J. (2013). Research methods in information (2nd ed.).
+          London: Facet Publishing.'
+        hee:url: https://www.facetpublishing.co.uk/page/detail/research-methods-in-information/?K=9781856048132
+      /hee:externalLinks[7]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Vaughan, L. (2001). Statistical methods for the information professional:
+          a practical, painless approach to understanding, using and interpreting
+          statistics.'
+        hee:url: https://books.infotoday.com/asist/statistic.shtml
+  /social-media-resources:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 37a97d32-7597-4bfd-9115-20be1fa19715
+    hippo:name: Social media resources
+    hippo:versionHistory: 1566d6d5-e7fa-4d2d-81d2-2a5daed8419d
+    /social-media-resources[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: eacd9132-0d94-46b5-8b05-7c0cb1950e55
+      hee:title: Resources
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-14T18:16:17.812+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-14T18:24:55.395+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: a39e4b34-ad1b-4ea2-8a23-71146bcb4ec8
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Creator Academy
+        hee:url: https://creatoracademy.youtube.com/page/lesson/subscriber-advantage?cid=bootcamp-foundations&hl=en 
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Create a social media marketing campaign 
+        hee:url: https://www.futurelearn.com/courses/create-a-social-media-marketing-campaign
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Digital skills: social media
+        hee:url: https://www.futurelearn.com/courses/digital-skills-social-medi
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Ned Potter
+        hee:url: https://www.ned-potter.com/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 4 reasons libraries should have a dedicated social media
+        hee:url: https://princh.com/4-reasons-libraries-should-have-a-dedicated-social-media-page/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: How do libraries use social media?
+        hee:url: https://librarianresources.taylorandfrancis.com/how-libraries-are-applying-social-media/#
+    /social-media-resources[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: b5a32961-0e1f-4e2a-aed9-903d70e500b5
+      hee:title: Resources
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-14T18:16:17.812+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-14T18:24:36.471+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: a39e4b34-ad1b-4ea2-8a23-71146bcb4ec8
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Creator Academy
+        hee:url: https://creatoracademy.youtube.com/page/lesson/subscriber-advantage?cid=bootcamp-foundations&hl=en 
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Create a social media marketing campaign 
+        hee:url: https://www.futurelearn.com/courses/create-a-social-media-marketing-campaign
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Digital skills: social media
+        hee:url: https://www.futurelearn.com/courses/digital-skills-social-medi
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Ned Potter
+        hee:url: https://www.ned-potter.com/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 4 reasons libraries should have a dedicated social media
+        hee:url: https://princh.com/4-reasons-libraries-should-have-a-dedicated-social-media-page/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: How do libraries use social media?
+        hee:url: https://librarianresources.taylorandfrancis.com/how-libraries-are-applying-social-media/#
+    /social-media-resources[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 95a4e765-9800-4010-9466-f1e26fe70d3e
+      hee:title: Resources
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-14T18:16:17.812+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-14T18:24:36.471+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2022-12-14T18:24:37.885+01:00
+      hippotranslation:id: a39e4b34-ad1b-4ea2-8a23-71146bcb4ec8
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Creator Academy
+        hee:url: https://creatoracademy.youtube.com/page/lesson/subscriber-advantage?cid=bootcamp-foundations&hl=en 
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Create a social media marketing campaign 
+        hee:url: https://www.futurelearn.com/courses/create-a-social-media-marketing-campaign
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Digital skills: social media
+        hee:url: https://www.futurelearn.com/courses/digital-skills-social-medi
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Ned Potter
+        hee:url: https://www.ned-potter.com/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 4 reasons libraries should have a dedicated social media
+        hee:url: https://princh.com/4-reasons-libraries-should-have-a-dedicated-social-media-page/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: How do libraries use social media?
+        hee:url: https://librarianresources.taylorandfrancis.com/how-libraries-are-applying-social-media/#
+  /other-health-literacy-resources:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: eb674a75-2df4-4ac2-8c6b-e26bcae2a80e
+    hippo:name: Other health literacy resources
+    hippo:versionHistory: 7a356204-af61-43fc-b268-e26221c48602
+    /other-health-literacy-resources[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: fa4d2d22-5a6a-4eca-81e9-a790a32249d2
+      hee:title: Other health literacy resources
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:transferable: false
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-20T15:34:33.366+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-05T16:27:07.075+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 1f5edc49-d3dd-4d33-b5e5-2617460a661b
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: National Literacy Trust
+        hee:url: http://www.literacytrust.org.uk/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The Health Literacy Place
+        hee:url: http://www.healthliteracyplace.org.uk/
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Information Literacy Group
+        hee:url: https://infolit.org.uk/
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Read for Good
+        hee:url: https://readforgood.org/our-hospital-programme/
+    /other-health-literacy-resources[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 5e27a815-0d85-43b5-b88d-0cdf07f9ce48
+      hee:title: Other health literacy resources
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-20T15:34:33.366+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-20T15:35:44.266+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 1f5edc49-d3dd-4d33-b5e5-2617460a661b
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: National Literacy Trust
+        hee:url: http://www.literacytrust.org.uk/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The Health Literacy Place
+        hee:url: http://www.healthliteracyplace.org.uk/
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Information Literacy Group
+        hee:url: https://infolit.org.uk/
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Read for Good
+        hee:url: https://readforgood.org/our-hospital-programme/
+    /other-health-literacy-resources[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 85abe66f-e38e-49c3-ad9a-f083a67103ee
+      hee:title: Other health literacy resources
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-20T15:34:33.366+01:00
+      hippostdpubwf:lastModificationDate: 2022-12-20T15:35:44.266+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2022-12-20T15:35:45.675+01:00
+      hippotranslation:id: 1f5edc49-d3dd-4d33-b5e5-2617460a661b
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: National Literacy Trust
+        hee:url: http://www.literacytrust.org.uk/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The Health Literacy Place
+        hee:url: http://www.healthliteracyplace.org.uk/
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Information Literacy Group
+        hee:url: https://infolit.org.uk/
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Read for Good
+        hee:url: https://readforgood.org/our-hospital-programme/
+  /storytelling-resources:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 9af3b715-dbfa-467f-8a88-0398284f143a
+    hippo:name: storytelling resources
+    hippo:versionHistory: 8d2c6696-333e-4d5a-97cf-df52d2fd4697
+    /storytelling-resources[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 6d5d6545-a8d0-4835-b3c2-c775979c8b0a
+      hee:title: Resources
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-03T17:20:06.624+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-03T17:20:06.624+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: a0d2e4ec-adf7-49ce-9cad-8534b23c90b2
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Story telling [D. Gurteen]
+        hee:url: http://www.gurteen.com/gurteen/gurteen.nsf/id/storytelling
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Narrative-based Librarianship [P. Brophy, 2004]
+        hee:url: https://e-space.mmu.ac.uk/1506/1/brophy%20narrative-based%20librarianship.pdf
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 10 Benefits of Communicating Through Story [P. Fuda, 2014]
+        hee:url: https://www.huffingtonpost.com/peter-fuda/10-benefits-of-communicat_b_6498438.html
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Storytelling for Success [MindTools, 2016]
+        hee:url: https://www.mindtools.com/blog/corporate/storytelling-success/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The art of purposeful storytelling [HBR Blog Network, 2011]
+        hee:url: http://blogs.hbr.org/2011/03/the-art-of-purposeful-storytel/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The irresistible power of storytelling as a strategic business tool
+          [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2014/03/the-irresistible-power-of-storytelling-as-a-strategic-business-tool/
+      /hee:externalLinks[7]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Using stories to persuade [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2011/03/using-stories-as-a-tool-of-per/
+      /hee:externalLinks[8]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: How to tell a great story [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2014/07/how-to-tell-a-great-story/
+    /storytelling-resources[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 259b0050-2bb5-408c-9388-f5ce400fbe24
+      hee:title: Resources
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-03T17:20:06.624+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-03T17:26:33.657+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: a0d2e4ec-adf7-49ce-9cad-8534b23c90b2
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Story telling [D. Gurteen]
+        hee:url: http://www.gurteen.com/gurteen/gurteen.nsf/id/storytelling
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Narrative-based Librarianship [P. Brophy, 2004]
+        hee:url: https://e-space.mmu.ac.uk/1506/1/brophy%20narrative-based%20librarianship.pdf
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 10 Benefits of Communicating Through Story [P. Fuda, 2014]
+        hee:url: https://www.huffingtonpost.com/peter-fuda/10-benefits-of-communicat_b_6498438.html
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Storytelling for Success [MindTools, 2016]
+        hee:url: https://www.mindtools.com/blog/corporate/storytelling-success/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The art of purposeful storytelling [HBR Blog Network, 2011]
+        hee:url: http://blogs.hbr.org/2011/03/the-art-of-purposeful-storytel/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The irresistible power of storytelling as a strategic business tool
+          [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2014/03/the-irresistible-power-of-storytelling-as-a-strategic-business-tool/
+      /hee:externalLinks[7]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Using stories to persuade [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2011/03/using-stories-as-a-tool-of-per/
+      /hee:externalLinks[8]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: How to tell a great story [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2014/07/how-to-tell-a-great-story/
+    /storytelling-resources[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 961f892b-8d17-49eb-ba77-3436fef0f1d0
+      hee:title: Resources
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-03T17:20:06.624+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-03T17:26:33.657+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-03T17:26:35.303+01:00
+      hippotranslation:id: a0d2e4ec-adf7-49ce-9cad-8534b23c90b2
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Story telling [D. Gurteen]
+        hee:url: http://www.gurteen.com/gurteen/gurteen.nsf/id/storytelling
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Narrative-based Librarianship [P. Brophy, 2004]
+        hee:url: https://e-space.mmu.ac.uk/1506/1/brophy%20narrative-based%20librarianship.pdf
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 10 Benefits of Communicating Through Story [P. Fuda, 2014]
+        hee:url: https://www.huffingtonpost.com/peter-fuda/10-benefits-of-communicat_b_6498438.html
+      /hee:externalLinks[4]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Storytelling for Success [MindTools, 2016]
+        hee:url: https://www.mindtools.com/blog/corporate/storytelling-success/
+      /hee:externalLinks[5]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The art of purposeful storytelling [HBR Blog Network, 2011]
+        hee:url: http://blogs.hbr.org/2011/03/the-art-of-purposeful-storytel/
+      /hee:externalLinks[6]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: The irresistible power of storytelling as a strategic business tool
+          [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2014/03/the-irresistible-power-of-storytelling-as-a-strategic-business-tool/
+      /hee:externalLinks[7]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Using stories to persuade [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2011/03/using-stories-as-a-tool-of-per/
+      /hee:externalLinks[8]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: How to tell a great story [HBR Blog Network, 2014]
+        hee:url: http://blogs.hbr.org/2014/07/how-to-tell-a-great-story/
+  /critical-incident-technique:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: ed0475b6-0219-440f-8ee8-40182e6895a0
+    hippo:name: critical incident technique
+    hippo:versionHistory: bfbc0b4a-5c44-497a-8d89-1727e002f835
+    /critical-incident-technique[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: a6ee23c6-25b4-4e36-8379-c65d8b18a18a
+      hee:title: Further information
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-12T17:38:21.793+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-12T17:40:34.691+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 4ddf0316-db3e-4747-b241-32cc58149c58
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: true
+        hee:text: Critical incident technique and explicitation interviewing in studies
+          of information behaviour
+        hee:url: https://www.sciencedirect.com/science/article/abs/pii/S0740818802001664?via%3Dihub
+    /critical-incident-technique[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 83c7ee57-f1c8-4bbc-8a3a-c2009e38e51d
+      hee:title: Further information
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-12T17:38:21.793+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-12T17:40:37.687+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 4ddf0316-db3e-4747-b241-32cc58149c58
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: true
+        hee:text: Critical incident technique and explicitation interviewing in studies
+          of information behaviour
+        hee:url: https://www.sciencedirect.com/science/article/abs/pii/S0740818802001664?via%3Dihub
+    /critical-incident-technique[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 732ae473-5b1c-4259-8af4-5fd3811d7ac6
+      hee:title: Further information
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-12T17:38:21.793+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-12T17:40:37.687+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-12T17:40:39.241+01:00
+      hippotranslation:id: 4ddf0316-db3e-4747-b241-32cc58149c58
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: true
+        hee:text: Critical incident technique and explicitation interviewing in studies
+          of information behaviour
+        hee:url: https://www.sciencedirect.com/science/article/abs/pii/S0740818802001664?via%3Dihub
+  /social-networking-tools:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: abdf93c0-bd44-40d6-86d4-7be6b50a5cd3
+    hippo:name: social networking tools
+    hippo:versionHistory: 66376e45-ccfb-4708-b85b-31d1bcc35b3d
+    /social-networking-tools[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: b66c3300-5a06-4012-8b7d-cd8ae9062f34
+      hee:title: Resources
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T12:46:12.855+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T12:55:00.724+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: bd7bd869-c8ed-4668-8330-2f4470d64013
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Using social media to engage, listen and learn - Caroline White
+        hee:url: https://www.networks.nhs.uk/nhs-networks/smart-guides/documents/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Social media in recruitment – NHS Employers
+        hee:url: https://www.nhsemployers.org/articles/social-media-recruitment
+    /social-networking-tools[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 7effc6fe-85ec-45eb-a9a3-6398e257b539
+      hee:title: Resources
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T12:46:12.855+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T12:59:56.405+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: bd7bd869-c8ed-4668-8330-2f4470d64013
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Using social media to engage, listen and learn - Caroline White
+        hee:url: https://www.networks.nhs.uk/nhs-networks/smart-guides/documents/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Social media in recruitment – NHS Employers
+        hee:url: https://www.nhsemployers.org/articles/social-media-recruitment
+    /social-networking-tools[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: ff15e14f-7e90-4c9e-80e1-57f433500a43
+      hee:title: Resources
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T12:46:12.855+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T12:59:56.405+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-16T12:59:58.093+01:00
+      hippotranslation:id: bd7bd869-c8ed-4668-8330-2f4470d64013
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Using social media to engage, listen and learn - Caroline White
+        hee:url: https://www.networks.nhs.uk/nhs-networks/smart-guides/documents/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Social media in recruitment – NHS Employers
+        hee:url: https://www.nhsemployers.org/articles/social-media-recruitment
+  /lessons-learned:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: bab733cd-f520-4acf-8353-4a9222587938
+    hippo:name: lessons learned
+    hippo:versionHistory: b4ab784b-6774-4088-b862-9bea4d44c472
+    /lessons-learned[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 01dd968a-f12c-4e72-8309-82b75ec21770
+      hee:title: Resources
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T13:26:36.038+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T13:28:20.108+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 096c1d19-6919-4742-9c18-d491363dc683
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Lessons Learned Log - NHS Scotland Quality Improvement Hub
+        hee:url: https://learn.nes.nhs.scot/3401/quality-improvement-zone/qi-tools/lessons-learned-log
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Brief Strategic Family Therapy: Lessons Learned... by Daniela A.
+          Santisteban et al. (2006)'
+        hee:url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1488196/
+    /lessons-learned[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: dac10a9c-b085-4984-acc7-7fc8bb84973b
+      hee:title: Resources
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T13:26:36.038+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T13:29:18.204+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 096c1d19-6919-4742-9c18-d491363dc683
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Lessons Learned Log - NHS Scotland Quality Improvement Hub
+        hee:url: https://learn.nes.nhs.scot/3401/quality-improvement-zone/qi-tools/lessons-learned-log
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Brief Strategic Family Therapy: Lessons Learned... by Daniela A.
+          Santisteban et al. (2006)'
+        hee:url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1488196/
+    /lessons-learned[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2f2dddc1-670d-4d37-9383-c4e9c29ba173
+      hee:title: Resources
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T13:26:36.038+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T13:29:18.204+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-16T13:29:20.177+01:00
+      hippotranslation:id: 096c1d19-6919-4742-9c18-d491363dc683
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Lessons Learned Log - NHS Scotland Quality Improvement Hub
+        hee:url: https://learn.nes.nhs.scot/3401/quality-improvement-zone/qi-tools/lessons-learned-log
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: 'Brief Strategic Family Therapy: Lessons Learned... by Daniela A.
+          Santisteban et al. (2006)'
+        hee:url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1488196/
+  /yammer:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 3bdbfe63-06c1-49d2-a239-c2abc3465cbc
+    hippo:versionHistory: 513e29a2-e5b0-4e23-acf3-bbaff52dcf7c
+    /yammer[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 370b1a35-bb51-4cee-89db-ebe3462966f7
+      hee:title: Further information
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T15:53:15.027+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T15:55:43.592+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: e07410c0-327c-4bf3-8dd2-200ad01e2d5f
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Microsoft Yammer
+        hee:url: https://www.yammer.com/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Yammer blog post by Matt Holland
+        hee:url: https://lihnnclinicallibs.wordpress.com/2015/11/25/yammer-yammer-yammer-yammer-yammer-by-matt-holland/
+    /yammer[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: e37f3370-3097-4de4-b4dc-4d92a98e6a98
+      hee:title: Further information
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T15:53:15.027+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T15:55:59.318+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: e07410c0-327c-4bf3-8dd2-200ad01e2d5f
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Microsoft Yammer
+        hee:url: https://www.yammer.com/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Yammer blog post by Matt Holland
+        hee:url: https://lihnnclinicallibs.wordpress.com/2015/11/25/yammer-yammer-yammer-yammer-yammer-by-matt-holland/
+    /yammer[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 5a4d6964-cbdf-4675-9a83-9a49fe4acc1a
+      hee:title: Further information
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T15:53:15.027+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T15:55:59.318+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-16T15:56:01.157+01:00
+      hippotranslation:id: e07410c0-327c-4bf3-8dd2-200ad01e2d5f
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Microsoft Yammer
+        hee:url: https://www.yammer.com/
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Yammer blog post by Matt Holland
+        hee:url: https://lihnnclinicallibs.wordpress.com/2015/11/25/yammer-yammer-yammer-yammer-yammer-by-matt-holland/
+  /fishbowl:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: e31980ba-56f8-42c4-b77e-307a8bef81a1
+    hippo:versionHistory: 21ba3cda-3451-45fc-9066-e9f9715449a5
+    /fishbowl[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: cae3ca1c-7125-448a-ab58-73549bf686a0
+      hee:title: Resources
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T16:35:49.909+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T16:35:49.909+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 5f3e58a9-49f3-49fa-9673-cc5039e73fa1
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Fishbowl Technique - Better Evaluation (2015)
+        hee:url: https://www.betterevaluation.org/methods-approaches/methods/fishbowl-technique
+    /fishbowl[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 956c9f81-d14f-4d9d-840e-67cdcb666bfe
+      hee:title: Resources
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T16:35:49.909+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T16:38:22.890+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 5f3e58a9-49f3-49fa-9673-cc5039e73fa1
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Fishbowl Technique - Better Evaluation (2015)
+        hee:url: https://www.betterevaluation.org/methods-approaches/methods/fishbowl-technique
+    /fishbowl[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 709d023b-cc1c-43c9-9aa9-d9ea17ea565d
+      hee:title: Resources
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-16T16:35:49.909+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-16T16:38:22.890+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-16T16:38:24.954+01:00
+      hippotranslation:id: 5f3e58a9-49f3-49fa-9673-cc5039e73fa1
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Fishbowl Technique - Better Evaluation (2015)
+        hee:url: https://www.betterevaluation.org/methods-approaches/methods/fishbowl-technique
+  /talent-management-toolkit-resources:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 4b020145-2a84-47e7-8f34-7ecbb4a37fe2
+    hippo:name: Talent management toolkit resources
+    hippo:versionHistory: 328569c3-ac26-472d-a698-0d74f77a6567
+    /talent-management-toolkit-resources[1]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 91b0e779-d0b0-4c0f-8dce-75d72feb7cc2
+      hee:title: Downloads
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-25T17:12:30.456+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-25T17:22:57.890+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 1e98a99c-bd6c-4970-9f00-ccaaa45b8f80
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent recognition grid
+        hee:url: https://healtheducationengland.sharepoint.com/:w:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent-grid.odt?d=w370a89bbb295489ba3a3b2bab16bca25&csf=1&web=1&e=3mUBIo
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent management glossary
+        hee:url: https://healtheducationengland.sharepoint.com/:b:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent_management_glossary.pdf?csf=1&web=1&e=RD8pG3
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent conversation evaluation
+        hee:url: https://healtheducationengland.sharepoint.com/:w:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent-conversation-evaluation.odt?d=wbd98a6d5ed52478a848cf9adb36f14c0&csf=1&web=1&e=J1iv2Q
+    /talent-management-toolkit-resources[2]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: bafe8f7f-5ce8-4f66-b585-9aba5d1a0821
+      hee:title: Downloads
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-25T17:12:30.456+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-25T17:23:12.984+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippotranslation:id: 1e98a99c-bd6c-4970-9f00-ccaaa45b8f80
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent recognition grid
+        hee:url: https://healtheducationengland.sharepoint.com/:w:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent-grid.odt?d=w370a89bbb295489ba3a3b2bab16bca25&csf=1&web=1&e=3mUBIo
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent management glossary
+        hee:url: https://healtheducationengland.sharepoint.com/:b:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent_management_glossary.pdf?csf=1&web=1&e=RD8pG3
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent conversation evaluation
+        hee:url: https://healtheducationengland.sharepoint.com/:w:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent-conversation-evaluation.odt?d=wbd98a6d5ed52478a848cf9adb36f14c0&csf=1&web=1&e=J1iv2Q
+    /talent-management-toolkit-resources[3]:
+      jcr:primaryType: hee:externalLinksCard
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f1ec0f98-f993-497b-9184-5da02add79e2
+      hee:title: Downloads
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2023-01-25T17:12:30.456+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-25T17:23:12.984+01:00
+      hippostdpubwf:lastModifiedBy: richard.bridgen
+      hippostdpubwf:publicationDate: 2023-01-25T17:23:14.362+01:00
+      hippotranslation:id: 1e98a99c-bd6c-4970-9f00-ccaaa45b8f80
+      hippotranslation:locale: document-type-locale
+      /hee:externalLinks[1]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent recognition grid
+        hee:url: https://healtheducationengland.sharepoint.com/:w:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent-grid.odt?d=w370a89bbb295489ba3a3b2bab16bca25&csf=1&web=1&e=3mUBIo
+      /hee:externalLinks[2]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent management glossary
+        hee:url: https://healtheducationengland.sharepoint.com/:b:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent_management_glossary.pdf?csf=1&web=1&e=RD8pG3
+      /hee:externalLinks[3]:
+        jcr:primaryType: hee:externalLink
+        hee:openLinkUrlNewWindow: false
+        hee:text: Talent conversation evaluation
+        hee:url: https://healtheducationengland.sharepoint.com/:w:/r/LKS/Archive/Public%20document%20store/Learning%20Academy/talent-conversation-evaluation.odt?d=wbd98a6d5ed52478a848cf9adb36f14c0&csf=1&web=1&e=J1iv2Q

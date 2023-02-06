@@ -1,0 +1,26 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/test-minihub-page:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2022-01-18T12:39:19.631+01:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 08618578-df7c-4816-a986-c26d2b7ba5de
+    hst:label: Main MiniHub
+    hst:lastmodified: 2022-01-18T16:40:36.705+01:00
+    hst:xtype: hst.vbox
+    /minihub:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.MiniHubComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: MiniHub
+      hst:template: minihub-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2022-01-18T16:40:36.705+01:00
+        hst:xtype: hst.vbox

@@ -1,5 +1,5 @@
 /content/documents/administration/valuelists/newsletterorganisations:
-  .meta:order-before: listingpagetypes
+  .meta:order-before: medical
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
   jcr:uuid: 485b162f-9fab-4e03-85b9-f14948994f44
@@ -71,3 +71,7 @@
       jcr:primaryType: selection:listitem
       selection:key: Royal College/Faculty (e.g. Faculty of Public Health)
       selection:label: Royal College/Faculty (e.g. Faculty of Public Health)
+    /selection:listitem[16]:
+      jcr:primaryType: selection:listitem
+      selection:key: Local Government
+      selection:label: Local Government

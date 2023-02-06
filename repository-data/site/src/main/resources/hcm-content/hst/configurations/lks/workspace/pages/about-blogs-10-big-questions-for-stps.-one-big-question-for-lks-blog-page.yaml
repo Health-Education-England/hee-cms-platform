@@ -1,0 +1,46 @@
+? /hst:hst/hst:configurations/lks/hst:workspace/hst:pages/about-blogs-10-big-questions-for-stps.-one-big-question-for-lks-blog-page
+: jcr:primaryType: hst:component
+  hst:lastmodified: 2021-06-28T12:05:27.787+02:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+    hst:template: blogpage-main
+    /comment:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 3009ef19-c5f6-4583-876b-e2f0d52941ee
+      hst:label: Comment Form
+      hst:lastmodified: 2022-03-15T14:38:48.675+01:00
+      hst:xtype: hst.vbox
+    /blog:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 9c5b2da6-9a3f-4964-8296-ac6af0793859
+      hst:label: Blog Post
+      hst:lastmodified: 2022-03-15T15:25:49.919+01:00
+      hst:xtype: hst.vbox
+      /blogpost:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+        hst:iconpath: images/catalog-component-icons/simple-content.svg
+        hst:label: BlogPost
+        hst:parameternames: [document]
+        hst:parametervalues: [blog/10-big-questions-for-stps-one-big-question-for-lks]
+        hst:template: blogpost-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2021-12-22T15:52:48.654Z
+        hst:xtype: hst.vbox
+        /multi-org-logo:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+          hst:iconpath: images/catalog-component-icons/carousel.svg
+          hst:label: Multi org logo
+          hst:parameternames: [document]
+          hst:parametervalues: [blog/10-big-questions-for-stps-one-big-question-for-lks]
+          hst:template: multi-org-logo

@@ -1,10 +1,10 @@
 /content/documents/administration/labels/newsletter:
-  .meta:order-before: global
+  .meta:order-before: listing
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 95fdda79-7311-493a-ad22-4abf0c7236c8
   hippo:name: Newsletter
-  hippo:versionHistory: 2af852dc-ae9a-4bff-a2a5-81a79aa67161
+  hippo:versionHistory: 5d39fd0d-c582-4ae0-8690-6e26454b4f20
   /newsletter[1]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -12,10 +12,11 @@
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
-    hippostdpubwf:lastModificationDate: 2022-04-19T12:01:19.182+01:00
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2022-05-20T11:26:56.235+02:00
+    hippostdpubwf:lastModifiedBy: tasneem.aly
     resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
       '', '']
     resourcebundle:id: uk.nhs.hee.web.newsletter
@@ -29,15 +30,15 @@
       Select your organisation type, Select your profession or specialism]
   /newsletter[2]:
     jcr:primaryType: resourcebundle:resourcebundle
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['mix:versionable']
     jcr:uuid: 98d8203b-f727-4fb4-b357-5b2f19211d76
     hippo:availability: [preview]
     hippostd:retainable: false
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
-    hippostdpubwf:lastModificationDate: 2022-04-19T12:01:45.098+01:00
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2022-04-28T12:17:03.426+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
       '', '']
     resourcebundle:id: uk.nhs.hee.web.newsletter
@@ -58,9 +59,9 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2022-03-09T01:43:42.513Z
-    hippostdpubwf:lastModificationDate: 2022-04-19T12:01:45.098+01:00
-    hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2022-04-19T12:01:47.378+01:00
+    hippostdpubwf:lastModificationDate: 2022-04-28T12:17:03.426+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2022-04-28T12:17:05.411+02:00
     resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
       '', '']
     resourcebundle:id: uk.nhs.hee.web.newsletter

@@ -1,0 +1,1187 @@
+/content/documents/lks/components:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['frontend:orderChildFolders', 'hippo:named', 'mix:versionable']
+  jcr:uuid: ae15b7af-c6bf-4ba9-a309-ea9600fa43f9
+  hippo:name: Components
+  hippostd:foldertype: [new-document, new-folder]
+  /warning-callouts:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['frontend:orderChildFolders', 'hippo:named', 'mix:versionable']
+    jcr:uuid: 767dbea9-8adc-46b6-8d12-96b24f19b91b
+    hippo:name: Warning callouts
+    hippostd:foldertype: [new-warningCallout-document, new-document, new-folder]
+    /bmj-best-practice:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 7fa8de98-e1d3-40b3-8d3a-43e6976f4086
+      hippo:name: BMJ best practice
+      hippo:versionHistory: 2eed594c-0593-4768-bbbb-b82aa69b1b4f
+      /bmj-best-practice[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: edb4ec64-fc3b-4885-a95b-43a0901a04f5
+        hee:title: BMJ best practice
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T10:13:18.029+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T10:13:18.030+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 3cafc225-b671-46bc-9d88-5ab2107d5dda
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>The COVID-19 content in&nbsp;BMJ&nbsp;Best Practice, which&nbsp;HEE&nbsp;funds for the NHS, is freely available and being continually updated by the&nbsp;BMJ. It includes a patient information leaflet.&nbsp;&nbsp;</p>
+
+            <p><a href="https://bestpractice.bmj.com/topics/en-gb/3000201#important-update">Go to COVID-19 on BMJ Best Practice</a></p>
+      /bmj-best-practice[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 0704d4a6-2233-4029-9013-558568e0973e
+        hee:title: BMJ best practice
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T10:13:18.029+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T10:13:27.085+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 3cafc225-b671-46bc-9d88-5ab2107d5dda
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>The COVID-19 content in&nbsp;BMJ&nbsp;Best Practice, which&nbsp;HEE&nbsp;funds for the NHS, is freely available and being continually updated by the&nbsp;BMJ. It includes a patient information leaflet.&nbsp;&nbsp;</p>
+
+            <p><a href="https://bestpractice.bmj.com/topics/en-gb/3000201#important-update">Go to COVID-19 on BMJ Best Practice</a></p>
+      /bmj-best-practice[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 5c0d167a-07d5-4035-aea0-5a7e3d591c10
+        hee:title: BMJ best practice
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T10:13:18.029+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T10:13:27.085+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippostdpubwf:publicationDate: 2022-08-31T10:13:28.964+02:00
+        hippotranslation:id: 3cafc225-b671-46bc-9d88-5ab2107d5dda
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>The COVID-19 content in&nbsp;BMJ&nbsp;Best Practice, which&nbsp;HEE&nbsp;funds for the NHS, is freely available and being continually updated by the&nbsp;BMJ. It includes a patient information leaflet.&nbsp;&nbsp;</p>
+
+            <p><a href="https://bestpractice.bmj.com/topics/en-gb/3000201#important-update">Go to COVID-19 on BMJ Best Practice</a></p>
+    /knowledge-prioritisation-document-format:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e273a143-6661-44ff-9da6-e1425d5ebd47
+      hippo:name: Knowledge prioritisation document format
+      hippo:versionHistory: 0bb2ab81-b9e4-4e33-bfb4-dbd5dad43af4
+      /knowledge-prioritisation-document-format[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: bfbdbba7-8234-4703-9651-3594549a25cf
+        hee:title: Important
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:38:17.834+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:38:17.834+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 6025f36d-9a28-47f8-91cb-c014bd6e6040
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please name this knowledge prioritisation and transfer
+            document “your name… knowledge prioritisation plan.doc” and save it in
+            the<strong>&nbsp;</strong>Leavers KRT<strong>&nbsp;</strong>sub folder
+            on the departmental shared drive.</p>
+      /knowledge-prioritisation-document-format[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 851ed5bd-38ac-400b-b880-bfd844537f9f
+        hee:title: Important
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:38:17.834+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:38:32.034+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 6025f36d-9a28-47f8-91cb-c014bd6e6040
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please name this knowledge prioritisation and transfer
+            document “your name… knowledge prioritisation plan.doc” and save it in
+            the<strong>&nbsp;</strong>Leavers KRT<strong>&nbsp;</strong>sub folder
+            on the departmental shared drive.</p>
+      /knowledge-prioritisation-document-format[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b3b2a766-6c8d-4a56-8a66-57a293055c28
+        hee:title: Important
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:38:17.834+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:38:32.034+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippostdpubwf:publicationDate: 2022-08-31T11:38:54.106+02:00
+        hippotranslation:id: 6025f36d-9a28-47f8-91cb-c014bd6e6040
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please name this knowledge prioritisation and transfer
+            document “your name… knowledge prioritisation plan.doc” and save it in
+            the<strong>&nbsp;</strong>Leavers KRT<strong>&nbsp;</strong>sub folder
+            on the departmental shared drive.</p>
+    /krt-contacts-document-format:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 88e00ab8-3d98-4c24-a574-fd6ee625ebe8
+      hippo:name: KRT contacts document format
+      hippo:versionHistory: f741439a-f197-499a-a425-b93ba29768f9
+      /krt-contacts-document-format[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 68013c81-47ec-48e4-b121-89cc39e6c6b0
+        hee:title: Important
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:40:25.446+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:40:25.446+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 64020e50-e773-4bcb-a7ff-9258c854ab23
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please rename this document “your name… contacts list.doc”
+            and save it in a shared drive available to the team you work with.&nbsp;
+            To make it easier for people to find your list create a folder called
+            Leavers KRT on the shared drive.</p>
+      /krt-contacts-document-format[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: d54e2f51-f987-4fac-8d3c-8f300477969b
+        hee:title: Important
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:40:25.446+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:40:44.146+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 64020e50-e773-4bcb-a7ff-9258c854ab23
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please rename this document “your name… contacts list.doc”
+            and save it in a shared drive available to the team you work with.&nbsp;
+            To make it easier for people to find your list create a folder called
+            Leavers KRT on the shared drive.</p>
+      /krt-contacts-document-format[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 37ceeebc-313c-484d-b69a-78eb3d159a3e
+        hee:title: Important
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:40:25.446+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:40:44.146+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippostdpubwf:publicationDate: 2022-08-31T11:40:45.546+02:00
+        hippotranslation:id: 64020e50-e773-4bcb-a7ff-9258c854ab23
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please rename this document “your name… contacts list.doc”
+            and save it in a shared drive available to the team you work with.&nbsp;
+            To make it easier for people to find your list create a folder called
+            Leavers KRT on the shared drive.</p>
+    /krt-useful-resources-document-format:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 3a65beab-aaf7-404f-925b-327328a6d821
+      hippo:name: KRT useful resources document format
+      hippo:versionHistory: 437f0d6a-7687-4ff9-a119-76d4a1fa6f8f
+      /krt-useful-resources-document-format[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 26d70a33-40f7-47fb-b4e5-8f905bcaebe1
+        hee:title: Important
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:41:48.346+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:41:48.346+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 0cbb3009-521d-4be1-8e78-8cd0189d12f4
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please rename this document “your name… Useful Resources.doc”
+            and save it in a shared drive available to the team you work with. &nbsp;To
+            make it easier for people to find, create a folder called Leavers KRT
+            in the shared drive.</p>
+      /krt-useful-resources-document-format[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: d0e3956a-938e-41b3-a4d4-387e5b798266
+        hee:title: Important
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:41:48.346+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:41:54.983+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 0cbb3009-521d-4be1-8e78-8cd0189d12f4
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please rename this document “your name… Useful Resources.doc”
+            and save it in a shared drive available to the team you work with. &nbsp;To
+            make it easier for people to find, create a folder called Leavers KRT
+            in the shared drive.</p>
+      /krt-useful-resources-document-format[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2dd6a5af-0b7c-4659-9b9a-001f83daf5cf
+        hee:title: Important
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:41:48.346+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:41:54.983+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippostdpubwf:publicationDate: 2022-08-31T11:42:13.405+02:00
+        hippotranslation:id: 0cbb3009-521d-4be1-8e78-8cd0189d12f4
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Please rename this document “your name… Useful Resources.doc”
+            and save it in a shared drive available to the team you work with. &nbsp;To
+            make it easier for people to find, create a folder called Leavers KRT
+            in the shared drive.</p>
+    /suggested-disclaimer:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 581dfafb-b463-4aa0-a42b-ec840f93af21
+      hippo:name: Suggested disclaimer
+      hippo:versionHistory: 4b2dd50a-2897-4be8-8807-5d68c2007654
+      /suggested-disclaimer[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 104194b6-1e9f-4a9a-96f2-25f18b64fc3e
+        hee:title: Suggested disclaimer on any information provided
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:47:43.893+02:00
+        hippostdpubwf:lastModificationDate: 2022-12-19T17:45:46.439+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: f8e0fa2c-2815-4e99-9446-397db1aaa5c1
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Information and advice on sources of information is given in good faith but should never be used as a substitute for seeking medical advice.</p>
+
+            <p>We have taken care to direct you to reliable information but cannot guarantee its accuracy.</p>
+
+            <p>You should always consult a suitably qualified doctor or healthcare professional for diagnosis and treatment of medical conditions.</p>
+      /suggested-disclaimer[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 667ade01-53d8-4c81-9cdd-a749ea09934c
+        hee:title: Suggested disclaimer on any information provided
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:47:43.893+02:00
+        hippostdpubwf:lastModificationDate: 2022-12-19T17:45:44.908+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: f8e0fa2c-2815-4e99-9446-397db1aaa5c1
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Information and advice on sources of information is given in good faith but should never be used as a substitute for seeking medical advice.</p>
+
+            <p>We have taken care to direct you to reliable information but cannot guarantee its accuracy.</p>
+
+            <p>You should always consult a suitably qualified doctor or healthcare professional for diagnosis and treatment of medical conditions.</p>
+      /suggested-disclaimer[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 44c6e849-0e79-413e-9878-698d0e2d2783
+        hee:title: Suggested disclaimer on any information provided
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:47:43.893+02:00
+        hippostdpubwf:lastModificationDate: 2022-12-19T17:45:44.908+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2022-12-19T17:45:48.740+01:00
+        hippotranslation:id: f8e0fa2c-2815-4e99-9446-397db1aaa5c1
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Information and advice on sources of information is given in good faith but should never be used as a substitute for seeking medical advice.</p>
+
+            <p>We have taken care to direct you to reliable information but cannot guarantee its accuracy.</p>
+
+            <p>You should always consult a suitably qualified doctor or healthcare professional for diagnosis and treatment of medical conditions.</p>
+    /health-concerns:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e9faf670-6da1-49d8-8961-65b05cb5cb74
+      hippo:name: Health concerns
+      hippo:versionHistory: 85143894-77ac-41a6-83d2-04e7c8c4eca3
+      /health-concerns[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 0484f2d6-d3e7-4546-a75c-fa7a39a9e9a9
+        hee:title: Health concerns
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:50:47.911+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:50:47.911+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 43bf972a-27f3-4508-88cd-6eeea29abca5
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You should discuss any worries about your health with
+            your GP. In an&nbsp;emergency&nbsp;ring 999</p>
+      /health-concerns[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 9c302dad-8f39-420e-88cd-6696142cfe41
+        hee:title: Health concerns
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:50:47.911+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:50:56.776+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippotranslation:id: 43bf972a-27f3-4508-88cd-6eeea29abca5
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You should discuss any worries about your health with
+            your GP. In an&nbsp;emergency&nbsp;ring 999</p>
+      /health-concerns[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 83cc5059-3c44-4152-a83f-f3c4496b1f4c
+        hee:title: Health concerns
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: ian.wallace
+        hippostdpubwf:creationDate: 2022-08-31T11:50:47.911+02:00
+        hippostdpubwf:lastModificationDate: 2022-08-31T11:50:56.776+02:00
+        hippostdpubwf:lastModifiedBy: ian.wallace
+        hippostdpubwf:publicationDate: 2022-08-31T11:51:18.471+02:00
+        hippotranslation:id: 43bf972a-27f3-4508-88cd-6eeea29abca5
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You should discuss any worries about your health with
+            your GP. In an&nbsp;emergency&nbsp;ring 999</p>
+    /research-warning:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: fad6db71-66df-4ef8-b8d2-eb8b316c0490
+      hippo:name: research warning
+      hippo:versionHistory: 91e1eaee-0519-4460-9e13-94c7293bcf99
+      /research-warning[1]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8e96273e-ac6d-49d1-ab4b-9ac3183b15f1
+        hee:title: Important
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2022-12-09T18:16:33.425+01:00
+        hippostdpubwf:lastModificationDate: 2022-12-09T18:16:33.425+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 91aef46e-a95d-4bc7-a1ae-3c8dccadf2e2
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You should not begin collecting data until you have
+            received ethical approval.</p>
+      /research-warning[2]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: a621a60f-d8c3-4060-99f8-dc469250d144
+        hee:title: Important
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2022-12-09T18:16:33.425+01:00
+        hippostdpubwf:lastModificationDate: 2022-12-09T18:16:53.086+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 91aef46e-a95d-4bc7-a1ae-3c8dccadf2e2
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You should not begin collecting data until you have
+            received ethical approval.</p>
+      /research-warning[3]:
+        jcr:primaryType: hee:warningCallout
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 31cf944c-f616-463b-8eb1-cb4f54f84c7c
+        hee:title: Important
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2022-12-09T18:16:33.425+01:00
+        hippostdpubwf:lastModificationDate: 2022-12-09T18:16:53.086+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2022-12-09T18:16:54.800+01:00
+        hippotranslation:id: 91aef46e-a95d-4bc7-a1ae-3c8dccadf2e2
+        hippotranslation:locale: document-type-locale
+        /hee:richAlertText:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>You should not begin collecting data until you have
+            received ethical approval.</p>
+  /statement-card:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['frontend:orderChildFolders', 'hippo:named', 'mix:versionable']
+    jcr:uuid: 50dc50af-c6d6-4932-a87c-feb5576d3356
+    hippo:name: Statement card
+    hippostd:foldertype: [new-statementCard-document, new-folder]
+    /social-media-more-1:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: b9459553-22bc-44bc-b585-5e1abf92b7b8
+      hippo:name: social media more 1
+      hippo:versionHistory: ccb5d5da-8450-4511-b2da-19b08be5855c
+      /social-media-more-1[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d6577453-2bd5-497c-8d40-5296125eb4ac
+        hee:title: More
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2022-12-14T18:10:28.408+01:00
+        hippostdpubwf:lastModificationDate: 2022-12-14T18:10:28.408+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 7905bb62-9383-4fd8-8f16-368d0b5f00f9
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Remember to be realistic&nbsp;around&nbsp;what your&nbsp;service can manage in terms of social media.&nbsp;You&nbsp;do not&nbsp;need to be on all&nbsp;systems, choose the ones that work for you.&nbsp;</p>
+
+            <p>If you are&nbsp;actively&nbsp;using social media as part of your KLS marketing and&nbsp;promotion,&nbsp;plan out your interactions,&nbsp;what events are you going to highlight, what awareness weeks are you going&nbsp;to&nbsp;engage with.&nbsp;&nbsp;</p>
+
+            <p>Work with other people within your organisation to&nbsp;like and retweet social media interactions&nbsp;of different departments&nbsp;or accounts.&nbsp;&nbsp;</p>
+      /social-media-more-1[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 37f160f9-8a5f-4d7e-9ef8-ac6b735ddd5e
+        hee:title: More
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2022-12-14T18:10:28.408+01:00
+        hippostdpubwf:lastModificationDate: 2022-12-14T18:10:44.086+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 7905bb62-9383-4fd8-8f16-368d0b5f00f9
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Remember to be realistic&nbsp;around&nbsp;what your&nbsp;service can manage in terms of social media.&nbsp;You&nbsp;do not&nbsp;need to be on all&nbsp;systems, choose the ones that work for you.&nbsp;</p>
+
+            <p>If you are&nbsp;actively&nbsp;using social media as part of your KLS marketing and&nbsp;promotion,&nbsp;plan out your interactions,&nbsp;what events are you going to highlight, what awareness weeks are you going&nbsp;to&nbsp;engage with.&nbsp;&nbsp;</p>
+
+            <p>Work with other people within your organisation to&nbsp;like and retweet social media interactions&nbsp;of different departments&nbsp;or accounts.&nbsp;&nbsp;</p>
+      /social-media-more-1[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 3ac4de46-0ca3-4c27-99f0-e42b8e14534f
+        hee:title: More
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2022-12-14T18:10:28.408+01:00
+        hippostdpubwf:lastModificationDate: 2022-12-14T18:10:44.086+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2022-12-14T18:10:45.837+01:00
+        hippotranslation:id: 7905bb62-9383-4fd8-8f16-368d0b5f00f9
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>Remember to be realistic&nbsp;around&nbsp;what your&nbsp;service can manage in terms of social media.&nbsp;You&nbsp;do not&nbsp;need to be on all&nbsp;systems, choose the ones that work for you.&nbsp;</p>
+
+            <p>If you are&nbsp;actively&nbsp;using social media as part of your KLS marketing and&nbsp;promotion,&nbsp;plan out your interactions,&nbsp;what events are you going to highlight, what awareness weeks are you going&nbsp;to&nbsp;engage with.&nbsp;&nbsp;</p>
+
+            <p>Work with other people within your organisation to&nbsp;like and retweet social media interactions&nbsp;of different departments&nbsp;or accounts.&nbsp;&nbsp;</p>
+    /self-assessment-tip-1:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e7efcb20-bb8f-48ec-be57-ac2191000822
+      hippo:name: self assessment tip 1
+      hippo:versionHistory: 41840400-10fb-4a8e-92e6-5afbbdf09ae4
+      /self-assessment-tip-1[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 18891895-ab1a-4493-85bd-0837db5b8704
+        hee:title: Tip
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:39:47.915+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 6154803b-a504-499a-95ea-2627771cfd69
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>If you are uncertain about taking this to your Board
+            then why not start with a team,&nbsp;department&nbsp;or division within
+            your organisation.</p>
+      /self-assessment-tip-1[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 18b3788f-8461-43a6-b7e2-201962957cbf
+        hee:title: Tip
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:39:54.816+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 6154803b-a504-499a-95ea-2627771cfd69
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>If you are uncertain about taking this to your Board
+            then why not start with a team,&nbsp;department&nbsp;or division within
+            your organisation.</p>
+      /self-assessment-tip-1[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2790a3c1-e925-49b5-b4dd-6772a2567a4b
+        hee:title: Tip
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:39:54.816+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-13T18:40:42.735+01:00
+        hippotranslation:id: 6154803b-a504-499a-95ea-2627771cfd69
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>If you are uncertain about taking this to your Board
+            then why not start with a team,&nbsp;department&nbsp;or division within
+            your organisation.</p>
+    /self-assessment-tip-2:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 5bdd87e1-3128-4a12-af01-68cdf6904366
+      hippo:name: self assessment tip 2
+      hippo:versionHistory: 7a4f9e2b-1a77-4863-8507-d51538991fc3
+      /self-assessment-tip-2[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 40913440-401e-4354-8f92-9822101caeba
+        hee:title: Tip
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:39:02.206+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 43f5a0eb-fcdf-465b-8125-755fc9f2e70f
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This works best if you let them read and respond with
+            minimal input from you. Just try asking “what level have you put for…”
+            They will be able to decide this and shouldn’t need a steer from you,
+            but if asked for your opinion be prepared to give it.&nbsp;</p>
+      /self-assessment-tip-2[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: fa50c90e-8022-4571-b29c-2930eb4f4516
+        hee:title: Tip
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:39:45.757+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 43f5a0eb-fcdf-465b-8125-755fc9f2e70f
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This works best if you let them read and respond with
+            minimal input from you. Just try asking “what level have you put for…”
+            They will be able to decide this and shouldn’t need a steer from you,
+            but if asked for your opinion be prepared to give it.&nbsp;</p>
+      /self-assessment-tip-2[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2c66bb5d-7430-49fb-bdc9-a29368059310
+        hee:title: Tip
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:39:02.206+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-13T18:40:40.284+01:00
+        hippotranslation:id: 43f5a0eb-fcdf-465b-8125-755fc9f2e70f
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This works best if you let them read and respond with
+            minimal input from you. Just try asking “what level have you put for…”
+            They will be able to decide this and shouldn’t need a steer from you,
+            but if asked for your opinion be prepared to give it.&nbsp;</p>
+    /self-assessment-tip-3:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 5615c3e7-7fff-466a-9606-8832cd73ea55
+      hippo:name: self assessment tip 3
+      hippo:versionHistory: cd0cc339-dd79-415e-b3aa-e3183e7b78b9
+      /self-assessment-tip-3[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 96e5778b-ebfd-45d8-8249-04099cb0aa0d
+        hee:title: Tip
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:40:34.821+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: b9acb740-e5da-4985-a19d-2c8307543868
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>As the expert in the room, take ownership of this stage
+            in the process and the next step of drawing up an action plan.&nbsp;</p>
+      /self-assessment-tip-3[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 61509f0f-3dba-4e88-a02a-232b544d831f
+        hee:title: Tip
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:40:30.946+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: b9acb740-e5da-4985-a19d-2c8307543868
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>As the expert in the room, take ownership of this stage
+            in the process and the next step of drawing up an action plan.&nbsp;</p>
+      /self-assessment-tip-3[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2b40bbc1-ddb8-4727-8bf7-fc06c859cec5
+        hee:title: Tip
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:40:34.821+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-13T18:40:36.406+01:00
+        hippotranslation:id: b9acb740-e5da-4985-a19d-2c8307543868
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>As the expert in the room, take ownership of this stage
+            in the process and the next step of drawing up an action plan.&nbsp;</p>
+    /self-assessment-tip-4:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 49074aaa-9875-4519-bef6-2a8b468335ed
+      hippo:name: self assessment tip 4
+      hippo:versionHistory: 0bd36ec0-ad3c-4d52-9bb7-7c5004efe8a8
+      /self-assessment-tip-4[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 72ec6e03-8ba2-44b0-924d-b243df5bd67e
+        hee:title: Tip
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:44:01.447+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 45337c6e-9029-48d9-bb99-64c5723e28ec
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Use the action plan as an opportunity to promote&nbsp;particular
+            services&nbsp;to senior leaders in your organisation.</p>
+      /self-assessment-tip-4[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4e5ffe37-c15f-4c80-b542-d43e6ccda8a8
+        hee:title: Tip
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:43:50.626+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 45337c6e-9029-48d9-bb99-64c5723e28ec
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Use the action plan as an opportunity to promote&nbsp;particular
+            services&nbsp;to senior leaders in your organisation.</p>
+      /self-assessment-tip-4[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: df693a14-5d4b-4e73-966d-d28e0df2784c
+        hee:title: Tip
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:44:01.447+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-13T18:44:02.902+01:00
+        hippotranslation:id: 45337c6e-9029-48d9-bb99-64c5723e28ec
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Use the action plan as an opportunity to promote&nbsp;particular
+            services&nbsp;to senior leaders in your organisation.</p>
+    /self-assessment-tip-5:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 70054a48-6bd8-406a-98c5-6473e7ccf565
+      hippo:name: self assessment tip 5
+      hippo:versionHistory: 36c4d62d-98d8-4657-a2f8-98afba6d365f
+      /self-assessment-tip-5[1]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: ced52de4-579c-4382-97fc-49c7c8d79014
+        hee:title: Tip
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:44:13.612+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 1eb52c7e-9f1f-4943-a332-7fedd8527325
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>As you work with more teams you may wish to adopt a
+            full River and Stairs assessment.&nbsp; You can find out more about this
+            in the&nbsp;self-assessment and river diagrams&nbsp;section of the Knowledge
+            Mobilisation Toolkit.&nbsp;</p>
+      /self-assessment-tip-5[2]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 780f0087-3e97-47ed-98ba-3f36c223cbb1
+        hee:title: Tip
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:44:04.738+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 1eb52c7e-9f1f-4943-a332-7fedd8527325
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>As you work with more teams you may wish to adopt a
+            full River and Stairs assessment.&nbsp; You can find out more about this
+            in the&nbsp;self-assessment and river diagrams&nbsp;section of the Knowledge
+            Mobilisation Toolkit.&nbsp;</p>
+      /self-assessment-tip-5[3]:
+        jcr:primaryType: hee:statementCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 78d887e6-f369-4951-b891-3134d97f23f3
+        hee:title: Tip
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-13T18:38:50.458+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-13T18:44:13.612+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-13T18:44:15.401+01:00
+        hippotranslation:id: 1eb52c7e-9f1f-4943-a332-7fedd8527325
+        hippotranslation:locale: document-type-locale
+        /hee:richStatement:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>As you work with more teams you may wish to adopt a
+            full River and Stairs assessment.&nbsp; You can find out more about this
+            in the&nbsp;self-assessment and river diagrams&nbsp;section of the Knowledge
+            Mobilisation Toolkit.&nbsp;</p>
+  /inset-text:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 767b1825-053e-4f9e-8685-700e744c39de
+    hippo:name: Inset text
+    hippostd:foldertype: [new-document, new-folder]
+    /test:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c46d19c4-d511-4b25-903f-299dcc5b6eed
+      /test[1]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4604f099-63e6-477d-9e38-1183f6545dae
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-02-02T16:38:38.215+01:00
+        hippostdpubwf:lastModificationDate: 2023-02-02T16:38:38.215+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 13d73bf9-84f5-4277-999b-372898e1ab6c
+        hippotranslation:locale: document-type-locale
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>&nbsp;bvljabjlvbaihb</p>
+      /test[2]:
+        jcr:primaryType: hee:inset
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 1018d2e4-5582-49a9-a791-547041a9853a
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-02-02T16:38:38.215+01:00
+        hippostdpubwf:lastModificationDate: 2023-02-02T16:38:43.435+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 13d73bf9-84f5-4277-999b-372898e1ab6c
+        hippotranslation:locale: document-type-locale
+        /hee:html:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>&nbsp;bvljabjlvbaihb</p>
+  /details:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 6266f1d0-43f4-4301-9f0b-10391d6e3b94
+    hippo:name: Details
+    hippostd:foldertype: [new-document, new-folder]
+  /internal-links-cards:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: dd3fe0ef-de6c-46c8-829e-5f3a6e4b3b9b
+    hippo:name: Internal links cards
+    hippostd:foldertype: [new-document, new-folder]
+  /authors:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 01563bd1-f39f-4ec8-a52c-939e4117ad4b
+    hippo:name: Authors
+    hippostd:foldertype: [new-document, new-folder]
+    /ayo-onatola:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: f19867f7-ffad-4e03-b804-d9619c4522bc
+      hippo:name: Ayo Onatola
+      hippo:versionHistory: 2ce8cc39-4f41-4994-829a-88e47448be74
+      /ayo-onatola[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 92ee5ce7-d288-4c99-b781-8cb0c95f0812
+        hee:bioSummary: ''
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T14:38:38.013+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T14:38:38.014+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 9cabc0c0-de90-4c71-8b97-3ff83962f3f9
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78223d7d-6909-4304-b8b1-0cb4928feace
+      /ayo-onatola[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: b3885188-0241-4000-b2fa-4dcb08e26284
+        hee:bioSummary: ''
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T14:38:38.013+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T14:40:15.144+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 9cabc0c0-de90-4c71-8b97-3ff83962f3f9
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78223d7d-6909-4304-b8b1-0cb4928feace
+      /ayo-onatola[3]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 60f9df8e-a141-44d2-abf7-6463fcf6acb7
+        hee:bioSummary: ''
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T14:38:38.013+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T14:40:15.144+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-26T14:40:16.801+01:00
+        hippotranslation:id: 9cabc0c0-de90-4c71-8b97-3ff83962f3f9
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 78223d7d-6909-4304-b8b1-0cb4928feace
+    /alison-day:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 65d6b6c1-3b37-40bf-b3b7-17165bd777f2
+      hippo:name: Alison Day
+      hippo:versionHistory: 83ec2746-eaa2-4d9c-a20f-91fa4a38c3ae
+      /alison-day[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e7e2971e-e853-4aae-a731-bf612568fc17
+        hee:bioSummary: ''
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T14:48:20.964+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T14:48:20.964+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 5bd66f8e-1e5e-4c32-98dd-7d8aea3bb8e3
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: e81dfb05-c13a-4316-a4b0-a0dc559bcb06
+      /alison-day[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 3da16d4e-657c-4c4f-a799-7d2a8e507b06
+        hee:bioSummary: ''
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T14:48:20.964+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T14:48:39.880+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 5bd66f8e-1e5e-4c32-98dd-7d8aea3bb8e3
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: e81dfb05-c13a-4316-a4b0-a0dc559bcb06
+      /alison-day[3]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8dcc713b-ae13-4e0d-a517-c048749e0c75
+        hee:bioSummary: ''
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T14:48:20.964+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T14:48:39.880+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-26T14:48:41.972+01:00
+        hippotranslation:id: 5bd66f8e-1e5e-4c32-98dd-7d8aea3bb8e3
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: e81dfb05-c13a-4316-a4b0-a0dc559bcb06
+    /ruth-carlyle:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e3488208-1e28-4051-a930-a6223ab6b748
+      hippo:name: Ruth Carlyle
+      hippo:versionHistory: b1eabcd0-1132-40ff-bcc5-0e5710474839
+      /ruth-carlyle[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e8316600-acd9-4c9d-949a-63a00b606547
+        hee:bioSummary: ''
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T16:36:36.589+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T16:36:36.589+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 1aa09838-bf41-40d5-95d3-097b27add8de
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 45b9c684-c0a6-42da-bd27-589266bd3884
+      /ruth-carlyle[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: ff639b21-4f53-483d-b4f9-8df7fba7a1ed
+        hee:bioSummary: ''
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T16:36:36.589+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T16:36:47.745+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 1aa09838-bf41-40d5-95d3-097b27add8de
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 45b9c684-c0a6-42da-bd27-589266bd3884
+      /ruth-carlyle[3]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 082fadb7-0df4-4c78-ac71-fa472cde4a71
+        hee:bioSummary: ''
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T16:36:36.589+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T16:36:47.745+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-26T16:36:49.440+01:00
+        hippotranslation:id: 1aa09838-bf41-40d5-95d3-097b27add8de
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 45b9c684-c0a6-42da-bd27-589266bd3884
+    /susan-smith:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c6a40f22-9e44-42d2-a3ce-034b1b3beb2c
+      hippo:name: Susan Smith
+      hippo:versionHistory: 60eafb7e-0288-4bb8-9428-afac991d2559
+      /susan-smith[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 25452732-849e-4420-81f1-ac60b528322f
+        hee:bioSummary: ''
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T16:40:45.758+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T16:40:45.758+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: cb2ecc34-aae6-4dd7-bd30-ed0718250095
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5530e5f1-e88c-455d-b14f-92e17daa69a2
+      /susan-smith[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 55dff2f3-21cc-4f2f-9fa3-cbf066f9561d
+        hee:bioSummary: ''
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T16:40:45.758+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T16:40:55.740+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: cb2ecc34-aae6-4dd7-bd30-ed0718250095
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5530e5f1-e88c-455d-b14f-92e17daa69a2
+      /susan-smith[3]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 7957ea01-474d-4256-8cb1-1116d0e78254
+        hee:bioSummary: ''
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-01-26T16:40:45.758+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T16:40:55.740+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippostdpubwf:publicationDate: 2023-01-26T16:40:57.146+01:00
+        hippotranslation:id: cb2ecc34-aae6-4dd7-bd30-ed0718250095
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 5530e5f1-e88c-455d-b14f-92e17daa69a2
+    /test:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: e721df1d-a12e-4581-8e12-df591d37328d
+      /test:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 2b8a498b-dadd-4f82-9e73-28c9b2c7bff1
+        hee:bioSummary: ''
+        hippo:availability: []
+        hippostd:holder: richard.bridgen
+        hippostd:state: draft
+        hippostdpubwf:createdBy: richard.bridgen
+        hippostdpubwf:creationDate: 2023-02-02T16:39:23.660+01:00
+        hippostdpubwf:lastModificationDate: 2023-02-02T16:39:23.660+01:00
+        hippostdpubwf:lastModifiedBy: richard.bridgen
+        hippotranslation:id: 97051631-6e25-4d8f-9c59-5cfdca9015f3
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

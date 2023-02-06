@@ -1,0 +1,83 @@
+/content/documents/lks/content:
+  .meta:order-before: components
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: cc4fc38e-2af1-4644-be20-4b4a8df21fea
+  hippo:name: Content
+  hippostd:foldertype: [new-document, new-folder]
+  /senior-leadership-team:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: fc141a8c-91c2-42e3-ab21-fc0d21af95f4
+    hippo:name: Senior Leadership Team
+    hippostd:foldertype: [new-document, new-folder]
+  /ppi-contact:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: efcc30d7-7d8b-436f-8b4f-c443d92bf13a
+    hippo:name: Contact the national team
+    hippo:versionHistory: 39141892-8e5d-434c-a964-fa7676f579b4
+    /ppi-contact[1]:
+      jcr:primaryType: hee:department
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 6a9fcf25-a216-45fc-aaf1-b317ec1dfb54
+      hee:address: ''
+      hee:description: ''
+      hee:email: kfh.england@knowledgeforhealthcare.nhs.uk
+      hee:name: Contact the national team
+      hee:organisation: ''
+      hee:phoneExtension: ''
+      hee:phoneNumber: ''
+      hee:website: ''
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-09T15:08:21.399+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-10T09:34:42.375+01:00
+      hippostdpubwf:lastModifiedBy: nicki.forgham-healey
+      hippotranslation:id: 073857e9-9f9f-4b16-8b71-44e8d688269b
+      hippotranslation:locale: document-type-locale
+    /ppi-contact[2]:
+      jcr:primaryType: hee:department
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 46144940-2ce7-4881-9ce1-53317a970e7b
+      hee:address: ''
+      hee:description: ''
+      hee:email: kfh.england@knowledgeforhealthcare.nhs.uk
+      hee:name: Contact the national team
+      hee:organisation: ''
+      hee:phoneExtension: ''
+      hee:phoneNumber: ''
+      hee:website: ''
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-09T15:08:21.399+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-10T09:34:42.313+01:00
+      hippostdpubwf:lastModifiedBy: nicki.forgham-healey
+      hippotranslation:id: 073857e9-9f9f-4b16-8b71-44e8d688269b
+      hippotranslation:locale: document-type-locale
+    /ppi-contact[3]:
+      jcr:primaryType: hee:department
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 7f8eff72-7963-4a7f-8bec-d4a69aaa717f
+      hee:address: ''
+      hee:description: ''
+      hee:email: kfh.england@knowledgeforhealthcare.nhs.uk
+      hee:name: Contact the national team
+      hee:organisation: ''
+      hee:phoneExtension: ''
+      hee:phoneNumber: ''
+      hee:website: ''
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: richard.bridgen
+      hippostdpubwf:creationDate: 2022-12-09T15:08:21.399+01:00
+      hippostdpubwf:lastModificationDate: 2023-01-10T09:34:42.313+01:00
+      hippostdpubwf:lastModifiedBy: nicki.forgham-healey
+      hippostdpubwf:publicationDate: 2023-01-10T09:34:46.576+01:00
+      hippotranslation:id: 073857e9-9f9f-4b16-8b71-44e8d688269b
+      hippotranslation:locale: document-type-locale

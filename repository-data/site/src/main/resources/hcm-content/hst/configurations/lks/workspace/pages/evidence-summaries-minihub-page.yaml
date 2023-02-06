@@ -1,0 +1,36 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/evidence-summaries-minihub-page:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-04-22T12:47:28.475+02:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 08618578-df7c-4816-a986-c26d2b7ba5de
+    hst:label: Main MiniHub
+    hst:lastmodified: 2021-04-22T13:26:23.401+02:00
+    hst:xtype: hst.vbox
+    /guidance:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.GuidanceComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: Guidance
+      hst:parameternames: [document]
+      hst:parametervalues: [guidance-pages/evidence-summaries]
+      hst:template: guidance-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2021-12-22T15:51:48.608Z
+        hst:xtype: hst.vbox
+        /multi-org-logo:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+          hst:iconpath: images/catalog-component-icons/carousel.svg
+          hst:label: Multi org logo
+          hst:parameternames: [document]
+          hst:parametervalues: [guidance-pages/evidence-summaries]
+          hst:template: multi-org-logo

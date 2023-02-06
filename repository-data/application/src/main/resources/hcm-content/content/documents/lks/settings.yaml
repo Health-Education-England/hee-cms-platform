@@ -1,0 +1,76 @@
+/content/documents/lks/settings:
+  .meta:order-before: guidance-pages
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 304d7c99-36c0-498e-98e7-1b5f20c5bdf1
+  hippo:name: Settings
+  hippostd:foldertype: [new-translated-folder]
+  hippotranslation:id: e79b221d-68ea-4866-9186-0cb46c67baf9
+  hippotranslation:locale: en
+  /banners:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 3f76d453-f553-4b6d-9295-cfb9d58216ff
+    hippo:name: Banners
+    hippostd:foldertype: [new-banner-document]
+    /phase-banner:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 16fe5cfd-66ed-4a0a-bb05-562335e80910
+      hippo:name: Phase Banner
+      hippo:versionHistory: a295f281-2f50-4760-9bb3-4ebba9aea3e5
+      /phase-banner[1]:
+        jcr:primaryType: hee:banner
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 226e889f-9f29-4ee2-a803-521d331523c9
+        hee:phase: beta
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: sankar.shunmuga
+        hippostdpubwf:creationDate: 2023-01-26T11:20:13.823+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T11:20:41.986+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 840b5d0e-d683-41e1-aec7-255f75a11920
+        hippotranslation:locale: document-type-locale
+        /hee:bannerContent:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will
+            help us to improve it.</p>
+      /phase-banner[2]:
+        jcr:primaryType: hee:banner
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 4ab20213-7634-4290-a45d-5b37c9ff9725
+        hee:phase: beta
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: sankar.shunmuga
+        hippostdpubwf:creationDate: 2023-01-26T11:20:13.823+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T11:23:37.382+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 840b5d0e-d683-41e1-aec7-255f75a11920
+        hippotranslation:locale: document-type-locale
+        /hee:bannerContent:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will
+            help us to improve it.</p>
+      /phase-banner[3]:
+        jcr:primaryType: hee:banner
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e2ac3197-e2f1-4d86-ba6f-fe0f3e8b9778
+        hee:phase: beta
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: sankar.shunmuga
+        hippostdpubwf:creationDate: 2023-01-26T11:20:13.823+01:00
+        hippostdpubwf:lastModificationDate: 2023-01-26T11:23:37.382+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-01-26T11:23:39.266+01:00
+        hippotranslation:id: 840b5d0e-d683-41e1-aec7-255f75a11920
+        hippotranslation:locale: document-type-locale
+        /hee:bannerContent:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>This is a new website&nbsp;– your&nbsp;<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=K5Gn_5ewMUGcD9DoB1Wyq62_imvDlFpPhawBoObID1NUQTNENlpXMlNZVjJBS0JCUVVLUlQxSkJVUyQlQCN0PWcu">feedback</a>&nbsp;will
+            help us to improve it.</p>

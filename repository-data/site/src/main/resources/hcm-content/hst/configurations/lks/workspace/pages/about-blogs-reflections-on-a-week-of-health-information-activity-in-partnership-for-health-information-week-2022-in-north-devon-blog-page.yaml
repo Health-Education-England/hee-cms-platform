@@ -1,0 +1,51 @@
+? /hst:hst/hst:configurations/lks/hst:workspace/hst:pages/about-blogs-reflections-on-a-week-of-health-information-activity-in-partnership-for-health-information-week-2022-in-north-devon-blog-page
+: jcr:primaryType: hst:component
+  hst:lastmodified: 2022-09-23T10:28:21.542+02:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+    hst:template: blogpage-main
+    /comment:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 3009ef19-c5f6-4583-876b-e2f0d52941ee
+      hst:label: Comment Form
+      hst:lastmodified: 2022-09-23T10:33:45.336+02:00
+      hst:xtype: hst.vbox
+      /blog-comment-form:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent
+        hst:iconpath: resources/addon/eforms/images/icons/form.svg
+        hst:label: Blog Comment Form
+        hst:parameternames: [eforms-use-freemarker, form, behaviors, eforms-mailsession,
+          eforms-from-email, eforms-from-name]
+        hst:parametervalues: ['true', /content/documents/lks/forms/blogcomment, 'com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
+            uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
+          mail/Session, cms.admin@hee.nhs.uk, CMS Admin]
+        hst:resourcetemplate: eforms.validation.default
+        hst:template: eforms.default
+        hst:xtype: HST.Item
+    /blog:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 9c5b2da6-9a3f-4964-8296-ac6af0793859
+      hst:label: Blog Post
+      hst:lastmodified: 2022-09-23T10:33:45.336+02:00
+      hst:xtype: hst.vbox
+      /blogpost:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.BlogPostComponent
+        hst:iconpath: images/catalog-component-icons/simple-content.svg
+        hst:label: BlogPost
+        hst:parameternames: [document]
+        hst:parametervalues: [blog/reflections-on-a-week-of-health-information-activity-in-partnership-for-health-information-week-2022-in-north-devon]
+        hst:template: blogpost-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2022-09-23T10:33:45.336+02:00
+        hst:xtype: hst.vbox

@@ -1,0 +1,30 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/regional-meetings-formpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2021-08-11T17:03:37.548+02:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
+    hst:template: formpage-main
+    /form:
+      jcr:primaryType: hst:containercomponent
+      hippo:identifier: 8a3a0041-c2d8-42db-b03e-1fb8fe51e333
+      hst:label: Main Form
+      hst:lastmodified: 2021-08-11T17:50:49.679+02:00
+      hst:xtype: hst.vbox
+      /event-listing:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: uk.nhs.hee.web.components.EventListingPageComponent
+        hst:iconpath: images/catalog-component-icons/generic-list.svg
+        hst:label: Event Listing Page
+        hst:template: eventlisting-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2021-12-22T15:51:40.657Z
+        hst:xtype: hst.vbox
