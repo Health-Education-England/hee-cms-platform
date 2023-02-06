@@ -4,8 +4,8 @@
 <@hst.setBundle basename="essentials.pagenotfound"/>
 <#include "../../include/page-meta-data.ftl">
 
-<div class="nhsuk-width-container">
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper">
+<main class="page" id="maincontent" role="main">
+    <div class="nhsuk-width-container">
         <div>
             <h1><@fmt.message key="pagenotfound.title" var="title"/>${title}</h1>
             <p><@fmt.message key="pagenotfound.text" var="text"/>${text}</p>
@@ -13,6 +13,5 @@
         <div>
             <@hst.include ref="container"/>
         </div>
-    </main>
-</div>
-
+    </div>
+</main>
