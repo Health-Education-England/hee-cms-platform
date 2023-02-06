@@ -381,6 +381,9 @@
             <artifactId>cargo-maven2-plugin</artifactId>
             <configuration>
               <configuration>
+                <properties>
+                  <cargo.jvmargs>-Xmx4096m</cargo.jvmargs>
+                </properties>
                 <configfiles>
                   <configfile>
                     <file>${project.basedir}/conf/context-dev.xml</file>
