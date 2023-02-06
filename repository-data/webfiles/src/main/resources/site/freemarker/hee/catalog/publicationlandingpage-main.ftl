@@ -68,7 +68,7 @@
             <div class="page__layout">
                 <div class="page__main">
                     <#--  Summary  -->
-                    <#if document.summary??>
+                    <#if document.summary?has_content>
                         <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                     </#if>
 
