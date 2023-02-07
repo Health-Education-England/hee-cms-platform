@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
     hippo:name: '[VR] Home page'
-    hippo:versionHistory: 80820485-7ac7-4169-b1bf-8e3f9f790871
+    hippo:versionHistory: 34193abc-6b4e-4492-8082-5a63a1766c6d
     /vr-home-page[1]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -24,7 +24,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T06:32:40.592Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:24:53.128Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:36:10.795Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: e3d7a8c8-727f-4fa5-8c02-bd924e569d80
       hippotranslation:locale: en
@@ -138,6 +138,126 @@
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hee:navMap
+        hee:mapEducation: dental
+        hee:title: Explore dental training region
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:links[1]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-lk
+          hee:regionId: ''
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>When you're selected for a&nbsp;training&nbsp;programme, you'll learn your skills in one of England's seven regions.</p>
+
+            <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
+        /hee:links[2]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-me
+          hee:text: Midlands & the East
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[3]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-nenc
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:links[4]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-nw
+          hee:text: ''
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[5]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-sw
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:links[6]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-tvw
+          hee:text: ''
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[7]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-yh
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+      /hee:contentBlocks[16]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
     /vr-home-page[2]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -150,7 +270,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T06:32:40.592Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:25:30.867Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:36:35.283Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: e3d7a8c8-727f-4fa5-8c02-bd924e569d80
       hippotranslation:locale: en
@@ -264,6 +384,126 @@
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hee:navMap
+        hee:mapEducation: dental
+        hee:title: Explore dental training region
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:links[1]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-lk
+          hee:regionId: ''
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>When you're selected for a&nbsp;training&nbsp;programme, you'll learn your skills in one of England's seven regions.</p>
+
+            <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
+        /hee:links[2]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-me
+          hee:text: Midlands & the East
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[3]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-nenc
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:links[4]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-nw
+          hee:text: ''
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[5]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-sw
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:links[6]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-tvw
+          hee:text: ''
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[7]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-yh
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+      /hee:contentBlocks[16]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
     /vr-home-page[3]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -276,9 +516,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T06:32:40.592Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:25:30.867Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:36:35.283Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-02-06T16:33:04.172Z
+      hippostdpubwf:publicationDate: 2023-02-07T20:36:37.254Z
       hippotranslation:id: e3d7a8c8-727f-4fa5-8c02-bd924e569d80
       hippotranslation:locale: en
       /hee:heroImage:
@@ -391,6 +631,126 @@
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[15]:
+        jcr:primaryType: hee:navMap
+        hee:mapEducation: dental
+        hee:title: Explore dental training region
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModificationDate: 2021-08-05T17:59:29.088+01:00
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:links[1]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-lk
+          hee:regionId: ''
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:description:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <p>When you're selected for a&nbsp;training&nbsp;programme, you'll learn your skills in one of England's seven regions.</p>
+
+            <p>You can choose your regional preferences when you apply. The area you'll end up training in will depend on the level of competition for places.</p>
+        /hee:links[2]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-me
+          hee:text: Midlands & the East
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[3]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-nenc
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:links[4]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-nw
+          hee:text: ''
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[5]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-sw
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+        /hee:links[6]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-tvw
+          hee:text: ''
+          hee:url: https://www.hee.nhs.uk
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:links[7]:
+          jcr:primaryType: hee:navMapLink
+          hee:region: dental-yh
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: ef78c935-2f90-48d2-919f-5f99073f1832
+      /hee:contentBlocks[16]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
   /vr-landing-page:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -411,9 +771,10 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:02:08.250Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:02:08.250Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:36:40.051Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 51e6613e-07b8-4fd6-abf7-c407b4cbed62
       hippotranslation:locale: en
@@ -568,7 +929,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: b24655cf-b86d-41f2-843c-ee42b21ddc0c
     hippo:name: '[VR] Blog post page'
-    hippo:versionHistory: 05f6e87b-9df0-4821-9dc7-03f7ecc611ab
+    hippo:versionHistory: edc2d3eb-e140-4c0a-8c70-b9da0fc16bf6
     /vr-blog-post-page[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -586,7 +947,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:12:52.807Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:21:43.512Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:40:16.130Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 835113cf-6186-4be7-813f-b6e90431bd53
       hippotranslation:locale: en
@@ -702,13 +1063,9 @@
         hee:title: '[QL] Related links'
         /hee:links[1]:
           jcr:primaryType: hee:link
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 1717d618-9490-409a-92fc-e23654d3e351
           hee:openLinkUrlNewWindow: false
           hee:text: Copyright [internal]
           hee:url: ''
-          hippostd:holder: holder
-          hippostd:state: draft
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -720,13 +1077,9 @@
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
         /hee:links[2]:
           jcr:primaryType: hee:link
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 304b544e-8334-45dd-8a33-0c73b2fa1a63
           hee:openLinkUrlNewWindow: true
           hee:text: NHS [external]
           hee:url: https://nhs.uk/
-          hippostd:holder: holder
-          hippostd:state: draft
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -753,7 +1106,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:12:52.807Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:24:46.078Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:40:24.728Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 835113cf-6186-4be7-813f-b6e90431bd53
       hippotranslation:locale: en
@@ -912,9 +1265,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:12:52.807Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:24:46.078Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:40:24.728Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-02-06T07:24:48.387Z
+      hippostdpubwf:publicationDate: 2023-02-07T20:40:26.866Z
       hippotranslation:id: 835113cf-6186-4be7-813f-b6e90431bd53
       hippotranslation:locale: en
       /hee:pageLastNextReview:
@@ -1060,7 +1413,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 2934f9c8-44ab-44ae-a151-678875621855
     hippo:name: '[VR] News article page'
-    hippo:versionHistory: 69b7772f-a50c-477a-9c73-347f0958a1d0
+    hippo:versionHistory: c34498ff-2085-460a-a13b-e33b322866bc
     /vr-news-article-page[1]:
       jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable']
@@ -1080,7 +1433,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:46:17.867Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:54:40.011Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:40:29.014Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 5d696334-3e68-4cfb-91e0-d94d3cc7ff03
       hippotranslation:locale: en
@@ -1219,13 +1572,9 @@
         hee:title: '[QL] Related links'
         /hee:links[1]:
           jcr:primaryType: hee:link
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 20206173-f00c-43b4-af34-0aa8e17035d5
           hee:openLinkUrlNewWindow: false
           hee:text: Copyright [internal]
           hee:url: ''
-          hippostd:holder: holder
-          hippostd:state: draft
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -1237,13 +1586,9 @@
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
         /hee:links[2]:
           jcr:primaryType: hee:link
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 6d8372ee-1926-47a4-8e03-efbb6043e37d
           hee:openLinkUrlNewWindow: false
           hee:text: NHS [external]
           hee:url: https://nhs.uk
-          hippostd:holder: holder
-          hippostd:state: draft
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -1272,7 +1617,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:46:17.867Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:56:34.452Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:40:35.687Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 5d696334-3e68-4cfb-91e0-d94d3cc7ff03
       hippotranslation:locale: en
@@ -1456,9 +1801,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T07:46:17.867Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T07:56:34.452Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:40:35.687Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-02-06T07:56:36.541Z
+      hippostdpubwf:publicationDate: 2023-02-07T20:40:37.683Z
       hippotranslation:id: 5d696334-3e68-4cfb-91e0-d94d3cc7ff03
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -1627,7 +1972,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 59dda946-6c11-4e17-8fd3-caa3db43158d
     hippo:name: '[VR] Standard content page'
-    hippo:versionHistory: eb5b2d52-9cf3-4779-b50a-3923ec043c58
+    hippo:versionHistory: 7f193707-c815-4634-b079-2141f51a63d0
     /vr-standard-content-page[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -1640,10 +1985,9 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:00:01.119Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T08:23:00.487Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:37:22.448Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 681880e8-f344-4566-a029-d3e8149f3db7
       hippotranslation:locale: en
@@ -1875,6 +2219,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
       /hee:contentBlocks[20]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:contentBlocks[21]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
@@ -1893,7 +2242,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:00:01.119Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T08:21:58.671Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:37:51.267Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 681880e8-f344-4566-a029-d3e8149f3db7
       hippotranslation:locale: en
@@ -2125,6 +2474,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
       /hee:contentBlocks[20]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:contentBlocks[21]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
@@ -2143,9 +2497,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:00:01.119Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T08:21:58.671Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:37:51.267Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-02-06T08:22:00.808Z
+      hippostdpubwf:publicationDate: 2023-02-07T20:37:53.465Z
       hippotranslation:id: 681880e8-f344-4566-a029-d3e8149f3db7
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -2376,6 +2730,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9dfce526-0f2e-4b45-a6cd-c0ce59d229bf
       /hee:contentBlocks[20]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /hee:contentBlocks[21]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
@@ -2870,7 +3229,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 4d3c0ac4-6da0-46fd-975b-d5020665be42
     hippo:name: '[VR] [SCP] [Minin-hub] First page'
-    hippo:versionHistory: bfab3686-5a3f-4114-b79b-59f2f6426a83
+    hippo:versionHistory: 3ed00a4e-ccd4-4e3c-a786-2464d3999357
     /vr-scp-minin-hub-first-page[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -2885,7 +3244,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:56:27.974Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T09:00:31.255Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:38:57.459Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: aed6ec51-4240-4288-9a4c-3c4099446f34
       hippotranslation:locale: en
@@ -2945,6 +3304,11 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:contactCardReference
+        /hee:content:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
     /vr-scp-minin-hub-first-page[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -2959,7 +3323,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:56:27.974Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T09:00:46.960Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:39:06.681Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: aed6ec51-4240-4288-9a4c-3c4099446f34
       hippotranslation:locale: en
@@ -3019,6 +3383,11 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:contactCardReference
+        /hee:content:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
     /vr-scp-minin-hub-first-page[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -3033,9 +3402,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:56:27.974Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T09:00:46.960Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:39:06.681Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-02-06T09:00:48.767Z
+      hippostdpubwf:publicationDate: 2023-02-07T20:39:08.195Z
       hippotranslation:id: aed6ec51-4240-4288-9a4c-3c4099446f34
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -3094,12 +3463,17 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:contactCardReference
+        /hee:content:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
   /vr-scp-minin-hub-last-page:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 76ab2e5d-a059-4efc-9781-07e1309a816c
     hippo:name: '[VR] [SCP] [Minin-hub] Last page'
-    hippo:versionHistory: 31aeb729-c139-4d3d-aea8-b9d99314f8e6
+    hippo:versionHistory: 186e62b0-3238-49c8-9be8-49597803e137
     /vr-scp-minin-hub-last-page[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -3115,7 +3489,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:56:27.974Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T09:06:23.504Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:38:51.766Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 6d336185-9f41-4149-ba6a-e0f303041b37
       hippotranslation:locale: en
@@ -3171,6 +3545,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
       /hee:contentBlocks[5]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
@@ -3190,7 +3569,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:56:27.974Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T09:04:28.919Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:38:36.861Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 6d336185-9f41-4149-ba6a-e0f303041b37
       hippotranslation:locale: en
@@ -3246,6 +3625,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
       /hee:contentBlocks[5]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
@@ -3265,9 +3649,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T08:56:27.974Z
-      hippostdpubwf:lastModificationDate: 2023-02-06T09:06:23.504Z
+      hippostdpubwf:lastModificationDate: 2023-02-07T20:38:51.766Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-02-06T09:06:25.200Z
+      hippostdpubwf:publicationDate: 2023-02-07T20:38:55.210Z
       hippotranslation:id: 6d336185-9f41-4149-ba6a-e0f303041b37
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -3322,6 +3706,11 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
       /hee:contentBlocks[5]:
+        jcr:primaryType: hee:contact
+        /hee:contactItems:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
