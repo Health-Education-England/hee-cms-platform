@@ -34,71 +34,69 @@
         <#--  Main header: END  -->
 
         <#--  Main content: START  -->
-        <div class="nhsuk-width-container">
-            <div class="page__main">
-                <div class="page__content">
-                    <section class="nhsuk-section__content">
-                        <#--  Content blocks: START  -->
-                        <#if document.contentBlocks??>
-                            <#list document.contentBlocks as block>
-                                <#switch block.getClass().getName()>
-                                    <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
-                                        <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
-                                            <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
-                                        </#if>
-                                        <#break>
-                                    <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
-                                        <@hst.html hippohtml=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.RichTextReference">
-                                        <@hst.html hippohtml=block.richTextBlock.html/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.StatementBlock">
-                                        <@hee.statementBlock block=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.ActionLink">
-                                        <@hee.actionLink actionLink=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.ContentCards">
-                                        <@hee.contentCards contentCards=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.AnchorLinks">
-                                        <@hee.anchorLinks anchor=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.NavMap">
-                                        <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
-                                        <@hee.media media=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.Contact">
-                                        <@hee.contact block=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.BlockLinksReference">
-                                        <@hee.blockLinks block=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.TableReference">
-                                        <@hee.table table=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.TabsReference">
-                                        <@hee.tabs tabs=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.DetailsReference">
-                                        <@hee.details block=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
-                                        <@hee.warningCallout block=block/>
-                                        <#break>
-                                    <#case "uk.nhs.hee.web.beans.StatementCardReference">
-                                        <@hee.statementCard block=block/>
-                                        <#break>
-                                    <#default>
-                                </#switch>
-                            </#list>
-                        </#if>
-                        <#--  Content blocks: END  -->
-                    </section>
-                </div>
+        <div class="page__main nhsuk-width-container">
+            <div class="page__content">
+                <section class="nhsuk-section__content">
+                    <#--  Content blocks: START  -->
+                    <#if document.contentBlocks??>
+                        <#list document.contentBlocks as block>
+                            <#switch block.getClass().getName()>
+                                <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
+                                    <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
+                                        <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
+                                    </#if>
+                                    <#break>
+                                <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                                    <@hst.html hippohtml=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.RichTextReference">
+                                    <@hst.html hippohtml=block.richTextBlock.html/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.StatementBlock">
+                                    <@hee.statementBlock block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.ActionLink">
+                                    <@hee.actionLink actionLink=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.ContentCards">
+                                    <@hee.contentCards contentCards=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.AnchorLinks">
+                                    <@hee.anchorLinks anchor=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.NavMap">
+                                    <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
+                                    <@hee.media media=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.Contact">
+                                    <@hee.contact block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.BlockLinksReference">
+                                    <@hee.blockLinks block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.TableReference">
+                                    <@hee.table table=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.TabsReference">
+                                    <@hee.tabs tabs=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                    <@hee.details block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
+                                    <@hee.warningCallout block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.StatementCardReference">
+                                    <@hee.statementCard block=block/>
+                                    <#break>
+                                <#default>
+                            </#switch>
+                        </#list>
+                    </#if>
+                    <#--  Content blocks: END  -->
+                </section>
             </div>
         </div>
         <#--  Main content: END  -->

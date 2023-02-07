@@ -25,27 +25,25 @@
         <#--  Main header: END  -->
 
         <#--  Main content: START  -->
-        <section class="nhsuk-width-container">
-            <div class="page__main">
-                <div class="page__content">
-                    <#--  Main content blocks: START  -->
-                    <#if document.contentBlocks??>
-                        <#list document.contentBlocks as block>
-                            <#switch block.getClass().getName()>
-                                <#case "uk.nhs.hee.web.beans.ContentCards">
-                                    <@hee.contentCards contentCards=block />
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.NavMap">
-                                    <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
-                                    <#break>
-                                <#default>
-                            </#switch>
-                        </#list>
-                    </#if>
-                    <#--  Main content blocks: END  -->
-                </div>
+        <div class="page__main nhsuk-width-container">
+            <div class="page__content">
+                <#--  Main content blocks: START  -->
+                <#if document.contentBlocks??>
+                    <#list document.contentBlocks as block>
+                        <#switch block.getClass().getName()>
+                            <#case "uk.nhs.hee.web.beans.ContentCards">
+                                <@hee.contentCards contentCards=block />
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.NavMap">
+                                <@hee.navMap block=block navMapRegionMap=navMapRegionMap/>
+                                <#break>
+                            <#default>
+                        </#switch>
+                    </#list>
+                </#if>
+                <#--  Main content blocks: END  -->
             </div>
-        </section>
+        </div>
         <#--  Main content: END  -->
     </main>
 </#if>
