@@ -233,8 +233,8 @@
         <#--  Main featured content: START  -->
         <section class="page__feature">
             <#--  Related content  -->
-            <#if document.relatedContent?? && document.relatedContent.cards?size gt 0>
-                <div class="nhsuk-width-container nhsuk-section__content">
+            <#if document.relatedContent??>
+                <div class="nhsuk-width-container">
                     <@hee.contentCards contentCards=document.relatedContent/>
                 </div>
             </#if>

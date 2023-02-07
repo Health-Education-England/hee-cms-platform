@@ -164,11 +164,9 @@
             <#--  Main featured content: START  -->
             <section class="page__feature">
                 <#--  Related content  -->
-                <#if guidanceDocument.relatedContent?? && guidanceDocument.relatedContent.cards?size gt 0>
-                    <div class="nhsuk-width-container nhsuk-section__content">
-                        <#--  <div class="nhsuk-grid-column-full nhsuk-section__content">  -->
-                            <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
-                        <#--  </div>  -->
+                <#if guidanceDocument.relatedContent??>
+                    <div class="nhsuk-width-container">
+                        <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
                     </div>
                 </#if>
             </section>
