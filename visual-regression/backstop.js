@@ -53,6 +53,14 @@ module.exports = {
     {
       'label': 'mini_hub_page',
       'url': `${local_uri}/visual-regression/vr-mini-hub-page`,
+    },
+    {
+      'label': 'publication_landing_page',
+      'url': `${local_uri}/visual-regression/vr-publication-landing-page`,
+    },
+    {
+      'label': 'publication_page_page',
+      'url': `${local_uri}/visual-regression/vr-publication-landing-page/vr-publication-page`,
     }
   ],
   'paths': {
