@@ -1,9 +1,9 @@
-name: CI & CD [TEST]
+name: CI & CD [DEVELOPMENT]
 
 on:
   push:
     branches:
-      - template/nwps-1241-homepage-changes
+      - feature/NWPS-1234-fe-template-tidy-up-integration
 env:
   BRC_STACK_NAME: hee
   # BRC_MAX_DISTRIBUTIONS: 90
@@ -11,7 +11,6 @@ env:
 
 jobs:
   buildAndTest:
-    if: ${{ false }}  # disable for now
     name: Build & Test
     runs-on: ubuntu-latest
 
@@ -44,13 +43,13 @@ jobs:
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
 
-  deploy-to-test:
-    name: Deploy to Test Env. [on brCloud]
-    needs: [buildAndTest]
-    environment: test
+  deploy-to-dev:
+    name: Deploy to Dev Env. [on brCloud]
+    needs: buildAndTest
+    environment: development
 
     env:
-      BRC_ENV_NAME: test
+      BRC_ENV_NAME: development
 
     runs-on: ubuntu-latest
 
@@ -78,7 +77,7 @@ jobs:
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
-        run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
+        run: mvn -B verify && mvn -Pdist-with-development-data -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
@@ -101,7 +100,7 @@ jobs:
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
-      - name: Deploy distribution to 'test' env
+      - name: Deploy distribution to 'development' env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4
         id: deploy
         with:
