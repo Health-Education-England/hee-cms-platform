@@ -27,7 +27,7 @@
 <#macro renderCheckboxGroup name titleKey itemMap selectedItemList facet>
     <div class="nhsuk-filter__group">
         <@fmt.message key="${titleKey}" var="filterTitle"/>
-        <a class="nhsuk-filter__group__clear">Clear</a>
+        <a class="nhsuk-filter__group__clear " href="#">Clear</a>
         <@checkboxGroup title="${filterTitle}" name="${name}" items=itemMap selectedItemsList=selectedItemList facet=facet! />
     </div>
 </#macro>
@@ -57,7 +57,7 @@
                     <@hst.renderURL var="pagelink"/>
                     <form class="nhsuk-filter nhsuk-filter--js" method="get" action="${pagelink}">
                         <@fmt.message key="filters.label" var="filtersLabel"/>
-                        <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}//</p>
+                        <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
 
                         <div class="nhsuk-filter__groups">
                             <#--  Renders Publication type checkbox filter  -->

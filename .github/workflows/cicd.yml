@@ -45,6 +45,7 @@ jobs:
 
   deploy-to-dev:
     name: Deploy to Dev Env. [on brCloud]
+    if: ${{ false }} # disable as isolating development environment from workflow
     needs: buildAndTest
     environment: development
 
@@ -183,7 +184,8 @@ jobs:
   deploy-to-staging:
     name: Deploy to Staging Env. [on brCloud]
     # needs: [buildAndTest, deploy-to-dev, deploy-to-test]
-    needs: [buildAndTest, deploy-to-dev]
+    # needs: [buildAndTest, deploy-to-dev] # disable as isolating development environment from workflow
+    needs: [buildAndTest]
     environment: staging
 
     env:

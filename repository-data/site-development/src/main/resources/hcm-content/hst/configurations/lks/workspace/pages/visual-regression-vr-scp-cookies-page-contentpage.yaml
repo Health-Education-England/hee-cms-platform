@@ -1,0 +1,21 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-scp-cookies-page-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2023-02-06T08:45:30.461Z
+  hst:referencecomponent: hst:abstractpages/base
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2023-02-06T08:45:33.020Z
+        hst:xtype: hst.vbox
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: uk.nhs.hee.web.components.CookiesPageComponent
+    hst:parameternames: [document, fallbackSiteContentBasePath, fallbackChannelDomainWithProtocol]
+    hst:parametervalues: [visual-regression/vr-scp-cookies-page, /content/documents/lks,
+      'https://library.hee.nhs.uk']
+    hst:template: cookies-main
