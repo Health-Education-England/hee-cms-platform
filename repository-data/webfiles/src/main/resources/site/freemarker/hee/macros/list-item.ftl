@@ -176,19 +176,21 @@
         <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
-            <h3><a href="${pageURL}">${item.title}</a></h3>
+            <div class="hee-listing-item">
+                <h3><a href="${pageURL}">${item.title}</a></h3>
 
-            <dl class="nhsuk-summary-list">
-                <@listItemRow key="${publicationTypeLabel}">
-                    ${publicationTypeMap[item.publicationType]}
-                </@listItemRow>
+                <div class="hee-listing-item__details">
+                    <@publicationListItemRow key="${publicationTypeLabel}">
+                        ${publicationTypeMap[item.publicationType]}
+                    </@publicationListItemRow>
 
-                <@listItemRow key="${publishDateLabel}">
-                    ${item.publicationDate.time?string['dd MMMM yyyy']}
-                </@listItemRow>
-            </dl>
+                    <@publicationListItemRow key="${publishDateLabel}">
+                        ${item.publicationDate.time?string['dd MMMM yyyy']}
+                    </@publicationListItemRow>
+                </div>
 
-            <p>${item.summary}</p>
+                <div class="hee-listing-item__summary">${item.summary}</div>
+            </div>
         </#if>
     </#list>
 </#macro>
@@ -363,5 +365,14 @@
         <dd class="nhsuk-summary-list__value">
             <#nested>
         </dd>
+    </div>
+</#macro>
+
+<#macro publicationListItemRow key>
+    <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">
+            ${key}
+        </span>
+        <span><#nested></span>
     </div>
 </#macro>
