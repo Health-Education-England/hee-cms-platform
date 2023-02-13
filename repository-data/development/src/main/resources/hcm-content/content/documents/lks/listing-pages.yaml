@@ -97,24 +97,27 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 6d95c002-0535-41b3-8669-619735ecf394
     hippo:name: Search Results
-    hippo:versionHistory: 1146a77d-b857-49b1-90a2-c591f10dce82
+    hippo:versionHistory: 62afa439-a896-4f9c-9f99-4695e80a9fbd
     /search-results[1]:
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e734ac17-0503-4c18-a111-7ea5d4ab8e9d
+      hee:addToAZ: false
       hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
-        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank',
+        'hee:publicationLandingPage']
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
       hee:summary: Search for terms within guidance pages and blog posts.
       hee:title: Search
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T01:00:12.627Z
+      hippostdpubwf:lastModificationDate: 2023-02-13T11:22:28.842Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
@@ -128,8 +131,10 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: b843cfa2-5737-46f9-bba2-10d0d067a803
+      hee:addToAZ: false
       hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
-        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank',
+        'hee:publicationLandingPage']
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
@@ -140,7 +145,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T01:00:16.780Z
+      hippostdpubwf:lastModificationDate: 2023-02-13T11:16:30.791Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
@@ -154,8 +159,10 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: ac0dc40d-426f-4299-840e-929ebf3d6a53
+      hee:addToAZ: false
       hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
-        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank']
+        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank',
+        'hee:publicationLandingPage']
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
@@ -166,9 +173,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T14:41:37.258+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T01:00:16.780Z
+      hippostdpubwf:lastModificationDate: 2023-02-13T11:16:30.791Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-11-08T01:00:18.389Z
+      hippostdpubwf:publicationDate: 2023-02-13T11:16:32.551Z
       hippotranslation:id: f7eef939-123a-4465-878a-1b4c94be9e4c
       hippotranslation:locale: en
       /hee:heroImage:

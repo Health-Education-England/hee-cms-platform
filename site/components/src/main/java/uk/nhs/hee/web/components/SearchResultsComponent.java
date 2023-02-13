@@ -7,14 +7,6 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
-import uk.nhs.hee.web.beans.ListingPage;
-import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.StringUtils;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
 
