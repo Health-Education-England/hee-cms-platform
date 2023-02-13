@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: a020cc14-f64f-49af-9cde-4b2ae3e29e95
   hippo:name: Dental_Recruitment_Redirects_hee_nhs_uk_domain_with_preview
-  hippo:versionHistory: 58bd5a0d-5521-4210-acb1-7df4a6fab7be
+  hippo:versionHistory: edbff4ee-ab8a-4802-b18a-3cd8d1e516bb
   /dental_recruitment_redirects_hee_nhs_uk_domain_with_preview[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -11,10 +11,11 @@
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2023-01-04T14:24:00.821Z
-    hippostdpubwf:lastModificationDate: 2023-01-10T12:56:01.898Z
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2023-01-17T22:58:44.426+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
     urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/special-care-dentistry/special-care-dentistry-overview/?$</from>\r\
@@ -226,10 +227,7 @@
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-surgery/oral-surgery-offer-process/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-surgery/overview-of-oral-surgery/oral-surgery-offer-process</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
-      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/?$</from>\r\
-      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/oral-medicine-overview</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/applying-for-oral-medicine/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/applying-for-oral-medicine</to>\r\
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
@@ -392,8 +390,8 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2023-01-04T14:24:00.821Z
-    hippostdpubwf:lastModificationDate: 2023-01-10T12:56:38.426Z
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2023-01-17T22:57:08.287+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/special-care-dentistry/special-care-dentistry-overview/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/special-care-dentistry/overview-of-special-care-dentistry/special-care-dentistry-overview</to>\r\
@@ -604,10 +602,7 @@
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-surgery/oral-surgery-offer-process/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-surgery/overview-of-oral-surgery/oral-surgery-offer-process</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
-      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/?$</from>\r\
-      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/oral-medicine-overview</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/applying-for-oral-medicine/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/applying-for-oral-medicine</to>\r\
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
@@ -765,14 +760,14 @@
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 68ace860-84e1-4d70-b65e-829569b95eb7
-    hippo:availability: []
+    hippo:availability: [live]
     hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2023-01-04T14:24:00.821Z
-    hippostdpubwf:lastModificationDate: 2023-01-10T12:56:38.426Z
-    hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2023-01-10T14:04:16.792Z
+    hippostdpubwf:lastModificationDate: 2023-01-17T22:57:08.287+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2023-01-17T23:00:48.025+01:00
     urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/special-care-dentistry/special-care-dentistry-overview/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/special-care-dentistry/overview-of-special-care-dentistry/special-care-dentistry-overview</to>\r\
@@ -983,10 +978,7 @@
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-surgery/oral-surgery-offer-process/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-surgery/overview-of-oral-surgery/oral-surgery-offer-process</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
-      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/?$</from>\r\
-      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/oral-medicine-overview</to>\r\
-      \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
       \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/applying-for-oral-medicine/?$</from>\r\
       \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/oral-medicine/overview-of-oral-medicine/applying-for-oral-medicine</to>\r\
       \n</rule>\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\

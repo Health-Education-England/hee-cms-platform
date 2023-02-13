@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 506fd825-dab6-47de-a09d-a935f113bf94
   hippo:name: GPNROToMedicalGPRedirects
-  hippo:versionHistory: b92948e3-d46e-4f88-965d-38b19acb7851
+  hippo:versionHistory: c6f22ba9-e1a4-482e-9785-35c8dd80cfc9
   /gpnrotomedicalgpredirects[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:versionable']
@@ -13,8 +13,8 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2022-07-18T15:14:08.497+01:00
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2023-02-02T09:21:55.617+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment.hee.nhs.uk</condition>\r\
       \n  <from>^/choose-gp/retrain/Dr-Lucy-Obolensky/?$</from>\r\n  <to type=\"permanent-redirect\"\
       \ last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp/choose-gp/switching-to-gp-training/case-studies/dr-lucy-obolensky</to>\r\
@@ -68,6 +68,8 @@
       permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp/choose-gp/choose-gp-career-stories/dr-haider-ali</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment.hee.nhs.uk</condition>\r\
       \n  <from>^(.*)$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment-prod.hee.nhs.uk</condition>\r\
+      \n  <from>^(.*)$</from>\r\n  <to type=\"temporary-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp</to>\r\
       \n</rule>"
   /gpnrotomedicalgpredirects[2]:
     jcr:primaryType: urlrewriter:xmlrule
@@ -78,8 +80,8 @@
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2022-07-18T15:14:05.340+01:00
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2023-02-02T09:20:33.524+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment.hee.nhs.uk</condition>\r\
       \n  <from>^/choose-gp/retrain/Dr-Lucy-Obolensky/?$</from>\r\n  <to type=\"permanent-redirect\"\
       \ last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp/choose-gp/switching-to-gp-training/case-studies/dr-lucy-obolensky</to>\r\
@@ -133,6 +135,8 @@
       permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp/choose-gp/choose-gp-career-stories/dr-haider-ali</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment.hee.nhs.uk</condition>\r\
       \n  <from>^(.*)$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment-prod.hee.nhs.uk</condition>\r\
+      \n  <from>^(.*)$</from>\r\n  <to type=\"temporary-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp</to>\r\
       \n</rule>"
   /gpnrotomedicalgpredirects[3]:
     jcr:primaryType: urlrewriter:xmlrule
@@ -143,9 +147,9 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2022-07-18T15:14:08.497+01:00
-    hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2022-07-18T15:14:10.081+01:00
+    hippostdpubwf:lastModificationDate: 2023-02-02T09:21:55.617+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2023-02-02T09:21:57.795+01:00
     urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment.hee.nhs.uk</condition>\r\
       \n  <from>^/choose-gp/retrain/Dr-Lucy-Obolensky/?$</from>\r\n  <to type=\"permanent-redirect\"\
       \ last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp/choose-gp/switching-to-gp-training/case-studies/dr-lucy-obolensky</to>\r\
@@ -199,4 +203,6 @@
       permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp/choose-gp/choose-gp-career-stories/dr-haider-ali</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment.hee.nhs.uk</condition>\r\
       \n  <from>^(.*)$</from>\r\n  <to type=\"permanent-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">gprecruitment-prod.hee.nhs.uk</condition>\r\
+      \n  <from>^(.*)$</from>\r\n  <to type=\"temporary-redirect\" last=\"true\">https://medical.hee.nhs.uk/medical-training-recruitment/medical-specialty-training/general-practice-gp</to>\r\
       \n</rule>"
