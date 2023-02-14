@@ -1,6 +1,7 @@
 <#ftl output_format="HTML">
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#include "internal-link.ftl">
+<#include '../utils/author-util.ftl'>
 
 <#macro bulletinListItem items categoriesMap>
     <#list items as item>
@@ -51,7 +52,12 @@
                         <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </p>
                     <p class="nhsuk-body-s">
-                        <@fmt.message key="by.text"/> ${item.author}
+                        <#if item.authors?has_content>
+                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
+                        <#else>
+                            <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
+                        </#if>
+                        <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
                     </p>
                 </div>
             </li>
@@ -74,11 +80,14 @@
                     <p class="nhsuk-body-s">
                         <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </p>
-                    <#if item.author?has_content>
-                        <p class="nhsuk-body-s">
-                            <@fmt.message key="by.text"/> ${item.author}
-                        </p>
-                    </#if>
+                    <p class="nhsuk-body-s">
+                        <#if item.authors?has_content>
+                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
+                        <#else>
+                            <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
+                        </#if>
+                        <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
+                    </p>
                 </div>
             </li>
         </#if>
