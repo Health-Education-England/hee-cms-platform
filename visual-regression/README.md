@@ -4,24 +4,44 @@ Provides [BackstopJS](https://garris.github.io/BackstopJS/) config `backstop.js`
 
 ## Installation
 
-The project requires [BackstopJS](https://garris.github.io/BackstopJS/). Please make sure you have it installed on your machine and available globally.
+The project requires the following dependencies installed on your machine:
+
+- [BackstopJS](https://garris.github.io/BackstopJS/)
+  ```shell
+  $ npm install --global backstopjs
+  ```
+- [Docker](https://docs.docker.com/get-docker/)
 
 ## Usage
 
+The `--docker` option on the following backstop commands will run the corresponding backstop commands on the docker container and it is essentially to eliminate cross-platform rendering issues. Make sure `docker` is running when invoking the following commands.
+
 - To generate reference screenshots for the first time or to update existing reference screenshots:
 ```
-$ backstop reference --config backstop.js
+$ backstop reference --config backstop.js --docker
 ```
 
 - To test current screenshots against reference screenshots:
 ```
-$ backstop test --config backstop.js
+$ backstop test --config backstop.js --docker
 ```
 
 - To open the BackstopJS report (explicitly) in a web browser:
 ```
-$ backstop openReport --config backstop.js
+$ backstop openReport --config backstop.js --docker
 ```
+
+In order to run the test on the host platform or OS, uncomment the following:
+```javascript
+const local_uri = 'http://localhost:8080/site';
+```
+and comment the following:
+```javascript
+// const local_uri = 'http://host.docker.internal:8080/site';
+```
+and run the above backstop commands without `--docker` option.
+
+<br/>
 
 For more details of the above commands or for other supported commands, refer [BackstopJS](https://garris.github.io/BackstopJS/).
 
