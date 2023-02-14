@@ -16,7 +16,11 @@ const mobileViewport = {
   height: 667
 };
 
-const local_uri = 'http://localhost:8080/site';
+// To test on the host
+// const local_uri = 'http://localhost:8080/site';
+
+/* To test within a docker container */
+const local_uri = 'http://host.docker.internal:8080/site';
 
 module.exports = {
   'id': 'back_end_visual_regression_default',
