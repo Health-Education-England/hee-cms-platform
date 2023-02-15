@@ -16,7 +16,11 @@ const mobileViewport = {
   height: 667
 };
 
-const local_uri = 'http://localhost:8080/site';
+// To test on the host
+// const local_uri = 'http://localhost:8080/site';
+
+/* To test within a docker container */
+const local_uri = 'http://host.docker.internal:8080/site';
 
 module.exports = {
   'id': 'back_end_visual_regression_default',
@@ -53,6 +57,14 @@ module.exports = {
     {
       'label': 'mini_hub_page',
       'url': `${local_uri}/visual-regression/vr-mini-hub-page`,
+    },
+    {
+      'label': 'publication_landing_page',
+      'url': `${local_uri}/visual-regression/vr-publication-landing-page`,
+    },
+    {
+      'label': 'publication_page_page',
+      'url': `${local_uri}/visual-regression/vr-publication-landing-page/vr-publication-page`,
     }
   ],
   'paths': {
