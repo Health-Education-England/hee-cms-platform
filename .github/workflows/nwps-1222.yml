@@ -1,9 +1,9 @@
-name: CI & CD [MASTER]
+name: CI & CD [TEST]
 
 on:
   push:
     branches:
-      - upgrade/brxm-cms-upgrade-14.7.11
+      - upgrade/brxm-cms-upgrade-14.7.13
 env:
   BRC_STACK_NAME: hee
   # BRC_MAX_DISTRIBUTIONS: 90
@@ -44,6 +44,7 @@ jobs:
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
+    if: ${{ false }}
     needs: [buildAndTest]
     environment: test
 
