@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 <#include "../utils/phone-number-util.ftl">
 
-<#macro departmentContact department>
+<#macro departmentContact department description="">
     <div class="nhsuk-contact__content">
         <h3 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${department.name}</h3>
         <#if department.organisation?has_content>
@@ -38,8 +38,8 @@
                 <p aria-label="Address">${department.address?replace('\n', '<br>')}</p>
             </#if>
 
-            <#if department.description?has_content>
-                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${department.description}</p>
+            <#if description?has_content>
+                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${description}</p>
             </#if>
         </div>
     </div>
