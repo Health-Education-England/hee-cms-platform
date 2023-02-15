@@ -7,18 +7,13 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
 @HippoEssentialsGenerated(internalName = "hee:banner")
 @Node(jcrType = "hee:banner")
 public class Banner extends BaseDocument {
-    @HippoEssentialsGenerated(internalName = "hee:tag")
-    public String getTag() {
-        return getSingleProperty("hee:tag");
+    @HippoEssentialsGenerated(internalName = "hee:phase")
+    public String getPhase() {
+        return getSingleProperty("hee:phase");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:copy")
-    public HippoHtml getCopy() {
-        return getHippoHtml("hee:copy");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:copy1")
-    public HippoHtml getCopy1() {
-        return getHippoHtml("hee:copy1");
+    @HippoEssentialsGenerated(internalName = "hee:bannerContent")
+    public HippoHtml getBannerContent() {
+        return getHippoHtml("hee:bannerContent");
     }
 }

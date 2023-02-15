@@ -10,6 +10,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/lks
+        /exclude-lks-settings-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/lks/settings
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:

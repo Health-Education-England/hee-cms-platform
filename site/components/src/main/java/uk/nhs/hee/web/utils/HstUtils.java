@@ -13,6 +13,7 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.ListingPage;
+import uk.nhs.hee.web.beans.PublicationListingPage;
 import uk.nhs.hee.web.repository.HEEField;
 
 import java.util.Arrays;
@@ -166,12 +167,35 @@ public class HstUtils {
      * @return the {@link HippoBean} corresponding to the given {@code listingType}.
      */
     public static HippoBean getListingPageBeanByType(final HstRequestContext requestContext, final String listingType) {
-        final HstQueryBuilder builder = HstQueryBuilder.create(requestContext.getSiteContentBaseBean());
-        final HstQuery query = builder.ofTypes(ListingPage.class)
+        final HstQuery query = HstQueryBuilder.create(requestContext.getSiteContentBaseBean())
+                .ofTypes(ListingPage.class)
                 .where(constraint(HEEField.LISTING_TYPE.getName()).equalTo(listingType))
                 .limit(1)
                 .build();
 
+        return getHippoBean(query);
+    }
+
+    /**
+     * Returns Publication listing {@link HippoBean}.
+     *
+     * @param requestContext the {@link HstRequestContext} instance.
+     * @return the Publication listing {@link HippoBean}.
+     */
+    public static HippoBean getPublicationListingPageBean(final HstRequestContext requestContext) {
+        final HstQuery query = HstQueryBuilder.create(requestContext.getSiteContentBaseBean())
+                .ofTypes(PublicationListingPage.class).limit(1).build();
+
+        return getHippoBean(query);
+    }
+
+    /**
+     * Returns {@link HippoBean} resulting from executing the given {@code query}.
+     *
+     * @param query the {@link HstQuery} instance to be executed.
+     * @return the {@link HippoBean} resulting from executing the given {@code query}.
+     */
+    private static HippoBean getHippoBean(final HstQuery query) {
         try {
             final HstQueryResult results = query.execute();
 
@@ -179,7 +203,7 @@ public class HstUtils {
                 return results.getHippoBeans().nextHippoBean();
             }
         } catch (final QueryException e) {
-            LOGGER.error("Caught error {} while searching for '{}' type Listing Page", e.getMessage(), listingType, e);
+            LOGGER.error("Caught error {} while executing the HST query", e.getMessage(), e);
         }
 
         return null;

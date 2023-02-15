@@ -11,14 +11,18 @@ definitions:
         sure to add all its (regional) Links.
       hee:link-validator: Please enter either Link Document or URL.
       hee:applies-to-country-validator: Enter the Link URL.
-      hee:phone-number-validator#phone-number-extension-input-suggestion: Please move
-        the extension to 'Phone extension' field
-      hee:phone-number-validator#no-uk-country-code-error: Please prefix the phone
-        number with UK country code '+44'
-      hee:phone-number-validator#multiple-contact-numbers-error: Please enter one
-        contact number only
-      hee:phone-number-validator#phone-number-minimum-digits-input-suggestion: Please
-        enter valid phone number - minimum 10 digits
       hee:optional-url-validator: Enter a valid URL
       hee:mandatory-contact-validator: Please enter Phone number and/or Email
       hee:optional-email-validator: Enter a valid email address
+      hee:unique-author-validator: '''${personDocumentDisplayName}'' already exists
+        as an Author in the CMS. A person cannot be multiple authors. Please select
+        a different person.'
+      hee:numeric-validator: Please enter a number
+      hee:mandatory-publication-professions-or-topics-validator: Please select at
+        least one option from either Professions or Topics
+      hee:phone-number-validator#uk-country-code-error: Please remove UK country code
+        prefix '+44' from the phone number
+      hee:phone-number-validator#invalid-phone-number: Please enter a valid phone
+        number containing 10 digits (excluding trunk[0]/country code[44] prefixes)
+        (e.g. 123 456 7891)
+      hee:banner-phase-name-validator: Please choose a Phase

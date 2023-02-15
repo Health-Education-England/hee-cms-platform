@@ -39,7 +39,7 @@
                         <#assign docType>${docTypeByMimeType(link.file.mimeType)}</#assign>
 
                         <li>
-                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.text}  (opens in new window)">
+                            <a class="nhsuk-resources__link" href="${fileURL}" title="${link.text}">
                             ${link.text}
                             <span class="nhsuk-resources__tag nhsuk-resources__${docType}">${docType?upper_case}</span><span class="nhsuk-resources__docSize">${link.file.lengthKB}kB</span>
                             </a>

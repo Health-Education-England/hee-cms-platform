@@ -25,14 +25,16 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: bfe06103-4853-427e-a61c-863faa9070a9
+        hippo:versionHistory: 3519537a-4012-4996-ad45-f36b35f8d3d5
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 48e8515a-6a01-4e04-bb8e-6f06775f58f2
+          hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [public_health]
-          hee:publicationTopics: [knowledge_management, quality]
+          hee:publicationTopics: [knowledge_management, quality, workforce_planning,
+            workforce_transformation]
           hee:publicationType: policy_strategy
           hee:readTime: '5'
           hee:subtitle: NSHCS Policies
@@ -48,7 +50,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T07:01:08.554Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:14:21.178Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -58,19 +60,6 @@
           /hee:webPublications[1]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dec75cbc-43ed-468d-89f7-e6fd7cee024e
-          /hee:languageVersions:
-            jcr:primaryType: hippo:resource
-            jcr:mixinTypes: ['mix:created']
-            hippo:filename: sample.pdf
-            hippo:text:
-              type: binary
-              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[1]/languageVersions/sample.pdf
-            jcr:data:
-              type: binary
-              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[1]/languageVersions/sample-1.pdf
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2022-11-28T21:17:31.795Z
-            jcr:mimeType: application/pdf
           /hee:documentVersions[1]:
             jcr:primaryType: hippo:resource
             jcr:mixinTypes: ['mix:created']
@@ -94,13 +83,31 @@
           /hee:webPublications[2]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 06b2952e-0e78-43f7-898b-b7e88aaa0c8a
+          /hee:authors[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+          /hee:authors[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+          /hee:languageVersions:
+            jcr:primaryType: hippo:resource
+            jcr:mixinTypes: ['mix:created']
+            hippo:filename: hippo:resource
+            jcr:data:
+              type: binary
+              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[1]/languageVersions/hippo-resource
+            jcr:encoding: UTF-8
+            jcr:lastModified: 2008-03-26T12:03:00+01:00
+            jcr:mimeType: application/vnd.hippo.blank
         /reasonable-adjustments-policy---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
           jcr:uuid: 0abfe671-b25a-49d9-adab-4288e720fd55
+          hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [public_health]
-          hee:publicationTopics: [knowledge_management, quality]
+          hee:publicationTopics: [knowledge_management, quality, workforce_planning,
+            workforce_transformation]
           hee:publicationType: policy_strategy
           hee:readTime: '5'
           hee:subtitle: NSHCS Policies
@@ -116,7 +123,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T07:01:30.448Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:45:17.903Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -126,19 +133,6 @@
           /hee:webPublications[1]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dec75cbc-43ed-468d-89f7-e6fd7cee024e
-          /hee:languageVersions:
-            jcr:primaryType: hippo:resource
-            jcr:mixinTypes: ['mix:created']
-            hippo:filename: sample.pdf
-            hippo:text:
-              type: binary
-              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[2]/languageVersions/sample.pdf
-            jcr:data:
-              type: binary
-              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[2]/languageVersions/sample-1.pdf
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2022-11-28T21:17:31.795Z
-            jcr:mimeType: application/pdf
           /hee:documentVersions[1]:
             jcr:primaryType: hippo:resource
             jcr:mixinTypes: ['mix:created']
@@ -162,13 +156,31 @@
           /hee:webPublications[2]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 06b2952e-0e78-43f7-898b-b7e88aaa0c8a
+          /hee:authors[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+          /hee:authors[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+          /hee:languageVersions:
+            jcr:primaryType: hippo:resource
+            jcr:mixinTypes: ['mix:created']
+            hippo:filename: hippo:resource
+            jcr:data:
+              type: binary
+              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[2]/languageVersions/hippo-resource
+            jcr:encoding: UTF-8
+            jcr:lastModified: 2008-03-26T12:03:00+01:00
+            jcr:mimeType: application/vnd.hippo.blank
         /reasonable-adjustments-policy---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 11dacd51-85cc-42b7-b3e6-dd7b9880a83a
+          hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [public_health]
-          hee:publicationTopics: [knowledge_management, quality]
+          hee:publicationTopics: [knowledge_management, quality, workforce_planning,
+            workforce_transformation]
           hee:publicationType: policy_strategy
           hee:readTime: '5'
           hee:subtitle: NSHCS Policies
@@ -184,9 +196,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T07:01:30.448Z
+          hippostdpubwf:lastModificationDate: 2022-12-23T14:45:17.903Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-29T07:01:32.108Z
+          hippostdpubwf:publicationDate: 2022-12-23T14:45:20.900Z
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -195,19 +207,6 @@
           /hee:webPublications[1]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dec75cbc-43ed-468d-89f7-e6fd7cee024e
-          /hee:languageVersions:
-            jcr:primaryType: hippo:resource
-            jcr:mixinTypes: ['mix:created']
-            hippo:filename: sample.pdf
-            hippo:text:
-              type: binary
-              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[3]/languageVersions/sample.pdf
-            jcr:data:
-              type: binary
-              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[3]/languageVersions/sample-1.pdf
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2022-11-28T21:17:31.795Z
-            jcr:mimeType: application/pdf
           /hee:documentVersions[1]:
             jcr:primaryType: hippo:resource
             jcr:mixinTypes: ['mix:created']
@@ -231,60 +230,86 @@
           /hee:webPublications[2]:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 06b2952e-0e78-43f7-898b-b7e88aaa0c8a
+          /hee:authors[1]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+          /hee:authors[2]:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+          /hee:languageVersions:
+            jcr:primaryType: hippo:resource
+            jcr:mixinTypes: ['mix:created']
+            hippo:filename: hippo:resource
+            jcr:data:
+              type: binary
+              resource: /content/documents/lks/publications/2022/policies/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[3]/languageVersions/hippo-resource
+            jcr:encoding: UTF-8
+            jcr:lastModified: 2008-03-26T12:03:00+01:00
+            jcr:mimeType: application/vnd.hippo.blank
       /reasonable-adjustments-policy---publication-1:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: dec75cbc-43ed-468d-89f7-e6fd7cee024e
         hippo:name: Reasonable Adjustments Policy - Publication 1
-        hippo:versionHistory: 1152c647-ad9e-42fa-aa7b-3573aaa13fb8
+        hippo:versionHistory: 0c6fbc5c-4520-4c61-95d7-e371640084fa
         /reasonable-adjustments-policy---publication-1[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: fe035321-e6fc-4583-8f38-a388ee190e8d
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:subtitle: Publication
-          hee:summary: Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu
-            erat, accumsan id imperdiet et, porttitor at sem.
+          hee:summary: "The Reasonable Adjustments Policy is part of a suite of policies\
+            \ designed to support fair and equitable assessment.\r\n\r\nWhere you\
+            \ have a condition or a disability and feel you have additional needs,\
+            \ this policy enables you to request reasonable adjustments in your final\
+            \ assessment that are aimed at min"
           hee:title: Reasonable Adjustments Policy - Publication 1
           hippo:availability: []
           hippostd:retainable: false
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:56:01.924Z
+          hippostdpubwf:lastModificationDate: 2023-01-20T14:46:53.098Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 2022-11-28T00:00:00Z
+            hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document status
+            hee:headingType: H2
+            hee:shortTitle: Document
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <h2>Document status</h2>
-
               <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
 
               <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
 
               <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
-
-              <h2>Executive summary</h2>
-
+          /hee:contentBlocks[3]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Executive summary
+            hee:headingType: H2
+            hee:shortTitle: Summary
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[4]:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
               <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
 
               <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
 
               <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
 
-              <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+              <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;nshcs.assessment@hee.nhs.uk.</p>
 
-              <h2>1 - Introduction</h2>
+              <p>1 - Introduction</p>
 
               <p>1.1. This policy is part of a suite of policies designed to provide you with a fair and equitable experience of NSHCS assessments.</p>
 
@@ -298,20 +323,21 @@
 
               <p>1.6. Reasonable adjustments applications are not always upheld. We base our decisions on the evidence you provide, and which we could independently verify if necessary.</p>
 
-              <h2>2 - Purpose</h2>
+              <p>2 - Purpose</p>
 
               <p>2.1. Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your assessments that are aimed at minimising barriers that might affect your performance and ensuring a fair and equitable assessment.</p>
 
-              <h2>3 - Scope</h2>
+              <p>3 - Scope</p>
 
               <p>3.1. This policy allows the NSHCS to consider reasonable adjustments for assessments for the following reasons:</p>
 
-              <ul>
-               <li>medical or health related matters concerning yourself or a dependent</li>
-               <li>disability</li>
-               <li>relevant specific learning difficulties / neuro-diverse conditions</li>
-               <li>in all cases, appropriate evidence to support the request must be provided</li>
-              </ul>
+              <p>medical or health related matters concerning yourself or a dependent</p>
+
+              <p>disability</p>
+
+              <p>relevant specific learning difficulties / neuro-diverse conditions</p>
+
+              <p>in all cases, appropriate evidence to support the request must be provided</p>
 
               <p>3.2. Where similar current arrangements are provided for you in your training workplace or Higher Education Intuition (HEI), this can potentially be presented as evidence using Occupational Health reports or other appropriate documentation approved by the relevant Human Resources and/or academic department.</p>
 
@@ -323,18 +349,19 @@
 
               <p>3.6. Reasonable adjustments outcomes must be proportionate and permitted within NSHCS policies and cannot be used to create an advantage for you; unless that advantage is an indirect and unavoidable consequence of the adjustment.</p>
 
-              <h2>4 - Outcomes</h2>
+              <p>4 - Outcomes</p>
 
               <p>4.1. Where your application is unclear, or is not sufficiently supported by evidence, we may contact you to provide additional information by a deadline.</p>
 
               <p>4.2. Reasonable adjustments applications can result in one of the following outcomes:</p>
 
-              <ul>
-               <li>your application is fully upheld</li>
-               <li>your application is partially upheld</li>
-               <li>your application is not upheld</li>
-               <li>the decision, or part of the decision, is pending publication of assessment guidance</li>
-              </ul>
+              <p>your application is fully upheld</p>
+
+              <p>your application is partially upheld</p>
+
+              <p>your application is not upheld</p>
+
+              <p>the decision, or part of the decision, is pending publication of assessment guidance</p>
 
               <p>4.3. Where the application is upheld, either in part or in full, the NSHCS will communicate the reason(s) for the decision to you and outline any actions that may be taken by the NSHCS to provide remedy.</p>
 
@@ -344,23 +371,23 @@
 
               <p>4.6. If you are not satisfied with the outcome of the application, then you may make an appeal. This must be done using the prescribed Appeals Form and you are referred to the NSHCS Appeals Policy for more information.</p>
 
-              <h2>5 - Your responsibilities</h2>
+              <p>5 - Your responsibilities</p>
 
               <p>5.1. To make an accurate reasonable adjustments application under this policy following the process outlined below. You must include verifiable written evidence, wherever possible.</p>
 
               <p>5.2. Where appropriate, to discuss a reasonable adjustments application with your training officer or NSHCS Training Programme Director. Your training officer may provide a statement and evidence to support your reasonable adjustments application. You may also contact a member of the NSHCS Assessment team for advice on using this policy.</p>
 
-              <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;<a rel="noopener noreferrer" href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england" target="_blank">NHS Constitution values and behaviours</a>, in all aspects relating to this policy.</p>
+              <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;NHS Constitution values and behaviours, in all aspects relating to this policy.</p>
 
               <p>5.4. If your application is considered to include false or misleading statements, information, or evidence, which seek to create an unfair advantage, the NSHCS may take appropriate action, for example:</p>
 
-              <ul>
-               <li>removing one of your available opportunities to sit/resit the assessment</li>
-               <li>reporting your actions to relevant external bodies</li>
-               <li>other disciplinary action, such as removing you from the programme</li>
-              </ul>
+              <p>removing one of your available opportunities to sit/resit the assessment</p>
 
-              <h2>6 - NSHCS responsibilities</h2>
+              <p>reporting your actions to relevant external bodies</p>
+
+              <p>other disciplinary action, such as removing you from the programme</p>
+
+              <p>6 - NSHCS responsibilities</p>
 
               <p>6.1. To follow the Reasonable Adjustments Policy ensuring that each application is processed through the appropriate stages within the required timeframe.</p>
 
@@ -368,11 +395,11 @@
 
               <p>6.3. To ensure that a relationship of mutual trust and respect is developed between the applicant and the NSHCS, where matters are dealt with respectfully and sensitively.</p>
 
-              <p>6.4. To behave appropriately and in line with the&nbsp;<a rel="noopener noreferrer" href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england" target="_blank">NHS Constitution values and behaviours</a>&nbsp;in all aspects relating to this policy.</p>
+              <p>6.4. To behave appropriately and in line with the&nbsp;NHS Constitution values and behaviours&nbsp;in all aspects relating to this policy.</p>
 
               <p>6.5. In all cases your personal data will be handled according to the requirements of the Data Protection Act 2018 and the General Data Protection Regulations (GDPR).</p>
 
-              <h2>7 - Reasonable Adjustments Panel</h2>
+              <p>7 - Reasonable Adjustments Panel</p>
 
               <p>7.1. Requests for reasonable adjustments will be considered by a Reasonable Adjustments Panel.</p>
 
@@ -386,24 +413,23 @@
 
               <p>7.6. The panel will ordinarily include at least one lay member.</p>
 
-              <h2>8 - Access to the Reasonable Adjustments Policy</h2>
+              <p>8 - Access to the Reasonable Adjustments Policy</p>
 
               <p>8.1. Those wishing to apply for reasonable adjustments must do so using the prescribed Reasonable Adjustments Form.</p>
 
               <p>8.2. Any applications received which do not use the prescribed form will not be processed. We will respond requesting that the Reasonable Adjustments Form is completed before your application can be processed in line with this policy.</p>
 
-              <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+              <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;nshcs.assessment@hee.nhs.uk.</p>
 
               <p>8.4. You may make a reasonable adjustments application at any point prior to the relevant assessment, according to the deadlines outlined in section 9. You are advised to wait until guidance on the assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of the assessment guidance.</p>
 
               <p>8.5. You may make more than one reasonable adjustment application for the same assessment only if:</p>
 
-              <ul>
-               <li>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</li>
-               <li>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</li>
-              </ul>
+              <p>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</p>
 
-              <h2>9 - The Reasonable Adjustments process</h2>
+              <p>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</p>
+
+              <p>9 - The Reasonable Adjustments process</p>
 
               <p>9.1. The process described in this section is summarised on the flowchart found at Appendix 1.</p>
 
@@ -419,13 +445,13 @@
 
               <p>9.7. If your application is upheld, you may request that we make your assessor(s) aware of some or all of the circumstances in your application.</p>
 
-              <h2>10 - Equality impact assessment</h2>
+              <p>10 - Equality impact assessment</p>
 
               <p>10.1. The NSHCS and HEE give due regard to the need to eliminate discrimination and promote equality of opportunity for all when making policy decisions and implementing this policy.</p>
 
               <p>10.2. This policy has been developed with input from the NSHCS Equality, Diversity and Inclusion Committee and an accompanying Equality Impact Assessment has been produced.</p>
 
-              <h2>11 - Monitoring compliance and effectiveness</h2>
+              <p>11 - Monitoring compliance and effectiveness</p>
 
               <p>11.1. The NSHCS is responsible for recording and monitoring information relating to the application of this Policy.</p>
 
@@ -434,57 +460,74 @@
               <p>11.3. Anonymised data relating to the outcomes of this policy will be available to the NSHCS Equality, Diversity and Inclusion Committee and reviewed to ensure there are no underlying themes relating to equality that suggest any organisational bias.</p>
 
               <p>11.4. This policy may be periodically amended to ensure it remains effective, relevant, and compliant with current legislation.</p>
-          /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[5]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Testing Headings
+            hee:headingType: H3
+            hee:shortTitle: Testing
+          /hee:contentBlocks[6]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Headings H3
+            hee:headingType: H3
+            hee:shortTitle: H3
         /reasonable-adjustments-policy---publication-1[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
           jcr:uuid: 7044738d-dcd7-4d77-8fb3-a77760371aa1
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:subtitle: Publication
-          hee:summary: Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu
-            erat, accumsan id imperdiet et, porttitor at sem.
+          hee:summary: "The Reasonable Adjustments Policy is part of a suite of policies\
+            \ designed to support fair and equitable assessment.\r\n\r\nWhere you\
+            \ have a condition or a disability and feel you have additional needs,\
+            \ this policy enables you to request reasonable adjustments in your final\
+            \ assessment that are aimed at min"
           hee:title: Reasonable Adjustments Policy - Publication 1
           hippo:availability: [preview]
           hippostd:retainable: false
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:56:10.327Z
+          hippostdpubwf:lastModificationDate: 2023-01-20T14:47:17.052Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 2022-11-28T00:00:00Z
+            hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document status
+            hee:headingType: H2
+            hee:shortTitle: Document
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <h2>Document status</h2>
-
               <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
 
               <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
 
               <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
-
-              <h2>Executive summary</h2>
-
+          /hee:contentBlocks[3]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Executive summary
+            hee:headingType: H2
+            hee:shortTitle: Summary
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[4]:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
               <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
 
               <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
 
               <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
 
-              <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+              <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;nshcs.assessment@hee.nhs.uk.</p>
 
-              <h2>1 - Introduction</h2>
+              <p>1 - Introduction</p>
 
               <p>1.1. This policy is part of a suite of policies designed to provide you with a fair and equitable experience of NSHCS assessments.</p>
 
@@ -498,20 +541,21 @@
 
               <p>1.6. Reasonable adjustments applications are not always upheld. We base our decisions on the evidence you provide, and which we could independently verify if necessary.</p>
 
-              <h2>2 - Purpose</h2>
+              <p>2 - Purpose</p>
 
               <p>2.1. Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your assessments that are aimed at minimising barriers that might affect your performance and ensuring a fair and equitable assessment.</p>
 
-              <h2>3 - Scope</h2>
+              <p>3 - Scope</p>
 
               <p>3.1. This policy allows the NSHCS to consider reasonable adjustments for assessments for the following reasons:</p>
 
-              <ul>
-               <li>medical or health related matters concerning yourself or a dependent</li>
-               <li>disability</li>
-               <li>relevant specific learning difficulties / neuro-diverse conditions</li>
-               <li>in all cases, appropriate evidence to support the request must be provided</li>
-              </ul>
+              <p>medical or health related matters concerning yourself or a dependent</p>
+
+              <p>disability</p>
+
+              <p>relevant specific learning difficulties / neuro-diverse conditions</p>
+
+              <p>in all cases, appropriate evidence to support the request must be provided</p>
 
               <p>3.2. Where similar current arrangements are provided for you in your training workplace or Higher Education Intuition (HEI), this can potentially be presented as evidence using Occupational Health reports or other appropriate documentation approved by the relevant Human Resources and/or academic department.</p>
 
@@ -523,18 +567,19 @@
 
               <p>3.6. Reasonable adjustments outcomes must be proportionate and permitted within NSHCS policies and cannot be used to create an advantage for you; unless that advantage is an indirect and unavoidable consequence of the adjustment.</p>
 
-              <h2>4 - Outcomes</h2>
+              <p>4 - Outcomes</p>
 
               <p>4.1. Where your application is unclear, or is not sufficiently supported by evidence, we may contact you to provide additional information by a deadline.</p>
 
               <p>4.2. Reasonable adjustments applications can result in one of the following outcomes:</p>
 
-              <ul>
-               <li>your application is fully upheld</li>
-               <li>your application is partially upheld</li>
-               <li>your application is not upheld</li>
-               <li>the decision, or part of the decision, is pending publication of assessment guidance</li>
-              </ul>
+              <p>your application is fully upheld</p>
+
+              <p>your application is partially upheld</p>
+
+              <p>your application is not upheld</p>
+
+              <p>the decision, or part of the decision, is pending publication of assessment guidance</p>
 
               <p>4.3. Where the application is upheld, either in part or in full, the NSHCS will communicate the reason(s) for the decision to you and outline any actions that may be taken by the NSHCS to provide remedy.</p>
 
@@ -544,23 +589,23 @@
 
               <p>4.6. If you are not satisfied with the outcome of the application, then you may make an appeal. This must be done using the prescribed Appeals Form and you are referred to the NSHCS Appeals Policy for more information.</p>
 
-              <h2>5 - Your responsibilities</h2>
+              <p>5 - Your responsibilities</p>
 
               <p>5.1. To make an accurate reasonable adjustments application under this policy following the process outlined below. You must include verifiable written evidence, wherever possible.</p>
 
               <p>5.2. Where appropriate, to discuss a reasonable adjustments application with your training officer or NSHCS Training Programme Director. Your training officer may provide a statement and evidence to support your reasonable adjustments application. You may also contact a member of the NSHCS Assessment team for advice on using this policy.</p>
 
-              <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;<a rel="noopener noreferrer" href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england" target="_blank">NHS Constitution values and behaviours</a>, in all aspects relating to this policy.</p>
+              <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;NHS Constitution values and behaviours, in all aspects relating to this policy.</p>
 
               <p>5.4. If your application is considered to include false or misleading statements, information, or evidence, which seek to create an unfair advantage, the NSHCS may take appropriate action, for example:</p>
 
-              <ul>
-               <li>removing one of your available opportunities to sit/resit the assessment</li>
-               <li>reporting your actions to relevant external bodies</li>
-               <li>other disciplinary action, such as removing you from the programme</li>
-              </ul>
+              <p>removing one of your available opportunities to sit/resit the assessment</p>
 
-              <h2>6 - NSHCS responsibilities</h2>
+              <p>reporting your actions to relevant external bodies</p>
+
+              <p>other disciplinary action, such as removing you from the programme</p>
+
+              <p>6 - NSHCS responsibilities</p>
 
               <p>6.1. To follow the Reasonable Adjustments Policy ensuring that each application is processed through the appropriate stages within the required timeframe.</p>
 
@@ -568,11 +613,11 @@
 
               <p>6.3. To ensure that a relationship of mutual trust and respect is developed between the applicant and the NSHCS, where matters are dealt with respectfully and sensitively.</p>
 
-              <p>6.4. To behave appropriately and in line with the&nbsp;<a rel="noopener noreferrer" href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england" target="_blank">NHS Constitution values and behaviours</a>&nbsp;in all aspects relating to this policy.</p>
+              <p>6.4. To behave appropriately and in line with the&nbsp;NHS Constitution values and behaviours&nbsp;in all aspects relating to this policy.</p>
 
               <p>6.5. In all cases your personal data will be handled according to the requirements of the Data Protection Act 2018 and the General Data Protection Regulations (GDPR).</p>
 
-              <h2>7 - Reasonable Adjustments Panel</h2>
+              <p>7 - Reasonable Adjustments Panel</p>
 
               <p>7.1. Requests for reasonable adjustments will be considered by a Reasonable Adjustments Panel.</p>
 
@@ -586,24 +631,23 @@
 
               <p>7.6. The panel will ordinarily include at least one lay member.</p>
 
-              <h2>8 - Access to the Reasonable Adjustments Policy</h2>
+              <p>8 - Access to the Reasonable Adjustments Policy</p>
 
               <p>8.1. Those wishing to apply for reasonable adjustments must do so using the prescribed Reasonable Adjustments Form.</p>
 
               <p>8.2. Any applications received which do not use the prescribed form will not be processed. We will respond requesting that the Reasonable Adjustments Form is completed before your application can be processed in line with this policy.</p>
 
-              <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+              <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;nshcs.assessment@hee.nhs.uk.</p>
 
               <p>8.4. You may make a reasonable adjustments application at any point prior to the relevant assessment, according to the deadlines outlined in section 9. You are advised to wait until guidance on the assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of the assessment guidance.</p>
 
               <p>8.5. You may make more than one reasonable adjustment application for the same assessment only if:</p>
 
-              <ul>
-               <li>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</li>
-               <li>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</li>
-              </ul>
+              <p>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</p>
 
-              <h2>9 - The Reasonable Adjustments process</h2>
+              <p>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</p>
+
+              <p>9 - The Reasonable Adjustments process</p>
 
               <p>9.1. The process described in this section is summarised on the flowchart found at Appendix 1.</p>
 
@@ -619,13 +663,13 @@
 
               <p>9.7. If your application is upheld, you may request that we make your assessor(s) aware of some or all of the circumstances in your application.</p>
 
-              <h2>10 - Equality impact assessment</h2>
+              <p>10 - Equality impact assessment</p>
 
               <p>10.1. The NSHCS and HEE give due regard to the need to eliminate discrimination and promote equality of opportunity for all when making policy decisions and implementing this policy.</p>
 
               <p>10.2. This policy has been developed with input from the NSHCS Equality, Diversity and Inclusion Committee and an accompanying Equality Impact Assessment has been produced.</p>
 
-              <h2>11 - Monitoring compliance and effectiveness</h2>
+              <p>11 - Monitoring compliance and effectiveness</p>
 
               <p>11.1. The NSHCS is responsible for recording and monitoring information relating to the application of this Policy.</p>
 
@@ -634,58 +678,75 @@
               <p>11.3. Anonymised data relating to the outcomes of this policy will be available to the NSHCS Equality, Diversity and Inclusion Committee and reviewed to ensure there are no underlying themes relating to equality that suggest any organisational bias.</p>
 
               <p>11.4. This policy may be periodically amended to ensure it remains effective, relevant, and compliant with current legislation.</p>
-          /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[5]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Testing Headings
+            hee:headingType: H3
+            hee:shortTitle: Testing
+          /hee:contentBlocks[6]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Headings H3
+            hee:headingType: H3
+            hee:shortTitle: H3
         /reasonable-adjustments-policy---publication-1[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 7a588e28-a294-4aa2-8bb6-87ce1a3a1646
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:subtitle: Publication
-          hee:summary: Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu
-            erat, accumsan id imperdiet et, porttitor at sem.
+          hee:summary: "The Reasonable Adjustments Policy is part of a suite of policies\
+            \ designed to support fair and equitable assessment.\r\n\r\nWhere you\
+            \ have a condition or a disability and feel you have additional needs,\
+            \ this policy enables you to request reasonable adjustments in your final\
+            \ assessment that are aimed at min"
           hee:title: Reasonable Adjustments Policy - Publication 1
           hippo:availability: [live]
           hippostd:retainable: false
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:56:10.327Z
+          hippostdpubwf:lastModificationDate: 2023-01-20T14:47:17.052Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-29T06:56:12.415Z
+          hippostdpubwf:publicationDate: 2023-01-20T14:47:21.318Z
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
-            hee:lastReviewed: 2022-11-28T00:00:00Z
+            hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document status
+            hee:headingType: H2
+            hee:shortTitle: Document
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
-              <h2>Document status</h2>
-
               <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
 
               <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
 
               <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
-
-              <h2>Executive summary</h2>
-
+          /hee:contentBlocks[3]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Executive summary
+            hee:headingType: H2
+            hee:shortTitle: Summary
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[4]:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
               <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
 
               <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
 
               <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
 
-              <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+              <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;nshcs.assessment@hee.nhs.uk.</p>
 
-              <h2>1 - Introduction</h2>
+              <p>1 - Introduction</p>
 
               <p>1.1. This policy is part of a suite of policies designed to provide you with a fair and equitable experience of NSHCS assessments.</p>
 
@@ -699,20 +760,21 @@
 
               <p>1.6. Reasonable adjustments applications are not always upheld. We base our decisions on the evidence you provide, and which we could independently verify if necessary.</p>
 
-              <h2>2 - Purpose</h2>
+              <p>2 - Purpose</p>
 
               <p>2.1. Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your assessments that are aimed at minimising barriers that might affect your performance and ensuring a fair and equitable assessment.</p>
 
-              <h2>3 - Scope</h2>
+              <p>3 - Scope</p>
 
               <p>3.1. This policy allows the NSHCS to consider reasonable adjustments for assessments for the following reasons:</p>
 
-              <ul>
-               <li>medical or health related matters concerning yourself or a dependent</li>
-               <li>disability</li>
-               <li>relevant specific learning difficulties / neuro-diverse conditions</li>
-               <li>in all cases, appropriate evidence to support the request must be provided</li>
-              </ul>
+              <p>medical or health related matters concerning yourself or a dependent</p>
+
+              <p>disability</p>
+
+              <p>relevant specific learning difficulties / neuro-diverse conditions</p>
+
+              <p>in all cases, appropriate evidence to support the request must be provided</p>
 
               <p>3.2. Where similar current arrangements are provided for you in your training workplace or Higher Education Intuition (HEI), this can potentially be presented as evidence using Occupational Health reports or other appropriate documentation approved by the relevant Human Resources and/or academic department.</p>
 
@@ -724,18 +786,19 @@
 
               <p>3.6. Reasonable adjustments outcomes must be proportionate and permitted within NSHCS policies and cannot be used to create an advantage for you; unless that advantage is an indirect and unavoidable consequence of the adjustment.</p>
 
-              <h2>4 - Outcomes</h2>
+              <p>4 - Outcomes</p>
 
               <p>4.1. Where your application is unclear, or is not sufficiently supported by evidence, we may contact you to provide additional information by a deadline.</p>
 
               <p>4.2. Reasonable adjustments applications can result in one of the following outcomes:</p>
 
-              <ul>
-               <li>your application is fully upheld</li>
-               <li>your application is partially upheld</li>
-               <li>your application is not upheld</li>
-               <li>the decision, or part of the decision, is pending publication of assessment guidance</li>
-              </ul>
+              <p>your application is fully upheld</p>
+
+              <p>your application is partially upheld</p>
+
+              <p>your application is not upheld</p>
+
+              <p>the decision, or part of the decision, is pending publication of assessment guidance</p>
 
               <p>4.3. Where the application is upheld, either in part or in full, the NSHCS will communicate the reason(s) for the decision to you and outline any actions that may be taken by the NSHCS to provide remedy.</p>
 
@@ -745,23 +808,23 @@
 
               <p>4.6. If you are not satisfied with the outcome of the application, then you may make an appeal. This must be done using the prescribed Appeals Form and you are referred to the NSHCS Appeals Policy for more information.</p>
 
-              <h2>5 - Your responsibilities</h2>
+              <p>5 - Your responsibilities</p>
 
               <p>5.1. To make an accurate reasonable adjustments application under this policy following the process outlined below. You must include verifiable written evidence, wherever possible.</p>
 
               <p>5.2. Where appropriate, to discuss a reasonable adjustments application with your training officer or NSHCS Training Programme Director. Your training officer may provide a statement and evidence to support your reasonable adjustments application. You may also contact a member of the NSHCS Assessment team for advice on using this policy.</p>
 
-              <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;<a rel="noopener noreferrer" href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england" target="_blank">NHS Constitution values and behaviours</a>, in all aspects relating to this policy.</p>
+              <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;NHS Constitution values and behaviours, in all aspects relating to this policy.</p>
 
               <p>5.4. If your application is considered to include false or misleading statements, information, or evidence, which seek to create an unfair advantage, the NSHCS may take appropriate action, for example:</p>
 
-              <ul>
-               <li>removing one of your available opportunities to sit/resit the assessment</li>
-               <li>reporting your actions to relevant external bodies</li>
-               <li>other disciplinary action, such as removing you from the programme</li>
-              </ul>
+              <p>removing one of your available opportunities to sit/resit the assessment</p>
 
-              <h2>6 - NSHCS responsibilities</h2>
+              <p>reporting your actions to relevant external bodies</p>
+
+              <p>other disciplinary action, such as removing you from the programme</p>
+
+              <p>6 - NSHCS responsibilities</p>
 
               <p>6.1. To follow the Reasonable Adjustments Policy ensuring that each application is processed through the appropriate stages within the required timeframe.</p>
 
@@ -769,11 +832,11 @@
 
               <p>6.3. To ensure that a relationship of mutual trust and respect is developed between the applicant and the NSHCS, where matters are dealt with respectfully and sensitively.</p>
 
-              <p>6.4. To behave appropriately and in line with the&nbsp;<a rel="noopener noreferrer" href="https://www.gov.uk/government/publications/the-nhs-constitution-for-england" target="_blank">NHS Constitution values and behaviours</a>&nbsp;in all aspects relating to this policy.</p>
+              <p>6.4. To behave appropriately and in line with the&nbsp;NHS Constitution values and behaviours&nbsp;in all aspects relating to this policy.</p>
 
               <p>6.5. In all cases your personal data will be handled according to the requirements of the Data Protection Act 2018 and the General Data Protection Regulations (GDPR).</p>
 
-              <h2>7 - Reasonable Adjustments Panel</h2>
+              <p>7 - Reasonable Adjustments Panel</p>
 
               <p>7.1. Requests for reasonable adjustments will be considered by a Reasonable Adjustments Panel.</p>
 
@@ -787,24 +850,23 @@
 
               <p>7.6. The panel will ordinarily include at least one lay member.</p>
 
-              <h2>8 - Access to the Reasonable Adjustments Policy</h2>
+              <p>8 - Access to the Reasonable Adjustments Policy</p>
 
               <p>8.1. Those wishing to apply for reasonable adjustments must do so using the prescribed Reasonable Adjustments Form.</p>
 
               <p>8.2. Any applications received which do not use the prescribed form will not be processed. We will respond requesting that the Reasonable Adjustments Form is completed before your application can be processed in line with this policy.</p>
 
-              <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+              <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;nshcs.assessment@hee.nhs.uk.</p>
 
               <p>8.4. You may make a reasonable adjustments application at any point prior to the relevant assessment, according to the deadlines outlined in section 9. You are advised to wait until guidance on the assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of the assessment guidance.</p>
 
               <p>8.5. You may make more than one reasonable adjustment application for the same assessment only if:</p>
 
-              <ul>
-               <li>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</li>
-               <li>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</li>
-              </ul>
+              <p>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</p>
 
-              <h2>9 - The Reasonable Adjustments process</h2>
+              <p>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</p>
+
+              <p>9 - The Reasonable Adjustments process</p>
 
               <p>9.1. The process described in this section is summarised on the flowchart found at Appendix 1.</p>
 
@@ -820,13 +882,13 @@
 
               <p>9.7. If your application is upheld, you may request that we make your assessor(s) aware of some or all of the circumstances in your application.</p>
 
-              <h2>10 - Equality impact assessment</h2>
+              <p>10 - Equality impact assessment</p>
 
               <p>10.1. The NSHCS and HEE give due regard to the need to eliminate discrimination and promote equality of opportunity for all when making policy decisions and implementing this policy.</p>
 
               <p>10.2. This policy has been developed with input from the NSHCS Equality, Diversity and Inclusion Committee and an accompanying Equality Impact Assessment has been produced.</p>
 
-              <h2>11 - Monitoring compliance and effectiveness</h2>
+              <p>11 - Monitoring compliance and effectiveness</p>
 
               <p>11.1. The NSHCS is responsible for recording and monitoring information relating to the application of this Policy.</p>
 
@@ -835,15 +897,22 @@
               <p>11.3. Anonymised data relating to the outcomes of this policy will be available to the NSHCS Equality, Diversity and Inclusion Committee and reviewed to ensure there are no underlying themes relating to equality that suggest any organisational bias.</p>
 
               <p>11.4. This policy may be periodically amended to ensure it remains effective, relevant, and compliant with current legislation.</p>
-          /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[5]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Testing Headings
+            hee:headingType: H3
+            hee:shortTitle: Testing
+          /hee:contentBlocks[6]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Headings H3
+            hee:headingType: H3
+            hee:shortTitle: H3
       /reasonable-adjustments-policy---publication-2:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 06b2952e-0e78-43f7-898b-b7e88aaa0c8a
         hippo:name: Reasonable Adjustments Policy - Publication 2
-        hippo:versionHistory: 5a333ade-4582-4c65-be28-c4b3b93420ea
+        hippo:versionHistory: ed5c6ae3-5fda-42f3-a966-b4ba857e91cd
         /reasonable-adjustments-policy---publication-2[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:versionable']
@@ -858,7 +927,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:57:31.280Z
+          hippostdpubwf:lastModificationDate: 2023-01-20T14:48:23.861Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 07dad520-597f-4557-bb56-fa9412dbdc98
           hippotranslation:locale: en
@@ -867,9 +936,10 @@
             hee:lastReviewed: 2022-11-28T00:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document Status
+            hee:headingType: H2
+            hee:shortTitle: Document
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
@@ -893,6 +963,11 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[3]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Testing Heading
+            hee:headingType: H3
+            hee:shortTitle: Heading
         /reasonable-adjustments-policy---publication-2[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -907,7 +982,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:57:12.978Z
+          hippostdpubwf:lastModificationDate: 2023-01-20T14:47:28.574Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 07dad520-597f-4557-bb56-fa9412dbdc98
           hippotranslation:locale: en
@@ -916,9 +991,10 @@
             hee:lastReviewed: 2022-11-28T00:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document Status
+            hee:headingType: H2
+            hee:shortTitle: Document
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
@@ -942,6 +1018,11 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[3]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Testing Heading
+            hee:headingType: H3
+            hee:shortTitle: Heading
         /reasonable-adjustments-policy---publication-2[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -956,9 +1037,9 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2022-11-29T06:57:31.280Z
+          hippostdpubwf:lastModificationDate: 2023-01-20T14:48:23.861Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-29T06:57:34.076Z
+          hippostdpubwf:publicationDate: 2023-01-20T14:48:28.917Z
           hippotranslation:id: 07dad520-597f-4557-bb56-fa9412dbdc98
           hippotranslation:locale: en
           /hee:pageLastNextReview:
@@ -966,9 +1047,10 @@
             hee:lastReviewed: 2022-11-28T00:00:00Z
             hee:nextReviewed: 2022-12-30T00:00:00Z
           /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Document Status
+            hee:headingType: H2
+            hee:shortTitle: Document
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
@@ -992,6 +1074,11 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[3]:
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: Testing Heading
+            hee:headingType: H3
+            hee:shortTitle: Heading
     /careers:
       jcr:primaryType: hippostd:folder
       jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
@@ -1168,7 +1255,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 4dd66eef-a298-40a4-af75-dd1674bc3824
         hippo:name: Higher Specialist Scientist Training – Publication
-        hippo:versionHistory: f28e2965-d27e-41d3-92be-99ec748cb1f9
+        hippo:versionHistory: 8910e5c9-38c7-4e1e-9c2a-8ac5ef445a57
         /higher-specialist-scientist-training---publication[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -1183,7 +1270,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:34:32.235Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:34:32.235Z
+          hippostdpubwf:lastModificationDate: 2023-01-25T11:32:13.084Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 427e04b6-e013-47b1-bf41-14bdda7caad7
           hippotranslation:locale: en
@@ -1191,11 +1278,7 @@
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2022-11-28T00:00:00Z
             hee:nextReviewed: 2022-11-30T00:00:00Z
-          /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
-          /hee:contentBlocks[2]:
+          /hee:contentBlocks:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Advancing your clinical and scientific skills for patient and public benefit</h2>
@@ -1249,7 +1332,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:34:32.235Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:35:46.150Z
+          hippostdpubwf:lastModificationDate: 2023-01-25T11:32:27.404Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 427e04b6-e013-47b1-bf41-14bdda7caad7
           hippotranslation:locale: en
@@ -1257,11 +1340,7 @@
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2022-11-28T00:00:00Z
             hee:nextReviewed: 2022-11-30T00:00:00Z
-          /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
-          /hee:contentBlocks[2]:
+          /hee:contentBlocks:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Advancing your clinical and scientific skills for patient and public benefit</h2>
@@ -1315,20 +1394,16 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:34:32.235Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:35:46.150Z
+          hippostdpubwf:lastModificationDate: 2023-01-25T11:32:27.404Z
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-28T21:53:36.035Z
+          hippostdpubwf:publicationDate: 2023-01-25T11:32:33.738Z
           hippotranslation:id: 427e04b6-e013-47b1-bf41-14bdda7caad7
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2022-11-28T00:00:00Z
             hee:nextReviewed: 2022-11-30T00:00:00Z
-          /hee:contentBlocks[1]:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
-          /hee:contentBlocks[2]:
+          /hee:contentBlocks:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Advancing your clinical and scientific skills for patient and public benefit</h2>
@@ -1368,3 +1443,94 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /publications:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 05d29c69-b571-43ba-994a-19a3a9601dcc
+    hippo:name: Publications
+    hippo:versionHistory: 7767d6d4-b828-445f-aaf4-8f2a1ed72190
+    /publications[1]:
+      jcr:primaryType: hee:publicationListingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: cca6894f-8d2e-4dec-b849-d8f9c52ccd84
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Curabitur non nulla sit
+      hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet
+        elit, eget tincidunt nibh pulvinar a.
+      hee:title: Publication listing/collection
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+      hippostdpubwf:lastModificationDate: 2022-12-04T17:17:43.238Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 127951c3-4d5a-44ae-a7b8-db9b81f2c738
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+    /publications[2]:
+      jcr:primaryType: hee:publicationListingPage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: 3445486d-edb5-481f-998a-d22956d11c85
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Curabitur non nulla sit
+      hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet
+        elit, eget tincidunt nibh pulvinar a.
+      hee:title: Publication listing/collection
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+      hippostdpubwf:lastModificationDate: 2022-12-04T17:17:49.531Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 127951c3-4d5a-44ae-a7b8-db9b81f2c738
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+    /publications[3]:
+      jcr:primaryType: hee:publicationListingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f044efc6-5c13-4ef9-a44a-b618b5ddcd67
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Curabitur non nulla sit
+      hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit aliquet
+        elit, eget tincidunt nibh pulvinar a.
+      hee:title: Publication listing/collection
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+      hippostdpubwf:lastModificationDate: 2022-12-04T17:17:49.531Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2022-12-04T17:17:50.958Z
+      hippotranslation:id: 127951c3-4d5a-44ae-a7b8-db9b81f2c738
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a

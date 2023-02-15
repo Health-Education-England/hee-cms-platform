@@ -18,6 +18,9 @@ public class ValueListIdentifierTest {
         assertThat(ValueListIdentifier.CASE_STUDY_PROVIDERS.getName()).isEqualTo("caseStudyProviders");
         assertThat(ValueListIdentifier.LOGO_TYPES.getName()).isEqualTo("logoTypes");
         assertThat(ValueListIdentifier.NAV_MAP_REGIONS.getName()).isEqualTo("navMapRegions");
+        assertThat(ValueListIdentifier.PUBLICATION_TYPES.getName()).isEqualTo("publicationTypes");
+        assertThat(ValueListIdentifier.PUBLICATION_TOPICS.getName()).isEqualTo("publicationTopics");
+        assertThat(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName()).isEqualTo("publicationProfessions");
         assertThat(ValueListIdentifier.SEARCH_BANK_KEY_TERMS.getName()).isEqualTo("searchBankKeyTerms");
         assertThat(ValueListIdentifier.SEARCH_BANK_PROVIDERS.getName()).isEqualTo("searchBankProviders");
         assertThat(ValueListIdentifier.SEARCH_BANK_TOPICS.getName()).isEqualTo("searchBankTopics");

@@ -1,0 +1,84 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/author:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 4eebce17-9f6d-4282-801f-3fb410115be9
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1c092c86-70a1-4286-b183-db197f43fe8b
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 34968a71-63ab-46c4-a232-b774fcc03fd4
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:unique-author-validator']
+          /person:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:person
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
+          /bioSummary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:bioSummary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:author
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 5da09463-67fe-4116-9853-27e12511724a
+          hippostdpubwf:lastModificationDate: 2022-11-22T09:17:52.534Z
+          hippostdpubwf:creationDate: 2022-11-22T09:17:52.534Z
+          hee:bioSummary: ''
+          /hee:person:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /person:
+            jcr:primaryType: frontend:plugin
+            caption: Person
+            field: person
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Please browse to a person document
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:person']
+          /bioSummary:
+            jcr:primaryType: frontend:plugin
+            caption: Bio summary
+            field: bioSummary
+            hint: Please summarise the authors experience (250 characters limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '250'

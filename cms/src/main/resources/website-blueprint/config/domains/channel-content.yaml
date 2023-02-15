@@ -8,6 +8,12 @@
       hipposys:facet: jcr:path
       hipposys:type: Reference
       hipposys:value: /content/documents/{{ channelId }}
+    /exclude-{{ channelId }}-settings-folder-and-descendants:
+      jcr:primaryType: hipposys:facetrule
+      hipposys:equals: false
+      hipposys:facet: jcr:path
+      hipposys:type: Reference
+      hipposys:value: /content/documents/{{ channelId }}/settings
   /author:
     jcr:primaryType: hipposys:authrole
     hipposys:groups: [ {{ channelId }}-author ]

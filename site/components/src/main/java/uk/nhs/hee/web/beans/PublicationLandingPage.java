@@ -84,4 +84,14 @@ public class PublicationLandingPage extends BaseDocument {
     public List<HippoBean> getWebPublications() {
         return getLinkedBeans("hee:webPublications", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:authors")
+    public List<HippoBean> getAuthors() {
+        return getLinkedBeans("hee:authors", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
+    public Boolean getHideAuthorContactDetails() {
+        return getSingleProperty("hee:hideAuthorContactDetails");
+    }
 }

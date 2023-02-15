@@ -3,7 +3,7 @@
         <label class="nhsuk-label" for="${name}">
             ${label}
         </label>
-        <select class="nhsuk-select" name="${name}">
+        <select class="nhsuk-select" id="sort" name="${name}">
             <#list optionsMap as optionValue, optionName>
                 <#if selectedValue == optionValue>
                     <#assign  isSelected = 'selected'/>

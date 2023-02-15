@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 0389d84f-898a-47ca-832f-fbbc4442497a
+          jcr:uuid: 2bf099f4-43d8-48ab-8ba5-a33eee07c5a8
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -48,7 +48,6 @@ definitions:
             hipposysedit:path: hee:pageLastNextReview
             hipposysedit:primary: false
             hipposysedit:type: hee:pageLastNextReview
-            hipposysedit:validators: [required]
           /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -81,7 +80,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 71fab618-5d97-43f8-bd6c-0b97212c707e
+          jcr:uuid: 170fa35c-93d9-481b-87fd-98a21fc9039c
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -99,9 +98,9 @@ definitions:
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks:
-            jcr:primaryType: hee:anchorLinks
-            hee:targetHeadings: [h2, h3, h4, h5]
-            hee:title: On this page
+            jcr:primaryType: hee:headingsTOC
+            hee:headingTitle: ''
+            hee:shortTitle: ''
           /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
@@ -140,6 +139,7 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
@@ -149,6 +149,7 @@ definitions:
             hint: Enter the publication subtitle
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: ''
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -182,7 +183,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page review dates
             field: pageLastNextReview
-            hint: Please enter the last date and review date
+            hint: Enter the last and next review dates
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -190,7 +191,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
+            compoundList: hee:expanderGroupReference,hee:headingsTOC,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             hint: Please enter your content

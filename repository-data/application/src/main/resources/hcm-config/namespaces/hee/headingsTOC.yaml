@@ -1,0 +1,91 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/headingsTOC:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 5729833d-8543-4a99-942c-71439694dcae
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 43fe2eee-0942-4114-89df-862e5b6f9297
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 3d3f7bc6-67bd-4753-b47a-182f096b7ee1
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /headingTitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:headingTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /shortTitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:shortTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /headingType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:headingType
+            hipposysedit:primary: false
+            hipposysedit:type: StaticDropdown
+            hipposysedit:validators: [required]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:headingsTOC
+          hee:headingTitle: ''
+          hee:shortTitle: ''
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /headingTitle:
+            jcr:primaryType: frontend:plugin
+            caption: Heading title
+            field: headingTitle
+            hint: Enter the heading title (100 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '100'
+          /shortTitle:
+            jcr:primaryType: frontend:plugin
+            caption: Short version
+            field: shortTitle
+            hint: Enter a shorter title to appear in the table of contents, if needed
+              (40 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '40'
+          /headingType:
+            jcr:primaryType: frontend:plugin
+            caption: Heading type
+            field: headingType
+            hint: Select a heading level
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              selectable.options: H2,H3

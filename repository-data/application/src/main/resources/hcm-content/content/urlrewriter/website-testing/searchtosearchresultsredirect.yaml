@@ -1,0 +1,66 @@
+/content/urlrewriter/website-testing/searchtosearchresultsredirect:
+  .meta:order-before: redirecttospecialtylandingpage
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 749fc2b5-b546-4dd0-ac22-8e200ee4a3da
+  hippo:name: SearchToSearchResultsRedirect
+  hippo:versionHistory: ce3dbd0d-9a6d-45f5-bf97-3746bdd0742b
+  /searchtosearchresultsredirect[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 10e080e9-4393-4de8-acc7-7a8b45e667d5
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2022-10-13T15:56:12.969+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'website-testing.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">website-testing.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/website-testing/search/?$</from>\r\n    <to type=\"redirect\"\
+      \ last=\"true\">/site/website-testing/search/results?%{query-string}</to>\r\n\
+      </rule>"
+  /searchtosearchresultsredirect[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 2f0bef96-c14c-4c2f-a8ca-2863b859faab
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2022-10-13T15:56:12.969+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2022-10-13T15:56:15.088+02:00
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'website-testing.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">website-testing.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/website-testing/search/?$</from>\r\n    <to type=\"redirect\"\
+      \ last=\"true\">/site/website-testing/search/results?%{query-string}</to>\r\n\
+      </rule>"
+  /searchtosearchresultsredirect[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: fec49722-962c-4eef-8491-c5311756097c
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostd:transferable: false
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2022-11-28T17:18:52.460+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for 'website-testing.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">website-testing.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/website-testing/search/?$</from>\r\n    <to type=\"redirect\"\
+      \ last=\"true\">/site/website-testing/search/results?%{query-string}</to>\r\n\
+      </rule>"
