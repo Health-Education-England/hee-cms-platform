@@ -3190,9 +3190,72 @@
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
     jcr:uuid: 8e26dbf7-3f65-4a25-a02f-af4bdbccf826
     hippo:name: Contact Cards
-    hippostd:foldertype: [new-contact-card]
+    hippostd:foldertype: [new-contact-card-description]
     hippotranslation:id: 4de2c8c8-e599-4514-9d99-526fbc324095
     hippotranslation:locale: en
+    /fred222:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 8a27aa67-f44b-4a98-9550-5a94a9c0edf2
+      hippo:versionHistory: 494ed115-5ef5-41fc-a74f-ac40f966b4ae
+      /fred222[1]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 9f242d96-b67f-47e3-9867-f2d3affbc9bb
+        hee:description: James is an absolute legend
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-15T15:23:57.282Z
+        hippostdpubwf:lastModificationDate: 2023-02-15T15:23:57.282Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 62db6ba8-29a3-45bd-85c2-703693333b15
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /fred222[2]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 84581b3c-54e3-4a25-a438-457d9a298611
+        hee:description: James is an absolute legend
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-15T15:23:57.282Z
+        hippostdpubwf:lastModificationDate: 2023-02-15T15:24:23.113Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 62db6ba8-29a3-45bd-85c2-703693333b15
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /fred222[3]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: db922df3-3d13-49b6-af90-c630e80f543e
+        hee:description: James is an absolute legend
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-15T15:23:57.282Z
+        hippostdpubwf:lastModificationDate: 2023-02-15T15:24:23.113Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-02-15T15:24:25.438Z
+        hippotranslation:id: 62db6ba8-29a3-45bd-85c2-703693333b15
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
   /external-links-cards:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
