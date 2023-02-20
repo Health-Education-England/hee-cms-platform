@@ -15,7 +15,8 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator']
+          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
+            'hee:unique-web-publications-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
