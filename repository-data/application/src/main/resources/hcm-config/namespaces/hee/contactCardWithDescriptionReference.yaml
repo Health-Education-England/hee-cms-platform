@@ -1,0 +1,53 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/contactCardWithDescriptionReference:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: e074f4b0-ca81-433b-9add-b0ed6e97454a
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 693d7555-fd53-4425-a856-a896127a5e9b
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 8ceaa1cc-3d08-4900-bacb-2533a1b53553
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /contactCardWithDescription:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:contactCardWithDescription
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:contactCardWithDescriptionReference
+          /hee:contactCardWithDescription:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /contactCardWithDescription:
+            jcr:primaryType: frontend:plugin
+            caption: Contact Card With Description
+            field: contactCardWithDescription
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:contactCardWithDescription']

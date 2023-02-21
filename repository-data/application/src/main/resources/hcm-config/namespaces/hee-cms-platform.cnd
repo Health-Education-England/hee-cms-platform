@@ -92,6 +92,12 @@
 [hee:contactCardReference] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:contactCardWithDescription] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:contactCardWithDescriptionReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:contactWithCopy] > hippo:compound, hippostd:relaxed
   orderable
 
@@ -263,3 +269,4 @@
 
 [hee:warningCalloutReference] > hippo:compound, hippostd:relaxed
   orderable
+
