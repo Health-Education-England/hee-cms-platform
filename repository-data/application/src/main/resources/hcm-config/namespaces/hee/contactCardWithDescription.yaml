@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a0ebcdbd-7fa9-460f-8ff3-2d0bac4ee85c
+          jcr:uuid: 90d6496e-ab28-4a51-91a3-43a49cc6b4ca
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,7 @@ definitions:
             hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [optional]
           /contactCardReference:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -31,7 +32,6 @@ definitions:
             hipposysedit:path: hee:contactCardReference
             hipposysedit:primary: false
             hipposysedit:type: hee:contactCardReference
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -44,7 +44,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: 81dd125b-f664-4430-97d4-85495311691c
+          jcr:uuid: 13ff11c9-687b-4a1d-bc24-02e1d7b8392c
           hippostdpubwf:lastModificationDate: 2023-02-13T16:53:10.253Z
           hippostdpubwf:creationDate: 2023-02-13T16:53:10.254Z
           /hee:contactCardReference:
@@ -69,6 +69,7 @@ definitions:
             field: contactCardReference
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Please select a Department or Person document
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /description:
@@ -77,6 +78,7 @@ definitions:
             field: description
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
+            hint: Add a summary description for this contact
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '300'

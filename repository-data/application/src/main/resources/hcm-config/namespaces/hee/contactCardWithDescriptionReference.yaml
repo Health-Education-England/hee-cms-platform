@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8ceaa1cc-3d08-4900-bacb-2533a1b53553
+          jcr:uuid: 827b75e5-bfb2-43e2-8532-2fdcfaf47176
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,7 @@ definitions:
             hipposysedit:path: hee:contactCardWithDescription
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -43,7 +44,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /contactCardWithDescription:
             jcr:primaryType: frontend:plugin
-            caption: Contact Card With Description
+            caption: Select contact
             field: contactCardWithDescription
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
