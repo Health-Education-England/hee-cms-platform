@@ -111,6 +111,9 @@
                         <#if showCookiesButton>
                             <#include "../../include/cookie-button.ftl">
                         </#if>
+
+                        <#-- Last & next reviewed dates -->
+                        <@hee.lastNextReviewedDate lastNextReviewedDate=guidanceDocument.pageLastNextReview/>
                     </div>
                 </div>
                 <#--  Main sections: END  -->
@@ -154,15 +157,6 @@
                 <#--  Sidebar sections: END  -->
             </div>
             <#--  Main content: END  -->
-
-            <#--  Main footer: START  -->
-            <div class="page__footer">
-                <#-- Last & next reviewed dates -->
-                <div class="nhsuk-width-container">
-                    <@hee.lastNextReviewedDate lastNextReviewedDate=guidanceDocument.pageLastNextReview/>
-                </div>
-            </div>
-            <#--  Main footer: END  -->
 
             <#--  Main featured content: START  -->
             <section class="page__feature">

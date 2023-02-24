@@ -111,6 +111,9 @@
 
                 <#--  Author cards  -->
                 <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
+
+                <#-- Last & next reviewed dates -->
+                <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
             </div>
         </div>
         <#--  Main sections: END  -->
@@ -148,15 +151,6 @@
         <#--  Sidebar sections: END  -->
     </div>
     <#--  Main content: END  -->
-
-    <#--  Main footer: START  -->
-    <div class="page__footer">
-        <#-- Last & next reviewed dates -->
-        <div class="nhsuk-width-container">
-            <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
-        </div>
-    </div>
-    <#--  Main footer: END  -->
 
     <#--  <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-two-thirds">
