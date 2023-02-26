@@ -233,16 +233,16 @@
         </div>
         <#--  Main content: END  -->
 
-        <#--  Main featured content: START  -->
-        <section class="page__feature">
-            <#--  Related content  -->
-            <#if document.relatedContent??>
+        <#if document.relatedContent?? && (document.relatedContent.header?has_content || document.relatedContent.cardGroupSummary?has_content || document.relatedContent.cards?size gt 0)>
+            <#--  Main featured content: START  -->
+            <section class="page__feature">
+                <#--  Related content  -->
                 <div class="nhsuk-width-container">
                     <@hee.contentCards contentCards=document.relatedContent/>
                 </div>
-            </#if>
-        </section>
-        <#--  Main featured content: END  -->
+            </section>
+            <#--  Main featured content: END  -->
+        </#if>
     </main>
 </#if>
 

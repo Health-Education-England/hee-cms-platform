@@ -158,16 +158,16 @@
             </div>
             <#--  Main content: END  -->
 
-            <#--  Main featured content: START  -->
-            <section class="page__feature">
-                <#--  Related content  -->
-                <#if guidanceDocument.relatedContent??>
+            <#if guidanceDocument.relatedContent?? && (guidanceDocument.relatedContent.header?has_content || guidanceDocument.relatedContent.cardGroupSummary?has_content || guidanceDocument.relatedContent.cards?size gt 0)>
+                <#--  Main featured content: START  -->
+                <section class="page__feature">
+                    <#--  Related content  -->
                     <div class="nhsuk-width-container">
                         <@hee.contentCards contentCards=guidanceDocument.relatedContent/>
                     </div>
-                </#if>
-            </section>
-            <#--  Main featured content: END  -->
+                </section>
+                <#--  Main featured content: END  -->
+            </#if>
         </main>
     </#if>
 </#macro>
