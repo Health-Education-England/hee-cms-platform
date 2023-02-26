@@ -143,14 +143,14 @@
                         </#if>
                         <#--  Main content blocks: END  -->
 
-                        <#-- Last & next reviewed dates -->
-                        <@hee.lastNextReviewedDate lastNextReviewedDate=currentGuidance.pageLastNextReview/>
-
                         <#--  Related content: START  -->
                         <#if currentGuidance.relatedContent??>
                             <@hee.contentCards contentCards=currentGuidance.relatedContent/>
                         </#if>
                         <#--  Related content: END  -->
+
+                        <#-- Last & next reviewed dates -->
+                        <@hee.lastNextReviewedDate lastNextReviewedDate=currentGuidance.pageLastNextReview/>
                     </#if>
                     <#--  Guidance content: END  -->
 
