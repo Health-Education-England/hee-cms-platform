@@ -15,13 +15,15 @@
   <version>${revision}</version>
   <packaging>pom</packaging>
 
-  <!-- 
+  <!--
     The below project elements are emptied/overridden as otherwise their metadata would be
     inherited or merged from the parent hippo-cms7-release pom (or its hippo-cms7-project pom).
 
-    DO NOT remove these tags but instead fill them in appropriately as needed, 
+    DO NOT remove these tags but instead fill them in appropriately as needed,
     UNLESS the inherited values are valid for your project.
   -->
+  <url/>
+  <inceptionYear/>
   <organization />
   <licenses>
     <license />
@@ -80,7 +82,7 @@
     <repository>
       <id>hippo</id>
       <name>Hippo maven 2 repository.</name>
-      <url>https://maven.onehippo.com/maven2/</url>
+      <url>https://maven.bloomreach.com/repository/maven2/</url>
     </repository>
     <repository>
       <releases>
@@ -89,7 +91,7 @@
       </releases>
       <id>hippo-maven2-enterprise</id>
       <name>Hippo Enterprise Maven 2</name>
-      <url>https://maven.onehippo.com/maven2-enterprise</url>
+      <url>https://maven.bloomreach.com/repository/maven2-enterprise/</url>
     </repository>
   </repositories>
 
