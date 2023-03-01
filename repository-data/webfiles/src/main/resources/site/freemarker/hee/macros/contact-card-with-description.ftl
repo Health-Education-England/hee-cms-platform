@@ -8,7 +8,7 @@
         <#if contactWithDescription.contactCardReference??>
             <#if contactWithDescription.contactCardReference.content??>
                 <#assign description='${(contactWithDescription.description)!""}'/>
-                <@contactCard contact=contactWithDescription.contactCardReference.content description=description/>
+                <@contactCard contact=contactWithDescription.contactCardReference.content description=description newCard=true/>
             </#if>
         </#if>
     </#if>
