@@ -46,13 +46,13 @@
                         </#if>
 
                         <#if document.overview??>
-                            <h2 id="overview0">Overview</h2>
+                            <h2 class="toc_h2"  id="overview0">Overview</h2>
                             <p class="nhsuk-lede-text"><@hst.html hippohtml=document.overview/></p>
                         </#if>
 
                         <#--  Pathways content blocks  -->
                         <#if document.pathwaysBlocks?has_content>
-                            <h2 id="pathways1">Pathways</h2>
+                            <h2  class="toc_h2" id="pathways">Pathways</h2>
                             <#list document.pathwaysBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
@@ -73,7 +73,7 @@
 
                         <#--  Training Route content blocks, at least 1 is mandatory  -->
                         <#if document.trainingRoutesBlocks?? >
-                            <h2 id="training">Training routes</h2>
+                            <h2 class="toc_h2">Training routes</h2>
                             <#list document.trainingRoutesBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
@@ -95,7 +95,7 @@
 
                         <#--  Support content blocks  -->
                         <#if document.supportBlocks?has_content>
-                            <h2 id="support">Support</h2>
+                            <h2 class="toc_h2" id="support">Support</h2>
                             <#list document.supportBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
@@ -114,7 +114,7 @@
 
                         <#--  Region content blocks  -->
                         <#if document.regionsBlocks?has_content>
-                            <h2 id="regions">Regions</h2>
+                            <h2  class="toc_h2" id="regions">Regions</h2>
                             <#list document.regionsBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "uk.nhs.hee.web.beans.NavMap">
@@ -130,13 +130,14 @@
                 <#--  Right hand content blocks: Table of content and content blocks   -->
                 <aside class="page__rightbar">
                     <#--  Table of content  -->
-                    <div class="nhsuk-anchor-links hee-anchorlinks" data-headings="h2,h3,h4,h5,h6">
+
+                    <div class="hee-anchorlinks" data-toc-js="true">
                         <h2 data-anchorlinksignore="true">Table of Contents</h2>
                     </div>
 
                     <#--  Righthand content blocks -->
-                    <#if guidanceDocument.rightHandBlocks??>
-                        <#list guidanceDocument.rightHandBlocks as block>
+                    <#if document.rightHandBlocks??>
+                        <#list document.rightHandBlocks as block>
                             <#switch block.getClass().getName()>
                                 <#case "uk.nhs.hee.web.beans.QuickLinks">
                                     <@hee.quickLinks quickLinks=block/>
