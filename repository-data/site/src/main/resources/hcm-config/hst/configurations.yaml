@@ -71,6 +71,9 @@ definitions:
           /landingpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/landingPage-main.ftl
+          /thirdparty-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/thirdparty-main.ftl
           /base-breadcrumb:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-breadcrumb.ftl
@@ -232,6 +235,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Publication Collection Page
               hst:template: publicationlisting-main
+            /thirdpartypage:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.ThirdPartyComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Third Party Page
+              hst:template: thirdparty-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

@@ -5901,3 +5901,61 @@
           jcr:primaryType: hee:appliesToCountry
           hee:appliesTo: false
           hee:linkURL: https://heiw.nhs.wales
+  /third-party:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: f430809b-2a57-404c-afff-7f295b979332
+    hippo:name: Third party
+    hippostd:foldertype: [new-document, new-folder]
+    /third-party-test-document:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 12e3fa43-91aa-405f-b97e-d9fd0ac0cbf3
+      hippo:name: Third Party Test Document
+      hippo:versionHistory: d537b9a7-8da1-48a4-9c7b-9d5122996d2a
+      /third-party-test-document[1]:
+        jcr:primaryType: hee:thirdpartyelement
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 27afae8f-017b-4810-a487-a616e82f92f2
+        hee:script: ajaxjobs
+        hee:title: Search for NHS jobs here
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-01-16T15:28:08.210Z
+        hippostdpubwf:lastModificationDate: 2023-03-03T07:45:31.885Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: f2d0b860-697a-4e10-8276-58f1bfc47ad5
+        hippotranslation:locale: en
+      /third-party-test-document[2]:
+        jcr:primaryType: hee:thirdpartyelement
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 9e996da6-6907-4dcc-abb4-3c8fa911d120
+        hee:script: ajaxjobs
+        hee:title: Search for NHS jobs here
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-01-16T15:28:08.210Z
+        hippostdpubwf:lastModificationDate: 2023-03-03T07:45:31.869Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: f2d0b860-697a-4e10-8276-58f1bfc47ad5
+        hippotranslation:locale: en
+      /third-party-test-document[3]:
+        jcr:primaryType: hee:thirdpartyelement
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: b600cc44-b882-48b6-a6b2-ebf4b84d76fa
+        hee:script: ajaxjobs
+        hee:title: Search for NHS jobs here
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-01-16T15:28:08.210Z
+        hippostdpubwf:lastModificationDate: 2023-03-03T07:45:31.869Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-03-03T07:45:41.686Z
+        hippotranslation:id: f2d0b860-697a-4e10-8276-58f1bfc47ad5
+        hippotranslation:locale: en

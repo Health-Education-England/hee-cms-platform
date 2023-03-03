@@ -1,0 +1,28 @@
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/jobs-contentpage:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2023-01-16T17:08:06.889Z
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
+    hst:label: Content Page Main
+    hst:lastmodified: 2023-03-03T07:49:46.900Z
+    hst:xtype: hst.vbox
+    /thirdpartypage:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.ThirdPartyComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: Third Party Page
+      hst:parameternames: [document]
+      hst:parametervalues: [common/third-party/third-party-test-document]
+      hst:template: thirdparty-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2023-01-16T17:08:39.044Z
+        hst:xtype: hst.vbox
