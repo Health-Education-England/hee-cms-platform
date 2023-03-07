@@ -69,4 +69,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons: "PickImage" }'
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage", forcePasteAsPlainText: true }'
