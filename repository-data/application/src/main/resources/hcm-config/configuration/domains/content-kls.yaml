@@ -1,0 +1,73 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-kls:
+      jcr:primaryType: hipposys:domain
+      /content-domain:
+        jcr:primaryType: hipposys:domainrule
+        /kls-content-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/kls
+        /exclude-kls-settings-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/kls/settings
+      /author:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [kls-author]
+        hipposys:role: author
+        hipposys:users:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: []
+      /editor:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [kls-editor]
+        hipposys:role: editor
+        hipposys:users:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: []
+      /gallery-domain:
+        jcr:primaryType: hipposys:domainrule
+        /kls-gallery-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/gallery/kls
+      /assets-domain:
+        jcr:primaryType: hipposys:domainrule
+        /kls-assets-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: true
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/assets/kls
+      /readonly:
+        jcr:primaryType: hipposys:authrole
+        hipposys:groups:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: [kls-reader]
+        hipposys:role: readonly
+        hipposys:users:
+          .meta:category: system
+          .meta:add-new-system-values: true
+          type: string
+          value: []
