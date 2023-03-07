@@ -81,4 +81,4 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               ckeditor.config.appended.json: '{ removeButtons: "PickImage", removePlugins:
                 "basicstyles,justify,list,stylescombo,youtube,copyformatting,removeformat,indentblock,indentlist,indent"}'
-              ckeditor.config.overlayed.json: ''
+              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
