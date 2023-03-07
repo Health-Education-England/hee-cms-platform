@@ -9,7 +9,1110 @@
   hippotranslation:locale: en
   /banners:
     jcr:primaryType: hippostd:folder
-    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
-    jcr:uuid: 70aa641f-d367-4ec6-b191-91329cc412eb
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 613e44e8-ad14-4947-8add-48ad364b94b6
     hippo:name: Banners
     hippostd:foldertype: [new-banner-document]
+    hippotranslation:id: 413aee68-e64f-4f8e-a86e-c91b4e6e587b
+    hippotranslation:locale: en
+    /announcement-banner:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 6d8da130-dd64-44e5-81b6-4af8ce7b90cc
+      hippo:name: Announcement Banner
+      hippo:versionHistory: e0b8fa17-15fb-463a-8489-9b26b4dd0f80
+      /announcement-banner[1]:
+        jcr:primaryType: hee:banner
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 9ef27eb1-1ff2-40c1-b3c7-bdb5a12582cd
+        hee:phase: beta
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: sankar.shunmuga
+        hippostdpubwf:creationDate: 2023-01-26T11:37:45.444+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-06T19:12:25.562Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1557ca8c-f5f8-4014-9e65-645fa06574d6
+        hippotranslation:locale: en
+        /hee:bannerContent:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Creating a new NHS England:&nbsp;NHS England and Health
+            Education England to be merged on 1 April 2023.&nbsp;<a href="https://www.england.nhs.uk/contact-us/privacy-notice/how-we-use-your-information/nhs-england-nhs-digital-and-health-education-england-merger/">More
+            about the merger</a>.</p>
+      /announcement-banner[2]:
+        jcr:primaryType: hee:banner
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 6004b341-a1d7-4beb-8a75-85745f97e196
+        hee:phase: beta
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: sankar.shunmuga
+        hippostdpubwf:creationDate: 2023-01-26T11:37:45.444+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-06T19:12:39.485Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 1557ca8c-f5f8-4014-9e65-645fa06574d6
+        hippotranslation:locale: en
+        /hee:bannerContent:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Creating a new NHS England:&nbsp;NHS England and Health
+            Education England to be merged on 1 April 2023.&nbsp;<a href="https://www.england.nhs.uk/contact-us/privacy-notice/how-we-use-your-information/nhs-england-nhs-digital-and-health-education-england-merger/">More
+            about the merger</a>.</p>
+      /announcement-banner[3]:
+        jcr:primaryType: hee:banner
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 672856d2-7f49-41e4-863f-8d9b97128eb9
+        hee:phase: beta
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: sankar.shunmuga
+        hippostdpubwf:creationDate: 2023-01-26T11:37:45.444+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-06T19:12:39.485Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-03-06T19:12:41.242Z
+        hippotranslation:id: 1557ca8c-f5f8-4014-9e65-645fa06574d6
+        hippotranslation:locale: en
+        /hee:bannerContent:
+          jcr:primaryType: hippostd:html
+          hippostd:content: <p>Creating a new NHS England:&nbsp;NHS England and Health
+            Education England to be merged on 1 April 2023.&nbsp;<a href="https://www.england.nhs.uk/contact-us/privacy-notice/how-we-use-your-information/nhs-england-nhs-digital-and-health-education-england-merger/">More
+            about the merger</a>.</p>
+  /listing-pages:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 691739ab-030b-463c-8623-b05e56393273
+    hippo:name: Listing Pages
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 316df4ee-c1c2-4683-a34d-9f06069a1383
+    hippotranslation:locale: en
+    /blogs-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: e26eb17e-dada-4a22-9316-37c0530584a1
+      hippo:name: Blogs Listing page
+      hippo:versionHistory: a9012cd8-1b5e-4212-b36a-724b54985f24
+      /blogs-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e530538c-433b-4b37-9bbc-0e68921af222
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: blog
+        hee:pageSize: 5
+        hee:summary: Blogs Listing page
+        hee:title: Blogs Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:39:46.728+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 9f9900a6-6a3a-48f2-86eb-6589b4dae79d
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /blogs-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: a9097d0c-c3d3-42d9-8902-88d8260cbc21
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: blog
+        hee:pageSize: 5
+        hee:summary: Blogs Listing page
+        hee:title: Blogs Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:37:17.531+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 9f9900a6-6a3a-48f2-86eb-6589b4dae79d
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /blogs-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a941b94d-891f-4155-98e9-5c85827818f1
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: blog
+        hee:pageSize: 5
+        hee:summary: Blogs Listing page
+        hee:title: Blogs Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:37:17.531+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-03-03T13:37:18.926+01:00
+        hippotranslation:id: 9f9900a6-6a3a-48f2-86eb-6589b4dae79d
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+    /news-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 18de86b4-b86d-424a-ab1a-c81478b6c291
+      hippo:name: News Listing page
+      hippo:versionHistory: 16c98b70-2842-4770-9579-39e092e8ee39
+      /news-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: b29ca583-773b-4d7d-a5a6-ec474652fe9d
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: news
+        hee:pageSize: 5
+        hee:summary: News Listing page
+        hee:title: News Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:37:06.490+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 73588f48-f035-421d-9297-f2c960a1b6f0
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /news-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8fd7b68b-6179-49ec-b1d5-8574e2c7121d
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: news
+        hee:pageSize: 5
+        hee:summary: News Listing page
+        hee:title: News Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:36:58.615+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 73588f48-f035-421d-9297-f2c960a1b6f0
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /news-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4929530c-4cbf-4e78-aba0-650a7e02f3bf
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: news
+        hee:pageSize: 5
+        hee:summary: News Listing page
+        hee:title: News Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:37:06.490+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-03-03T13:37:08.674+01:00
+        hippotranslation:id: 73588f48-f035-421d-9297-f2c960a1b6f0
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+    /searchbank-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 0039fef7-619e-4f5c-bcba-427452195b7c
+      hippo:name: SearchBank Listing page
+      hippo:versionHistory: e07f0b12-b72c-4da7-99b8-07dc01723131
+      /searchbank-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 33f403cb-ca89-4256-9714-b7c1427bb6a5
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: searchbank
+        hee:pageSize: 5
+        hee:summary: Search Bank Listing page
+        hee:title: Search Bank Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:36:55.383+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 389608c3-450f-4c59-a718-8e3237d00844
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /searchbank-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a407735b-3959-434e-be01-b5e168138a74
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: searchbank
+        hee:pageSize: 5
+        hee:summary: Search Bank Listing page
+        hee:title: Search Bank Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:36:32.453+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 389608c3-450f-4c59-a718-8e3237d00844
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /searchbank-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 42bb5b95-f0cb-4135-9d5e-4b464423f14f
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: searchbank
+        hee:pageSize: 5
+        hee:summary: Search Bank Listing page
+        hee:title: Search Bank Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:36:55.383+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-03-03T13:36:56.860+01:00
+        hippotranslation:id: 389608c3-450f-4c59-a718-8e3237d00844
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+    /events-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 8fbdf73a-a9d0-40d8-a11e-0ffb3bc965e8
+      hippo:name: Events Listing page
+      hippo:versionHistory: 39d3bc7c-1576-468d-a743-e06531fa2d87
+      /events-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 3237e4e7-7b8e-4262-8895-4422fea70054
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: event
+        hee:pageSize: 5
+        hee:summary: Events Listing page
+        hee:title: Events Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:40:25.364+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 230c7066-daf9-4784-ba7a-d602c23ad6e4
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /events-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 51e8b2b9-803c-41c1-97f4-f83fa403fcd3
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: event
+        hee:pageSize: 5
+        hee:summary: Events Listing page
+        hee:title: Events Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:40:33.961+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: 230c7066-daf9-4784-ba7a-d602c23ad6e4
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /events-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 073c3295-5452-4858-b4f1-eb829dd5d543
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: event
+        hee:pageSize: 5
+        hee:summary: Events Listing page
+        hee:title: Events Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:40:25.364+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-03-03T13:40:43.149+01:00
+        hippotranslation:id: 230c7066-daf9-4784-ba7a-d602c23ad6e4
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+    /bulletins-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 55fd7024-5b99-454d-9cad-c4ce7b0204f0
+      hippo:name: Bulletins Listing page
+      hippo:versionHistory: b348c502-89c5-48c4-be05-b1acd19d188f
+      /bulletins-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 89f86bc5-187e-4f4d-a294-ec360fe27014
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: bulletin
+        hee:pageSize: 5
+        hee:summary: Bulletins Listing page
+        hee:title: Bulletins Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:41:21.818+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: a2b825ab-5b2d-402a-a20d-b875f31fbd66
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /bulletins-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1ed9d776-51da-4f17-8ae0-506f2f24a6e8
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: bulletin
+        hee:pageSize: 5
+        hee:summary: Bulletins Listing page
+        hee:title: Bulletins Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:40:59.949+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: a2b825ab-5b2d-402a-a20d-b875f31fbd66
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /bulletins-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 722f457b-2505-4321-9492-30d96c4f7ce5
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: bulletin
+        hee:pageSize: 5
+        hee:summary: Bulletins Listing page
+        hee:title: Bulletins Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:41:21.818+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-03-03T13:41:25.170+01:00
+        hippotranslation:id: a2b825ab-5b2d-402a-a20d-b875f31fbd66
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 5e400999-94a2-4fea-adf9-cdec1066d5ce
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+    /casestudies-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 79f4580e-96fe-4a15-bb25-029473705907
+      hippo:name: CaseStudies Listing page
+      hippo:versionHistory: 1c409f63-306d-44ae-ae97-871610789397
+      /casestudies-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: b002262f-1c94-441d-8e00-920e2c565ad3
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: casestudy
+        hee:pageSize: 5
+        hee:summary: CaseStudies Listing page
+        hee:title: CaseStudies Listing page
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-06T19:17:06.583Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7069c267-8804-464f-a9a6-a7f5bdfa9cf5
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 707557b1-1554-4343-ae1c-113659334cb3
+      /casestudies-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e8dfcede-cb0e-4bbd-a150-61d8f4c884cd
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: casestudy
+        hee:pageSize: 5
+        hee:summary: CaseStudies Listing page
+        hee:title: CaseStudies Listing page
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-06T19:16:56.758Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7069c267-8804-464f-a9a6-a7f5bdfa9cf5
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 707557b1-1554-4343-ae1c-113659334cb3
+      /casestudies-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 12f715b8-fc99-497b-95fb-3d8a8f5a37df
+        hee:addToAZ: false
+        hee:documentTypes: []
+        hee:listingPageType: casestudy
+        hee:pageSize: 5
+        hee:summary: CaseStudies Listing page
+        hee:title: CaseStudies Listing page
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: Geraldine.Susairaj
+        hippostdpubwf:creationDate: 2023-02-28T12:55:15.334+01:00
+        hippostdpubwf:lastModificationDate: 2023-03-06T19:17:06.583Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-03-06T19:17:07.969Z
+        hippotranslation:id: 7069c267-8804-464f-a9a6-a7f5bdfa9cf5
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 707557b1-1554-4343-ae1c-113659334cb3
+    /search-results:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 12fe2ed0-ed8e-414d-8556-e7fa25804a88
+      hippo:name: Search Results
+      hippo:versionHistory: 696eb05b-5723-4a73-a073-f35481587eb7
+      /search-results[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: c1141ce0-165a-41e0-a2ec-248ce42d2e84
+        hee:addToAZ: true
+        hee:documentTypes: ['hee:blogPost', 'hee:guidance', 'hee:landingPage', 'hee:MiniHub',
+          'hee:searchBank', 'hee:caseStudy', 'hee:listingPage', 'hee:bulletin', 'hee:event',
+          'hee:news']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search results
+        hee:title: Search results
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: olivia.sperring-jones
+        hippostdpubwf:creationDate: 2021-04-06T12:16:00.362+02:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:44:39.315+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: a73f990d-7fe6-4199-8be1-ab8ea84b3014
+        hippotranslation:locale: document-type-locale
+      /search-results[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: dfc056f3-01f3-4f15-b6cb-dacfe466f3f5
+        hee:addToAZ: true
+        hee:documentTypes: ['hee:blogPost', 'hee:guidance', 'hee:landingPage', 'hee:MiniHub',
+          'hee:searchBank', 'hee:caseStudy', 'hee:listingPage', 'hee:bulletin', 'hee:event',
+          'hee:news']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search results
+        hee:title: Search results
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: olivia.sperring-jones
+        hippostdpubwf:creationDate: 2021-04-06T12:16:00.362+02:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:44:28.282+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippotranslation:id: a73f990d-7fe6-4199-8be1-ab8ea84b3014
+        hippotranslation:locale: document-type-locale
+      /search-results[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 428bda6f-7f49-4064-a575-bce7512eff23
+        hee:addToAZ: true
+        hee:documentTypes: ['hee:blogPost', 'hee:guidance', 'hee:landingPage', 'hee:MiniHub',
+          'hee:searchBank', 'hee:caseStudy', 'hee:listingPage', 'hee:bulletin', 'hee:event',
+          'hee:news']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:path: ''
+        hee:summary: Search results
+        hee:title: Search results
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostd:transferable: false
+        hippostdpubwf:createdBy: olivia.sperring-jones
+        hippostdpubwf:creationDate: 2021-04-06T12:16:00.362+02:00
+        hippostdpubwf:lastModificationDate: 2023-03-03T13:44:39.315+01:00
+        hippostdpubwf:lastModifiedBy: sankar.shunmuga
+        hippostdpubwf:publicationDate: 2023-03-03T13:44:41.136+01:00
+        hippotranslation:id: a73f990d-7fe6-4199-8be1-ab8ea84b3014
+        hippotranslation:locale: document-type-locale
+  /logos:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 189c45da-e049-49f7-a19e-8cf90e8f8f3f
+    hippo:name: Logos
+    hippostd:foldertype: [new-logo-folder, new-logo-document]
+    hippotranslation:id: 307ea7e1-17cb-455c-8464-b19b3dbafcb0
+    hippotranslation:locale: en
+    /northern-ireland---mdta:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 708dd34c-c379-4049-83b1-ce5266aa742e
+      hippo:name: Northern Ireland - MDTA
+      /northern-ireland---mdta[1]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 6f5b4fe7-b7fa-4e02-9daf-a1a6ff8293d1
+        hee:linkTitle: Opens Northern Ireland Medical & Dental Training Agency website
+          in a new window
+        hee:linkURL: https://www.nimdta.gov.uk
+        hee:logoType: nimdta
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:28.462Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 5742fec3-e9e8-43cc-8cce-567d8bea3c04
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: fc129f7d-17c7-4123-821f-0f6f171dcae8
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /northern-ireland---mdta[2]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: acc9bd34-1989-47f8-b0bc-6a6d4ca7191b
+        hee:linkTitle: Opens Northern Ireland Medical & Dental Training Agency website
+          in a new window
+        hee:linkURL: https://www.nimdta.gov.uk
+        hee:logoType: nimdta
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:39.327Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 5742fec3-e9e8-43cc-8cce-567d8bea3c04
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: 4971605c-63fa-479d-9785-0fc0ddb7fa60
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /northern-ireland---mdta[3]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 3de38222-8a92-4b9f-b316-f2c88322814b
+        hee:linkTitle: Opens Northern Ireland Medical & Dental Training Agency website
+          in a new window
+        hee:linkURL: https://www.nimdta.gov.uk
+        hee:logoType: nimdta
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:39.327Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-12-22T08:17:02.827Z
+        hippotranslation:id: 5742fec3-e9e8-43cc-8cce-567d8bea3c04
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: aa27de6b-83fd-4a35-8eeb-ce9f7b0fc964
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /nhs-scotland:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 2b4efee3-a574-498c-ab9d-643c91e943b5
+      hippo:name: NHS Scotland
+      /nhs-scotland[1]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 71fc0e12-44eb-4ad0-9e55-46f56cd6eaea
+        hee:linkTitle: Opens NHS Scotland website in a new window
+        hee:linkURL: https://www.scot.nhs.uk
+        hee:logoType: nes
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:45.883Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 84be5877-eda0-4243-a9a6-55634c0ecbce
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: 76f8afe6-314e-4cf4-b707-f9109899395c
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /nhs-scotland[2]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 9a18b353-ef1a-418e-83b3-60ae0443085e
+        hee:linkTitle: Opens NHS Scotland website in a new window
+        hee:linkURL: https://www.scot.nhs.uk
+        hee:logoType: nes
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:41.501Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 84be5877-eda0-4243-a9a6-55634c0ecbce
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: df325f6c-1d08-43f7-8a99-6557f1f13a84
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /nhs-scotland[3]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: eeab8767-176d-455f-a209-d795eef9c94d
+        hee:linkTitle: Opens NHS Scotland website in a new window
+        hee:linkURL: https://www.scot.nhs.uk
+        hee:logoType: nes
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:45.883Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-12-22T08:17:03.003Z
+        hippotranslation:id: 84be5877-eda0-4243-a9a6-55634c0ecbce
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: 434b75c4-51b9-4780-aacd-8dca1c5eca94
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /health-education-improvement-wales:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: d2051238-05d9-40a1-be40-ae37bb4d8424
+      hippo:name: Health Education Improvement Wales
+      /health-education-improvement-wales[1]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 2b93bb7a-1db1-4802-b882-0b8c8931172b
+        hee:linkTitle: Opens Health Education Improvement Wales website in a new window
+        hee:linkURL: https://heiw.nhs.wales
+        hee:logoType: heiw
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:51.626Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 60f399bc-c1df-4a1c-aba6-22575e1fa68f
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: f08eae7a-4c7d-4924-838f-69cf3c0da702
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /health-education-improvement-wales[2]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ad65264d-ff21-43df-9081-d9a11b773f75
+        hee:linkTitle: Opens Health Education Improvement Wales website in a new window
+        hee:linkURL: https://heiw.nhs.wales
+        hee:logoType: heiw
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:47.615Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 60f399bc-c1df-4a1c-aba6-22575e1fa68f
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: 3eff2e32-585c-4e16-a89e-0832478f2e03
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /health-education-improvement-wales[3]:
+        jcr:primaryType: hee:logo
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 1007c149-c36c-4030-b08e-f3abbda3d208
+        hee:linkTitle: Opens Health Education Improvement Wales website in a new window
+        hee:linkURL: https://heiw.nhs.wales
+        hee:logoType: heiw
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-15T21:20:18.908Z
+        hippostdpubwf:lastModificationDate: 2021-12-22T08:16:51.626Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2021-12-22T08:17:02.903Z
+        hippotranslation:id: 60f399bc-c1df-4a1c-aba6-22575e1fa68f
+        hippotranslation:locale: en
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:text: ''
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: ab9811b2-c99c-459e-834a-07a8f45b6727
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:linkDocument:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /logogroups:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 0e1e8fb6-a25f-4a68-8d1b-20bd2d946fc3
+    hippo:name: LogoGroups
+    hippostd:foldertype: [new-logoGroup-folder, new-logoGroup-document]
+    hippotranslation:id: 568f23ac-d296-4684-a3bc-590a96077daa
+    hippotranslation:locale: en
+    /lks-four-nations-group:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 707557b1-1554-4343-ae1c-113659334cb3
+      hippo:name: LKS four nations group
+      /lks-four-nations-group[1]:
+        jcr:primaryType: hee:logoGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 610c4880-99bd-403f-93d9-7ec4b8b2a742
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:54.269Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 25f38921-50ce-47ca-b9f0-b216cbcf0f59
+        hippotranslation:locale: en
+        /hee:logos[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
+        /hee:logos[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9fe281de-70f4-4eed-86a0-fc54fbd00394
+        /hee:logos[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+      /lks-four-nations-group[2]:
+        jcr:primaryType: hee:logoGroup
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: e3ed8beb-d126-460c-84ec-57569bf7a086
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:58.237Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 25f38921-50ce-47ca-b9f0-b216cbcf0f59
+        hippotranslation:locale: en
+        /hee:logos[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
+        /hee:logos[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9fe281de-70f4-4eed-86a0-fc54fbd00394
+        /hee:logos[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+      /lks-four-nations-group[3]:
+        jcr:primaryType: hee:logoGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a5420436-e125-43a7-a5e7-7b203cb60c25
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:58.237Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-11-27T12:43:00.088Z
+        hippotranslation:id: 25f38921-50ce-47ca-b9f0-b216cbcf0f59
+        hippotranslation:locale: en
+        /hee:logos[1]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: f3ca8399-d9db-455e-a6b5-8b96eeeb6092
+        /hee:logos[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9fe281de-70f4-4eed-86a0-fc54fbd00394
+        /hee:logos[3]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+    /lks-wales-only-group:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 686e1492-c2ef-40fe-94bf-5abea3dd2427
+      hippo:name: LKS wales only group
+      /lks-wales-only-group[1]:
+        jcr:primaryType: hee:logoGroup
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 9dbae72a-50b0-4223-9dfa-e3e0c4f114e1
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:49.626Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: d1188ece-8b52-4741-8f26-ab81536c2e64
+        hippotranslation:locale: en
+        /hee:logos:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+      /lks-wales-only-group[2]:
+        jcr:primaryType: hee:logoGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: fd784e0f-8c81-418b-ac68-9f32fa9daad9
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:44.829Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: d1188ece-8b52-4741-8f26-ab81536c2e64
+        hippotranslation:locale: en
+        /hee:logos:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955
+      /lks-wales-only-group[3]:
+        jcr:primaryType: hee:logoGroup
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ab07f1bb-2aed-45a0-bbeb-75f166f132d2
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2021-12-17T15:34:51.206Z
+        hippostdpubwf:lastModificationDate: 2022-11-27T12:42:49.626Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2022-11-27T12:42:51.756Z
+        hippotranslation:id: d1188ece-8b52-4741-8f26-ab81536c2e64
+        hippotranslation:locale: en
+        /hee:logos:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: ce765353-3e19-473a-893c-446aa09ae955

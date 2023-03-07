@@ -45,6 +45,7 @@ jobs:
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
+    if: ${{ false }}
     needs: [buildAndTest]
     environment: test
 

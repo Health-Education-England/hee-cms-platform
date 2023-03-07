@@ -313,3 +313,97 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+  /testcasestudy:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 5b09296b-0fdc-4552-a916-1915c70a5318
+    hippo:name: TestCaseStudy
+    hippo:versionHistory: bd665feb-52c4-4216-8f46-eff798e4ab86
+    /testcasestudy[1]:
+      jcr:primaryType: hee:caseStudy
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 59ddb061-ac94-4711-b06f-7c021dd40f0a
+      hee:impactGroup: admin_and_clerical
+      hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: croydon_health_services
+      hee:region: Wessex
+      hee:sector: ccg_support
+      hee:submittedDate: 2022-04-08T00:00:00+01:00
+      hee:title: I am from Digital Transformation
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
+      hippostdpubwf:lastModificationDate: 2023-03-06T20:08:21.373Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: afdb1911-539e-4bd3-bb3d-8b53871891e2
+      hippotranslation:locale: en
+      /hee:document:
+        jcr:primaryType: hippo:resource
+        hippo:filename: FileList.txt
+        jcr:data:
+          type: binary
+          resource: /content/documents/main/digital-transformation/testcasestudy/testcasestudy[1]/document/FileList.txt
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-02-14T16:09:23.639Z
+        jcr:mimeType: text/plain
+    /testcasestudy[2]:
+      jcr:primaryType: hee:caseStudy
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 02137c7b-2e6c-44cd-8fb8-999f4b12f5d4
+      hee:impactGroup: admin_and_clerical
+      hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: croydon_health_services
+      hee:region: Wessex
+      hee:sector: ccg_support
+      hee:submittedDate: 2022-04-08T00:00:00+01:00
+      hee:title: I am from Digital Transformation
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
+      hippostdpubwf:lastModificationDate: 2023-03-06T20:08:49.356Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: afdb1911-539e-4bd3-bb3d-8b53871891e2
+      hippotranslation:locale: en
+      /hee:document:
+        jcr:primaryType: hippo:resource
+        hippo:filename: FileList.txt
+        jcr:data:
+          type: binary
+          resource: /content/documents/main/digital-transformation/testcasestudy/testcasestudy[2]/document/FileList.txt
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-02-14T16:09:23.639Z
+        jcr:mimeType: text/plain
+    /testcasestudy[3]:
+      jcr:primaryType: hee:caseStudy
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c4d84bf2-24e4-47a8-8e2a-6841692ec687
+      hee:impactGroup: admin_and_clerical
+      hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: croydon_health_services
+      hee:region: Wessex
+      hee:sector: ccg_support
+      hee:submittedDate: 2022-04-08T00:00:00+01:00
+      hee:title: I am from Digital Transformation
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
+      hippostdpubwf:lastModificationDate: 2023-03-06T20:08:49.356Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-03-06T20:08:50.907Z
+      hippotranslation:id: afdb1911-539e-4bd3-bb3d-8b53871891e2
+      hippotranslation:locale: en
+      /hee:document:
+        jcr:primaryType: hippo:resource
+        hippo:filename: FileList.txt
+        jcr:data:
+          type: binary
+          resource: /content/documents/main/digital-transformation/testcasestudy/testcasestudy[3]/document/FileList.txt
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-02-14T16:09:23.639Z
+        jcr:mimeType: text/plain

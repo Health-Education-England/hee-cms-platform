@@ -341,3 +341,97 @@
         /hee:cards:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+  /testcasestudy:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 03c54bfc-112c-47e7-9e64-9e05533f8353
+    hippo:name: TestCaseStudy
+    hippo:versionHistory: 967b1250-af36-4cff-9ed3-22e2a60fef0f
+    /testcasestudy[1]:
+      jcr:primaryType: hee:caseStudy
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 3d0e7242-f782-41ed-bf04-3bf8f9983f24
+      hee:impactGroup: admin_and_clerical
+      hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: croydon_health_services
+      hee:region: Wessex
+      hee:sector: ccg_support
+      hee:submittedDate: 2022-04-08T00:00:00+01:00
+      hee:title: I am from Medical
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
+      hippostdpubwf:lastModificationDate: 2023-03-06T20:09:06.091Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 2ea11817-ec93-46cc-983b-2fa7fde729be
+      hippotranslation:locale: en
+      /hee:document:
+        jcr:primaryType: hippo:resource
+        hippo:filename: FileList.txt
+        jcr:data:
+          type: binary
+          resource: /content/documents/main/medical/testcasestudy/testcasestudy[1]/document/FileList.txt
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-02-14T16:09:23.639Z
+        jcr:mimeType: text/plain
+    /testcasestudy[2]:
+      jcr:primaryType: hee:caseStudy
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: 916aa855-1038-47e2-9511-0f910c63eb0a
+      hee:impactGroup: admin_and_clerical
+      hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: croydon_health_services
+      hee:region: Wessex
+      hee:sector: ccg_support
+      hee:submittedDate: 2022-04-08T00:00:00+01:00
+      hee:title: I am from Medical
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
+      hippostdpubwf:lastModificationDate: 2023-03-06T20:09:12.349Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 2ea11817-ec93-46cc-983b-2fa7fde729be
+      hippotranslation:locale: en
+      /hee:document:
+        jcr:primaryType: hippo:resource
+        hippo:filename: FileList.txt
+        jcr:data:
+          type: binary
+          resource: /content/documents/main/medical/testcasestudy/testcasestudy[2]/document/FileList.txt
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-02-14T16:09:23.639Z
+        jcr:mimeType: text/plain
+    /testcasestudy[3]:
+      jcr:primaryType: hee:caseStudy
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 051c5053-4178-457f-9c67-96cc2729d3e3
+      hee:impactGroup: admin_and_clerical
+      hee:impactTypes: [contributed_to_personal_or_professional_development]
+      hee:provider: croydon_health_services
+      hee:region: Wessex
+      hee:sector: ccg_support
+      hee:submittedDate: 2022-04-08T00:00:00+01:00
+      hee:title: I am from Medical
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2022-02-14T16:08:16.437Z
+      hippostdpubwf:lastModificationDate: 2023-03-06T20:09:12.349Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-03-06T20:09:14.272Z
+      hippotranslation:id: 2ea11817-ec93-46cc-983b-2fa7fde729be
+      hippotranslation:locale: en
+      /hee:document:
+        jcr:primaryType: hippo:resource
+        hippo:filename: FileList.txt
+        jcr:data:
+          type: binary
+          resource: /content/documents/main/medical/testcasestudy/testcasestudy[3]/document/FileList.txt
+        jcr:encoding: UTF-8
+        jcr:lastModified: 2022-02-14T16:09:23.639Z
+        jcr:mimeType: text/plain

@@ -1,0 +1,34 @@
+/content/gallery/main/hero-images:
+  jcr:primaryType: hippogallery:stdImageGallery
+  jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+  jcr:uuid: 589b2217-82fd-4d74-9fa1-4392f50f2ccd
+  hippo:name: Hero Images
+  hippostd:foldertype: [new-image-folder]
+  hippostd:gallerytype: ['hee:imagesetWithCaption']
+  /young-child-using-tablet-device.jpg:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+    /young-child-using-tablet-device.jpg:
+      jcr:primaryType: hee:imagesetWithCaption
+      hippo:availability: [live, preview]
+      hippogallery:filename: young-child-using-tablet-device.jpg
+      /hippogallery:thumbnail:
+        jcr:primaryType: hippogallery:image
+        hippo:filename: young-child-using-tablet-device.jpg
+        hippogallery:height: 20
+        hippogallery:width: 60
+        jcr:data:
+          type: binary
+          resource: /content/gallery/main/hero-images/young-child-using-tablet-device.jpg/young-child-using-tablet-device.jpg/thumbnail/thumbnail.jpg
+        jcr:lastModified: 2021-11-07T00:50:09.613Z
+        jcr:mimeType: image/jpeg
+      /hippogallery:original:
+        jcr:primaryType: hippogallery:image
+        hippogallery:height: 320
+        hippogallery:width: 960
+        jcr:data:
+          type: binary
+          resource: /content/gallery/main/hero-images/young-child-using-tablet-device.jpg/young-child-using-tablet-device.jpg/original/original.jpg
+        jcr:lastModified: 2021-11-07T00:50:09.613Z
+        jcr:mimeType: image/jpeg
