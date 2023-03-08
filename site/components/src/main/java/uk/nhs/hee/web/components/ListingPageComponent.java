@@ -2,6 +2,7 @@ package uk.nhs.hee.web.components;
 
 import com.google.common.base.Strings;
 import org.apache.commons.lang.StringUtils;
+import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.content.beans.query.HstQuery;
 import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.builder.HstQueryBuilder;
@@ -9,9 +10,13 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
 import org.hippoecm.hst.core.component.HstComponentException;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
+import org.hippoecm.hst.core.linking.HstLink;
+import org.hippoecm.hst.core.linking.HstLinkCreator;
+import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.onehippo.cms7.essentials.components.paging.Pageable;
 import org.slf4j.Logger;
@@ -20,11 +25,15 @@ import uk.nhs.hee.web.beans.ListingPage;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.MiniHubGuidanceLinkUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import javax.jcr.RepositoryException;
 
 /**
  * Base abstract component class for Listing Pages ({@code hee:listingPage}).
@@ -36,12 +45,16 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     private static final String DESCENDING_SORT_ORDER = "desc";
     private static final String ATOZ_SORT_ORDER = "az";
     private static final String SORT_BY_QUERY_PARAM = "sortBy";
+    public static final String HEE_GUIDANCE_CONTENT_TYPE = "hee:guidance";
+    public static final String URL_PROPERTY = "derived_url";
+    public static final String PAGENOTFOUND_REFID = "pagenotfound";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
         final Pageable<HippoBean> pageable;
+
         try {
             pageable = executeQuery(request);
         } catch (final QueryException e) {
@@ -65,13 +78,94 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         LOGGER.debug("Execute query: {}", query.getQueryAsString(false));
 
         final HstQueryResult results = query.execute();
+        final HippoBeanIterator beans = results.getHippoBeans();
+        final HstRequestContext reqContext = request.getRequestContext();
+
+        List<HippoBean> beansWithValidURLs = findBeansThatHaveAValidPageUrl(reqContext, beans);
 
         return getPageableFactory().createPageable(
-                results.getHippoBeans(),
-                results.getTotalSize(),
-                listingPage.getPageSize().intValue(),
-                getCurrentPage(request));
+                beansWithValidURLs,
+                getCurrentPage(request),
+                listingPage.getPageSize().intValue()
+        );
     }
+
+    /**
+     * Iterate through the candidate beans and decide if they can be surfaced. That will rely on whether they are associated with a
+     * page, either directly or through a guidance minihub page
+     *
+     * @param reqContext is used to get request specific data
+     * @param beans are those beans that were initially identified but now need filtering
+     * @return will be a {@link List} of {@link HippoBean} instances that were found to be associated with a page
+     */
+    private List<HippoBean> findBeansThatHaveAValidPageUrl(HstRequestContext reqContext, HippoBeanIterator beans) {
+        final HstLinkCreator linkCreator = reqContext.getHstLinkCreator();
+        Mount mount = reqContext.getResolvedMount().getMount();
+        final HstLink pageNotFound = linkCreator.createByRefId(PAGENOTFOUND_REFID, mount);
+        final String pageNotFoundURL = pageNotFound.toUrlForm(reqContext, false);
+
+        List<HippoBean> beansWithValidURLs = new ArrayList<>();
+
+        while (beans.hasNext()) {
+            HippoBean bean = beans.nextHippoBean();
+            HstLink link = linkCreator.create(bean.getNode(), reqContext);
+
+            String url = link.toUrlForm(reqContext, false);
+            if (url != null) {
+                if (!url.equals(pageNotFoundURL)) {
+                    LOGGER.debug("Found a proper URL of {} so now adding it", url);
+                    beansWithValidURLs.add(bean);
+                    bean.getProperties().put(URL_PROPERTY, url);
+                } else {
+                    //* if it's a guidance page, then we can still use it's parent
+                    if (HEE_GUIDANCE_CONTENT_TYPE.equals(bean.getContentType())) {
+                        LOGGER.debug("URL for {} evaluated to PageNotFound so now checking for minihub link", bean.getPath());
+                        try {
+                            //* Figure out if we have a guidance page that is part of a mini-hub
+                            HstLink possibleGuidanceHubLink = MiniHubGuidanceLinkUtils.getLink(bean.getNode().getParent(), false, reqContext, mount);
+
+                            if (possibleGuidanceHubLink != null) {
+                                String possibleUrl = possibleGuidanceHubLink.toUrlForm(reqContext, false);
+                                LOGGER.debug("Minihub link evaluated to: {}", possibleUrl);
+
+                                if (!pageNotFoundURL.equals(possibleUrl)) {
+                                    beansWithValidURLs.add(bean);
+                                    bean.getProperties().put(URL_PROPERTY, possibleUrl);
+                                }
+                            }
+                        } catch (RepositoryException e) {
+                            LOGGER.debug("Problem trying to get the Guidance hub link: {}", e.getMessage());
+                            e.printStackTrace();
+                        }
+                    } else {
+                        if (beanUrlObtainedDifferently(bean)) {
+                            beansWithValidURLs.add(bean);
+                        } else {
+                            LOGGER.debug("Not a Guidance content type so there was no Minihub link");
+                        }
+                    }
+                }
+            } else {
+                LOGGER.debug("URL was null for this bean");
+            }
+        }
+        return beansWithValidURLs;
+    }
+
+    /**
+     * Some beans can be let through automatically as they resolve their URLs slightly differently
+     * @param bean the bean we are checking. It will never be null
+     * @return indicates if its one of those special beans
+     */
+    private boolean beanUrlObtainedDifferently(HippoBean bean) {
+        String simpleName = bean.getClass().getSimpleName();
+        if ("Event".equals(simpleName) || "Bulletin".equals(simpleName) || "SearchBank".equals(simpleName) || "CaseStudy".equals(simpleName)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
     /**
      * Builds Query for the current Listing Page request.
