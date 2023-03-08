@@ -1,0 +1,59 @@
+/content/urlrewriter/kls-rebuild/searchtosearchresultsredirect:
+  .meta:order-before: hometoknowledgestaffredirect
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: f57632b1-5840-452a-8558-3765fd6ec562
+  hippo:name: SearchToSearchResultsRedirect
+  hippo:versionHistory: d830349d-2f6e-47aa-afbf-f489774a6dc0
+  /searchtosearchresultsredirect[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: b97747c3-6675-437c-ad15-3e7fb99cdca2
+    hippo:availability: []
+    hippostd:holder: admin
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2023-03-08T12:07:51.557Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>\r\n\r\
+      \n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/medical/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/medical/search/results?%{query-string}</to>\r\n</rule>"
+  /searchtosearchresultsredirect[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: cf05d6d0-0fd1-408c-948d-99668ffeeecf
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2023-03-08T09:28:48.395Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>"
+  /searchtosearchresultsredirect[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 0da1358f-fab3-41a2-b724-3fd3ccb25b8e
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
+    hippostdpubwf:lastModificationDate: 2023-03-08T09:28:48.395Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2023-03-08T10:59:26.419Z
+    urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
+      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
+      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>"
