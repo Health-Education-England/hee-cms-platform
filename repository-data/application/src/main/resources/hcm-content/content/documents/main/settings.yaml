@@ -1,7 +1,8 @@
 /content/documents/main/settings:
-  .meta:order-before: lks
+  .meta:order-before: pages
   jcr:primaryType: hippostd:folder
-  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:mixinTypes: ['frontend:orderChildFolders', 'hippo:named', 'hippotranslation:translated',
+    'mix:versionable']
   jcr:uuid: 3c4a995a-5a6f-44a2-81ec-065ed6f52419
   hippo:name: Settings
   hippostd:foldertype: [new-folder]
