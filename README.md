@@ -128,10 +128,10 @@ mvn checkstyle:checkstyle
 ### Locations for front end prototype css and js
 To manually update the css and javascript files with the those built with [HEE prototype kit](https://github.com/Health-Education-England/hee-prototypes):
 
- - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\nhsuk-4.1.0.min.css
- - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\hee.min.css
- - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\nhsuk-4.1.0.min.js 
- - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\hee.min.js
+- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\nhsuk-4.1.0.min.css
+- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\hee.min.css
+- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\nhsuk-4.1.0.min.js
+- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\hee.min.js
 
 ## Building a project distribution
 
@@ -156,7 +156,7 @@ See also src/main/assembly/*.xml if you need to customize the distributions.
 
 ## Deployment
 
-Code is deployed automatically to Bloomreach Cloud (brCloud) by the CICD process defined using github workflow actions (./github/workflows/). 
+Code is deployed automatically to Bloomreach Cloud (brCloud) by the CICD process defined using github workflow actions (./github/workflows/).
 
 The github workflow actions are based on the following custom-made github actions:
 - https://github.com/Health-Education-England/cleanup-distributions-from-BR-Cloud-action
@@ -166,8 +166,8 @@ The github workflow actions are based on the following custom-made github action
 You can deploy to the following environments:
 
 - **development** by merging a PR into the **master** branch
-- **test** by manually promoting the code from development environment to test environment, using the github action workflow 
-- **staging** by manually promoting the code from test environment to staging environment, using the github action workflow  
+- **test** by manually promoting the code from development environment to test environment, using the github action workflow
+- **staging** by manually promoting the code from test environment to staging environment, using the github action workflow
 - **production** by creating a release tag **release-{version}** inside the **master** branch
 
 Please check the following diagram for a better understanding of the development and delivery process:
@@ -177,13 +177,13 @@ Please check the following diagram for a better understanding of the development
 #### GitHub Secrets
 
 The GitHub action workflows that handle the CICD process require the following secrets to be setup on Github:
-  
- - Secrets for `hippo-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
+
+- Secrets for `hippo-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
    - BLOOMREACH_MVN_USERNAME - brXM Maven Repository username
    - BLOOMREACH_MVN_PASSWORD - brXM Maven Repository password
-   
-    Contact Bloomreach ([Get Bloomreach Experience Manager Developer Accounts](https://documentation.bloomreach.com/14/about/get-bloomreach-experience-developer-accounts.html)) in order to setup a developer account.
- - Secrets to upload and deploy the distribution onto a brCloud environment
+
+  Contact Bloomreach ([Get Bloomreach Experience Manager Developer Accounts](https://documentation.bloomreach.com/14/about/get-bloomreach-experience-developer-accounts.html)) in order to setup a developer account.
+- Secrets to upload and deploy the distribution onto a brCloud environment
    - BRC_USERNAME - brCloud username
    - BRC_PASSWORD - brCloud password
 
@@ -206,6 +206,9 @@ We use [SemVer](http://semver.org/) for versioning. For the releases available, 
 
 * Adriana Miclos
 * Dawn Taroni
+* Francisco Ruiz
+* Geraldine Leena Susairaj
+* Ian Pearce
 * Le Tho
 * Raq khan
 * Sankaralingam Shunmugasundaram
