@@ -86,6 +86,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
           /backLink:
             jcr:primaryType: frontend:plugin
             caption: Back link

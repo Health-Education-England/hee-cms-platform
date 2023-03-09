@@ -193,6 +193,7 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
           /successUrl:
             jcr:primaryType: frontend:plugin
             caption: Success url

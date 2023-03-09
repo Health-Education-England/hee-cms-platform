@@ -1,46 +1,36 @@
 definitions:
   config:
-    /hippo:namespaces/hee/StatementBlock:
+    /hippo:namespaces/hee/contactCardWithDescriptionReference:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 234084e7-4659-466e-a6c7-2ac6237fc094
+      jcr:uuid: e074f4b0-ca81-433b-9add-b0ed6e97454a
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2d86d2d6-4eb2-445d-bdcf-95ec99ace4f0
+        jcr:uuid: 693d7555-fd53-4425-a856-a896127a5e9b
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: a3e5ec63-d7c7-48bb-8c65-3393966c31fc
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 827b75e5-bfb2-43e2-8532-2fdcfaf47176
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /string:
+          /contactCardWithDescription:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:contactCardWithDescription
             hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /richStatement:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:richStatement
-            hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
+            hipposysedit:type: hippo:mirror
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:StatementBlock
-          hee:title: ''
-          /hee:richStatement:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          jcr:primaryType: hee:contactCardWithDescriptionReference
+          /hee:contactCardWithDescription:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -52,22 +42,13 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /contactCardWithDescription:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: string
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /richStatement:
-            jcr:primaryType: frontend:plugin
-            caption: Content
-            field: richStatement
+            caption: Select contact
+            field: contactCardWithDescription
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
+              nodetypes: ['hee:contactCardWithDescription']

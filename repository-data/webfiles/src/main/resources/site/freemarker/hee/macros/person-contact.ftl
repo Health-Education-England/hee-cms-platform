@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 <#include "../utils/phone-number-util.ftl">
 
-<#macro personContact person isAuthor=false>
+<#macro personContact person isAuthor=false description="" newCard=false>
     <div class="nhsuk-contact__content">
 
         <#-- Get Person Initials -->
@@ -88,7 +88,11 @@
                 <p aria-label="Address">${person.address?replace('\n', '<br>')}</p>
             </#if>
 
-            <#if person.bio?has_content>
+            <#if newCard && description?has_content>
+                <#--  Renders contact card description for new contact cards  -->
+                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${description}</p>
+            <#elseif !newCard && person.bio?has_content>
+                <#--  Renders person bio for old contact cards  -->
                 <p class="nhsuk-u-secondary-text-color" aria-label="Description">${person.bio}</p>
             </#if>
         </div>
