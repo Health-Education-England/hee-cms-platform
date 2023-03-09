@@ -82,10 +82,14 @@ module.exports = {
 
     /* Use 'safari' browser for visual regression */
     // 'browser': 'safari',
-    'args': ['--no-sandbox']
+    'args': [
+      '--no-sandbox',
+      '--disable-web-security' // Disable same-origin policy to load YouTube/Vimeo/Anchor FM players (in case if any)
+    ]
   },
   'asyncCaptureLimit': 5,
   'asyncCompareLimit': 50,
   'debug': false,
-  'debugWindow': false
+  'debugWindow': false,
+  'delay': 5000 // Giving 5 seconds wait to let YouTube/Vimeo/Anchor FM players load first (in case if any) before taking screenshots. This may need to be adjusted or handle better (maybe, using selectors and event handlers).
 };

@@ -1,7 +1,7 @@
 <#include "../../include/imports.ftl">
 <#include "../utils/phone-number-util.ftl">
 
-<#macro departmentContact department>
+<#macro departmentContact department description="" newCard=false>
     <div class="nhsuk-contact__content">
         <h3 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${department.name}</h3>
         <#if department.organisation?has_content>
@@ -38,7 +38,11 @@
                 <p aria-label="Address">${department.address?replace('\n', '<br>')}</p>
             </#if>
 
-            <#if department.description?has_content>
+            <#if newCard && description?has_content>
+                <#--  Renders contact card description for new contact cards  -->
+                <p class="nhsuk-u-secondary-text-color" aria-label="Description">${description}</p>
+            <#elseif !newCard && department.description?has_content>
+                <#--  Renders department description for old contact cards  -->
                 <p class="nhsuk-u-secondary-text-color" aria-label="Description">${department.description}</p>
             </#if>
         </div>

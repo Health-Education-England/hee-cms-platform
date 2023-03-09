@@ -1,5 +1,6 @@
 <#include "action-link.ftl">
 <#include "contact-card.ftl">
+<#include "contact-card-with-description.ftl">
 <#include "contact.ftl">
 <#include "content-cards.ftl">
 <#include "external-links-card.ftl">

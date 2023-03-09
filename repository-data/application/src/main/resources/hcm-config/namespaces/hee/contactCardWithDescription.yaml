@@ -1,46 +1,56 @@
 definitions:
   config:
-    /hippo:namespaces/hee/expanderPanel:
+    /hippo:namespaces/hee/contactCardWithDescription:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 7205a482-c8ee-4f46-8305-3cade4cf7f3a
+      jcr:uuid: 3e68e6ae-6cd8-4226-9838-78273170201a
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2b1d09d3-fbb0-4a1e-bd86-08f1e31b4073
+        jcr:uuid: e216829a-b926-4352-bab1-33d47b619476
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 653e7964-7498-448d-ab6d-32d128578dd4
+          jcr:uuid: 90d6496e-ab28-4a51-91a3-43a49cc6b4ca
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /expanderTitle:
+          /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:expanderSummary
+            hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /expanderBody:
+          /contactCardReference:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:expanderDetails
+            hipposysedit:path: hee:contactCardReference
             hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
-            hipposysedit:validators: [required]
+            hipposysedit:type: hee:contactCardReference
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: ''
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          jcr:primaryType: hee:contactCardWithDescription
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:description: ''
+          jcr:uuid: 13ff11c9-687b-4a1d-bc24-02e1d7b8392c
+          hippostdpubwf:lastModificationDate: 2023-02-13T16:53:10.253Z
+          hippostdpubwf:creationDate: 2023-02-13T16:53:10.254Z
+          /hee:contactCardReference:
+            jcr:primaryType: hee:contactCardReference
+            /hee:content:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -52,21 +62,22 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /expanderSummary:
+          /contactCardReference:
             jcr:primaryType: frontend:plugin
-            caption: Summary
-            field: expanderTitle
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /expanderDetails:
-            jcr:primaryType: frontend:plugin
-            caption: Content
-            field: expanderBody
-            hint: ''
+            caption: Contact Card
+            field: contactCardReference
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Please select a Department or Person document
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons: "PickImage", forcePasteAsPlainText: true }'
+          /description:
+            jcr:primaryType: frontend:plugin
+            caption: Description
+            field: description
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Add a summary description for this contact
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '300'

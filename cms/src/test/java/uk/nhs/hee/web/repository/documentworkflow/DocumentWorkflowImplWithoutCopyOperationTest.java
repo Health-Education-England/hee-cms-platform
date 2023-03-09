@@ -19,23 +19,25 @@ import static org.powermock.api.mockito.PowerMockito.*;
 
 @RunWith(PowerMockRunner.class)
 @PowerMockIgnore({"javax.management.*", "javax.script.*"})
-@PrepareForTest({ AuthorDocumentWorkflowImpl.class })
-public class AuthorDocumentWorkflowImplTest {
+@PrepareForTest({DocumentWorkflowImplWithoutCopyOperation.class})
+public class DocumentWorkflowImplWithoutCopyOperationTest {
 
-    private final HashMap<String, Serializable> originalHints = new HashMap<String, Serializable>(){
+    private final HashMap<String, Serializable> originalHints = new HashMap<String, Serializable>() {
         private static final long serialVersionUID = -2936036450308608383L;
+
         {
             put("delete", "true");
             put("copy", "true");
             put("publish", "true");
             put("depublish", "false");
-        }};
+        }
+    };
 
-    private AuthorDocumentWorkflowImpl systemUnderTest;
+    private DocumentWorkflowImplWithoutCopyOperation systemUnderTest;
 
     @Before
     public void setUp() throws Exception {
-        systemUnderTest = spy(new AuthorDocumentWorkflowImpl());
+        systemUnderTest = spy(new DocumentWorkflowImplWithoutCopyOperation());
     }
 
     @Test

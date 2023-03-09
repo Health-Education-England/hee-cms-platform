@@ -166,6 +166,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
           /mediaLastNextReview:
             jcr:primaryType: frontend:plugin
             caption: Media review dates

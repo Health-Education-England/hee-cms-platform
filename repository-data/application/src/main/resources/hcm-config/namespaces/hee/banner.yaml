@@ -84,6 +84,6 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{removeButtons: "Underline,Strike,Subscript,Superscript,Anchor,FontSize,Font,Styles", extraPlugins: "format"}'
+              ckeditor.config.appended.json: '{removeButtons: "Underline,Strike,Subscript,Superscript,Anchor,FontSize,Font,Styles", extraPlugins: "format", forcePasteAsPlainText: true}'
               ckeditor.config.overlayed.json: '{toolbarGroups: [{name: "styles"},
                 {name: "basicstyles"}, {name: "links"}], format_tags: "p;h2;h3", allowedContent: true, forcePasteAsPlainText: true}'

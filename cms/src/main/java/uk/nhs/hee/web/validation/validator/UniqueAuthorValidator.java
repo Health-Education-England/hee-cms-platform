@@ -9,6 +9,8 @@ import org.onehippo.cms.services.validation.validator.AbstractNodeValidator;
 import org.onehippo.repository.util.JcrConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.nhs.hee.web.utils.ChannelUtils;
+import uk.nhs.hee.web.utils.DocumentUtils;
 
 import javax.jcr.Node;
 import javax.jcr.NodeIterator;
@@ -49,9 +51,9 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
     private static Node getReferencedAuthor(final Session session, final String channelName, final String personId)
             throws RepositoryException {
         final String authorByPersonFinderQuery = String.format(
-                "/jcr:root/content/documents/%s//element(*, hee:author)[hippostd:state = 'draft']" +
+                "/jcr:root/content/documents%s//element(*, hee:author)[hippostd:state = 'draft']" +
                         "/element(hee:person, hippo:mirror)[@hippo:docbase='%s']/../..",
-                channelName, personId);
+                "/" + channelName, personId);
         LOGGER.debug("Formatted Author by Person Query: {}", authorByPersonFinderQuery);
 
         final Query query = session.getWorkspace().getQueryManager().createQuery(authorByPersonFinderQuery, Query.XPATH);
@@ -63,20 +65,6 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
         }
 
         return null;
-    }
-
-    /**
-     * Returns display name (i.e. {@code hippo:name}) of the document identified by {@code documentId}.
-     *
-     * @param session    the {@link Session} instance.
-     * @param documentId the document Identifier/UUID whose display name (i.e. {@code hippo:name}) needs to be returned.
-     * @return the display name (i.e. {@code hippo:name}) of the document identified by {@code documentId}.
-     * @throws RepositoryException thrown when an error occurs while querying the display name (i.e. {@code hippo:name})
-     *                             of the given document identified by {@code documentId}.
-     */
-    private static String getDocumentDisplayName(final Session session, final String documentId)
-            throws RepositoryException {
-        return session.getNodeByIdentifier(documentId).getProperty(HippoNodeType.HIPPO_NAME).getString();
     }
 
     @Override
@@ -97,12 +85,17 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
         }
 
         // Looks up for the referenced Author document/node if any within the current channel
-        final Node referencedAuthorNode =
-                getReferencedAuthor(personDocumentNode.getSession(), getChannelName(node.getPath()), personId);
+        final Node referencedAuthorNode = getReferencedAuthor(
+                personDocumentNode.getSession(),
+                ChannelUtils.getChannelName(node.getPath()),
+                personId
+        );
 
         if (referencedAuthorNode != null && !referencedAuthorNode.getPath().equals(node.getParent().getPath())) {
             final Violation violation = context.createViolation(ImmutableMap.of(
-                    "personDocumentDisplayName", getDocumentDisplayName(node.getSession(), personId)));
+                    "personDocumentDisplayName",
+                    DocumentUtils.getDocumentDisplayName(node.getSession(), personId)
+            ));
 
             LOGGER.debug(violation.getMessage());
             return Optional.of(violation);
@@ -111,16 +104,4 @@ public class UniqueAuthorValidator extends AbstractNodeValidator {
         return Optional.empty();
     }
 
-    /**
-     * Returns channel name extracted from the given {@code nodePath}.
-     *
-     * <p>If {@code /content/documents/lks/common/people/james-smith} is the node path, then it extracts
-     * and returns {@code lks} as the channel name.</p>
-     *
-     * @param nodePath the node path from which channel name needs to be extracted.
-     * @return the channel name extracted from the given {@code nodePath}.
-     */
-    private String getChannelName(final String nodePath) {
-        return nodePath.split("/")[3];
-    }
 }

@@ -1953,9 +1953,10 @@
           hippo:availability: []
           hippostd:retainable: false
           hippostd:state: draft
+          hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:36:21.100Z
+          hippostdpubwf:lastModificationDate: 2023-02-21T16:48:03.586Z
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
           hippotranslation:locale: en
@@ -3190,9 +3191,137 @@
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
     jcr:uuid: 8e26dbf7-3f65-4a25-a02f-af4bdbccf826
     hippo:name: Contact Cards
-    hippostd:foldertype: [new-contact-card]
+    hippostd:foldertype: [new-contact-card-description]
     hippotranslation:id: 4de2c8c8-e599-4514-9d99-526fbc324095
     hippotranslation:locale: en
+    /james-smith-with-description:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: b68e4b7f-69ca-474f-944c-f8621b9835ed
+      hippo:name: James Smith with description
+      hippo:versionHistory: 1acc751e-cf52-4046-b1c6-d7d074f95ebd
+      /james-smith-with-description[1]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 56d69248-9895-4396-be8b-33841456f0a1
+        hee:description: James heads up our data team and is happy to answer queries
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-28T12:05:46.980Z
+        hippostdpubwf:lastModificationDate: 2023-02-28T12:06:30.809Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7a84b40f-0465-4bed-9eb9-b62cb32a7b85
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /james-smith-with-description[2]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: d40317e5-b7bd-4b27-bcec-d47b2a508c34
+        hee:description: James heads up our data team and is happy to answer queries
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-28T12:05:46.980Z
+        hippostdpubwf:lastModificationDate: 2023-02-28T12:06:30.748Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 7a84b40f-0465-4bed-9eb9-b62cb32a7b85
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /james-smith-with-description[3]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: e1eca95f-6e90-4515-b927-e0329853c629
+        hee:description: James heads up our data team and is happy to answer queries
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-28T12:05:46.980Z
+        hippostdpubwf:lastModificationDate: 2023-02-28T12:06:30.748Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-02-28T12:06:38.059Z
+        hippotranslation:id: 7a84b40f-0465-4bed-9eb9-b62cb32a7b85
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+    /john-doe-no-description:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: a60334fa-81d7-49bc-afc0-a024b6b1a942
+      hippo:name: John Doe no description
+      hippo:versionHistory: 3b029f56-42ed-4424-a148-71444eded4ad
+      /john-doe-no-description[1]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a6a75411-d01e-480e-81e6-8aab050f76b2
+        hee:description: ''
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-28T12:27:51.377Z
+        hippostdpubwf:lastModificationDate: 2023-02-28T12:27:51.377Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 84e147ee-3f02-4cb6-9db1-c58421fd99b6
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /john-doe-no-description[2]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: ee2cd44a-7739-4a57-9adf-41e09c5bcd37
+        hee:description: ''
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-28T12:27:51.377Z
+        hippostdpubwf:lastModificationDate: 2023-02-28T12:28:04.525Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 84e147ee-3f02-4cb6-9db1-c58421fd99b6
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /john-doe-no-description[3]:
+        jcr:primaryType: hee:contactCardWithDescription
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: dcfc2198-8e9e-4729-b96d-4545a855b71d
+        hee:description: ''
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-02-28T12:27:51.377Z
+        hippostdpubwf:lastModificationDate: 2023-02-28T12:28:04.525Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-02-28T12:28:06.847Z
+        hippotranslation:id: 84e147ee-3f02-4cb6-9db1-c58421fd99b6
+        hippotranslation:locale: en
+        /hee:contactCardReference:
+          jcr:primaryType: hee:contactCardReference
+          /hee:content:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
   /external-links-cards:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

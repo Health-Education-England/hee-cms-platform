@@ -121,6 +121,9 @@
                             <#case "uk.nhs.hee.web.beans.ContactCardReference">
                                 <@hee.contactCard contact=block.content/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
+                                <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
+                                <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                 <@hee.externalLinksCard card=block.externalLinksCard/>
                                 <#break>
