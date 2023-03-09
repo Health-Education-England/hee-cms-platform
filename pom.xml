@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-enterprise-release</artifactId>
-    <version>14.7.8</version>
+    <version>14.7.13</version>
   </parent>
 
   <name>HEE CMS Platform</name>
@@ -15,13 +15,15 @@
   <version>${revision}</version>
   <packaging>pom</packaging>
 
-  <!-- 
+  <!--
     The below project elements are emptied/overridden as otherwise their metadata would be
     inherited or merged from the parent hippo-cms7-release pom (or its hippo-cms7-project pom).
 
-    DO NOT remove these tags but instead fill them in appropriately as needed, 
+    DO NOT remove these tags but instead fill them in appropriately as needed,
     UNLESS the inherited values are valid for your project.
   -->
+  <url/>
+  <inceptionYear/>
   <organization />
   <licenses>
     <license />
@@ -58,16 +60,15 @@
 
   <properties>
     <!-- Maven CI Friendly Version -->
-    <revision>1.0.37</revision>
+    <revision>1.0.38</revision>
     <env>local</env>
 
     <!--***START temporary override of versions*** -->
     <!-- ***END temporary override of versions*** -->
 
-    <essentials.version>14.7.8</essentials.version>
+    <essentials.version>14.7.13</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
     <taglibs.version>1.2.5</taglibs.version>
-    <freemarker.version>2.3.29</freemarker.version>
 
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
 
@@ -81,7 +82,7 @@
     <repository>
       <id>hippo</id>
       <name>Hippo maven 2 repository.</name>
-      <url>https://maven.onehippo.com/maven2/</url>
+      <url>https://maven.bloomreach.com/repository/maven2/</url>
     </repository>
     <repository>
       <releases>
@@ -90,7 +91,7 @@
       </releases>
       <id>hippo-maven2-enterprise</id>
       <name>Hippo Enterprise Maven 2</name>
-      <url>https://maven.onehippo.com/maven2-enterprise</url>
+      <url>https://maven.bloomreach.com/repository/maven2-enterprise/</url>
     </repository>
   </repositories>
 
@@ -208,21 +209,21 @@
         <artifactId>git-commit-id-plugin</artifactId>
         <version>4.0.0</version>
         <executions>
-            <execution>
-                <id>get-the-git-infos</id>
-                <goals>
-                    <goal>revision</goal>
-                </goals>
-                <phase>validate</phase>
-            </execution>
+          <execution>
+            <id>get-the-git-infos</id>
+            <goals>
+              <goal>revision</goal>
+            </goals>
+            <phase>validate</phase>
+          </execution>
         </executions>
         <configuration>
           <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
           <verbose>true</verbose>
           <skipPoms>false</skipPoms>
-            <includeOnlyProperties>
-                <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
-            </includeOnlyProperties>
+          <includeOnlyProperties>
+            <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
+          </includeOnlyProperties>
         </configuration>
       </plugin>
       <plugin>
@@ -230,23 +231,23 @@
         <artifactId>flatten-maven-plugin</artifactId>
         <version>1.1.0</version>
         <configuration>
-            <updatePomFile>true</updatePomFile>
+          <updatePomFile>true</updatePomFile>
         </configuration>
         <executions>
-            <execution>
-                <id>flatten</id>
-                <phase>process-resources</phase>
-                <goals>
-                    <goal>flatten</goal>
-                </goals>
-            </execution>
-            <execution>
-                <id>flatten.clean</id>
-                <phase>clean</phase>
-                <goals>
-                    <goal>clean</goal>
-                </goals>
-            </execution>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>flatten.clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
         </executions>
       </plugin>
       <plugin>
