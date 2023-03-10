@@ -11,13 +11,14 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: 49eca4dd-8f82-46a0-a5c8-6e887c6be27a
+    hippo:versionHistory: 48a8a27f-8fd8-4df7-84fe-9065956faa6a
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: c9060ac6-acfa-4c55-9f2d-8ddfd44caef7
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
@@ -27,7 +28,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:29.061Z
+      hippostdpubwf:lastModificationDate: 2023-03-10T13:23:44.604Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -197,12 +198,18 @@
       /hee:authors[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: 97344b90-25df-4262-9bfd-a038b60818f1
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
@@ -212,7 +219,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:54.163Z
+      hippostdpubwf:lastModificationDate: 2023-03-10T13:24:04.076Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -382,12 +389,18 @@
       /hee:authors[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 3c380a88-4a94-4eb9-830c-bd931d8dfd5b
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
@@ -397,9 +410,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:54.163Z
+      hippostdpubwf:lastModificationDate: 2023-03-10T13:24:04.076Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-12-12T08:58:56.651Z
+      hippostdpubwf:publicationDate: 2023-03-10T13:24:07.227Z
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
@@ -568,3 +581,8 @@
       /hee:authors[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
