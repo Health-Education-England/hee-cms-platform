@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f893ea83-6445-4dfb-b91f-e0c5887aabc8
+          jcr:uuid: f598a9a0-c2d2-43d3-81eb-e15912972065
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -102,7 +102,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: 28ad1c79-52d8-4326-abaa-69a5a334595a
+          jcr:uuid: 0d3e0709-5aeb-480c-9775-f2a9f11a2c5d
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:addToAZ: false
@@ -118,6 +118,11 @@ definitions:
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks[1]:
+            jcr:primaryType: hee:appliesToBoxReference
+            /hee:appliesToContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:contentBlocks[2]:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
           /hee:logoGroup:
@@ -157,6 +162,25 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
+          /microHero:
+            jcr:primaryType: frontend:plugin
+            caption: Micro-hero image
+            field: microHero
+            hint: Add an image that's 260 pixels high and 1600 pixels wide.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /title:
             jcr:primaryType: frontend:plugin
             caption: Page title
@@ -175,25 +199,6 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /microHero:
-            jcr:primaryType: frontend:plugin
-            caption: Micro-hero image
-            field: microHero
-            hint: Add an image that's 260 pixels high and 1600 pixels wide.
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /logoGroup:
-            jcr:primaryType: frontend:plugin
-            caption: Logo group
-            field: logoGroup
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:logoGroup']
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 158ae74c-a495-47b8-b788-68435f7361d1
+          jcr:uuid: 704517dc-9f8f-4347-b2f8-ee04f7f15fff
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -79,7 +79,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: dabc8380-8df5-4f44-a2bd-d50484fd6093
+          jcr:uuid: 4573f0c4-c508-4d46-b127-9da5b0aba8dc
           hippostdpubwf:lastModificationDate: 2021-03-03T10:42:34.081+07:00
           hippostdpubwf:creationDate: 2021-03-03T10:42:34.081+07:00
           hee:addToAZ: false
@@ -113,15 +113,6 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
-            jcr:primaryType: frontend:plugin
-            caption: Page title
-            field: title
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Page title must be 60 characters or fewer.
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /logoGroup:
             jcr:primaryType: frontend:plugin
             caption: Logo group
@@ -139,6 +130,15 @@ definitions:
             hint: Add an image that's 260 pixels high and 1600 pixels wide.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /title:
+            jcr:primaryType: frontend:plugin
+            caption: Page title
+            field: title
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Page title must be 60 characters or fewer.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /guidancePages:
