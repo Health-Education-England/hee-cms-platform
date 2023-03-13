@@ -42,11 +42,7 @@
                     <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
                         <div class="nhsuk-listing__summary o-flex@tablet">
                             <#-- Results number -->
-                            <#if pageable.total=1>
-                                <@fmt.message key="result.count.text" var="resultsCountText"/>
-                            <#else>
-                                <@fmt.message key="results.count.text" var="resultsCountText"/>
-                            </#if>
+                            <@fmt.message key="results.count.text" var="resultsCountText"/>
                             <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
                                 ${pageable.total} ${resultsCountText}
                             </h2>
