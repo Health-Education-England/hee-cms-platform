@@ -89,6 +89,86 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [optional]
+        /hipposysedit:nodetype[2]:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: aa86af2f-d845-4030-a326-26b3d0710112
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /summary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:summary
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [optional]
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
+          /relatedContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:relatedContent
+            hipposysedit:primary: false
+            hipposysedit:type: hee:contentCards
+          /pageLastNextReview:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:pageLastNextReview
+            hipposysedit:primary: false
+            hipposysedit:type: hee:pageLastNextReview
+          /rightHandBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:rightHandBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
+          /addToAZ:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:addToAZ
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
+          /microHero:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:microHero
+            hipposysedit:primary: false
+            hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -118,6 +198,50 @@ definitions:
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
           /hee:contentBlocks[1]:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:rightHandBlocks:
+            jcr:primaryType: hee:ctaCardReference
+            /hee:ctaCardContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:microHero:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /hipposysedit:prototype[2]:
+          jcr:primaryType: nt:unstructured
+          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
+            'hippotranslation:translated', 'mix:referenceable']
+          jcr:uuid: 0324e527-68c4-4a41-a21a-b65f28143d07
+          hee:addToAZ: false
+          hee:summary: ''
+          hee:title: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:relatedContent:
+            jcr:primaryType: hee:contentCards
+            hee:cardGroupSummary: ''
+            hee:header: ''
+            /hee:cards:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
+          /hee:contentBlocks:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
           /hee:logoGroup:
@@ -197,7 +321,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:ActionLink,hee:anchorLinks,hee:appliesToBoxReference,hee:blockLinksReference,hee:buttonReference,hee:contentCards,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:navMap,hee:newsletterSubscribeFormReference,hee:richTextReference,hee:statementCardReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
+            compoundList: hee:ActionLink,hee:anchorLinks,hee:appliesToBoxReference,hee:blockLinksReference,hee:buttonReference,hee:contentCards,hee:statementCardReference,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:newsletterSubscribeFormReference,hee:navMap,hee:tableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -209,7 +333,7 @@ definitions:
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
-            compoundList: hee:contactCardWithDescriptionReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks,hee:rightHandImageReference
+            compoundList: hee:ctaCardReference,hee:contactCardWithDescriptionReference,hee:fileLinksCardReference,hee:externalLinksCardReference,hee:rightHandImageReference,hee:internalLinksCardReference,hee:QuickLinks
             contentPickerType: links
             field: rightHandBlocks
             hint: ''
