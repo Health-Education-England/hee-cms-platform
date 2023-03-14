@@ -49,6 +49,11 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     public static final String URL_PROPERTY = "derived_url";
     public static final String PAGENOTFOUND_REFID = "pagenotfound";
 
+    public static final String EVENT = "Event";
+    public static final String BULLETIN = "Bulletin";
+    public static final String CASE_STUDY = "CaseStudy";
+    public static final String SEARCH_BANK = "SearchBank";
+
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
@@ -100,7 +105,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      */
     private List<HippoBean> findBeansThatHaveAValidPageUrl(HstRequestContext reqContext, HippoBeanIterator beans) {
         final HstLinkCreator linkCreator = reqContext.getHstLinkCreator();
-        Mount mount = reqContext.getResolvedMount().getMount();
+        final Mount mount = reqContext.getResolvedMount().getMount();
         final HstLink pageNotFound = linkCreator.createByRefId(PAGENOTFOUND_REFID, mount);
         final String pageNotFoundURL = pageNotFound.toUrlForm(reqContext, false);
 
@@ -159,11 +164,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      */
     private boolean beanUrlObtainedDifferently(HippoBean bean) {
         String simpleName = bean.getClass().getSimpleName();
-        if ("Event".equals(simpleName) || "Bulletin".equals(simpleName) || "SearchBank".equals(simpleName) || "CaseStudy".equals(simpleName)) {
-            return true;
-        } else {
-            return false;
-        }
+        return EVENT.equals(simpleName) || BULLETIN.equals(simpleName) || SEARCH_BANK.equals(simpleName) || CASE_STUDY.equals(simpleName);
     }
 
 

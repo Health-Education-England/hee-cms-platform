@@ -37,60 +37,50 @@
 </#macro>
 
 <#macro blogListItem items categoriesMap>
-    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
-
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
-
-        <#if pageURL != pageNotFoundURL>
-            <li>
-                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
-                <h3><a href="${pageURL}">${item.title}</a></h3>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                <div class="nhsuk-review-date">
-                    <p class="nhsuk-body-s">
-                        <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
-                    </p>
-                    <p class="nhsuk-body-s">
-                        <#if item.authors?has_content>
-                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
-                        <#else>
-                            <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
-                        </#if>
-                        <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
-                    </p>
-                </div>
-            </li>
-        </#if>
+        <li>
+            <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
+            <h3><a href="${item.properties['derived_url']}">${item.title}</a></h3>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+            <div class="nhsuk-review-date">
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </p>
+                <p class="nhsuk-body-s">
+                    <#if item.authors?has_content>
+                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
+                    <#else>
+                        <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
+                    </#if>
+                    <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
+                </p>
+            </div>
+        </li>
     </#list>
 </#macro>
 
 <#macro newsListItem items categoriesMap>
-    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
-
     <#list items as item>
-        <#assign pageURL=getInternalLinkURL(item)>
-
-        <#if pageURL != pageNotFoundURL>
-            <li>
-                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
-                <h3><a href="${pageURL}">${item.title}</a></h3>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                <div class="nhsuk-review-date">
-                    <p class="nhsuk-body-s">
-                        <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
-                    </p>
-                    <p class="nhsuk-body-s">
-                        <#if item.authors?has_content>
-                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
-                        <#else>
-                            <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
-                        </#if>
-                        <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
-                    </p>
-                </div>
-            </li>
-        </#if>
+        <#assign pageURL=item.properties['derived_url']>
+        <li>
+            <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
+            <h3><a href="${pageURL}">${item.title}</a></h3>
+            <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
+            <div class="nhsuk-review-date">
+                <p class="nhsuk-body-s">
+                    <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </p>
+                <p class="nhsuk-body-s">
+                    <#if item.authors?has_content>
+                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
+                    <#else>
+                        <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
+                    </#if>
+                    <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
+                </p>
+            </div>
+        </li>
     </#list>
 </#macro>
 
@@ -177,30 +167,26 @@
 </#macro>
 
 <#macro publicationListItem items publicationTypeMap>
-    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
     <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
     <@fmt.message key="publication.type" var="publicationTypeLabel"/>
 
     <#list items as item>
-        <#assign pageURL=getInternalLinkURL(item)>
+        <#assign pageURL=item.properties['derived_url']>
+        <div class="hee-listing-item">
+            <h3><a href="${pageURL}">${item.title}</a></h3>
 
-        <#if pageURL != pageNotFoundURL>
-            <div class="hee-listing-item">
-                <h3><a href="${pageURL}">${item.title}</a></h3>
+            <div class="hee-listing-item__details">
+                <@publicationListItemRow key="${publicationTypeLabel}">
+                    ${publicationTypeMap[item.publicationType]}
+                </@publicationListItemRow>
 
-                <div class="hee-listing-item__details">
-                    <@publicationListItemRow key="${publicationTypeLabel}">
-                        ${publicationTypeMap[item.publicationType]}
-                    </@publicationListItemRow>
-
-                    <@publicationListItemRow key="${publishDateLabel}">
-                        ${item.publicationDate.time?string['dd MMMM yyyy']}
-                    </@publicationListItemRow>
-                </div>
-
-                <div class="hee-listing-item__summary">${item.summary}</div>
+                <@publicationListItemRow key="${publishDateLabel}">
+                    ${item.publicationDate.time?string['dd MMMM yyyy']}
+                </@publicationListItemRow>
             </div>
-        </#if>
+
+            <div class="hee-listing-item__summary">${item.summary}</div>
+        </div>
     </#list>
 </#macro>
 
