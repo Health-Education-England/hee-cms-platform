@@ -16,6 +16,61 @@
     hippostd:foldertype: [new-translated-folder, new-document]
     hippotranslation:id: a9ad4ed0-193b-42a3-b8da-f07a90bfb60d
     hippotranslation:locale: en
+    /common-landing-page-1:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 4482e7e5-be93-4e69-bc0d-4d2b71e7d9ea
+      hippo:name: Common landing page 1
+      /common-landing-page-1[1]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 7984106f-b39b-488e-8ebd-3152664c29a1
+        hee:addToAZ: false
+        hee:summary: ''
+        hee:title: Commmon Landing Page 1
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-03-15T07:15:30.400Z
+        hippostdpubwf:lastModificationDate: 2023-03-15T07:15:30.401Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: c646db4f-08ec-4d34-8b78-6f9d32b17328
+        hippotranslation:locale: en
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /common-landing-page-1[2]:
+        jcr:primaryType: hee:landingPage
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 960613ef-ba44-472c-bdcc-f55b830e5664
+        hee:addToAZ: false
+        hee:summary: ''
+        hee:title: Commmon Landing Page 1
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-03-15T07:15:30.400Z
+        hippostdpubwf:lastModificationDate: 2023-03-15T07:15:43.589Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: c646db4f-08ec-4d34-8b78-6f9d32b17328
+        hippotranslation:locale: en
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
   /mini-hub-pages:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']

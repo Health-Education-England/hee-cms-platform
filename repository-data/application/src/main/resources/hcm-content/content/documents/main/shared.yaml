@@ -1,0 +1,144 @@
+/content/documents/main/shared:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 6ab58e5d-f7a8-4f3e-83cd-b28dfabf4833
+  hippo:name: Shared
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: a52ddf2a-09fc-4985-8731-a77ed38863b2
+  hippotranslation:locale: en
+  /pages:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 78810a7d-0d47-4798-8633-43383d706311
+    hippo:name: Pages
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 0f42f5d4-be7d-49d2-9a3d-5bc259302eae
+    hippotranslation:locale: en
+  /components:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: a2b19f28-a6a2-4cb9-ae65-65bbe709a897
+    hippo:name: Components
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 366695f8-6c4b-462d-b0ed-c6365e2565e8
+    hippotranslation:locale: en
+    /shared-table:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: c5a996ac-dc6b-4077-841f-79f51ff14dc8
+      hippo:name: Shared Table
+      hippo:versionHistory: 89c1f0a2-5118-464c-addc-ec5c1037a965
+      /shared-table[1]:
+        jcr:primaryType: hee:table
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 06592452-2f84-45a1-9ac6-4564dfdbcbac
+        hee:caption: This is a shared table
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-03-16T16:19:55.553Z
+        hippostdpubwf:lastModificationDate: 2023-03-16T16:19:55.553Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: e6224221-c648-400e-adf0-b0b18ee1fed6
+        hippotranslation:locale: en
+        /hee:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+             <tbody>
+              <tr>
+               <td>Row 1 - Col 1</td>
+               <td>Row 1 - Col 2</td>
+              </tr>
+              <tr>
+               <td>Row 1 - Col 3</td>
+               <td>Row 1 - Col 4</td>
+              </tr>
+              <tr>
+               <td>Row 1 - Col 5</td>
+               <td>Row 1 - Col 6</td>
+              </tr>
+             </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+      /shared-table[2]:
+        jcr:primaryType: hee:table
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 3ebb4119-621b-4038-bdaf-5a9966d4d9fa
+        hee:caption: This is a shared table
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-03-16T16:19:55.553Z
+        hippostdpubwf:lastModificationDate: 2023-03-16T16:20:40.080Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: e6224221-c648-400e-adf0-b0b18ee1fed6
+        hippotranslation:locale: en
+        /hee:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+             <tbody>
+              <tr>
+               <td>Row 1 - Col 1</td>
+               <td>Row 1 - Col 2</td>
+              </tr>
+              <tr>
+               <td>Row 1 - Col 3</td>
+               <td>Row 1 - Col 4</td>
+              </tr>
+              <tr>
+               <td>Row 1 - Col 5</td>
+               <td>Row 1 - Col 6</td>
+              </tr>
+             </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+      /shared-table[3]:
+        jcr:primaryType: hee:table
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: cab7fc5f-3388-4ab5-9298-5cbcdb8db08e
+        hee:caption: This is a shared table
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-03-16T16:19:55.553Z
+        hippostdpubwf:lastModificationDate: 2023-03-16T16:20:40.080Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-03-16T16:20:43.239Z
+        hippotranslation:id: e6224221-c648-400e-adf0-b0b18ee1fed6
+        hippotranslation:locale: en
+        /hee:content:
+          jcr:primaryType: hippostd:html
+          hippostd:content: |-
+            <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
+             <tbody>
+              <tr>
+               <td>Row 1 - Col 1</td>
+               <td>Row 1 - Col 2</td>
+              </tr>
+              <tr>
+               <td>Row 1 - Col 3</td>
+               <td>Row 1 - Col 4</td>
+              </tr>
+              <tr>
+               <td>Row 1 - Col 5</td>
+               <td>Row 1 - Col 6</td>
+              </tr>
+             </tbody>
+            </table>
+
+            <p>&nbsp;</p>
+  /settings:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 197e3d74-c91d-449b-b5da-e24d5341529d
+    hippo:name: Settings
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 61781bca-14d7-40b4-83ff-58c0abe037ad
+    hippotranslation:locale: en
