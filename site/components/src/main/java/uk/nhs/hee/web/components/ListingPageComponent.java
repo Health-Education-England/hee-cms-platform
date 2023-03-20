@@ -181,12 +181,6 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
         final HippoBean scopeBean = doGetScopeBean(documentPath);
 
         final HstQuery query = createQuery(scopeBean, getDocumentTypes(request, listingPage));
-
-        final int pageSize = listingPage.getPageSize().intValue();
-        final int page = getCurrentPage(request);
-        query.setLimit(pageSize);
-        query.setOffset((page - 1) * pageSize);
-
         query.setFilter(createQueryFilters(request, query));
         applySortOrdering(request, query);
 
