@@ -3,7 +3,7 @@ name: CI & CD [DEVELOPMENT]
 on:
   push:
     branches:
-      - feature/NWPS-1234-fe-template-tidy-up-integration
+      - feature/NWPS-1234-listing-and-collection-template-tidy-up-integration
 env:
   BRC_STACK_NAME: hee
   # BRC_MAX_DISTRIBUTIONS: 90
@@ -45,6 +45,7 @@ jobs:
 
   deploy-to-dev:
     name: Deploy to Dev Env. [on brCloud]
+    if: ${{ false }}
     needs: buildAndTest
     environment: development
 
