@@ -23,50 +23,48 @@
 
         <#--  Main content: START  -->
         <div class="page__main">
-            <div class="nhsuk-width-container">
-                <div class="page__content">
-                    <#if atozmap??>
-                        <#--  A-Z letters navigation: START  -->
-                        <nav class="nhsuk-nav-a-z" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
-                            <ol class="nhsuk-nav-a-z__list" role="list">
-                                <#list atozmap?keys as letter>
-                                    <li class="nhsuk-nav-a-z__item">
-                                        <#if atozmap[letter]??>
-                                            <a class="nhsuk-nav-a-z__link" href="#${letter}">${letter}</a>
-                                        <#else>
-                                            <span class="nhsuk-nav-a-z__link--disabled">${letter}</span>
-                                        </#if>
-                                    </li>
-                                </#list>
-                            </ol>
-                        </nav>
-                        <#--  A-Z letters navigation: END  -->
+            <div class="page__content nhsuk-width-container">
+                <#if atozmap??>
+                    <#--  A-Z letters navigation: START  -->
+                    <nav class="nhsuk-nav-a-z" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
+                        <ol class="nhsuk-nav-a-z__list" role="list">
+                            <#list atozmap?keys as letter>
+                                <li class="nhsuk-nav-a-z__item">
+                                    <#if atozmap[letter]??>
+                                        <a class="nhsuk-nav-a-z__link" href="#${letter}">${letter}</a>
+                                    <#else>
+                                        <span class="nhsuk-nav-a-z__link--disabled">${letter}</span>
+                                    </#if>
+                                </li>
+                            </#list>
+                        </ol>
+                    </nav>
+                    <#--  A-Z letters navigation: END  -->
 
-                        <#--  A-Z letter cards: START  -->
-                        <#list atozmap?keys as letter>
-                            <#if atozmap[letter]??>
-                                <#--  A-Z letter card: START  -->
-                                <div class="nhsuk-card nhsuk-card--feature">
-                                    <div class="nhsuk-card__content nhsuk-card__content--feature">
-                                        <#--  Letter head  -->
-                                        <h2 id="${letter}" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
-                                            ${letter}
-                                        </h2>
+                    <#--  A-Z letter cards: START  -->
+                    <#list atozmap?keys as letter>
+                        <#if atozmap[letter]??>
+                            <#--  A-Z letter card: START  -->
+                            <div class="nhsuk-card nhsuk-card--feature">
+                                <div class="nhsuk-card__content nhsuk-card__content--feature">
+                                    <#--  Letter head  -->
+                                    <h2 id="${letter}" class="nhsuk-card__heading nhsuk-card__heading--feature nhsuk-u-font-size-24">
+                                        ${letter}
+                                    </h2>
 
-                                        <#--  Pages belonging to the letter '${letter}'  -->
-                                        <ul class="nhsuk-list nhsuk-list--border">
-                                            <#list atozmap[letter] as page>
-                                                <li><a href="${page.value}">${page.key}</a></li>
-                                            </#list>
-                                        </ul>
-                                    </div>
+                                    <#--  Pages belonging to the letter '${letter}'  -->
+                                    <ul class="nhsuk-list nhsuk-list--border">
+                                        <#list atozmap[letter] as page>
+                                            <li><a href="${page.value}">${page.key}</a></li>
+                                        </#list>
+                                    </ul>
                                 </div>
-                                <#--  A-Z letter card: START  -->
-                            </#if>
-                        </#list>
-                        <#--  A-Z letter cards: END  -->
-                    </#if>
-                </div>
+                            </div>
+                            <#--  A-Z letter card: START  -->
+                        </#if>
+                    </#list>
+                    <#--  A-Z letter cards: END  -->
+                </#if>
             </div>
         </div>
         <#--  Main content: END  -->
