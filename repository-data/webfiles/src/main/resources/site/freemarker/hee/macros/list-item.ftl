@@ -5,34 +5,42 @@
 
 <#macro bulletinListItem items categoriesMap>
     <#list items as item>
-        <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
+        <div class="hee-listing-item">
+            <#--  Title  -->
+            <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
 
-        <dl class="nhsuk-summary-list">
-            <#assign categories>${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</#assign>
-            <#if categories??>
-                <@fmt.message key="category.text" var="categoryLabel"/>
-                <@listItemRow key="${categoryLabel}">
-                    ${categories}
-                </@listItemRow>
-            </#if>
+            <#--  Bulletin details: START   -->
+            <div class="hee-listing-item__details">
+                <#--  Categories  -->
+                <#assign categories>${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</#assign>
+                <#if categories?has_content>
+                    <@fmt.message key="category.text" var="categoryLabel"/>
+                    <@newListItemRow key="${categoryLabel}">
+                        ${categories}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.overview??>
-                <@fmt.message key="bulletin.overview" var="overviewLabel"/>
-                <@listItemRow key="${overviewLabel}">
-                    ${item.overview}
-                </@listItemRow>
-            </#if>
+                <#--  Overview  -->
+                <#if item.overview?has_content>
+                    <@fmt.message key="bulletin.overview" var="overviewLabel"/>
+                    <@newListItemRow key="${overviewLabel}">
+                        ${item.overview}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.websiteUrl??>
-                <#assign website>
-                    <a href="${item.websiteUrl}"> ${item.websiteTitle}</a>
-                </#assign>
-                <@fmt.message key="bulletin.website" var="websiteLabel"/>
-                <@listItemRow key="${websiteLabel}">
-                    ${website}
-                </@listItemRow>
-            </#if>
-        </dl>
+                <#--  Website URL  -->
+                <#if item.websiteUrl??>
+                    <#assign website>
+                        <a href="${item.websiteUrl}"> ${item.websiteTitle}</a>
+                    </#assign>
+                    <@fmt.message key="bulletin.website" var="websiteLabel"/>
+                    <@newListItemRow key="${websiteLabel}">
+                        ${website}
+                    </@newListItemRow>
+                </#if>
+            </div>
+            <#--  Bulletin details: END   -->
+        </div>
     </#list>
 </#macro>
 
@@ -43,24 +51,43 @@
         <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
-            <li>
-                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
+            <div class="hee-listing-item">
+                <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                <div class="nhsuk-review-date">
-                    <p class="nhsuk-body-s">
-                        <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
-                    </p>
-                    <p class="nhsuk-body-s">
-                        <#if item.authors?has_content>
-                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
-                        <#else>
-                            <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
-                        </#if>
-                        <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
-                    </p>
+
+                <#--  Blog details: START  -->
+                <div class="hee-listing-item__details">
+                    <#--  Categories  -->
+                    <#assign categories="${item.categories?map(category -> categoriesMap[category]!)?join(', ')}">
+
+                    <#if categories?has_content>
+                        <@newListItemRow key="Categories">
+                            ${categories}
+                        </@newListItemRow>
+                    </#if>
+
+                    <#--  Publish date  -->
+                    <@newListItemRow key="Publish date">
+                        ${item.publicationDate.time?string['dd MMMM yyyy']}
+                    </@newListItemRow>
+
+                    <#--  Published by  -->
+                    <#if item.authors?has_content>
+                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
+                    <#else>
+                        <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
+                    </#if>
+                    <#if commaSeparatedAuthorNames?has_content>
+                        <@newListItemRow key="Author(s)">
+                            ${commaSeparatedAuthorNames}
+                        </@newListItemRow>
+                    </#if>
                 </div>
-            </li>
+                <#--  Blog details: END  -->
+
+                <#--  Summary  -->
+                <div class="hee-listing-item__summary">${item.summary!}</div>
+            </div>
         </#if>
     </#list>
 </#macro>
@@ -72,26 +99,43 @@
         <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
-            <li>
-                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
+            <div class="hee-listing-item">
+                <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
-                <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
-                <div class="nhsuk-review-date">
-                    <p class="nhsuk-body-s">
-                        <@fmt.message key="published_on.text"/> ${item.publicationDate.time?string['dd MMMM yyyy']}
-                    </p>
-                    <p class="nhsuk-body-s">
-                        <#if item.authors?has_content>
-                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
-                        <#else>
-                            <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
-                        </#if>
-                        <#if commaSeparatedAuthorNames?has_content>
-                            <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
-                        </#if>
-                    </p>
+
+                <#--  News details: START  -->
+                <div class="hee-listing-item__details">
+                    <#--  Categories  -->
+                    <#assign categories="${item.categories?map(category -> categoriesMap[category]!)?join(', ')}">
+
+                    <#if categories?has_content>
+                        <@newListItemRow key="Categories">
+                            ${categories}
+                        </@newListItemRow>
+                    </#if>
+
+                    <#--  Publish date  -->
+                    <@newListItemRow key="Publish date">
+                        ${item.publicationDate.time?string['dd MMMM yyyy']}
+                    </@newListItemRow>
+
+                    <#--  Published by  -->
+                    <#if item.authors?has_content>
+                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
+                    <#else>
+                        <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
+                    </#if>
+                    <#if commaSeparatedAuthorNames?has_content>
+                        <@newListItemRow key="Author(s)">
+                            ${commaSeparatedAuthorNames}
+                        </@newListItemRow>
+                    </#if>
                 </div>
-            </li>
+                <#--  News details: END  -->
+
+                <#--  Summary  -->
+                <div class="hee-listing-item__summary">${item.summary!}</div>
+            </div>
         </#if>
     </#list>
 </#macro>
@@ -191,13 +235,13 @@
                 <h3><a href="${pageURL}">${item.title}</a></h3>
 
                 <div class="hee-listing-item__details">
-                    <@publicationListItemRow key="${publicationTypeLabel}">
+                    <@newListItemRow key="${publicationTypeLabel}">
                         ${publicationTypeMap[item.publicationType]}
-                    </@publicationListItemRow>
+                    </@newListItemRow>
 
-                    <@publicationListItemRow key="${publishDateLabel}">
+                    <@newListItemRow key="${publishDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
-                    </@publicationListItemRow>
+                    </@newListItemRow>
                 </div>
 
                 <div class="hee-listing-item__summary">${item.summary}</div>
@@ -379,10 +423,10 @@
     </div>
 </#macro>
 
-<#macro publicationListItemRow key>
+<#macro newListItemRow key>
     <div class="hee-listing-item__details__row">
         <span class="hee-listing-item__details__label">
-            ${key}
+            ${key}:
         </span>
         <span><#nested></span>
     </div>
