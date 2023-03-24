@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 8500042d-c89f-4669-9904-b09554b63c7a
+    hippo:versionHistory: 8c9515c5-85d7-4c9d-99d1-9752364844bc
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -26,7 +26,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-08-10T14:33:36.462+01:00
+      hippostdpubwf:lastModificationDate: 2023-03-24T07:47:47.056Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -96,55 +96,10 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2017-02-10T00:00:00Z
         hee:nextReviewed: 2021-02-01T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
       /hee:contentBlocks[5]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[6]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[7]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[8]:
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -160,7 +115,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[9]:
+      /hee:contentBlocks[7]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -176,7 +131,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[10]:
+      /hee:contentBlocks[8]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -192,7 +147,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:contentBlocks[11]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:richTextReference
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
@@ -283,12 +238,12 @@
         /hee:content:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-      /hee:contentBlocks[12]:
+      /hee:contentBlocks[10]:
         jcr:primaryType: hee:contact
         /hee:contactItems:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
-      /hee:contentBlocks[13]:
+      /hee:contentBlocks[11]:
         jcr:primaryType: hee:contact
         /hee:contactItems:
           jcr:primaryType: hippo:mirror
@@ -303,7 +258,7 @@
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
-      /hee:contentBlocks[14]:
+      /hee:contentBlocks[12]:
         jcr:primaryType: hee:contact
         /hee:contactItems[1]:
           jcr:primaryType: hippo:mirror
@@ -314,7 +269,7 @@
         /hee:contactItems[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
-      /hee:contentBlocks[15]:
+      /hee:contentBlocks[13]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
         hee:header: Related content
@@ -348,42 +303,42 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
-      /hee:contentBlocks[16]:
+      /hee:contentBlocks[14]:
         jcr:primaryType: hee:detailsReference
         /hee:detailsContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
-      /hee:contentBlocks[17]:
+      /hee:contentBlocks[15]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 438a53a7-8782-435a-8c71-78e9f3c90ea8
-      /hee:contentBlocks[18]:
+      /hee:contentBlocks[16]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4e8934cc-f77d-4b5b-b602-2425f7934bca
-      /hee:contentBlocks[19]:
+      /hee:contentBlocks[17]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 335a1882-5d19-4e01-a557-97c7da9225e6
-      /hee:contentBlocks[20]:
+      /hee:contentBlocks[18]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
-      /hee:contentBlocks[21]:
+      /hee:contentBlocks[19]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cabc00bf-bd7f-4d0f-89e3-920fa0729bf1
-      /hee:contentBlocks[22]:
+      /hee:contentBlocks[20]:
         jcr:primaryType: hee:statementCardReference
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
-      /hee:contentBlocks[23]:
+      /hee:contentBlocks[21]:
         jcr:primaryType: hee:statementCardReference
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
@@ -394,7 +349,7 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:contentBlocks[24]:
+      /hee:contentBlocks[22]:
         jcr:primaryType: hee:appliesToBoxReference
         /hee:appliesToBoxReference:
           jcr:primaryType: hippo:mirror
@@ -402,11 +357,11 @@
         /hee:appliesToContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ec2ddf5d-136e-4006-bc89-c9e1cee4e98f
-      /hee:contentBlocks[25]:
+      /hee:contentBlocks[23]:
         jcr:primaryType: hee:anchorLinks
         hee:targetHeadings: [h2]
         hee:title: On this page123
-      /hee:contentBlocks[26]:
+      /hee:contentBlocks[24]:
         jcr:primaryType: hee:navMap
         hee:mapEducation: dental
         hee:title: Dental Test
@@ -527,11 +482,12 @@
         printed and digital work in the following ways.
       hee:title: Copyright
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-08-10T14:34:38.612+01:00
+      hippostdpubwf:lastModificationDate: 2023-03-24T07:51:18.025Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -601,55 +557,10 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2017-02-10T00:00:00Z
         hee:nextReviewed: 2021-02-01T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
       /hee:contentBlocks[5]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[6]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[7]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[8]:
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -665,7 +576,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[9]:
+      /hee:contentBlocks[7]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -681,7 +592,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[10]:
+      /hee:contentBlocks[8]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -697,7 +608,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:contentBlocks[11]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:richTextReference
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
@@ -788,12 +699,12 @@
         /hee:content:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-      /hee:contentBlocks[12]:
+      /hee:contentBlocks[10]:
         jcr:primaryType: hee:contact
         /hee:contactItems:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
-      /hee:contentBlocks[13]:
+      /hee:contentBlocks[11]:
         jcr:primaryType: hee:contact
         /hee:contactItems:
           jcr:primaryType: hippo:mirror
@@ -808,7 +719,7 @@
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
-      /hee:contentBlocks[14]:
+      /hee:contentBlocks[12]:
         jcr:primaryType: hee:contact
         /hee:contactItems[1]:
           jcr:primaryType: hippo:mirror
@@ -819,7 +730,7 @@
         /hee:contactItems[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
-      /hee:contentBlocks[15]:
+      /hee:contentBlocks[13]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
         hee:header: Related content
@@ -853,42 +764,42 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
-      /hee:contentBlocks[16]:
+      /hee:contentBlocks[14]:
         jcr:primaryType: hee:detailsReference
         /hee:detailsContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
-      /hee:contentBlocks[17]:
+      /hee:contentBlocks[15]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 438a53a7-8782-435a-8c71-78e9f3c90ea8
-      /hee:contentBlocks[18]:
+      /hee:contentBlocks[16]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4e8934cc-f77d-4b5b-b602-2425f7934bca
-      /hee:contentBlocks[19]:
+      /hee:contentBlocks[17]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 335a1882-5d19-4e01-a557-97c7da9225e6
-      /hee:contentBlocks[20]:
+      /hee:contentBlocks[18]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
-      /hee:contentBlocks[21]:
+      /hee:contentBlocks[19]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cabc00bf-bd7f-4d0f-89e3-920fa0729bf1
-      /hee:contentBlocks[22]:
+      /hee:contentBlocks[20]:
         jcr:primaryType: hee:statementCardReference
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
-      /hee:contentBlocks[23]:
+      /hee:contentBlocks[21]:
         jcr:primaryType: hee:statementCardReference
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
@@ -899,7 +810,7 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:contentBlocks[24]:
+      /hee:contentBlocks[22]:
         jcr:primaryType: hee:appliesToBoxReference
         /hee:appliesToBoxReference:
           jcr:primaryType: hippo:mirror
@@ -907,11 +818,11 @@
         /hee:appliesToContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ec2ddf5d-136e-4006-bc89-c9e1cee4e98f
-      /hee:contentBlocks[25]:
+      /hee:contentBlocks[23]:
         jcr:primaryType: hee:anchorLinks
         hee:targetHeadings: [h2]
         hee:title: On this page123
-      /hee:contentBlocks[26]:
+      /hee:contentBlocks[24]:
         jcr:primaryType: hee:navMap
         hee:mapEducation: dental
         hee:title: Dental Test
@@ -1036,9 +947,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-08-10T14:33:36.462+01:00
+      hippostdpubwf:lastModificationDate: 2023-03-24T07:47:47.056Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-08-10T14:33:40.620+01:00
+      hippostdpubwf:publicationDate: 2023-03-24T07:47:50.357Z
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1107,55 +1018,10 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2017-02-10T00:00:00Z
         hee:nextReviewed: 2021-02-01T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
       /hee:contentBlocks[5]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[6]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[7]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[8]:
+      /hee:contentBlocks[6]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1171,7 +1037,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[9]:
+      /hee:contentBlocks[7]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1187,7 +1053,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[10]:
+      /hee:contentBlocks[8]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1203,7 +1069,7 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:contentBlocks[11]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:richTextReference
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
@@ -1294,12 +1160,12 @@
         /hee:content:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
-      /hee:contentBlocks[12]:
+      /hee:contentBlocks[10]:
         jcr:primaryType: hee:contact
         /hee:contactItems:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
-      /hee:contentBlocks[13]:
+      /hee:contentBlocks[11]:
         jcr:primaryType: hee:contact
         /hee:contactItems:
           jcr:primaryType: hippo:mirror
@@ -1314,7 +1180,7 @@
         /hee:fileLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
-      /hee:contentBlocks[14]:
+      /hee:contentBlocks[12]:
         jcr:primaryType: hee:contact
         /hee:contactItems[1]:
           jcr:primaryType: hippo:mirror
@@ -1325,7 +1191,7 @@
         /hee:contactItems[3]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 0e3ac71e-c72b-4868-9eb6-a38fdfcebc7f
-      /hee:contentBlocks[15]:
+      /hee:contentBlocks[13]:
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
         hee:header: Related content
@@ -1359,42 +1225,42 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
-      /hee:contentBlocks[16]:
+      /hee:contentBlocks[14]:
         jcr:primaryType: hee:detailsReference
         /hee:detailsContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
-      /hee:contentBlocks[17]:
+      /hee:contentBlocks[15]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 438a53a7-8782-435a-8c71-78e9f3c90ea8
-      /hee:contentBlocks[18]:
+      /hee:contentBlocks[16]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4e8934cc-f77d-4b5b-b602-2425f7934bca
-      /hee:contentBlocks[19]:
+      /hee:contentBlocks[17]:
         jcr:primaryType: hee:buttonReference
         /hee:buttonContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 335a1882-5d19-4e01-a557-97c7da9225e6
-      /hee:contentBlocks[20]:
+      /hee:contentBlocks[18]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
-      /hee:contentBlocks[21]:
+      /hee:contentBlocks[19]:
         jcr:primaryType: hee:warningCalloutReference
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: cabc00bf-bd7f-4d0f-89e3-920fa0729bf1
-      /hee:contentBlocks[22]:
+      /hee:contentBlocks[20]:
         jcr:primaryType: hee:statementCardReference
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
-      /hee:contentBlocks[23]:
+      /hee:contentBlocks[21]:
         jcr:primaryType: hee:statementCardReference
         /hee:statementCardContentBlock:
           jcr:primaryType: hippo:mirror
@@ -1405,7 +1271,7 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:contentBlocks[24]:
+      /hee:contentBlocks[22]:
         jcr:primaryType: hee:appliesToBoxReference
         /hee:appliesToBoxReference:
           jcr:primaryType: hippo:mirror
@@ -1413,11 +1279,11 @@
         /hee:appliesToContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: ec2ddf5d-136e-4006-bc89-c9e1cee4e98f
-      /hee:contentBlocks[25]:
+      /hee:contentBlocks[23]:
         jcr:primaryType: hee:anchorLinks
         hee:targetHeadings: [h2]
         hee:title: On this page123
-      /hee:contentBlocks[26]:
+      /hee:contentBlocks[24]:
         jcr:primaryType: hee:navMap
         hee:mapEducation: dental
         hee:title: Dental Test
@@ -1534,7 +1400,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: c2a82e35-2945-4350-825d-b56c7d46f68d
     hippo:name: Introduction
-    hippo:versionHistory: 11a7f02a-058b-4806-9efa-67e7923e8acf
+    hippo:versionHistory: a32bacca-e4f8-4e5b-a5c1-862c5cf91049
     /introduction[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -1548,7 +1414,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-31T16:40:28.321Z
+      hippostdpubwf:lastModificationDate: 2023-03-24T07:48:41.014Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -1625,60 +1491,15 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2017-02-10T00:00:00Z
         hee:nextReviewed: 2021-02-01T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
       /hee:contentBlocks[8]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[9]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[10]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:blockLinksReference
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
-      /hee:contentBlocks[11]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[12]:
+      /hee:contentBlocks[10]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1694,10 +1515,10 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[13]:
+      /hee:contentBlocks[11]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-      /hee:contentBlocks[14]:
+      /hee:contentBlocks[12]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
       /hee:rightHandBlocks[1]:
@@ -1769,10 +1590,10 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[15]:
+      /hee:contentBlocks[13]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-      /hee:contentBlocks[16]:
+      /hee:contentBlocks[14]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
       /hee:heroImage:
@@ -1801,9 +1622,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-01-31T16:40:28.321Z
+      hippostdpubwf:lastModificationDate: 2023-03-24T07:48:41.014Z
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-01-31T16:40:33.619Z
+      hippostdpubwf:publicationDate: 2023-03-24T07:48:43.153Z
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1879,60 +1700,15 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2017-02-10T00:00:00Z
         hee:nextReviewed: 2021-02-01T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
       /hee:contentBlocks[8]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[9]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[10]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:blockLinksReference
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
-      /hee:contentBlocks[11]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[12]:
+      /hee:contentBlocks[10]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -1948,10 +1724,10 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[13]:
+      /hee:contentBlocks[11]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-      /hee:contentBlocks[14]:
+      /hee:contentBlocks[12]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
       /hee:rightHandBlocks[1]:
@@ -2023,10 +1799,10 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[15]:
+      /hee:contentBlocks[13]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-      /hee:contentBlocks[16]:
+      /hee:contentBlocks[14]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
       /hee:heroImage:
@@ -2053,10 +1829,9 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2022-05-31T12:13:58.853+01:00
+      hippostdpubwf:lastModificationDate: 2023-03-24T07:48:22.584Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 86f00217-ea13-4b93-9927-7c51c2360eec
       hippotranslation:locale: en
@@ -2133,60 +1908,15 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2017-02-10T00:00:00Z
         hee:nextReviewed: 2021-02-01T00:00:00Z
-      /hee:StatementBlock:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: ''
-        hee:title: ''
       /hee:contentBlocks[8]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "asdfa asf as f as fa sf as2\r\n\r\ncasdc"
-        hee:title: test title2
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>here is <strong>some</strong> text</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>hi</li>
-             <li>world</li>
-             <li>list</li>
-            </ul>
-
-            <p>loouhf as fluhalsuf hl asf lasul asl ifa;sif ;asli f;alsi falsi f;asi hfsa j</p>
-
-            <p>a s</p>
-
-            <p>fa</p>
-
-            <p>sfas</p>
-      /hee:contentBlocks[9]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
-      /hee:contentBlocks[10]:
+      /hee:contentBlocks[9]:
         jcr:primaryType: hee:blockLinksReference
         /hee:blockLinksContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
-      /hee:contentBlocks[11]:
-        jcr:primaryType: hee:StatementBlock
-        hee:statement: "blah blah \r\n\r\nhello"
-        hee:title: Another statement block
-        /hee:statement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <ul>
-             <li>and&nbsp;</li>
-             <li>here</li>
-             <li>is&nbsp;</li>
-             <li>list</li>
-            </ul>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies ex sit amet eros suscipit, in porta turpis suscipit. Phasellus scelerisque, nulla vitae tristique vehicula, lectus nisi vehicula ante, eget porta risus neque eu dui. Etiam quis volutpat libero. Pellentesque nec tempor magna, nec porta eros. Ut eu mi eu lacus rhoncus porttitor sed eu nulla. Maecenas neque mauris, suscipit vitae dui vitae, aliquet ornare nisi. In at venenatis nisl. Curabitur venenatis imperdiet eros,</p>
-        /hee:richStatement:
-          jcr:primaryType: hippostd:html
-          hippostd:content: <p>Block copy</p>
-      /hee:contentBlocks[12]:
+      /hee:contentBlocks[10]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
@@ -2202,10 +1932,10 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: dee51778-a61b-42f1-be47-76627658d0a2
-      /hee:contentBlocks[13]:
+      /hee:contentBlocks[11]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-      /hee:contentBlocks[14]:
+      /hee:contentBlocks[12]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
       /hee:rightHandBlocks[1]:
@@ -2277,10 +2007,10 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /hee:contentBlocks[15]:
+      /hee:contentBlocks[13]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
-      /hee:contentBlocks[16]:
+      /hee:contentBlocks[14]:
         jcr:primaryType: hippostd:html
         hippostd:content: ''
       /hee:heroImage:

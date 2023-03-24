@@ -36,9 +36,6 @@
                                             <#case "uk.nhs.hee.web.beans.RichTextReference">
                                                 <@hst.html hippohtml=block.richTextBlock.html/>
                                                 <#break>
-                                            <#case "uk.nhs.hee.web.beans.StatementBlock">
-                                                <@hee.statementBlock block=block/>
-                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.ActionLink">
                                                 <@hee.actionLink actionLink=block/>
                                                 <#break>
