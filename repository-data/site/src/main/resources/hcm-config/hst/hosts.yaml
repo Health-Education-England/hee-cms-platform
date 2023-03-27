@@ -15,6 +15,14 @@ definitions:
           hst:homepage: root
           hst:mountpoint: /hst:hee/hst:sites/lks
           hst:locale: en
+          /dental:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:mountpoint: /hst:hee/hst:sites/dental
+            /preview:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:type: preview
           /digital-transformation:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:mount
@@ -23,10 +31,18 @@ definitions:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
               hst:type: preview
-          /dental:
+          /healthcareers:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:mount
-            hst:mountpoint: /hst:hee/hst:sites/dental
+            hst:mountpoint: /hst:hee/hst:sites/health-careers
+            /preview:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:type: preview
+          /kls-rebuild:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:mount
+            hst:mountpoint: /hst:hee/hst:sites/kls
             /preview:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
@@ -47,14 +63,10 @@ definitions:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
               hst:type: preview
-          /healthcareers:
+          /preview:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:mount
-            hst:mountpoint: /hst:hee/hst:sites/health-careers
-            /preview:
-              .meta:residual-child-node-category: content
-              jcr:primaryType: hst:mount
-              hst:type: preview
+            hst:type: preview
           /website-testing:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:mount
@@ -63,7 +75,3 @@ definitions:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
               hst:type: preview
-          /preview:
-            .meta:residual-child-node-category: content
-            jcr:primaryType: hst:mount
-            hst:type: preview

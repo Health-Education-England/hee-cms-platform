@@ -287,7 +287,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:richTextReference,hee:tableReference,hee:tabsReference,hee:warningCalloutReference
+            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hippostd:html,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:tableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -299,7 +299,7 @@ definitions:
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
-            compoundList: hee:contactCardWithDescriptionReference,hee:ctaCardReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
+            compoundList: hee:contactCardWithDescriptionReference,hee:fileLinksCardReference,hee:externalLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
             contentPickerType: links
             field: rightHandBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin

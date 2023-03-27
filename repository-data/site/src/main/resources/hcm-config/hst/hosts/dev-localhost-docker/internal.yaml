@@ -17,14 +17,6 @@ definitions:
             hst:homepage: root
             hst:locale: en
             hst:mountpoint: /hst:hee/hst:sites/lks
-            /digital-transformation:
-              .meta:residual-child-node-category: content
-              jcr:primaryType: hst:mount
-              hst:mountpoint: /hst:hee/hst:sites/digital-transformation
-              /preview:
-                .meta:residual-child-node-category: content
-                jcr:primaryType: hst:mount
-                hst:type: preview
             /dental:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
@@ -33,18 +25,10 @@ definitions:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
                 hst:type: preview
-            /medical:
+            /digital-transformation:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
-              hst:mountpoint: /hst:hee/hst:sites/medical
-              /preview:
-                .meta:residual-child-node-category: content
-                jcr:primaryType: hst:mount
-                hst:type: preview
-            /quality:
-              .meta:residual-child-node-category: content
-              jcr:primaryType: hst:mount
-              hst:mountpoint: /hst:hee/hst:sites/quality
+              hst:mountpoint: /hst:hee/hst:sites/digital-transformation
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -57,10 +41,18 @@ definitions:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
                 hst:type: preview
-            /website-testing:
+            /kls-rebuild:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
-              hst:mountpoint: /hst:hee/hst:sites/website-testing
+              hst:mountpoint: /hst:hee/hst:sites/kls
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
+            /medical:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:mountpoint: /hst:hee/hst:sites/medical
               /preview:
                 .meta:residual-child-node-category: content
                 jcr:primaryType: hst:mount
@@ -69,3 +61,19 @@ definitions:
               .meta:residual-child-node-category: content
               jcr:primaryType: hst:mount
               hst:type: preview
+            /quality:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:mountpoint: /hst:hee/hst:sites/quality
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview
+            /website-testing:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:mountpoint: /hst:hee/hst:sites/website-testing
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview

@@ -42,6 +42,6 @@
       hipposys:value: /content/assets/{{ channelId }}
   /readonly:
     jcr:primaryType: hipposys:authrole
-    hipposys:groups: [ {{ channelId }}-reader ]
+    hipposys:groups: [ {{ channelId }}-viewer ]
     hipposys:role: readonly
     hipposys:users: [ ]
