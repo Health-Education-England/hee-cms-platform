@@ -1,0 +1,60 @@
+/content/documents/administration/valuelists/kls/casestudyimpactgroups:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 84ef1ce5-f9de-4dd0-ae58-b99d984574b2
+  hippo:name: CaseStudyImpactGroups
+  /casestudyimpactgroups:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 7ab39485-e0a4-4a2f-937a-1ba3e8f77583
+    hippo:availability: [live, preview]
+    hippotranslation:id: 10b5552b-864b-4634-9290-633757efeb7f
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: all_staff
+      selection:label: All Staff
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: additional_clinical_services
+      selection:label: Additional Clinical Services
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: admin_and_clerical
+      selection:label: Admin and Clerical
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: allied_health_professionals
+      selection:label: Allied Health Professionals
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: estates_and_ancilliary
+      selection:label: Estates and Ancilliary
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: healthcare_scientists
+      selection:label: Healthcare Scientists
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: medicine_and_dental
+      selection:label: Medical and Dental
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: multiprofessional
+      selection:label: Multiprofessional
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: nursing_and_midwifery
+      selection:label: Nursing and Midwifery
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: patients_carers_and_the_public
+      selection:label: Patients, carers and the public
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: scientific_and_technical
+      selection:label: Professional, Scientific and Technical
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: students
+      selection:label: Students
