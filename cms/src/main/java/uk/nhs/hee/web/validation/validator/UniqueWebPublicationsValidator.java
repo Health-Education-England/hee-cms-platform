@@ -1,6 +1,7 @@
 package uk.nhs.hee.web.validation.validator;
 
 import com.google.common.collect.ImmutableMap;
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.repository.api.HippoNodeType;
 import org.onehippo.cms.services.validation.api.ValidationContext;
@@ -18,18 +19,22 @@ import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryResult;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
- * <p>Validates if unique Web publications ({@code hee:webPublications}) have been added
+ * <p>Validates if non-duplicate and unique Web publications ({@code hee:webPublications}) have been added
  * to Publication landing page ({@code hee:publicationLandingPage}) documents.</p>
  *
- * <p>This essentially ensures that the same Publication page ({@code hee:report}) documents
- * aren't being associated to multiple Publication landing page ({@code hee:publicationLandingPage}) documents
- * as Web publications.</p>
+ * <p>This essentially ensures that the same Publication page ({@code hee:report}) document hasn't been associated
+ * to a Publication landing page ({@code hee:publicationLandingPage}) document multiple times
+ * as well as to other Publication landing page ({@code hee:publicationLandingPage}) documents as Web publications.</p>
  *
- * <p>It does this by verifying if there are no Publication landing page {@code hee:publicationLandingPage} documents
- * for the chosen Publication page {@code hee:report} document within the current channel</p>
+ * <p>It does this by verifying if the Web publications ({@code hee:webPublications}) field doesn't have duplicate
+ * Publication page ({@code hee:report}) documents as well as they are not already associated
+ * to any other Publication landing page {@code hee:publicationLandingPage} documents within the current channel.</p>
  */
 public class UniqueWebPublicationsValidator extends AbstractNodeValidator {
     // Logger
@@ -91,8 +96,74 @@ public class UniqueWebPublicationsValidator extends AbstractNodeValidator {
     protected Optional<Violation> checkNode(final ValidationContext context, final Node node) throws RepositoryException {
         final NodeIterator webPubNodeIterator = node.getNodes(NODE_NAME_HEE_WEB_PUBLICATIONS);
 
-        while (webPubNodeIterator.hasNext()) {
-            final Node webPubNode = webPubNodeIterator.nextNode();
+        @SuppressWarnings("unchecked") final List<Node> webPubNodeList = IteratorUtils.<Node>toList(webPubNodeIterator);
+
+        // Validates whether Web publications field has duplicate Publication page documents
+        if (hasDuplicatePubPageDocs(webPubNodeList)) {
+            final Violation violation = context.createViolation("duplicate-publication-pages");
+
+            LOGGER.debug(violation.getMessage());
+            return Optional.of(violation);
+        }
+
+        // Validates whether Web publications field has non-unique Publication pages i.e. checks
+        // if any of the associated Publication page documents have been utilized
+        // on a different Publication landing page
+        final String firstNonUniquePubPageDocId = getFirstNonUniquePubPageDocIdIfAny(node, webPubNodeList);
+        if (StringUtils.isNotEmpty(firstNonUniquePubPageDocId)) {
+            final Violation violation = context.createViolation(ImmutableMap.of(
+                    "PublicationPageDocumentDisplayName",
+                    DocumentUtils.getDocumentDisplayName(node.getSession(), firstNonUniquePubPageDocId)
+            ));
+
+            LOGGER.debug(violation.getMessage());
+            return Optional.of(violation);
+        }
+
+        return Optional.empty();
+    }
+
+    /**
+     * Returns {@code true} if the given {@code webPubNodeIterator} has duplicate nodes
+     * i.e. if Web publications ({@code hee:webPublications}) field
+     * has duplicate Publication page {@code hee:report} documents associated with it. Otherwise, returns {@code false}.
+     *
+     * @param webPubNodeList the {@link List<Node>} Web publication nodes whose Publication page ({@code hippo:docbase})
+     *                       needs to be verified for duplicates.
+     * @return {@code true} if the given {@code webPubNodeIterator} has duplicate nodes
+     * i.e. if Web publications ({@code hee:webPublications}) field
+     * has duplicate Publication page {@code hee:report} documents associated with it. Otherwise, returns {@code false}.
+     * @throws RepositoryException thrown when an error occurs while getting {@code hippo:docbase}
+     *                             from Web publication nodes.
+     */
+    private boolean hasDuplicatePubPageDocs(final List<Node> webPubNodeList) throws RepositoryException {
+        final Set<String> pubPageDocIds = new HashSet<>();
+
+        for (final Node webPubNode : webPubNodeList) {
+            final String pubPageDocId = webPubNode.getProperty(HippoNodeType.HIPPO_DOCBASE).getString();
+
+            if (!pubPageDocIds.add(pubPageDocId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Returns the first non-unique Publication page document id from the given {@code webPubNodeList} in case if any.
+     * Otherwise, returns an empty string.
+     *
+     * @param pubLandingPagNode the Publication landing page {@link Node} instance.
+     * @param webPubNodeList    the {@link List<Node>} Web publication nodes
+     *                          whose Publication page ({@code hippo:docbase}) needs to be verified for uniqueness
+     *                          i.e. checks whether they are not used on other Publication landing page.
+     * @return the first non-unique Publication page document id from the given {@code webPubNodeList} in case if any.
+     * Otherwise, returns an empty string.
+     * @throws RepositoryException thrown when an error occurs while working with the repository.
+     */
+    private String getFirstNonUniquePubPageDocIdIfAny(final Node pubLandingPagNode, final List<Node> webPubNodeList)
+            throws RepositoryException {
+        for (final Node webPubNode : webPubNodeList) {
             final String pubPageDocId = webPubNode.getProperty(HippoNodeType.HIPPO_DOCBASE).getString();
 
             LOGGER.debug("Publication page (hee:report) document Identifier/UUID = {}", pubPageDocId);
@@ -103,24 +174,18 @@ public class UniqueWebPublicationsValidator extends AbstractNodeValidator {
 
             // Looks up for the referenced Publication landing page document/node if any within the current channel
             final Node refPubLandingPageDocNode = getRefPubLandingPageDocument(
-                    node.getSession(),
-                    ChannelUtils.getChannelName(node.getPath()),
+                    pubLandingPagNode.getSession(),
+                    ChannelUtils.getChannelName(pubLandingPagNode.getPath()),
                     pubPageDocId
             );
 
             if (refPubLandingPageDocNode != null
-                    && !refPubLandingPageDocNode.getPath().equals(node.getParent().getPath())) {
-                final Violation violation = context.createViolation(ImmutableMap.of(
-                        "PublicationPageDocumentDisplayName",
-                        DocumentUtils.getDocumentDisplayName(node.getSession(), pubPageDocId)
-                ));
-
-                LOGGER.debug(violation.getMessage());
-                return Optional.of(violation);
+                    && !refPubLandingPageDocNode.getPath().equals(pubLandingPagNode.getParent().getPath())) {
+                return pubPageDocId;
             }
         }
 
-        return Optional.empty();
+        return StringUtils.EMPTY;
     }
 
 }

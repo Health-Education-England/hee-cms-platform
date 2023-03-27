@@ -7,7 +7,10 @@
 
             <div class="nhsuk-tabs">
                 <#--  Tab title  -->
-                <h2 class="nhsuk-tabs__title">${tabs.tabsContentBlock.title}</h2>
+                <#if tabs.tabsContentBlock.title?has_content>
+                    <h2 class="nhsuk-tabs__title">${tabs.tabsContentBlock.title}</h2>
+                </#if>
+
 
                 <#--  Tabs for desktop  -->
                 <div class="nhsuk-tabs__desktop">

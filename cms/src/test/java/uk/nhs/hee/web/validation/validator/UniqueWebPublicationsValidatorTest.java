@@ -36,8 +36,11 @@ public class UniqueWebPublicationsValidatorTest {
 
     private static final String PUBLICATION_PAGE_HIPPO_NAME = "Reasonable Adjustments Policy - Publication 1";
 
-    private static final String VIOLATION_MSG = "'" + PUBLICATION_PAGE_HIPPO_NAME + "' already exists " +
-            "as a Web publication for another Publication landing page document in the CMS. " +
+    private static final String DUPLICATE_PUB_PAGE_VIOLATION_MSG =
+            "Please remove duplicate Publication page document(s)";
+
+    private static final String NON_UNIQUE_PUB_PAGE_VIOLATION_MSG = "'" + PUBLICATION_PAGE_HIPPO_NAME +
+            "' already exists as a Web publication for another Publication landing page document in the CMS. " +
             "A Publication page cannot be multiple Web publications. Please select a different Publication page.";
 
     private static final String REUSED_PUB_PAGE_DOC_ID = "dec75cbc-43ed-468d-89f7-e6fd7cee024e";
@@ -90,7 +93,7 @@ public class UniqueWebPublicationsValidatorTest {
         when(mockPubLandingPageDocNode.getNodes(NODE_NAME_HEE_WEB_PUBLICATIONS)).thenReturn(mockWebPubNodeIterator);
 
         when(mockWebPubNodeIterator.hasNext()).thenReturn(true, false);
-        when(mockWebPubNodeIterator.nextNode()).thenReturn(mockNonUniqueWebPubNode);
+        when(mockWebPubNodeIterator.next()).thenReturn(mockNonUniqueWebPubNode);
 
         when(mockNonUniqueWebPubNode.getProperty(HippoNodeType.HIPPO_DOCBASE))
                 .thenReturn(mockNonUniqueWebPubNodeHippoBaseProperty);
@@ -115,9 +118,14 @@ public class UniqueWebPublicationsValidatorTest {
         when(mockRefPubLandPageDocNode.getPath()).thenReturn(refPubLandingPageDocNodePath);
 
         // Violation
-        final Violation mockViolation = mock(Violation.class);
-        when(mockValidationContext.createViolation(anyMap())).thenReturn(mockViolation);
-        when(mockViolation.getMessage()).thenReturn(VIOLATION_MSG);
+        final Violation mockDuplicatePubPageViolation = mock(Violation.class);
+        when(mockValidationContext.createViolation("duplicate-publication-pages"))
+                .thenReturn(mockDuplicatePubPageViolation);
+        when(mockDuplicatePubPageViolation.getMessage()).thenReturn(DUPLICATE_PUB_PAGE_VIOLATION_MSG);
+
+        final Violation mockNonUniquePubPageViolation = mock(Violation.class);
+        when(mockValidationContext.createViolation(anyMap())).thenReturn(mockNonUniquePubPageViolation);
+        when(mockNonUniquePubPageViolation.getMessage()).thenReturn(NON_UNIQUE_PUB_PAGE_VIOLATION_MSG);
     }
 
     @Test
@@ -127,14 +135,29 @@ public class UniqueWebPublicationsValidatorTest {
     }
 
     @Test
-    public void checkNode_WithNonUniqueWebPub_ReturnsViolation() throws Exception {
+    public void checkNode_WithDuplicateWebPubs_ReturnsDuplicatePubPageViolation() throws Exception {
+        // Mocks & stubs
+        when(mockWebPubNodeIterator.hasNext()).thenReturn(true, true, false);
+        when(mockWebPubNodeIterator.next()).thenReturn(mockNonUniqueWebPubNode, mockNonUniqueWebPubNode);
+
         // Execute the method to be tested
         final Optional<Violation> violation =
                 systemUnderTest.checkNode(mockValidationContext, mockPubLandingPageDocNode);
 
         // Verify
         assertThat(violation).isNotEmpty();
-        assertThat(violation.get().getMessage()).isEqualTo(VIOLATION_MSG);
+        assertThat(violation.get().getMessage()).isEqualTo(DUPLICATE_PUB_PAGE_VIOLATION_MSG);
+    }
+
+    @Test
+    public void checkNode_WithNonUniqueWebPub_ReturnsViolationForNonUniqueWebPub() throws Exception {
+        // Execute the method to be tested
+        final Optional<Violation> violation =
+                systemUnderTest.checkNode(mockValidationContext, mockPubLandingPageDocNode);
+
+        // Verify
+        assertThat(violation).isNotEmpty();
+        assertThat(violation.get().getMessage()).isEqualTo(NON_UNIQUE_PUB_PAGE_VIOLATION_MSG);
     }
 
     @Test
@@ -142,7 +165,7 @@ public class UniqueWebPublicationsValidatorTest {
         // Mocks & stubs
         // Publication landing page doc "hee:webPublications" nodes
         when(mockWebPubNodeIterator.hasNext()).thenReturn(true, true, false);
-        when(mockWebPubNodeIterator.nextNode()).thenReturn(mockUniqueWebPubNode, mockNonUniqueWebPubNode);
+        when(mockWebPubNodeIterator.next()).thenReturn(mockUniqueWebPubNode, mockNonUniqueWebPubNode);
 
         when(mockUniqueWebPubNode.getProperty(HippoNodeType.HIPPO_DOCBASE))
                 .thenReturn(mockUniqueWebPubNodeHippoBaseProperty);
@@ -162,7 +185,7 @@ public class UniqueWebPublicationsValidatorTest {
 
         // Verify
         assertThat(violation).isNotEmpty();
-        assertThat(violation.get().getMessage()).isEqualTo(VIOLATION_MSG);
+        assertThat(violation.get().getMessage()).isEqualTo(NON_UNIQUE_PUB_PAGE_VIOLATION_MSG);
     }
 
     @Test

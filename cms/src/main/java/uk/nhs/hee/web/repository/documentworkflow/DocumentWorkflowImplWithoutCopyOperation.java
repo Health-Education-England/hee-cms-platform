@@ -9,11 +9,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Author ({@code hee:author}) document workflow implementation which is essentially an extension of default
- * {@link DocumentWorkflowImpl}, but removes {@code copy} operation in order not to allow Editors
- * to copy Author documents.
+ * An extension of OOTB default {@link DocumentWorkflowImpl} which essentially removes {@code copy} operation
+ * in order not to allow content editors to copy documents of certain types (e.g. Author {@code hee:author}, etc.).
  */
-public class AuthorDocumentWorkflowImpl extends DocumentWorkflowImpl {
+public class DocumentWorkflowImplWithoutCopyOperation extends DocumentWorkflowImpl {
     private static final long serialVersionUID = -2096611300462592784L;
 
 
@@ -22,7 +21,7 @@ public class AuthorDocumentWorkflowImpl extends DocumentWorkflowImpl {
      *
      * @throws RemoteException mandatory exception that must be thrown by all Remote objects
      */
-    public AuthorDocumentWorkflowImpl() throws RemoteException {
+    public DocumentWorkflowImplWithoutCopyOperation() throws RemoteException {
         // To handle 'java.rmi.RemoteException' matching
         // 'org.onehippo.repository.documentworkflow.DocumentWorkflowImpl.DocumentWorkflowImpl' super class constructor.
     }
