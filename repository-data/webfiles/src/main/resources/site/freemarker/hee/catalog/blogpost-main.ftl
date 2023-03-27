@@ -119,7 +119,7 @@
         <#--  Main sections: END  -->
 
         <#--  Sidebar sections: START  -->
-        <#if document.rightHandBlocks??>
+        <#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>
             <#--  Right hand content blocks: START  -->
             <aside class="page__rightbar">
                 <#list document.rightHandBlocks as block>
