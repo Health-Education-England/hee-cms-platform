@@ -40,11 +40,11 @@
 
                         <#--  Player  -->
                         <#assign iframetitle=getEmbedCodeAttrValue(media.mediaEmbedContentBlock.embedCode, 'title')>
-                        <div class="nhsuk-media__container">
+                        <div class="nhsuk-media__container ${embedMediaType}">
                             <#if embedMediaType='anchor'>
-                                <iframe class="${embedMediaType}" src="${embedSrc}" ${(iframetitle?has_content)?then('title="${iframetitle}"', '')} frameborder="0" scrolling="no"></iframe>
+                                <iframe src="${embedSrc}" ${(iframetitle?has_content)?then('title="${iframetitle}"', '')} frameborder="0" scrolling="no"></iframe>
                             <#else>
-                                <iframe class="${embedMediaType}" src="${embedSrc}" ${(iframetitle?has_content)?then('title="${iframetitle}"', '')} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
+                                <iframe src="${embedSrc}" ${(iframetitle?has_content)?then('title="${iframetitle}"', '')} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"></iframe>
                             </#if>
                         </div>
 
