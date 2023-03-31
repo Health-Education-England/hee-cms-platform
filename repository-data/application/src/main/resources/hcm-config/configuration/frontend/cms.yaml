@@ -3,9 +3,8 @@ definitions:
     /hippo:configuration/hippo:frontend/cms/cms-services/localeProviderService/en:
       country: gb
     /hippo:configuration/hippo:frontend/cms/cms-services/assetValidationService:
-      extensions.allowed: ['*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
-        '*.xlsx', '*.odt', '*.fodt', '*.odp', '*.fodp', '*.ods', '*.fods', '*.odg',
-        '*.fodg', '*.mrc', '*.txt']
+      extensions.allowed: ['*.doc', '*.docx', '*.odt', '*.pdf', '*.xls', '*.xlsx',
+        '*.ods', '*.ppt', '*.pptx']
     /hippo:configuration/hippo:frontend/cms/cms-services/imageValidationService:
       extensions.allowed: ['*.jpg', '*.jpeg', '*.gif', '*.png']
     /hippo:configuration/hippo:frontend/cms/cms-services/publicationDocumentValidationService:

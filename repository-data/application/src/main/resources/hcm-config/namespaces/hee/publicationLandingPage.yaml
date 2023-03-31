@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 032b4754-1fe8-48b2-af8f-f7b0277f8b1e
+          jcr:uuid: d093fc7e-0bb2-4089-8cc8-f0b49dbd56e4
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -112,22 +112,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
             hipposysedit:validators: [required]
-          /alternateVersions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:languageVersions
-            hipposysedit:primary: false
-            hipposysedit:type: hee:publicationResource
-          /documentVersions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:documentVersions
-            hipposysedit:primary: false
-            hipposysedit:type: hee:publicationResource
           /authors:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -144,12 +128,28 @@ definitions:
             hipposysedit:path: hee:hideAuthorContactDetails
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /assetVersions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:assetVersions
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /assetLanguageVersions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:assetLanguageVersions
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 49454cc7-724b-4bab-bfa1-afb5b6ae318e
+          jcr:uuid: a90f4110-40e3-4970-94b4-70d24d8eb57a
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -171,30 +171,16 @@ definitions:
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:languageVersions:
-            jcr:primaryType: hippo:resource
-            hippo:filename: hippo:resource
-            jcr:data:
-              type: binary
-              resource: /namespaces/hee/publicationLandingPage/prototypes/prototype/languageVersions/hippo-resource
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2008-03-26T12:03:00+01:00
-            jcr:mimeType: application/vnd.hippo.blank
-            jcr:mixinTypes: ['mix:created']
-          /hee:documentVersions:
-            jcr:primaryType: hippo:resource
-            hippo:filename: hippo:resource
-            jcr:data:
-              type: binary
-              resource: /namespaces/hee/publicationLandingPage/prototypes/prototype/documentVersions/hippo-resource
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2008-03-26T12:03:00+01:00
-            jcr:mimeType: application/vnd.hippo.blank
-            jcr:mixinTypes: ['mix:created']
           /hee:webPublications:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:authors:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:assetVersions:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:assetLanguageVersions:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -358,10 +344,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:report']
-          /documentVersions:
+          /assetVersions:
             jcr:primaryType: frontend:plugin
-            caption: Document Versions
-            field: documentVersions
+            caption: Document versions
+            field: assetVersions
             hint: "Browse to a file to associate with this publication.\r\n  \r\n\
               Limited to a max file size of 10Mb and the following doc types: \r\n\
               \r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
@@ -369,10 +355,11 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /languageVersions:
+              base.path: /content/assets
+          /assetLanguageVersions:
             jcr:primaryType: frontend:plugin
             caption: Alternate language versions
-            field: alternateVersions
+            field: assetLanguageVersions
             hint: "Browse to an alternate language version of this publication.\r\n\
               \r\nLimited to a max file size of 10Mb and the following doc types:\
               \ \r\n\r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
@@ -380,3 +367,4 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              base.path: /content/assets

@@ -1,11 +1,14 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import org.hippoecm.hst.content.beans.standard.HippoAsset;
+import org.hippoecm.hst.content.beans.standard.HippoMirrorBean;
 import org.hippoecm.hst.content.beans.Node;
-import java.util.Calendar;
-import uk.nhs.hee.web.beans.PageLastNextReview;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import java.util.Calendar;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import org.hippoecm.hst.content.beans.standard.HippoResourceBean;
 
 /** 
@@ -63,18 +66,6 @@ public class PublicationLandingPage extends BaseDocument {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:documentVersions")
-    public List<HippoResourceBean> getDocumentVersions() {
-        return getChildBeansByName("hee:documentVersions",
-                HippoResourceBean.class);
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:languageVersions")
-    public List<HippoResourceBean> getLanguageVersions() {
-        return getChildBeansByName("hee:languageVersions",
-                HippoResourceBean.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:updatedDate")
     public Calendar getUpdatedDate() {
         return getSingleProperty("hee:updatedDate");
@@ -93,5 +84,17 @@ public class PublicationLandingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:assetVersions")
+    public List<HippoResourceBean> getAssetVersions() {
+        List<HippoMirrorBean> mirrorBeans = getChildBeansByName("hee:assetVersions",HippoMirrorBean.class);
+        return mirrorBeans.stream().map(bean -> ((HippoAsset) bean.getReferencedBean()).getAsset()).collect(Collectors.toList());
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:assetLanguageVersions")
+    public List<HippoResourceBean> getAssetLanguageVersions() {
+        List<HippoMirrorBean> mirrorBeans = getChildBeansByName("hee:assetLanguageVersions",HippoMirrorBean.class);
+        return mirrorBeans.stream().map(bean -> ((HippoAsset) bean.getReferencedBean()).getAsset()).collect(Collectors.toList());
     }
 }

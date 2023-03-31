@@ -28,8 +28,8 @@
             </h3>
 
             <@docDetailBlockPartial
-                publishedDate=docLink.properties['jcr:created']
-                updatedDate=docLink.lastModified
+                publishedDate=(docLink.properties['jcr:created']!"")
+                updatedDate=(docLink.lastModified!"")
                 fileType=docLink.filename?keep_after_last(".")
                 fileLengthInKB=docLink.lengthKB />
         </div>
@@ -38,7 +38,7 @@
 
 <#--  Renders document detail block partial i.e. renders document published, updated, type and size  -->
 <#macro docDetailBlockPartial publishedDate updatedDate fileType fileLengthInKB=0>
-    <span>Published: ${getDefaultFormattedDate(publishedDate)}</span>
+    <#if publishedDate?has_content><span>Published: ${getDefaultFormattedDate(publishedDate)}</span></#if>
     <#if updatedDate?has_content><span>Updated: ${getDefaultFormattedDate(updatedDate)}</span></#if>
     <span>${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}</span>
 </#macro>
@@ -100,23 +100,21 @@
                         </#list>
                     </#if>
 
-                    <#--  Document versions  -->
-                    <#if document.documentVersions?has_content && !(document.documentVersions?size == 1 && document.documentVersions[0].mimeType == 'application/vnd.hippo.blank')>
-                        <#list document.documentVersions as link>
-                            <@docDetailBlockForDocLink docLink=link />
+                    <#--  Asset versions  -->
+                    <#if document.assetVersions?has_content>
+                        <#list document.assetVersions as asset>
+                            <@docDetailBlockForDocLink docLink=asset />
                         </#list>
                     </#if>
 
-                    <#--  Language versions  -->
-                    <#if document.languageVersions?has_content && !(document.languageVersions?size == 1 && document.languageVersions[0].mimeType == 'application/vnd.hippo.blank')>
+                    <#--  Asset Language versions  -->
+                    <#if document.assetLanguageVersions?has_content>
                         <h2>Languages</h2>
-                        <#list document.languageVersions as link>
-                            <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                <@docDetailBlockForDocLink docLink=link />
-                            </#if>
+                        <#list document.assetLanguageVersions as asset>
+                            <@docDetailBlockForDocLink docLink=asset />
                         </#list>
                     </#if>
-                    <#--  Documents section: END  -->
+                     <#--  Documents section: END  -->
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
