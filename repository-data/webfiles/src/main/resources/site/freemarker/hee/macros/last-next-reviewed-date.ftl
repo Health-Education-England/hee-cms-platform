@@ -1,44 +1,28 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
 
-<#--  Renders review date with label  -->
-<#macro renderReviewDate contentType reviewDate>
-    <@fmt.message key="${contentType}-next-review"/>: ${reviewDate.getTime()?date?string["${datePattern}"]}
-</#macro>
-
-
 <#assign datePattern = "d MMMM yyyy">
 <#macro lastNextReviewedDate lastNextReviewedDate contentType='page'>
     <#if lastNextReviewedDate.lastReviewed?? || lastNextReviewedDate.nextReviewed??>
+
         <#if contentType='media'>
-            <#--  Last & next reviewed dates for Media embed  -->
-            <div class="nhsuk-media__reviews">
+            <#assign wrapperDivClass='nhsuk-media__reviews'/>
+        <#else>
+            <#assign wrapperDivClass='nhsuk-review-date'/>
+        </#if>
+
+        <div class="${wrapperDivClass}">
+            <p class="nhsuk-body-s">
                 <#if lastNextReviewedDate.lastReviewed??>
-                    <p>
-                        <@renderReviewDate contentType=contentType reviewDate=lastNextReviewedDate.lastReviewed/>
-                    </p>
+                    <@fmt.message key="${contentType}-last-reviewed"/>: ${lastNextReviewedDate.lastReviewed.getTime()?date?string["${datePattern}"]}
                 </#if>
                 <#if lastNextReviewedDate.nextReviewed??>
-                    <p>
-                        <@renderReviewDate contentType=contentType reviewDate=lastNextReviewedDate.nextReviewed/>
-                    </p>
-                </#if>
-            </div>
-        <#else>
-            <#--  Last & next reviewed dates for pages  -->
-            <div class="nhsuk-review-date">
-                <p class="nhsuk-body-s">
                     <#if lastNextReviewedDate.lastReviewed??>
-                        <@renderReviewDate contentType=contentType reviewDate=lastNextReviewedDate.lastReviewed/>
+                        <br/>
                     </#if>
-                    <#if lastNextReviewedDate.nextReviewed??>
-                        <#if lastNextReviewedDate.lastReviewed??>
-                            <br/>
-                        </#if>
-                        <@renderReviewDate contentType=contentType reviewDate=lastNextReviewedDate.nextReviewed/>
-                    </#if>
-                </p>
-            </div>
-        </#if>
+                    <@fmt.message key="${contentType}-next-review"/>: ${lastNextReviewedDate.nextReviewed.getTime()?date?string["${datePattern}"]}
+                </#if>
+            </p>
+        </div>
     </#if>
 </#macro>
