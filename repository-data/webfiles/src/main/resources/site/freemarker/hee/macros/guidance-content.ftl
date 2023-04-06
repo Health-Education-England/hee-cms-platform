@@ -54,6 +54,9 @@
                                             <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                                 <@hee.media media=block/>
                                                 <#break>
+                                            <#case "uk.nhs.hee.web.beans.QuoteReference">
+                                                <@hee.quote block=block/>
+                                                <#break>
                                             <#case "uk.nhs.hee.web.beans.TableReference">
                                                 <@hee.table table=block/>
                                                 <#break>
