@@ -11,23 +11,26 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: 49eca4dd-8f82-46a0-a5c8-6e887c6be27a
+    hippo:versionHistory: e6c4c655-4440-498a-af64-10af18b60984
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: c9060ac6-acfa-4c55-9f2d-8ddfd44caef7
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
       hee:title: Expert Search Early Adopters pilot – pre-switch search data
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:tags: [today, monday, tuesday, experts]
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:29.061Z
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:29:23.285+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -199,10 +202,11 @@
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 97344b90-25df-4262-9bfd-a038b60818f1
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
@@ -210,9 +214,10 @@
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
+      hippostd:tags: [today, monday, tuesday, experts]
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:54.163Z
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:23:06.197+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -384,10 +389,11 @@
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 3c380a88-4a94-4eb9-830c-bd931d8dfd5b
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
@@ -395,11 +401,12 @@
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
+      hippostd:tags: []
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:54.163Z
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:17:46.649+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-12-12T08:58:56.651Z
+      hippostdpubwf:publicationDate: 2023-04-12T14:17:53.016+01:00
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
@@ -568,3 +575,216 @@
       /hee:authors[2]:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+  /test1:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 343b8878-3289-4c19-a26a-3a99c486ec4a
+    /test1[1]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
+      jcr:uuid: d2461deb-71c9-499f-a545-684fdd7375c1
+      hee:author: ''
+      hee:categories: [apprenticeship]
+      hee:hideAuthorContactDetails: false
+      hee:publicationDate: 2023-04-12T14:24:00+01:00
+      hee:summary: Hello again
+      hee:title: Test1
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:tags: [today]
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-04-12T14:24:13.032+01:00
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:26:27.669+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 43656549-fea1-42ab-864c-104cf1ff3852
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>hello hello</p>
+    /test1[2]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 0ec08f4a-8c39-4bdc-90bf-689226408f81
+      hee:author: ''
+      hee:categories: [apprenticeship]
+      hee:hideAuthorContactDetails: false
+      hee:publicationDate: 2023-04-12T14:24:00+01:00
+      hee:summary: Hello again
+      hee:title: Test1
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostd:tags: [today]
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-04-12T14:24:13.032+01:00
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:25:14.014+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 43656549-fea1-42ab-864c-104cf1ff3852
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>hello hello</p>
+  /abc:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 2b29866f-3836-49c3-b279-6a49bf5c7d16
+    hippo:name: ABC
+    /abc[1]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
+      jcr:uuid: 915a25bf-eb70-4549-88e8-d7792cee370a
+      hee:author: ''
+      hee:categories: [BP]
+      hee:hideAuthorContactDetails: false
+      hee:publicationDate: 2023-04-12T14:26:00+01:00
+      hee:summary: qwqwqwqw
+      hee:title: qqwqwqw
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostd:tags: [experts]
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-04-12T14:26:43.941+01:00
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:27:54.319+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ba046d2e-b897-4593-a148-483eccb74a16
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>qwqwqw</p>
+    /abc[2]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 5b8b503f-7c9b-4998-84e3-9ae51ed10c68
+      hee:author: ''
+      hee:categories: [BP]
+      hee:hideAuthorContactDetails: false
+      hee:publicationDate: 2023-04-12T14:26:00+01:00
+      hee:summary: qwqwqwqw
+      hee:title: qqwqwqw
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostd:tags: [experts]
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-04-12T14:26:43.941+01:00
+      hippostdpubwf:lastModificationDate: 2023-04-12T14:27:54.302+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: ba046d2e-b897-4593-a148-483eccb74a16
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>qwqwqw</p>

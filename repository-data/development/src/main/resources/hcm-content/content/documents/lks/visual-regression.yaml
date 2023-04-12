@@ -1116,7 +1116,7 @@
     hippo:versionHistory: edc2d3eb-e140-4c0a-8c70-b9da0fc16bf6
     /vr-blog-post-page[1]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 1a850438-d2a0-4935-8933-fb397229eaa9
       hee:author: ''
       hee:categories: [BP, RD-Databases, Finance]
@@ -1275,7 +1275,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-blog-post-page[2]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: dafd319d-f850-404f-89af-4616f4ebf536
       hee:author: ''
       hee:categories: [BP, RD-Databases, Finance]
@@ -1434,7 +1434,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-blog-post-page[3]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 389431ba-09ab-4474-8cd7-fe73d29d4aec
       hee:author: ''
       hee:categories: [BP, RD-Databases, Finance]

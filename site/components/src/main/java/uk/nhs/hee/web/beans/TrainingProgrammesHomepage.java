@@ -5,7 +5,6 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-
 import java.util.List;
 
 /** 
@@ -49,16 +48,18 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getHippoHtml("hee:overview");
     }
 
-    //Content Blocks
     public List<?> getPathwaysBlocks() {
         return getChildBeansByName("hee:pathways");
     }
+
     public List<?> getTrainingRoutesBlocks() {
         return getChildBeansByName("hee:trainingRoutes");
     }
+
     public List<?> getSupportBlocks() {
         return getChildBeansByName("hee:support");
     }
+
     public List<?> getRegionsBlocks() {
         return getChildBeansByName("hee:regions");
     }
