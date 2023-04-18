@@ -7024,3 +7024,70 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
+  /quote:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 69303a4b-81fc-45eb-8c47-78c4eacb24a9
+    hippo:name: Quote
+    hippostd:foldertype: [new-quote-folder, new-quote-document]
+    /test-quote:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      hippo:name: Test quote
+      hippo:versionHistory: 0e68d1b0-864a-42d9-8506-88b7c0df17c8
+      /test-quote[1]:
+        jcr:primaryType: hee:quote
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: ddda32b4-6871-40ae-8b41-4f885a9b57e1
+        hee:quoteCopy: Pellentesque id posuere sapien vestibulum, quam pellentesque
+          at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue.
+          Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non
+          hendrerit felis.
+        hee:source: Joe Soap
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-04-06T16:53:06.557+01:00
+        hippostdpubwf:lastModificationDate: 2023-04-06T16:53:06.557+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: daeb523b-470d-4e09-b1d9-063480b7abee
+        hippotranslation:locale: document-type-locale
+      /test-quote[2]:
+        jcr:primaryType: hee:quote
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 1cf98202-eb68-4490-8b4c-e42820d68f5f
+        hee:quoteCopy: Pellentesque id posuere sapien vestibulum, quam pellentesque
+          at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue.
+          Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non
+          hendrerit felis.
+        hee:source: Joe Soap
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-04-06T16:53:06.557+01:00
+        hippostdpubwf:lastModificationDate: 2023-04-06T16:53:37.004+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: daeb523b-470d-4e09-b1d9-063480b7abee
+        hippotranslation:locale: document-type-locale
+      /test-quote[3]:
+        jcr:primaryType: hee:quote
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8e08ae59-e6ba-4457-b664-614e188176b8
+        hee:quoteCopy: Pellentesque id posuere sapien vestibulum, quam pellentesque
+          at libero. Aliquam at id fames hendrerit in vulputate orci aliquet augue.
+          Massa penatibus sociis et nisl. Enim aliquam mauris suscipit turpis non
+          hendrerit felis.
+        hee:source: Joe Soap
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-04-06T16:53:06.557+01:00
+        hippostdpubwf:lastModificationDate: 2023-04-06T16:53:37.004+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-04-06T16:53:39.311+01:00
+        hippotranslation:id: daeb523b-470d-4e09-b1d9-063480b7abee
+        hippotranslation:locale: document-type-locale

@@ -134,6 +134,9 @@ definitions:
           /publicationlisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/publicationlisting-main.ftl
+          /trainingprogrammeshomepage-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/trainingProgrammesHomePage-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -232,6 +235,12 @@ definitions:
               hst:iconpath: images/catalog-component-icons/generic-list.svg
               hst:label: Publication Collection Page
               hst:template: publicationlisting-main
+            /trainingprogrammes-homepage:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.TrainingProgrammesHomepageComponent
+              hst:iconpath: images/catalog-component-icons/simple-content.svg
+              hst:label: Training Programmes Homepage
+              hst:template: trainingprogrammeshomepage-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
@@ -251,5 +260,8 @@ definitions:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
       /website-testing:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /kls:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

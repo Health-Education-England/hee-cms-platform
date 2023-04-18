@@ -48,7 +48,9 @@
     <div class="hee-publication-doc__wrapper">
         <div class="hee-publication-doc__icon">
             <div class="hee-publication-doc__icon__page"></div>
-            <div class="hee-publication-doc__icon__corner"></div>
+            <div class="hee-publication-doc__icon__corner">
+                <div class="hee-publication-doc__icon__corner__triangle"></div>
+            </div>
         </div>
         <div class="hee-publication-doc__icon__title">${fileType}</div>
     </div>
