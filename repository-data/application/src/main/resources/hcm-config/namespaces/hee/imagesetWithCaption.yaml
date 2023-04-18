@@ -22,6 +22,7 @@ definitions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:path: hippogallery:description
             hipposysedit:type: Text
+            hipposysedit:validators: [required]
           /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:path: hee:caption
@@ -41,15 +42,20 @@ definitions:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:imagesetWithCaption
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: b231b211-2129-49cc-a69e-586bcc2b0468
+          jcr:mixinTypes: ['mix:versionable', 'mix:referenceable']
+          jcr:uuid: f509c7c9-4ffb-422e-8ec4-7fef953b06d8
+          hippogallery:description: ''
+          hee:caption: ''
           /hippogallery:thumbnail:
             jcr:primaryType: hippogallery:image
             jcr:data:
               type: binary
-              resource: /namespaces/hee/imagesetWithCaption/prototypes/prototype_thumbnail.gif
-            jcr:lastModified: 1970-01-01T00:00:00Z
-            jcr:mimeType: image/gif
+              resource: /namespaces/hee/imagesetWithCaption/prototypes/prototype/thumbnail/thumbnail.jpg
+            jcr:lastModified: 2008-03-26T12:03:00+01:00
+            jcr:mimeType: image/jpeg
+            jcr:encoding: UTF-8
+            hippogallery:height: 94
+            hippogallery:width: 94
           /hippogallery:original:
             jcr:primaryType: hippogallery:image
             jcr:data:
