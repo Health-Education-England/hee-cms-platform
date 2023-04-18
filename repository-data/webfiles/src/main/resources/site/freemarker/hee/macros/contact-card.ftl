@@ -6,12 +6,10 @@
 
 <#macro contactCard contact description="" newCard=false>
     <#if contact??>
-        <div class="nhsuk-contact nhsuk-contact__card">
-            <#if hst.isBeanType(contact, 'uk.nhs.hee.web.beans.Person')>
-                <@personContact.personContact person=contact description=description newCard=newCard />
-            <#elseif hst.isBeanType(contact, 'uk.nhs.hee.web.beans.Department')>
-                <@departmentContact.departmentContact department=contact description=description newCard=newCard />
-            </#if>
-        </div>
+        <#if hst.isBeanType(contact, 'uk.nhs.hee.web.beans.Person')>
+            <@personContact.personContact person=contact description=description newCard=newCard />
+        <#elseif hst.isBeanType(contact, 'uk.nhs.hee.web.beans.Department')>
+            <@departmentContact.departmentContact department=contact description=description newCard=newCard />
+        </#if>
     </#if>
 </#macro>

@@ -1,11 +1,12 @@
 <#include "../../include/imports.ftl">
+<#include "../utils/phone-number-util.ftl">
 
 <#--  Renders Person for Author card  -->
 <#macro personAuthor person bioSummary hideAuthorContactDetails>
     <div class="hee-card hee-card--author">
 
         <#--  Author header  -->
-        <div class="hee-card--author__header">
+        <div class="hee-card--header">
             <#-- Get Person Initials -->
             <#assign nameArray = person.name?split(" ")>
             <#if nameArray?size gt 1 >
@@ -29,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="hee-card--author__details">
+            <div class="hee-card--details">
                 <#--  Name  -->
                 <#if person.title?has_content>
                     <#assign nameWithTitle> ${person.title} ${person.name} </#assign>
@@ -65,6 +66,13 @@
         <#--  Author contact details  -->
         <ul class="hee-card__contact">
             <#if !hideAuthorContactDetails>
+                <#--  Phone  -->
+                <#if person.phoneNumber?has_content>
+                    <li class="hee-card__telephone hee-card__contact__item" aria-label="Telephone">
+                        <a href="tel:${getUKCountryCodePrefixedPhoneNumber(person.phoneNumber)?replace(' ', '')}" title="Opens call">${getUKCountryCodePrefixedPhoneNumber(person.phoneNumber)}${person.phoneExtension?has_content?then(' (Ext: ' + person.phoneExtension + ')', '')}</a>
+                    </li>
+                </#if>
+
                 <#--  Email  -->
                 <#if person.email?has_content>
                     <li class="hee-card__email hee-card__contact__item" aria-label="Email">
