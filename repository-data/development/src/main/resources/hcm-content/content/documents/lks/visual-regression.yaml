@@ -14,7 +14,7 @@
     hippo:versionHistory: 313c65b5-0e1a-40d2-a6b0-a359d945382b
     /visual-regression-summary-page[1]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 774e626e-3a4a-4153-bc26-5be2114eecf6
       hee:addToAZ: false
       hee:summary: Provides a summary of all visual regression pages [as cards]
@@ -73,7 +73,7 @@
           hippo:docbase: 268aec2e-ad6a-4eb3-a714-9791631cafc9
     /visual-regression-summary-page[2]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 54a1a9f6-3d0d-4de6-ad78-37f6f1eaf2ce
       hee:addToAZ: false
       hee:summary: Provides a summary of all visual regression pages [as cards]
@@ -132,7 +132,7 @@
           hippo:docbase: 268aec2e-ad6a-4eb3-a714-9791631cafc9
     /visual-regression-summary-page[3]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: f75fd915-d4db-412c-b07c-0c2060bae80c
       hee:addToAZ: false
       hee:summary: Provides a summary of all visual regression pages [as cards]
@@ -198,7 +198,7 @@
     hippo:versionHistory: 34193abc-6b4e-4492-8082-5a63a1766c6d
     /vr-home-page[1]:
       jcr:primaryType: hee:HomePage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 1831d9ce-9272-4e46-8d2f-e7c1a063af9e
       hee:summary: Vivamus magna justo, lacinia eget consectetur sed, convallis at
         tellus. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada.
@@ -444,7 +444,7 @@
           hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
     /vr-home-page[2]:
       jcr:primaryType: hee:HomePage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 85b8ef66-d58e-49ed-a217-906fc06d46f1
       hee:summary: Vivamus magna justo, lacinia eget consectetur sed, convallis at
         tellus. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada.
@@ -690,7 +690,7 @@
           hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
     /vr-home-page[3]:
       jcr:primaryType: hee:HomePage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 1a81d7af-7ec0-4398-b17a-712464991f28
       hee:summary: Vivamus magna justo, lacinia eget consectetur sed, convallis at
         tellus. Nulla porttitor accumsan tincidunt. Donec rutrum congue leo eget malesuada.
@@ -943,7 +943,7 @@
     hippo:versionHistory: b631e941-bbe1-4a43-8cf0-1d2caa09e181
     /vr-landing-page[1]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: cf47750c-08d3-4c9d-a906-f11b2af0746e
       hee:addToAZ: false
       hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus
@@ -999,7 +999,7 @@
           hippo:docbase: 4f1dce33-1e03-4c52-a767-719ac7d9471c
     /vr-landing-page[2]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: c78d2e33-2815-4827-89f3-4193429756fa
       hee:addToAZ: false
       hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus
@@ -1054,7 +1054,7 @@
           hippo:docbase: 4f1dce33-1e03-4c52-a767-719ac7d9471c
     /vr-landing-page[3]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 60b2c887-ba86-403b-b3af-1f1eee4c3cd5
       hee:addToAZ: false
       hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Vivamus
@@ -1600,7 +1600,7 @@
     hippo:versionHistory: c34498ff-2085-460a-a13b-e33b322866bc
     /vr-news-article-page[1]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 6d59bec6-ccb8-4c85-9fb2-7ce4201f0d3f
       hee:author: ''
       hee:categories: []
@@ -1784,7 +1784,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-news-article-page[2]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: b15e2033-2e04-43a2-ad1f-ba9d2c0dad5d
       hee:author: ''
       hee:categories: []
@@ -1968,7 +1968,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-news-article-page[3]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 67fb1a42-844b-4ad7-b1ad-546fe5984e00
       hee:author: ''
       hee:categories: []
@@ -2159,7 +2159,7 @@
     hippo:versionHistory: 4c628d37-57db-47a4-9a04-194802df39bb
     /vr-standard-content-page[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: c0b868ad-71da-40c8-b3ab-74b38d6b8234
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent
@@ -2414,7 +2414,7 @@
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
     /vr-standard-content-page[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 6d37d71e-b80a-4391-a8c5-ae5beccde70d
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent
@@ -2669,7 +2669,7 @@
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
     /vr-standard-content-page[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 332e8352-44c4-4b0f-bee2-333aa1ec459b
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent
@@ -2931,7 +2931,7 @@
     hippo:versionHistory: 370574a5-6d5e-41ee-a056-7428bfd9740b
     /vr-scp-newsletter-signup-page[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: c95d7b29-e32b-4a1f-be92-9ffde0602738
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque
@@ -2984,7 +2984,7 @@
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
     /vr-scp-newsletter-signup-page[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: ec512dc6-dbf4-4727-a46b-173751b115d0
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque
@@ -3037,7 +3037,7 @@
           hippo:docbase: dfa923ec-941a-497a-ae5d-710c683f32b3
     /vr-scp-newsletter-signup-page[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 86c1c5ab-b2dd-479c-9648-7875d66693ec
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque
@@ -3097,7 +3097,7 @@
     hippo:versionHistory: af13f039-d069-4469-aa80-4cd5842a219b
     /vr-scp-cookies-page[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 79b26279-0ab3-4713-88ef-92de490f2bfe
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque
@@ -3201,7 +3201,7 @@
           <p>These are the cookies we use on the homepage. Other cookies from Hotjar and Google Analytics may be used on other parts of the site. For full descriptions of these cookies, visit <a rel="noopener noreferrer" href="https://help.hotjar.com/hc/en-us/articles/115011789248-Hotjar-Cookie-Information">Hotjar</a> and <a rel="noopener noreferrer" href="https://developers.google.com/analytics/devguides/collection/gajs/cookie-usage#gtagjs_google_analytics_4_-_cookie_usage%5D">Google Analytics</a>.</p>
     /vr-scp-cookies-page[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: a63df15f-8bbc-4194-9599-b1a7ec0ebbbf
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque
@@ -3305,7 +3305,7 @@
           <p>These are the cookies we use on the homepage. Other cookies from Hotjar and Google Analytics may be used on other parts of the site. For full descriptions of these cookies, visit <a rel="noopener noreferrer" href="https://help.hotjar.com/hc/en-us/articles/115011789248-Hotjar-Cookie-Information">Hotjar</a> and <a rel="noopener noreferrer" href="https://developers.google.com/analytics/devguides/collection/gajs/cookie-usage#gtagjs_google_analytics_4_-_cookie_usage%5D">Google Analytics</a>.</p>
     /vr-scp-cookies-page[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: d0ecc670-38f2-4db8-a378-c26c9462fe96
       hee:addToAZ: false
       hee:summary: Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque
@@ -3416,7 +3416,7 @@
     hippo:versionHistory: 3ed00a4e-ccd4-4e3c-a786-2464d3999357
     /vr-scp-minin-hub-first-page[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 5e48a14f-efdf-4277-b746-72e84c6f2779
       hee:addToAZ: false
       hee:summary: Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia
@@ -3495,7 +3495,7 @@
           hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
     /vr-scp-minin-hub-first-page[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: f4f650a6-3f60-449a-a620-cca6ceadd640
       hee:addToAZ: false
       hee:summary: Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia
@@ -3574,7 +3574,7 @@
           hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
     /vr-scp-minin-hub-first-page[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 2969e01f-d4a5-492d-b201-9dbcba436897
       hee:addToAZ: false
       hee:summary: Sed porttitor lectus nibh. Quisque velit nisi, pretium ut lacinia
@@ -3660,7 +3660,7 @@
     hippo:versionHistory: 186e62b0-3238-49c8-9be8-49597803e137
     /vr-scp-minin-hub-last-page[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:versionable']
       jcr:uuid: 3f42c8a4-d345-4c1a-acd1-65419efa8b53
       hee:addToAZ: false
       hee:summary: Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
@@ -3740,7 +3740,7 @@
           hippo:docbase: cabc00bf-bd7f-4d0f-89e3-920fa0729bf1
     /vr-scp-minin-hub-last-page[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: c91a3be5-26c0-49e0-8a5b-d327da02f0d6
       hee:addToAZ: false
       hee:summary: Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
@@ -3820,7 +3820,7 @@
           hippo:docbase: cabc00bf-bd7f-4d0f-89e3-920fa0729bf1
     /vr-scp-minin-hub-last-page[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 0d727573-7ccd-4fe7-8ff7-2fa04fad5ac5
       hee:addToAZ: false
       hee:summary: Vestibulum ac diam sit amet quam vehicula elementum sed sit amet
@@ -3907,7 +3907,7 @@
     hippo:versionHistory: 26b16fa8-2060-4887-b5d0-c14ca24004fd
     /vr-mini-hub-page[1]:
       jcr:primaryType: hee:MiniHub
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 90f7b530-5ecc-4cde-adaf-b421fdb2a123
       hee:addToAZ: false
       hee:title: '[VR] Mini-hub page'
@@ -3954,7 +3954,7 @@
         hippo:docbase: 76ab2e5d-a059-4efc-9781-07e1309a816c
     /vr-mini-hub-page[2]:
       jcr:primaryType: hee:MiniHub
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 74bda042-c2e3-4479-bdba-8bba32626423
       hee:addToAZ: false
       hee:title: '[VR] Mini-hub page'
@@ -4001,7 +4001,7 @@
         hippo:docbase: 76ab2e5d-a059-4efc-9781-07e1309a816c
     /vr-mini-hub-page[3]:
       jcr:primaryType: hee:MiniHub
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: b8271e5b-2d4e-45fb-9eaa-fe86a77896e7
       hee:addToAZ: false
       hee:title: '[VR] Mini-hub page'
@@ -4055,7 +4055,7 @@
     hippo:versionHistory: a03bc2e4-a402-479d-87a9-e25209113c4b
     /vr-publication-landing-page[1]:
       jcr:primaryType: hee:publicationLandingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: c1b05457-d9d0-446c-923c-de3f38976415
       hee:hideAuthorContactDetails: false
       hee:publicationDate: 2023-02-08T00:00:00Z
@@ -4118,7 +4118,7 @@
         hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
     /vr-publication-landing-page[2]:
       jcr:primaryType: hee:publicationLandingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 4a517cc6-31b3-4622-9ade-2c5468f16519
       hee:hideAuthorContactDetails: false
       hee:publicationDate: 2023-02-08T00:00:00Z
@@ -4181,7 +4181,7 @@
         hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
     /vr-publication-landing-page[3]:
       jcr:primaryType: hee:publicationLandingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 41f9016f-fcdf-4336-86ff-39220945154c
       hee:hideAuthorContactDetails: false
       hee:publicationDate: 2023-02-08T00:00:00Z

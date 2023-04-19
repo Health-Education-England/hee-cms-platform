@@ -15,7 +15,7 @@
     hippo:versionHistory: 544804b5-4354-4049-9eae-b8ca7be6f135
     /knowledge-management[1]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 85363fcb-93f7-4d7b-8a8a-42f5c2a71544
       hee:addToAZ: false
       hee:summary: Get the latest information and advice on LKS
@@ -70,7 +70,7 @@
           hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
     /knowledge-management[2]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 95eccd0b-2555-4213-bc0f-872aaf2de752
       hee:summary: Get the latest information and advice on LKS
       hee:title: Knowledge management
@@ -123,7 +123,7 @@
           hippo:docbase: 67eb3c62-7094-43ca-a42c-2aa8874c9668
     /knowledge-management[3]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 4d5ff5f4-296a-44c1-b8ce-2c8aa37bf1c0
       hee:summary: Get the latest information and advice on LKS
       hee:title: Knowledge management
@@ -183,7 +183,7 @@
     hippo:versionHistory: f6e00ce0-7d25-43b3-b6d5-c9f8333b8a32
     /about[1]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:versionable']
       jcr:uuid: b9640efa-88d7-441e-81fb-2456f80875c7
       hee:addToAZ: false
       hee:summary: Summary ldkasl;kfhaslkfhaslk
@@ -339,7 +339,7 @@
         hippo:values: []
     /about[2]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 245b5461-d5a5-4e87-9cae-25c0933f18b1
       hee:addToAZ: false
       hee:summary: Summary ldkasl;kfhaslkfhaslk
@@ -495,7 +495,7 @@
         hippo:values: []
     /about[3]:
       jcr:primaryType: hee:landingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 202deb78-815a-42fc-b43f-704cbfd2d852
       hee:addToAZ: false
       hee:summary: Summary ldkasl;kfhaslkfhaslk

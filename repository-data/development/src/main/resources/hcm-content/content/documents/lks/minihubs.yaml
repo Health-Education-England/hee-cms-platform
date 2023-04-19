@@ -15,7 +15,7 @@
     hippo:versionHistory: 620673fc-9e06-4d71-aefc-cf39886c9071
     /working-with-the-public[1]:
       jcr:primaryType: hee:MiniHub
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 9f3e339a-2a38-4e10-aa3c-a343bf4ab505
       hee:addToAZ: true
       hee:title: Patient and public information
@@ -53,7 +53,7 @@
         hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
     /working-with-the-public[2]:
       jcr:primaryType: hee:MiniHub
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 3710f949-a31e-4d9f-839b-ecda26621471
       hee:addToAZ: true
       hee:title: Patient and public information
@@ -90,7 +90,7 @@
         hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
     /working-with-the-public[3]:
       jcr:primaryType: hee:MiniHub
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 4db45efb-7fa3-4091-bcd3-211582574ff9
       hee:addToAZ: true
       hee:title: Patient and public information

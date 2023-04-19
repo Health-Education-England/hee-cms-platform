@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['hipposysedit:remodel']
-          hipposysedit:supertype: ['hippo:resource', 'hippogallery:relaxed']
+          hipposysedit:supertype: ['hippogallery:relaxed', 'hippostd:taggable', 'hippo:resource']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /data:
             jcr:primaryType: hipposysedit:field
@@ -62,11 +62,39 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.resource.ResourceUploadPlugin
             validator.id: service.publication.document.validation
             wicket.id: ${cluster.id}.field
+          /tags:
+            jcr:primaryType: frontend:plugin
+            engine: ${engine}
+            mode: ${mode}
+            plugin.class: org.onehippo.forge.ecmtagging.editor.TagsPlugin
+            search.paths: /content
+            wicket.id: ${cluster.id}.field
+            wicket.model: ${wicket.model}
+            widget.cols: '20'
+            widget.rows: '2'
+            /yui.config:
+              jcr:primaryType: frontend:pluginconfig
+              anim.vert: true
+              container.id: tagging-autocomplete
+              schema.fields: [label, url]
+              schema.result.list: response.results
+              use.shadow: true
+              /schema.meta.fields:
+                jcr:primaryType: frontend:pluginconfig
+                totalHits: response.totalHits
+          /tagsuggest:
+            jcr:primaryType: frontend:plugin
+            engine: ${engine}
+            mode: ${mode}
+            numberOfSuggestions: 10
+            plugin.class: org.onehippo.forge.ecmtagging.editor.TagSuggestPlugin
+            wicket.id: ${cluster.id}.field
+            wicket.model: ${wicket.model}
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hippo:resource
-          jcr:mixinTypes: ['mix:created']
+          jcr:mixinTypes: ['mix:created', 'hippostd:taggable']
           hippo:filename: hippo:resource
           jcr:data:
             type: binary

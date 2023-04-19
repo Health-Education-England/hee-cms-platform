@@ -1,5 +1,4 @@
 /content/documents/medical/home:
-  .meta:order-before: specialty-training-hub
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 5be20824-9939-40c0-b6a3-e291fbba5f74
@@ -7,7 +6,7 @@
   hippo:versionHistory: 150dd121-fc25-4e8b-a4dc-cdbef58ed0a6
   /home[1]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: 439d508a-6002-4164-afd7-804783b533d5
     hee:summary: Summary
     hee:title: Title
@@ -38,7 +37,7 @@
         <p>Sem ut orci adipiscing metus tortor sollicitudin enim euismod fusce ex tincidunt tristique commodo bibendum purus nunc aliquam ex maecenas fusce eget nulla ac maximus.</p>
   /home[2]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
     jcr:uuid: 36da4d95-4dd8-4965-b076-aa0642f7deb4
     hee:summary: Summary
     hee:title: Title
@@ -69,7 +68,7 @@
         <p>Sem ut orci adipiscing metus tortor sollicitudin enim euismod fusce ex tincidunt tristique commodo bibendum purus nunc aliquam ex maecenas fusce eget nulla ac maximus.</p>
   /home[3]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: 6047b9d2-e203-4b6c-bfcf-64d71bef3ee2
     hee:summary: Summary
     hee:title: Title

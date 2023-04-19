@@ -21,7 +21,7 @@
       hippo:versionHistory: bfa3f904-9857-430e-ab71-5c6da6f820ba
       /modern-apprentice-in-cellular-pathology[1]:
         jcr:primaryType: hee:caseStudy
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
         jcr:uuid: b4e15551-dd19-447b-a3e9-8db9fa2eaf41
         hee:impactGroup: scientific_and_technical
         hee:impactTypes: [contributed_to_personal_or_professional_development, improved_the_quality_of_patient_care]
@@ -54,7 +54,7 @@
           jcr:mimeType: application/pdf
       /modern-apprentice-in-cellular-pathology[2]:
         jcr:primaryType: hee:caseStudy
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
         jcr:uuid: 6d8cf9f1-d240-4c82-8ba6-0c397910a85f
         hee:impactGroup: scientific_and_technical
         hee:impactTypes: [contributed_to_personal_or_professional_development, improved_the_quality_of_patient_care]
@@ -86,7 +86,7 @@
           jcr:mimeType: application/pdf
       /modern-apprentice-in-cellular-pathology[3]:
         jcr:primaryType: hee:caseStudy
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
         jcr:uuid: 21b946a2-b1f9-4f8d-ba64-43eae58b3204
         hee:impactGroup: scientific_and_technical
         hee:impactTypes: [contributed_to_personal_or_professional_development, improved_the_quality_of_patient_care]
@@ -125,7 +125,7 @@
     hippo:versionHistory: d421b8e4-ba40-493e-ae41-1423c44723fb
     /search-case-study[1]:
       jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: ca16231a-9f11-47c5-b6a8-34e31f1567a7
       hee:impactGroup: medicine_and_dental
       hee:impactTypes: [contributed_to_personal_or_professional_development]
@@ -155,7 +155,7 @@
         jcr:mimeType: application/vnd.openxmlformats-officedocument.wordprocessingml.document
     /search-case-study[2]:
       jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: aac11152-6322-43eb-9954-8dcf88047b8a
       hee:impactGroup: medicine_and_dental
       hee:impactTypes: [contributed_to_personal_or_professional_development]
@@ -184,7 +184,7 @@
         jcr:mimeType: application/vnd.openxmlformats-officedocument.wordprocessingml.document
     /search-case-study[3]:
       jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 4f5ecd13-aa2a-4531-8fdf-068f411ee025
       hee:impactGroup: medicine_and_dental
       hee:impactTypes: [contributed_to_personal_or_professional_development]
@@ -220,7 +220,7 @@
     hippo:versionHistory: 26b9addf-52d8-48e9-afc2-17e3244187a4
     /testcasestudy[1]:
       jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: d5bed5b1-864d-4a5b-8839-36b7c2cda9aa
       hee:impactGroup: admin_and_clerical
       hee:impactTypes: [contributed_to_personal_or_professional_development]
@@ -250,7 +250,7 @@
         jcr:mimeType: text/plain
     /testcasestudy[2]:
       jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 0ac7ef4f-5e64-4a97-bc99-b15d400e5739
       hee:impactGroup: admin_and_clerical
       hee:impactTypes: [contributed_to_personal_or_professional_development]
@@ -279,7 +279,7 @@
         jcr:mimeType: text/plain
     /testcasestudy[3]:
       jcr:primaryType: hee:caseStudy
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 95e8b741-0f26-4165-bd50-deb5ab9088c9
       hee:impactGroup: admin_and_clerical
       hee:impactTypes: [contributed_to_personal_or_professional_development]

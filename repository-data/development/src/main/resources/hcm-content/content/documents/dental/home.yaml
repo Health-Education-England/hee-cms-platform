@@ -6,7 +6,7 @@
   hippo:versionHistory: e264326e-45ad-47dc-8ab2-700637a4f2f2
   /home[1]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: f7ce909f-0300-4004-969c-edff9fb33004
     hee:summary: Summary
     hee:title: Title
@@ -35,7 +35,7 @@
         <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   /home[2]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
     jcr:uuid: 25c306f6-1690-46e5-94da-4eaf26d083c5
     hee:summary: Summary
     hee:title: Title
@@ -64,7 +64,7 @@
         <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   /home[3]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: 590c77ed-22b1-4618-a7ee-8764980c79a1
     hee:summary: Summary
     hee:title: Title

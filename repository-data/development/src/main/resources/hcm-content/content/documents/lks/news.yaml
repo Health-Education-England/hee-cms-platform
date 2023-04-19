@@ -15,7 +15,7 @@
     hippo:versionHistory: be4080c6-2fdf-4ed6-ba38-8ad3a4a2f90e
     /record-number-of-gps-accepted-on-training-placements[1]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 625c02f0-d009-44d0-b824-fa64e6ae62cd
       hee:author: Joe Bloggs
       hee:categories: []
@@ -97,7 +97,7 @@
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
     /record-number-of-gps-accepted-on-training-placements[2]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 42cc15c0-32e9-43c1-bf2b-4a561310530f
       hee:author: Joe Bloggs
       hee:categories: []
@@ -179,7 +179,7 @@
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
     /record-number-of-gps-accepted-on-training-placements[3]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 1582f76a-7f86-4cad-8233-5e5c52facea3
       hee:author: Joe Bloggs
       hee:categories: []
@@ -268,7 +268,7 @@
     hippo:versionHistory: 937d1398-d898-4d46-b377-8d990caa6aea
     /call for-nhs-ambassadors to-inspire-young-people[1]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 4f988973-ca43-4f09-b5b2-99ede28d74f2
       hee:author: Sam Sparks
       hee:categories: []
@@ -329,7 +329,7 @@
         hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
     /call for-nhs-ambassadors to-inspire-young-people[2]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 98ab13c1-3fac-41ff-ba90-f51a55d22b01
       hee:author: Sam Sparks
       hee:categories: []
@@ -390,7 +390,7 @@
         hippo:docbase: 3e62d4df-9ec5-4e03-8ca2-e4f084048900
     /call for-nhs-ambassadors to-inspire-young-people[3]:
       jcr:primaryType: hee:news
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: cb2ef81c-4c08-4205-9b01-3af7c6ffd713
       hee:author: Sam Sparks
       hee:categories: []

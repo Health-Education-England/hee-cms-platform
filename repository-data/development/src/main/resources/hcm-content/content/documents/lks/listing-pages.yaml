@@ -15,7 +15,7 @@
     hippo:versionHistory: 746e7695-18c1-4b0a-b9d4-6f2b17d80b86
     /bulletins[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 11868121-bc83-44fb-ae45-4764668ff356
       hee:documentTypes: []
       hee:listingPageType: bulletin
@@ -41,7 +41,7 @@
         hippo:values: []
     /bulletins[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 401ac712-a209-4a70-bbfc-376fb1b10682
       hee:documentTypes: []
       hee:listingPageType: bulletin
@@ -67,7 +67,7 @@
         hippo:values: []
     /bulletins[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 945b5dd0-be7b-441d-b198-d46b6e34e2e4
       hee:documentTypes: []
       hee:listingPageType: bulletin
@@ -100,7 +100,7 @@
     hippo:versionHistory: 62afa439-a896-4f9c-9f99-4695e80a9fbd
     /search-results[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: e734ac17-0503-4c18-a111-7ea5d4ab8e9d
       hee:addToAZ: false
       hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
@@ -129,7 +129,7 @@
         hippo:values: []
     /search-results[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: b843cfa2-5737-46f9-bba2-10d0d067a803
       hee:addToAZ: false
       hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
@@ -157,7 +157,7 @@
         hippo:values: []
     /search-results[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: ac0dc40d-426f-4299-840e-929ebf3d6a53
       hee:addToAZ: false
       hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
@@ -192,7 +192,7 @@
     hippo:versionHistory: d865c9af-b241-4e10-919a-9df02d4a008d
     /blogs[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 1eb4a342-0e50-4d7e-b05b-36b9ab162daf
       hee:documentTypes: []
       hee:listingPageType: blog
@@ -217,7 +217,7 @@
         hippo:values: []
     /blogs[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: c03bd01e-1bac-4e0e-90a1-b9ed3d4fd66f
       hee:documentTypes: []
       hee:listingPageType: blog
@@ -242,7 +242,7 @@
         hippo:values: []
     /blogs[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 124dfc1f-08cc-4d9b-8e32-108f0842348d
       hee:documentTypes: []
       hee:listingPageType: blog
@@ -274,7 +274,7 @@
     hippo:versionHistory: 4513b667-5739-4734-b5ba-f6b12a4709c0
     /case-studies[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 1667ad65-b94e-4204-88a1-bd47490711fc
       hee:addToAZ: true
       hee:documentTypes: []
@@ -301,7 +301,7 @@
         hippo:values: []
     /case-studies[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: e350a851-69ac-4a5f-a7e7-36cc4b88f958
       hee:addToAZ: true
       hee:documentTypes: []
@@ -328,7 +328,7 @@
         hippo:values: []
     /case-studies[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: fedf7887-c6bb-4085-b5ba-f1b97b4ecc74
       hee:addToAZ: true
       hee:documentTypes: []
@@ -362,7 +362,7 @@
     hippo:versionHistory: e3b68fc1-9243-4a84-96ab-e68c13e22b6a
     /search-bank[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: a63eeea2-b3c8-4c3e-865f-d902715e96b9
       hee:documentTypes: []
       hee:listingPageType: searchbank
@@ -393,7 +393,7 @@
         hippo:values: []
     /search-bank[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 3c1e2aaf-8ed4-4b0b-9cfd-7b0641c711c9
       hee:documentTypes: []
       hee:listingPageType: searchbank
@@ -424,7 +424,7 @@
         hippo:values: []
     /search-bank[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: bbbcbffe-99f9-47c2-86f6-db371b50c58c
       hee:documentTypes: []
       hee:listingPageType: searchbank
@@ -462,7 +462,7 @@
     hippo:versionHistory: f54822c5-68e7-41a5-b32c-f359ab735682
     /events[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 3f709e9b-87b8-4ca9-9068-84f79b5dba82
       hee:documentTypes: []
       hee:listingPageType: event
@@ -487,7 +487,7 @@
         hippo:values: []
     /events[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: a2cf1a77-56e7-4e6b-89e2-f893ee2850a5
       hee:documentTypes: []
       hee:listingPageType: event
@@ -512,7 +512,7 @@
         hippo:values: []
     /events[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 56d5f727-5cf2-417f-9bfb-c07dbed29dab
       hee:documentTypes: []
       hee:listingPageType: event
@@ -544,7 +544,7 @@
     hippo:versionHistory: 2312c76b-205e-4ecb-b8e1-8abafa3d52c4
     /news[1]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: d9b6ae1d-e6e9-4344-8efb-063997d77a4d
       hee:addToAZ: false
       hee:documentTypes: []
@@ -571,7 +571,7 @@
         hippo:values: []
     /news[2]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 7e95f8cf-f27b-4c29-977e-9ac88ffbed39
       hee:documentTypes: []
       hee:listingPageType: news
@@ -596,7 +596,7 @@
         hippo:values: []
     /news[3]:
       jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 24337054-9b4b-425d-8930-7f30835c80d4
       hee:documentTypes: []
       hee:listingPageType: news

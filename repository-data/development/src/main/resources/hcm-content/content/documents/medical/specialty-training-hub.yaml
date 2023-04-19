@@ -1,4 +1,5 @@
 /content/documents/medical/specialty-training-hub:
+  .meta:order-before: medical-trainee-recruitment
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: 6c0e043d-7dbd-4d41-be3a-a7548f51b0eb
@@ -6,7 +7,7 @@
   hippo:versionHistory: d709eb25-6860-4eb3-a332-7e5506de19c9
   /specialty-training-hub[1]:
     jcr:primaryType: hee:landingPage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: 7459e685-51e3-42af-bda7-162e0ae67fd0
     hee:addToAZ: false
     hee:summary: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -33,7 +34,7 @@
       hippo:values: []
   /specialty-training-hub[2]:
     jcr:primaryType: hee:landingPage
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
     jcr:uuid: 003cfce5-93cf-4331-9afd-67b54a9bb9b5
     hee:addToAZ: false
     hee:summary: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
@@ -60,7 +61,7 @@
       hippo:values: []
   /specialty-training-hub[3]:
     jcr:primaryType: hee:landingPage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: f80f5959-0088-43f1-b04d-3203e046983f
     hee:addToAZ: false
     hee:summary: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices

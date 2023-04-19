@@ -6,7 +6,7 @@
   hippo:versionHistory: 71497cfc-3d26-4e34-910e-4bbb86992804
   /home[1]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: 62a63a96-b845-4214-8d39-1529953d43b8
     hee:summary: Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Lorem
       ipsum dolor sit amet, consectetur adipiscing elit.
@@ -31,7 +31,7 @@
       hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
   /home[2]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
     jcr:uuid: 7ba66f72-baf9-43b9-9aec-f23125201b65
     hee:summary: Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Lorem
       ipsum dolor sit amet, consectetur adipiscing elit.
@@ -56,7 +56,7 @@
       hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
   /home[3]:
     jcr:primaryType: hee:HomePage
-    jcr:mixinTypes: ['mix:referenceable']
+    jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
     jcr:uuid: 8e6b0b24-3b89-4817-9841-6307f0be0e36
     hee:summary: Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Lorem
       ipsum dolor sit amet, consectetur adipiscing elit.

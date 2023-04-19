@@ -11,9 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 08f3eafe-d41e-4c57-8443-264f2464e82e
+          jcr:uuid: 7af1f5ff-fe9e-47d9-a0c4-253836f15468
           hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:supertype: ['hippostd:taggable', 'hippotranslation:translated',
+            'hee:basedocument', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /string:
             jcr:primaryType: hipposysedit:field
@@ -42,8 +43,8 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: dae1c55f-cb4b-45bc-a90a-761626b4e480
+          jcr:mixinTypes: ['mix:referenceable', 'hippostd:taggable']
+          jcr:uuid: 6b41f92f-a18c-4695-b89e-c8fab090e41c
           hippostdpubwf:lastModificationDate: 2022-01-26T15:27:07.267Z
           hippostdpubwf:creationDate: 2022-01-26T15:27:07.268Z
           hee:title: ''
@@ -77,3 +78,23 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /tags:
+            jcr:primaryType: frontend:plugin
+            engine: ${engine}
+            mode: ${mode}
+            plugin.class: org.onehippo.forge.ecmtagging.editor.TagsPlugin
+            search.paths: /content
+            wicket.id: ${cluster.id}.field
+            wicket.model: ${wicket.model}
+            widget.cols: '20'
+            widget.rows: '2'
+            /yui.config:
+              jcr:primaryType: frontend:pluginconfig
+              anim.vert: true
+              container.id: tagging-autocomplete
+              schema.fields: [label, url]
+              schema.result.list: response.results
+              use.shadow: true
+              /schema.meta.fields:
+                jcr:primaryType: frontend:pluginconfig
+                totalHits: response.totalHits

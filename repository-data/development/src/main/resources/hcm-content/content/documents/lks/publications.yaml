@@ -28,7 +28,7 @@
         hippo:versionHistory: 3519537a-4012-4996-ad45-f36b35f8d3d5
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
           jcr:uuid: 48e8515a-6a01-4e04-bb8e-6f06775f58f2
           hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -101,7 +101,7 @@
             jcr:mimeType: application/vnd.hippo.blank
         /reasonable-adjustments-policy---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: 0abfe671-b25a-49d9-adab-4288e720fd55
           hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -174,7 +174,7 @@
             jcr:mimeType: application/vnd.hippo.blank
         /reasonable-adjustments-policy---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
           jcr:uuid: 11dacd51-85cc-42b7-b3e6-dd7b9880a83a
           hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1095,7 +1095,7 @@
         hippo:versionHistory: a515f498-3074-48e8-bc69-9f773ae8d431
         /higher-specialist-scientist-training---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
           jcr:uuid: 73871551-caa4-4b43-8501-6ca011e09c7a
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_science, public_health]
@@ -1147,7 +1147,7 @@
             jcr:mimeType: application/vnd.hippo.blank
         /higher-specialist-scientist-training---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: e1650153-5391-4632-9d27-7965b47ce4fa
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_science, public_health]
@@ -1199,7 +1199,7 @@
             jcr:mimeType: application/vnd.hippo.blank
         /higher-specialist-scientist-training---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
           jcr:uuid: 7204e177-bb3e-4ced-be5c-89ae36034711
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_science, public_health]
@@ -1451,7 +1451,7 @@
     hippo:versionHistory: 7767d6d4-b828-445f-aaf4-8f2a1ed72190
     /publications[1]:
       jcr:primaryType: hee:publicationListingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: cca6894f-8d2e-4dec-b849-d8f9c52ccd84
       hee:addToAZ: false
       hee:pageSize: 10
@@ -1479,7 +1479,7 @@
         hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
     /publications[2]:
       jcr:primaryType: hee:publicationListingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 3445486d-edb5-481f-998a-d22956d11c85
       hee:addToAZ: false
       hee:pageSize: 10
@@ -1507,7 +1507,7 @@
         hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
     /publications[3]:
       jcr:primaryType: hee:publicationListingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: f044efc6-5c13-4ef9-a44a-b618b5ddcd67
       hee:addToAZ: false
       hee:pageSize: 10
