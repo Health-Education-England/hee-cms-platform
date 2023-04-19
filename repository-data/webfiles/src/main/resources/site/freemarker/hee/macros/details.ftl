@@ -3,7 +3,7 @@
 <#macro details block>
     <#assign detailsDocument = block.detailsContentBlock>
 
-    <#if detailsDocument.summary?? && detailsDocument.richStatement?? >
+    <#if detailsDocument.summary?has_content && detailsDocument.richStatement?? >
         <details class="nhsuk-details">
             <summary class="nhsuk-details__summary">
             <span class="nhsuk-details__summary-text">

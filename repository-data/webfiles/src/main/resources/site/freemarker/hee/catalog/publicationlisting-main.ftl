@@ -49,7 +49,7 @@
             </div>
         </div>
 
-            <#--  Filters  -->
+        <#--  Filters  -->
         <div class="nhsuk-width-container">
             <div class="page__layout">
                 <aside class="page__leftbar">
