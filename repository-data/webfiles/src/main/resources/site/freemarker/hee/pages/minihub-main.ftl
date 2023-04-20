@@ -145,7 +145,7 @@
 
                         <#--  Related content: START  -->
                         <#if currentGuidance.relatedContent??>
-                            <@hee.contentCards contentCards=currentGuidance.relatedContent/>
+                            <@hee.contentCards contentCards=currentGuidance.relatedContent size="half"/>
                         </#if>
                         <#--  Related content: END  -->
 
