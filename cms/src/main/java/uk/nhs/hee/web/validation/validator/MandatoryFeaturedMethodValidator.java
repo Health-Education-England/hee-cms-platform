@@ -1,6 +1,7 @@
 package uk.nhs.hee.web.validation.validator;
 
 import org.hippoecm.repository.util.JcrUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.onehippo.cms.services.validation.api.ValidationContext;
 import org.onehippo.cms.services.validation.api.Validator;
 import org.onehippo.cms.services.validation.api.Violation;
@@ -12,12 +13,12 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Validates if either publication professions ({@code hee:publicationProfessions})
- * or topics ({@code hee:publicationTopics}) have been provided in the document.
+ * Validates if either publication professions ({@code hee:profession})
+ * or topics ({@code hee:topics}) have been provided in the document  have been provided in the document when Method value is Related.
  */
-public class MandatoryFeaturedContentValidator implements Validator<Node> {
+public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     // Logger
-    private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryFeaturedContentValidator.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryFeaturedMethodValidator.class);
 
     // Method property
 
@@ -28,12 +29,12 @@ public class MandatoryFeaturedContentValidator implements Validator<Node> {
     // Topics property
     private static final String PROPERTY_HEE_TOPICS = "hee:topics";
 
+    private static final String METHOD_VALUE = "Related";
+
     @Override
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
-
-
-            if (node.getProperty(PROPERTY_HEE_METHOD).getString() == "Related" &&
+            if (METHOD_VALUE.equals(node.getProperty(PROPERTY_HEE_METHOD).getString()) &&
                     node.getProperty(PROPERTY_HEE_PROFESSIONS).getValues().length == 0 &&
                     node.getProperty(PROPERTY_HEE_TOPICS).getValues().length == 0) {
                 return Optional.of(context.createViolation());

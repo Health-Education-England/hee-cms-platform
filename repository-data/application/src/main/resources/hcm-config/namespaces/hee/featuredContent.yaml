@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 6c1f1c2a-2937-4362-853b-dccb5f1f4d3e
+          jcr:uuid: 403f3870-ab3a-4eb2-a581-9a64dbfa43ee
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-featured-method-validator', 'hee:mandatory-featured-documents-validator']
           /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -36,8 +37,8 @@ definitions:
           /featuredDocuments:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
             hipposysedit:path: hee:featuredDocuments
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
@@ -65,7 +66,6 @@ definitions:
             hipposysedit:path: hee:publicationtype
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [optional]
           /dynamicdropdown:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -87,7 +87,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: 732f8407-0199-4996-a474-7a4066814c39
+          jcr:uuid: c70b2acd-4a88-4da0-9f27-7c4dcc807725
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:topics: [mental_health, cancer, maternity, workforce_planning, workforce_transformation,
@@ -145,7 +145,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              selectable.options: Manual, Latest, Related
+              selectable.options: Manual,Latest,Related
           /featuredDocuments:
             jcr:primaryType: frontend:plugin
             caption: Featured Documents
