@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 403f3870-ab3a-4eb2-a581-9a64dbfa43ee
+          jcr:uuid: f10f2104-be6c-4a54-8e5f-1228c306add6
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,7 +24,6 @@ definitions:
             hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [optional]
           /method:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -66,6 +65,7 @@ definitions:
             hipposysedit:path: hee:publicationtype
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [optional]
           /dynamicdropdown:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -87,7 +87,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: c70b2acd-4a88-4da0-9f27-7c4dcc807725
+          jcr:uuid: bc1ae755-fc25-418c-8053-71dbb67425c6
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:topics: [mental_health, cancer, maternity, workforce_planning, workforce_transformation,
@@ -101,9 +101,6 @@ definitions:
             psychological_professions, public_health, health_informatics]
           hee:contentType: ''
           hee:publicationtype: ''
-          /hee:featuredDocuments:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
