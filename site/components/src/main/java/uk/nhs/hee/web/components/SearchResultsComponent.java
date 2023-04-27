@@ -34,7 +34,7 @@ public class SearchResultsComponent extends ListingPageComponent {
                             "Will respond with '{}' error response.", searchText, HttpServletResponse.SC_BAD_REQUEST);
 
             try {
-                response.sendError(HttpServletResponse.SC_NOT_ACCEPTABLE);
+                response.sendError(HttpServletResponse.SC_BAD_REQUEST);
             } catch (final IOException e) {
                 LOGGER.error("Caught error '{}' while sending '{}' status error response",
                         e.getMessage(), HttpServletResponse.SC_BAD_REQUEST, e);
