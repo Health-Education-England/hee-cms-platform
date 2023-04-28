@@ -7,9 +7,11 @@ import org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean;
 import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
+import org.hippoecm.hst.core.container.HstContainerURL;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.util.ContentBeanUtils;
 import uk.nhs.hee.web.components.info.PublicationListingPageComponentInfo;
+import uk.nhs.hee.web.linkprocessor.PublicationTemplateSupport;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -55,6 +57,8 @@ public class PublicationListingPageComponent extends ListingPageComponent {
 
         // Adds publication filter facets
         addPublicationFilterFacetsToModel(request);
+
+        request.setAttribute("publicationSupport", new PublicationTemplateSupport(getPubPathPrefix(request)));
     }
 
     /**
@@ -135,4 +139,24 @@ public class PublicationListingPageComponent extends ListingPageComponent {
                 null);
     }
 
+
+    /**
+     * Add teh publication path prefix to teh model./
+     *
+     * The pubPathPrefix is the bit before the "/publications" element
+     * in the path and it will reflect the channel we are currently in
+     *
+     * @param request which will give us access to the model, which we load with the pubPathPrefix
+     */
+    private String getPubPathPrefix(final HstRequest request) {
+        HstContainerURL baseURL = request.getRequestContext().getBaseURL();
+        String reqPath = baseURL.getRequestPath();
+        String mountPath = baseURL.getResolvedMountPath();
+
+        if (reqPath.startsWith(mountPath)) {
+            return reqPath.substring(mountPath.length());
+        }
+
+        return "";
+    }
 }

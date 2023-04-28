@@ -142,3 +142,1514 @@
     hippostd:foldertype: [new-translated-folder, new-document]
     hippotranslation:id: 61781bca-14d7-40b4-83ff-58c0abe037ad
     hippotranslation:locale: en
+  /publications:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: f178d9ee-54fe-4f71-9b3b-c2236e336420
+    hippo:name: Publications
+    hippostd:foldertype: [new-report-folder, new-report-document, new-publicationListingPage-document]
+    hippotranslation:id: b16a9cb5-d19b-4025-a113-fbe1c56f62df
+    hippotranslation:locale: en
+    /dental:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+      hippo:name: Dental
+      hippostd:foldertype: [new-report-folder]
+      hippotranslation:id: ac4bce8f-16c1-4c10-879c-2b7cc9bb2e49
+      hippotranslation:locale: en
+      /2023:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippotranslation:translated']
+        hippostd:foldertype: [new-report-folder, new-publication-landingpage-folder,
+          new-publication-landingpage-document, new-report-document]
+        hippotranslation:id: 711d71d3-aa03-4651-aca5-5e180c3a6691
+        hippotranslation:locale: en
+        /dental-info:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 78c5b3da-9ab0-44ce-b8f9-0173f3b9e537
+          hippo:name: Dental info
+          hippo:versionHistory: 7d955d00-7ef6-485d-b03b-300e1cbd5d36
+          /dental-info[1]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 78f78db9-06db-4cd7-a5fc-13de57eb5539
+            hee:hideAuthorContactDetails: false
+            hee:publicationDate: 2023-04-25T00:00:00+01:00
+            hee:publicationProfessions: [dental]
+            hee:publicationTopics: [advanced_clinical_practice]
+            hee:publicationType: policy_strategy
+            hee:readTime: '12'
+            hee:subtitle: Dental info subtitle
+            hee:summary: Dental info summary
+            hee:title: Dental info
+            hee:updatedDate: 2023-04-21T00:00:00+01:00
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-27T16:16:26.812+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: e5f0b01f-4dd7-4811-a76f-61d1151c592d
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/dental/2023/dental-info/dental-info[1]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:documentVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/dental/2023/dental-info/dental-info[1]/documentVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:webPublications:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
+            /hee:authors:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /dental-info[2]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 4820467a-1bd5-43f2-b8e6-68c926d5ba38
+            hee:hideAuthorContactDetails: false
+            hee:publicationDate: 2023-04-25T00:00:00+01:00
+            hee:publicationProfessions: [dental]
+            hee:publicationTopics: [advanced_clinical_practice]
+            hee:publicationType: policy_strategy
+            hee:readTime: '12'
+            hee:subtitle: Dental info subtitle
+            hee:summary: Dental info summary
+            hee:title: Dental info
+            hee:updatedDate: 2023-04-21T00:00:00+01:00
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-27T16:16:06.328+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: e5f0b01f-4dd7-4811-a76f-61d1151c592d
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/dental/2023/dental-info/dental-info[2]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:documentVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/dental/2023/dental-info/dental-info[2]/documentVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:webPublications:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
+            /hee:authors:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /dental-info[3]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: cebe0f98-42c3-4dcc-8ab6-63bd275d297c
+            hee:hideAuthorContactDetails: false
+            hee:publicationDate: 2023-04-25T00:00:00+01:00
+            hee:publicationProfessions: [dental]
+            hee:publicationTopics: [advanced_clinical_practice]
+            hee:publicationType: policy_strategy
+            hee:readTime: '12'
+            hee:subtitle: Dental info subtitle
+            hee:summary: Dental info summary
+            hee:title: Dental info
+            hee:updatedDate: 2023-04-21T00:00:00+01:00
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-27T16:16:26.812+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-27T16:16:29.008+01:00
+            hippotranslation:id: e5f0b01f-4dd7-4811-a76f-61d1151c592d
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/dental/2023/dental-info/dental-info[3]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:documentVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/dental/2023/dental-info/dental-info[3]/documentVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:webPublications:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
+            /hee:authors:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /dental-info-page-1:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
+          hippo:name: Dental info page 1
+          hippo:versionHistory: a98b66c8-05f6-498a-aaf9-b7b5ba2896f4
+          /dental-info-page-1[1]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: cf516c76-d4e9-46e6-9050-ce1958bceeef
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Dental info page 1
+            hee:summary: Dental info page 1
+            hee:title: Dental info page 1
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-25T10:44:17.068+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 191d9178-bfa0-40f4-829f-3aaa93e10ff7
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Dental info page 1
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Dental info page 1</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /dental-info-page-1[2]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 18a073ab-43f0-4fed-bce6-e1ada386ad49
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Dental info page 1
+            hee:summary: Dental info page 1
+            hee:title: Dental info page 1
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-25T10:44:17.089+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 191d9178-bfa0-40f4-829f-3aaa93e10ff7
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Dental info page 1
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Dental info page 1</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /dental-info-page-1[3]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 769488d3-e9b0-4333-87cf-23ddbbb61789
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Dental info page 1
+            hee:summary: Dental info page 1
+            hee:title: Dental info page 1
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-25T10:44:17.068+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-25T10:44:53.666+01:00
+            hippotranslation:id: 191d9178-bfa0-40f4-829f-3aaa93e10ff7
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Dental info page 1
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Dental info page 1</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /medical:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+      hippo:name: Medical
+      hippostd:foldertype: [new-report-folder]
+      hippotranslation:id: 65597b12-3afa-4643-b291-992757c974a1
+      hippotranslation:locale: en
+      /2022:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippotranslation:translated']
+        hippostd:foldertype: [new-report-folder, new-publication-landingpage-folder,
+          new-publication-landingpage-document, new-report-document]
+        hippotranslation:id: c5426d0b-2752-48d2-9bf3-0e54e7210cb7
+        hippotranslation:locale: en
+        /medical-info:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: ef9907f1-1104-45b8-9f22-39d8918d1e58
+          hippo:name: Medical info
+          hippo:versionHistory: 19abd898-0839-4e39-aa15-b948bef3eaed
+          /medical-info[1]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 1db50840-753b-4289-88af-f6d092a8c715
+            hee:hideAuthorContactDetails: false
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:publicationProfessions: [allied_health]
+            hee:publicationTopics: [advanced_clinical_practice]
+            hee:publicationType: contract
+            hee:readTime: '12'
+            hee:subtitle: Medical info
+            hee:summary: Medical info
+            hee:title: Medical info
+            hee:updatedDate: 2023-04-21T00:00:00+01:00
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:59:09.397+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 43fecae8-b5c6-423e-8dde-e2b52e7118ff
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/medical/2022/medical-info/medical-info[1]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:documentVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/medical/2022/medical-info/medical-info[1]/documentVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:webPublications[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 1ccf6593-eb2e-41bd-96da-dd0e4275fd66
+            /hee:authors:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:webPublications[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 85f1931c-fe36-4a0e-8925-79b3e15c5c93
+          /medical-info[2]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+            jcr:uuid: f450e34c-4443-481d-81e6-d88fda8806f6
+            hee:hideAuthorContactDetails: false
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:publicationProfessions: [allied_health]
+            hee:publicationTopics: [advanced_clinical_practice]
+            hee:publicationType: contract
+            hee:readTime: '12'
+            hee:subtitle: Medical info
+            hee:summary: Medical info
+            hee:title: Medical info
+            hee:updatedDate: 2023-04-21T00:00:00+01:00
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:59:09.380+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 43fecae8-b5c6-423e-8dde-e2b52e7118ff
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/medical/2022/medical-info/medical-info[2]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:documentVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/medical/2022/medical-info/medical-info[2]/documentVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:webPublications[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 1ccf6593-eb2e-41bd-96da-dd0e4275fd66
+            /hee:authors:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:webPublications[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 85f1931c-fe36-4a0e-8925-79b3e15c5c93
+          /medical-info[3]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: fc8ac04c-a76b-47ed-bab9-e30210a43eeb
+            hee:hideAuthorContactDetails: false
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:publicationProfessions: [allied_health]
+            hee:publicationTopics: [advanced_clinical_practice]
+            hee:publicationType: contract
+            hee:readTime: '12'
+            hee:subtitle: Medical info
+            hee:summary: Medical info
+            hee:title: Medical info
+            hee:updatedDate: 2023-04-21T00:00:00+01:00
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:59:09.380+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-21T09:00:00.900+01:00
+            hippotranslation:id: 43fecae8-b5c6-423e-8dde-e2b52e7118ff
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/medical/2022/medical-info/medical-info[3]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:documentVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/medical/2022/medical-info/medical-info[3]/documentVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+            /hee:webPublications[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 1ccf6593-eb2e-41bd-96da-dd0e4275fd66
+            /hee:authors:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:webPublications[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 85f1931c-fe36-4a0e-8925-79b3e15c5c93
+        /medical_info_page_1:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 1ccf6593-eb2e-41bd-96da-dd0e4275fd66
+          hippo:name: Medical info page 1
+          hippo:versionHistory: b62a715c-4d24-4887-8eb7-941035cc31ba
+          /medical_info_page_1[1]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 86abf9e4-be30-4fcd-9937-eaf4c9308055
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Medical info page 1
+            hee:summary: Medical info page 1
+            hee:title: Medical info page 1
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:56:23.479+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 3cb60ce3-243e-45dd-b725-a10a567b8c1a
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Medical info page 1
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Medical info page 1</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /medical_info_page_1[2]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+            jcr:uuid: 1db76a79-30be-4afa-9716-bead9a43f49f
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Medical info page 1
+            hee:summary: Medical info page 1
+            hee:title: Medical info page 1
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:56:23.433+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 3cb60ce3-243e-45dd-b725-a10a567b8c1a
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Medical info page 1
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Medical info page 1</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /medical_info_page_1[3]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: a89fb0d2-7dd3-4a4d-b6b2-5702034224a6
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Medical info page 1
+            hee:summary: Medical info page 1
+            hee:title: Medical info page 1
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:56:23.433+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-21T09:00:01.046+01:00
+            hippotranslation:id: 3cb60ce3-243e-45dd-b725-a10a567b8c1a
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Medical info page 1
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Medical info page 1</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        /medical_info_page_2:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 85f1931c-fe36-4a0e-8925-79b3e15c5c93
+          hippo:name: Medical info page 2
+          hippo:versionHistory: 2c58fe89-7f08-4807-8db7-2a97fb1a02da
+          /medical_info_page_2[1]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: f2c98b23-4830-4902-bf44-8e94130c2659
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Medical info page 2
+            hee:summary: Medical info page 2
+            hee:title: Medical info page 2
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:56:53.259+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 0e9dffa7-cabc-4834-b4d2-d5603e4ce4a2
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Medical info page 2
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Medical info page 2</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /medical_info_page_2[2]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 70e1614a-8afe-4522-b803-ba60e765fa8b
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Medical info page 2
+            hee:summary: Medical info page 2
+            hee:title: Medical info page 2
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:56:36.912+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 0e9dffa7-cabc-4834-b4d2-d5603e4ce4a2
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Medical info page 2
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Medical info page 2</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /medical_info_page_2[3]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 74d0a4e0-8f2e-4f4c-8643-959f4f86efd2
+            hee:publicationDate: 2023-04-21T00:00:00+01:00
+            hee:subtitle: Medical info page 2
+            hee:summary: Medical info page 2
+            hee:title: Medical info page 2
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2023-04-21T08:55:58.101+01:00
+            hippostdpubwf:lastModificationDate: 2023-04-21T08:56:53.259+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-21T09:00:01.119+01:00
+            hippotranslation:id: 0e9dffa7-cabc-4834-b4d2-d5603e4ce4a2
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 0001-01-01T12:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Medical info page 2
+              hee:headingType: H2
+              hee:shortTitle: ''
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>Medical info page 2</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /publications-shared:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 76ea0073-328d-40b8-99aa-a143b196166d
+      hippo:name: Publications (Shared)
+      hippo:versionHistory: 00065501-ce48-4a80-8a76-7263945c251d
+      /publications-shared[1]:
+        jcr:primaryType: hee:publicationListingPage
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: 488f85a7-3e95-4841-af68-9913636cef3d
+        hee:addToAZ: false
+        hee:pageSize: 10
+        hee:subtitle: Curabitur non nulla sit
+        hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit
+          aliquet elit, eget tincidunt nibh pulvinar a.
+        hee:title: Shared Publication listing/collection
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+        hippostdpubwf:lastModificationDate: 2023-04-21T14:00:04.708+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4483ebb0-16e8-49b1-89ad-0f219070eb79
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /publications-shared[2]:
+        jcr:primaryType: hee:publicationListingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8c1f43c6-86c6-4382-b920-3d647e4d4b93
+        hee:addToAZ: false
+        hee:pageSize: 10
+        hee:subtitle: Curabitur non nulla sit
+        hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit
+          aliquet elit, eget tincidunt nibh pulvinar a.
+        hee:title: Shared Publication listing/collection
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+        hippostdpubwf:lastModificationDate: 2023-04-21T13:59:56.621+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4483ebb0-16e8-49b1-89ad-0f219070eb79
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /publications-shared[3]:
+        jcr:primaryType: hee:publicationListingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 572aee15-751d-43c7-8b1c-6f733f9bbad6
+        hee:addToAZ: false
+        hee:pageSize: 10
+        hee:subtitle: Curabitur non nulla sit
+        hee:summary: Nulla quis lorem ut libero malesuada feugiat. Mauris blandit
+          aliquet elit, eget tincidunt nibh pulvinar a.
+        hee:title: Shared Publication listing/collection
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-02T16:54:32.660Z
+        hippostdpubwf:lastModificationDate: 2023-04-21T14:00:04.708+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-04-21T14:00:07.207+01:00
+        hippotranslation:id: 4483ebb0-16e8-49b1-89ad-0f219070eb79
+        hippotranslation:locale: en
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+    /kls:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
+      hippo:name: KLS
+      hippostd:foldertype: [new-report-folder]
+      hippotranslation:id: a7fb9de4-4d1b-4797-9345-a74f9a05a7e5
+      hippotranslation:locale: en
+      /2022:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippotranslation:translated']
+        hippostd:foldertype: [new-report-folder, new-publication-landingpage-document,
+          new-publication-landingpage-folder, new-report-document]
+        hippotranslation:id: eb551ea3-50bb-40fd-98d2-a72021862a17
+        hippotranslation:locale: en
+        /reasonable-adjustments-policy---publication-landing:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: e0e1712c-e41c-493c-9d2d-d444b45e8d62
+          hippo:name: Reasonable adjustments policy - Publication landing
+          hippo:versionHistory: fff74046-1ade-46f2-bef1-dd2f36a45d97
+          /reasonable-adjustments-policy---publication-landing[1]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 83a0a143-7fec-4bc5-82a3-9e28733644a8
+            hee:hideAuthorContactDetails: true
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:publicationProfessions: [public_health]
+            hee:publicationTopics: [knowledge_management, quality, workforce_planning,
+              workforce_transformation]
+            hee:publicationType: policy_strategy
+            hee:readTime: '5'
+            hee:subtitle: NSHCS Policies
+            hee:summary: The Reasonable Adjustments Policy enables you to request
+              reasonable adjustments in your final assessment that are aimed at minimising
+              barriers that might affect your performance in the assessment due to
+              a condition or disability.
+            hee:title: Reasonable adjustments policy
+            hee:updatedDate: 2022-12-31T00:00:00Z
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostd:transferable: false
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
+            hippostdpubwf:lastModificationDate: 2023-04-27T23:06:21.943+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: f9453457-f583-4904-98b6-6c786ea341bd
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:webPublications[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 270537a0-9bba-46a2-9150-83c536c0f880
+            /hee:webPublications[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 5d8b067d-d7ee-4562-92b8-3c91c38d5f16
+            /hee:authors[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+            /hee:authors[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/kls/2022/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[1]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+          /reasonable-adjustments-policy---publication-landing[2]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: f849e78a-0158-480e-9aea-94e0e464588f
+            hee:hideAuthorContactDetails: true
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:publicationProfessions: [public_health]
+            hee:publicationTopics: [knowledge_management, quality, workforce_planning,
+              workforce_transformation]
+            hee:publicationType: policy_strategy
+            hee:readTime: '5'
+            hee:subtitle: NSHCS Policies
+            hee:summary: The Reasonable Adjustments Policy enables you to request
+              reasonable adjustments in your final assessment that are aimed at minimising
+              barriers that might affect your performance in the assessment due to
+              a condition or disability.
+            hee:title: Reasonable adjustments policy
+            hee:updatedDate: 2022-12-31T00:00:00Z
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostd:transferable: false
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
+            hippostdpubwf:lastModificationDate: 2023-04-28T11:43:25.359+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: f9453457-f583-4904-98b6-6c786ea341bd
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:webPublications[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 270537a0-9bba-46a2-9150-83c536c0f880
+            /hee:webPublications[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 5d8b067d-d7ee-4562-92b8-3c91c38d5f16
+            /hee:authors[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+            /hee:authors[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/kls/2022/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[2]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+          /reasonable-adjustments-policy---publication-landing[3]:
+            jcr:primaryType: hee:publicationLandingPage
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: ac69397c-43d4-4feb-abe4-d5bd745c099c
+            hee:hideAuthorContactDetails: true
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:publicationProfessions: [public_health]
+            hee:publicationTopics: [knowledge_management, quality, workforce_planning,
+              workforce_transformation]
+            hee:publicationType: policy_strategy
+            hee:readTime: '5'
+            hee:subtitle: NSHCS Policies
+            hee:summary: The Reasonable Adjustments Policy enables you to request
+              reasonable adjustments in your final assessment that are aimed at minimising
+              barriers that might affect your performance in the assessment due to
+              a condition or disability.
+            hee:title: Reasonable adjustments policy
+            hee:updatedDate: 2022-12-31T00:00:00Z
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostd:transferable: false
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
+            hippostdpubwf:lastModificationDate: 2023-04-27T23:06:21.943+01:00
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-28T11:43:36.120+01:00
+            hippotranslation:id: f9453457-f583-4904-98b6-6c786ea341bd
+            hippotranslation:locale: en
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:webPublications[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 270537a0-9bba-46a2-9150-83c536c0f880
+            /hee:webPublications[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 5d8b067d-d7ee-4562-92b8-3c91c38d5f16
+            /hee:authors[1]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+            /hee:authors[2]:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
+            /hee:languageVersions:
+              jcr:primaryType: hippo:resource
+              jcr:mixinTypes: ['mix:created']
+              hippo:filename: hippo:resource
+              jcr:data:
+                type: binary
+                resource: /content/documents/main/shared/publications/kls/2022/reasonable-adjustments-policy---publication-landing/reasonable-adjustments-policy---publication-landing[3]/languageVersions/hippo-resource
+              jcr:encoding: UTF-8
+              jcr:lastModified: 2008-03-26T12:03:00+01:00
+              jcr:mimeType: application/vnd.hippo.blank
+        /reasonable-adjustments-policy---publication-1:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 270537a0-9bba-46a2-9150-83c536c0f880
+          hippo:name: Reasonable Adjustments Policy - Publication 1
+          hippo:versionHistory: c8f540e3-e977-45a2-ae72-f6aada66407d
+          /reasonable-adjustments-policy---publication-1[1]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: bd9413c5-25ee-463d-a979-a22772054c7a
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:subtitle: Publication
+            hee:summary: "The Reasonable Adjustments Policy is part of a suite of\
+              \ policies designed to support fair and equitable assessment.\r\n\r\n\
+              Where you have a condition or a disability and feel you have additional\
+              \ needs, this policy enables you to request reasonable adjustments in\
+              \ your final assessment that are aimed at min"
+            hee:title: Reasonable Adjustments Policy - Publication 1
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
+            hippostdpubwf:lastModificationDate: 2023-01-20T14:47:17.052Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: f512ccd9-78d4-434f-b782-63f8d3d61866
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 2022-12-30T00:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Document status
+              hee:headingType: H2
+              hee:shortTitle: Document
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
+
+                <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
+
+                <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
+            /hee:contentBlocks[3]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Executive summary
+              hee:headingType: H2
+              hee:shortTitle: Summary
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:contentBlocks[4]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
+
+                <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
+
+                <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
+
+                <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;nshcs.assessment@hee.nhs.uk.</p>
+
+                <p>1 - Introduction</p>
+
+                <p>1.1. This policy is part of a suite of policies designed to provide you with a fair and equitable experience of NSHCS assessments.</p>
+
+                <p>1.2. Through this policy we aim to take proportionate evidence-based actions to provide an equitable assessment experience. This means we will try to remove or reduce aspects that would make the assessment inequitable using reasonable means with the resources available, without creating an unfair advantage for you. The remedies or solutions we offer must be permitted by the policies and regulations of the final assessment, and the time and resources available.</p>
+
+                <p>1.3. You may apply for reasonable adjustments if you reasonably believe that a disability or condition would affect your ability to demonstrate understanding, competence, or readiness to practice. Reasonable Adjustments applications should be made at least twenty working days before your final assessment.</p>
+
+                <p>1.4. If you apply for reasonable adjustments in good faith, you will not be treated less favourably, or suffer any disadvantage, than if you had not made a reasonable the application.</p>
+
+                <p>1.5. You may be subject to disciplinary action if your reasonable adjustments application includes false or misleading statements, information, or evidence, which seek to create an unfair advantage.</p>
+
+                <p>1.6. Reasonable adjustments applications are not always upheld. We base our decisions on the evidence you provide, and which we could independently verify if necessary.</p>
+
+                <p>2 - Purpose</p>
+
+                <p>2.1. Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your assessments that are aimed at minimising barriers that might affect your performance and ensuring a fair and equitable assessment.</p>
+
+                <p>3 - Scope</p>
+
+                <p>3.1. This policy allows the NSHCS to consider reasonable adjustments for assessments for the following reasons:</p>
+
+                <p>medical or health related matters concerning yourself or a dependent</p>
+
+                <p>disability</p>
+
+                <p>relevant specific learning difficulties / neuro-diverse conditions</p>
+
+                <p>in all cases, appropriate evidence to support the request must be provided</p>
+
+                <p>3.2. Where similar current arrangements are provided for you in your training workplace or Higher Education Intuition (HEI), this can potentially be presented as evidence using Occupational Health reports or other appropriate documentation approved by the relevant Human Resources and/or academic department.</p>
+
+                <p>3.3. Applications for reasonable adjustments will not be considered for any other reasons other than those outlined in paragraph 3.1. All applications must use the correct process as described in this policy.</p>
+
+                <p>3.4. This policy applies to assessments administered by the National School of Healthcare Science for all programmes other than apprenticeships. Apprenticeship programmes are covered by a separate set of policies.</p>
+
+                <p>3.5. Applications made under this policy are specific to the type of final assessment for which reasonable adjustments are sought. If the form of final assessment changes, or you move from one NSHCS programme to another, a new application must be made.</p>
+
+                <p>3.6. Reasonable adjustments outcomes must be proportionate and permitted within NSHCS policies and cannot be used to create an advantage for you; unless that advantage is an indirect and unavoidable consequence of the adjustment.</p>
+
+                <p>4 - Outcomes</p>
+
+                <p>4.1. Where your application is unclear, or is not sufficiently supported by evidence, we may contact you to provide additional information by a deadline.</p>
+
+                <p>4.2. Reasonable adjustments applications can result in one of the following outcomes:</p>
+
+                <p>your application is fully upheld</p>
+
+                <p>your application is partially upheld</p>
+
+                <p>your application is not upheld</p>
+
+                <p>the decision, or part of the decision, is pending publication of assessment guidance</p>
+
+                <p>4.3. Where the application is upheld, either in part or in full, the NSHCS will communicate the reason(s) for the decision to you and outline any actions that may be taken by the NSHCS to provide remedy.</p>
+
+                <p>4.4. Where the application is not upheld, the NSHCS will communicate the reason(s) for the decision to you.</p>
+
+                <p>4.5. Where the application is withdrawn, the NSHCS will close the application and communicate this to you.</p>
+
+                <p>4.6. If you are not satisfied with the outcome of the application, then you may make an appeal. This must be done using the prescribed Appeals Form and you are referred to the NSHCS Appeals Policy for more information.</p>
+
+                <p>5 - Your responsibilities</p>
+
+                <p>5.1. To make an accurate reasonable adjustments application under this policy following the process outlined below. You must include verifiable written evidence, wherever possible.</p>
+
+                <p>5.2. Where appropriate, to discuss a reasonable adjustments application with your training officer or NSHCS Training Programme Director. Your training officer may provide a statement and evidence to support your reasonable adjustments application. You may also contact a member of the NSHCS Assessment team for advice on using this policy.</p>
+
+                <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;NHS Constitution values and behaviours, in all aspects relating to this policy.</p>
+
+                <p>5.4. If your application is considered to include false or misleading statements, information, or evidence, which seek to create an unfair advantage, the NSHCS may take appropriate action, for example:</p>
+
+                <p>removing one of your available opportunities to sit/resit the assessment</p>
+
+                <p>reporting your actions to relevant external bodies</p>
+
+                <p>other disciplinary action, such as removing you from the programme</p>
+
+                <p>6 - NSHCS responsibilities</p>
+
+                <p>6.1. To follow the Reasonable Adjustments Policy ensuring that each application is processed through the appropriate stages within the required timeframe.</p>
+
+                <p>6.2. To ensure that you are provided with necessary guidance and support on the use of this policy and are aware of the stages and timeframes that apply to the process.</p>
+
+                <p>6.3. To ensure that a relationship of mutual trust and respect is developed between the applicant and the NSHCS, where matters are dealt with respectfully and sensitively.</p>
+
+                <p>6.4. To behave appropriately and in line with the&nbsp;NHS Constitution values and behaviours&nbsp;in all aspects relating to this policy.</p>
+
+                <p>6.5. In all cases your personal data will be handled according to the requirements of the Data Protection Act 2018 and the General Data Protection Regulations (GDPR).</p>
+
+                <p>7 - Reasonable Adjustments Panel</p>
+
+                <p>7.1. Requests for reasonable adjustments will be considered by a Reasonable Adjustments Panel.</p>
+
+                <p>7.2. The Reasonable Adjustments Panel will ordinarily be appointed by the Head of Assessment, or their nominee.</p>
+
+                <p>7.3. The Reasonable Adjustments Panel will be appointed based on having the appropriate skills to undertake the role.</p>
+
+                <p>7.4. The Reasonable Adjustments Panel will convene regularly, as and when required, prior to the final assessment to consider applications and evidence.</p>
+
+                <p>7.5. You may make reasonable adjustments request at any point prior to the deadline. If your application relates to the assessment process, you are advised to wait until guidance on that assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of assessment guidance.</p>
+
+                <p>7.6. The panel will ordinarily include at least one lay member.</p>
+
+                <p>8 - Access to the Reasonable Adjustments Policy</p>
+
+                <p>8.1. Those wishing to apply for reasonable adjustments must do so using the prescribed Reasonable Adjustments Form.</p>
+
+                <p>8.2. Any applications received which do not use the prescribed form will not be processed. We will respond requesting that the Reasonable Adjustments Form is completed before your application can be processed in line with this policy.</p>
+
+                <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;nshcs.assessment@hee.nhs.uk.</p>
+
+                <p>8.4. You may make a reasonable adjustments application at any point prior to the relevant assessment, according to the deadlines outlined in section 9. You are advised to wait until guidance on the assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of the assessment guidance.</p>
+
+                <p>8.5. You may make more than one reasonable adjustment application for the same assessment only if:</p>
+
+                <p>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</p>
+
+                <p>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</p>
+
+                <p>9 - The Reasonable Adjustments process</p>
+
+                <p>9.1. The process described in this section is summarised on the flowchart found at Appendix 1.</p>
+
+                <p>9.2. Applications must be made in a timely manner, ordinarily at least twenty working days ahead of the relevant published assessment deadline.</p>
+
+                <p>9.3. In the case of late applications, fewer than twenty working days ahead of the published assessment deadline, it may not be possible to fully consider and/or implement reasonable adjustments. Late reasonable adjustments applications will therefore not be considered for the current final assessment if there is not sufficient time to allow a decision to be implemented.</p>
+
+                <p>9.4. Applications made after made after the date of the final assessment will not be considered and cannot be applied retrospectively. Where you feel that a situation has impacted your ability to undertake an assessment after the deadline for a Reasonable Adjustments application, then you are advised to consider an application under the NSHCS Mitigating Circumstances Policy.</p>
+
+                <p>9.5. The Reasonable Adjustment Panel considers applications in the period before assessments. The panel will consider your application and accompanying evidence and will normally respond to your application within ten working days of convening. Complex applications may take longer, and in this case you will be advised of a revised timescale.</p>
+
+                <p>9.6. You may be asked to provide further information or evidence before or following the Reasonable Adjustments Panel. If possible, we will give you five working days to provide additional material; however, this may not always be possible. You must provide any requested material by the deadline we specify or provide a written explanation why additional evidence or evidence cannot be provided.</p>
+
+                <p>9.7. If your application is upheld, you may request that we make your assessor(s) aware of some or all of the circumstances in your application.</p>
+
+                <p>10 - Equality impact assessment</p>
+
+                <p>10.1. The NSHCS and HEE give due regard to the need to eliminate discrimination and promote equality of opportunity for all when making policy decisions and implementing this policy.</p>
+
+                <p>10.2. This policy has been developed with input from the NSHCS Equality, Diversity and Inclusion Committee and an accompanying Equality Impact Assessment has been produced.</p>
+
+                <p>11 - Monitoring compliance and effectiveness</p>
+
+                <p>11.1. The NSHCS is responsible for recording and monitoring information relating to the application of this Policy.</p>
+
+                <p>11.2. The NSHCS Policy and Procedures Committee is responsible for this policy and will review its compliance and effectiveness.</p>
+
+                <p>11.3. Anonymised data relating to the outcomes of this policy will be available to the NSHCS Equality, Diversity and Inclusion Committee and reviewed to ensure there are no underlying themes relating to equality that suggest any organisational bias.</p>
+
+                <p>11.4. This policy may be periodically amended to ensure it remains effective, relevant, and compliant with current legislation.</p>
+            /hee:contentBlocks[5]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Testing Headings
+              hee:headingType: H3
+              hee:shortTitle: Testing
+            /hee:contentBlocks[6]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Headings H3
+              hee:headingType: H3
+              hee:shortTitle: H3
+          /reasonable-adjustments-policy---publication-1[2]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 605aae2f-8b0c-4e78-a9e3-acb87b59826f
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:subtitle: Publication
+            hee:summary: "The Reasonable Adjustments Policy is part of a suite of\
+              \ policies designed to support fair and equitable assessment.\r\n\r\n\
+              Where you have a condition or a disability and feel you have additional\
+              \ needs, this policy enables you to request reasonable adjustments in\
+              \ your final assessment that are aimed at min"
+            hee:title: Reasonable Adjustments Policy - Publication 1
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
+            hippostdpubwf:lastModificationDate: 2023-01-20T14:47:17.052Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-28T11:43:22.662+01:00
+            hippotranslation:id: f512ccd9-78d4-434f-b782-63f8d3d61866
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 0001-01-01T12:00:00Z
+              hee:nextReviewed: 2022-12-30T00:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Document status
+              hee:headingType: H2
+              hee:shortTitle: Document
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
+
+                <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
+
+                <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
+            /hee:contentBlocks[3]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Executive summary
+              hee:headingType: H2
+              hee:shortTitle: Summary
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:contentBlocks[4]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
+
+                <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
+
+                <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
+
+                <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;nshcs.assessment@hee.nhs.uk.</p>
+
+                <p>1 - Introduction</p>
+
+                <p>1.1. This policy is part of a suite of policies designed to provide you with a fair and equitable experience of NSHCS assessments.</p>
+
+                <p>1.2. Through this policy we aim to take proportionate evidence-based actions to provide an equitable assessment experience. This means we will try to remove or reduce aspects that would make the assessment inequitable using reasonable means with the resources available, without creating an unfair advantage for you. The remedies or solutions we offer must be permitted by the policies and regulations of the final assessment, and the time and resources available.</p>
+
+                <p>1.3. You may apply for reasonable adjustments if you reasonably believe that a disability or condition would affect your ability to demonstrate understanding, competence, or readiness to practice. Reasonable Adjustments applications should be made at least twenty working days before your final assessment.</p>
+
+                <p>1.4. If you apply for reasonable adjustments in good faith, you will not be treated less favourably, or suffer any disadvantage, than if you had not made a reasonable the application.</p>
+
+                <p>1.5. You may be subject to disciplinary action if your reasonable adjustments application includes false or misleading statements, information, or evidence, which seek to create an unfair advantage.</p>
+
+                <p>1.6. Reasonable adjustments applications are not always upheld. We base our decisions on the evidence you provide, and which we could independently verify if necessary.</p>
+
+                <p>2 - Purpose</p>
+
+                <p>2.1. Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your assessments that are aimed at minimising barriers that might affect your performance and ensuring a fair and equitable assessment.</p>
+
+                <p>3 - Scope</p>
+
+                <p>3.1. This policy allows the NSHCS to consider reasonable adjustments for assessments for the following reasons:</p>
+
+                <p>medical or health related matters concerning yourself or a dependent</p>
+
+                <p>disability</p>
+
+                <p>relevant specific learning difficulties / neuro-diverse conditions</p>
+
+                <p>in all cases, appropriate evidence to support the request must be provided</p>
+
+                <p>3.2. Where similar current arrangements are provided for you in your training workplace or Higher Education Intuition (HEI), this can potentially be presented as evidence using Occupational Health reports or other appropriate documentation approved by the relevant Human Resources and/or academic department.</p>
+
+                <p>3.3. Applications for reasonable adjustments will not be considered for any other reasons other than those outlined in paragraph 3.1. All applications must use the correct process as described in this policy.</p>
+
+                <p>3.4. This policy applies to assessments administered by the National School of Healthcare Science for all programmes other than apprenticeships. Apprenticeship programmes are covered by a separate set of policies.</p>
+
+                <p>3.5. Applications made under this policy are specific to the type of final assessment for which reasonable adjustments are sought. If the form of final assessment changes, or you move from one NSHCS programme to another, a new application must be made.</p>
+
+                <p>3.6. Reasonable adjustments outcomes must be proportionate and permitted within NSHCS policies and cannot be used to create an advantage for you; unless that advantage is an indirect and unavoidable consequence of the adjustment.</p>
+
+                <p>4 - Outcomes</p>
+
+                <p>4.1. Where your application is unclear, or is not sufficiently supported by evidence, we may contact you to provide additional information by a deadline.</p>
+
+                <p>4.2. Reasonable adjustments applications can result in one of the following outcomes:</p>
+
+                <p>your application is fully upheld</p>
+
+                <p>your application is partially upheld</p>
+
+                <p>your application is not upheld</p>
+
+                <p>the decision, or part of the decision, is pending publication of assessment guidance</p>
+
+                <p>4.3. Where the application is upheld, either in part or in full, the NSHCS will communicate the reason(s) for the decision to you and outline any actions that may be taken by the NSHCS to provide remedy.</p>
+
+                <p>4.4. Where the application is not upheld, the NSHCS will communicate the reason(s) for the decision to you.</p>
+
+                <p>4.5. Where the application is withdrawn, the NSHCS will close the application and communicate this to you.</p>
+
+                <p>4.6. If you are not satisfied with the outcome of the application, then you may make an appeal. This must be done using the prescribed Appeals Form and you are referred to the NSHCS Appeals Policy for more information.</p>
+
+                <p>5 - Your responsibilities</p>
+
+                <p>5.1. To make an accurate reasonable adjustments application under this policy following the process outlined below. You must include verifiable written evidence, wherever possible.</p>
+
+                <p>5.2. Where appropriate, to discuss a reasonable adjustments application with your training officer or NSHCS Training Programme Director. Your training officer may provide a statement and evidence to support your reasonable adjustments application. You may also contact a member of the NSHCS Assessment team for advice on using this policy.</p>
+
+                <p>5.3. To behave appropriately and reasonably, in line with the expectations of the&nbsp;NHS Constitution values and behaviours, in all aspects relating to this policy.</p>
+
+                <p>5.4. If your application is considered to include false or misleading statements, information, or evidence, which seek to create an unfair advantage, the NSHCS may take appropriate action, for example:</p>
+
+                <p>removing one of your available opportunities to sit/resit the assessment</p>
+
+                <p>reporting your actions to relevant external bodies</p>
+
+                <p>other disciplinary action, such as removing you from the programme</p>
+
+                <p>6 - NSHCS responsibilities</p>
+
+                <p>6.1. To follow the Reasonable Adjustments Policy ensuring that each application is processed through the appropriate stages within the required timeframe.</p>
+
+                <p>6.2. To ensure that you are provided with necessary guidance and support on the use of this policy and are aware of the stages and timeframes that apply to the process.</p>
+
+                <p>6.3. To ensure that a relationship of mutual trust and respect is developed between the applicant and the NSHCS, where matters are dealt with respectfully and sensitively.</p>
+
+                <p>6.4. To behave appropriately and in line with the&nbsp;NHS Constitution values and behaviours&nbsp;in all aspects relating to this policy.</p>
+
+                <p>6.5. In all cases your personal data will be handled according to the requirements of the Data Protection Act 2018 and the General Data Protection Regulations (GDPR).</p>
+
+                <p>7 - Reasonable Adjustments Panel</p>
+
+                <p>7.1. Requests for reasonable adjustments will be considered by a Reasonable Adjustments Panel.</p>
+
+                <p>7.2. The Reasonable Adjustments Panel will ordinarily be appointed by the Head of Assessment, or their nominee.</p>
+
+                <p>7.3. The Reasonable Adjustments Panel will be appointed based on having the appropriate skills to undertake the role.</p>
+
+                <p>7.4. The Reasonable Adjustments Panel will convene regularly, as and when required, prior to the final assessment to consider applications and evidence.</p>
+
+                <p>7.5. You may make reasonable adjustments request at any point prior to the deadline. If your application relates to the assessment process, you are advised to wait until guidance on that assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of assessment guidance.</p>
+
+                <p>7.6. The panel will ordinarily include at least one lay member.</p>
+
+                <p>8 - Access to the Reasonable Adjustments Policy</p>
+
+                <p>8.1. Those wishing to apply for reasonable adjustments must do so using the prescribed Reasonable Adjustments Form.</p>
+
+                <p>8.2. Any applications received which do not use the prescribed form will not be processed. We will respond requesting that the Reasonable Adjustments Form is completed before your application can be processed in line with this policy.</p>
+
+                <p>8.3. If you require any assistance when completing the form, please contact us using the following email address and we will be able to assist&nbsp;nshcs.assessment@hee.nhs.uk.</p>
+
+                <p>8.4. You may make a reasonable adjustments application at any point prior to the relevant assessment, according to the deadlines outlined in section 9. You are advised to wait until guidance on the assessment has been published. If guidance is not yet published, we may write to say our decision is pending publication of the assessment guidance.</p>
+
+                <p>8.5. You may make more than one reasonable adjustment application for the same assessment only if:</p>
+
+                <p>a significant change has occurred which would make an agreed reasonable adjustment less effective, and this would make the assessment experience inequitable</p>
+
+                <p>new evidence relating to the previous application has subsequently come to light which could not reasonably have been provided before</p>
+
+                <p>9 - The Reasonable Adjustments process</p>
+
+                <p>9.1. The process described in this section is summarised on the flowchart found at Appendix 1.</p>
+
+                <p>9.2. Applications must be made in a timely manner, ordinarily at least twenty working days ahead of the relevant published assessment deadline.</p>
+
+                <p>9.3. In the case of late applications, fewer than twenty working days ahead of the published assessment deadline, it may not be possible to fully consider and/or implement reasonable adjustments. Late reasonable adjustments applications will therefore not be considered for the current final assessment if there is not sufficient time to allow a decision to be implemented.</p>
+
+                <p>9.4. Applications made after made after the date of the final assessment will not be considered and cannot be applied retrospectively. Where you feel that a situation has impacted your ability to undertake an assessment after the deadline for a Reasonable Adjustments application, then you are advised to consider an application under the NSHCS Mitigating Circumstances Policy.</p>
+
+                <p>9.5. The Reasonable Adjustment Panel considers applications in the period before assessments. The panel will consider your application and accompanying evidence and will normally respond to your application within ten working days of convening. Complex applications may take longer, and in this case you will be advised of a revised timescale.</p>
+
+                <p>9.6. You may be asked to provide further information or evidence before or following the Reasonable Adjustments Panel. If possible, we will give you five working days to provide additional material; however, this may not always be possible. You must provide any requested material by the deadline we specify or provide a written explanation why additional evidence or evidence cannot be provided.</p>
+
+                <p>9.7. If your application is upheld, you may request that we make your assessor(s) aware of some or all of the circumstances in your application.</p>
+
+                <p>10 - Equality impact assessment</p>
+
+                <p>10.1. The NSHCS and HEE give due regard to the need to eliminate discrimination and promote equality of opportunity for all when making policy decisions and implementing this policy.</p>
+
+                <p>10.2. This policy has been developed with input from the NSHCS Equality, Diversity and Inclusion Committee and an accompanying Equality Impact Assessment has been produced.</p>
+
+                <p>11 - Monitoring compliance and effectiveness</p>
+
+                <p>11.1. The NSHCS is responsible for recording and monitoring information relating to the application of this Policy.</p>
+
+                <p>11.2. The NSHCS Policy and Procedures Committee is responsible for this policy and will review its compliance and effectiveness.</p>
+
+                <p>11.3. Anonymised data relating to the outcomes of this policy will be available to the NSHCS Equality, Diversity and Inclusion Committee and reviewed to ensure there are no underlying themes relating to equality that suggest any organisational bias.</p>
+
+                <p>11.4. This policy may be periodically amended to ensure it remains effective, relevant, and compliant with current legislation.</p>
+            /hee:contentBlocks[5]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Testing Headings
+              hee:headingType: H3
+              hee:shortTitle: Testing
+            /hee:contentBlocks[6]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Headings H3
+              hee:headingType: H3
+              hee:shortTitle: H3
+        /reasonable-adjustments-policy---publication-2:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 5d8b067d-d7ee-4562-92b8-3c91c38d5f16
+          hippo:name: Reasonable Adjustments Policy - Publication 2
+          hippo:versionHistory: a2335115-a411-4ef3-952f-b7b214e641af
+          /reasonable-adjustments-policy---publication-2[1]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 5c0a5d08-7a0e-4392-b8ea-614e486cf110
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:subtitle: Publication
+            hee:summary: Sed porttitor lectus nibh. Cras ultricies ligula sed magna
+              dictum porta.
+            hee:title: Reasonable Adjustments Policy - Publication 2
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
+            hippostdpubwf:lastModificationDate: 2023-01-20T14:48:23.861Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: fa38e5b4-a16c-43b2-9817-be682aef2479
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 2022-11-28T00:00:00Z
+              hee:nextReviewed: 2022-12-30T00:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Document Status
+              hee:headingType: H2
+              hee:shortTitle: Document
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <h2>Document status</h2>
+
+                <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
+
+                <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
+
+                <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
+
+                <h2>Executive summary</h2>
+
+                <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
+
+                <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
+
+                <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
+
+                <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:contentBlocks[3]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Testing Heading
+              hee:headingType: H3
+              hee:shortTitle: Heading
+          /reasonable-adjustments-policy---publication-2[2]:
+            jcr:primaryType: hee:report
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 6c4747b3-04ef-447f-afd7-5ccfe01b6ba5
+            hee:publicationDate: 2022-11-28T00:00:00Z
+            hee:subtitle: Publication
+            hee:summary: Sed porttitor lectus nibh. Cras ultricies ligula sed magna
+              dictum porta.
+            hee:title: Reasonable Adjustments Policy - Publication 2
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
+            hippostdpubwf:lastModificationDate: 2023-01-20T14:48:23.861Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-04-28T11:43:20.281+01:00
+            hippotranslation:id: fa38e5b4-a16c-43b2-9817-be682aef2479
+            hippotranslation:locale: en
+            /hee:pageLastNextReview:
+              jcr:primaryType: hee:pageLastNextReview
+              hee:lastReviewed: 2022-11-28T00:00:00Z
+              hee:nextReviewed: 2022-12-30T00:00:00Z
+            /hee:contentBlocks[1]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Document Status
+              hee:headingType: H2
+              hee:shortTitle: Document
+            /hee:contentBlocks[2]:
+              jcr:primaryType: hippostd:html
+              hippostd:content: |-
+                <h2>Document status</h2>
+
+                <p>This is a controlled document. Whilst this document may be printed, the electronic version posted on the National School of Healthcare Science (NSHCS) website is the controlled copy. Any printed copies of this document are not controlled.</p>
+
+                <p>As a controlled document, this document should not be saved onto local or network drives but should always be accessed from the NSHCS website.</p>
+
+                <p>This version is the only Reasonable Adjustments Policy recognised by NSHCS. This supersedes any current or previous localised policies, which will no longer be applicable and cannot be relied upon.</p>
+
+                <h2>Executive summary</h2>
+
+                <p>The Reasonable Adjustments Policy is part of a suite of policies designed to support fair and equitable assessment.</p>
+
+                <p>Where you have a condition or a disability and feel you have additional needs, this policy enables you to request reasonable adjustments in your final assessment that are aimed at minimising barriers that might affect your performance in the assessment. Barriers are defined as matters that affect your ability to undertake an assessment, or your ability to demonstrate your understanding or competence in the assessment.</p>
+
+                <p>In applying this policy, NSHCS will have due regard for the need to eliminate unlawful discrimination, promote equality of opportunity, and provide for good relations between people of diverse groups, in particular on the grounds of the following characteristics protected by the Equality Act (2010); age, disability, gender, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, and sexual orientation.</p>
+
+                <p>If you need support to use this policy, please contact the NSHCS Assessment Team&nbsp;<a href="mailto:nshcs.assessment@hee.nhs.uk">nshcs.assessment@hee.nhs.uk</a>.</p>
+            /hee:logoGroup:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            /hee:contentBlocks[3]:
+              jcr:primaryType: hee:headingsTOC
+              hee:headingTitle: Testing Heading
+              hee:headingType: H3
+              hee:shortTitle: Heading

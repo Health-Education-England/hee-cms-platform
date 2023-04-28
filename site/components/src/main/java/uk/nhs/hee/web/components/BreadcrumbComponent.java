@@ -11,6 +11,7 @@ import org.onehippo.cms7.essentials.components.CommonComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.components.beans.BreadcrumbLink;
+import uk.nhs.hee.web.utils.PublicationUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,15 +66,37 @@ public class BreadcrumbComponent extends CommonComponent {
             final HstSiteMapItem hstSiteMapItem) {
         final List<BreadcrumbLink> breadcrumbLinks = new ArrayList<>();
 
-        // Reassigning hstSiteMapItem here temporarily
-        // in order to avoid changing original reference
+        //* Let's see if it's a publication link with a marker and if it therefore needs to be
+        //* using an alternate sitemap entry for the purposes of this exercise
+        String originalreqPathInfo = request.getRequestContext().getBaseURL().getPathInfo().substring(1);
+        String whatWeResolvedTo = hstSiteMapItem.getId();
+
+        PublicationUtils ut = new PublicationUtils();
+        boolean same = ut.sameResolvedURL(originalreqPathInfo, whatWeResolvedTo);
+
         HstSiteMapItem siteMapItem = hstSiteMapItem;
-        while (siteMapItem.getParentItem() != null) {
+
+        if (same && !originalreqPathInfo.equals(whatWeResolvedTo)) {
+            String rootPath = ut.findRootToDocumentInURL(originalreqPathInfo);
+            siteMapItem = request.getRequestContext().getResolvedMount().getMount().getHstSite().getSiteMap().getSiteMapItemById(rootPath);
+        } else {
             siteMapItem = siteMapItem.getParentItem();
+        }
+
+        while (siteMapItem != null) {
             if(!Boolean.parseBoolean(siteMapItem.getParameter("excludedForBreadcrumb"))) {
                 addBreadCrumbLink(request, siteMapItem, breadcrumbLinks);
             }
+            siteMapItem = siteMapItem.getParentItem();
         }
+        // Reassigning hstSiteMapItem here temporarily
+        // in order to avoid changing original reference
+//        while (siteMapItem.getParentItem() != null) {
+//            siteMapItem = siteMapItem.getParentItem();
+//            if(!Boolean.parseBoolean(siteMapItem.getParameter("excludedForBreadcrumb"))) {
+//                addBreadCrumbLink(request, siteMapItem, breadcrumbLinks);
+//            }
+//        }
 
         addHomeBreadcrumbLink(request, breadcrumbLinks);
         Collections.reverse(breadcrumbLinks);

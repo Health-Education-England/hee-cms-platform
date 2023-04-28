@@ -12,7 +12,6 @@
               i.e. if the documetn is of type 'hee:guidance'  -->
         <@hstCustom.getMiniHubGuidanceLink hippobean=contentBean var="linkURL"/>
     </#if>
-
     <#return linkURL>
 </#function>
 

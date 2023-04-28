@@ -173,10 +173,11 @@
     <@fmt.message key="publication.type" var="publicationTypeLabel"/>
 
     <#list items as item>
-        <#assign pageURL=getInternalLinkURL(item)>
 
-        <#if pageURL != pageNotFoundURL>
-            <h3><a href="${pageURL}">${item.title}</a></h3>
+        <#assign pageURL=getInternalLinkURL(item)>
+        <#assign managedURL=publicationSupport.managePublicationPathPrefix(pageURL)>
+        <#if managedURL != pageNotFoundURL>
+            <h3><a href="${managedURL}">${item.title}</a></h3>
 
             <dl class="nhsuk-summary-list">
                 <@listItemRow key="${publicationTypeLabel}">
