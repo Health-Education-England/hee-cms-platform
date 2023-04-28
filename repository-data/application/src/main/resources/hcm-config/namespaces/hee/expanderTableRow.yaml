@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 58742b53-9f6f-42d6-914e-a8513163abb2
+          jcr:uuid: c4a3ded7-cec2-435d-a13e-9dcb3505cd82
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,31 +24,23 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /data:
+          /html:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
             hipposysedit:path: hee:data
             hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
-          /url:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:url
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [optional]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:expanderTableRow
-          hee:data: ''
-          hee:url: ''
           hee:dataTitle: ''
+          /hee:data:
+            jcr:primaryType: hippostd:html
+            hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -72,19 +64,14 @@ definitions:
           /data:
             jcr:primaryType: frontend:plugin
             caption: Data
-            field: data
-            hint: Enter the data
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            field: html
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /url:
-            jcr:primaryType: frontend:plugin
-            caption: URL
-            field: url
-            hint: Enter the URL - entering information here will make the data field
-              a hyperlink
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
+              ckeditor.config.appended.json: '{ removePlugins: "elementspath,codemirror,basicstyles,stylescombo,undo,justify,list,specialchar,showblocks,copyformatting,removeformat",
+                removeButtons: "Indent,PickImage,Table,Source,Youtube,Maximize,Anchor",
+                stylesSet: "custom_styles:./custom_styles.js" }'
+              ckeditor.config.overlayed.json: '{ allowedContent: true, forcePasteAsPlainText:
+                true}'
