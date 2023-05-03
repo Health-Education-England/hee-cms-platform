@@ -1,0 +1,37 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/kls/hst:workspace:
+      jcr:primaryType: hst:workspace
+      /hst:containers:
+        jcr:primaryType: hst:containercomponentfolder
+        /base:
+          jcr:primaryType: hst:containercomponentfolder
+          /top:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:containercomponent
+            hippo:identifier: d8ce1687-d3bc-460b-9e09-ccf6ef02040a
+            hst:label: Top
+            hst:xtype: hst.vbox
+          /footer:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:containercomponent
+            hippo:identifier: bf49dd94-e55c-4804-9b4f-10ca04a3d8cc
+            hst:label: Footer
+            hst:xtype: hst.vbox
+        /pagenotfound:
+          jcr:primaryType: hst:containercomponentfolder
+          /main:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:containercomponent
+            hippo:identifier: 2673ae05-b8f0-4a0f-a844-b8c7ce014865
+            hst:label: Page-Not-Found Main
+            hst:xtype: hst.vbox
+      /hst:sitemenus:
+        jcr:primaryType: hst:sitemenus
+        /main:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:sitemenu
+          hst:lastmodified: 2021-02-23T14:29:13.810+07:00
+        /footer:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:sitemenu

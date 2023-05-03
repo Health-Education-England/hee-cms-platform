@@ -1,0 +1,73 @@
+/content/documents/administration/valuelists/kls/casestudysectors:
+  .meta:order-before: casestudyregions
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 87e9f54c-9750-46fd-b786-03859026343a
+  hippo:name: CaseStudySectors
+  /casestudysectors:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 778fff09-4006-4872-bd6b-228aa9b68517
+    hippo:availability: [live, preview]
+    hippotranslation:id: a40627f1-81f9-4332-bf55-f2b179926331
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: acute
+      selection:label: Acute
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: acute_and_community
+      selection:label: Acute and Community
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: ambulance
+      selection:label: Ambulance
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: care_trust
+      selection:label: Care Trust
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: ccg
+      selection:label: Clinical Commissioning Group
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: ccg_support
+      selection:label: Commissioning Support
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: comunity_trust
+      selection:label: Community Trust
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: cross_sector
+      selection:label: Cross Sector
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: mental_health
+      selection:label: Mental Health
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: mental_health_ld
+      selection:label: Mental Health (Learning Disability)
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: mental_health_sc
+      selection:label: Mental Health (Social Care)
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: primary_care
+      selection:label: Primary Care
+    /selection:listitem[13]:
+      jcr:primaryType: selection:listitem
+      selection:key: public_health
+      selection:label: Public Health
+    /selection:listitem[14]:
+      jcr:primaryType: selection:listitem
+      selection:key: shared_services
+      selection:label: Shared Services
+    /selection:listitem[15]:
+      jcr:primaryType: selection:listitem
+      selection:key: other
+      selection:label: Other

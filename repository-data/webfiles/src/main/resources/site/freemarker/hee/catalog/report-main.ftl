@@ -26,23 +26,28 @@
 <#-- @ftlvariable name="landingPage" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
 <#if document??>
     <main id="maincontent" role="main" class="page page--rightbar">
-        <#--  Title & subtitle  -->
+        <#--  Main header: START  -->
         <div class="page__header">
             <div class="nhsuk-width-container">
+                <#--  Title  -->
                 <h1 id="publication-title">${document.title}</h1>
+                <#--  Subtitle  -->
                 <span class="nhsuk-caption-xl">${document.subtitle!}</span>
             </div>
         </div>
+        <#--  Main header: END  -->
 
-        <div class="nhsuk-width-container">
-            <div class="page__layout">
-                <div class="page__main">
+        <#--  Main content: START  -->
+        <div class="page__layout nhsuk-width-container">
+            <#--  Main sections: START  -->
+            <div class="page__main">
+                <div class="page__content">
                     <#--  Summary  -->
-                    <#if document.summary??>
+                    <#if document.summary?has_content>
                         <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                     </#if>
 
-                    <#--  Main content blocks  -->
+                    <#--  Main content blocks: START  -->
                     <#if document.contentBlocks??>
                         <#list document.contentBlocks as block>
                             <#switch block.getClass().getName()>
@@ -62,6 +67,9 @@
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                     <@hee.media media=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.QuoteReference">
+                                    <@hee.quote block=block/>
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.TableReference">
                                     <@hee.table table=block/>
@@ -88,121 +96,129 @@
                             </#switch>
                         </#list>
                     </#if>
+                    <#--  Main content blocks: END  -->
                 </div>
+            </div>
+            <#--  Main sections: END  -->
 
-                <#--  Sidebar  -->
-                <aside class="page__rightbar">
-                    <#--  TOC section  -->
-                    <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true>
-                        <h2 data-anchorlinksignore="true">Table of Contents</h2>
+            <#--  Right hand content blocks: START  -->
+            <aside class="page__rightbar">
+                <#--  TOC section: START  -->
+                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true>
+                    <h2 data-anchorlinksignore="true">Table of Contents</h2>
+                </div>
+                <#--  TOC section: END  -->
+
+                <#--  Publication Info: START  -->
+                <div class="hee-card hee-card--details">
+                    <h3>Publication Info</h3>
+
+                    <#--  Published date  -->
+                    <div class="hee-card--details__item">
+                        <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
                     </div>
-                    <div class="hee-card hee-card--details">
-                        <h3>Publication Info</h3>
 
-                        <#--  Published date  -->
+                    <#--  Updated date  -->
+                    <#if document.pageLastNextReview.lastReviewed?has_content>
                         <div class="hee-card--details__item">
-                            <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
+                            <span>Updated:</span> ${getDefaultFormattedDate(document.pageLastNextReview.lastReviewed)}
+                        </div>
+                    </#if>
+
+
+                    <#if landingPage??>
+                        <#--  Publication type  -->
+                        <div class="hee-card--details__item">
+                            <span>Publication Type:</span>
+                            <#if publicationListingPageURL?has_content>
+                                <a href=${publicationListingPageURL}?publicationType=${landingPage.publicationType}>${publicationTypeMap[landingPage.publicationType]}</a>
+                            <#else>
+                                ${publicationTypeMap[landingPage.publicationType]}
+                            </#if>
                         </div>
 
-                        <#--  Updated date  -->
-                        <#if document.pageLastNextReview.lastReviewed?has_content>
+                        <#--  Publication professions  -->
+                        <#if landingPage.publicationProfessions?has_content>
                             <div class="hee-card--details__item">
-                                <span>Updated:</span> ${getDefaultFormattedDate(document.pageLastNextReview.lastReviewed)}
-                            </div>
-                        </#if>
-
-
-                        <#if landingPage??>
-                            <#--  Publication type  -->
-                            <div class="hee-card--details__item">
-                                <span>Publication Type:</span>
+                                <span>Professions:</span>
                                 <#if publicationListingPageURL?has_content>
-                                    <a href=${publicationListingPageURL}?publicationType=${landingPage.publicationType}>${publicationTypeMap[landingPage.publicationType]}</a>
+                                    <#list landingPage.publicationProfessions as profession>
+                                        <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
+                                    </#list>
                                 <#else>
-                                    ${publicationTypeMap[landingPage.publicationType]}
+                                    <#list landingPage.publicationProfessions as profession>
+                                        ${publicationProfessionMap[profession]}<#sep>, </#sep>
+                                    </#list>
                                 </#if>
                             </div>
-
-                            <#--  Publication professions  -->
-                            <#if landingPage.publicationProfessions?has_content>
-                                <div class="hee-card--details__item">
-                                    <span>Professions:</span>
-                                    <#if publicationListingPageURL?has_content>
-                                        <#list landingPage.publicationProfessions as profession>
-                                            <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
-                                        </#list>
-                                    <#else>
-                                        <#list landingPage.publicationProfessions as profession>
-                                            ${publicationProfessionMap[profession]}<#sep>, </#sep>
-                                        </#list>
-                                    </#if>
-                                </div>
-                            </#if>
-
-                            <#--  Publication topics  -->
-                            <#if landingPage.publicationTopics?has_content>
-                                <div class="hee-card--details__item">
-                                    <span>Topics:</span>
-                                    <#if publicationListingPageURL?has_content>
-                                        <#list landingPage.publicationTopics as topic>
-                                            <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
-                                        </#list>
-                                    <#else>
-                                        <#list landingPage.publicationTopics as topic>
-                                            ${publicationTopicMap[topic]}<#sep>, </#sep>
-                                        </#list>
-                                    </#if>
-                                </div>
-                            </#if>
                         </#if>
-                    </div>
 
-                    <#--  Alternative and language document versions: START  -->
-
-                    <#--  Alternative document versions  -->
-                    <#assign has_documents =false>
-                    <#if landingPage?? && landingPage.documentVersions?has_content>
-                        <#list landingPage.documentVersions as link>
-                            <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                <#assign has_documents=true>
-                                <#break>
-                            </#if>
-                        </#list>
-                        <#if has_documents!true>
-                            <div class="hee-card hee-card--details">
-                                <h3>Alternative versions</h3>
-                                <#list landingPage.documentVersions as link>
-                                    <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                        <@docDetailBlockForDocLink docLink=link/>
-                                    </#if>
-                                </#list>
+                        <#--  Publication topics  -->
+                        <#if landingPage.publicationTopics?has_content>
+                            <div class="hee-card--details__item">
+                                <span>Topics:</span>
+                                <#if publicationListingPageURL?has_content>
+                                    <#list landingPage.publicationTopics as topic>
+                                        <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
+                                    </#list>
+                                <#else>
+                                    <#list landingPage.publicationTopics as topic>
+                                        ${publicationTopicMap[topic]}<#sep>, </#sep>
+                                    </#list>
+                                </#if>
                             </div>
                         </#if>
                     </#if>
+                </div>
+                <#--  Publication Info: END  -->
 
-                    <#--  Language document versions  -->
-                    <#assign has_languages =false>
-                    <#if landingPage?? && landingPage.languageVersions?has_content>
-                        <#list landingPage.languageVersions as link>
-                            <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                <#assign has_languages =true>
-                                <#break>
-                            </#if>
-                        </#list>
-                        <#if has_languages!true>
-                            <div class="hee-card hee-card--details">
-                                <h3>Languages</h3>
-                                <#list landingPage.languageVersions as link>
-                                    <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                        <@docDetailBlockForDocLink docLink=link/>
-                                    </#if>
-                                </#list>
-                            </div>
+                <#--  Alternative and language document versions: START  -->
+
+                <#--  Alternative document versions  -->
+                <#assign has_documents =false>
+                <#if landingPage?? && landingPage.documentVersions?has_content>
+                    <#list landingPage.documentVersions as link>
+                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                            <#assign has_documents=true>
+                            <#break>
                         </#if>
+                    </#list>
+                    <#if has_documents!true>
+                        <div class="hee-card hee-card--details">
+                            <h3>Alternative versions</h3>
+                            <#list landingPage.documentVersions as link>
+                                <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                    <@docDetailBlockForDocLink docLink=link/>
+                                </#if>
+                            </#list>
+                        </div>
                     </#if>
-                    <#--  Alternative and language document versions: END  -->
-                </aside>
-            </div>
+                </#if>
+
+                <#--  Language document versions  -->
+                <#assign has_languages =false>
+                <#if landingPage?? && landingPage.languageVersions?has_content>
+                    <#list landingPage.languageVersions as link>
+                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                            <#assign has_languages =true>
+                            <#break>
+                        </#if>
+                    </#list>
+                    <#if has_languages!true>
+                        <div class="hee-card hee-card--details">
+                            <h3>Languages</h3>
+                            <#list landingPage.languageVersions as link>
+                                <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
+                                    <@docDetailBlockForDocLink docLink=link/>
+                                </#if>
+                            </#list>
+                        </div>
+                    </#if>
+                </#if>
+                <#--  Alternative and language document versions: END  -->
+            </aside>
+            <#--  Right hand content blocks: END  -->
         </div>
+        <#--  Main content: END  -->
     </main>
 </#if>

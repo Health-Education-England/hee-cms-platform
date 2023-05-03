@@ -14,6 +14,7 @@
 <#include "block-links.ftl">
 <#include "anchor-links.ftl">
 <#include "media.ftl">
+<#include "quote.ftl">
 <#include "table.ftl">
 <#include "tabs.ftl">
 <#include "inset.ftl">
