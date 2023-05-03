@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 2142ea49-5515-4ae5-9de1-950cf6103975
+          jcr:uuid: 40a4f19e-c2a6-4bde-abe4-656c43a7c716
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -19,7 +19,7 @@ definitions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
-            hipposysedit:ordered: false
+            hipposysedit:ordered: true
             hipposysedit:path: hee:expanderTable
             hipposysedit:primary: false
             hipposysedit:type: hee:expander
@@ -35,7 +35,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: f918dac5-5002-4e6d-a380-66fd5833fcae
+          jcr:uuid: 858ab239-bad9-42f2-878f-581d4482487f
           hippostdpubwf:lastModificationDate: 2023-04-13T13:20:11.128+01:00
           hippostdpubwf:creationDate: 2023-04-13T13:20:11.128+01:00
           /hee:expanderTable:
@@ -46,6 +46,9 @@ definitions:
               hee:data: ''
               hee:dataTitle: ''
               hee:url: ''
+              /hee:data:
+                jcr:primaryType: hippostd:html
+                hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -59,7 +62,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /expanderTable:
             jcr:primaryType: frontend:plugin
-            caption: Expander
+            caption: Expander table
             field: expanderTable
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin

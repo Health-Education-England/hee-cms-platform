@@ -1,5 +1,6 @@
 package uk.nhs.hee.web.beans;
 
+import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoCompound;
@@ -13,12 +14,7 @@ public class ExpanderTableRow extends HippoCompound {
     }
 
     @HippoEssentialsGenerated(internalName = "hee:data")
-    public String getData() {
-        return getSingleProperty("hee:data");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:url")
-    public String getUrl() {
-        return getSingleProperty("hee:url");
+    public HippoHtml getData() {
+        return getHippoHtml("hee:data");
     }
 }

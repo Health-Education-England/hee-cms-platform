@@ -21,15 +21,9 @@
                                     </span>
                                 </summary>
                                 <#-- If URL then data is showed as a hyperlink if not as a normal text -->
-                                <#if row.url?has_content>
-                                    <a class="nhsuk-related-links-card__link" href="${row.url}">
-                                        ${row.data}
-                                    </a>
-                                <#else>
-                                    <div class="nhsuk-details__text">
-                                        <@hst.html hippohtml=row.data/>
-                                    </div>
-                                </#if>
+                                <div class="nhsuk-details__text">
+                                    <@hst.html hippohtml=row.data/>
+                                </div>
                             </details>
                         </#list>
                     </#if>

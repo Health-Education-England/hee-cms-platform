@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: bf619e02-9665-416d-a835-40333f65e54f
+          jcr:uuid: 3112b2d8-b037-4681-897c-533c9db535fb
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,14 +23,16 @@ definitions:
             hipposysedit:path: hee:expanderTitle
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [required]
           /expanderRow:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
-            hipposysedit:ordered: false
+            hipposysedit:ordered: true
             hipposysedit:path: hee:expanderRow
             hipposysedit:primary: false
             hipposysedit:type: hee:expanderTableRow
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -41,6 +43,9 @@ definitions:
             hee:data: ''
             hee:dataTitle: ''
             hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -63,7 +68,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /expanderRow:
             jcr:primaryType: frontend:plugin
-            caption: Expander Row
+            caption: Table expander row
             field: expanderRow
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
