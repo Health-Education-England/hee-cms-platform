@@ -11,11 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: f10f2104-be6c-4a54-8e5f-1228c306add6
+          jcr:uuid: e8016a58-b5b5-404c-8875-1bb9f5fb1bdb
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-featured-method-validator', 'hee:mandatory-featured-documents-validator']
+          hipposysedit:validators: ['hee:mandatory-featured-method-validator', 'hee:mandatory-featured-documents-validator',
+            'hee:mandatory-publication-type-validator']
           /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -57,15 +58,6 @@ definitions:
             hipposysedit:path: hee:profession
             hipposysedit:primary: false
             hipposysedit:type: String
-          /publicationtype:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationtype
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [optional]
           /dynamicdropdown:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -75,6 +67,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
+          /publicationType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:publicationType
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -87,7 +87,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: bc1ae755-fc25-418c-8053-71dbb67425c6
+          jcr:uuid: 82c38531-b2a8-4314-b6b0-fd1ef161b492
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:topics: [mental_health, cancer, maternity, workforce_planning, workforce_transformation,
@@ -101,6 +101,7 @@ definitions:
             psychological_professions, public_health, health_informatics]
           hee:contentType: ''
           hee:publicationtype: ''
+          hee:publicationType: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -123,6 +124,19 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               observableId: ${cluster.id}publicationtype
               source: /content/documents/administration/valuelists/content-type
+          /publicationType:
+            jcr:primaryType: frontend:plugin
+            caption: Publication type
+            field: publicationType
+            hint: 'Please select the publication type. Note: Only select a value if
+              the ‘Publication Landing pages’ was selected from the Content type field'
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nameProvider: org.onehippo.forge.selection.frontend.provider.BasePathNameProvider
+              observerId: ${cluster.id}publicationtype
+              sourceBasePath: /content/documents/administration/valuelists/
           /description:
             jcr:primaryType: frontend:plugin
             caption: Description
@@ -147,7 +161,8 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Featured Documents
             field: featuredDocuments
-            hint: Please select the documents you wish to display (maximum of three)
+            hint: 'Please select the documents you wish to display (maximum of three).
+              Note: Only select documents where  ‘Manual’ was selected as the Method'
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
@@ -163,7 +178,8 @@ definitions:
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.field
-            hint: Please select relevant topics that you would like to filter
+            hint: 'Please select relevant topics that you would like to filter. Note:
+              Only select values where ‘Related’ was selected as the Method'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtopics
@@ -178,22 +194,9 @@ definitions:
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.field
-            hint: Please select relevant professions relevant that you would like
-              to filter
+            hint: 'Please select relevant professions relevant that you would like
+              to filter. Note: Only select values where ‘Related’ was selected as
+              the Method'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationprofessions
-          /publicationtype:
-            jcr:primaryType: frontend:plugin
-            caption: Publication Type
-            field: publicationtype
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: Please select the publication type
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              orientation: vertical
-              source: ''
-              observerId: ${cluster.id}publicationtype
-              nameProvider: org.onehippo.forge.selection.frontend.provider.BasePathNameProvider
-              sourceBasePath: /content/documents/administration/valuelists/

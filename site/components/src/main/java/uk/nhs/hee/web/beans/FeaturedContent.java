@@ -3,6 +3,7 @@ package uk.nhs.hee.web.beans;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import java.util.List;
 
 @HippoEssentialsGenerated(internalName = "hee:featuredContent")
 @Node(jcrType = "hee:featuredContent")
@@ -27,9 +28,9 @@ public class FeaturedContent extends BaseDocument {
         return getMultipleProperty("hee:profession");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:publicationtype")
-    public String getPublicationtype() {
-        return getSingleProperty("hee:publicationtype");
+    @HippoEssentialsGenerated(internalName = "hee:publicationType")
+    public String getPublicationType() {
+        return getSingleProperty("hee:publicationType");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:contentType")
@@ -38,7 +39,7 @@ public class FeaturedContent extends BaseDocument {
     }
 
     @HippoEssentialsGenerated(internalName = "hee:featuredDocuments")
-    public HippoBean getFeaturedDocuments() {
-        return getLinkedBean("hee:featuredDocuments", HippoBean.class);
+    public List<HippoBean> getFeaturedDocuments() {
+        return getLinkedBeans("hee:featuredDocuments", HippoBean.class);
     }
 }

@@ -41,9 +41,7 @@ public class MandatoryFeaturedDocumentsValidator implements Validator<Node> {
             final NodeIterator webDocNodeIterator = node.getNodes(PROPERTY_HEE_DOCUMENTS);
 
             @SuppressWarnings("unchecked") final List<Node> webDocNodeList = IteratorUtils.<Node>toList(webDocNodeIterator);
-            LOGGER.warn(
-                    "Caught '{}'",
-                    webDocNodeList.size());
+
             if (METHOD_VALUE.equals(node.getProperty(PROPERTY_HEE_METHOD).getString()) && webDocNodeList.size()<1) {
                 return Optional.of(context.createViolation());
 
