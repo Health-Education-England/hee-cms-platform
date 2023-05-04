@@ -1,34 +1,22 @@
 definitions:
   config:
-    /hippo:configuration/hippo:domains/content-shared:
+    /hippo:configuration/hippo:domains/content-shared-dental-publications:
       jcr:primaryType: hipposys:domain
       /document-domain:
         jcr:primaryType: hipposys:domainrule
-        /shared-folder-and-descendants:
+        /shared-publications-folder-dental-and-descendants:
           jcr:primaryType: hipposys:facetrule
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/documents/main/shared
-        /exclude-shared-settings-folder-and-descendants:
-          jcr:primaryType: hipposys:facetrule
-          hipposys:equals: false
-          hipposys:facet: jcr:path
-          hipposys:type: Reference
-          hipposys:value: /content/documents/main/shared/settings
-        /exclude-shared-publications-folder-and-descendants:
-          jcr:primaryType: hipposys:facetrule
-          hipposys:equals: false
-          hipposys:facet: jcr:path
-          hipposys:type: Reference
-          hipposys:value: /content/documents/main/shared/publications
+          hipposys:value: /content/documents/main/shared/publications/dental
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [sahred-author]
+          value: [den-author]
         hipposys:role: author
       /editor:
         jcr:primaryType: hipposys:authrole
@@ -36,7 +24,7 @@ definitions:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [shared-editor]
+          value: [dental-editor]
         hipposys:role: editor
       /gallery-domain:
         jcr:primaryType: hipposys:domainrule
@@ -45,7 +33,7 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/gallery/main/shared
+          hipposys:value: /content/gallery/main/shared/dental
       /assets-domain:
         jcr:primaryType: hipposys:domainrule
         /shared-assets-and-descendants:
@@ -53,12 +41,12 @@ definitions:
           hipposys:equals: true
           hipposys:facet: jcr:path
           hipposys:type: Reference
-          hipposys:value: /content/assets/main/shared
+          hipposys:value: /content/assets/main/shared/dental
       /readonly:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
           .meta:category: system
           .meta:add-new-system-values: true
           type: string
-          value: [sahred-reader]
+          value: [den-reader]
         hipposys:role: readonly
