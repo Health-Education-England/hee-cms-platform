@@ -22,7 +22,7 @@
           xmlns="http://www.w3.org/1999/html">
         <div class="nhsuk-width-container">
             <h1>${document.title}</h1>
-            <#if document.summary??>
+            <#if document.summary?has_content>
                 <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </#if>
             <form method="get" action="">

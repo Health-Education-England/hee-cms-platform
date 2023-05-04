@@ -22,7 +22,8 @@
         <!-- Bulletin categories -->
         <entry key="bulletinCategories" value="/content/documents/administration/valuelists/lks/bulletincategories"/>
 
-        <entry key="bulletinCategories" value="/content/documents/administration/valuelists/kls/bulletincategories"/>
+        <!-- Delete the other (above) 'bulletinCategories' entry and uncomment the following during KLS rebuid channel launch -->
+        <!-- <entry key="bulletinCategories" value="/content/documents/administration/valuelists/kls/bulletincategories"/> -->
 
         <!-- Case study valuelists -->
         <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/lks/casestudyimpacttypes"/>
@@ -31,20 +32,22 @@
         <entry key="caseStudyRegions" value="/content/documents/administration/valuelists/lks/casestudyregions"/>
         <entry key="caseStudyProviders" value="/content/documents/administration/valuelists/lks/casestudyproviders"/>
 
-        <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/kls/casestudyimpacttypes"/>
+        <!-- Delete the other (above) Casestudy value-list entries and uncomment the following during KLS rebuid channel launch -->
+        <!-- <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/kls/casestudyimpacttypes"/>
         <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/kls/casestudyimpactgroups"/>
         <entry key="caseStudySectors" value="/content/documents/administration/valuelists/kls/casestudysectors"/>
         <entry key="caseStudyRegions" value="/content/documents/administration/valuelists/kls/casestudyregions"/>
-        <entry key="caseStudyProviders" value="/content/documents/administration/valuelists/kls/casestudyproviders"/>
+        <entry key="caseStudyProviders" value="/content/documents/administration/valuelists/kls/casestudyproviders"/> -->
 
         <!-- Search bank valuelists -->
         <entry key="searchBankTopics" value="/content/documents/administration/valuelists/lks/searchbanktopics"/>
         <entry key="searchBankKeyTerms" value="/content/documents/administration/valuelists/lks/searchbankkeyterms"/>
         <entry key="searchBankProviders" value="/content/documents/administration/valuelists/lks/searchbankproviders"/>
 
-        <entry key="searchBankTopics" value="/content/documents/administration/valuelists/kls/searchbanktopics"/>
+        <!-- Delete the other (above) Searchbank value-list entries and uncomment the following during KLS rebuid channel launch -->
+        <!-- <entry key="searchBankTopics" value="/content/documents/administration/valuelists/kls/searchbanktopics"/>
         <entry key="searchBankKeyTerms" value="/content/documents/administration/valuelists/kls/searchbankkeyterms"/>
-        <entry key="searchBankProviders" value="/content/documents/administration/valuelists/kls/searchbankproviders"/>
+        <entry key="searchBankProviders" value="/content/documents/administration/valuelists/kls/searchbankproviders"/> -->
 
         <!-- Logo types -->
         <entry key="logoTypes" value="/content/documents/administration/valuelists/logotypes"/>
@@ -71,6 +74,7 @@
         <entry key="blogCategories_website-testing" value="/content/documents/administration/valuelists/website-testing/blogcategories"/>
         <entry key="blogCategories_health-careers" value="/content/documents/administration/valuelists/health-careers/blogcategories"/>
         <entry key="blogCategories_quality" value="/content/documents/administration/valuelists/quality/blogcategories"/>
+        <entry key="blogCategories_wte-alpha" value="/content/documents/administration/valuelists/wte-alpha/blogcategories"/>
 
         <!-- News categories [/content/documents/administration/valuelists/${channel}/newscategories] -->
         <entry key="newsCategories_lks" value="/content/documents/administration/valuelists/lks/newscategories"/>
@@ -81,6 +85,7 @@
         <entry key="newsCategories_website-testing" value="/content/documents/administration/valuelists/website-testing/newscategories"/>
         <entry key="newsCategories_health-careers" value="/content/documents/administration/valuelists/health-careers/newscategories"/>
         <entry key="newsCategories_quality" value="/content/documents/administration/valuelists/quality/newscategories"/>
+        <entry key="newsCategories_wte-alpha" value="/content/documents/administration/valuelists/wte-alpha/newscategories"/>
       </map>
     </constructor-arg>
   </bean>
