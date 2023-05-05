@@ -1,0 +1,7 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:workflows/gallery/image-gallery:
+        hipposys:classname:
+          operation: override
+          type: string
+          value: uk.nhs.hee.web.repository.gallery.impl.HEEGalleryWorkflowImpl
