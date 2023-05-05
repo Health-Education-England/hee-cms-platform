@@ -137,6 +137,9 @@
                                     <#case "uk.nhs.hee.web.beans.NewsletterSubscribeFormReference">
                                         <@hee.newsletterSubscribeForm block=block/>
                                         <#break>
+                                    <#case "uk.nhs.hee.web.beans.QuoteReference">
+                                        <@hee.quote block=block/>
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
@@ -245,6 +248,3 @@
         </#if>
     </main>
 </#if>
-
-
-
