@@ -1,0 +1,28 @@
+/hst:hst/hst:configurations/main/hst:workspace/hst:pages/dental-minihub-page:
+  jcr:primaryType: hst:component
+  hst:lastmodified: 2023-04-27T08:07:56.534+01:00
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:containercomponent
+    hippo:identifier: 08618578-df7c-4816-a986-c26d2b7ba5de
+    hst:label: Main MiniHub
+    hst:lastmodified: 2023-05-03T08:22:03.336+01:00
+    hst:xtype: hst.vbox
+    /landingpage:
+      jcr:primaryType: hst:containeritemcomponent
+      hst:componentclassname: uk.nhs.hee.web.components.LandingPageComponent
+      hst:iconpath: images/catalog-component-icons/simple-content.svg
+      hst:label: Landing Page
+      hst:parameternames: [document]
+      hst:parametervalues: [dental/landing-pages/dental-trainee-recruitment]
+      hst:template: landingpage-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2023-04-27T08:08:38.914+01:00
+        hst:xtype: hst.vbox

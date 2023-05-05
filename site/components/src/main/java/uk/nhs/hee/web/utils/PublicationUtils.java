@@ -1,17 +1,19 @@
 package uk.nhs.hee.web.utils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PublicationUtils {
-    private static Pattern pattern = Pattern.compile("(.+)/(publications/)(.)/(.+)");
+    private static Pattern pattern = Pattern.compile("(.+)/(publications/)(.+)");
 
-    public String getURLAfterPossibleMarkerRemoved(String path) {
+    public String getURLAfterPossibleHubElementRemoved(String path) {
         if (path.contains("/publications/")) {
             Matcher m = pattern.matcher(path);
             if (m.find()) {
-                String replaceroo = PublicationConstants.fromMarkerToChannel(m.group(3));
-                path = m.replaceAll(replaceroo + "/$2$4");
+                path = m.replaceAll("$2$3");
             }
         }
 
@@ -38,8 +40,8 @@ public class PublicationUtils {
     }
 
     public boolean sameResolvedURL(String firstURL, String secondURL) {
-        String resolvedFirst = getURLAfterPossibleMarkerRemoved(firstURL);
-        String resolvedSecond = getURLAfterPossibleMarkerRemoved(secondURL);
+        String resolvedFirst = getURLAfterPossibleHubElementRemoved(firstURL);
+        String resolvedSecond = getURLAfterPossibleHubElementRemoved(secondURL);
 
         return resolvedFirst.equals(resolvedSecond);
     }
@@ -64,5 +66,15 @@ public class PublicationUtils {
         }
 
         return URL;
+    }
+
+    public List<String> buildListOfUrlsToCheck(String modifiedPath) {
+        List<String> hubs = Arrays.asList("medical", "dental", "kls");
+        List<String> list = new ArrayList<>();
+
+        final String workingPath = modifiedPath.startsWith("/") ? modifiedPath.substring(1) : modifiedPath;
+
+        hubs.stream().forEach(hub -> list.add(hub + "/" + workingPath));
+        return list;
     }
 }

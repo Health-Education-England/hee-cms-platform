@@ -1,8 +1,11 @@
 package uk.nhs.hee.web.linkprocessor;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.hippoecm.hst.configuration.sitemap.HstSiteMapItem;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.linking.HstLinkProcessorTemplate;
 import uk.nhs.hee.web.utils.PublicationConstants;
@@ -44,7 +47,8 @@ public class PublicationHstLinkProcessor extends HstLinkProcessorTemplate {
                 Matcher m = r.matcher(path);
                 if (m.find()) {
                     String marker = PublicationConstants.fromChannelToMarker(parts[0]);
-                    path = m.replaceAll("!!PATHREF!!/$2"+ marker + "/$3");
+                    //path = m.replaceAll("!!PATHREF!!/$2"+ marker + "/$3");
+                    path = m.replaceAll("!!PATHREF!!/$2"+ "$3");
                     link.setPath(path);
                 }
             }
@@ -72,9 +76,19 @@ public class PublicationHstLinkProcessor extends HstLinkProcessorTemplate {
     protected HstLink doPreProcess(HstLink link) {
         PublicationUtils utils = new PublicationUtils();
 
-        String possiblyModifiedPath = utils.getURLAfterPossibleMarkerRemoved(link.getPath());
-        link.setPath(possiblyModifiedPath);
+        if (utils.isThisAPublicationsURL(link.getPath())) {
+            String modifiedPath = utils.getURLAfterPossibleHubElementRemoved(link.getPath());
+            List<String> urlsToCheck = utils.buildListOfUrlsToCheck(modifiedPath);
 
+            Optional<String> matchingURL = urlsToCheck.stream()
+                    .filter(url -> link.getMount().getHstSite().getSiteMap().getSiteMapItemById(url) != null)
+                    .findFirst();
+
+            if (matchingURL.isPresent()) {
+                    link.setPath(matchingURL.get());
+                    return link;
+            }
+        }
         return link;
     }
 }

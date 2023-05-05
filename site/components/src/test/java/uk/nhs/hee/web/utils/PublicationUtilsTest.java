@@ -7,6 +7,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 public class PublicationUtilsTest {
     private PublicationUtils support;
 
@@ -16,25 +18,13 @@ public class PublicationUtilsTest {
     }
 
     @Test
-    public void canIdentifyMarkerInURL() {
-        String newURL = support.getURLAfterPossibleMarkerRemoved("/medical/publications/d/dental-info");
-        assertEquals("dental/publications/dental-info", newURL);
+    public void thisDoesLookLikeAPublicationsURL() {
+        assertTrue(support.isThisAPublicationsURL("/medical/publications/dental-info"));
     }
 
     @Test
-    public void canManageWithoutAMarkerInURL() {
-        String newURL = support.getURLAfterPossibleMarkerRemoved("/medical/publications/dental-info");
-        assertEquals("medical/publications/dental-info", newURL);
-    }
-
-    @Test
-    public void thisDoesNotLookLikeAPublicationsURL() {
-        assertFalse(support.isThisAPublicationsURL("/medical/publications/dental-info"));
-    }
-
-    @Test
-    public void thisDoesNotLookLikeAPublicationsURLEither() {
-        assertFalse(support.isThisAPublicationsURL("medical/publications/dental-info"));
+    public void thisDoesLookLikeAPublicationsURLAsWell() {
+        assertTrue(support.isThisAPublicationsURL("medical/publications/dental-info"));
     }
 
     @Test
@@ -49,13 +39,13 @@ public class PublicationUtilsTest {
 
     @Test
     public void areTheseActuallyTheSameURLWhenBothMedical() {
-        assertTrue(support.sameResolvedURL("medical/publications/m/dental-info",
+        assertFalse(support.sameResolvedURL("medical/publications/m/dental-info",
                 "medical/publications/dental-info"));
     }
 
     @Test
     public void areTheseActuallyTheSameURLWhenApparentlyDifferentHubs() {
-        assertTrue(support.sameResolvedURL("medical/publications/d/dental-info",
+        assertTrue(support.sameResolvedURL("medical/publications/dental-info",
                 "dental/publications/dental-info"));
     }
 
@@ -66,6 +56,28 @@ public class PublicationUtilsTest {
 
     @Test
     public void cannotFindPathToActualDocumentAsNotPubsURL() {
-        assertEquals("medical/publications/info-1", support.findRootToDocumentInURL("medical/publications/info-1"));
+        assertEquals("medical/publications", support.findRootToDocumentInURL("medical/publications"));
+    }
+
+    @Test
+    public void checkListOfGeneratedURLSIsCorrect() {
+        List<String> urls = support.buildListOfUrlsToCheck("/fred/red");
+        assertEquals(3, urls.size());
+
+        checkUrlsAgainstAssertions(urls);
+    }
+
+    @Test
+    public void checkListOfGeneratedURLSIsCorrectWhenURLSuppliedHasNoLeadingSlash() {
+        List<String> urls = support.buildListOfUrlsToCheck("fred/red");
+        assertEquals(3, urls.size());
+
+        checkUrlsAgainstAssertions(urls);
+    }
+
+    private void checkUrlsAgainstAssertions(List<String> urls) {
+        assertTrue(urls.contains("medical/fred/red"));
+        assertTrue(urls.contains("dental/fred/red"));
+        assertTrue(urls.contains("kls/fred/red"));
     }
 }

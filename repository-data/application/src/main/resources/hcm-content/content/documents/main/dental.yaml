@@ -28,7 +28,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 1e0005cc-794d-47cb-9f8e-a1a0729de8b9
     hippo:name: Home
-    hippo:versionHistory: e264326e-45ad-47dc-8ab2-700637a4f2f2
+    hippo:versionHistory: 09cf4b4b-32f0-4623-9e34-4205fcfc4eec
     /home[1]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -40,7 +40,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-07-13T15:47:59.693+01:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:45.329Z
+      hippostdpubwf:lastModificationDate: 2023-05-03T08:18:13.863+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 70bca06c-b94f-46b8-83af-663da5696850
       hippotranslation:locale: en
@@ -50,7 +50,7 @@
         hee:text: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
           Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
           ac diam sit amet quam vehicula elementum sed sit amet dui.
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
           <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
@@ -58,6 +58,32 @@
           <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
 
           <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 6073c38c-76fa-4419-8927-fb11d3262d2b
+          hee:openLinkUrlNewWindow: false
+          hee:text: News
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
     /home[2]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -69,7 +95,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-07-13T15:47:59.693+01:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:52.849Z
+      hippostdpubwf:lastModificationDate: 2023-05-03T08:19:52.260+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 70bca06c-b94f-46b8-83af-663da5696850
       hippotranslation:locale: en
@@ -79,7 +105,7 @@
         hee:text: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
           Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
           ac diam sit amet quam vehicula elementum sed sit amet dui.
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
           <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
@@ -87,6 +113,28 @@
           <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
 
           <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: News
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
     /home[3]:
       jcr:primaryType: hee:HomePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -98,9 +146,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-07-13T15:47:59.693+01:00
-      hippostdpubwf:lastModificationDate: 2021-12-07T00:12:52.849Z
+      hippostdpubwf:lastModificationDate: 2023-05-03T08:19:52.260+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-12-07T00:12:54.743Z
+      hippostdpubwf:publicationDate: 2023-05-03T08:19:54.219+01:00
       hippotranslation:id: 70bca06c-b94f-46b8-83af-663da5696850
       hippotranslation:locale: en
       /hee:HeroSection:
@@ -109,7 +157,7 @@
         hee:text: Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
           Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum
           ac diam sit amet quam vehicula elementum sed sit amet dui.
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
           <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Nulla quis lorem ut libero malesuada feugiat.</p>
@@ -117,6 +165,28 @@
           <p>Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
 
           <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: 8a6ce4ab-1456-440d-9418-7d3808bfc3d5
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: News
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 788a5c3e-15ad-4e2c-a706-3604c2c05c9b
   /landing-pages:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
@@ -142,9 +212,10 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2021-12-23T12:54:10.817Z
-        hippostdpubwf:lastModificationDate: 2021-12-23T12:54:10.817Z
+        hippostdpubwf:lastModificationDate: 2023-05-03T08:08:50.193+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 1dca33bd-3684-4b88-8919-cab458d922e9
         hippotranslation:locale: en

@@ -128,7 +128,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 6c0e043d-7dbd-4d41-be3a-a7548f51b0eb
     hippo:name: Specialty Training Hub
-    hippo:versionHistory: d709eb25-6860-4eb3-a332-7e5506de19c9
+    hippo:versionHistory: 0c5cf4bf-bdbc-4faf-8199-408224755a4a
     /specialty-training-hub[1]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -138,13 +138,13 @@
         posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
         sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
         a.
-      hee:title: Specialty Training Hub
+      hee:title: Medical Specialty Training Hub
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-07-13T12:53:27.871+01:00
-      hippostdpubwf:lastModificationDate: 2022-07-13T12:53:27.871+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-03T07:38:41.546+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 51c7a4fc-cdfa-4c1a-b0cd-aa0352db5c10
       hippotranslation:locale: en
@@ -166,13 +166,13 @@
         posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
         sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
         a.
-      hee:title: Specialty Training Hub
+      hee:title: Medical Specialty Training Hub
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-07-13T12:53:27.871+01:00
-      hippostdpubwf:lastModificationDate: 2022-07-13T12:54:40.293+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-03T07:38:40.980+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 51c7a4fc-cdfa-4c1a-b0cd-aa0352db5c10
       hippotranslation:locale: en
@@ -194,15 +194,15 @@
         posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper
         sit amet ligula. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar
         a.
-      hee:title: Specialty Training Hub
+      hee:title: Medical Specialty Training Hub
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2022-07-13T12:53:27.871+01:00
-      hippostdpubwf:lastModificationDate: 2022-07-13T12:54:40.293+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-03T07:38:40.980+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2022-07-13T12:54:42.397+01:00
+      hippostdpubwf:publicationDate: 2023-05-03T07:38:44.657+01:00
       hippotranslation:id: 51c7a4fc-cdfa-4c1a-b0cd-aa0352db5c10
       hippotranslation:locale: en
       /hee:logoGroup:
@@ -443,3 +443,78 @@
     hippostd:foldertype: [new-translated-folder, new-document]
     hippotranslation:id: 05279784-8e06-4c8b-b71d-aa547595f2bf
     hippotranslation:locale: en
+  /components:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 57af345c-9ead-4376-ada5-c65d44c724e8
+    hippo:name: Components
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 9e3e7d1e-e538-49a8-971b-1ab07a012b29
+    hippotranslation:locale: en
+    /dental-publications-internal-link:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 45a71310-c4bc-49ec-b7a4-3a3de69a9955
+      hippo:name: Dental Publications Internal Link
+      hippo:versionHistory: 7da8c280-f88a-4fc6-8497-e3befd880334
+      /dental-publications-internal-link[1]:
+        jcr:primaryType: hee:internalLinksCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 07c12346-b2a0-4c6d-87ec-80399b1d1e54
+        hee:title: Dental pubs
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-03T08:04:21.308+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-03T08:07:06.760+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a81169a7-488f-40cc-bafb-adfa9db6d058
+        hippotranslation:locale: en
+        /hee:internalLinks:
+          jcr:primaryType: hee:internalLink
+          hee:text: Dental publications
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 76ea0073-328d-40b8-99aa-a143b196166d
+      /dental-publications-internal-link[2]:
+        jcr:primaryType: hee:internalLinksCard
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 921c6a33-521d-4f4c-916b-51a06de974cc
+        hee:title: Dental pubs
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-03T08:04:21.308+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-03T08:07:06.714+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a81169a7-488f-40cc-bafb-adfa9db6d058
+        hippotranslation:locale: en
+        /hee:internalLinks:
+          jcr:primaryType: hee:internalLink
+          hee:text: Dental publications
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 76ea0073-328d-40b8-99aa-a143b196166d
+      /dental-publications-internal-link[3]:
+        jcr:primaryType: hee:internalLinksCard
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 4da2d986-76fb-434e-b6b1-fa99d44aa38f
+        hee:title: Dental pubs
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-03T08:04:21.308+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-03T08:07:06.714+01:00
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-05-03T08:07:10.659+01:00
+        hippotranslation:id: a81169a7-488f-40cc-bafb-adfa9db6d058
+        hippotranslation:locale: en
+        /hee:internalLinks:
+          jcr:primaryType: hee:internalLink
+          hee:text: Dental publications
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 76ea0073-328d-40b8-99aa-a143b196166d

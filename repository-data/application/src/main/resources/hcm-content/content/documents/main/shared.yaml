@@ -134,6 +134,98 @@
             </table>
 
             <p>&nbsp;</p>
+    /shared-james-smith---author:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 056640f6-9e02-4fcc-a2d3-1bc87da0bce4
+      hippo:name: Shared - James smith - Author
+      hippo:versionHistory: c40a65de-31d6-4a35-abc4-23a7567b9d7b
+      /shared-james-smith---author[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: c14fe0b5-0829-42b0-b4d6-c56a40342926
+        hee:bioSummary: This is the bio test content for author. Nulla porttitor accumsan
+          tincidunt. Sed porttito lectus nibh. Praesent sapien massa, convallis a
+          pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.
+          Sed portti
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T11:36:27.442Z
+        hippostdpubwf:lastModificationDate: 2023-01-24T12:09:36.921Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: a5eaad4b-9f1c-4a4c-b25e-9dd54ebc1b0d
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+      /shared-james-smith---author[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: acabd20b-9840-4599-bc98-272c93c56b24
+        hee:bioSummary: This is the bio test content for author. Nulla porttitor accumsan
+          tincidunt. Sed porttito lectus nibh. Praesent sapien massa, convallis a
+          pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.
+          Sed portti
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T11:36:27.442Z
+        hippostdpubwf:lastModificationDate: 2023-01-24T12:09:36.921Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-05-03T16:21:48.848+01:00
+        hippotranslation:id: a5eaad4b-9f1c-4a4c-b25e-9dd54ebc1b0d
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 507b8b28-dbf0-4799-a9ce-20ae57ed5b3e
+    /shared-john-doe---author:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 1fde854a-0ed9-4202-973c-c63cd8ffa233
+      hippo:name: Shared John doe - Author
+      hippo:versionHistory: 6684b434-ade1-4e3a-bd14-f355f0e290f4
+      /shared-john-doe---author[1]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:versionable']
+        jcr:uuid: bf45bea3-f8ff-417a-a7ed-ef5331231252
+        hee:bioSummary: Nulla porttitor accumsan tincidunt. Sed porttito lectus nibh.
+          Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
+          porttitor accumsan tincidunt. Sed portti . Nulla porttitor accumsan tinc
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T16:54:22.678Z
+        hippostdpubwf:lastModificationDate: 2023-01-24T12:09:56.965Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 4d910f04-24d4-48f9-b784-6f6b20ae8ff3
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
+      /shared-john-doe---author[2]:
+        jcr:primaryType: hee:author
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 8544e355-845a-4571-9517-d43fae8b3b68
+        hee:bioSummary: Nulla porttitor accumsan tincidunt. Sed porttito lectus nibh.
+          Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
+          porttitor accumsan tincidunt. Sed portti . Nulla porttitor accumsan tinc
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2022-12-07T16:54:22.678Z
+        hippostdpubwf:lastModificationDate: 2023-01-24T12:09:56.965Z
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-05-03T16:21:46.554+01:00
+        hippotranslation:id: 4d910f04-24d4-48f9-b784-6f6b20ae8ff3
+        hippotranslation:locale: document-type-locale
+        /hee:person:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 8abb6cfe-b38d-4de5-8948-6bc9d1e6b973
   /settings:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
@@ -169,7 +261,7 @@
           jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
           jcr:uuid: 78c5b3da-9ab0-44ce-b8f9-0173f3b9e537
           hippo:name: Dental info
-          hippo:versionHistory: 7d955d00-7ef6-485d-b03b-300e1cbd5d36
+          hippo:versionHistory: e5a6f3bc-8622-43eb-8350-24185525a1ea
           /dental-info[1]:
             jcr:primaryType: hee:publicationLandingPage
             jcr:mixinTypes: ['mix:versionable']
@@ -189,8 +281,8 @@
             hippostd:state: unpublished
             hippostdpubwf:createdBy: admin
             hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
-            hippostdpubwf:lastModificationDate: 2023-04-27T16:16:26.812+01:00
-            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:lastModificationDate: 2023-05-03T16:23:11.429+01:00
+            hippostdpubwf:lastModifiedBy: den-editor
             hippotranslation:id: e5f0b01f-4dd7-4811-a76f-61d1151c592d
             hippotranslation:locale: en
             /hee:logoGroup:
@@ -219,9 +311,6 @@
             /hee:webPublications:
               jcr:primaryType: hippo:mirror
               hippo:docbase: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
-            /hee:authors:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /dental-info[2]:
             jcr:primaryType: hee:publicationLandingPage
             jcr:mixinTypes: ['mix:referenceable']
@@ -241,8 +330,8 @@
             hippostd:state: draft
             hippostdpubwf:createdBy: admin
             hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
-            hippostdpubwf:lastModificationDate: 2023-04-27T16:16:06.328+01:00
-            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:lastModificationDate: 2023-05-03T16:23:07.233+01:00
+            hippostdpubwf:lastModifiedBy: den-editor
             hippotranslation:id: e5f0b01f-4dd7-4811-a76f-61d1151c592d
             hippotranslation:locale: en
             /hee:logoGroup:
@@ -271,9 +360,6 @@
             /hee:webPublications:
               jcr:primaryType: hippo:mirror
               hippo:docbase: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
-            /hee:authors:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /dental-info[3]:
             jcr:primaryType: hee:publicationLandingPage
             jcr:mixinTypes: ['mix:referenceable']
@@ -293,9 +379,9 @@
             hippostd:state: published
             hippostdpubwf:createdBy: admin
             hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
-            hippostdpubwf:lastModificationDate: 2023-04-27T16:16:26.812+01:00
-            hippostdpubwf:lastModifiedBy: admin
-            hippostdpubwf:publicationDate: 2023-04-27T16:16:29.008+01:00
+            hippostdpubwf:lastModificationDate: 2023-05-03T16:23:11.429+01:00
+            hippostdpubwf:lastModifiedBy: den-editor
+            hippostdpubwf:publicationDate: 2023-05-03T16:23:13.130+01:00
             hippotranslation:id: e5f0b01f-4dd7-4811-a76f-61d1151c592d
             hippotranslation:locale: en
             /hee:logoGroup:
@@ -324,9 +410,6 @@
             /hee:webPublications:
               jcr:primaryType: hippo:mirror
               hippo:docbase: a4add0ec-d583-45fe-a6fb-0a53e6ff0a42
-            /hee:authors:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /dental-info-page-1:
           jcr:primaryType: hippo:handle
           jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -449,14 +532,14 @@
           jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
           jcr:uuid: ef9907f1-1104-45b8-9f22-39d8918d1e58
           hippo:name: Medical info
-          hippo:versionHistory: 19abd898-0839-4e39-aa15-b948bef3eaed
+          hippo:versionHistory: f6b1690e-ae14-4091-aea7-9d229eb4aebe
           /medical-info[1]:
             jcr:primaryType: hee:publicationLandingPage
             jcr:mixinTypes: ['mix:referenceable']
             jcr:uuid: 1db50840-753b-4289-88af-f6d092a8c715
             hee:hideAuthorContactDetails: false
             hee:publicationDate: 2023-04-21T00:00:00+01:00
-            hee:publicationProfessions: [allied_health]
+            hee:publicationProfessions: [allied_health, medical]
             hee:publicationTopics: [advanced_clinical_practice]
             hee:publicationType: contract
             hee:readTime: '12'
@@ -465,12 +548,13 @@
             hee:title: Medical info
             hee:updatedDate: 2023-04-21T00:00:00+01:00
             hippo:availability: []
+            hippostd:holder: med-editor
             hippostd:retainable: false
             hippostd:state: draft
             hippostdpubwf:createdBy: admin
             hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
-            hippostdpubwf:lastModificationDate: 2023-04-21T08:59:09.397+01:00
-            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:lastModificationDate: 2023-05-03T16:20:03.981+01:00
+            hippostdpubwf:lastModifiedBy: med-editor
             hippotranslation:id: 43fecae8-b5c6-423e-8dde-e2b52e7118ff
             hippotranslation:locale: en
             /hee:logoGroup:
@@ -511,7 +595,7 @@
             jcr:uuid: f450e34c-4443-481d-81e6-d88fda8806f6
             hee:hideAuthorContactDetails: false
             hee:publicationDate: 2023-04-21T00:00:00+01:00
-            hee:publicationProfessions: [allied_health]
+            hee:publicationProfessions: [allied_health, medical]
             hee:publicationTopics: [advanced_clinical_practice]
             hee:publicationType: contract
             hee:readTime: '12'
@@ -524,7 +608,7 @@
             hippostd:state: unpublished
             hippostdpubwf:createdBy: admin
             hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
-            hippostdpubwf:lastModificationDate: 2023-04-21T08:59:09.380+01:00
+            hippostdpubwf:lastModificationDate: 2023-05-03T10:33:58.950+01:00
             hippostdpubwf:lastModifiedBy: admin
             hippotranslation:id: 43fecae8-b5c6-423e-8dde-e2b52e7118ff
             hippotranslation:locale: en
@@ -566,7 +650,7 @@
             jcr:uuid: fc8ac04c-a76b-47ed-bab9-e30210a43eeb
             hee:hideAuthorContactDetails: false
             hee:publicationDate: 2023-04-21T00:00:00+01:00
-            hee:publicationProfessions: [allied_health]
+            hee:publicationProfessions: [allied_health, medical]
             hee:publicationTopics: [advanced_clinical_practice]
             hee:publicationType: contract
             hee:readTime: '12'
@@ -579,9 +663,9 @@
             hippostd:state: published
             hippostdpubwf:createdBy: admin
             hippostdpubwf:creationDate: 2023-04-21T08:57:26.956+01:00
-            hippostdpubwf:lastModificationDate: 2023-04-21T08:59:09.380+01:00
+            hippostdpubwf:lastModificationDate: 2023-05-03T10:33:58.950+01:00
             hippostdpubwf:lastModifiedBy: admin
-            hippostdpubwf:publicationDate: 2023-04-21T09:00:00.900+01:00
+            hippostdpubwf:publicationDate: 2023-05-03T10:34:00.901+01:00
             hippotranslation:id: 43fecae8-b5c6-423e-8dde-e2b52e7118ff
             hippotranslation:locale: en
             /hee:logoGroup:
