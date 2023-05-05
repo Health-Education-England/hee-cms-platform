@@ -10,7 +10,6 @@
 <#include "last-next-reviewed-date.ftl">
 <#include "nav-map.ftl">
 <#include "quick-links.ftl">
-<#include "statement-block.ftl">
 <#include "cta-card.ftl">
 <#include "block-links.ftl">
 <#include "anchor-links.ftl">
