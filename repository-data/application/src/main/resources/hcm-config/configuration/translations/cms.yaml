@@ -32,3 +32,9 @@ definitions:
         select a different Publication page.'
       hee:unique-web-publications-validator#duplicate-publication-pages: Please remove
         duplicate Publication page document(s)
+    /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        titlePropertyFilter.propertyName: Title
+        titlePropertyFilter.title: Title filter

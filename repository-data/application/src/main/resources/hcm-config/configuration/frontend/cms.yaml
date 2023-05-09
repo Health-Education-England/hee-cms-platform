@@ -15,3 +15,14 @@ definitions:
       max.file.size: 10M
       plugin.class: org.hippoecm.frontend.plugins.yui.upload.validation.AssetUploadValidationPlugin
       validator.id: service.publication.document.validation
+    /hippo:configuration/hippo:frontend/cms/cms-advanced-search/genericFilters:
+      document.type.namespaces: [hee]
+      document.subtypes.included: true
+      document.type.excluded: ['hee:basedocument', 'hee:contactCard']
+    /hippo:configuration/hippo:frontend/cms/cms-advanced-search/titlePropertyFilter:
+      jcr:primaryType: frontend:plugin
+      filterPropertyName: hee:title
+      filterPropertyType: text
+      plugin.class: com.onehippo.cms7.search.frontend.filters.GenericPropertyFilterPlugin
+      wicket.id: ${search.extensions}
+      wicket.model: ${model.search}
