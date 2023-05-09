@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 9c9dceb8-4baf-42b4-bb68-8126d3f76853
+    hippo:versionHistory: f6f1202a-ae5c-4fb8-83ac-603b10e8f690
     /copyright[1]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:versionable']
@@ -26,7 +26,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2023-05-05T13:49:17.156+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-09T11:35:24.114+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -94,8 +94,8 @@
           hippo:values: []
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-10T00:00:00Z
-        hee:nextReviewed: 2021-02-01T00:00:00Z
+        hee:lastReviewed: 2017-02-10T00:00:00+05:30
+        hee:nextReviewed: 2021-02-01T00:00:00+05:30
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -523,6 +523,11 @@
         /hee:quoteContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      /hee:contentBlocks[28]:
+        jcr:primaryType: hee:expanderTableReference
+        /hee:expanderTableContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
     /copyright[2]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -532,11 +537,12 @@
         printed and digital work in the following ways.
       hee:title: Copyright
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2023-05-02T15:57:14.141+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-09T13:15:49.851+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -604,8 +610,8 @@
           hippo:values: []
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-10T00:00:00Z
-        hee:nextReviewed: 2021-02-01T00:00:00Z
+        hee:lastReviewed: 2017-02-10T00:00:00+05:30
+        hee:nextReviewed: 2021-02-01T00:00:00+05:30
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -1033,6 +1039,11 @@
         /hee:quoteContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      /hee:contentBlocks[28]:
+        jcr:primaryType: hee:expanderTableReference
+        /hee:expanderTableContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
     /copyright[3]:
       jcr:primaryType: hee:guidance
       jcr:mixinTypes: ['mix:referenceable']
@@ -1046,9 +1057,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2023-05-05T13:49:17.156+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-09T11:35:24.114+05:30
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-05-05T13:49:28.307+01:00
+      hippostdpubwf:publicationDate: 2023-05-09T11:35:27.002+05:30
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1115,8 +1126,8 @@
           hippo:values: []
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-10T00:00:00Z
-        hee:nextReviewed: 2021-02-01T00:00:00Z
+        hee:lastReviewed: 2017-02-10T00:00:00+05:30
+        hee:nextReviewed: 2021-02-01T00:00:00+05:30
       /hee:StatementBlock:
         jcr:primaryType: hee:StatementBlock
         hee:statement: ''
@@ -1544,6 +1555,11 @@
         /hee:quoteContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      /hee:contentBlocks[28]:
+        jcr:primaryType: hee:expanderTableReference
+        /hee:expanderTableContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
   /introduction:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
