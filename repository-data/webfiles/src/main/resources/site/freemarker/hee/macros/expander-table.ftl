@@ -29,7 +29,8 @@
                                                 ${row.dataTitle}
                                             </span>
                                             <span class="hee-table-expander__row__content" role="cell">
-                                                <@hst.html hippohtml=row.data/>
+                                                <@hst.html hippohtml=row.data var="dataHTML"/>
+                                                ${dataHTML?replace('<p>', '')?replace('</p>', '<br><br>')?keep_before_last('<br><br>')}
                                             </span>
                                         </div>
                                     </#list>
