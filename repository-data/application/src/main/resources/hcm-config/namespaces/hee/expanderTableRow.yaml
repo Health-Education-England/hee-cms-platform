@@ -65,13 +65,10 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Data
             field: html
-            hint: ''
+            hint: Enter the data
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removePlugins: "elementspath,codemirror,basicstyles,stylescombo,undo,justify,list,specialchar,showblocks,copyformatting,removeformat",
-                removeButtons: "Indent,PickImage,Table,Source,Youtube,Maximize,Anchor",
-                stylesSet: "custom_styles:./custom_styles.js" }'
-              ckeditor.config.overlayed.json: '{ allowedContent: true, forcePasteAsPlainText:
-                true}'
+              ckeditor.config.overlayed.json: '{ removeButtons: ''Anchor'', toolbarGroups:
+                [{ name : "links" }], forcePasteAsPlainText: true }'
