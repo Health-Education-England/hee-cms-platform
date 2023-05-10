@@ -1,5 +1,10 @@
 package uk.nhs.hee.web.components;
 
+import org.hippoecm.hst.content.beans.query.HstQuery;
+import org.hippoecm.hst.content.beans.query.HstQueryResult;
+import org.hippoecm.hst.content.beans.query.builder.HstQueryBuilder;
+import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
+import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
@@ -8,17 +13,18 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.nhs.hee.web.beans.FeaturedContent;
 import uk.nhs.hee.web.beans.PublicationLandingPage;
 import uk.nhs.hee.web.beans.Report;
 import uk.nhs.hee.web.components.info.ReportComponentInfo;
+import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.TableComponentService;
-import uk.nhs.hee.web.utils.ContentBlocksUtils;
-import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.ReportAndPublicationUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
+import uk.nhs.hee.web.utils.*;
 
 import javax.jcr.RepositoryException;
+import javax.management.Query;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
@@ -48,6 +54,68 @@ public class ReportComponent extends EssentialsDocumentComponent {
             addRelatedPublicationLandingPageToModel(request, reportPage);
             addPublicationTypeTopicAndProfessionMapsToModel(request);
             addPublicationListingPageURLToModel(request);
+
+            if(reportPage.getFeaturedContentReference().getFeaturedContentBlock() != null) {
+
+                FeaturedContent featuredContent = (FeaturedContent) reportPage.getFeaturedContentReference().getFeaturedContentBlock();
+                if(!featuredContent.getMethod().equals("Manual")) {
+                    log.error("It go in to the FEATURED CONTENT {}", featuredContent.getMethod());
+                    addFeaturedContent(request, reportPage, featuredContent);
+                }
+            }
+        }
+    }
+
+    private void addFeaturedContent(HstRequest request, Report reportPage, FeaturedContent featuredContentBlock) {
+        try {
+            final int limit = 3;
+            String contentType= "publication";
+
+            switch(featuredContentBlock.getContentType()){
+                case "publicationtype":
+                    contentType = "publication";
+                    break;
+                case "Blog Post":
+                    contentType = "blog";
+                    break;
+                case "News Articles":
+                    contentType = "news";
+                    break;
+                case "Case Studies":
+                    contentType = "casestudy";
+                    break;
+            }
+
+            QueryAndFiltersUtils featuredContent = new QueryAndFiltersUtils();
+            HstQuery query = featuredContent.createQuery(reportPage, request.getRequestContext(),limit,contentType);
+
+            if(featuredContentBlock.getMethod().equals("Related")) {
+                Filter filter = featuredContent.createOrFilter(
+                        query,
+                        Arrays.asList(featuredContentBlock.getTopics()),
+                        HEEField.PUBLICATION_TOPICS.getName());
+                filter.addAndFilter(
+                        featuredContent.createOrFilter(
+                                query,
+                                Arrays.asList(featuredContentBlock.getProfession()),
+                                HEEField.PUBLICATION_PROFESSIONS.getName()));
+                if (featuredContentBlock.getContentType().equals("publicationtype")) {
+                    filter.addAndFilter(
+                            featuredContent.createOrFilter(
+                                    query,
+                                    Arrays.asList(featuredContentBlock.getPublicationType()),
+                                    HEEField.PUBLICATION_TYPE.getName()));
+                }
+                query.setFilter(filter);
+            }
+
+            final HstQueryResult result = query.execute();
+            if (result.getHippoBeans() != null) {
+                request.setModel("featuredContent", result.getHippoBeans());
+            }
+        } catch (final QueryException | RepositoryException e) {
+            log.error("Caught error '{}' while finding the Publication Landing Page " +
+                    "related to the Publication (Report) Page '{}' ", e.getMessage(), reportPage.getPath(), e);
         }
     }
 
@@ -60,6 +128,7 @@ public class ReportComponent extends EssentialsDocumentComponent {
      */
     private void addRelatedPublicationLandingPageToModel(final HstRequest request, final Report reportPage) {
         try {
+
             request.setModel("landingPage",
                     new ReportAndPublicationUtils().findMyParent(reportPage, request.getRequestContext()));
         } catch (final RepositoryException e) {

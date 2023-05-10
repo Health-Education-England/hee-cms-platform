@@ -251,7 +251,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: dec75cbc-43ed-468d-89f7-e6fd7cee024e
         hippo:name: Reasonable Adjustments Policy - Publication 1
-        hippo:versionHistory: 0c6fbc5c-4520-4c61-95d7-e371640084fa
+        hippo:versionHistory: 52ea56a7-991c-46c6-bd96-9fd458a9ea14
         /reasonable-adjustments-policy---publication-1[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -269,7 +269,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-01-20T14:46:53.098Z
+          hippostdpubwf:lastModificationDate: 2023-05-10T17:09:52.595+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
@@ -470,6 +470,11 @@
             hee:headingTitle: Headings H3
             hee:headingType: H3
             hee:shortTitle: H3
+          /hee:featuredContentReference:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /reasonable-adjustments-policy---publication-1[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -487,7 +492,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-01-20T14:47:17.052Z
+          hippostdpubwf:lastModificationDate: 2023-05-10T17:09:48.064+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
@@ -688,6 +693,11 @@
             hee:headingTitle: Headings H3
             hee:headingType: H3
             hee:shortTitle: H3
+          /hee:featuredContentReference:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /reasonable-adjustments-policy---publication-1[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -705,9 +715,9 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-01-20T14:47:17.052Z
+          hippostdpubwf:lastModificationDate: 2023-05-10T17:09:48.064+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-01-20T14:47:21.318Z
+          hippostdpubwf:publicationDate: 2023-05-10T17:09:57.097+01:00
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
@@ -907,12 +917,17 @@
             hee:headingTitle: Headings H3
             hee:headingType: H3
             hee:shortTitle: H3
+          /hee:featuredContentReference:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /reasonable-adjustments-policy---publication-2:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 06b2952e-0e78-43f7-898b-b7e88aaa0c8a
         hippo:name: Reasonable Adjustments Policy - Publication 2
-        hippo:versionHistory: ed5c6ae3-5fda-42f3-a966-b4ba857e91cd
+        hippo:versionHistory: a83fb52f-1f4d-4808-a9a7-e0747484ede7
         /reasonable-adjustments-policy---publication-2[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:versionable']
@@ -927,7 +942,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-01-20T14:48:23.861Z
+          hippostdpubwf:lastModificationDate: 2023-05-09T13:42:10.059+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 07dad520-597f-4557-bb56-fa9412dbdc98
           hippotranslation:locale: en
@@ -968,6 +983,11 @@
             hee:headingTitle: Testing Heading
             hee:headingType: H3
             hee:shortTitle: Heading
+          /hee:featuredContentReference:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /reasonable-adjustments-policy---publication-2[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -982,7 +1002,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-01-20T14:47:28.574Z
+          hippostdpubwf:lastModificationDate: 2023-05-09T13:42:02.121+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 07dad520-597f-4557-bb56-fa9412dbdc98
           hippotranslation:locale: en
@@ -1023,6 +1043,11 @@
             hee:headingTitle: Testing Heading
             hee:headingType: H3
             hee:shortTitle: Heading
+          /hee:featuredContentReference:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /reasonable-adjustments-policy---publication-2[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -1037,9 +1062,9 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-01-20T14:48:23.861Z
+          hippostdpubwf:lastModificationDate: 2023-05-09T13:42:10.059+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-01-20T14:48:28.917Z
+          hippostdpubwf:publicationDate: 2023-05-09T13:42:12.532+01:00
           hippotranslation:id: 07dad520-597f-4557-bb56-fa9412dbdc98
           hippotranslation:locale: en
           /hee:pageLastNextReview:
@@ -1079,6 +1104,11 @@
             hee:headingTitle: Testing Heading
             hee:headingType: H3
             hee:shortTitle: Heading
+          /hee:featuredContentReference:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /careers:
       jcr:primaryType: hippostd:folder
       jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']

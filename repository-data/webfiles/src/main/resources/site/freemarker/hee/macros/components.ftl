@@ -27,3 +27,4 @@
 <#include "rightHandImage.ftl">
 <#include "applies-to-box.ftl">
 <#include "headings-toc.ftl">
+<#include "featured-content.ftl">

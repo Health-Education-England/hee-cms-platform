@@ -202,6 +202,11 @@
                     </#if>
                     <#--  Alternative and language document versions: END  -->
                 </aside>
+                <#if document.featuredContentReference.getFeaturedContentBlock()?? && featuredContent??>
+                    <div class="nhsuk-grid-column-full nhsuk-section__content">
+                        <@hee.featuredContent block=document.featuredContentReference listContent=featuredContent/>
+                    </div>
+                </#if>
             </div>
         </div>
     </main>
