@@ -86,7 +86,9 @@
                         <#else>
                             <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
                         </#if>
-                        <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
+                        <#if commaSeparatedAuthorNames?has_content>
+                            <@fmt.message key="by.text"/> ${commaSeparatedAuthorNames}
+                        </#if>
                     </p>
                 </div>
             </li>
