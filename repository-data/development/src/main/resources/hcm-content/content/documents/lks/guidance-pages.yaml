@@ -12,10 +12,10 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
     hippo:name: Copyright
-    hippo:versionHistory: 8803bcf3-704d-4539-94a0-eee9ac092c1b
+    hippo:versionHistory: 6e29d08d-67a4-409d-9bf4-95bc98add600
     /copyright[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:versionable']
       jcr:uuid: 2385c18e-7cd3-4a31-b0ee-6fde4e50a1ce
       hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
@@ -24,9 +24,10 @@
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
+      hippostd:tags: [Unit testing]
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2023-05-03T13:42:21.824+05:30
+      hippostdpubwf:lastModificationDate: 2023-05-05T14:11:44.333+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -94,8 +95,8 @@
           hippo:values: []
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-10T00:00:00+05:30
-        hee:nextReviewed: 2021-02-01T00:00:00+05:30
+        hee:lastReviewed: 2017-02-09T00:00:00Z
+        hee:nextReviewed: 2021-01-31T00:00:00Z
       /hee:contentBlocks[5]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
@@ -480,7 +481,7 @@
           hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
     /copyright[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: ba968b60-388d-4d63-a2dc-98b62ef48a80
       hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
@@ -489,9 +490,10 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:tags: [Unit testing]
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2023-05-03T13:41:50.719+05:30
+      hippostdpubwf:lastModificationDate: 2023-05-05T14:11:23.583+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
@@ -559,8 +561,8 @@
           hippo:values: []
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-10T00:00:00+05:30
-        hee:nextReviewed: 2021-02-01T00:00:00+05:30
+        hee:lastReviewed: 2017-02-09T00:00:00Z
+        hee:nextReviewed: 2021-01-31T00:00:00Z
       /hee:contentBlocks[5]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
@@ -945,7 +947,7 @@
           hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
     /copyright[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 35446ae7-be2b-46b0-b915-bb90ae2896b4
       hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
@@ -954,11 +956,12 @@
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
+      hippostd:tags: [Unit testing]
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-02-03T15:52:21.360+07:00
-      hippostdpubwf:lastModificationDate: 2023-05-03T13:42:21.824+05:30
+      hippostdpubwf:lastModificationDate: 2023-05-05T14:11:44.333+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-05-03T13:42:25.094+05:30
+      hippostdpubwf:publicationDate: 2023-05-05T14:11:47.971+01:00
       hippotranslation:id: 203579fe-0110-4d7e-a784-29206ca94a04
       hippotranslation:locale: en
       /hee:contentBlocks[1]:
@@ -1025,8 +1028,8 @@
           hippo:values: []
       /hee:pageLastNextReview:
         jcr:primaryType: hee:pageLastNextReview
-        hee:lastReviewed: 2017-02-10T00:00:00+05:30
-        hee:nextReviewed: 2021-02-01T00:00:00+05:30
+        hee:lastReviewed: 2017-02-09T00:00:00Z
+        hee:nextReviewed: 2021-01-31T00:00:00Z
       /hee:contentBlocks[5]:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>HEllo <strong>rich</strong> text</p>
@@ -1417,7 +1420,7 @@
     hippo:versionHistory: 105093be-ac77-4274-b469-5c6849cf3c86
     /introduction[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:versionable']
       jcr:uuid: f96c9995-bb5e-4abf-90ed-996d1d72e8bb
       hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
@@ -1625,7 +1628,7 @@
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /introduction[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 9ed84b9b-feac-4c36-ac9c-6bebbf96d057
       hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
@@ -1834,7 +1837,7 @@
           hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /introduction[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 15d5ad76-8fb7-443b-8f8b-3c7ce709ffc8
       hee:addToAZ: false
       hee:summary: NHS library staff in England may copy and share extracts from most
@@ -2048,7 +2051,7 @@
     hippo:versionHistory: f04bbd3e-9fde-41fe-b85e-1798c82c646e
     /test-media[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 2182f2fc-4b9f-49bf-9913-3f9ad7368b99
       hee:summary: Test media component. Currently only tested with embed codes from
         Youtube, Vimeo and Anchor FM.
@@ -2137,7 +2140,7 @@
         hippo:values: []
     /test-media[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 9a29f360-baec-4517-9447-d599b40924f5
       hee:summary: Test media component. Currently only tested with embed codes from
         Youtube, Vimeo and Anchor FM.
@@ -2218,7 +2221,7 @@
         hippo:values: []
     /test-media[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: d41e2767-2b55-4e46-ac19-6e3a9a707782
       hee:summary: Test media component. Currently only tested with embed codes from
         Youtube, Vimeo and Anchor FM.
@@ -2306,7 +2309,7 @@
     hippo:versionHistory: 006fcb42-7788-48fd-b48a-8094e769260f
     /newsletter-sign-up[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: ef03a783-a7e3-45c8-a429-5c4a2fa20324
       hee:addToAZ: false
       hee:summary: Fusce sollicitudin sem tristique bibendum sit leo ac placerat rutrum
@@ -2354,7 +2357,7 @@
           hippo:docbase: d65410bd-94b0-48f5-8a57-95c385d75d59
     /newsletter-sign-up[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: 029a6a95-8a82-4c59-bfe5-24bbde2c0485
       hee:addToAZ: false
       hee:summary: Fusce sollicitudin sem tristique bibendum sit leo ac placerat rutrum
@@ -2402,7 +2405,7 @@
           hippo:docbase: d65410bd-94b0-48f5-8a57-95c385d75d59
     /newsletter-sign-up[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 4ba242bd-606a-42eb-88f9-cbdaef7d1830
       hee:addToAZ: false
       hee:summary: Fusce sollicitudin sem tristique bibendum sit leo ac placerat rutrum
@@ -2457,7 +2460,7 @@
     hippo:versionHistory: 3a1bd365-f51c-4e04-8f2a-aaee04278437
     /welcome[1]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: eab4dd15-31c5-4b36-80a9-5968723bbc0b
       hee:addToAZ: false
       hee:summary: This is a simple summary page to which you can add a variety of
@@ -2517,7 +2520,7 @@
           hippo:docbase: a60334fa-81d7-49bc-afc0-a024b6b1a942
     /welcome[2]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable', 'mix:versionable']
       jcr:uuid: d7dcf7b4-a971-4aeb-8fa4-5d5cc2bb08c4
       hee:addToAZ: false
       hee:summary: This is a simple summary page to which you can add a variety of
@@ -2577,7 +2580,7 @@
           hippo:docbase: a60334fa-81d7-49bc-afc0-a024b6b1a942
     /welcome[3]:
       jcr:primaryType: hee:guidance
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
       jcr:uuid: 430185f8-cd58-4fb8-a0d2-3e70fb03271b
       hee:addToAZ: false
       hee:summary: This is a simple summary page to which you can add a variety of
