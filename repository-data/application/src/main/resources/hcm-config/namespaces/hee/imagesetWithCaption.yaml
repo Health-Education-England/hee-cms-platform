@@ -84,6 +84,7 @@ definitions:
             field: description
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Please enter Alt text for the image
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /caption:
