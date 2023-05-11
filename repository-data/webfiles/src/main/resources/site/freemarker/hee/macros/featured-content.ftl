@@ -5,6 +5,8 @@
 <#macro featuredContent block listContent>
 
     <#if block.featuredContentBlock?has_content>
+
+        <!--Title section-->
         <#if block.featuredContentBlock.contentType == 'publicationtypes'>
             <#assign contentType = "Publications">
         <#else>
@@ -17,11 +19,16 @@
         <#else>
             <h2>Related ${contentType}</h2>
         </#if>
+        <!--Ends of Title section-->
 
+        <!--Description section-->
         <#if block.featuredContentBlock.description??>
             <p class="nhsuk-body-l"><@hst.html formattedText="${block.featuredContentBlock.description!?replace('\n', '<br>')}"/></p>
         </#if>
+        <!--Ends Description section-->
 
+
+        <!--Featured Documents section-->
         <div class="hee-featured-content">
             <#list listContent as content>
                 <div class="hee-featured-content__item">
@@ -44,5 +51,6 @@
                 </div>
             </#list>
         </div>
+        <!--Featured Documents section-->
     </#if>
 </#macro>

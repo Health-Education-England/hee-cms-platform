@@ -24,14 +24,15 @@ public class QueryAndFiltersUtils {
     private static final Logger log = LoggerFactory.getLogger(QueryAndFiltersUtils.class);
 
     /**
-     * Given a specific report bean, let's look for its parent as an associated bean.
+     * Create of a Query
      *
-     * @param reportBean     is the one we are dealing with
      * @param requestContext is from the request context that will l
-     * @return a Landing page bean, we hope
+     * @param limit is the maximum number of Beans to get from the query
+     * @param type  is the document type which is going to be searched
+     * @return a query
      * @throws RepositoryException if there was an issue looking up the bean details or performing the query
      */
-    public HstQuery createQuery(final HippoDocumentBean pageBean, final HstRequestContext requestContext, final int limit, final String type)
+    public HstQuery createQuery( final HstRequestContext requestContext, final int limit, final String type)
             throws RepositoryException {
         HippoBean scope = requestContext.getSiteContentBaseBean();
         final HstQueryBuilder builder = HstQueryBuilder.create(scope);
@@ -47,6 +48,16 @@ public class QueryAndFiltersUtils {
         return ListingPageType.getByName(type);
     }
 
+
+    /**
+     * Returns Query {@link Filter} built based on the given inputs.
+     *
+     * @param query         the {@link HstQuery} instance.
+     * @param values        the Filter field values.
+     * @param attributeName the Filter field name.
+     * @return the Query {@link Filter} built based on the given inputs.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
     public Filter createOrFilter(final HstQuery query, final List<String> values, final String attributeName) throws FilterException {
         final Filter baseFilter = query.createFilter();
 

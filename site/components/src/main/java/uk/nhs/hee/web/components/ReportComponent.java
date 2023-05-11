@@ -54,66 +54,28 @@ public class ReportComponent extends EssentialsDocumentComponent {
             addRelatedPublicationLandingPageToModel(request, reportPage);
             addPublicationTypeTopicAndProfessionMapsToModel(request);
             addPublicationListingPageURLToModel(request);
+            addFeaturedContent(request, reportPage);
 
-            if(reportPage.getFeaturedContentReference().getFeaturedContentBlock() != null) {
-
-                FeaturedContent featuredContent = (FeaturedContent) reportPage.getFeaturedContentReference().getFeaturedContentBlock();
-                if(!featuredContent.getMethod().equals("Manual")) {
-                    addFeaturedContent(request, reportPage, featuredContent);
-                }
-            }
         }
     }
 
-    private void addFeaturedContent(HstRequest request, Report reportPage, FeaturedContent featuredContentBlock) {
-        try {
-            final int limit = 3;
-            String contentType= "publication";
-
-            switch(featuredContentBlock.getContentType()){
-                case "publicationtypes":
-                    contentType = "publication";
-                    break;
-                case "Blog Post":
-                    contentType = "blog";
-                    break;
-                case "News Articles":
-                    contentType = "news";
-                    break;
-                case "Case Studies":
-                    contentType = "casestudy";
-                    break;
-            }
-
-            QueryAndFiltersUtils featuredContent = new QueryAndFiltersUtils();
-            HstQuery query = featuredContent.createQuery(reportPage, request.getRequestContext(),limit,contentType);
-
-            if(featuredContentBlock.getMethod().equals("Related")) {
-                Filter filter = featuredContent.createOrFilter(
-                        query,
-                        Arrays.asList(featuredContentBlock.getPublicationType()),
-                        HEEField.PUBLICATION_TYPE.getName());
-                filter.addAndFilter(
-                        featuredContent.createOrFilter(
-                                query,
-                                Arrays.asList(featuredContentBlock.getProfession()),
-                                HEEField.PUBLICATION_PROFESSIONS.getName()));
-                filter.addAndFilter(
-                        featuredContent.createOrFilter(
-                                query,
-                                Arrays.asList(featuredContentBlock.getTopics()),
-                                HEEField.PUBLICATION_TOPICS.getName()));
-                query.setFilter(filter);
-            }
-            log.debug("Execute query: {}", query.getQueryAsString(false));
-
-            final HstQueryResult result = query.execute();
-            if (result.getHippoBeans() != null) {
-                request.setModel("featuredContent", result.getHippoBeans());
-            }
-        } catch (final QueryException | RepositoryException e) {
-            log.error("Caught error '{}' while finding the Publication Landing Page " +
-                    "related to the Publication (Report) Page '{}' ", e.getMessage(), reportPage.getPath(), e);
+    /**
+     * Gets a maximum of 3 documents beans {Publication, News, Blogs, Case Studies}
+     * According with the Topics, Professions or content type specified in the Featured Content Block
+     *
+     * @param request    the {@link HstRequest} instance.
+     * @param reportPage the {@link Report} instance.
+     */
+    private void addFeaturedContent(HstRequest request, Report reportPage) {
+        if(reportPage.getFeaturedContentReference().getFeaturedContentBlock() != null) {
+            FeaturedContent featuredContent = (FeaturedContent) reportPage.getFeaturedContentReference().getFeaturedContentBlock();
+                try {
+                    request.setModel("featuredContent",
+                                        new FeaturedContentUtils().getFeaturedContent(request, reportPage, featuredContent));
+                } catch (RepositoryException e) {
+                    log.error("Caught error '{}' while getting the Featured Content block to which " +
+                            "from '{}'", e.getMessage(), reportPage.getPath(), e);
+                }
         }
     }
 
