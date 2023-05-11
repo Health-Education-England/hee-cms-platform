@@ -12,7 +12,6 @@ import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 
 public class HEEGalleryWorkflowImpl extends GalleryWorkflowImpl {
-    private static final String PLEASE_ENTER_ALT_TEXT = "Please enter Alt text for the image";
 
     private Session rootSession;
 
@@ -25,7 +24,7 @@ public class HEEGalleryWorkflowImpl extends GalleryWorkflowImpl {
     public Document createGalleryItem(String nodeName, String type, String hippoGalleryImageSetFileName) throws RemoteException, RepositoryException, WorkflowException {
         Document document = super.createGalleryItem(nodeName, type, hippoGalleryImageSetFileName);
         Node thisNode = document.getNode(rootSession);
-        thisNode.setProperty(HippoGalleryNodeType.IMAGE_SET_DESCRIPTION, PLEASE_ENTER_ALT_TEXT);
+        thisNode.setProperty(HippoGalleryNodeType.IMAGE_SET_DESCRIPTION, thisNode.getProperty(HippoGalleryNodeType.IMAGE_SET_FILE_NAME).getString());
 	    rootSession.save();
         return document;
     }
