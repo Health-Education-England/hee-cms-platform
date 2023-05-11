@@ -1,46 +1,53 @@
 definitions:
   config:
-    /hippo:namespaces/hee/StatementBlock:
+    /hippo:namespaces/hee/quote:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 234084e7-4659-466e-a6c7-2ac6237fc094
+      jcr:uuid: 8ce5af34-6914-432c-96cd-d12eaf4970a2
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2d86d2d6-4eb2-445d-bdcf-95ec99ace4f0
+        jcr:uuid: c340a6f9-3cd3-4654-a032-23cfd9483cc5
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['hipposysedit:remodel', 'mix:referenceable']
-          jcr:uuid: a3e5ec63-d7c7-48bb-8c65-3393966c31fc
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: 2cdb31d2-64cd-45dc-b29f-55f3f40edee4
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /string:
+          /source:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:title
+            hipposysedit:path: hee:source
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /richStatement:
+          /quoteCopy:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:richStatement
+            hipposysedit:path: hee:quoteCopy
             hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
+            hipposysedit:type: Text
             hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:StatementBlock
-          hee:title: ''
-          /hee:richStatement:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          jcr:primaryType: hee:quote
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:source: ''
+          jcr:uuid: 05c8f74f-13fa-4d4b-b55e-c391f9d2f9a0
+          hippostdpubwf:lastModificationDate: 2023-04-06T14:19:48.079+01:00
+          hippostdpubwf:creationDate: 2023-04-06T14:19:48.079+01:00
+          hee:quoteCopy: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -52,22 +59,22 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /title:
+          /quoteCopy:
             jcr:primaryType: frontend:plugin
-            caption: Title
-            field: string
-            hint: ''
+            caption: Quote
+            field: quoteCopy
+            hint: Enter the quote to be displayed
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /richStatement:
+          /source:
             jcr:primaryType: frontend:plugin
-            caption: Content
-            field: richStatement
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Source
+            field: source
+            hint: Enter source information relating to the quote (e.g. full name,
+              role, organisation)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'

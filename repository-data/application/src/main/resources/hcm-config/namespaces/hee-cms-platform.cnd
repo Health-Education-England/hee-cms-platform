@@ -228,6 +228,12 @@
 
 [hee:publicationResource] > hippo:resource, hippogallery:relaxed
 
+[hee:quote] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:quoteReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:report] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -265,6 +271,9 @@
   orderable
 
 [hee:tabsReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:trainingProgrammesHomepage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:warningCallout] > hee:basedocument, hippostd:relaxed, hippotranslation:translated

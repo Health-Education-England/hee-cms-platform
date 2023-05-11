@@ -48,7 +48,9 @@
     <div class="hee-publication-doc__wrapper">
         <div class="hee-publication-doc__icon">
             <div class="hee-publication-doc__icon__page"></div>
-            <div class="hee-publication-doc__icon__corner"></div>
+            <div class="hee-publication-doc__icon__corner">
+                <div class="hee-publication-doc__icon__corner__triangle"></div>
+            </div>
         </div>
         <div class="hee-publication-doc__icon__title">${fileType}</div>
     </div>
@@ -56,19 +58,24 @@
 
 <#if document??>
     <main id="maincontent" role="main" class="page page--rightbar">
-        <#--  Title & subtitle  -->
+        <#--  Main header: START  -->
         <div class="page__header">
             <div class="nhsuk-width-container">
+                <#--  Title  -->
                 <h1>${document.title}</h1>
+                <#--  Subtitle  -->
                 <span class="nhsuk-caption-xl">${document.subtitle!}</span>
             </div>
         </div>
+        <#--  Main header: END  -->
 
-        <div class="nhsuk-width-container">
-            <div class="page__layout">
-                <div class="page__main">
+        <#--  Main content: START  -->
+        <div class="page__layout nhsuk-width-container">
+            <#--  Main sections: START  -->
+            <div class="page__main">
+                <div class="page__content">
                     <#--  Summary  -->
-                    <#if document.summary??>
+                    <#if document.summary?has_content>
                         <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                     </#if>
 
@@ -108,76 +115,82 @@
                                 <@docDetailBlockForDocLink docLink=link />
                             </#if>
                         </#list>
-                     </#if>
-                     <#--  Documents section: END  -->
+                    </#if>
+                    <#--  Documents section: END  -->
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
                 </div>
+            </div>
+            <#--  Main sections: END  -->
 
-                <aside class="page__rightbar">
-                    <div class="hee-card hee-card--details">
-                        <h3>Publication Info</h3>
+            <#--  Sidebar sections: START  -->
+            <aside class="page__rightbar">
+                <#--  Publication Info section: START  -->
+                <div class="hee-card hee-card--details">
+                    <h3>Publication Info</h3>
 
-                        <#--  Published date  -->
+                    <#--  Published date  -->
+                    <div class="hee-card--details__item">
+                        <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
+                    </div>
+
+                    <#--  Updated date  -->
+                    <div class="hee-card--details__item">
+                        <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
+                    </div>
+
+                    <#--  Publication type  -->
+                    <div class="hee-card--details__item">
+                        <span>Publication Type:</span>
+                        <#if publicationListingPageURL?has_content>
+                            <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
+                        <#else>
+                            ${publicationTypeMap[document.publicationType]}
+                        </#if>
+                    </div>
+
+                    <#--  Publication professions  -->
+                    <#if document.publicationProfessions?has_content>
                         <div class="hee-card--details__item">
-                            <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
-                        </div>
-
-                        <#--  Updated date  -->
-                        <div class="hee-card--details__item">
-                            <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
-                        </div>
-
-                        <#--  Publication type  -->
-                        <div class="hee-card--details__item">
-                            <span>Publication Type:</span>
+                            <span>Professions:</span>
                             <#if publicationListingPageURL?has_content>
-                                <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
+                                <#list document.publicationProfessions as profession>
+                                    <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
+                                </#list>
                             <#else>
-                                ${publicationTypeMap[document.publicationType]}
+                                <#list document.publicationProfessions as profession>
+                                    ${publicationProfessionMap[profession]}<#sep>, </#sep>
+                                </#list>
                             </#if>
                         </div>
-
-                        <#--  Publication professions  -->
-                        <#if document.publicationProfessions?has_content>
-                            <div class="hee-card--details__item">
-                                <span>Professions:</span>
-                                <#if publicationListingPageURL?has_content>
-                                    <#list document.publicationProfessions as profession>
-                                        <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
-                                    </#list>
-                                <#else>
-                                    <#list document.publicationProfessions as profession>
-                                        ${publicationProfessionMap[profession]}<#sep>, </#sep>
-                                    </#list>
-                                </#if>
-                            </div>
-                         </#if>
-
-                        <#--  Publication topics  -->
-                        <#if document.publicationTopics?has_content>
-                            <div class="hee-card--details__item">
-                                <span>Topics:</span>
-                                <#if publicationListingPageURL?has_content>
-                                    <#list document.publicationTopics as topic>
-                                        <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
-                                    </#list>
-                                <#else>
-                                    <#list document.publicationTopics as topic>
-                                        ${publicationTopicMap[topic]}<#sep>, </#sep>
-                                    </#list>
-                                </#if>
-                            </div>
                         </#if>
 
-                        <#--  Read time  -->
+                    <#--  Publication topics  -->
+                    <#if document.publicationTopics?has_content>
                         <div class="hee-card--details__item">
-                            <span>Estimated reading time:</span> ${document.readTime} mins
+                            <span>Topics:</span>
+                            <#if publicationListingPageURL?has_content>
+                                <#list document.publicationTopics as topic>
+                                    <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
+                                </#list>
+                            <#else>
+                                <#list document.publicationTopics as topic>
+                                    ${publicationTopicMap[topic]}<#sep>, </#sep>
+                                </#list>
+                            </#if>
                         </div>
+                    </#if>
+
+                    <#--  Read time  -->
+                    <div class="hee-card--details__item">
+                        <span>Estimated reading time:</span> ${document.readTime} mins
                     </div>
-                </aside>
-            </div>
+                </div>
+                <#--  Publication Info section: START  -->
+            </aside>
+            <#--  Sidebar sections: END  -->
         </div>
+        <#--  Main content: END  -->
     </main>
 </#if>

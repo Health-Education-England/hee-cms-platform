@@ -20,6 +20,20 @@ definitions:
       /en:
         jcr:primaryType: hipposys:resourcebundle
         jcr:name: '[Page] Standard content page'
+        hee:tags: Keywords
+        hee:tagssupport: Keyword suggestions
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        hee:tags: Trefwoorden
+        hee:tagssupport: Gesuggereerde trefwoorden
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        hee:tags: Stichworte
+        hee:tagssupport: Stichwortvorschläge
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        hee:tags: Mots-clés
+        hee:tagssupport: Suggestions de mots-clés
     /hippo:configuration/hippo:translations/hippo:types/hee:imagesetWithCaption:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -87,11 +101,6 @@ definitions:
       /en:
         jcr:primaryType: hipposys:resourcebundle
         jcr:name: Card - Button
-    /hippo:configuration/hippo:translations/hippo:types/hee:StatementBlock:
-      jcr:primaryType: hipposys:resourcebundles
-      /en:
-        jcr:primaryType: hipposys:resourcebundle
-        jcr:name: Statement card
     /hippo:configuration/hippo:translations/hippo:types/hippostd:html:
       jcr:primaryType: hipposys:resourcebundles
       /en:
@@ -436,3 +445,18 @@ definitions:
       /en:
         jcr:primaryType: hipposys:resourcebundle
         jcr:name: Featured Content
+    /hippo:configuration/hippo:translations/hippo:types/hee:trainingProgrammesHomepage:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: '[Page] Training Programmes Homepage'
+    /hippo:configuration/hippo:translations/hippo:types/hee:quote:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: '[Content block][Main] Quote'
+    /hippo:configuration/hippo:translations/hippo:types/hee:quoteReference:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Quote

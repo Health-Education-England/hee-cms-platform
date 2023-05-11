@@ -11,7 +11,7 @@
             <div class="nhsuk-grid-row">
                 <div class="nhsuk-grid-column-full">
                     <h1>${document.title}</h1>
-                    <#if document.summary??>
+                    <#if document.summary?has_content>
                         <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                     </#if>
                     <#if atozmap??>

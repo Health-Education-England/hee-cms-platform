@@ -40,3 +40,9 @@ definitions:
         document when the Method chosen is ‘Manual’
       hee:mandatory-publication-type-validator: Please select a value from Publication
         Type list
+    /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        titlePropertyFilter.propertyName: Title
+        titlePropertyFilter.title: Title filter
