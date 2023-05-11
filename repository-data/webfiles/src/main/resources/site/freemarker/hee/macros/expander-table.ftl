@@ -7,7 +7,7 @@
         <#if table.expanderTableContentBlock.expanderTable?size gt 0>
             <div class="hee-table-expander">
                 <div class="hee-table-expander__toggle">
-                    <a href="#">Expand all</a>
+                    <a data-label-open="Expand all" data-label-close="Collapse all" href="#"></a>
                 </div>
 
                 <#list table.expanderTableContentBlock.expanderTable as expander>
