@@ -218,7 +218,7 @@
                 <#--  Alternative and language document versions: END  -->
             </aside>
             <#--  Right hand content blocks: END  -->
-            <#if document.featuredContentReference.getFeaturedContentBlock()?? && featuredContent??>
+            <#if document.featuredContentReference.getFeaturedContentBlock()?? && featuredContent?has_content>
                 <div class="nhsuk-grid-column-full nhsuk-section__content">
                     <@hee.featuredContent block=document.featuredContentReference listContent=featuredContent/>
                 </div>

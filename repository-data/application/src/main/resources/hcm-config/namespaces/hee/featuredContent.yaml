@@ -11,12 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: e8016a58-b5b5-404c-8875-1bb9f5fb1bdb
+          jcr:uuid: 8ac7a0b9-4956-482e-bfd5-3780f0bc96c5
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-featured-method-validator', 'hee:mandatory-featured-documents-validator',
-            'hee:mandatory-publication-type-validator']
+          hipposysedit:validators: ['hee:mandatory-featured-method-validator', 'hee:mandatory-featured-documents-validator']
           /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false

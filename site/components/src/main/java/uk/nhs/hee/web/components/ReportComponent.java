@@ -59,7 +59,6 @@ public class ReportComponent extends EssentialsDocumentComponent {
 
                 FeaturedContent featuredContent = (FeaturedContent) reportPage.getFeaturedContentReference().getFeaturedContentBlock();
                 if(!featuredContent.getMethod().equals("Manual")) {
-                    log.error("It go in to the FEATURED CONTENT {}", featuredContent.getMethod());
                     addFeaturedContent(request, reportPage, featuredContent);
                 }
             }
@@ -72,7 +71,7 @@ public class ReportComponent extends EssentialsDocumentComponent {
             String contentType= "publication";
 
             switch(featuredContentBlock.getContentType()){
-                case "publicationtype":
+                case "publicationtypes":
                     contentType = "publication";
                     break;
                 case "Blog Post":
@@ -92,22 +91,21 @@ public class ReportComponent extends EssentialsDocumentComponent {
             if(featuredContentBlock.getMethod().equals("Related")) {
                 Filter filter = featuredContent.createOrFilter(
                         query,
-                        Arrays.asList(featuredContentBlock.getTopics()),
-                        HEEField.PUBLICATION_TOPICS.getName());
+                        Arrays.asList(featuredContentBlock.getPublicationType()),
+                        HEEField.PUBLICATION_TYPE.getName());
                 filter.addAndFilter(
                         featuredContent.createOrFilter(
                                 query,
                                 Arrays.asList(featuredContentBlock.getProfession()),
                                 HEEField.PUBLICATION_PROFESSIONS.getName()));
-                if (featuredContentBlock.getContentType().equals("publicationtype")) {
-                    filter.addAndFilter(
-                            featuredContent.createOrFilter(
-                                    query,
-                                    Arrays.asList(featuredContentBlock.getPublicationType()),
-                                    HEEField.PUBLICATION_TYPE.getName()));
-                }
+                filter.addAndFilter(
+                        featuredContent.createOrFilter(
+                                query,
+                                Arrays.asList(featuredContentBlock.getTopics()),
+                                HEEField.PUBLICATION_TOPICS.getName()));
                 query.setFilter(filter);
             }
+            log.debug("Execute query: {}", query.getQueryAsString(false));
 
             final HstQueryResult result = query.execute();
             if (result.getHippoBeans() != null) {

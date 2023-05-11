@@ -28,10 +28,12 @@
                     <div class="hee-listing-item">
                         <h3><a href=${getInternalLinkURL(content)}>${content.title}</a></h3>
                         <div class="hee-listing-item__details">
-                            <div class="hee-listing-item__details__row">
-                                <span class="hee-listing-item__details__label">Publication type:</span>
-                                <span>${content.publicationType}</span>
-                            </div>
+                            <#if content.publicationType??>
+                                <div class="hee-listing-item__details__row">
+                                    <span class="hee-listing-item__details__label">Type:</span>
+                                    <span>${content.publicationType}</span>
+                                </div>
+                            </#if>
                             <div class="hee-listing-item__details__row">
                                 <span class="hee-listing-item__details__label">Publish date:</span>
                                 <span>${getDefaultFormattedDate(content.publicationDate)}</span>
