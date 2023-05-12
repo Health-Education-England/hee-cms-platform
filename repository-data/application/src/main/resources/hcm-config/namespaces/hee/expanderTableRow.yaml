@@ -70,5 +70,5 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.overlayed.json: '{ removeButtons: ''Anchor'', toolbarGroups:
-                [{ name : "links" }], forcePasteAsPlainText: true }'
+              ckeditor.config.overlayed.json: '{ removeButtons: ''Anchor'', height:50,
+                toolbarGroups: [{ name : "links" }], forcePasteAsPlainText: true }'
