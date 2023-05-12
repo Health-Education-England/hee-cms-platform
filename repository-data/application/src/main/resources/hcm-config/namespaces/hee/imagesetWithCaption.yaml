@@ -22,6 +22,7 @@ definitions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:path: hippogallery:description
             hipposysedit:type: Text
+            hipposysedit:validators: [required]
           /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:path: hee:caption
@@ -83,6 +84,7 @@ definitions:
             field: description
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: Please enter Alt text for the image
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /caption:
