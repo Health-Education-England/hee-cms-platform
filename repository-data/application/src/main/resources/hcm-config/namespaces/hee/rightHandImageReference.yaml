@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c94b8b02-7303-4bca-a4ae-848024bd2581
+          jcr:uuid: 6a1d608b-68c7-4a38-ae4a-2d3678a3b3af
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,7 @@ definitions:
             hipposysedit:path: hee:rightHandImageReference
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
