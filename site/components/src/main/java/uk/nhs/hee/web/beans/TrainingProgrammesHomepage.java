@@ -62,4 +62,7 @@ public class TrainingProgrammesHomepage extends BaseDocument {
     public List<?> getRegionsBlocks() {
         return getChildBeansByName("hee:regions");
     }
+    public <T extends HippoBean> List<T> getRightHandBlocks() {
+        return getChildBeansByName("hee:rightHandBlocks");
+    }
 }
