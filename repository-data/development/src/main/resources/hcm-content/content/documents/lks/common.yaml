@@ -7182,3 +7182,199 @@
         hippostdpubwf:publicationDate: 2023-04-06T16:53:39.311+01:00
         hippotranslation:id: daeb523b-470d-4e09-b1d9-063480b7abee
         hippotranslation:locale: document-type-locale
+  /table-expander:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 9dd274cf-6080-4a8c-a45c-97ba8b8ac09c
+    hippo:name: Table expander
+    hippostd:foldertype: [new-expanderTable-folder, new-expanderTable-document]
+    /table-expander-example:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
+      hippo:name: Table expander example
+      hippo:versionHistory: 73741a7e-c43e-4b5a-a890-eb01b20ccb76
+      /table-expander-example[1]:
+        jcr:primaryType: hee:expanderTable
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: f25cb7a0-6134-4c95-aa0b-d025435fc1dd
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-09T11:20:36.146+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-09T11:20:36.146+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 656d04e5-2a99-42be-ac97-4f8cd4d1cce3
+        hippotranslation:locale: document-type-locale
+        /hee:expanderTable[1]:
+          jcr:primaryType: hee:expander
+          hee:expanderTitle: Defence medical services (DMS)
+          /hee:expanderRow[1]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:data: ''
+            hee:dataTitle: No of posts 2023 - indicative (subject to change)
+            hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>1</p>
+          /hee:expanderRow[2]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Competition ratios 2022 data - Ratio
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>8 (6:48)</p>
+          /hee:expanderRow[3]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Job/Programme Descriptions
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">East
+                midlands</a></p>
+        /hee:expanderTable[2]:
+          jcr:primaryType: hee:expander
+          hee:expanderTitle: Kent, Surrey and Sussex
+          /hee:expanderRow[1]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:data: ''
+            hee:dataTitle: No of posts 2013 - indicative
+            hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>7</p>
+          /hee:expanderRow[2]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Competition ratios 2022 data - Ratio
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>6 (6:37)</p>
+          /hee:expanderRow[3]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Job/Programme Descriptions
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">Kent,
+                Surrey and Sussex</a></p>
+      /table-expander-example[2]:
+        jcr:primaryType: hee:expanderTable
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: a55a28ec-f022-4234-a627-5e2415d6a4db
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-09T11:20:36.146+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-09T11:33:05.197+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 656d04e5-2a99-42be-ac97-4f8cd4d1cce3
+        hippotranslation:locale: document-type-locale
+        /hee:expanderTable[1]:
+          jcr:primaryType: hee:expander
+          hee:expanderTitle: Defence medical services (DMS)
+          /hee:expanderRow[1]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:data: ''
+            hee:dataTitle: No of posts 2023 - indicative (subject to change)
+            hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>1</p>
+          /hee:expanderRow[2]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Competition ratios 2022 data - Ratio
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>8 (6:48)</p>
+          /hee:expanderRow[3]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Job/Programme Descriptions
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">East
+                midlands</a></p>
+        /hee:expanderTable[2]:
+          jcr:primaryType: hee:expander
+          hee:expanderTitle: Kent, Surrey and Sussex
+          /hee:expanderRow[1]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:data: ''
+            hee:dataTitle: No of posts 2013 - indicative
+            hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>7</p>
+          /hee:expanderRow[2]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Competition ratios 2022 data - Ratio
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>6 (6:37)</p>
+          /hee:expanderRow[3]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Job/Programme Descriptions
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">Kent,
+                Surrey and Sussex</a></p>
+      /table-expander-example[3]:
+        jcr:primaryType: hee:expanderTable
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 636b5984-aeba-420b-8292-a6e3ad966138
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-09T11:20:36.146+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-09T11:33:05.197+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-05-09T11:33:10.014+05:30
+        hippotranslation:id: 656d04e5-2a99-42be-ac97-4f8cd4d1cce3
+        hippotranslation:locale: document-type-locale
+        /hee:expanderTable[1]:
+          jcr:primaryType: hee:expander
+          hee:expanderTitle: Defence medical services (DMS)
+          /hee:expanderRow[1]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:data: ''
+            hee:dataTitle: No of posts 2023 - indicative (subject to change)
+            hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>1</p>
+          /hee:expanderRow[2]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Competition ratios 2022 data - Ratio
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>8 (6:48)</p>
+          /hee:expanderRow[3]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Job/Programme Descriptions
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">East
+                midlands</a></p>
+        /hee:expanderTable[2]:
+          jcr:primaryType: hee:expander
+          hee:expanderTitle: Kent, Surrey and Sussex
+          /hee:expanderRow[1]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:data: ''
+            hee:dataTitle: No of posts 2013 - indicative
+            hee:url: ''
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>7</p>
+          /hee:expanderRow[2]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Competition ratios 2022 data - Ratio
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p>6 (6:37)</p>
+          /hee:expanderRow[3]:
+            jcr:primaryType: hee:expanderTableRow
+            hee:dataTitle: Job/Programme Descriptions
+            /hee:data:
+              jcr:primaryType: hippostd:html
+              hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">Kent,
+                Surrey and Sussex</a></p>
