@@ -28,3 +28,4 @@
 <#include "applies-to-box.ftl">
 <#include "headings-toc.ftl">
 <#include "featured-content.ftl">
+<#include "expander-table.ftl">

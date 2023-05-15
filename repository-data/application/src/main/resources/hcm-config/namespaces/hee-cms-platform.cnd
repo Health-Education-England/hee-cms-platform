@@ -122,6 +122,9 @@
 [hee:event] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
+[hee:expander] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:expanderGroup] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -129,6 +132,15 @@
   orderable
 
 [hee:expanderPanel] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:expanderTable] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:expanderTableReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:expanderTableRow] > hippo:compound, hippostd:relaxed
   orderable
 
 [hee:externalLink] > hippo:compound, hippostd:relaxed
