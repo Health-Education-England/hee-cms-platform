@@ -110,6 +110,9 @@
                         <#case "uk.nhs.hee.web.beans.ContentCards">
                             <@hee.contentCards contentCards=block size="half"/>
                             <#break>
+                        <#case "uk.nhs.hee.web.beans.GoogleMapReference">
+                            <@hee.googleMap block=block/>
+                            <#break>
                         <#default>
                     </#switch>
                 </#list>
