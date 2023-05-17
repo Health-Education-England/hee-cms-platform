@@ -2,7 +2,7 @@
 
 <#macro googleMap block>
     <div class="hee-google-map">
-        <#--  Google Map embed code  -->
+        <#--  Google map embed code  -->
         <div class="hee-google-map__wrapper">${block.googleMapContentBlock.embedCode}</div>
 
         <#if (block.googleMapContentBlock.title?has_content || block.googleMapContentBlock.caption?has_content)>
