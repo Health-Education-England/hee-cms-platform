@@ -1,0 +1,194 @@
+/content/urlrewriter/digital-transformation/philipsivesreviewpages:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 30fc0982-79b9-4084-abc8-dd6ad4c7bff6
+  hippo:name: PhilipsIvesReviewPages
+  hippo:versionHistory: fc199c64-a598-420f-8c2b-dda21aeb1605
+  /philipsivesreviewpages[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 2845a424-8f88-48e2-8785-6edb983a2747
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: sankar.shunmuga
+    hippostdpubwf:creationDate: 2023-05-17T13:33:15.312+02:00
+    hippostdpubwf:lastModificationDate: 2023-05-17T13:33:15.312+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Phillips Ives Review pages for host 'hee.nhs.uk'\
+      \ host</name>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/how-will-the-review-be-conducted</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/how-will-the-review-be-conducted</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/panel-members</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/panel-members</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/why-is-the-review-necessary</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/why-is-the-review-necessary</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/resources</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/resources</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/your-questions-about-the-phillips-ives-review-answered</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/your-questions-about-the-ives-review-answered</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review</to>\r\
+      \n</rule>\r\n\r\n\r\n\r\n<rule>\r\n<name>Phillips Ives Review pages for hosts\
+      \ other than 'hee.nhs.uk' host</name>\r\n<condition name=\"host\" operator=\"\
+      notequal\">hee.nhs.uk</condition>\r\n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/how-will-the-review-be-conducted</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/how-will-the-review-be-conducted</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/panel-members</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/panel-members</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/why-is-the-review-necessary</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/why-is-the-review-necessary</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/resources</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/resources</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/your-questions-about-the-phillips-ives-review-answered</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/your-questions-about-the-ives-review-answered</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review</to>\r\
+      \n</rule>"
+  /philipsivesreviewpages[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 1ea5addf-9cfb-454b-a6da-9b287f044875
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: sankar.shunmuga
+    hippostdpubwf:creationDate: 2023-05-17T13:33:15.312+02:00
+    hippostdpubwf:lastModificationDate: 2023-05-17T13:33:27.762+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    urlrewriter:rule: "<rule>\r\n<name>Phillips Ives Review pages for host 'hee.nhs.uk'\
+      \ host</name>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/how-will-the-review-be-conducted</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/how-will-the-review-be-conducted</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/panel-members</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/panel-members</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/why-is-the-review-necessary</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/why-is-the-review-necessary</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/resources</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/resources</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/your-questions-about-the-phillips-ives-review-answered</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/your-questions-about-the-ives-review-answered</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review</to>\r\
+      \n</rule>\r\n\r\n\r\n\r\n<rule>\r\n<name>Phillips Ives Review pages for hosts\
+      \ other than 'hee.nhs.uk' host</name>\r\n<condition name=\"host\" operator=\"\
+      notequal\">hee.nhs.uk</condition>\r\n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/how-will-the-review-be-conducted</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/how-will-the-review-be-conducted</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/panel-members</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/panel-members</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/why-is-the-review-necessary</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/why-is-the-review-necessary</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/resources</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/resources</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/your-questions-about-the-phillips-ives-review-answered</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/your-questions-about-the-ives-review-answered</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review</to>\r\
+      \n</rule>"
+  /philipsivesreviewpages[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: e38503c4-d88d-4ce9-9f40-5a6c59784585
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: sankar.shunmuga
+    hippostdpubwf:creationDate: 2023-05-17T13:33:15.312+02:00
+    hippostdpubwf:lastModificationDate: 2023-05-17T13:33:27.762+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2023-05-17T13:33:30.745+02:00
+    urlrewriter:rule: "<rule>\r\n<name>Phillips Ives Review pages for host 'hee.nhs.uk'\
+      \ host</name>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/how-will-the-review-be-conducted</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/how-will-the-review-be-conducted</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/panel-members</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/about-the-ives-review/panel-members</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/why-is-the-review-necessary</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/why-is-the-review-necessary</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/resources</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/resources</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review/your-questions-about-the-phillips-ives-review-answered</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review/your-questions-about-the-ives-review-answered</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"equal\">hee.nhs.uk</condition>\r\
+      \n<from>^/building-a-digital-workforce/phillips-ives-review</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/building-a-digital-workforce/ives-review</to>\r\
+      \n</rule>\r\n\r\n\r\n\r\n<rule>\r\n<name>Phillips Ives Review pages for hosts\
+      \ other than 'hee.nhs.uk' host</name>\r\n<condition name=\"host\" operator=\"\
+      notequal\">hee.nhs.uk</condition>\r\n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/how-will-the-review-be-conducted</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/how-will-the-review-be-conducted</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/about-the-phillips-ives-review/panel-members</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/about-the-ives-review/panel-members</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/why-is-the-review-necessary</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/why-is-the-review-necessary</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/resources</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/resources</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review/your-questions-about-the-phillips-ives-review-answered</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review/your-questions-about-the-ives-review-answered</to>\r\
+      \n</rule>\r\n<rule>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
+      \n<from>^/digital-transformation/building-a-digital-workforce/phillips-ives-review</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/digital-transformation/building-a-digital-workforce/ives-review</to>\r\
+      \n</rule>"
