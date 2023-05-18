@@ -159,6 +159,8 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:publicationLandingPage', 'hee:blogPost', 'hee:news',
+                'hee:caseStudy']
           /topics:
             jcr:primaryType: frontend:plugin
             caption: Topics
