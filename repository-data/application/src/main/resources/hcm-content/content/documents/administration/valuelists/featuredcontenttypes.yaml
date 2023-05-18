@@ -1,9 +1,10 @@
-/content/documents/administration/valuelists/content-type:
+/content/documents/administration/valuelists/featuredcontenttypes:
+  .meta:order-before: dental
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
   jcr:uuid: 5ca02755-bd8b-498e-9d9b-6f65ec6b6b89
-  hippo:name: Content Type
-  /content-type:
+  hippo:name: FeaturedContentTypes
+  /featuredcontenttypes:
     jcr:primaryType: selection:valuelist
     jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
     jcr:uuid: 088899c3-c48b-4276-8a32-50ec1715d068
@@ -13,16 +14,16 @@
     /selection:listitem[1]:
       jcr:primaryType: selection:listitem
       selection:key: publicationtypes
-      selection:label: Publication Landing Page
+      selection:label: Publication landing page
     /selection:listitem[2]:
       jcr:primaryType: selection:listitem
-      selection:key: Blog Posts
-      selection:label: Blog Posts
+      selection:key: blog_post
+      selection:label: Blog post
     /selection:listitem[3]:
       jcr:primaryType: selection:listitem
-      selection:key: News Articles
-      selection:label: News Articles
+      selection:key: news_article
+      selection:label: News article
     /selection:listitem[4]:
       jcr:primaryType: selection:listitem
-      selection:key: Case Studies
-      selection:label: Case Studies
+      selection:key: case_study
+      selection:label: Case study

@@ -78,13 +78,13 @@ public class FeaturedContentUtils {
             case "publicationtypes":
                 contentType = "publication";
                 break;
-            case "Blog Post":
+            case "blog_post":
                 contentType = "blog";
                 break;
-            case "News Articles":
+            case "news_article":
                 contentType = "news";
                 break;
-            case "Case Studies":
+            case "case_study":
                 contentType = "casestudy";
                 break;
         }
