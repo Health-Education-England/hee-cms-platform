@@ -107,7 +107,7 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /contentType:
             jcr:primaryType: frontend:plugin
-            caption: Content Type
+            caption: Content type
             field: dynamicdropdown
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -151,7 +151,7 @@ definitions:
               selectable.options: Manual,Latest,Related
           /featuredDocuments:
             jcr:primaryType: frontend:plugin
-            caption: Featured Documents
+            caption: Featured documents
             field: featuredDocuments
             hint: 'Please select the documents you wish to display (maximum of three).
               Note: Only select documents where  ‘Manual’ was selected as the Method'
