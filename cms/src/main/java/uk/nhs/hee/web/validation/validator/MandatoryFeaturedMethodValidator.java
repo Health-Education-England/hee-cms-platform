@@ -13,7 +13,7 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Validates if either publication professions ({@code hee:profession})
+ * Validates if either publication professions ({@code hee:professions})
  * or topics ({@code hee:topics}) have been provided in the document  have been provided in the document when Method value is Related.
  */
 public class MandatoryFeaturedMethodValidator implements Validator<Node> {
@@ -25,7 +25,7 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     private static final String PROPERTY_HEE_METHOD = "hee:method";
 
     // Profession property
-    private static final String PROPERTY_HEE_PROFESSIONS = "hee:profession";
+    private static final String PROPERTY_HEE_PROFESSIONS = "hee:professions";
     // Topics property
     private static final String PROPERTY_HEE_TOPICS = "hee:topics";
 

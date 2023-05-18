@@ -23,9 +23,9 @@ public class FeaturedContent extends BaseDocument {
         return getMultipleProperty("hee:topics");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:profession")
-    public String[] getProfession() {
-        return getMultipleProperty("hee:profession");
+    @HippoEssentialsGenerated(internalName = "hee:professions")
+    public String[] getProfessions() {
+        return getMultipleProperty("hee:professions");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:publicationType")

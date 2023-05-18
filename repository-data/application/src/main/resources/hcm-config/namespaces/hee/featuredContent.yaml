@@ -49,12 +49,12 @@ definitions:
             hipposysedit:path: hee:topics
             hipposysedit:primary: false
             hipposysedit:type: String
-          /profession:
+          /professions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:profession
+            hipposysedit:path: hee:professions
             hipposysedit:primary: false
             hipposysedit:type: String
           /dynamicdropdown:
@@ -177,10 +177,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtopics
-          /profession:
+          /professions:
             jcr:primaryType: frontend:plugin
-            caption: Profession
-            field: profession
+            caption: Professions
+            field: professions
             multiselect.type: selectlist
             palette.alloworder: false
             palette.maxrows: '10'

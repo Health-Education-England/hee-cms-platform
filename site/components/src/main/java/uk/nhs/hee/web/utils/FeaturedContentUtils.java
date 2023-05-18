@@ -49,7 +49,7 @@ public class FeaturedContentUtils {
                 filter.addAndFilter(
                         featuredContent.createOrFilter(
                                 query,
-                                Arrays.asList(featuredContentBlock.getProfession()),
+                                Arrays.asList(featuredContentBlock.getProfessions()),
                                 HEEField.PUBLICATION_PROFESSIONS.getName()));
                 filter.addAndFilter(
                         featuredContent.createOrFilter(

@@ -12,7 +12,7 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Validates if either publication professions ({@code hee:profession})
+ * Validates if either publication professions ({@code hee:professions})
  * or topics ({@code hee:topics}) have been provided in the document  have been provided in the document when Method value is Related.
  */
 public class MandatoryPublicationTypeValidator implements Validator<Node> {
