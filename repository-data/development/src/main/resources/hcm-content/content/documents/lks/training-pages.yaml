@@ -1,0 +1,407 @@
+/content/documents/lks/training-pages:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 5b8c676c-0607-474c-aa52-2157c02a8df9
+  hippo:name: Training Pages
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 5e91840d-03af-4125-9ca4-a5b23c73a105
+  hippotranslation:locale: en
+  /training-homepage:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: 393966e5-04ad-4da8-8c14-44f7d04e3d83
+    hippo:name: Training Homepage
+    hippo:versionHistory: fb55d9e9-ea72-47b8-b352-f55191727e2a
+    /training-homepage[1]:
+      jcr:primaryType: hee:trainingProgrammesHomepage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c0662a71-5458-4d26-8ef6-03177733d542
+      hee:addToAZ: false
+      hee:caption: I am the caption
+      hee:summary: This is the training programmes homepage
+      hee:title: Training Homepage
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-05-19T12:09:07.063+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-19T13:25:56.676+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: b5b581cf-02ee-40be-b193-15ef228e3ee7
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:overview:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>This is the overview section</p>
+      /hee:trainingRoutes[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the training routes</p>
+      /hee:pathways[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the pathways</p>
+      /hee:support[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the support</p>
+      /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:QuickLinks
+        hee:title: quicklinks title
+        /hee:links:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: Link text
+          hee:url: www.google.com
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:contactCardWithDescriptionReference
+        /hee:contactCardWithDescription:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: b68e4b7f-69ca-474f-944c-f8621b9835ed
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:internalLinksCardReference
+        /hee:internalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
+      /hee:pathways[2]:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:pathways[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:trainingRoutes[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 62d50e6f-4179-41bb-8ba0-c7b68f405c79
+          hee:openLinkUrlNewWindow: false
+          hee:text: introduction
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+      /hee:trainingRoutes[3]:
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      /hee:support[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: d3a57e54-38f4-4d38-9b95-175261256c15
+          hee:openLinkUrlNewWindow: false
+          hee:text: copyright
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:support[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /training-homepage[2]:
+      jcr:primaryType: hee:trainingProgrammesHomepage
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: dface5d9-3912-444f-b9a8-b05a11049915
+      hee:addToAZ: false
+      hee:caption: I am the caption
+      hee:summary: This is the training programmes homepage
+      hee:title: Training Homepage
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-05-19T12:09:07.063+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-19T13:28:05.631+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: b5b581cf-02ee-40be-b193-15ef228e3ee7
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:overview:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>This is the overview section</p>
+      /hee:trainingRoutes[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the training routes</p>
+      /hee:pathways[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the pathways</p>
+      /hee:support[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the support</p>
+      /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:QuickLinks
+        hee:title: quicklinks title
+        /hee:links:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: Link text
+          hee:url: www.google.com
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:contactCardWithDescriptionReference
+        /hee:contactCardWithDescription:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: b68e4b7f-69ca-474f-944c-f8621b9835ed
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:internalLinksCardReference
+        /hee:internalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
+      /hee:pathways[2]:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:pathways[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:trainingRoutes[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: introduction
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+      /hee:trainingRoutes[3]:
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      /hee:support[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: copyright
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:support[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /training-homepage[3]:
+      jcr:primaryType: hee:trainingProgrammesHomepage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c7baa9bb-d1c9-48c0-b8f3-6bb303c96ae9
+      hee:addToAZ: false
+      hee:caption: I am the caption
+      hee:summary: This is the training programmes homepage
+      hee:title: Training Homepage
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-05-19T12:09:07.063+01:00
+      hippostdpubwf:lastModificationDate: 2023-05-19T13:28:05.631+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-05-19T13:28:09.011+01:00
+      hippotranslation:id: b5b581cf-02ee-40be-b193-15ef228e3ee7
+      hippotranslation:locale: en
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:overview:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>This is the overview section</p>
+      /hee:trainingRoutes[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the training routes</p>
+      /hee:pathways[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the pathways</p>
+      /hee:support[1]:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>I am the support</p>
+      /hee:rightHandBlocks[1]:
+        jcr:primaryType: hee:QuickLinks
+        hee:title: quicklinks title
+        /hee:links:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: Link text
+          hee:url: www.google.com
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:rightHandBlocks[2]:
+        jcr:primaryType: hee:contactCardWithDescriptionReference
+        /hee:contactCardWithDescription:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: b68e4b7f-69ca-474f-944c-f8621b9835ed
+      /hee:rightHandBlocks[3]:
+        jcr:primaryType: hee:internalLinksCardReference
+        /hee:internalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:rightHandBlocks[4]:
+        jcr:primaryType: hee:externalLinksCardReference
+        /hee:externalLinksCard:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4b476239-b427-44b6-9b18-41af5ff3f3d8
+      /hee:rightHandBlocks[5]:
+        jcr:primaryType: hee:ctaCardReference
+        /hee:ctaCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9c32e2cf-d909-4b40-97d7-4488317670c0
+      /hee:pathways[2]:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: d2e99831-2b29-4868-bb07-2445a3c68732
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:pathways[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:trainingRoutes[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: introduction
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+      /hee:trainingRoutes[3]:
+        jcr:primaryType: hee:blockLinksReference
+        /hee:blockLinksContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
+      /hee:support[2]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: copyright
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:support[3]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
