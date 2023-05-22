@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 33a5edaa-99e5-4aec-a3dd-dfc88bcb0e18
+          jcr:uuid: af690535-0a5d-4d3b-a1b7-a6f5e56a0347
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -85,7 +85,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: f077c805-47c3-46d6-b1c2-1acb00a8d263
+          jcr:uuid: cbef0484-5031-4a67-a631-361f68dc82b2
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -164,7 +164,7 @@ definitions:
               nodetypes: ['hee:logoGroup']
           /cardImage:
             jcr:primaryType: frontend:plugin
-            caption: Card Image
+            caption: Card image
             field: cardImage
             hint: Add an image that's 200 pixels high and 310 pixels wide
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
