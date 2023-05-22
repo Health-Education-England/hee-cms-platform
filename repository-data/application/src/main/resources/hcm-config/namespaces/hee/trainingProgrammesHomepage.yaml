@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 97f26182-a8ee-4699-a1c8-4962c2e2dacb
+          jcr:uuid: ef339117-16b4-4ad3-be90-4cf0a40ea137
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -58,12 +58,13 @@ definitions:
             hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [required]
           /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:text
+            hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: Text
           /overview:
@@ -216,7 +217,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: a58fc7d6-0ffb-4f39-a556-92e279b8be67
+          jcr:uuid: 0eb2f0e0-be82-4935-85b4-ac1635a6f44a
           hee:addToAZ: false
           hee:summary: ''
           hee:title: ''
@@ -228,7 +229,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          hee:text: ''
+          hee:caption: ''
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -279,15 +280,17 @@ definitions:
           frontend:services: [wicket.id, validator.id]
           /root:
             jcr:primaryType: frontend:plugin
-            item: ${cluster.id}.field
-            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            plugin.class: org.hippoecm.frontend.editor.layout.TwoColumn
+            extension.right: ${cluster.id}.right
+            wicket.extensions: [extension.left, extension.right]
+            extension.left: ${cluster.id}.left
           /title:
             jcr:primaryType: frontend:plugin
             caption: Page title
             field: title
             hint: Page title must be 60 characters or fewer.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '60'
@@ -297,16 +300,17 @@ definitions:
             field: summary
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '185'
           /heroImage:
             jcr:primaryType: frontend:plugin
             caption: Hero image
             field: heroImage
             hint: Add an image that's 380 pixels high and 1600 pixels wide.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /logoGroup:
@@ -315,16 +319,16 @@ definitions:
             field: logoGroup
             hint: Browse for the logos to override the default header
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /text:
+          /caption:
             jcr:primaryType: frontend:plugin
             caption: Caption
             field: text
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /overview:
@@ -332,7 +336,7 @@ definitions:
             caption: Overview
             field: overview
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source"
@@ -344,9 +348,10 @@ definitions:
             contentPickerType: links
             field: pathways
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /trainingRoutes:
             jcr:primaryType: frontend:plugin
             caption: Training Routes
@@ -354,10 +359,11 @@ definitions:
             contentPickerType: links
             field: trainingRoutes
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /support:
             jcr:primaryType: frontend:plugin
             caption: Support
@@ -365,9 +371,10 @@ definitions:
             contentPickerType: links
             field: support
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /regions:
             jcr:primaryType: frontend:plugin
             caption: Regions
@@ -375,16 +382,17 @@ definitions:
             contentPickerType: links
             field: regions
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /addToAZ:
             jcr:primaryType: frontend:plugin
             caption: Add to A to Z
             field: boolean
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
@@ -394,6 +402,17 @@ definitions:
             contentPickerType: links
             field: rightHandBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
+          /left:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.left.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.left
+          /right:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.right.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.right
