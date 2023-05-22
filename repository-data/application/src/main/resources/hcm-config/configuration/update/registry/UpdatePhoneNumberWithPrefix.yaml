@@ -6,7 +6,6 @@ definitions:
       hipposys:description: This is to update all phone number with prefix (+44)
       hipposys:dryrun: true
       hipposys:loglevel: DEBUG
-      hipposys:logtarget: REPOSITORY
       hipposys:parameters: ''
       hipposys:query: //element(*)[@hee:phoneNumber!=""]
       hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
