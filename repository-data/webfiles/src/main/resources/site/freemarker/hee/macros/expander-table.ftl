@@ -6,9 +6,12 @@
         <#-- iteration of all expanders inside the Expander Table -->
         <#if table.expanderTableContentBlock.expanderTable?size gt 0>
             <div class="hee-table-expander">
-                <div class="hee-table-expander__toggle">
-                    <a data-label-open="Expand all" data-label-close="Collapse all" href="#"></a>
-                </div>
+                <#if table.expanderTableContentBlock.expanderTable?size gt 1>
+                    <div class="hee-table-expander__toggle">
+                        <a data-label-open="Expand all" data-label-close="Collapse all" href="#"></a>
+                    </div>
+                </#if>
+
 
                 <#list table.expanderTableContentBlock.expanderTable as expander>
                     <#-- Title of the Expander -->

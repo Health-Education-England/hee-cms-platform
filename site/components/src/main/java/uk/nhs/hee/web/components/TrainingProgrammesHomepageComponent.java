@@ -27,6 +27,7 @@ public class TrainingProgrammesHomepageComponent extends EssentialsDocumentCompo
             pageContentBlocks.addAll( (List<HippoBean>) trainingHomepage.getTrainingRoutesBlocks());
             pageContentBlocks.addAll( (List<HippoBean>) trainingHomepage.getSupportBlocks());
             pageContentBlocks.addAll( (List<HippoBean>) trainingHomepage.getRegionsBlocks());
+            pageContentBlocks.addAll(trainingHomepage.getRightHandBlocks());
 
             Map<String, Map<String, String>> modelToValueListMap =
                     ContentBlocksUtils.getValueListMaps(pageContentBlocks);
