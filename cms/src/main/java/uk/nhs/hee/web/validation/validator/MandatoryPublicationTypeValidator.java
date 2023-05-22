@@ -12,27 +12,34 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Validates if either publication professions ({@code hee:professions})
- * or topics ({@code hee:topics}) have been provided in the document  have been provided in the document when Method value is Related.
+ * Validates if {@code Publication type} ({@code hee:publicationType}) has been provided
+ * if the chosen {@code Content type} {@code hee:contentType} is
+ * {@code Publication landing page} ({@code publicationtypes})
+ * and that the chosen {@code Method} ({@code hee:method}) is {@code Related}.
  */
 public class MandatoryPublicationTypeValidator implements Validator<Node> {
     // Logger
     private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryPublicationTypeValidator.class);
 
     // Content Type property
-
     private static final String PROPERTY_HEE_CONTENT_TYPE = "hee:contentType";
 
     // Publication Type property
     private static final String PROPERTY_HEE_PUBLICATION_TYPE = "hee:publicationType";
 
-    private static final String METHOD_VALUE = "publicationtypes";
+    // Method property
+    private static final String PROPERTY_HEE_METHOD = "hee:method";
+
+    private static final String CONTENT_TYPE_VALUE = "publicationtypes";
+
+    private static final String METHOD_VALUE = "Related";
 
     @Override
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
-            if (METHOD_VALUE.equals(node.getProperty(PROPERTY_HEE_CONTENT_TYPE).getString()) &&
-                    node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE).getString().isEmpty()) {
+            if (CONTENT_TYPE_VALUE.equals(node.getProperty(PROPERTY_HEE_CONTENT_TYPE).getString())
+                    && METHOD_VALUE.equals(node.getProperty(PROPERTY_HEE_METHOD).getString())
+                    && node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE).getString().isEmpty()) {
                 return Optional.of(context.createViolation());
             }
         } catch (final RepositoryException e) {
