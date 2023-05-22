@@ -222,13 +222,16 @@
             </aside>
             <#--  Right hand content blocks: END  -->
 
-            <#--  Featured Content: STARTS  -->
-            <#if document.featuredContentReference.getFeaturedContentBlock()?? && featuredContent?has_content>
-                <div class="nhsuk-grid-column-full nhsuk-section__content">
-                    <@hee.featuredContent block=document.featuredContentReference listContent=featuredContent/>
-                </div>
+            <#if (featuredContent?? && featuredContent?size > 0)>
+                <#--  Main featured content: START  -->
+                <section class="page__feature">
+                    <#--  Related content  -->
+                    <div class="nhsuk-width-container">
+                        <@hee.featuredContent block=document.featuredContentReference listContent=featuredContent/>
+                    </div>
+                </section>
+                <#--  Main featured content: END  -->
             </#if>
-            <#--  Feature Content: END  -->
         </div>
         <#--  Main content: END  -->
     </main>

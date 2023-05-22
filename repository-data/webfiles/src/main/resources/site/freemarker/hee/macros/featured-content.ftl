@@ -3,54 +3,63 @@
 <#include "../macros/internal-link.ftl">
 
 <#macro featuredContent block listContent>
-
     <#if block.featuredContentBlock?has_content>
+        <#assign fcBlock=block.featuredContentBlock>
 
-        <!--Title section-->
-        <#if block.featuredContentBlock.contentType == 'publicationtypes'>
-            <#assign contentType = "Publications">
-        <#else>
-            <#assign contentType = "${block.featuredContentBlock.contentType}">
+        <#--  Title: START  -->
+        <#assign contentType="${(fcBlock.contentType = 'publicationtypes')?then('Publications', fcBlock.contentType)}">
+        <#assign featuredContentTitle="${((fcBlock.method = 'Latest'))?then('${fcBlock.method} ${contentType}', 'Related ${contentType}')}">
+
+        <div class="nhsuk-u-reading-width">
+            <h2 data-anchorlinksignore="true">${featuredContentTitle}</h2>
+        </div>
+        <#--  Title: END  -->
+
+        <#--  Description: START  -->
+        <#if fcBlock.description??>
+            <p>${fcBlock.description!?replace('\n', '<br>')}</p>
         </#if>
+        <#--  Description: END  -->
 
 
-        <#if block.featuredContentBlock.method == 'Latest'>
-            <h2>${block.featuredContentBlock.method} ${contentType}</h2>
-        <#else>
-            <h2>Related ${contentType}</h2>
-        </#if>
-        <!--Ends of Title section-->
-
-        <!--Description section-->
-        <#if block.featuredContentBlock.description??>
-            <p class="nhsuk-body-l"><@hst.html formattedText="${block.featuredContentBlock.description!?replace('\n', '<br>')}"/></p>
-        </#if>
-        <!--Ends Description section-->
-
-
-        <!--Featured Documents section-->
+        <#--  Featured content items/cards: START  -->
         <div class="hee-featured-content">
             <#list listContent as content>
                 <div class="hee-featured-content__item">
                     <div class="hee-listing-item">
+                        <#--  Item title  -->
                         <h3><a href=${getInternalLinkURL(content)}>${content.title}</a></h3>
+
+                        <#--  Item details: START  -->
                         <div class="hee-listing-item__details">
+                            <#--  Publication type  -->
                             <#if content.publicationType??>
-                                <div class="hee-listing-item__details__row">
-                                    <span class="hee-listing-item__details__label">Type:</span>
-                                    <span>${content.publicationType}</span>
-                                </div>
+                                <@itemDetailRow label="Type:">
+                                    ${content.publicationType}
+                                </@itemDetailRow>
                             </#if>
-                            <div class="hee-listing-item__details__row">
-                                <span class="hee-listing-item__details__label">Publish date:</span>
-                                <span>${getDefaultFormattedDate(content.publicationDate)}</span>
-                            </div>
+
+                            <#--  Publication date  -->
+                            <@itemDetailRow label="Publish date:">
+                                ${getDefaultFormattedDate(content.publicationDate)}
+                            </@itemDetailRow>
                         </div>
-                        <div class="hee-listing-item__summary"> ${content.summary} </div>
+                        <#--  Item details: END  -->
+
+                        <#--  Item summary  -->
+                        <div class="hee-listing-item__summary">${content.summary}</div>
                     </div>
                 </div>
             </#list>
         </div>
-        <!--Featured Documents section-->
+        <#--  Featured content items/cards: END  -->
     </#if>
+</#macro>
+
+<#--  Renders item detail row  -->
+<#macro itemDetailRow label>
+    <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label">${label}</span>
+        <span><#nested></span>
+    </div>
 </#macro>
