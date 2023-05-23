@@ -6,6 +6,7 @@ definitions:
       extensions.allowed: ['*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
         '*.xlsx', '*.odt', '*.fodt', '*.odp', '*.fodp', '*.ods', '*.fods', '*.odg',
         '*.fodg', '*.mrc', '*.txt']
+      max.file.size: 10M
     /hippo:configuration/hippo:frontend/cms/cms-services/imageValidationService:
       extensions.allowed: ['*.jpg', '*.jpeg', '*.gif', '*.png']
     /hippo:configuration/hippo:frontend/cms/cms-services/publicationDocumentValidationService:
