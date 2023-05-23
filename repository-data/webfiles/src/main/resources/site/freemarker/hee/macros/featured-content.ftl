@@ -33,21 +33,25 @@
                         <#--  Item details: START  -->
                         <div class="hee-listing-item__details">
                             <#--  Publication type  -->
-                            <#if content.publicationType??>
+                            <#if content.publicationType?has_content>
                                 <@itemDetailRow label="Type:">
                                     ${content.publicationType}
                                 </@itemDetailRow>
                             </#if>
 
                             <#--  Publication date  -->
-                            <@itemDetailRow label="Publish date:">
-                                ${getDefaultFormattedDate(content.publicationDate)}
-                            </@itemDetailRow>
+                            <#if content.publicationDate??>
+                                <@itemDetailRow label="Publish date:">
+                                    ${getDefaultFormattedDate(content.publicationDate)}
+                                </@itemDetailRow>
+                            </#if>
                         </div>
                         <#--  Item details: END  -->
 
                         <#--  Item summary  -->
-                        <div class="hee-listing-item__summary">${content.summary}</div>
+                        <#if content.summary?has_content>
+                            <div class="hee-listing-item__summary">${content.summary}</div>
+                        </#if>
                     </div>
                 </div>
             </#list>
