@@ -3,7 +3,13 @@
 <#macro googleMap block>
     <div class="hee-google-map">
         <#--  Google map embed code  -->
-        <div class="hee-google-map__wrapper">${block.googleMapContentBlock.embedCode}</div>
+        <#assign embedCode = block.googleMapContentBlock.embedCode>
+        <#assign startDoubleQuote= embedCode?index_of('"')>
+        <#assign endDoubleQuote= embedCode?index_of('"',startDoubleQuote+1)>
+
+        <div class="hee-google-map__wrapper">
+            <iframe src=${embedCode[startDoubleQuote..endDoubleQuote]} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
 
         <#if (block.googleMapContentBlock.title?has_content || block.googleMapContentBlock.caption?has_content)>
             <figcaption class="hee-google-map__caption">
