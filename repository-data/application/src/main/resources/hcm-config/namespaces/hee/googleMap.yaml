@@ -23,7 +23,7 @@ definitions:
             hipposysedit:path: hee:embedCode
             hipposysedit:primary: false
             hipposysedit:type: Text
-            hipposysedit:validators: [required]
+            hipposysedit:validators: [required, 'hee:google-map-embed-code-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
