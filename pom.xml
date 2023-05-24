@@ -60,7 +60,7 @@
 
   <properties>
     <!-- Maven CI Friendly Version -->
-    <revision>1.0.43</revision>
+    <revision>1.0.44</revision>
     <env>local</env>
 
     <!--***START temporary override of versions*** -->
@@ -69,11 +69,9 @@
     <essentials.version>14.7.13</essentials.version>
     <jsp-api.version>2.2</jsp-api.version>
     <taglibs.version>1.2.5</taglibs.version>
-
+    <bloomreach.text-search-replace.version>2.1.0</bloomreach.text-search-replace.version>
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
-
     <docker.postgres.bind.1>${project.basedir}/target/postgres-data:/var/lib/postgresql/data</docker.postgres.bind.1>
-
     <hippo.cms.locales>nl,de,fr,es,zh</hippo.cms.locales>
     <buildNumber>${maven.build.timestamp}</buildNumber>
   </properties>

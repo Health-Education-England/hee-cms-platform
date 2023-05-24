@@ -18,7 +18,8 @@ public interface MultiOrgLogoComponentInfo extends EssentialsDocumentComponentIn
                     "hee:publicationLandingPage",
                     "hee:news",
                     "hee:MiniHub",
-                    "hee:report"
+                    "hee:report",
+                    "hee:trainingProgrammesHomepage"
             }
     )
     String getDocument();
