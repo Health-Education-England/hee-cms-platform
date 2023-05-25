@@ -8,16 +8,31 @@
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
 <#macro docDetailBlockForDocLink docLink>
+    <#--  Builds file URL  -->
     <@hst.link var="fileURL" hippobean=docLink>
         <@hst.param name="forceDownload" value="true"/>
     </@hst.link>
 
-    <#assign docType="${docLink.filename?keep_after_last('.')}">
-
     <div class="hee-card--details__item">
         <a class="hee-resources__link" href="${fileURL}" title="${docLink.filename}">
-            <span class="hee-resources__text">${docLink.filename?keep_before_last(".")}</span>
-            <span class="hee-resources__tag hee-resources__${docType}">${docType?upper_case}</span>
+            <div class="hee-resources__wrapper">
+                <#--  File name  -->
+                <span class="hee-resources__text">${docLink.filename?keep_before_last(".")}</span>
+
+                <#--  File size: START  -->
+                <#if (docLink.lengthMB > 1)>
+                    <#assign docSize="${docLink.lengthMB?string('0.00')}MB">
+                <#else>
+                    <#assign docSize="${docLink.lengthKB?string('0')}KB">
+                </#if>
+                <span class="hee-resources__docSize">${docSize}</span>
+                <#--  File size: END  -->
+            </div>
+
+            <#--  File type/format: START  -->
+            <#assign fileExtn="${docLink.filename?keep_after_last('.')?lower_case}">
+            <span class="hee-resources__tag hee-resources__${fileExtn}">${fileExtn?upper_case}</span>
+            <#--  File type/format: END  -->
         </a>
     </div>
 </#macro>
@@ -94,6 +109,9 @@
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.HeadingsTOC">
                                     <@hee.headingsTOC block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.GoogleMapReference">
+                                    <@hee.googleMap block=block/>
                                     <#break>
                                 <#default>
                             </#switch>
@@ -187,7 +205,7 @@
                         </#if>
                     </#list>
                     <#if has_documents!true>
-                        <div class="hee-card hee-card--details">
+                        <div class="hee-card hee-card--details hee-card--downloads">
                             <h3>Alternative versions</h3>
                             <#list landingPage.documentVersions as link>
                                 <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>

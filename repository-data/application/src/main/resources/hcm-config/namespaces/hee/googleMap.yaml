@@ -1,0 +1,97 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/googleMap:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 5be71045-c172-41e6-b584-d35a4ae07a32
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: d6bc980f-8b25-41b9-bc5f-a7ec750a5c28
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: baf09813-c927-47db-9635-7c21ed5884f8
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /embedCode:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:embedCode
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+            hipposysedit:validators: [required, 'hee:google-map-embed-code-validator']
+          /title:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:title
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /caption:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:caption
+            hipposysedit:primary: false
+            hipposysedit:type: String
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:googleMap
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          jcr:mixinTypes: ['mix:referenceable']
+          hee:embedCode: ''
+          hee:title: ''
+          hee:caption: ''
+          jcr:uuid: 67eb756b-ed84-4e42-bf23-7da8e3b7d6dd
+          hippostdpubwf:lastModificationDate: 2023-05-16T14:40:35.960+05:30
+          hippostdpubwf:creationDate: 2023-05-16T14:40:35.960+05:30
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /embedCode:
+            jcr:primaryType: frontend:plugin
+            caption: Google map embed code
+            field: embedCode
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: Enter the embed code from Google Maps share feature
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /title:
+            jcr:primaryType: frontend:plugin
+            caption: Title
+            field: title
+            hint: Enter a title - this will appear below the map
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /caption:
+            jcr:primaryType: frontend:plugin
+            caption: Caption
+            field: caption
+            hint: Enter a caption - this will appear below the map and title
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

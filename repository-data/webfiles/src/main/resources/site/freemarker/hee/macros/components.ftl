@@ -5,6 +5,7 @@
 <#include "content-cards.ftl">
 <#include "external-links-card.ftl">
 <#include "file-links-card.ftl">
+<#include "google-map.ftl">
 <#include "image-with-caption.ftl">
 <#include "internal-links-card.ftl">
 <#include "last-next-reviewed-date.ftl">

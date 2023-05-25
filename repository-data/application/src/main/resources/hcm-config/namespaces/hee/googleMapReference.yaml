@@ -1,0 +1,54 @@
+definitions:
+  config:
+    /hippo:namespaces/hee/googleMapReference:
+      jcr:primaryType: hipposysedit:templatetype
+      jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
+      jcr:uuid: 524b755e-9fa0-4d7f-91ec-b440b1bd58f6
+      /hipposysedit:nodetype:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 7bad5924-21b2-4eae-9d1e-1f0e3c67d667
+        /hipposysedit:nodetype:
+          jcr:primaryType: hipposysedit:nodetype
+          jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
+          jcr:uuid: cd25fdb6-264f-43e8-9a1a-4b9c7d195da8
+          hipposysedit:node: true
+          hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
+          hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          /googleMapContentBlock:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:googleMapContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
+      /hipposysedit:prototypes:
+        jcr:primaryType: hipposysedit:prototypeset
+        /hipposysedit:prototype:
+          jcr:primaryType: hee:googleMapReference
+          /hee:googleMapContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /editor:templates:
+        jcr:primaryType: editor:templateset
+        /_default_:
+          jcr:primaryType: frontend:plugincluster
+          frontend:properties: [mode]
+          frontend:references: [wicket.model, model.compareTo, engine, validator.id]
+          frontend:services: [wicket.id, validator.id]
+          /root:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.field
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+          /googleMapContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Select google map
+            field: googleMapContentBlock
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:googleMap']
