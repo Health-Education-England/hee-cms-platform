@@ -95,6 +95,9 @@
                                 <#case "uk.nhs.hee.web.beans.HeadingsTOC">
                                     <@hee.headingsTOC block=block/>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                                    <@hee.featuredContent block=block/>
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
@@ -221,17 +224,6 @@
                 <#--  Alternative and language document versions: END  -->
             </aside>
             <#--  Right hand content blocks: END  -->
-
-            <#if (featuredContent?? && featuredContent?size > 0)>
-                <#--  Main featured content: START  -->
-                <section class="page__feature">
-                    <#--  Related content  -->
-                    <div class="nhsuk-width-container">
-                        <@hee.featuredContent block=document.featuredContentReference listContent=featuredContent/>
-                    </div>
-                </section>
-                <#--  Main featured content: END  -->
-            </#if>
         </div>
         <#--  Main content: END  -->
     </main>

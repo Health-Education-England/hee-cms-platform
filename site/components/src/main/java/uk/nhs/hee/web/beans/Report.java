@@ -46,10 +46,4 @@ public class Report extends BaseDocument {
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
-
-    @HippoEssentialsGenerated(internalName = "hee:featuredContentReference")
-    public FeaturedContentReference getFeaturedContentReference() {
-        return getBean("hee:featuredContentReference",
-                FeaturedContentReference.class);
-    }
 }

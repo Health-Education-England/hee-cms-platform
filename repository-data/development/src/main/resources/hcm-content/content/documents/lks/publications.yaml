@@ -251,7 +251,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: dec75cbc-43ed-468d-89f7-e6fd7cee024e
         hippo:name: Reasonable Adjustments Policy - Publication 1
-        hippo:versionHistory: 97f0b19b-aff3-4d14-ac6a-833002ac0524
+        hippo:versionHistory: a20a5b7e-b923-42fe-bb0a-0fd08ea0e4c2
         /reasonable-adjustments-policy---publication-1[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -269,7 +269,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-05-18T16:25:41.160+05:30
+          hippostdpubwf:lastModificationDate: 2023-05-24T15:44:56.979+05:30
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
@@ -470,11 +470,16 @@
             hee:headingTitle: Headings H3
             hee:headingType: H3
             hee:shortTitle: H3
-          /hee:featuredContentReference:
+          /hee:contentBlocks[7]:
             jcr:primaryType: hee:featuredContentReference
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:contentBlocks[8]:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 6d635eff-30c8-49d3-8479-da42bd232dd4
         /reasonable-adjustments-policy---publication-1[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -492,7 +497,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-05-18T16:25:59.937+05:30
+          hippostdpubwf:lastModificationDate: 2023-05-24T15:51:21.800+05:30
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
@@ -693,11 +698,16 @@
             hee:headingTitle: Headings H3
             hee:headingType: H3
             hee:shortTitle: H3
-          /hee:featuredContentReference:
+          /hee:contentBlocks[7]:
             jcr:primaryType: hee:featuredContentReference
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:contentBlocks[8]:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 6d635eff-30c8-49d3-8479-da42bd232dd4
         /reasonable-adjustments-policy---publication-1[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -715,9 +725,9 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:03:37.141Z
-          hippostdpubwf:lastModificationDate: 2023-05-18T16:25:59.937+05:30
+          hippostdpubwf:lastModificationDate: 2023-05-24T15:51:21.800+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-05-18T16:26:01.785+05:30
+          hippostdpubwf:publicationDate: 2023-05-24T15:51:27.482+05:30
           hippotranslation:id: f648abcb-f406-42d8-8074-403e3d3bb6fc
           hippotranslation:locale: en
           /hee:pageLastNextReview:
@@ -917,11 +927,16 @@
             hee:headingTitle: Headings H3
             hee:headingType: H3
             hee:shortTitle: H3
-          /hee:featuredContentReference:
+          /hee:contentBlocks[7]:
             jcr:primaryType: hee:featuredContentReference
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:contentBlocks[8]:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 6d635eff-30c8-49d3-8479-da42bd232dd4
       /reasonable-adjustments-policy---publication-2:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -983,11 +998,6 @@
             hee:headingTitle: Testing Heading
             hee:headingType: H3
             hee:shortTitle: Heading
-          /hee:featuredContentReference:
-            jcr:primaryType: hee:featuredContentReference
-            /hee:featuredContentBlock:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /reasonable-adjustments-policy---publication-2[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -1043,11 +1053,6 @@
             hee:headingTitle: Testing Heading
             hee:headingType: H3
             hee:shortTitle: Heading
-          /hee:featuredContentReference:
-            jcr:primaryType: hee:featuredContentReference
-            /hee:featuredContentBlock:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /reasonable-adjustments-policy---publication-2[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -1104,11 +1109,6 @@
             hee:headingTitle: Testing Heading
             hee:headingType: H3
             hee:shortTitle: Heading
-          /hee:featuredContentReference:
-            jcr:primaryType: hee:featuredContentReference
-            /hee:featuredContentBlock:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
     /careers:
       jcr:primaryType: hippostd:folder
       jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated']
@@ -1285,7 +1285,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 4dd66eef-a298-40a4-af75-dd1674bc3824
         hippo:name: Higher Specialist Scientist Training – Publication
-        hippo:versionHistory: ef7bfe5a-7c52-411a-ad79-7c618fb15d5a
+        hippo:versionHistory: f3ca2167-2858-4731-aa60-9f5eabc35589
         /higher-specialist-scientist-training---publication[1]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -1300,7 +1300,7 @@
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:34:32.235Z
-          hippostdpubwf:lastModificationDate: 2023-05-18T16:31:00.577+05:30
+          hippostdpubwf:lastModificationDate: 2023-05-24T15:56:54.540+05:30
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 427e04b6-e013-47b1-bf41-14bdda7caad7
           hippotranslation:locale: en
@@ -1308,7 +1308,7 @@
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2022-11-28T00:00:00+05:30
             hee:nextReviewed: 2022-11-30T00:00:00+05:30
-          /hee:contentBlocks:
+          /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Advancing your clinical and scientific skills for patient and public benefit</h2>
@@ -1348,11 +1348,11 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:featuredContentReference:
+          /hee:contentBlocks[2]:
             jcr:primaryType: hee:featuredContentReference
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 6d635eff-30c8-49d3-8479-da42bd232dd4
+              hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
         /higher-specialist-scientist-training---publication[2]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -1367,7 +1367,7 @@
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:34:32.235Z
-          hippostdpubwf:lastModificationDate: 2023-05-18T16:31:09.577+05:30
+          hippostdpubwf:lastModificationDate: 2023-05-24T15:57:06.220+05:30
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 427e04b6-e013-47b1-bf41-14bdda7caad7
           hippotranslation:locale: en
@@ -1375,7 +1375,7 @@
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2022-11-28T00:00:00+05:30
             hee:nextReviewed: 2022-11-30T00:00:00+05:30
-          /hee:contentBlocks:
+          /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Advancing your clinical and scientific skills for patient and public benefit</h2>
@@ -1415,11 +1415,11 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:featuredContentReference:
+          /hee:contentBlocks[2]:
             jcr:primaryType: hee:featuredContentReference
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 6d635eff-30c8-49d3-8479-da42bd232dd4
+              hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
         /higher-specialist-scientist-training---publication[3]:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
@@ -1434,16 +1434,16 @@
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:34:32.235Z
-          hippostdpubwf:lastModificationDate: 2023-05-18T16:31:09.577+05:30
+          hippostdpubwf:lastModificationDate: 2023-05-24T15:57:06.220+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-05-18T16:31:15.950+05:30
+          hippostdpubwf:publicationDate: 2023-05-24T15:57:08.075+05:30
           hippotranslation:id: 427e04b6-e013-47b1-bf41-14bdda7caad7
           hippotranslation:locale: en
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 2022-11-28T00:00:00+05:30
             hee:nextReviewed: 2022-11-30T00:00:00+05:30
-          /hee:contentBlocks:
+          /hee:contentBlocks[1]:
             jcr:primaryType: hippostd:html
             hippostd:content: |-
               <h2>Advancing your clinical and scientific skills for patient and public benefit</h2>
@@ -1483,11 +1483,11 @@
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:featuredContentReference:
+          /hee:contentBlocks[2]:
             jcr:primaryType: hee:featuredContentReference
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 6d635eff-30c8-49d3-8479-da42bd232dd4
+              hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
   /publications:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

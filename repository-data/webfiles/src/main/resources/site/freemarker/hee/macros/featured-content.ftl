@@ -1,62 +1,65 @@
+<@hst.defineObjects />
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]>
 <#include "../utils/date-util.ftl">
 <#include "../macros/internal-link.ftl">
 
-<#macro featuredContent block listContent>
-    <#if block.featuredContentBlock?has_content>
+<#macro featuredContent block maxCards=2>
+    <#if block.featuredContentBlock??>
         <#assign fcBlock=block.featuredContentBlock>
+        <#assign featuredDocuments = featuredContentBlockService.getFeaturedContent(hstRequest, fcBlock, maxCards)>
 
-        <#--  Title: START  -->
-        <#assign contentType="${(fcBlock.contentType = 'publicationtypes')?then('Publications', fcBlock.contentType)}">
-        <#assign featuredContentTitle="${((fcBlock.method = 'Latest'))?then('${fcBlock.method} ${contentType}', 'Related ${contentType}')}">
+        <#--  Featured content: START  -->
+        <#if (featuredDocuments?? && featuredDocuments?size > 0)>
+            <#--  Title: START  -->
+            <div class="nhsuk-u-reading-width">
+                <h2>${contentTitle(fcBlock.contentType, fcBlock.method)}</h2>
+            </div>
+            <#--  Title: END  -->
 
-        <div class="nhsuk-u-reading-width">
-            <h2 data-anchorlinksignore="true">${featuredContentTitle}</h2>
-        </div>
-        <#--  Title: END  -->
-
-        <#--  Description: START  -->
-        <#if fcBlock.description??>
-            <p>${fcBlock.description!?replace('\n', '<br>')}</p>
-        </#if>
-        <#--  Description: END  -->
+            <#--  Description: START  -->
+            <#if fcBlock.description??>
+                <p>${fcBlock.description!?replace('\n', '<br>')}</p>
+            </#if>
+            <#--  Description: END  -->
 
 
-        <#--  Featured content items/cards: START  -->
-        <div class="hee-featured-content">
-            <#list listContent as content>
-                <div class="hee-featured-content__item">
-                    <div class="hee-listing-item">
-                        <#--  Item title  -->
-                        <h3><a href=${getInternalLinkURL(content)}>${content.title}</a></h3>
+            <#--  Featured content items/cards: START  -->
+            <div class="hee-featured-content">
+                <#list featuredDocuments as featuredDoc>
+                    <div class="hee-featured-content__item">
+                        <div class="hee-listing-item">
+                            <#--  Item title  -->
+                            <h3><a href=${getInternalLinkURL(featuredDoc)}>${featuredDoc.title}</a></h3>
 
-                        <#--  Item details: START  -->
-                        <div class="hee-listing-item__details">
-                            <#--  Publication type  -->
-                            <#if content.publicationType?has_content>
-                                <@itemDetailRow label="Type:">
-                                    ${content.publicationType}
-                                </@itemDetailRow>
-                            </#if>
+                            <#--  Item details: START  -->
+                            <div class="hee-listing-item__details">
+                                <#--  Publication type  -->
+                                <#if featuredDoc.publicationType?has_content>
+                                    <@itemDetailRow label="Type:">
+                                        ${featuredDoc.publicationType}
+                                    </@itemDetailRow>
+                                </#if>
 
-                            <#--  Publication date  -->
-                            <#if content.publicationDate??>
-                                <@itemDetailRow label="Publish date:">
-                                    ${getDefaultFormattedDate(content.publicationDate)}
-                                </@itemDetailRow>
+                                <#--  Publication date  -->
+                                <#if featuredDoc.publicationDate??>
+                                    <@itemDetailRow label="Publish date:">
+                                        ${getDefaultFormattedDate(featuredDoc.publicationDate)}
+                                    </@itemDetailRow>
+                                </#if>
+                            </div>
+                            <#--  Item details: END  -->
+
+                            <#--  Item summary  -->
+                            <#if featuredDoc.summary?has_content>
+                                <div class="hee-listing-item__summary">${featuredDoc.summary}</div>
                             </#if>
                         </div>
-                        <#--  Item details: END  -->
-
-                        <#--  Item summary  -->
-                        <#if content.summary?has_content>
-                            <div class="hee-listing-item__summary">${content.summary}</div>
-                        </#if>
                     </div>
-                </div>
-            </#list>
-        </div>
-        <#--  Featured content items/cards: END  -->
+                </#list>
+            </div>
+            <#--  Featured content items/cards: END  -->
+        </#if>
+        <#--  Featured content: END  -->
     </#if>
 </#macro>
 
@@ -67,3 +70,10 @@
         <span><#nested></span>
     </div>
 </#macro>
+
+<#--  Constructs and returns title for the featured content  -->
+<#function contentTitle contentType method>
+    <#assign contentTypeToTitleMap = { "publication": "Publications" }>
+
+    <#return "${((method = 'Latest'))?then('${method}', 'Related')} ${contentTypeToTitleMap[contentType]}">
+</#function>

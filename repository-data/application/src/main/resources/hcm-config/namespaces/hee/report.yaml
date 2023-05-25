@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 6d170a81-168e-46ae-88bb-6a86857634c3
+          jcr:uuid: 800a9cfd-4739-4056-8f3e-fd80817b2b58
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -75,20 +75,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
-          /featuredContentReference:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:featuredContentReference
-            hipposysedit:primary: false
-            hipposysedit:type: hee:featuredContentReference
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 0ff44973-5f74-49c5-890b-4bc0115cbd02
+          jcr:uuid: fe4c5fd8-7ffd-41ee-bf24-99855dde2c8d
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -115,11 +107,6 @@ definitions:
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:featuredContentReference:
-            jcr:primaryType: hee:featuredContentReference
-            /hee:featuredContentBlock:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -204,7 +191,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:statementCardReference,hee:expanderGroupReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:headingsTOC,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
+            compoundList: hee:statementCardReference,hee:expanderGroupReference,hee:featuredContentReference,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:headingsTOC,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             hint: Please enter your content
@@ -213,11 +200,3 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /featuredContentReference:
-            jcr:primaryType: frontend:plugin
-            caption: Featured content
-            field: featuredContentReference
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig

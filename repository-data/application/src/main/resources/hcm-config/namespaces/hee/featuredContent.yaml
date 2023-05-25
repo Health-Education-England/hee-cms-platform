@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8ac7a0b9-4956-482e-bfd5-3780f0bc96c5
+          jcr:uuid: 4ea7e638-9c62-460c-afe4-dd93fc7514ba
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -87,7 +87,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: 82c38531-b2a8-4314-b6b0-fd1ef161b492
+          jcr:uuid: 8bf151d5-1b94-4bb4-b364-04b687aabdb5
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:topics: []
@@ -117,6 +117,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
               observableId: ${cluster.id}publicationtype
               source: /content/documents/administration/valuelists/featuredcontenttypes
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /publicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
@@ -127,9 +128,10 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nameProvider: org.onehippo.forge.selection.frontend.provider.BasePathNameProvider
+              nameProvider: uk.nhs.hee.web.selection.frontend.provider.PublicationTypeNameProviderForFeaturedContent
               observerId: ${cluster.id}publicationtype
-              sourceBasePath: /content/documents/administration/valuelists/
+              sourceBasePath: /content/documents/administration/valuelists
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /description:
             jcr:primaryType: frontend:plugin
             caption: Description
@@ -149,7 +151,7 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              selectable.options: Manual,Latest,Related
+              selectable.options: Latest,Manual,Related
           /featuredDocuments:
             jcr:primaryType: frontend:plugin
             caption: Featured documents
@@ -178,6 +180,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationtopics
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /professions:
             jcr:primaryType: frontend:plugin
             caption: Professions
@@ -195,3 +198,4 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               source: /content/documents/administration/valuelists/publicationprofessions
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator

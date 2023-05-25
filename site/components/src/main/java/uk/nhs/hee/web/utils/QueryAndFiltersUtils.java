@@ -1,27 +1,17 @@
 package uk.nhs.hee.web.utils;
 
 import org.hippoecm.hst.content.beans.query.HstQuery;
-import org.hippoecm.hst.content.beans.query.HstQueryResult;
 import org.hippoecm.hst.content.beans.query.builder.HstQueryBuilder;
 import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
-import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
-import org.hippoecm.hst.content.beans.standard.HippoDocumentBean;
-import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.request.HstRequestContext;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.components.ListingPageType;
-import uk.nhs.hee.web.repository.HEEField;
 
 import javax.jcr.RepositoryException;
 import java.util.List;
 
 public class QueryAndFiltersUtils {
-
-    private static final Logger log = LoggerFactory.getLogger(QueryAndFiltersUtils.class);
 
     /**
      * Create of a Query
@@ -34,7 +24,7 @@ public class QueryAndFiltersUtils {
      */
     public HstQuery createQuery( final HstRequestContext requestContext, final int limit, final String type)
             throws RepositoryException {
-        HippoBean scope = requestContext.getSiteContentBaseBean();
+        final HippoBean scope = requestContext.getSiteContentBaseBean();
         final HstQueryBuilder builder = HstQueryBuilder.create(scope);
         final HstQuery query = builder.ofTypes(getDocument(type).getDocumentTypes()).build();
 
@@ -44,7 +34,7 @@ public class QueryAndFiltersUtils {
         return query;
     }
 
-    private ListingPageType getDocument(String type) {
+    private ListingPageType getDocument(final String type) {
         return ListingPageType.getByName(type);
     }
 
@@ -58,7 +48,8 @@ public class QueryAndFiltersUtils {
      * @return the Query {@link Filter} built based on the given inputs.
      * @throws FilterException thrown when an error occurs during Query Filter build.
      */
-    public Filter createOrFilter(final HstQuery query, final List<String> values, final String attributeName) throws FilterException {
+    public Filter createOrFilter(final HstQuery query, final List<String> values, final String attributeName)
+            throws FilterException {
         final Filter baseFilter = query.createFilter();
 
         for (final String value : values) {
