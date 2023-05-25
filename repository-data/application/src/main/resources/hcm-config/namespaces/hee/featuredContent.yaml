@@ -17,14 +17,6 @@ definitions:
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-publication-type-validator', 'hee:mandatory-featured-documents-validator',
             'hee:mandatory-featured-method-validator']
-          /description:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:description
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /method:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -75,6 +67,14 @@ definitions:
             hipposysedit:path: hee:publicationType
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
+          /description:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:description
+            hipposysedit:primary: false
+            hipposysedit:type: Text
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
