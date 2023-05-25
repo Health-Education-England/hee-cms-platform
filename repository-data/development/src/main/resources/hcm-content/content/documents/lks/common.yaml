@@ -7378,3 +7378,70 @@
               jcr:primaryType: hippostd:html
               hippostd:content: <p><a href="https://www.eastmidlandsdeanery.nhs.uk/">Kent,
                 Surrey and Sussex</a></p>
+  /google-maps:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 24148eaf-0769-42c7-8d22-767734336c09
+    hippo:name: Google maps
+    hippostd:foldertype: [new-googleMap-folder, new-googleMap-document]
+    /sample-google-map:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
+      hippo:name: Sample google map
+      hippo:versionHistory: d5cb5b5f-303c-4145-a721-b7a85f4c70a9
+      /sample-google-map[1]:
+        jcr:primaryType: hee:googleMap
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 3dbea03d-3c7b-4729-b598-b8083d345d87
+        hee:caption: HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA.
+        hee:embedCode: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        hee:title: Location
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-16T17:31:22.054+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-16T17:49:54.794+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 0b3802f3-5370-4e53-a5d4-e3ff0b9cb540
+        hippotranslation:locale: document-type-locale
+      /sample-google-map[2]:
+        jcr:primaryType: hee:googleMap
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 19407902-fea2-48cc-9e19-67fc127d6e6b
+        hee:caption: HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA.
+        hee:embedCode: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        hee:title: Location
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-16T17:31:22.054+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-16T17:49:59.389+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 0b3802f3-5370-4e53-a5d4-e3ff0b9cb540
+        hippotranslation:locale: document-type-locale
+      /sample-google-map[3]:
+        jcr:primaryType: hee:googleMap
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 6660ae7f-cd29-4091-9ce1-6682fecd3318
+        hee:caption: HEE Yorkshire and the Humber, Dental Street, Yorkshire, YA1 1AA.
+        hee:embedCode: <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d38876.46420375777!2d-1.945322588878691!3d52.48313681174725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdaa5d4e3383%3A0xc9d525245d0b1f47!2sHealth%20Education%20England!5e0!3m2!1sen!2suk!4v1669730967510!5m2!1sen!2suk"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        hee:title: Location
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-05-16T17:31:22.054+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-16T17:49:59.389+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-05-16T17:50:01.033+05:30
+        hippotranslation:id: 0b3802f3-5370-4e53-a5d4-e3ff0b9cb540
+        hippotranslation:locale: document-type-locale
