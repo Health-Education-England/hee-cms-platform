@@ -27,3 +27,11 @@ definitions:
       plugin.class: com.onehippo.cms7.search.frontend.filters.GenericPropertyFilterPlugin
       wicket.id: ${search.extensions}
       wicket.model: ${model.search}
+    /hippo:configuration/hippo:frontend/cms/cms-services/resourceValidationService:
+      jcr:primaryType: frontend:plugin
+      extensions.allowed: ['*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
+        '*.xlsx', '*.odt', '*.fodt', '*.odp', '*.fodp', '*.ods', '*.fods', '*.odg',
+        '*.fodg', '*.mrc', '*.txt']
+      max.file.size: 10M
+      plugin.class: org.hippoecm.frontend.plugins.yui.upload.validation.AssetUploadValidationPlugin
+      validator.id: service.resource.document.validation
