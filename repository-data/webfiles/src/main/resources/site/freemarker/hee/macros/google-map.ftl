@@ -4,11 +4,10 @@
     <div class="hee-google-map">
         <#--  Google map embed code  -->
         <#assign embedCode = block.googleMapContentBlock.embedCode>
-        <#assign startDoubleQuote= embedCode?index_of('"')>
-        <#assign endDoubleQuote= embedCode?index_of('"',startDoubleQuote+1)>
-
+        <#assign startDoubleQuote= embedCode?index_of('src="')>
+        <#assign endDoubleQuote= embedCode?index_of('"',startDoubleQuote+5)>
         <div class="hee-google-map__wrapper">
-            <iframe src=${embedCode[startDoubleQuote..endDoubleQuote]} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src=${embedCode[startDoubleQuote+4..endDoubleQuote]} width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
         <#if (block.googleMapContentBlock.title?has_content || block.googleMapContentBlock.caption?has_content)>
