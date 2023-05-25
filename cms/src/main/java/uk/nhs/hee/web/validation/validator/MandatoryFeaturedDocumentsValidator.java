@@ -1,9 +1,7 @@
 package uk.nhs.hee.web.validation.validator;
 
-import org.hippoecm.repository.util.JcrUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.collections4.IteratorUtils;
-import org.hippoecm.repository.api.HippoNodeType;
+import org.hippoecm.repository.util.JcrUtils;
 import org.onehippo.cms.services.validation.api.ValidationContext;
 import org.onehippo.cms.services.validation.api.Validator;
 import org.onehippo.cms.services.validation.api.Violation;
@@ -40,14 +38,10 @@ public class MandatoryFeaturedDocumentsValidator implements Validator<Node> {
 
             final NodeIterator webDocNodeIterator = node.getNodes(PROPERTY_HEE_DOCUMENTS);
 
-            @SuppressWarnings("unchecked") final List<Node> webDocNodeList = IteratorUtils.<Node>toList(webDocNodeIterator);
+            final List<Node> webDocNodeList = IteratorUtils.<Node>toList(webDocNodeIterator);
 
             if (METHOD_VALUE.equals(node.getProperty(PROPERTY_HEE_METHOD).getString()) && webDocNodeList.size()<1) {
                 return Optional.of(context.createViolation());
-
-            } else if (METHOD_VALUE.equals(node.getProperty(PROPERTY_HEE_METHOD).getString()) && webDocNodeList.size()>3) {
-                return Optional.of(context.createViolation("maximum-three"));
-
             }
         } catch (final RepositoryException e) {
             LOGGER.warn(

@@ -160,6 +160,7 @@ definitions:
               Note: Only select documents where  ‘Manual’ was selected as the Method'
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            maxitems: '3'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:publicationLandingPage', 'hee:blogPost', 'hee:news',
