@@ -63,8 +63,12 @@ module.exports = {
       'url': `${local_uri}/visual-regression/vr-publication-landing-page`,
     },
     {
-      'label': 'publication_page_page',
+      'label': 'publication_page',
       'url': `${local_uri}/visual-regression/vr-publication-landing-page/vr-publication-page`,
+    },
+    {
+      'label': 'a-z_listing_page',
+      'url': `${local_uri}/visual-regression/vr-a-z-listing-page`,
     }
   ],
   'paths': {
