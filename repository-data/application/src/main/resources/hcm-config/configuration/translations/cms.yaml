@@ -38,6 +38,8 @@ definitions:
         document when the Method chosen is ‘Manual’
       hee:mandatory-publication-type-validator: Please select a value from Publication
         Type list
+      hee:mandatory-featured-documents-validator#no-featured-documents-for-non-manual-method: Please
+        remove the Featured documents as they aren't required for Latest/Related methods
     /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
       jcr:primaryType: hipposys:resourcebundles
       /en:
