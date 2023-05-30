@@ -8,7 +8,7 @@ import org.hippoecm.hst.content.beans.standard.HippoHtml;
 
 import java.util.List;
 
-/**
+/** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammesHomepage")
