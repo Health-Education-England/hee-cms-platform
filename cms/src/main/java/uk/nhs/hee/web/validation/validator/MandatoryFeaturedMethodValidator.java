@@ -13,8 +13,8 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Validates if either publication professions ({@code hee:professions})
- * or topics ({@code hee:topics}) have been provided in the document  have been provided in the document when Method value is Related.
+ * Validates if Publication type or topics or professions have been provided for Publication landing page content type.
+ * For content types other than publication landing page, it validates if topics or professions have been provided.
  */
 public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     // Logger
