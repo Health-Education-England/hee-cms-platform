@@ -7,7 +7,6 @@
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
-<<<<<<< HEAD
 <#macro docDetailBlockForDocLink assetLink>
     <#--  Builds file URL  -->
     <@hst.link var="fileURL" hippobean=assetLink.assetData>
