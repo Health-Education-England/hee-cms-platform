@@ -22,9 +22,9 @@ public class MandatoryFeaturedDocumentsValidator implements Validator<Node> {
     // Logger
     private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryFeaturedDocumentsValidator.class);
 
-    // Method ('hee:method') property
+    // Method property
     private static final String PROPERTY_HEE_METHOD = "hee:method";
-    // Featured documents ('hee:featuredDocuments') property
+    // Featured documents property
     private static final String NODE_HEE_FEATURED_DOCUMENTS = "hee:featuredDocuments";
 
     // Manual method value
