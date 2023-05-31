@@ -65,14 +65,12 @@ public class PublicationLandingPage extends BaseDocument {
 
     @HippoEssentialsGenerated(internalName = "hee:documentVersions")
     public List<HippoResourceBean> getDocumentVersions() {
-        return getChildBeansByName("hee:documentVersions",
-                HippoResourceBean.class);
+        return getChildBeansByName("hee:documentVersions", HippoResourceBean.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:languageVersions")
     public List<HippoResourceBean> getLanguageVersions() {
-        return getChildBeansByName("hee:languageVersions",
-                HippoResourceBean.class);
+        return getChildBeansByName("hee:languageVersions", HippoResourceBean.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:updatedDate")
@@ -93,5 +91,15 @@ public class PublicationLandingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hippostd:tags")
+    public String[] getTags() {
+        return getMultipleProperty("hippostd:tags");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hippotaxonomy:keys")
+    public String[] getKeys() {
+        return getMultipleProperty("hippotaxonomy:keys");
     }
 }

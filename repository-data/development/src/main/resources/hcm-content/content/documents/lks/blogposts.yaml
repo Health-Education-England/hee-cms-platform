@@ -14,20 +14,22 @@
     hippo:versionHistory: 49eca4dd-8f82-46a0-a5c8-6e887c6be27a
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
       jcr:uuid: c9060ac6-acfa-4c55-9f2d-8ddfd44caef7
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-03-31T13:40:00+01:00
       hee:summary: In the NHS LKS community we have been pondering for years, if not
         decades, how we might streamline inter-lending and document supply processes
       hee:title: Expert Search Early Adopters pilot – pre-switch search data
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2022-12-12T08:58:29.061Z
+      hippostdpubwf:lastModificationDate: 2023-05-31T10:26:14.096+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -199,7 +201,8 @@
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable',
+        'mix:versionable']
       jcr:uuid: 97344b90-25df-4262-9bfd-a038b60818f1
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]
@@ -384,7 +387,7 @@
         hippo:docbase: 006b4244-37eb-4fb6-9041-8339a4162fb6
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
       jcr:uuid: 3c380a88-4a94-4eb9-830c-bd931d8dfd5b
       hee:author: Emily Hunt
       hee:categories: [RD-Discovery, RD-ILDS]

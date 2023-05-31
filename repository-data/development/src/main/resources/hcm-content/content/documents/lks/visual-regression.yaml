@@ -1116,7 +1116,7 @@
     hippo:versionHistory: edc2d3eb-e140-4c0a-8c70-b9da0fc16bf6
     /vr-blog-post-page[1]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
       jcr:uuid: 1a850438-d2a0-4935-8933-fb397229eaa9
       hee:author: ''
       hee:categories: [BP, RD-Databases, Finance]
@@ -1275,7 +1275,8 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-blog-post-page[2]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable',
+        'mix:versionable']
       jcr:uuid: dafd319d-f850-404f-89af-4616f4ebf536
       hee:author: ''
       hee:categories: [BP, RD-Databases, Finance]
@@ -1434,7 +1435,7 @@
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-blog-post-page[3]:
       jcr:primaryType: hee:blogPost
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
       jcr:uuid: 389431ba-09ab-4474-8cd7-fe73d29d4aec
       hee:author: ''
       hee:categories: [BP, RD-Databases, Finance]
@@ -4055,7 +4056,7 @@
     hippo:versionHistory: a03bc2e4-a402-479d-87a9-e25209113c4b
     /vr-publication-landing-page[1]:
       jcr:primaryType: hee:publicationLandingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
       jcr:uuid: c1b05457-d9d0-446c-923c-de3f38976415
       hee:hideAuthorContactDetails: false
       hee:publicationDate: 2023-02-08T00:00:00Z
@@ -4118,7 +4119,8 @@
         hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
     /vr-publication-landing-page[2]:
       jcr:primaryType: hee:publicationLandingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable',
+        'mix:versionable']
       jcr:uuid: 4a517cc6-31b3-4622-9ade-2c5468f16519
       hee:hideAuthorContactDetails: false
       hee:publicationDate: 2023-02-08T00:00:00Z
@@ -4181,7 +4183,7 @@
         hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
     /vr-publication-landing-page[3]:
       jcr:primaryType: hee:publicationLandingPage
-      jcr:mixinTypes: ['mix:referenceable']
+      jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
       jcr:uuid: 41f9016f-fcdf-4336-86ff-39220945154c
       hee:hideAuthorContactDetails: false
       hee:publicationDate: 2023-02-08T00:00:00Z
