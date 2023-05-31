@@ -95,8 +95,16 @@
             <#--  Right hand content blocks: Table of content and content blocks   -->
             <aside class="page__rightbar">
                 <#--  Table of content  -->
-                <div class="hee-anchorlinks" data-toc-js="true">
-                    <h2 data-anchorlinksignore="true">Table of Contents</h2>
+                <div class="hee-hee-card hee-card--related-links theme__item-border">
+                    <div class="hee-card--related-links__content">
+                        <h3 class="hee-card--related-links__heading">Pages related to this programme </h3>
+                        <ul class="hee-card--related-links__list">
+                            <li>
+                                <a class="hee-card--related-links__link" href="#">Overview</a>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
 
                 <#--  Right hand content blocks: START  -->
@@ -108,6 +116,12 @@
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ContactCardReference">
                                 <@hee.contactCard contact=block.content/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
+                                <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.CtaCardReference">
+                                <@hee.ctaCard ctaCard=block/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                 <@hee.externalLinksCard card=block.externalLinksCard/>
