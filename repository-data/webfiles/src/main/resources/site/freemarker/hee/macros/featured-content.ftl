@@ -36,7 +36,7 @@
                                 <#--  Publication type  -->
                                 <#if featuredDoc.publicationType?has_content>
                                     <@itemDetailRow label="Type:">
-                                        ${featuredDoc.publicationType}
+                                        ${featuredContentBlockService.getPublicationTypesValueList()[featuredDoc.publicationType]}
                                     </@itemDetailRow>
                                 </#if>
 

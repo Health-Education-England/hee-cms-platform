@@ -10,8 +10,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.FeaturedContent;
 import uk.nhs.hee.web.repository.HEEField;
+import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.enums.FeaturedContentMethod;
 import uk.nhs.hee.web.utils.QueryAndFiltersUtils;
+import uk.nhs.hee.web.utils.ValueListUtils;
 
 import javax.jcr.RepositoryException;
 import java.util.*;
@@ -123,6 +125,15 @@ public class FeaturedContentBlockService {
         }
 
         return featuredDocuments;
+    }
+
+    /**
+     * Returns the {@code value-list} map of {@code Publication types}.
+     *
+     * @return the {@code value-list} map of {@code Publication types}.
+     */
+    public Map<String, String> getPublicationTypesValueList() {
+        return ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName());
     }
 
     /**
