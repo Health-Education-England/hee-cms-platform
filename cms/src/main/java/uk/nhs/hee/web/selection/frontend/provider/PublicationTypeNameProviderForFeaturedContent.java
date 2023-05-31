@@ -9,14 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Value-list name provider for {@code Publication type} ({@code hee:publicationType})
- * (for {@code Publication landing page} {@code Content type}) ({@code hee:contentType}).
+ * Value-list name provider for {@code Publication type} (for {@code Publication landing page} {@code Content type}).
  */
 public class PublicationTypeNameProviderForFeaturedContent implements IValueListNameProvider {
     static final Logger log = LoggerFactory.getLogger(PublicationTypeNameProviderForFeaturedContent.class);
 
     // 'Publication landing page' content type key
-    public static final String PUBLICATION_LANDING_PAGE_CONTENT_TYPE_KEY = "publication";
+    public static final String PUBLICATION_LANDING_PAGE_CONTENT_TYPE_KEY = "hee:publicationLandingPage";
 
     // Publication types value-list name
     public static final String PUBLICATION_TYPES_VALUE_LIST_NAME = "publicationtypes";
@@ -29,7 +28,7 @@ public class PublicationTypeNameProviderForFeaturedContent implements IValueList
      * <p>It does this by concatenating Publication types value-list name ({@code publicationtypes})
      * with the base path ({@code sourceBasePath})</p>
      *
-     * @param contentTypeKey the key of the chosen {@code Content type} ({@code hee:contentType}).
+     * @param contentTypeKey the key of the chosen {@code Content type} ({@code hee:featuredContentType}).
      * @param config the plugin config that contains the base path property
      * @return the value-list source path for {@code Publication type} ({@code hee:publicationType}) field
      * (if {@code Publication landing page} has been chosen as the {@code Content type}).

@@ -12,7 +12,7 @@
         <#if (featuredDocuments?? && featuredDocuments?size > 0)>
             <#--  Title: START  -->
             <div class="nhsuk-u-reading-width">
-                <h2>${contentTitle(fcBlock.contentType, fcBlock.method)}</h2>
+                <h2>${contentTitle(fcBlock.featuredContentType, fcBlock.method)}</h2>
             </div>
             <#--  Title: END  -->
 
@@ -73,7 +73,7 @@
 
 <#--  Constructs and returns title for the featured content  -->
 <#function contentTitle contentType method>
-    <#assign contentTypeToTitleMap = { "publication": "Publications" }>
+    <#assign contentTypeToTitleMap = { "hee:publicationLandingPage": "Publications" }>
 
     <#return "${((method = 'Latest'))?then('${method}', 'Related')} ${contentTypeToTitleMap[contentType]}">
 </#function>

@@ -50,12 +50,12 @@ definitions:
             hipposysedit:path: hee:professions
             hipposysedit:primary: false
             hipposysedit:type: String
-          /dynamicdropdown:
+          /featuredContentType:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:contentType
+            hipposysedit:path: hee:featuredContentType
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
@@ -92,9 +92,8 @@ definitions:
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:topics: []
           hee:professions: []
-          hee:contentType: ''
+          hee:featuredContentType: ''
           hee:publicationtype: ''
-          hee:publicationType: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -106,10 +105,10 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /contentType:
+          /featuredContentType:
             jcr:primaryType: frontend:plugin
             caption: Content type
-            field: dynamicdropdown
+            field: featuredContentType
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''

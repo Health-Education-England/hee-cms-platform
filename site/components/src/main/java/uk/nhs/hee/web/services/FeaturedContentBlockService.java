@@ -9,20 +9,31 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.FeaturedContent;
-import uk.nhs.hee.web.components.ListingPageType;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.services.enums.FeaturedContentMethod;
 import uk.nhs.hee.web.utils.QueryAndFiltersUtils;
 
 import javax.jcr.RepositoryException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class FeaturedContentBlockService {
     // Logger
     private static final Logger LOG = LoggerFactory.getLogger(FeaturedContentBlockService.class);
+
+    // Publication landing page document type
+    public static final String DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE = "hee:publicationLandingPage";
+
+    private static final Map<String, String> CONTENT_TYPE_TO_LISTING_TYPE_MAP =
+            Collections.unmodifiableMap(new HashMap<String, String>() {
+                private static final long serialVersionUID = 475609862051094917L;
+                {
+                    // Uncomment during the future iteration when we add support for the following content types
+                    /*put("hee:blogPost", "blog");
+                    put("hee:caseStudy", "casestudy");
+                    put("hee:news", "news");*/
+                    put("hee:publicationLandingPage", "publication");
+                }
+            });
 
     /**
      * Returns featured content/documents of {@code maxDocuments} size
@@ -54,13 +65,13 @@ public class FeaturedContentBlockService {
                 final HstQuery query = queryAndFiltersUtils.createQuery(
                         request.getRequestContext(),
                         maxDocuments,
-                        featuredContentBlock.getContentType());
+                        CONTENT_TYPE_TO_LISTING_TYPE_MAP.get(featuredContentBlock.getFeaturedContentType()));
 
                 if (featuredContentMethod == FeaturedContentMethod.RELATED) {
                     // Related method
                     final Filter baseFilter = query.createFilter();
 
-                    if (ListingPageType.PUBLICATION_LISTING.getType().equals(featuredContentBlock.getContentType())
+                    if (DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE.equals(featuredContentBlock.getFeaturedContentType())
                             && !featuredContentBlock.getPublicationType().isEmpty()) {
                         baseFilter.addAndFilter(
                                 queryAndFiltersUtils.createOrFilter(
@@ -99,7 +110,7 @@ public class FeaturedContentBlockService {
                 featuredDocuments = transformToList(query.execute().getHippoBeans());
             } catch (final QueryException | RepositoryException e) {
                 LOG.error("Caught error '{}' while querying repository for latest/related documents of type {} ",
-                        e.getMessage(), featuredContentBlock.getContentType(), e);
+                        e.getMessage(), featuredContentBlock.getFeaturedContentType(), e);
             }
         }
 

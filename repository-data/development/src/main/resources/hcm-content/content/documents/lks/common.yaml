@@ -7298,13 +7298,13 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
       hippo:name: Sample featured content - Manual
-      hippo:versionHistory: 6178f000-9967-421c-b4cb-e5ec8ab478ca
+      hippo:versionHistory: b7cc0120-4bdc-4d54-96c9-b071930d1735
       /sample-featured-content---manual[1]:
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 1a8566a4-1efa-49ce-a1ac-85429c235909
-        hee:contentType: publication
         hee:description: ''
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Manual
         hee:professions: []
         hee:publicationType: ''
@@ -7315,7 +7315,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:24:43.290+05:30
-        hippostdpubwf:lastModificationDate: 2023-05-25T18:49:58.317+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-31T16:38:44.732+05:30
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7b815917-3a60-4e7a-a5ef-7e6805c6ed2e
         hippotranslation:locale: document-type-locale
@@ -7329,8 +7329,8 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 277ee1f3-81fd-41aa-a62d-7983cdb5a0c2
-        hee:contentType: publication
         hee:description: ''
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Manual
         hee:professions: []
         hee:publicationType: ''
@@ -7341,7 +7341,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:24:43.290+05:30
-        hippostdpubwf:lastModificationDate: 2023-05-25T18:50:20.077+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-31T16:11:28.025+05:30
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7b815917-3a60-4e7a-a5ef-7e6805c6ed2e
         hippotranslation:locale: document-type-locale
@@ -7355,8 +7355,8 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: a10c5351-0a7f-4de8-9c71-dda69bb27c6d
-        hee:contentType: publication
         hee:description: ''
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Manual
         hee:professions: []
         hee:publicationType: ''
@@ -7367,9 +7367,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:24:43.290+05:30
-        hippostdpubwf:lastModificationDate: 2023-05-25T18:50:20.077+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-31T16:11:28.025+05:30
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2023-05-25T18:50:22.429+05:30
+        hippostdpubwf:publicationDate: 2023-05-31T16:38:51.710+05:30
         hippotranslation:id: 7b815917-3a60-4e7a-a5ef-7e6805c6ed2e
         hippotranslation:locale: document-type-locale
         /hee:featuredDocuments[1]:
@@ -7388,8 +7388,8 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 0f0190f9-cdcb-4084-a1cd-fc27aed3081b
-        hee:contentType: publication
         hee:description: ''
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Related
         hee:professions: [public_health]
         hee:publicationType: consultation
@@ -7398,9 +7398,10 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:26:58.439+05:30
-        hippostdpubwf:lastModificationDate: 2023-05-25T19:12:13.017+05:30
+        hippostdpubwf:lastModificationDate: 2023-05-31T15:21:09.660+05:30
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7dffb549-0937-4952-9287-6a17f5f85e4a
         hippotranslation:locale: document-type-locale
@@ -7408,8 +7409,8 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: f1d047bc-22f8-400c-a815-1b0c20a7b765
-        hee:contentType: publication
         hee:description: ''
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Related
         hee:professions: [public_health]
         hee:publicationType: consultation
@@ -7428,8 +7429,8 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 08a55d80-fd08-4271-acec-4fbb5eb06d56
-        hee:contentType: publication
         hee:description: ''
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Related
         hee:professions: [public_health]
         hee:publicationType: consultation
@@ -7455,9 +7456,9 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 6ca04a7b-37ac-4d38-8940-f205f2448fc9
-        hee:contentType: publication
         hee:description: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed
           eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Latest
         hee:professions: []
         hee:publicationType: ''
@@ -7476,9 +7477,9 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: a675cc63-08f6-48d4-aff3-763275bc3dc1
-        hee:contentType: publication
         hee:description: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed
           eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Latest
         hee:professions: []
         hee:publicationType: ''
@@ -7497,9 +7498,9 @@
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 28ba9222-f564-48f1-8189-c96f80e6e60d
-        hee:contentType: publication
         hee:description: Lorem ipsum dolor sit amet, consectetur adipisici elit, sed
           eiusmod tempor incidunt ut labore et dolore magna aliqua.
+        hee:featuredContentType: hee:publicationLandingPage
         hee:method: Latest
         hee:professions: []
         hee:publicationType: ''

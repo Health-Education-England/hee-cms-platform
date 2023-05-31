@@ -23,7 +23,7 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     // Method property
     private static final String PROPERTY_HEE_METHOD = "hee:method";
     // Content type property
-    private static final String PROPERTY_HEE_CONTENT_TYPE = "hee:contentType";
+    private static final String PROPERTY_HEE_FEATURED_CONTENT_TYPE = "hee:featuredContentType";
     // Publication type property
     private static final String PROPERTY_HEE_PUBLICATION_TYPE = "hee:publicationType";
     // Profession property
@@ -33,8 +33,8 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
 
     // Related method value
     private static final String METHOD_VALUE_RELATED = "Related";
-    // Publication (landing page) content type value
-    private static final String CONTENT_TYPE_VALUE_PUBLICATION = "publication";
+    // Publication landing page content type value
+    private static final String CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE = "hee:publicationLandingPage";
 
     @Override
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
@@ -43,7 +43,7 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
                 return Optional.empty();
             }
 
-            if (CONTENT_TYPE_VALUE_PUBLICATION.equals(node.getProperty(PROPERTY_HEE_CONTENT_TYPE).getString())) {
+            if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
                 // For publication landing page content type
                 if (StringUtils.isEmpty(node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE).getString())
                         && node.getProperty(PROPERTY_HEE_PROFESSIONS).getValues().length == 0
