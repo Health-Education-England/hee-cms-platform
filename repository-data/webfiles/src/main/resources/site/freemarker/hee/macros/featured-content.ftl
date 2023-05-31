@@ -18,7 +18,7 @@
 
             <#--  Description: START  -->
             <#if fcBlock.description??>
-                <p>${fcBlock.description!?replace('\n', '<br>')}</p>
+                <p><@hst.html formattedText="${fcBlock.description!?replace('\n', '<br>')}"/></p>
             </#if>
             <#--  Description: END  -->
 
