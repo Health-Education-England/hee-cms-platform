@@ -13,30 +13,37 @@
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.blogpost"/>
 
 <#--  Renders document detail block which renders title as well  -->
-<#macro docDetailBlockForDocLink docLink>
-    <@hst.link var="fileURL" hippobean=docLink>
+<#macro docDetailBlockForAssetLink assetLink>
+    <@hst.link var="fileURL" hippobean=assetLink.assetData>
         <@hst.param name="forceDownload" value="true"/>
     </@hst.link>
 
     <div class="hee-publication-doc">
-        <@docIcon fileType=docLink.filename?keep_after_last(".")?upper_case/>
+        <@docIcon fileType=assetLink.assetData.asset.filename?keep_after_last(".")?upper_case/>
         <div class="hee-publication-doc__details">
             <h3>
-                <a href="${fileURL}" title="${docLink.filename}">
-                    ${docLink.filename?keep_before_last(".")} - ${getDocumentFormat(docLink.filename?keep_after_last("."))}
+                <a href="${fileURL}" title="${assetLink.title}">
+                    ${assetLink.title}
                 </a>
             </h3>
 
-            <@docDetailBlockPartial
-                publishedDate=docLink.properties['jcr:created']
-                updatedDate=docLink.lastModified
-                fileType=docLink.filename?keep_after_last(".")
-                fileLengthInKB=docLink.lengthKB />
+            <@assetDetailBlockPartial
+            publishedDate=assetLink.publicationDate
+            fileType=assetLink.assetData.asset.filename?keep_after_last(".")
+            fileLengthInKB=assetLink.assetData.asset.lengthKB />
+
         </div>
     </div>
 </#macro>
 
-<#--  Renders document detail block partial i.e. renders document published, updated, type and size  -->
+<#--  Renders asset detail block partial i.e. renders asset published, updated, type and size  -->
+<#macro assetDetailBlockPartial publishedDate fileType fileLengthInKB=0>
+    <span>Published: ${getDefaultFormattedDate(publishedDate)}</span>
+    <#if updatedDate?has_content><span>Updated: ${getDefaultFormattedDate(updatedDate)}</span></#if>
+    <span>${fileType?upper_case}${(fileType = 'WEB')?then('',', ' + fileLengthInKB + 'kB')}</span>
+</#macro>
+
+<#--  Renders detail block partial used for web pubs -->
 <#macro docDetailBlockPartial publishedDate updatedDate fileType fileLengthInKB=0>
     <span>Published: ${getDefaultFormattedDate(publishedDate)}</span>
     <#if updatedDate?has_content><span>Updated: ${getDefaultFormattedDate(updatedDate)}</span></#if>
@@ -100,20 +107,18 @@
                         </#list>
                     </#if>
 
-                    <#--  Document versions  -->
-                    <#if document.documentVersions?has_content && !(document.documentVersions?size == 1 && document.documentVersions[0].mimeType == 'application/vnd.hippo.blank')>
-                        <#list document.documentVersions as link>
-                            <@docDetailBlockForDocLink docLink=link />
+                    <#--  Document versions using assets -->
+                    <#if document.assetVersionsContent?has_content>
+                        <#list document.assetVersionsContent as asset>
+                            <@docDetailBlockForAssetLink assetLink=asset />
                         </#list>
                     </#if>
 
-                    <#--  Language versions  -->
-                    <#if document.languageVersions?has_content && !(document.languageVersions?size == 1 && document.languageVersions[0].mimeType == 'application/vnd.hippo.blank')>
+                    <#--  Language versions using assets -->
+                    <#if document.languageVersionsContent?has_content>
                         <h2>Languages</h2>
-                        <#list document.languageVersions as link>
-                            <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                <@docDetailBlockForDocLink docLink=link />
-                            </#if>
+                        <#list document.languageVersionsContent as asset>
+                            <@docDetailBlockForAssetLink assetLink=asset />
                         </#list>
                     </#if>
                     <#--  Documents section: END  -->

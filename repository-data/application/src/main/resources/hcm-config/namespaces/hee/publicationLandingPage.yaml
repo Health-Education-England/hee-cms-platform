@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 032b4754-1fe8-48b2-af8f-f7b0277f8b1e
+          jcr:uuid: bcc3455c-2e6c-4868-93be-074586b59ec0
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -98,7 +98,7 @@ definitions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
-            hipposysedit:ordered: false
+            hipposysedit:ordered: true
             hipposysedit:path: hee:webPublications
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
@@ -112,22 +112,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
             hipposysedit:validators: [required]
-          /alternateVersions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:languageVersions
-            hipposysedit:primary: false
-            hipposysedit:type: hee:publicationResource
-          /documentVersions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:documentVersions
-            hipposysedit:primary: false
-            hipposysedit:type: hee:publicationResource
           /authors:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -144,12 +128,26 @@ definitions:
             hipposysedit:path: hee:hideAuthorContactDetails
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /assetVersionsContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:assetVersionsContent
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
+          /languageVersionsContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:languageVersionsContent
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 49454cc7-724b-4bab-bfa1-afb5b6ae318e
+          jcr:uuid: 29e8df44-be69-494c-817b-0504062a64b7
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -171,26 +169,6 @@ definitions:
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:languageVersions:
-            jcr:primaryType: hippo:resource
-            hippo:filename: hippo:resource
-            jcr:data:
-              type: binary
-              resource: /namespaces/hee/publicationLandingPage/prototypes/prototype/languageVersions/hippo-resource
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2008-03-26T12:03:00+01:00
-            jcr:mimeType: application/vnd.hippo.blank
-            jcr:mixinTypes: ['mix:created']
-          /hee:documentVersions:
-            jcr:primaryType: hippo:resource
-            hippo:filename: hippo:resource
-            jcr:data:
-              type: binary
-              resource: /namespaces/hee/publicationLandingPage/prototypes/prototype/documentVersions/hippo-resource
-            jcr:encoding: UTF-8
-            jcr:lastModified: 2008-03-26T12:03:00+01:00
-            jcr:mimeType: application/vnd.hippo.blank
-            jcr:mixinTypes: ['mix:created']
           /hee:webPublications:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -224,12 +202,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page title
             field: title
-            hint: Enter the publication title
+            hint: Enter the publication title (120 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '60'
+              maxlength: '120'
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
@@ -358,25 +336,23 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:report']
-          /documentVersions:
+          /assetVersionsContent:
             jcr:primaryType: frontend:plugin
-            caption: Document Versions
-            field: documentVersions
-            hint: "Browse to a file to associate with this publication.\r\n  \r\n\
-              Limited to a max file size of 10Mb and the following doc types: \r\n\
-              \r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            caption: Document versions
+            compoundList: hee:assetResource
+            contentPickerType: links
+            field: assetVersionsContent
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /languageVersions:
+          /languageVersionsContent:
             jcr:primaryType: frontend:plugin
             caption: Alternate language versions
-            field: alternateVersions
-            hint: "Browse to an alternate language version of this publication.\r\n\
-              \r\nLimited to a max file size of 10Mb and the following doc types:\
-              \ \r\n\r\n.doc, .docx, .odt, .pdf, .xls, .xlsx, .ods, .ppt, .pptx"
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            compoundList: hee:assetResource
+            contentPickerType: links
+            field: languageVersionsContent
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

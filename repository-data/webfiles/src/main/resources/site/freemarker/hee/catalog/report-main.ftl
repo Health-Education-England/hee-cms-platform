@@ -7,17 +7,32 @@
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
-<#macro docDetailBlockForDocLink docLink>
-    <@hst.link var="fileURL" hippobean=docLink>
+<#macro docDetailBlockForDocLink assetLink>
+    <#--  Builds file URL  -->
+    <@hst.link var="fileURL" hippobean=assetLink.assetData>
         <@hst.param name="forceDownload" value="true"/>
     </@hst.link>
 
-    <#assign docType="${docLink.filename?keep_after_last('.')}">
-
     <div class="hee-card--details__item">
-        <a class="hee-resources__link" href="${fileURL}" title="${docLink.filename}">
-            <span class="hee-resources__text">${docLink.filename?keep_before_last(".")}</span>
-            <span class="hee-resources__tag hee-resources__${docType}">${docType?upper_case}</span>
+        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.assetData.asset.filename}">
+            <div class="hee-resources__wrapper">
+                <#--  File name  -->
+                <span class="hee-resources__text">${assetLink.assetData.asset.filename?keep_before_last(".")}</span>
+
+                <#--  File size: START  -->
+                <#if (assetLink.assetData.asset.lengthMB > 1)>
+                    <#assign docSize="${assetLink.assetData.asset.lengthMB?string('0.00')}MB">
+                <#else>
+                    <#assign docSize="${assetLink.assetData.asset.lengthKB?string('0')}KB">
+                </#if>
+                <span class="hee-resources__docSize">${docSize}</span>
+                <#--  File size: END  -->
+            </div>
+
+            <#--  File type/format: START  -->
+            <#assign fileExtn="${assetLink.assetData.asset.filename?keep_after_last('.')?lower_case}">
+            <span class="hee-resources__tag hee-resources__${fileExtn}">${fileExtn?upper_case}</span>
+            <#--  File type/format: END  -->
         </a>
     </div>
 </#macro>
@@ -94,6 +109,9 @@
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.HeadingsTOC">
                                     <@hee.headingsTOC block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.GoogleMapReference">
+                                    <@hee.googleMap block=block/>
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
                                     <@hee.featuredContent block=block/>
@@ -181,45 +199,23 @@
                 <#--  Alternative and language document versions: START  -->
 
                 <#--  Alternative document versions  -->
-                <#assign has_documents =false>
-                <#if landingPage?? && landingPage.documentVersions?has_content>
-                    <#list landingPage.documentVersions as link>
-                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                            <#assign has_documents=true>
-                            <#break>
-                        </#if>
-                    </#list>
-                    <#if has_documents!true>
-                        <div class="hee-card hee-card--details">
-                            <h3>Alternative versions</h3>
-                            <#list landingPage.documentVersions as link>
-                                <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                    <@docDetailBlockForDocLink docLink=link/>
-                                </#if>
-                            </#list>
-                        </div>
-                    </#if>
+                <#if landingPage?? && landingPage.assetVersionsContent?has_content>
+                    <div class="hee-card hee-card--details">
+                        <h3>Alternative versions</h3>
+                        <#list landingPage.assetVersionsContent as assetLink>
+                            <@docDetailBlockForDocLink assetLink=assetLink/>
+                        </#list>
+                    </div>
                 </#if>
 
-                <#--  Language document versions  -->
                 <#assign has_languages =false>
-                <#if landingPage?? && landingPage.languageVersions?has_content>
-                    <#list landingPage.languageVersions as link>
-                        <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                            <#assign has_languages =true>
-                            <#break>
-                        </#if>
-                    </#list>
-                    <#if has_languages!true>
-                        <div class="hee-card hee-card--details">
-                            <h3>Languages</h3>
-                            <#list landingPage.languageVersions as link>
-                                <#if link?? && link.mimeType != 'application/vnd.hippo.blank'>
-                                    <@docDetailBlockForDocLink docLink=link/>
-                                </#if>
-                            </#list>
-                        </div>
-                    </#if>
+                <#if landingPage?? && landingPage.languageVersionsContent?has_content>
+                    <div class="hee-card hee-card--details">
+                        <h3>Languages</h3>
+                        <#list landingPage.languageVersionsContent as asset>
+                                <@docDetailBlockForDocLink assetLink=asset/>
+                        </#list>
+                    </div>
                 </#if>
                 <#--  Alternative and language document versions: END  -->
             </aside>

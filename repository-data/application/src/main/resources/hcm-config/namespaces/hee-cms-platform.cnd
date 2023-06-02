@@ -47,6 +47,9 @@
 [hee:appliesToCountry] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:assetResource] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:atozPage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -167,6 +170,12 @@
 [hee:fileLinksCardReference] > hippo:compound, hippostd:relaxed
   orderable
 
+[hee:googleMap] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
+  orderable
+
+[hee:googleMapReference] > hippo:compound, hippostd:relaxed
+  orderable
+
 [hee:guidance] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -241,8 +250,6 @@
 [hee:publicationListingPage] > hee:listingPage, hippostd:relaxed, hippotranslation:translated
   orderable
 
-[hee:publicationResource] > hippo:resource, hippogallery:relaxed
-
 [hee:quote] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
@@ -286,6 +293,9 @@
   orderable
 
 [hee:tabsReference] > hippo:compound, hippostd:relaxed
+  orderable
+
+[hee:trainingProgrammePage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
   orderable
 
 [hee:trainingProgrammesHomepage] > hee:basedocument, hippostd:relaxed, hippotranslation:translated
