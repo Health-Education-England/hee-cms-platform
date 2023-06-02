@@ -8,58 +8,56 @@
         <#assign fcBlock=block.featuredContentBlock>
         <#assign featuredDocuments = featuredContentBlockService.getFeaturedContent(hstRequest, fcBlock, maxCards)>
 
-        <#--  Featured content: START  -->
         <#if (featuredDocuments?? && featuredDocuments?size > 0)>
-            <#--  Title: START  -->
-            <div class="nhsuk-u-reading-width">
-                <h2>${contentTitle(fcBlock.featuredContentType, fcBlock.method)}</h2>
-            </div>
-            <#--  Title: END  -->
-
-            <#--  Description: START  -->
-            <#if fcBlock.description??>
-                <p><@hst.html formattedText="${fcBlock.description!?replace('\n', '<br>')}"/></p>
-            </#if>
-            <#--  Description: END  -->
-
-
-            <#--  Featured content items/cards: START  -->
+            <#--  Featured content: START  -->
             <div class="hee-featured-content">
-                <#list featuredDocuments as featuredDoc>
-                    <div class="hee-featured-content__item">
-                        <div class="hee-listing-item">
-                            <#--  Item title  -->
-                            <h3><a href=${getInternalLinkURL(featuredDoc)}>${featuredDoc.title}</a></h3>
+                <#--  Title  -->
+                <h2>${contentTitle(fcBlock.featuredContentType, fcBlock.method)}</h2>
 
-                            <#--  Item details: START  -->
-                            <div class="hee-listing-item__details">
-                                <#--  Publication type  -->
-                                <#if featuredDoc.publicationType?has_content>
-                                    <@itemDetailRow label="Type:">
-                                        ${featuredContentBlockService.getPublicationTypesValueList()[featuredDoc.publicationType]}
-                                    </@itemDetailRow>
-                                </#if>
+                <#--  Description: START  -->
+                <#if fcBlock.description??>
+                    <p><@hst.html formattedText="${fcBlock.description!?replace('\n', '<br>')}"/></p>
+                </#if>
+                <#--  Description: END  -->
 
-                                <#--  Publication date  -->
-                                <#if featuredDoc.publicationDate??>
-                                    <@itemDetailRow label="Publish date:">
-                                        ${getDefaultFormattedDate(featuredDoc.publicationDate)}
-                                    </@itemDetailRow>
+                <#--  Featured content items/cards: START  -->
+                <div class="hee-featured-content-wrapper${(maxCards = 2)?then(' double', '')}">
+                    <#list featuredDocuments as featuredDoc>
+                        <div class="hee-featured-content__item">
+                            <div class="hee-listing-item">
+                                <#--  Item title  -->
+                                <h3><a href=${getInternalLinkURL(featuredDoc)}>${featuredDoc.title}</a></h3>
+
+                                <#--  Item details: START  -->
+                                <div class="hee-listing-item__details">
+                                    <#--  Publication type  -->
+                                    <#if featuredDoc.publicationType?has_content>
+                                        <@itemDetailRow label="Type:">
+                                            ${featuredContentBlockService.getPublicationTypesValueList()[featuredDoc.publicationType]}
+                                        </@itemDetailRow>
+                                    </#if>
+
+                                    <#--  Publication date  -->
+                                    <#if featuredDoc.publicationDate??>
+                                        <@itemDetailRow label="Publish date:">
+                                            ${getDefaultFormattedDate(featuredDoc.publicationDate)}
+                                        </@itemDetailRow>
+                                    </#if>
+                                </div>
+                                <#--  Item details: END  -->
+
+                                <#--  Item summary  -->
+                                <#if featuredDoc.summary?has_content>
+                                    <div class="hee-listing-item__summary">${featuredDoc.summary}</div>
                                 </#if>
                             </div>
-                            <#--  Item details: END  -->
-
-                            <#--  Item summary  -->
-                            <#if featuredDoc.summary?has_content>
-                                <div class="hee-listing-item__summary">${featuredDoc.summary}</div>
-                            </#if>
                         </div>
-                    </div>
-                </#list>
+                    </#list>
+                </div>
+                <#--  Featured content items/cards: END  -->
             </div>
-            <#--  Featured content items/cards: END  -->
+            <#--  Featured content: END  -->
         </#if>
-        <#--  Featured content: END  -->
     </#if>
 </#macro>
 
