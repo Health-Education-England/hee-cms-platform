@@ -11,6 +11,11 @@ public enum HEEField {
     CATEGORIES("hee:categories"),
 
     /**
+     * {@code categories} field/property.
+     */
+    CATEGORY_CLASSIFICATION("hee:categoryClassification"),
+
+    /**
      * {@code completedDate} field/property.
      */
     COMPLETED_DATE("hee:completedDate"),

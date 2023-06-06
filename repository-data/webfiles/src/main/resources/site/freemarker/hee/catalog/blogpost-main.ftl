@@ -48,9 +48,20 @@
                 </p>
                 <#-- Author and published date: END -->
 
+                <#-- These are values from the Main taxonomy which uses teh standard picker -->
+                <#if globalTopicMap?has_content>
+                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+                        These from Global Topic taxonomy picker:&nbsp;
+                        <#list globalTopicMap?values as topic>
+                            ${topic}<#sep>, </#sep>
+                        </#list>
+                    </p>
+                </#if>
+
                 <#--  Blog categories collection link(s): START  -->
                 <#if categoriesValueListMap?has_content>
-                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+                        These from old valuelist:&nbsp;
                         <#if blogListingPageURL?has_content>
                             <#list categoriesValueListMap as key, value>
                                 <a href=${blogListingPageURL}?category=${key}>${value}</a><#sep>, </#sep>
@@ -63,6 +74,34 @@
                     </p>
                 </#if>
                 <#--  Blog categories collection link(s): END  -->
+
+                <#-- These values were loaded from a taxonomy -->
+                <#if categoriesAndKeysMap?has_content>
+                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+                        These from taxonomy picker:&nbsp;
+                        <#if blogListingPageURL?has_content>
+                            <#list categoriesAndKeysMap as category, key>
+                                <a href=${blogListingPageURL}?category=${category}>${key}</a><#sep>, </#sep>
+                            </#list>
+                        <#else>
+                            <#list categoriesAndKeysMap?values as category>
+                                ${category}<#sep>, </#sep>
+                            </#list>
+                        </#if>
+                    </p>
+                </#if>
+
+                <#-- These values were also loaded from a taxonomy -->
+                <#if hubTargetMap?has_content>
+                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
+                        These from HubTarget taxonomy picker:&nbsp;
+                            <#list hubTargetMap?values as target>
+                                ${target}<#sep>, </#sep>
+                            </#list>
+                    </p>
+                </#if>
+
+
 
                 <#--  Summary  -->
                 <p class="nhsuk-body-l">

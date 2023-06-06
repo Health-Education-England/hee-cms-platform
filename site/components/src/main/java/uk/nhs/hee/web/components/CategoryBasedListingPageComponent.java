@@ -18,7 +18,7 @@ import java.util.List;
 @ParametersInfo(type = ListingPageComponentInfo.class)
 public class CategoryBasedListingPageComponent extends ListingPageComponent {
 
-    private static final String CATEGORY_QUERY_PARAM = "category";
+    protected static final String CATEGORY_QUERY_PARAM = "category";
 
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
@@ -42,7 +42,7 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
      * @return the {@link Filter} instance built based on the requested categories.
      * @throws FilterException thrown when an error occurs during Query Filter build.
      */
-    private Filter createCategoryFilter(final HstRequest request, final HstQuery query) throws FilterException {
+    protected Filter createCategoryFilter(final HstRequest request, final HstQuery query) throws FilterException {
         final List<String> categoriesFilter = HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM);
         return createOrFilter(query, categoriesFilter, HEEField.CATEGORIES.getName());
     }

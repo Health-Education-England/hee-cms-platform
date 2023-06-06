@@ -16,6 +16,11 @@ public enum Model {
     CATEGORIES_VALUE_LIST_MAP("categoriesValueListMap"),
 
     /**
+     * Model key for Categories and Keys (classification map)
+     */
+    CATEGORIES_AND_KEYS_MAP("categoriesAndKeysMap"),
+
+    /**
      * Model key for Canonical URL
      */
     CANONICAL_URL("canonicalURL"),
@@ -48,8 +53,11 @@ public enum Model {
     /**
      * Model key for Newsletter Profession ValueList Map
      */
-    NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap");
+    NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap"),
 
+    GLOBAL_TOPIC_KEYS_MAP("globalTopicMap"),
+
+    HUBTARGET_AND_KEYS_MAP("hubTargetMap");
 
     private final String key;
 

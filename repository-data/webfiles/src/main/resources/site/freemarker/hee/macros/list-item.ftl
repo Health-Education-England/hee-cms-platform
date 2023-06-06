@@ -44,7 +44,7 @@
 
         <#if pageURL != pageNotFoundURL>
             <li>
-                <span class="app-search-results-category">${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</span>
+                <span class="app-search-results-category">${item.categoryClassification?map(category -> categoriesMap[category]!)?join(', ')}</span>
                 <h3><a href="${pageURL}">${item.title}</a></h3>
                 <p class="nhsuk-body-s nhsuk-u-margin-top-1">${item.summary!}</p>
                 <div class="nhsuk-review-date">

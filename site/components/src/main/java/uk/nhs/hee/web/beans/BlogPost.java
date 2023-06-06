@@ -74,4 +74,19 @@ public class BlogPost extends BaseDocument {
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:categoryClassification")
+    public String[] getCategoryClassification() {
+        return getMultipleProperty("hee:categoryClassification");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:hubTarget")
+    public String[] getHubTarget() {
+        return getMultipleProperty("hee:hubTarget");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hippotaxonomy:keys")
+    public String[] getKeys() {
+        return getMultipleProperty("hippotaxonomy:keys");
+    }
 }

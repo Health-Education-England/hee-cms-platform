@@ -9,6 +9,7 @@ definitions:
     /hippo:configuration/hippo:frontend/cms/cms-services/imageValidationService:
       extensions.allowed: ['*.jpg', '*.jpeg', '*.gif', '*.png']
     /hippo:configuration/hippo:frontend/cms/cms-services/publicationDocumentValidationService:
+      .meta:order-before: categoryClassificationDaoService
       jcr:primaryType: frontend:plugin
       extensions.allowed: ['*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx', '*.xls',
         '*.xlsx', '*.ods', '*.odt']
@@ -26,3 +27,13 @@ definitions:
       plugin.class: com.onehippo.cms7.search.frontend.filters.GenericPropertyFilterPlugin
       wicket.id: ${search.extensions}
       wicket.model: ${model.search}
+    /hippo:configuration/hippo:frontend/cms/cms-services/categoryClassificationDaoService:
+      jcr:primaryType: frontend:plugin
+      fieldPath: hee:categoryClassification
+      plugin.class: org.onehippo.taxonomy.plugin.MixinClassificationDaoPlugin
+      taxonomy.classification.dao: service.taxonomy.dao.category.classification
+    /hippo:configuration/hippo:frontend/cms/cms-services/hubTargetDaoService:
+      jcr:primaryType: frontend:plugin
+      fieldPath: hee:hubTarget
+      plugin.class: org.onehippo.taxonomy.plugin.MixinClassificationDaoPlugin
+      taxonomy.classification.dao: service.taxonomy.dao.target.classification
