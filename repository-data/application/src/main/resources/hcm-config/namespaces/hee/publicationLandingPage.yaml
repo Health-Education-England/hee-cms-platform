@@ -11,13 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ad03786d-04cb-4802-bdd4-843f865eb604
+          jcr:uuid: bcc3455c-2e6c-4868-93be-074586b59ec0
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippostd:taggable', 'hippotranslation:translated',
-            'hee:basedocument', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
-            'hee:unique-web-publications-validator']
+                                    'hee:unique-web-publications-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -147,8 +146,8 @@ definitions:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'hippostd:taggable']
-          jcr:uuid: e6f130f4-5205-4a94-9790-ca5c2d699670
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 29e8df44-be69-494c-817b-0504062a64b7
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
