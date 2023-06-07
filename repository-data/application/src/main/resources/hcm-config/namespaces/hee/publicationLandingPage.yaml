@@ -11,10 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: bcc3455c-2e6c-4868-93be-074586b59ec0
+          jcr:uuid: ad03786d-04cb-4802-bdd4-843f865eb604
           hipposysedit:node: true
           hipposysedit:supertype: ['hippostd:taggable', 'hippotranslation:translated',
-            'hippotaxonomy:classifiable', 'hee:basedocument', 'hippostd:relaxed']
+            'hee:basedocument', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
             'hee:unique-web-publications-validator']
@@ -147,8 +147,8 @@ definitions:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 29e8df44-be69-494c-817b-0504062a64b7
+          jcr:mixinTypes: ['mix:referenceable', 'hippostd:taggable']
+          jcr:uuid: e6f130f4-5205-4a94-9790-ca5c2d699670
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -357,40 +357,3 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /tags:
-            jcr:primaryType: frontend:plugin
-            engine: ${engine}
-            mode: ${mode}
-            plugin.class: org.onehippo.forge.ecmtagging.editor.TagsPlugin
-            search.paths: /content
-            wicket.id: ${cluster.id}.left.item
-            wicket.model: ${wicket.model}
-            widget.cols: '20'
-            widget.rows: '2'
-            /yui.config:
-              jcr:primaryType: frontend:pluginconfig
-              anim.vert: true
-              container.id: tagging-autocomplete
-              schema.fields: [label, url]
-              schema.result.list: response.results
-              use.shadow: true
-              /schema.meta.fields:
-                jcr:primaryType: frontend:pluginconfig
-                totalHits: response.totalHits
-          /tagsuggest:
-            jcr:primaryType: frontend:plugin
-            engine: ${engine}
-            mode: ${mode}
-            numberOfSuggestions: 10
-            plugin.class: org.onehippo.forge.ecmtagging.editor.TagSuggestPlugin
-            wicket.id: ${cluster.id}.left.item
-            wicket.model: ${wicket.model}
-          /classifiable:
-            jcr:primaryType: frontend:plugin
-            essentials-taxonomy-name: v15 Taxonomy
-            mixin: hippotaxonomy:classifiable
-            plugin.class: org.hippoecm.frontend.editor.plugins.mixin.MixinLoaderPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              taxonomy.name: v15 Taxonomy

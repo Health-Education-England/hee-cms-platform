@@ -11,10 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: dce66e08-91c2-4788-b7f1-5529ac482d76
+          jcr:uuid: 2ced4f2c-a714-4736-9a62-5aa1af2da2f7
           hipposysedit:node: true
           hipposysedit:supertype: ['hippostd:taggable', 'hippotranslation:translated',
-            'hippotaxonomy:classifiable', 'hee:basedocument', 'hippostd:relaxed']
+            'hee:basedocument', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -134,8 +134,8 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          jcr:mixinTypes: ['mix:referenceable', 'hippostd:taggable', 'hippotaxonomy:classifiable']
-          jcr:uuid: a6d25be6-a308-4125-ab67-856b9111f688
+          jcr:mixinTypes: ['hippostd:taggable', 'mix:referenceable']
+          jcr:uuid: 8f591aeb-5904-467d-a2ad-54508f75c7d6
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -326,40 +326,3 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /tags:
-            jcr:primaryType: frontend:plugin
-            engine: ${engine}
-            mode: ${mode}
-            plugin.class: org.onehippo.forge.ecmtagging.editor.TagsPlugin
-            search.paths: /content
-            wicket.id: ${cluster.id}.left.item
-            wicket.model: ${wicket.model}
-            widget.cols: '20'
-            widget.rows: '2'
-            /yui.config:
-              jcr:primaryType: frontend:pluginconfig
-              anim.vert: true
-              container.id: tagging-autocomplete
-              schema.fields: [label, url]
-              schema.result.list: response.results
-              use.shadow: true
-              /schema.meta.fields:
-                jcr:primaryType: frontend:pluginconfig
-                totalHits: response.totalHits
-          /tagsuggest:
-            jcr:primaryType: frontend:plugin
-            engine: ${engine}
-            mode: ${mode}
-            numberOfSuggestions: 10
-            plugin.class: org.onehippo.forge.ecmtagging.editor.TagSuggestPlugin
-            wicket.id: ${cluster.id}.left.item
-            wicket.model: ${wicket.model}
-          /classifiable:
-            jcr:primaryType: frontend:plugin
-            essentials-taxonomy-name: v15 Taxonomy
-            mixin: hippotaxonomy:classifiable
-            plugin.class: org.hippoecm.frontend.editor.plugins.mixin.MixinLoaderPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              taxonomy.name: v15 Taxonomy
