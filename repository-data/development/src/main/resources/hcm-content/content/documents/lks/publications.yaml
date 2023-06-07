@@ -28,7 +28,7 @@
         hippo:versionHistory: 718c8292-0510-4c0c-94aa-a334611c133b
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 48e8515a-6a01-4e04-bb8e-6f06775f58f2
           hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -85,8 +85,7 @@
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
         /reasonable-adjustments-policy---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable',
-            'mix:versionable']
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
           jcr:uuid: 0abfe671-b25a-49d9-adab-4288e720fd55
           hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -143,7 +142,7 @@
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
         /reasonable-adjustments-policy---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 11dacd51-85cc-42b7-b3e6-dd7b9880a83a
           hee:hideAuthorContactDetails: true
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1048,7 +1047,7 @@
         hippo:versionHistory: a515f498-3074-48e8-bc69-9f773ae8d431
         /higher-specialist-scientist-training---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 73871551-caa4-4b43-8501-6ca011e09c7a
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_science, public_health]
@@ -1100,8 +1099,7 @@
             jcr:mimeType: application/vnd.hippo.blank
         /higher-specialist-scientist-training---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable',
-            'mix:versionable']
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
           jcr:uuid: e1650153-5391-4632-9d27-7965b47ce4fa
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_science, public_health]
@@ -1153,7 +1151,7 @@
             jcr:mimeType: application/vnd.hippo.blank
         /higher-specialist-scientist-training---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['hippostd:taggable', 'hippotaxonomy:classifiable', 'mix:referenceable']
+          jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 7204e177-bb3e-4ced-be5c-89ae36034711
           hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_science, public_health]

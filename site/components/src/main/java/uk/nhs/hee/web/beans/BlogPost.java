@@ -74,14 +74,4 @@ public class BlogPost extends BaseDocument {
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
     }
-
-    @HippoEssentialsGenerated(internalName = "hippostd:tags")
-    public String[] getTags() {
-        return getMultipleProperty("hippostd:tags");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hippotaxonomy:keys")
-    public String[] getKeys() {
-        return getMultipleProperty("hippotaxonomy:keys");
-    }
 }
