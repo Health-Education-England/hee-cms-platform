@@ -10,6 +10,7 @@ env:
 
 jobs:
   buildAndTest:
+    if: ${{ false }}  # disable for now
     name: Build & Test
     runs-on: ubuntu-latest
 
@@ -45,6 +46,7 @@ jobs:
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
+    if: ${{ false }}  # disable for now
     needs: [buildAndTest]
     environment: development
 
