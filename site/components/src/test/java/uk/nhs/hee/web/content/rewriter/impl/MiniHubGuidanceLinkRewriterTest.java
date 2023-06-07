@@ -29,7 +29,7 @@ import static org.powermock.api.mockito.PowerMockito.mockStatic;
         MiniHubGuidanceLinkUtils.class,
         HstUtils.class
 })
-@PowerMockIgnore({"javax.management.*", "javax.script.*"})
+@PowerMockIgnore({"javax.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "javax.script.*"})
 public class MiniHubGuidanceLinkRewriterTest {
     @Mock
     private Session mockJCRSession;
