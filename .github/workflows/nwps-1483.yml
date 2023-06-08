@@ -3,7 +3,7 @@ name: CI & CD [TEST]
 on:
   push:
     branches:
-      - NWPS-1483-Bloomreach-upgrade-to-version-15
+      - upgrade/NWPS-1483-version-15_2_3
 env:
   BRC_STACK_NAME: hee
   BRC_DISTRIBUTION_DELETE_COUNT: 10
