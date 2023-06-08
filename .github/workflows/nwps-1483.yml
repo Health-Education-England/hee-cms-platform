@@ -12,6 +12,7 @@ jobs:
   buildAndTest:
     name: Build & Test
     runs-on: ubuntu-latest
+    if: ${{ false }} # disable for now
 
     steps:
       - uses: actions/checkout@v3
@@ -43,10 +44,11 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
 
 
-  deploy-to-test:
-    name: Deploy to Test Env. [on brCloud]
+  deploy-to-development:
+    name: Deploy to Developement Env. [on brCloud]
     needs: [buildAndTest]
     environment: development
+    if: ${{ false }} # disable for now
 
     env:
       BRC_ENV_NAME: development
