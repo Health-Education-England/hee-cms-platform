@@ -1,4 +1,4 @@
-name: CI & CD [TEST]
+name: CI & CD [DEVELOPMENT]
 
 on:
   push:
@@ -43,13 +43,13 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
 
 
-  deploy-to-test:
-    name: Deploy to Test Env. [on brCloud]
+  deploy-to-development:
+    name: Deploy to Development Env. [on brCloud]
     needs: [buildAndTest]
-    environment: test
+    environment: development
 
     env:
-      BRC_ENV_NAME: test
+      BRC_ENV_NAME: development
 
     runs-on: ubuntu-latest
 
@@ -100,7 +100,7 @@ jobs:
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
-      - name: Deploy distribution to 'test' env
+      - name: Deploy distribution to 'development' env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.4
         id: deploy
         with:
