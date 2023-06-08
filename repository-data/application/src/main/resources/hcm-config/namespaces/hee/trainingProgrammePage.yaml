@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: af690535-0a5d-4d3b-a1b7-a6f5e56a0347
+          jcr:uuid: deeb6ebd-32c3-48cf-951d-aaa346f3b68a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-training-journey-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -80,12 +81,36 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /trainingJourneyPrerequisites:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:trainingJourneyPrerequisites
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /trainingJourneyOptions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:trainingJourneyOptions
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /trainingJourneySummary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:trainingJourneySummary
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: cbef0484-5031-4a67-a631-361f68dc82b2
+          jcr:uuid: a7a9a06b-3250-4754-9edc-940fbc173cd4
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -95,6 +120,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: ''
           hippotranslation:locale: ''
+          hee:trainingJourneySummary: ''
           /hee:microHero:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -211,3 +237,34 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
+          /trainingJourneySummary:
+            jcr:primaryType: frontend:plugin
+            caption: Training journey summary
+            field: trainingJourneySummary
+            hint: Enter a summary for the training journey (120 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '120'
+          /trainingJourneyPrerequisites:
+            jcr:primaryType: frontend:plugin
+            caption: Training journey prerequisites
+            field: trainingJourneyPrerequisites
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Please browse to and select at least one Training programme page
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              last.visited.nodetypes: []
+              nodetypes: ['hee:trainingProgrammePage']
+          /trainingJourneyOptions:
+            jcr:primaryType: frontend:plugin
+            caption: Training journey optional routes
+            field: trainingJourneyOptions
+            hint: Please browse to and select at least one Training programme page
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:trainingProgrammePage']
