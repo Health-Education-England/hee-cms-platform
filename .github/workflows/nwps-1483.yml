@@ -1,4 +1,4 @@
-name: CI & CD [DEVELOPMENT]
+name: CI & CD [TEST]
 
 on:
   push:
@@ -10,7 +10,6 @@ env:
 
 jobs:
   buildAndTest:
-    if: ${{ false }}  # disable for now
     name: Build & Test
     runs-on: ubuntu-latest
 
@@ -46,12 +45,11 @@ jobs:
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
-    if: ${{ false }}  # disable for now
     needs: [buildAndTest]
-    environment: development
+    environment: test
 
     env:
-      BRC_ENV_NAME: development
+      BRC_ENV_NAME: test
 
     runs-on: ubuntu-latest
 
