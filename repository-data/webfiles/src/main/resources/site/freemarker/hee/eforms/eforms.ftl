@@ -1,6 +1,6 @@
 <#ftl encoding="UTF-8">
 <#--
-  Copyright 2015-2020 Hippo B.V. (http://www.onehippo.com)
+  Copyright 2012-2023 Bloomreach
 -->
 <#assign core=JspTaglibs ["http://java.sun.com/jsp/jstl/core"] >
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
