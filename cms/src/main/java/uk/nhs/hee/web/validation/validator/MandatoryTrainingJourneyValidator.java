@@ -35,10 +35,12 @@ public class MandatoryTrainingJourneyValidator implements Validator<Node> {
     @Override
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
-
+            //Get the list of nodes from prerequisites and optional routes
             final List<Node> prerequisiteNodes = IteratorUtils.<Node>toList(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE));
             final List<Node> optionRoutesNodes = IteratorUtils.<Node>toList(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_OPTIONS));
 
+            //if Sumary is not empty, some prerequisite or optional routes link is needed
+            //also check if the first node has a valid link to a document. 
             if (!StringUtils.isEmpty(node.getProperty(PROPERTY_HEE_TRAINING_JOURNEY_SUMMARY).getString())
                     && (optionRoutesNodes.size()==0?true:optionRoutesNodes.get(0).getProperty(HippoNodeType.HIPPO_DOCBASE).getString().equals(JcrConstants.ROOT_NODE_ID))
                     && (prerequisiteNodes.size()==0?true:prerequisiteNodes.get(0).getProperty(HippoNodeType.HIPPO_DOCBASE).getString().equals(JcrConstants.ROOT_NODE_ID))
