@@ -20,13 +20,12 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Validates if either publication professions ({@code hee:publicationProfessions})
- * or topics ({@code hee:publicationTopics}) have been provided in the document.
+ * Validates if there is a Trainning Journey Summary
+ * at least one link of Prerequisite or Optional Routes is available
  */
 public class MandatoryTrainingJourneyValidator implements Validator<Node> {
     // Logger
     private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryTrainingJourneyValidator.class);
-
     private static final String PROPERTY_HEE_TRAINING_JOURNEY_SUMMARY = "hee:trainingJourneySummary";
     // Publication professions property
     private static final String PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE = "hee:trainingJourneyPrerequisites";
@@ -36,7 +35,6 @@ public class MandatoryTrainingJourneyValidator implements Validator<Node> {
     @Override
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
-
 
             final List<Node> prerequisiteNodes = IteratorUtils.<Node>toList(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE));
             final List<Node> optionRoutesNodes = IteratorUtils.<Node>toList(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_OPTIONS));
