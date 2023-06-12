@@ -7,7 +7,6 @@ definitions:
         'hee:department' link [hippo:mirror] node.
       hipposys:dryrun: false
       hipposys:loglevel: DEBUG
-      hipposys:logtarget: REPOSITORY
       hipposys:parameters: ''
       hipposys:query: /jcr:root/content/documents//element(*, hee:person)[@hee:departmentName!='']
       hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
