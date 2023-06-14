@@ -61,13 +61,15 @@
                     <#assign categories="${item.categories?map(category -> categoriesMap[category]!)?join(', ')}">
 
                     <#if categories?has_content>
-                        <@newListItemRow key="Categories">
+                        <@fmt.message key="categories.text" var="categoriesLabel"/>
+                        <@newListItemRow key="${categoriesLabel}">
                             ${categories}
                         </@newListItemRow>
                     </#if>
 
                     <#--  Publish date  -->
-                    <@newListItemRow key="Publish date">
+                    <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                    <@newListItemRow key="${publishedDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@newListItemRow>
 
@@ -78,7 +80,8 @@
                         <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
                     </#if>
                     <#if commaSeparatedAuthorNames?has_content>
-                        <@newListItemRow key="Author(s)">
+                        <@fmt.message key="authors.text" var="authorsLabel"/>
+                        <@newListItemRow key="${authorsLabel}">
                             ${commaSeparatedAuthorNames}
                         </@newListItemRow>
                     </#if>
@@ -109,13 +112,15 @@
                     <#assign categories="${item.categories?map(category -> categoriesMap[category]!)?join(', ')}">
 
                     <#if categories?has_content>
-                        <@newListItemRow key="Categories">
+                        <@fmt.message key="categories.text" var="categoriesLabel"/>
+                        <@newListItemRow key="${categoriesLabel}">
                             ${categories}
                         </@newListItemRow>
                     </#if>
 
                     <#--  Publish date  -->
-                    <@newListItemRow key="Publish date">
+                    <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                    <@newListItemRow key="${publishedDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@newListItemRow>
 
@@ -126,7 +131,8 @@
                         <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
                     </#if>
                     <#if commaSeparatedAuthorNames?has_content>
-                        <@newListItemRow key="Author(s)">
+                        <@fmt.message key="authors.text" var="authorsLabel"/>
+                        <@newListItemRow key="${authorsLabel}">
                             ${commaSeparatedAuthorNames}
                         </@newListItemRow>
                     </#if>
@@ -142,64 +148,74 @@
 
 <#macro casestudyListItem items impactGroupMap impactTypesMap sectorMap regionMap providerMap>
     <#list items as item>
-        <@hst.link var="casestudyDocumentURL" hippobean=item.document>
-            <@hst.param name="forceDownload" value="true"/>
-        </@hst.link>
+        <div class="hee-listing-item">
+            <#--  Title  -->
+            <@hst.link var="casestudyDocumentURL" hippobean=item.document>
+                <@hst.param name="forceDownload" value="true"/>
+            </@hst.link>
+            <h3><a href="${casestudyDocumentURL}" target="_blank">${item.title}</a></h3>
 
-        <h3><a href="${casestudyDocumentURL}" target="_blank">${item.title}</a></h3>
+            <#--  Case study details: START  -->
+            <div class="hee-listing-item__details">
+                <#--  Group impacted  -->
+                <#if item.impactGroup?has_content>
+                    <@fmt.message key="casestudy.impact_group" var="impactGroupLabel"/>
+                    <@newListItemRow key="${impactGroupLabel}">
+                        ${impactGroupMap[item.impactGroup]}
+                    </@newListItemRow>
+                </#if>
 
-        <dl class="nhsuk-summary-list">
-            <#if item.impactGroup?has_content>
-                <@fmt.message key="casestudy.impact_group" var="impactGroupLabel"/>
-                <@listItemRow key="${impactGroupLabel}">
-                    ${impactGroupMap[item.impactGroup]}
-                </@listItemRow>
-            </#if>
+                <#--  Impact types  -->
+                <#if item.impactTypes?size gt 0>
+                    <@fmt.message key="casestudy.impact_types" var="impactTypesLabel"/>
+                    <#assign impactTypes>${item.impactTypes?map(impactType -> impactTypesMap[impactType]!)?join(', ')}</#assign>
+                    <@newListItemRow key="${impactTypesLabel}">
+                        ${impactTypes}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.impactTypes?size gt 0>
-                <@fmt.message key="casestudy.impact_types" var="impactTypesLabel"/>
-                <#assign impactTypes>${item.impactTypes?map(impactType -> impactTypesMap[impactType]!)?join(', ')}</#assign>
-                <@listItemRow key="${impactTypesLabel}">
-                    ${impactTypes}
-                </@listItemRow>
-            </#if>
+                <#--  Document  -->
+                <#if casestudyDocumentURL??>
+                    <@fmt.message key="casestudy.document" var="documentLabel"/>
+                    <@newListItemRow key="${documentLabel}">
+                        <a href="${casestudyDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_document"/></a>
+                    </@newListItemRow>
+                </#if>
 
-            <#if casestudyDocumentURL??>
-                <@fmt.message key="casestudy.document" var="documentLabel"/>
-                <@listItemRow key="${documentLabel}">
-                    <a href="${casestudyDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_document"/></a>
-                </@listItemRow>
-            </#if>
+                <#--  Sector  -->
+                <#if item.sector?has_content>
+                    <@fmt.message key="casestudy.sector" var="sectorLabel"/>
+                    <@newListItemRow key="${sectorLabel}">
+                        ${sectorMap[item.sector]}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.sector?has_content>
-                <@fmt.message key="casestudy.sector" var="sectorLabel"/>
-                <@listItemRow key="${sectorLabel}">
-                    ${sectorMap[item.sector]}
-                </@listItemRow>
-            </#if>
+                <#--  Region  -->
+                <#if item.region?has_content>
+                    <@fmt.message key="casestudy.region" var="regionLabel"/>
+                    <@newListItemRow key="${regionLabel}">
+                        ${regionMap[item.region]}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.region?has_content>
-                <@fmt.message key="casestudy.region" var="regionLabel"/>
-                <@listItemRow key="${regionLabel}">
-                    ${regionMap[item.region]}
-                </@listItemRow>
-            </#if>
+                <#--  Organisation  -->
+                <#if item.provider?has_content>
+                    <@fmt.message key="casestudy.provider" var="providerLabel"/>
+                    <@newListItemRow key="${providerLabel}">
+                        ${providerMap[item.provider]}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.provider?has_content>
-                <@fmt.message key="casestudy.provider" var="providerLabel"/>
-                <@listItemRow key="${providerLabel}">
-                    ${providerMap[item.provider]}
-                </@listItemRow>
-            </#if>
-
-            <#if item.submittedDate??>
-                <@fmt.message key="casestudy.submitted_date" var="dateLabel"/>
-                <@listItemRow key="${dateLabel}">
-                    ${item.submittedDate.time?string['dd MMMM yyyy']}
-                </@listItemRow>
-            </#if>
-
-        </dl>
+                <#--  Date submitted  -->
+                <#if item.submittedDate??>
+                    <@fmt.message key="casestudy.submitted_date" var="dateLabel"/>
+                    <@newListItemRow key="${dateLabel}">
+                        ${item.submittedDate.time?string['dd MMMM yyyy']}
+                    </@newListItemRow>
+                </#if>
+            </div>
+            <#--  Case study details: END  -->
+        </div>
     </#list>
 </#macro>
 

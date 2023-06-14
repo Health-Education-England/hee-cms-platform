@@ -41,17 +41,18 @@
             <#--  Left bar: START  -->
             <aside class="page__leftbar">
                 <#--  Search filters: START  -->
-                <@hst.renderURL var="pagelink"/>
-                <form class="nhsuk-filter" method="get" action="${pagelink}">
+                <@hst.renderURL var="pageLink"/>
+                <form class="nhsuk-filter" method="get" action="${pageLink}">
                     <@fmt.message key="filters.label" var="filtersLabel"/>
                     <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
 
                     <#--  Filter group: START  -->
                     <div class="nhsuk-filter__groups">
-                        <@fmt.message key="filter.category.label" var="categoryLabel"/>
                         <#--  Categories filter: START  -->
                         <div class="nhsuk-filter__group">
+                            <@fmt.message key="filter.category.label" var="categoryLabel"/>
                             <@fmt.message key="filter.clear.label" var="clearLabel"/>
+
                             <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
                             <@checkboxGroup title=categoryLabel name="category" items=categoriesMap selectedItemsList=selectedCategories />
                         </div>
@@ -83,8 +84,8 @@
 
                             <#--  Search sort dropdown: START  -->
                             <div class="hee-listing__filter">
-                                <@hst.renderURL var="pagelink" />
-                                <form method="get" class="hee-listing__filter__sort" action="${pagelink}">
+                                <@hst.renderURL var="pageLink" />
+                                <form method="get" class="hee-listing__filter__sort" action="${pageLink}">
                                     <#list selectedCategories as category>
                                         <input type="hidden" name="category" value="${category}">
                                     </#list>
