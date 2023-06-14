@@ -7,19 +7,18 @@ import org.onehippo.cms.services.validation.api.Violation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 
-public class MandatoryCombinationValidator implements Validator<Node> {
-    private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryCombinationValidator.class);
+public abstract class AbstractMandatoryCombinationValidator implements Validator<Node> {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AbstractMandatoryCombinationValidator.class);
 
     private final List<String> combinationFields;
 
-    public MandatoryCombinationValidator(List<String> fields) {
+    public AbstractMandatoryCombinationValidator(List<String> fields) {
         combinationFields = fields;
     }
 
