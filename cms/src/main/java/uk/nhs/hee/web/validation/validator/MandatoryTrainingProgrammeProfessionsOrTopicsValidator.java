@@ -6,10 +6,10 @@ import java.util.Arrays;
  * Validates if either publication professions ({@code hee:publicationProfessions})
  * or topics ({@code hee:publicationTopics}) have been provided in the document.
  */
-public class MandatoryPublicationProfessionsOrTopicsValidator extends MandatoryCombinationValidator {
+public class MandatoryTrainingProgrammeProfessionsOrTopicsValidator extends MandatoryCombinationValidator {
 
-    public MandatoryPublicationProfessionsOrTopicsValidator() {
-        super(Arrays.asList(new String[]{"hee:publicationProfessions", "hee:publicationTopics"}));
+    public MandatoryTrainingProgrammeProfessionsOrTopicsValidator() {
+        super(Arrays.asList(new String[]{"hee:professions", "hee:topics"}));
     }
 //    private static final Logger LOGGER = LoggerFactory.getLogger(MandatoryPublicationProfessionsOrTopicsValidator.class);
 //

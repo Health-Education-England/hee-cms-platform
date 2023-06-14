@@ -5,8 +5,8 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-
 import java.util.List;
+import java.util.Calendar;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -51,4 +51,53 @@ public class TrainingProgrammePage extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:trainingType")
+    public String getTrainingType() {
+        return getSingleProperty("hee:trainingType");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:professions")
+    public String[] getProfessions() {
+        return getMultipleProperty("hee:professions");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:topics")
+    public String[] getTopics() {
+        return getMultipleProperty("hee:topics");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:discipline")
+    public String getDiscipline() {
+        return getSingleProperty("hee:discipline");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:recruitmentFormat")
+    public String getRecruitmentFormat() {
+        return getSingleProperty("hee:recruitmentFormat");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:duration")
+    public Long getDuration() {
+        return getSingleProperty("hee:duration");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:fillRate")
+    public Long getFillRate() {
+        return getSingleProperty("hee:fillRate");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:opening")
+    public Calendar getOpening() {
+        return getSingleProperty("hee:opening");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:closing")
+    public Calendar getClosing() {
+        return getSingleProperty("hee:closing");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:competitionRatio")
+    public Double getCompetitionRatio() {
+        return getSingleProperty("hee:competitionRatio");
+    }
 }
