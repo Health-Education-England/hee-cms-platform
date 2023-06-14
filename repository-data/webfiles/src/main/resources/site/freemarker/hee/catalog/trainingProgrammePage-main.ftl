@@ -47,6 +47,80 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
+                    <div class="hee-card hee-card--summary default">
+                        <a aria-label="Toggle Programme summary" class="hee-card--summary__toggle" href="#">
+                            <span class="nhsuk-u-visually-hidden">Toggle Programme summary</span>
+                        </a>
+                        <h3 class="hee-card--summary__heading">Programme summary</h3>
+                        <ul class="hee-card--summary__list">
+                            <li class="hee-card--summary__item">
+                                <span class="hee-card--summary__item__label">Training programme</span>
+                                <span class="hee-card--summary__item__value">${document.title}</span>
+                            </li>
+                            <li class="hee-card--summary__item">
+                                <span class="hee-card--summary__item__label">Training type</span>
+                                <span class="hee-card--summary__item__value">
+                                    <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${trainingType}</a>
+                                </span>
+                            </li>
+                            <li class="hee-card--summary__item">
+                                <span class="hee-card--summary__item__label">Professions</span>
+                                <#if professionMap?has_content>
+                                    <#list professionMap as professionKey, professionValue>
+                                        <span class="hee-card--summary__item__value">
+                                            <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${professionValue}</a>
+                                        </span>
+                                    </#list>
+                                </#if>
+                            </li>
+                            <#if clinicalDiscipline?has_content>
+                            <li class="hee-card--summary__item">
+                                <span class="hee-card--summary__item__label">Discipline</span>
+                                <span class="hee-card--summary__item__value">
+                                  <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${clinicalDiscipline}</a>
+                                </span>
+                            </li>
+                            </#if>
+
+                            <#if recruitmentFormat?has_content>
+                                <li class="hee-card--summary__item">
+                                    <span class="hee-card--summary__item__label">Recruitment format</span>
+                                    <span class="hee-card--summary__item__value">${recruitmentFormat}</span>
+                                </li>
+                            </#if>
+                            <li class="hee-card--summary__item">
+                                <span class="hee-card--summary__item__label">Duration</span>
+                                <span class="hee-card--summary__item__value">${document.duration}&nbsp; months</span>
+                            </li>
+                            <#if document.competitionRatio?has_content>
+                                <li class="hee-card--summary__item">
+                                    <span class="hee-card--summary__item__label">Competition ratio</span>
+                                    <span class="hee-card--summary__item__value">${document.competitionRatio}</span>
+                                </li>
+                            </#if>
+                            <#if document.fillRate?has_content>
+                                <li class="hee-card--summary__item">
+                                    <span class="hee-card--summary__item__label">Fill rate</span>
+                                    <span class="hee-card--summary__item__value">${document.fillRate}%</span>
+                                </li>
+                            </#if>
+                            <#if document.opening?has_content>
+                                <li class="hee-card--summary__item">
+                                    <span class="hee-card--summary__item__label">Opening</span>
+                                    <span class="hee-card--summary__item__value">${document.opening.time?datetime?string['EEE dd/MM/yyyy']}</span>
+                                </li>
+                            </#if>
+                            <#if document.closing?has_content>
+                                <li class="hee-card--summary__item">
+                                    <span class="hee-card--summary__item__label">Closing</span>
+                                    <span class="hee-card--summary__item__value">${document.closing.time?datetime?string['EEE dd/MM/yyyy']}</span>
+                                </li>
+                            </#if>
+                        </ul>
+                    </div>
+
+
+
                     <#--  Main content blocks: START  -->
                     <#if document.overviewBlocks??>
                         <h2  class="toc_h2" id="overview">Overview</h2>
@@ -130,16 +204,19 @@
             <#--  Sidebar sections: START  -->
             <#--  Right hand content blocks: Table of content and content blocks   -->
             <aside class="page__rightbar">
-                <#if document.applicationButtonLink?has_content>
-                    <div class="hee-card hee-card--cta">
-                        <h3>Apply now</h3>
-                        <div class="hee-card--cta__button">
-                            <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
-                                ${document.applicationButtonTitle}
-                            </a>
-                        </div>
+
+                <#--  Table of content  -->
+                <div class="hee-card hee-card--related-links theme__item-border">
+                    <div class="hee-card--related-links__content">
+                        <h3 class="hee-card--related-links__heading">Pages related to this programme</h3>
+                        <ul class="hee-card--related-links__list">
+                            <li>
+                                <a class="hee-card--related-links__link" href="#">Overview</a>
+                            </li>
+                        </ul>
                     </div>
-                </#if>
+                </div>
+
                 <#--  Right hand content blocks: START  -->
                 <#if document.rightHandBlocks??>
                     <#list document.rightHandBlocks as block>
