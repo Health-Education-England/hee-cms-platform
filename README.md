@@ -8,7 +8,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Built With
 
-* [BloomReach DXP 14.7.13](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
+* [BloomReach DXP 15.2.3](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
 * [brCloud](https://www.bloomreach.com/en/products/experience-manager/cloud-cms) - Bloomreach Cloud Managed Hosting
 
 ## Getting Started
@@ -21,7 +21,7 @@ In order to develop on this platform you will need to have the following tools i
 
 - IntelliJ IDEA
 - Docker
-- Java 1.8
+- Java 11
 - Maven >= 3.5.0 (For `Maven CI Friendly Versions` Support)
 
 
