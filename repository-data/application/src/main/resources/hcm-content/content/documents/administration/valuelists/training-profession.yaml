@@ -1,9 +1,10 @@
-/content/documents/administration/valuelists/profession:
+/content/documents/administration/valuelists/training-profession:
+  .meta:order-before: publicationtypes
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
   jcr:uuid: 52819955-093d-47db-bc02-99fc3019faac
-  hippo:name: Profession
-  /profession:
+  hippo:name: TrainingProfession
+  /training-profession:
     jcr:primaryType: selection:valuelist
     jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
     jcr:uuid: 3a97c431-79c5-4ace-80c7-27faf14f855c
