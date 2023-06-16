@@ -18,50 +18,78 @@
 <#-- @ftlvariable name="selectedTopics" type="java.util.List" -->
 
 <#if document??>
-    <#if document.microHero??>
-        <@microHero microHeroImage=document.microHero />
-    </#if>
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html">
-        <div class="nhsuk-width-container">
-            <h1>${document.title}</h1>
-            <#if document.summary?has_content>
-                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+    <main class="page page--leftbar" id="maincontent" role="main">
+        <#--  Main header: START  -->
+        <div class="page__header${(document.microHero?has_content)?then(' has-microhero', '')}">
+            <#--  Micro hero  -->
+            <#if document.microHero??>
+                <@microHero microHeroImage=document.microHero />
             </#if>
-            <div class="nhsuk-listing">
-                <div class="nhsuk-grid-row">
-                    <div class="nhsuk-grid-column-one-third">
-                        <#-- Filters -->
-                        <@hst.renderURL var="pagelink"/>
-                        <form class="nhsuk-filter" method="get" action="${pagelink}">
-                            <@fmt.message key="filters.label" var="filtersLabel"/>
-                            <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
 
-                            <div class="nhsuk-filter__groups">
-                                <@fmt.message key="filter.topic.label" var="topicLabel"/>
+            <div class="nhsuk-width-container">
+                <#--  Title  -->
+                <h1>${document.title}</h1>
 
-                                <div class="nhsuk-filter__group">
-                                    <@checkboxGroup title=topicLabel name="topic" items=topicMap selectedItemsList=selectedTopics />
-                                </div>
-                            </div>
-                            <input type="hidden" name="sortBy" value="${selectedSortOrder}">
-                        </form>
-                        <#-- End Filters -->
+                <#--  Summary  -->
+                <#if document.summary?has_content>
+                    <p class="nhsuk-lede-text">
+                        <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
+                    </p>
+                </#if>
+            </div>
+        </div>
+        <#--  Main header: END  -->
+
+        <#--  Main content: START  -->
+        <div class="page__layout nhsuk-width-container">
+            <#--  Left bar: START  -->
+            <aside class="page__leftbar">
+                <#--  Search filters: START  -->
+                <@hst.renderURL var="pageLink"/>
+                <form class="nhsuk-filter" method="get" action="${pageLink}">
+                    <@fmt.message key="filters.label" var="filtersLabel"/>
+                    <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
+
+                    <#--  Filter group: START  -->
+                    <div class="nhsuk-filter__groups">
+                        <#--  Topics filter: START  -->
+                        <div class="nhsuk-filter__group">
+                            <@fmt.message key="filter.topic.label" var="topicLabel"/>
+                            <@fmt.message key="filter.clear.label" var="clearLabel"/>
+
+                            <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
+                            <@checkboxGroup title=topicLabel name="topic" items=topicMap selectedItemsList=selectedTopics />
+                        </div>
+                        <#--  Topics filter: END  -->
                     </div>
+                    <#--  Filter group: END  -->
 
-                    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
-                        <div class="nhsuk-listing__summary o-flex@tablet">
-                            <#-- Results number -->
-                            <@fmt.message key="results.count.text" var="resultsCountText"/>
-                            <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
-                                ${pageable.total} ${resultsCountText}
-                            </h2>
-                            <#-- End Results number -->
+                    <input type="hidden" name="sortBy" value="${selectedSortOrder}">
+                    <button class="nhsuk-button nhsuk-filter__submit" type="submit" hidden>Update results</button>
+                </form>
+                <#--  Search filters: END  -->
+            </aside>
+            <#--  Left bar: END  -->
 
-                            <#-- Sort DropDown-->
-                            <@hst.renderURL var="pagelink" />
-                            <form method="get" class="nhsuk-listing__sort o-flex o-flex--align-center"
-                                  action="${pagelink}">
-                                <div class="o-flex__grow">
+            <#--  Main sections: START  -->
+            <div class="page__main">
+                <div class="page__content">
+                    <div class="hee-listing">
+                        <#--  Search result summary: START  -->
+                        <div class="hee-listing__summary">
+                            <#--  Result count: START  -->
+                            <div class="hee-listing__count">
+                                <@fmt.message key="results.count.text" var="resultsCountText"/>
+                                <h2 class="hee-listing__title nhsuk-heading-l">
+                                    ${pageable.total} ${resultsCountText}
+                                </h2>
+                            </div>
+                            <#--  Result count: END  -->
+
+                            <#--  Search sort dropdown: START  -->
+                            <div class="hee-listing__filter">
+                                <@hst.renderURL var="pageLink" />
+                                <form method="get" class="hee-listing__filter__sort" action="${pageLink}">
                                     <#list selectedTopics as topic>
                                         <input type="hidden" name="topic" value="${topic}">
                                     </#list>
@@ -71,10 +99,12 @@
                                     <@fmt.message key="sort.option.az" var="sortByAZ"/>
                                     <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
-                                </div>
-                            </form>
-                            <#-- End Sort DropDown -->
+                                    <button class="nhsuk-button hee-listing__filter__submit" type="submit" hidden>Update</button>
+                                </form>
+                            </div>
+                            <#--  Search sort dropdown: END  -->
                         </div>
+                        <#--  Search result summary: END  -->
 
                         <#-- Active Filters -->
                         <#if selectedTopics?has_content>
@@ -92,18 +122,24 @@
                         <#-- End Active Filters -->
 
                         <#if pageable??>
-                            <ul class="nhsuk-list nhsuk-list--border">
+                            <#--  Search results: START  -->
+                            <div class="hee-listing__results">
                                 <@.vars["${document.listingPageType}ListItem"]
                                     items=pageable.items
                                     topicMap=topicMap
                                     keyTermMap=keyTermMap
                                     providerMap=providerMap/>
-                            </ul>
+                            </div>
+                            <#--  Search results: END  -->
+
+                            <#--  Pagination  -->
                             <#include "../../include/pagination-nhs.ftl">
                         </#if>
                     </div>
                 </div>
             </div>
+            <#--  Main sections: END  -->
         </div>
+        <#--  Main content: END  -->
     </main>
 </#if>

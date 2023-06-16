@@ -34,9 +34,11 @@
                 <h1>${document.title}</h1>
 
                 <#--  Summary  -->
-                <p class="nhsuk-lede-text">
-                    <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
-                </p>
+                <#if document.summary?has_content>
+                    <p class="nhsuk-lede-text">
+                        <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
+                    </p>
+                </#if>
             </div>
         </div>
         <#--  Main header: END  -->

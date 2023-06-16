@@ -148,11 +148,13 @@
 
 <#macro casestudyListItem items impactGroupMap impactTypesMap sectorMap regionMap providerMap>
     <#list items as item>
+        <#--  Gets case study document URL  -->
+        <@hst.link var="casestudyDocumentURL" hippobean=item.document>
+            <@hst.param name="forceDownload" value="true"/>
+        </@hst.link>
+
         <div class="hee-listing-item">
             <#--  Title  -->
-            <@hst.link var="casestudyDocumentURL" hippobean=item.document>
-                <@hst.param name="forceDownload" value="true"/>
-            </@hst.link>
             <h3><a href="${casestudyDocumentURL}" target="_blank">${item.title}</a></h3>
 
             <#--  Case study details: START  -->
@@ -268,6 +270,7 @@
 
 <#macro searchbankListItem items topicMap keyTermMap providerMap>
     <#list items as item>
+        <#--  Gets search bank strategy document URL  -->
         <#if item.strategyDocument?? && item.strategyDocument.mimeType != 'application/vnd.hippo.blank'>
             <#assign strategyDocumentURL>
                 <@hst.link hippobean=item.strategyDocument>
@@ -278,63 +281,74 @@
             <#assign strategyDocumentURL=''/>
         </#if>
 
-        <h3>
-            <#if strategyDocumentURL?has_content>
-                <a href="${strategyDocumentURL}" target="_blank">${item.title}</a>
-            <#else>
-                ${item.title}
-            </#if>
-        </h3>
+        <div class="hee-listing-item">
+            <#--  Title  -->
+            <h3>
+                <#if strategyDocumentURL?has_content>
+                    <a href="${strategyDocumentURL}" target="_blank">${item.title}</a>
+                <#else>
+                    ${item.title}
+                </#if>
+            </h3>
 
-        <dl class="nhsuk-summary-list">
-            <#assign topics>${item.topics?map(topic -> topicMap[topic]!)?join(', ')}</#assign>
-            <#if topics??>
-                <@fmt.message key="searchbank.topics" var="topicLabel"/>
-                <@listItemRow key="${topicLabel}">
-                    ${topics}
-                </@listItemRow>
-            </#if>
+            <#--  Search bank details: START  -->
+            <div class="hee-listing-item__details">
+                <#--  Topics  -->
+                <#assign topics>${item.topics?map(topic -> topicMap[topic]!)?join(', ')}</#assign>
+                <#if topics??>
+                    <@fmt.message key="searchbank.topics" var="topicLabel"/>
+                    <@newListItemRow key="${topicLabel}">
+                        ${topics}
+                    </@newListItemRow>
+                </#if>
 
-            <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm]!)?join(', ')}</#assign>
-            <#if keyTerms??>
-                <@fmt.message key="searchbank.key_terms" var="keyTermsLabel"/>
-                <@listItemRow key="${keyTermsLabel}">
-                    ${keyTerms}
-                </@listItemRow>
-            </#if>
+                <#--  Key terms  -->
+                <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm]!)?join(', ')}</#assign>
+                <#if keyTerms??>
+                    <@fmt.message key="searchbank.key_terms" var="keyTermsLabel"/>
+                    <@newListItemRow key="${keyTermsLabel}">
+                        ${keyTerms}
+                    </@newListItemRow>
+                </#if>
 
-            <#if strategyDocumentURL?has_content>
-                <@fmt.message key="searchbank.strategies" var="strategiesLabel"/>
-                <@listItemRow key="${strategiesLabel}">
-                    <a href="${strategyDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_strategy"/></a>
-                </@listItemRow>
-            </#if>
+                <#--  Strings / Strategies  -->
+                <#if strategyDocumentURL?has_content>
+                    <@fmt.message key="searchbank.strategies" var="strategiesLabel"/>
+                    <@newListItemRow key="${strategiesLabel}">
+                        <a href="${strategyDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_strategy"/></a>
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.searchDocument?? && item.searchDocument.mimeType != 'application/vnd.hippo.blank'>
-                <@hst.link var="searchDocumentURL" hippobean=item.searchDocument>
-                    <@hst.param name="forceDownload" value="true"/>
-                </@hst.link>
+                <#--  Search  -->
+                <#if item.searchDocument?? && item.searchDocument.mimeType != 'application/vnd.hippo.blank'>
+                    <@hst.link var="searchDocumentURL" hippobean=item.searchDocument>
+                        <@hst.param name="forceDownload" value="true"/>
+                    </@hst.link>
 
-                <@fmt.message key="searchbank.search" var="searchLabel"/>
-                <@listItemRow key="${searchLabel}">
-                    <a href="${searchDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_search"/></a>
-                </@listItemRow>
-            </#if>
+                    <@fmt.message key="searchbank.search" var="searchLabel"/>
+                    <@newListItemRow key="${searchLabel}">
+                        <a href="${searchDocumentURL}" target="_blank"><@fmt.message key="searchbank.get_search"/></a>
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.completedDate??>
-                <@fmt.message key="searchbank.completed_on" var="completedOnLabel"/>
-                <@listItemRow key="${completedOnLabel}">
-                    ${item.completedDate.time?string['dd MMMM yyyy']}
-                </@listItemRow>
-            </#if>
+                <#--  Completed on  -->
+                <#if item.completedDate??>
+                    <@fmt.message key="searchbank.completed_on" var="completedOnLabel"/>
+                    <@newListItemRow key="${completedOnLabel}">
+                        ${item.completedDate.time?string['dd MMMM yyyy']}
+                    </@newListItemRow>
+                </#if>
 
-            <#if item.provider?has_content>
-                <@fmt.message key="searchbank.provider" var="providerLabel"/>
-                <@listItemRow key="${providerLabel}">
-                    ${providerMap[item.provider]}
-                </@listItemRow>
-            </#if>
-        </dl>
+                <#--  Provider  -->
+                <#if item.provider?has_content>
+                    <@fmt.message key="searchbank.provider" var="providerLabel"/>
+                    <@newListItemRow key="${providerLabel}">
+                        ${providerMap[item.provider]}
+                    </@newListItemRow>
+                </#if>
+            </div>
+            <#--  Search bank details: END  -->
+        </div>
     </#list>
 </#macro>
 
