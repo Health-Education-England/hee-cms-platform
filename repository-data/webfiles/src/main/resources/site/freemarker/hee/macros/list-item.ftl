@@ -303,9 +303,9 @@
                 </#if>
 
                 <#--  Key terms  -->
-                <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm]!)?join(', ')}</#assign>
-                <#if keyTerms??>
+                <#if item.keyTerms?size gt 0>
                     <@fmt.message key="searchbank.key_terms" var="keyTermsLabel"/>
+                    <#assign keyTerms>${item.keyTerms?map(keyTerm -> keyTermMap[keyTerm]!)?join(', ')}</#assign>
                     <@newListItemRow key="${keyTermsLabel}">
                         ${keyTerms}
                     </@newListItemRow>
