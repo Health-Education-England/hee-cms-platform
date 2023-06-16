@@ -50,7 +50,7 @@
 
                     <#--  Filter group: START  -->
                     <div class="nhsuk-filter__groups">
-                        <#--  Categories filter: START  -->
+                        <#--  Category filter: START  -->
                         <div class="nhsuk-filter__group">
                             <@fmt.message key="filter.category.label" var="categoryLabel"/>
                             <@fmt.message key="filter.clear.label" var="clearLabel"/>
@@ -58,7 +58,7 @@
                             <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
                             <@checkboxGroup title=categoryLabel name="category" items=categoriesMap selectedItemsList=selectedCategories />
                         </div>
-                        <#--  Categories filter: END  -->
+                        <#--  Category filter: END  -->
                     </div>
                     <#--  Filter group: END  -->
 
@@ -91,12 +91,14 @@
                                     <#list selectedCategories as category>
                                         <input type="hidden" name="category" value="${category}">
                                     </#list>
+
                                     <@fmt.message key="sort.label" var="sortLabel"/>
                                     <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
                                     <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
                                     <@fmt.message key="sort.option.az" var="sortByAZ"/>
                                     <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+
                                     <button class="nhsuk-button hee-listing__filter__submit" type="submit" hidden>Update</button>
                                 </form>
                             </div>
@@ -104,7 +106,7 @@
                         </div>
                         <#--  Search result summary: END  -->
 
-                        <#-- Active Filters -->
+                        <#-- Active filters: START -->
                         <#if selectedCategories?has_content>
                             <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
                                 <#list selectedCategories as categoryValue>
@@ -116,7 +118,7 @@
                                 </#list>
                             </div>
                         </#if>
-                        <#-- End Active Filters -->
+                        <#-- Active filters: END -->
 
                         <#if pageable??>
                             <#--  Search results: START  -->

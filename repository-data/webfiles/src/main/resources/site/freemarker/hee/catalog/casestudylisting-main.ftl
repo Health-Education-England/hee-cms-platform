@@ -103,6 +103,7 @@
                                     <@fmt.message key="sort.option.az" var="sortByAZ"/>
                                     <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortBySubmittedDateNewestLabel}", "asc":"${sortBySubmittedDateOldestLabel}" } />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+
                                     <button class="nhsuk-button hee-listing__filter__submit" type="submit" hidden>Update</button>
                                 </form>
                             </div>
@@ -110,7 +111,7 @@
                         </div>
                         <#--  Search result summary: END  -->
 
-                        <#-- Active Filters -->
+                        <#-- Active filters: START -->
                         <#if selectedImpactGroups?has_content>
                             <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
                                 <#list selectedImpactGroups as impactGroup>
@@ -122,7 +123,7 @@
                                 </#list>
                             </div>
                         </#if>
-                        <#-- End Active Filters -->
+                        <#-- Active filters: END -->
 
                         <#if pageable??>
                             <#--  Search results: START  -->

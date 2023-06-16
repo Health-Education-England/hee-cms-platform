@@ -223,20 +223,29 @@
 
 <#macro eventListItem items>
     <#list items as item>
-        <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-        <p>${item.description}</p>
+        <div class="hee-listing-item">
+            <#--  Title  -->
+            <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
 
-        <dl class="nhsuk-summary-list">
-            <@fmt.message key="event.date" var="dateLabel"/>
-            <@listItemRow key="${dateLabel}">
-                ${item.date.time?string['dd MMMM yyyy']}
-            </@listItemRow>
+            <#--  Event details: START   -->
+            <div class="hee-listing-item__details">
+                <#--  Date  -->
+                <@fmt.message key="event.date" var="dateLabel"/>
+                <@newListItemRow key="${dateLabel}">
+                    ${item.date.time?string['dd MMMM yyyy']}
+                </@newListItemRow>
 
-            <@fmt.message key="event.location" var="locationLabel"/>
-            <@listItemRow key="${locationLabel}">
-                ${item.location}
-            </@listItemRow>
-        </dl>
+                <#--  Location  -->
+                <@fmt.message key="event.location" var="locationLabel"/>
+                <@newListItemRow key="${locationLabel}">
+                    ${item.location}
+                </@newListItemRow>
+            </div>
+            <#--  Event details: END   -->
+
+            <#--  Description  -->
+            <div class="hee-listing-item__summary">${item.description!}</div>
+        </div>
     </#list>
 </#macro>
 
