@@ -280,10 +280,10 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Hub target
             field: hubTarget
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyPickerPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.ParameterisedTaxonomyPickerPlugin
             taxonomy.classification.dao: service.taxonomy.dao.target.classification
             taxonomy.id: service.taxonomy
-            taxonomy.name: blog-hub-target
+            taxonomy.name: blog-${channel}-target
             wicket.id: ${cluster.id}.left.item
           /publicationDate:
             jcr:primaryType: frontend:plugin

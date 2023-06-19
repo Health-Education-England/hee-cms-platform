@@ -58,12 +58,11 @@ import org.onehippo.forge.selection.frontend.provider.IValueListProvider;
 import org.onehippo.forge.selection.frontend.utils.SelectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.nhs.hee.web.utils.ChannelUtils;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import static org.hippoecm.frontend.validation.ViolationUtils.getFirstFieldViolation;
@@ -82,11 +81,6 @@ import static org.hippoecm.frontend.validation.ViolationUtils.getFirstFieldViola
  * if a {@link IValueListNameProvider} isn't configured.</p>
  */
 public class ChannelBasedDynamicMultiSelectPlugin extends RenderPlugin {
-
-    /**
-     * Document path REGEX pattern
-     */
-    private static final Pattern DOCUMENT_PATH_REGEX_PATTERN = Pattern.compile("/content/documents/(.*?)/.*");
 
     private static final Logger log = LoggerFactory.getLogger(ChannelBasedDynamicMultiSelectPlugin.class);
     private static final CssResourceReference CSS = new CssResourceReference(ChannelBasedDynamicMultiSelectPlugin.class,
@@ -212,39 +206,15 @@ public class ChannelBasedDynamicMultiSelectPlugin extends RenderPlugin {
      * @return the value-list path by channel in which document is being created.
      */
     private String getValueListByChannel() {
-        final String channel = getChannel();
-
-        if (StringUtils.isNotEmpty(channel)) {
-            return getValueListByNameProvider(channel);
-        }
-
-        return StringUtils.EMPTY;
-    }
-
-    /**
-     * <p>Returns channel in which the document is being created. Otherwise, returns an Empty String
-     * if channel can't be extracted from the current document path.</p>
-     *
-     * <p>It extracts channel from the document path using {@code /content/documents/<channel>/.*}</p> pattern.</p>
-     *
-     * @return the channel in which the document is being created.
-     * Otherwise, returns an Empty String if channel can't be extracted from the current document path.
-     */
-    private String getChannel() {
         try {
-            final String documentNodePath = helper.getNodeModel().getNode().getPath();
-            log.debug("Document node path = {}", documentNodePath);
+            String nodePath = helper.getNodeModel().getNode().getPath();
+            final String channel = ChannelUtils.findChannelUsingPattern(nodePath);
 
-            final Matcher documentPathMatcher = DOCUMENT_PATH_REGEX_PATTERN.matcher(documentNodePath);
-
-            if (documentPathMatcher.find()) {
-                final String channel = documentPathMatcher.group(1);
-                log.debug("Document channel = {}", channel);
-
-                return channel;
+            if (StringUtils.isNotEmpty(channel)) {
+                return getValueListByNameProvider(channel);
             }
-        } catch (final RepositoryException e) {
-            log.error("Caught error {} while retrieving current document node path", e.getMessage(), e);
+        } catch (RepositoryException e) {
+            e.printStackTrace();
         }
 
         return StringUtils.EMPTY;
