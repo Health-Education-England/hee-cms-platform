@@ -1,0 +1,174 @@
+/content/documents/dental/blogposts:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: f9862933-90b0-4159-8f79-480a5734a53a
+  hippo:name: BlogPosts
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 91ac563c-6ce5-4dc5-866f-bffb43bee54e
+  hippotranslation:locale: en
+  /dental-blog-post:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: a7f9e829-d0ea-423e-bf25-7faca7d0dfd8
+    hippo:name: Dental blog post
+    hippo:versionHistory: 690a549d-68cc-40b1-a964-1652b0ec49a6
+    /dental-blog-post[1]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
+      jcr:uuid: 451cfa02-2c79-4d9f-80d3-41278d6497e8
+      hee:author: ''
+      hee:categories: []
+      hee:categoryClassification: [RD-Copyright, RD-Discovery]
+      hee:hideAuthorContactDetails: false
+      hee:hubTarget: [dentists, technicians]
+      hee:publicationDate: 2023-06-19T12:15:00+01:00
+      hee:summary: This is a summary
+      hee:title: Hello dental world
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-06-19T12:14:30.137+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-20T10:00:44.961+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:keys: [dementia, critical-care]
+      hippotranslation:id: 6f57a280-0401-4e0f-acc5-b89deb2ac466
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Hello free text</p>
+    /dental-blog-post[2]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 4df46748-4428-4b64-aca0-52041404649d
+      hee:author: ''
+      hee:categories: []
+      hee:categoryClassification: [RD-Copyright, RD-Discovery]
+      hee:hideAuthorContactDetails: false
+      hee:hubTarget: [dentists, technicians]
+      hee:publicationDate: 2023-06-19T12:15:00+01:00
+      hee:summary: This is a summary
+      hee:title: Hello dental world
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-06-19T12:14:30.137+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-20T10:00:44.929+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:keys: [dementia, critical-care]
+      hippotranslation:id: 6f57a280-0401-4e0f-acc5-b89deb2ac466
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Hello free text</p>
+    /dental-blog-post[3]:
+      jcr:primaryType: hee:blogPost
+      jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
+      jcr:uuid: 90ca38cc-4712-4102-8705-f758349a0e5d
+      hee:author: ''
+      hee:categories: []
+      hee:categoryClassification: [RD-Copyright, RD-Discovery]
+      hee:hideAuthorContactDetails: false
+      hee:hubTarget: [dentists, technicians]
+      hee:publicationDate: 2023-06-19T12:15:00+01:00
+      hee:summary: This is a summary
+      hee:title: Hello dental world
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-06-19T12:14:30.137+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-20T10:00:44.929+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-06-20T10:01:45.900+01:00
+      hippotaxonomy:keys: [dementia, critical-care]
+      hippotranslation:id: 6f57a280-0401-4e0f-acc5-b89deb2ac466
+      hippotranslation:locale: en
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:comments:
+        jcr:primaryType: hee:blogComment
+        hee:message: ''
+        hee:moderated: false
+        hee:postedDate: 0001-01-01T12:00:00Z
+        /hee:author:
+          jcr:primaryType: hee:blogCommentAuthor
+          hee:email: ''
+          hee:firstName: ''
+          hee:lastName: ''
+          hee:string: ''
+          hee:string_: ''
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:authors:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 737a4492-b0a1-4d1e-aa23-5dca65471d5d
+      /hee:contentBlocks:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Hello free text</p>

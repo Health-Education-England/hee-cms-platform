@@ -116,7 +116,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-05T16:59:33.985+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-05T17:17:04.349+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-20T10:07:08.085+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotaxonomy:locales: [en]
       /advanced-clinical-practiceadvanced-clinical-practice:
@@ -127,6 +127,15 @@
           /en:
             jcr:primaryType: hippotaxonomy:categoryinfo
             hippotaxonomy:name: Advanced clinical practiceAdvanced clinical practice
+        /advanced-stuff:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: advanced-stuff
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Advanced stuff
+              hippotaxonomy:synonyms: [Hello]
       /antimicrobial-resistance:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: antimicrobial-resistance
@@ -212,12 +221,12 @@
       jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
       jcr:uuid: fca391b1-8995-4e65-9ebd-54a7f3bc91c5
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-05T16:59:33.985+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-05T17:18:44.947+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-20T10:07:08.154+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotaxonomy:locales: [en]
       /advanced-clinical-practiceadvanced-clinical-practice:
@@ -228,6 +237,15 @@
           /en:
             jcr:primaryType: hippotaxonomy:categoryinfo
             hippotaxonomy:name: Advanced clinical practiceAdvanced clinical practice
+        /advanced-stuff:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: advanced-stuff
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Advanced stuff
+              hippotaxonomy:synonyms: []
       /antimicrobial-resistance:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: antimicrobial-resistance
@@ -1638,3 +1656,117 @@
           /en:
             jcr:primaryType: hippotaxonomy:categoryinfo
             hippotaxonomy:name: Clinical staff
+  /blog-dental-target:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: b95a5ce3-369c-4d4d-becc-24e19fa3c651
+    /blog-dental-target[1]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
+      jcr:uuid: cb1fe2b5-6f06-4853-9509-a511f5ec16e6
+      hippo:availability: [live]
+      hippostd:holder: admin
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-06-19T11:58:58.780+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-19T11:59:45.611+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-06-19T11:59:47.588+01:00
+      hippotaxonomy:locales: [en]
+      /dental-users:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental-users
+        /hippotaxonomy:categoryinfos:
+          jcr:primaryType: hippotaxonomy:categoryinfos
+          /en:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Dental users
+        /dentists:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dentists
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Dentists
+        /technicians:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: technicians
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Technicians
+    /blog-dental-target[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: fa871bd1-4628-4b49-a9ad-d07047d477bd
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-06-19T11:58:58.780+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-19T11:59:45.611+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:locales: [en]
+      /dental-users:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental-users
+        /hippotaxonomy:categoryinfos:
+          jcr:primaryType: hippotaxonomy:categoryinfos
+          /en:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Dental users
+        /dentists:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dentists
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Dentists
+        /technicians:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: technicians
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Technicians
+    /blog-dental-target[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: 13d18bff-d13a-4e81-ab9b-c0ee337e2b0d
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-06-19T11:58:58.780+01:00
+      hippostdpubwf:lastModificationDate: 2023-06-19T11:59:45.674+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:locales: [en]
+      /dental-users:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental-users
+        /hippotaxonomy:categoryinfos:
+          jcr:primaryType: hippotaxonomy:categoryinfos
+          /en:
+            jcr:primaryType: hippotaxonomy:categoryinfo
+            hippotaxonomy:name: Dental users
+        /dentists:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dentists
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Dentists
+        /technicians:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: technicians
+          /hippotaxonomy:categoryinfos:
+            jcr:primaryType: hippotaxonomy:categoryinfos
+            /en:
+              jcr:primaryType: hippotaxonomy:categoryinfo
+              hippotaxonomy:name: Technicians
