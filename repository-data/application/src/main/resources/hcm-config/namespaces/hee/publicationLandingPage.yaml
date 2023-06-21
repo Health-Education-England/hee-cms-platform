@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: bcc3455c-2e6c-4868-93be-074586b59ec0
+          jcr:uuid: 21db191c-84af-463d-b36d-f459c019ab51
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -142,12 +142,21 @@ definitions:
             hipposysedit:path: hee:languageVersionsContent
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /otherFormatsEmail:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: true
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:otherFormatsEmail
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [email, required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 29e8df44-be69-494c-817b-0504062a64b7
+          jcr:uuid: 8b71a890-c2ac-4ea5-b848-1d3689f9b64a
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -166,6 +175,7 @@ definitions:
           hee:readTime: ''
           hee:updatedDate: 0001-01-01T12:00:00Z
           hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: ''
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -354,6 +364,16 @@ definitions:
             contentPickerType: links
             field: languageVersionsContent
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /otherFormatsEmail:
+            jcr:primaryType: frontend:plugin
+            caption: Other formats email
+            field: otherFormatsEmail
+            hint: Enter the email for the team to be contacted for accessible formats
+              e.g. email@nhs.uk
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
