@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 36a67992-dbec-4649-a43c-150643316a93
     hippo:name: Record number of GPs accepted on training placements
-    hippo:versionHistory: be4080c6-2fdf-4ed6-ba38-8ad3a4a2f90e
+    hippo:versionHistory: eb1569b7-2e18-4834-b5b3-a7233f1d77cf
     /record-number-of-gps-accepted-on-training-placements[1]:
       jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable']
@@ -29,7 +29,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2023-03-10T13:20:49.055Z
+      hippostdpubwf:lastModificationDate: 2023-06-20T16:26:41.412+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
@@ -44,7 +44,7 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2021-12-16T00:00:00Z
         hee:nextReviewed: 2022-02-17T00:00:00Z
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
           <p>More than 4,000 new recruits have accepted places to begin specialist general practice training in 2021/ 22.</p>
@@ -95,6 +95,36 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:warningCalloutReference
+        /hee:warningCalloutContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 1b0c7ac9-42fc-4626-9944-d9acc2037cbe
+          hee:openLinkUrlNewWindow: false
+          hee:text: Action Link
+          hee:url: ''
+          hippostd:holder: holder
+          hippostd:state: draft
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:statementCardReference
+        /hee:statementCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
     /record-number-of-gps-accepted-on-training-placements[2]:
       jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -111,7 +141,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2023-03-10T13:21:03.608Z
+      hippostdpubwf:lastModificationDate: 2023-06-20T16:28:04.438+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
@@ -126,7 +156,7 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2021-12-16T00:00:00Z
         hee:nextReviewed: 2022-02-17T00:00:00Z
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
           <p>More than 4,000 new recruits have accepted places to begin specialist general practice training in 2021/ 22.</p>
@@ -177,6 +207,32 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:warningCalloutReference
+        /hee:warningCalloutContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: Action Link
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:statementCardReference
+        /hee:statementCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
     /record-number-of-gps-accepted-on-training-placements[3]:
       jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable']
@@ -193,9 +249,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2023-03-10T13:21:03.608Z
+      hippostdpubwf:lastModificationDate: 2023-06-20T16:28:04.438+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-03-10T13:21:08.395Z
+      hippostdpubwf:publicationDate: 2023-06-20T16:28:07.641+01:00
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -209,7 +265,7 @@
         jcr:primaryType: hee:pageLastNextReview
         hee:lastReviewed: 2021-12-16T00:00:00Z
         hee:nextReviewed: 2022-02-17T00:00:00Z
-      /hee:contentBlocks:
+      /hee:contentBlocks[1]:
         jcr:primaryType: hippostd:html
         hippostd:content: |-
           <p>More than 4,000 new recruits have accepted places to begin specialist general practice training in 2021/ 22.</p>
@@ -260,6 +316,32 @@
         /hee:internalLinksCard:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 37b20d78-a683-436f-b995-194b9476dc86
+      /hee:contentBlocks[2]:
+        jcr:primaryType: hee:warningCalloutReference
+        /hee:warningCalloutContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[3]:
+        jcr:primaryType: hee:ActionLink
+        /hee:link:
+          jcr:primaryType: hee:link
+          hee:openLinkUrlNewWindow: false
+          hee:text: Action Link
+          hee:url: ''
+          hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+          hippostdpubwf:lastModifiedBy: ''
+          hippotranslation:id: document-type-locale-id
+          hippotranslation:locale: document-type-locale
+          /hee:document:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
+      /hee:contentBlocks[4]:
+        jcr:primaryType: hee:statementCardReference
+        /hee:statementCardContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9a99e45b-2ab1-4c15-a23a-93ee0bb7b1ed
   /call for-nhs-ambassadors to-inspire-young-people:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

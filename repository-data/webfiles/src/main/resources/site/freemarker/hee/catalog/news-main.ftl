@@ -114,6 +114,15 @@
                             <#case "uk.nhs.hee.web.beans.GoogleMapReference">
                                 <@hee.googleMap block=block/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
+                                <@hee.warningCallout block=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ActionLink">
+                                <@hee.actionLink actionLink=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.StatementCardReference">
+                                <@hee.statementCard block=block/>
+                                <#break>
                             <#default>
                         </#switch>
                     </#list>
