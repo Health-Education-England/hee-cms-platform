@@ -5,7 +5,6 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-
 import java.util.List;
 
 /** 
@@ -50,5 +49,4 @@ public class TrainingProgrammePage extends BaseDocument {
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }
-
 }
