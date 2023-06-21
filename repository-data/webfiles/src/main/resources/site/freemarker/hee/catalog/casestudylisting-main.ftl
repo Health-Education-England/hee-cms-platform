@@ -57,10 +57,10 @@
                     <div class="nhsuk-filter__groups">
                         <#--  Group impacted filter: START  -->
                         <div class="nhsuk-filter__group">
-                            <@fmt.message key="casestudy.impact_group" var="impactGroupLabel"/>
                             <@fmt.message key="filter.clear.label" var="clearLabel"/>
-
                             <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
+
+                            <@fmt.message key="casestudy.impact_group" var="impactGroupLabel"/>
                             <@checkboxGroup title=impactGroupLabel name="impactGroup" items=impactGroupMap selectedItemsList=selectedImpactGroups />
                         </div>
                         <#--  Group impacted filter: END  -->
@@ -108,22 +108,22 @@
                                 </form>
                             </div>
                             <#--  Search sort dropdown: END  -->
+
+                            <#-- Active filters: START -->
+                            <#if selectedImpactGroups?has_content>
+                                <div class="hee-listing__tags">
+                                    <#list selectedImpactGroups as impactGroup>
+                                        <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${impactGroup}">
+                                            <span>${impactGroupMap[impactGroup]}</span>
+                                            <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
+                                            <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
+                                        </div>
+                                    </#list>
+                                </div>
+                            </#if>
+                            <#-- Active filters: END -->
                         </div>
                         <#--  Search result summary: END  -->
-
-                        <#-- Active filters: START -->
-                        <#if selectedImpactGroups?has_content>
-                            <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
-                                <#list selectedImpactGroups as impactGroup>
-                                    <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${impactGroup}">
-                                        <span>${impactGroupMap[impactGroup]}</span>
-                                        <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
-                                        <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
-                                    </div>
-                                </#list>
-                            </div>
-                        </#if>
-                        <#-- Active filters: END -->
 
                         <#if pageable??>
                             <#--  Search results: START  -->

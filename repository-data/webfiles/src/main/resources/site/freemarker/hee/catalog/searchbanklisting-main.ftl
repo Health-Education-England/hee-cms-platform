@@ -54,10 +54,10 @@
                     <div class="nhsuk-filter__groups">
                         <#--  Topic filter: START  -->
                         <div class="nhsuk-filter__group">
-                            <@fmt.message key="filter.topic.label" var="topicLabel"/>
                             <@fmt.message key="filter.clear.label" var="clearLabel"/>
-
                             <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
+
+                            <@fmt.message key="filter.topic.label" var="topicLabel"/>
                             <@checkboxGroup title=topicLabel name="topic" items=topicMap selectedItemsList=selectedTopics />
                         </div>
                         <#--  Topic filter: END  -->
@@ -105,23 +105,23 @@
                                 </form>
                             </div>
                             <#--  Search sort dropdown: END  -->
+
+                            <#-- Active filters: START -->
+                            <#if selectedTopics?has_content>
+                                <div class="hee-listing__tags">
+                                    <#list selectedTopics as topic>
+                                        <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${topic
+                                        }">
+                                            <span>${topicMap[topic]}</span>
+                                            <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
+                                            <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
+                                        </div>
+                                    </#list>
+                                </div>
+                            </#if>
+                            <#-- Active filters: END -->
                         </div>
                         <#--  Search result summary: END  -->
-
-                        <#-- Active filters: START -->
-                        <#if selectedTopics?has_content>
-                            <div class="nhsuk-listing__active-filters nhsuk-u-margin-bottom-5">
-                                <#list selectedTopics as topic>
-                                    <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${topic
-                                    }">
-                                        <span>${topicMap[topic]}</span>
-                                        <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
-                                        <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
-                                    </div>
-                                </#list>
-                            </div>
-                        </#if>
-                        <#-- Active filters: END -->
 
                         <#if pageable??>
                             <#--  Search results: START  -->
