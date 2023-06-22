@@ -44,20 +44,8 @@
                                 <#case "uk.nhs.hee.web.beans.RichTextReference">
                                     <@hst.html hippohtml=block.richTextBlock.html/>
                                     <#break>
-                                <#case "uk.nhs.hee.web.beans.ActionLink">
-                                    <@hee.actionLink actionLink=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.BlockLinksReference">
-                                    <@hee.blockLinks block=block/>
-                                    <#break>
                                 <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                     <@hee.media media=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
-                                    <@hee.expanderTable table=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.TabsReference">
-                                    <@hee.tabs tabs=block/>
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.InsetReference">
                                     <@hee.inset inset=block/>
@@ -114,14 +102,8 @@
                             <#case "uk.nhs.hee.web.beans.QuickLinks">
                                 <@hee.quickLinks quickLinks=block/>
                                 <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                <@hee.contactCard contact=block.content/>
-                                <#break>
                             <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
                                 <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.CtaCardReference">
-                                <@hee.ctaCard ctaCard=block/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                 <@hee.externalLinksCard card=block.externalLinksCard/>
