@@ -82,19 +82,6 @@
             <#--  Sidebar sections: START  -->
             <#--  Right hand content blocks: Table of content and content blocks   -->
             <aside class="page__rightbar">
-                <#--  Table of content  -->
-                <div class="hee-hee-card hee-card--related-links theme__item-border">
-                    <div class="hee-card--related-links__content">
-                        <h3 class="hee-card--related-links__heading">Pages related to this programme </h3>
-                        <ul class="hee-card--related-links__list">
-                            <li>
-                                <a class="hee-card--related-links__link" href="#">Overview</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
                 <#--  Right hand content blocks: START  -->
                 <#if document.rightHandBlocks??>
                     <#list document.rightHandBlocks as block>
