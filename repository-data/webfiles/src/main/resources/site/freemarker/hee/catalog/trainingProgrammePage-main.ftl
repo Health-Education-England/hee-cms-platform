@@ -44,20 +44,8 @@
                                 <#case "uk.nhs.hee.web.beans.RichTextReference">
                                     <@hst.html hippohtml=block.richTextBlock.html/>
                                     <#break>
-                                <#case "uk.nhs.hee.web.beans.ActionLink">
-                                    <@hee.actionLink actionLink=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.BlockLinksReference">
-                                    <@hee.blockLinks block=block/>
-                                    <#break>
                                 <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                     <@hee.media media=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
-                                    <@hee.expanderTable table=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.TabsReference">
-                                    <@hee.tabs tabs=block/>
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.InsetReference">
                                     <@hee.inset inset=block/>
@@ -94,11 +82,6 @@
             <#--  Sidebar sections: START  -->
             <#--  Right hand content blocks: Table of content and content blocks   -->
             <aside class="page__rightbar">
-                <#--  Table of content  -->
-                <div class="hee-anchorlinks" data-toc-js="true">
-                    <h2 data-anchorlinksignore="true">Table of Contents</h2>
-                </div>
-
                 <#--  Right hand content blocks: START  -->
                 <#if document.rightHandBlocks??>
                     <#list document.rightHandBlocks as block>
@@ -106,8 +89,8 @@
                             <#case "uk.nhs.hee.web.beans.QuickLinks">
                                 <@hee.quickLinks quickLinks=block/>
                                 <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                <@hee.contactCard contact=block.content/>
+                            <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
+                                <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                 <@hee.externalLinksCard card=block.externalLinksCard/>

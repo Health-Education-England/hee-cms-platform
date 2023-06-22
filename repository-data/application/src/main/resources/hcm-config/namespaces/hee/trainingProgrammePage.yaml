@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: af690535-0a5d-4d3b-a1b7-a6f5e56a0347
+          jcr:uuid: c32252b7-e848-4cd0-8e4c-f4fcdf06cb02
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -72,7 +72,7 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:overview
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
+            hipposysedit:validators: [contentblocks-validator, required]
           /rightHandBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -85,7 +85,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: cbef0484-5031-4a67-a631-361f68dc82b2
+          jcr:uuid: 3753fa77-8084-4c2a-b6b6-b6d18322feb9
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -127,12 +127,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Title
             field: title
-            hint: Enter a title e.g. Dental Core Training
+            hint: Enter a title e.g. Dental Core Training (60 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: ''
+              maxlength: '60'
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -179,8 +179,10 @@ definitions:
             field: overview
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /regions:
             jcr:primaryType: frontend:plugin
             caption: Regions
@@ -199,6 +201,7 @@ definitions:
             field: rightHandBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.right.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /left:
