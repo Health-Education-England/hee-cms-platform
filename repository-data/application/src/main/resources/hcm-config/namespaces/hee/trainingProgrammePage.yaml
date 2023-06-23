@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: af690535-0a5d-4d3b-a1b7-a6f5e56a0347
+          jcr:uuid: fb598427-1d6a-4a22-9167-6a80239440e8
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -80,12 +80,30 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /applicationButtonTitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:applicationButtonTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /applicationButtonLink:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:applicationButtonLink
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required, url]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: cbef0484-5031-4a67-a631-361f68dc82b2
+          jcr:uuid: bf93bb10-645c-4e2c-aba7-de50e5c48803
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -95,6 +113,8 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: ''
           hippotranslation:locale: ''
+          hee:applicationButtonTitle: ''
+          hee:applicationButtonLink: ''
           /hee:microHero:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -181,16 +201,16 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /regions:
+          /applicationButtonTitle:
             jcr:primaryType: frontend:plugin
-            caption: Regions
-            compoundList: hee:navMap
-            contentPickerType: links
-            field: regions
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            caption: Application button title
+            field: applicationButtonTitle
+            hint: Enter a button title e.g. Apply in Oriel  (60 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
@@ -211,3 +231,22 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
+          /applicationButtonLink:
+            jcr:primaryType: frontend:plugin
+            caption: Application button link
+            field: applicationButtonLink
+            hint: Please enter a URL to an application system such as Oriel
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /regions:
+            jcr:primaryType: frontend:plugin
+            caption: Regions
+            compoundList: hee:navMap
+            contentPickerType: links
+            field: regions
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

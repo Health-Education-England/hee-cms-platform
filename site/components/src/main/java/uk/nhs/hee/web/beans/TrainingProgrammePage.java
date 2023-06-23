@@ -5,7 +5,6 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-
 import java.util.List;
 
 /** 
@@ -51,4 +50,13 @@ public class TrainingProgrammePage extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
+    public String getApplicationButtonTitle() {
+        return getSingleProperty("hee:applicationButtonTitle");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonLink")
+    public String getApplicationButtonLink() {
+        return getSingleProperty("hee:applicationButtonLink");
+    }
 }
