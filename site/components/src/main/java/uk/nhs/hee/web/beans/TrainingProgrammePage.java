@@ -7,7 +7,7 @@ import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import java.util.List;
 
-/** 
+/**
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
@@ -48,5 +48,21 @@ public class TrainingProgrammePage extends BaseDocument {
 
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
+    public String getTrainingJourneySummary() {
+        return getSingleProperty("hee:trainingJourneySummary");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
+    public List<HippoBean> getTrainingJourneyPrerequisites() {
+        return getLinkedBeans("hee:trainingJourneyPrerequisites",
+                HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
+    public List<HippoBean> getTrainingJourneyOptions() {
+        return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
     }
 }
