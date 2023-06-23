@@ -9,6 +9,6 @@ import java.util.Arrays;
 public class MandatoryTrainingProgrammeProfessionsOrTopicsValidator extends AbstractMandatoryCombinationValidator {
 
     public MandatoryTrainingProgrammeProfessionsOrTopicsValidator() {
-        super(Arrays.asList(new String[]{"hee:professions", "hee:topics"}));
+        super(Arrays.asList("hee:professions", "hee:topics"));
     }
 }

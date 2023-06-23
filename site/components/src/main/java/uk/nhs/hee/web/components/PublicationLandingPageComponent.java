@@ -6,10 +6,12 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
+import uk.nhs.hee.web.beans.PublicationLandingPage;
 import uk.nhs.hee.web.components.info.PublicationLandingPageComponentInfo;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
+import uk.nhs.hee.web.utils.ReportAndPublicationUtils;
+
+import java.util.Locale;
 
 /**
  * Component class for {@code hee:publicationLandingPage} document type pages.
@@ -20,23 +22,22 @@ public class PublicationLandingPageComponent extends EssentialsDocumentComponent
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
-        addPublicationTypeTopicAndProfessionMapsToModel(request);
+        final PublicationLandingPage publicationLandingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
         addPublicationListingPageURLToModel(request);
+
+        addTaxonomyFieldsToMap(request, publicationLandingPage);
     }
 
     /**
-     * Adds Publication type, topic and profession value-list maps to model.
+     * Convenience method for loading the map
      *
-     * @param request the {@link HstRequest} instance.
+     * @param request
+     * @param publicationLandingPage
      */
-    private void addPublicationTypeTopicAndProfessionMapsToModel(final HstRequest request) {
-        // Adds publications topic and profession value-lists
-        request.setModel("publicationTopicMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName()));
-        request.setModel("publicationProfessionMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName()));
-        request.setModel("publicationTypeMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName()));
+    private void addTaxonomyFieldsToMap(final HstRequest request, PublicationLandingPage publicationLandingPage) {
+        final Locale locale = request.getLocale();
+
+        new ReportAndPublicationUtils().addPublicationLandingPageTaxonomyFieldsToModel(request, locale, publicationLandingPage);
     }
 
     /**
@@ -59,6 +60,5 @@ public class PublicationLandingPageComponent extends EssentialsDocumentComponent
                 "publicationListingPageURL",
                 HstUtils.getURLByBean(hstRequestContext, publicationListingPageBean, false));
     }
-
 }
 

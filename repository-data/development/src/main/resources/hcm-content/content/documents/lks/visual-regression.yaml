@@ -3883,17 +3883,19 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
       hippo:name: '[VR] Publication landing page'
-      hippo:versionHistory: bdf438a0-870d-4e37-8753-a7323aa97683
+      hippo:versionHistory: fe6f7c26-c8db-4db0-8ed6-c9d1895ca616
       /vr-publication-landing-page[1]:
         jcr:primaryType: hee:publicationLandingPage
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
         jcr:uuid: c1b05457-d9d0-446c-923c-de3f38976415
         hee:hideAuthorContactDetails: false
+        hee:otherFormatsEmail: vr-landing@hee.org.uk
         hee:publicationDate: 2023-02-08T00:00:00Z
         hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
           medical_doctors]
         hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
         hee:publicationType: data
+        hee:publicationTypeClassifiable: [decision]
         hee:readTime: '5'
         hee:subtitle: Curabitur non nulla sit amet nisl tempus
         hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies
@@ -3904,10 +3906,12 @@
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-02-08T16:29:02.361Z
-        hippostdpubwf:lastModificationDate: 2023-05-30T15:47:42.037+01:00
+        hippostdpubwf:lastModificationDate: 2023-07-19T12:11:18.250+01:00
         hippostdpubwf:lastModifiedBy: admin
+        hippotaxonomy:keys: [dietitian]
         hippotranslation:id: 93d735b2-65ea-47d7-8a4e-c186e21a3703
         hippotranslation:locale: en
         /hee:logoGroup:
@@ -3938,14 +3942,16 @@
             hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
       /vr-publication-landing-page[2]:
         jcr:primaryType: hee:publicationLandingPage
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
         jcr:uuid: 4a517cc6-31b3-4622-9ade-2c5468f16519
         hee:hideAuthorContactDetails: false
+        hee:otherFormatsEmail: vr-landing@hee.org.uk
         hee:publicationDate: 2023-02-08T00:00:00Z
         hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
           medical_doctors]
         hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
         hee:publicationType: data
+        hee:publicationTypeClassifiable: [decision]
         hee:readTime: '5'
         hee:subtitle: Curabitur non nulla sit amet nisl tempus
         hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies
@@ -3958,8 +3964,9 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-02-08T16:29:02.361Z
-        hippostdpubwf:lastModificationDate: 2023-05-30T15:48:17.665+01:00
+        hippostdpubwf:lastModificationDate: 2023-07-18T17:39:32.634+01:00
         hippostdpubwf:lastModifiedBy: admin
+        hippotaxonomy:keys: [dietitian]
         hippotranslation:id: 93d735b2-65ea-47d7-8a4e-c186e21a3703
         hippotranslation:locale: en
         /hee:logoGroup:
@@ -3990,14 +3997,16 @@
             hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
       /vr-publication-landing-page[3]:
         jcr:primaryType: hee:publicationLandingPage
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
         jcr:uuid: 41f9016f-fcdf-4336-86ff-39220945154c
         hee:hideAuthorContactDetails: false
+        hee:otherFormatsEmail: vr-landing@hee.org.uk
         hee:publicationDate: 2023-02-08T00:00:00Z
         hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
           medical_doctors]
         hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
         hee:publicationType: data
+        hee:publicationTypeClassifiable: [decision]
         hee:readTime: '5'
         hee:subtitle: Curabitur non nulla sit amet nisl tempus
         hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies
@@ -4010,9 +4019,10 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-02-08T16:29:02.361Z
-        hippostdpubwf:lastModificationDate: 2023-05-30T15:48:17.665+01:00
+        hippostdpubwf:lastModificationDate: 2023-07-18T17:39:32.634+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2023-06-26T15:34:40.217+05:30
+        hippostdpubwf:publicationDate: 2023-07-18T17:41:35.222+01:00
+        hippotaxonomy:keys: [dietitian]
         hippotranslation:id: 93d735b2-65ea-47d7-8a4e-c186e21a3703
         hippotranslation:locale: en
         /hee:logoGroup:
@@ -5171,7 +5181,7 @@
       hippo:versionHistory: 3de9be38-a44e-4183-b4d0-bfdf7b60fa24
       /vr-search-listing-page[1]:
         jcr:primaryType: hee:listingPage
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
         jcr:uuid: a4633c32-b498-4c75-a56c-4faea7ba9e77
         hee:addToAZ: false
         hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',

@@ -8,6 +8,6 @@ import java.util.Arrays;
  */
 public class MandatoryPublicationProfessionsOrTopicsValidator extends AbstractMandatoryCombinationValidator {
     public MandatoryPublicationProfessionsOrTopicsValidator() {
-        super(Arrays.asList(new String[]{"hee:publicationProfessions", "hee:publicationTopics"}));
+        super(Arrays.asList("hippotaxonomy:keys", "hee:publicationTopicsClassifiable"));
     }
 }

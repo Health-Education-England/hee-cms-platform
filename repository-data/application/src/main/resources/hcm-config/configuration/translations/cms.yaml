@@ -21,7 +21,7 @@ definitions:
       hee:mandatory-publication-professions-or-topics-validator: Please select at
         least one option from either Professions or Topics
       hee:mandatory-training-programme-professions-or-topics-validator: Please select at
-        least one option from either Professions or Topics
+        least one option from either Professions or Healthcare topics
       hee:phone-number-validator#uk-country-code-error: Please remove UK country code
         prefix '+44' from the phone number
       hee:phone-number-validator#invalid-phone-number: Please enter a valid phone
@@ -49,6 +49,8 @@ definitions:
       hee:mandatory-training-journey-validator: When 'Training journey summary' field
         is filled in, you must select at least one link from either 'Prerequisite'
         or 'Optional Route'
+      hee:mandatory-publication-type-validator: Please select a Publication type for
+        this document
     /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
       jcr:primaryType: hipposys:resourcebundles
       /en:

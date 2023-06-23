@@ -79,7 +79,7 @@ public class FeaturedContentBlockService {
                                 queryAndFiltersUtils.createOrFilter(
                                         query,
                                         Collections.singletonList(featuredContentBlock.getPublicationType()),
-                                        HEEField.PUBLICATION_TYPE.getName()
+                                        HEEField.PUBLICATION_TYPE_CLASSIFIABLE.getName()
                                 )
                         );
                     }
@@ -89,7 +89,7 @@ public class FeaturedContentBlockService {
                                 queryAndFiltersUtils.createOrFilter(
                                         query,
                                         Arrays.asList(featuredContentBlock.getTopics()),
-                                        HEEField.PUBLICATION_TOPICS.getName()
+                                        HEEField.PUBLICATION_TOPICS_CLASSIFIABLE.getName()
                                 )
                         );
                     }
@@ -99,7 +99,7 @@ public class FeaturedContentBlockService {
                                 queryAndFiltersUtils.createOrFilter(
                                         query,
                                         Arrays.asList(featuredContentBlock.getProfessions()),
-                                        HEEField.PUBLICATION_PROFESSIONS.getName()
+                                        HEEField.PUBLICATION_PROFESSIONS_CLASSIFIABLE.getName()
                                 )
                         );
                     }

@@ -51,6 +51,21 @@ public enum Model {
     NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap"),
 
     /**
+     * Model key for Global Profession Taxonomy Map
+     */
+    GLOBAL_PROFESSION_MAP("globalProfessionsMap"),
+
+    /**
+     * Model key for Global Publication Type Taxonomy Map
+     */
+    GLOBAL_PUBLICATION_TYPE_MAP("globalPublicationTypeMap"),
+
+    /**
+     * Model key for Global Publication Topics Taxonomy Map
+     */
+    GLOBAL_TOPICS_MAP("globalTopicsMap"),
+
+    /**
      * Model key for Topic Valuelist map
      */
     TOPIC_MAP("topicMap"),

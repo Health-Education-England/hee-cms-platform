@@ -4,6 +4,7 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/author-cards.ftl">
 <#include "../macros/internal-link.ftl">
+<#include "../macros/publication-partial-info.ftl">
 <#include '../utils/author-util.ftl'>
 <#include '../utils/date-util.ftl'>
 <#include "../utils/document-formats.ftl">
@@ -123,12 +124,14 @@
                     </#if>
                     <#--  Documents section: END  -->
 
+                    <#if document.otherFormatsEmail??>
                     <h2>Other formats</h2>
                     <div class="hee-publication-doc">
                         <p>If you need documents in a different format like accessible PDF,&nbsp;
                         large print, easy read, audio recording or braille please email&nbsp;
                         <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
                     </div>
+                    </#if>
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
@@ -152,47 +155,10 @@
                         <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
                     </div>
 
-                    <#--  Publication type  -->
-                    <div class="hee-card--details__item">
-                        <span>Publication Type:</span>
-                        <#if publicationListingPageURL?has_content>
-                            <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
-                        <#else>
-                            ${publicationTypeMap[document.publicationType]}
-                        </#if>
-                    </div>
-
-                    <#--  Publication professions  -->
-                    <#if document.publicationProfessions?has_content>
-                        <div class="hee-card--details__item">
-                            <span>Professions:</span>
-                            <#if publicationListingPageURL?has_content>
-                                <#list document.publicationProfessions as profession>
-                                    <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
-                                </#list>
-                            <#else>
-                                <#list document.publicationProfessions as profession>
-                                    ${publicationProfessionMap[profession]}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </div>
-                        </#if>
-
-                    <#--  Publication topics  -->
-                    <#if document.publicationTopics?has_content>
-                        <div class="hee-card--details__item">
-                            <span>Topics:</span>
-                            <#if publicationListingPageURL?has_content>
-                                <#list document.publicationTopics as topic>
-                                    <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
-                                </#list>
-                            <#else>
-                                <#list document.publicationTopics as topic>
-                                    ${publicationTopicMap[topic]}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </div>
-                    </#if>
+                    <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL
+                        globalPublicationTypeMap=globalPublicationTypeMap
+                        globalProfessionsMap=globalProfessionsMap
+                        globalTopicsMap=globalTopicsMap/>
 
                     <#--  Read time  -->
                     <div class="hee-card--details__item">

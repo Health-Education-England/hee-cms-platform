@@ -51,3 +51,9 @@ definitions:
     ? /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-training-programme-professions-or-topics-validator
     : jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryTrainingProgrammeProfessionsOrTopicsValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-training-journey-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryTrainingJourneyValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-publication-type-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryPublicationTypeValidator

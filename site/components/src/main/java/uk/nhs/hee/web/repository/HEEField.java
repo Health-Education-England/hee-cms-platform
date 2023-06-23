@@ -41,19 +41,19 @@ public enum HEEField {
     PUBLICATION_DATE("hee:publicationDate"),
 
     /**
-     * {@code publicationType} field/property.
+     * {@code publicationType} field/property (maps to a taxonomy entry)
      */
-    PUBLICATION_TYPE("hee:publicationType"),
+    PUBLICATION_TYPE_CLASSIFIABLE("hee:publicationTypeClassifiable"),
 
     /**
      * {@code publicationTopics} field/property.
      */
-    PUBLICATION_TOPICS("hee:publicationTopics"),
+    PUBLICATION_TOPICS_CLASSIFIABLE("hee:publicationTopicsClassifiable"),
 
     /**
      * {@code publicationProfessions} field/property.
      */
-    PUBLICATION_PROFESSIONS("hee:publicationProfessions"),
+    PUBLICATION_PROFESSIONS_CLASSIFIABLE("hippotaxonomy:keys"),
 
     /**
      * {@code topics} field/property.
