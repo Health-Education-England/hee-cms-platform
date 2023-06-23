@@ -128,7 +128,7 @@
             <#--  Right hand content blocks: START  -->
             <aside class="page__rightbar">
                 <#--  TOC section: START  -->
-                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true>
+                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js="true" data-headings>
                     <h2 data-anchorlinksignore="true">Table of Contents</h2>
                 </div>
                 <#--  TOC section: END  -->
@@ -222,5 +222,6 @@
             <#--  Right hand content blocks: END  -->
         </div>
         <#--  Main content: END  -->
+        <@hee.stickyTOC active="true"/>
     </main>
 </#if>

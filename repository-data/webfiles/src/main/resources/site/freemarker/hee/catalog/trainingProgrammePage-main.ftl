@@ -1,7 +1,26 @@
+<#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
+<#include "../macros/internal-link.ftl">
 <#include "../../include/imports.ftl">
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/micro-hero.ftl">
+
+<#--  Macro to create the Prerequisites or Optional Routes part for the Training Journey Component -->
+<#macro trainingGroup list title>
+    <div class="hee-training-journey__group ">
+        <h4>${title}</h4>
+        <div class="hee-training-journey__group__container">
+            <#assign className = "hee-training-journey__item">
+            <#list list as item>
+                <#if item?is_first><#assign className> ${className} first </#assign></#if>
+                <#if item?is_last><#assign className> ${className} last </#assign></#if>
+                <div class="${className}" >
+                    <a class="hee-training-journey__item__link" href="${getInternalLinkURL(item)}">${item.title}</a>
+                </div>
+            </#list>
+        </div>
+    </div>
+</#macro>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.TrainingProgrammePage" -->
 <#if document??>
@@ -44,20 +63,8 @@
                                 <#case "uk.nhs.hee.web.beans.RichTextReference">
                                     <@hst.html hippohtml=block.richTextBlock.html/>
                                     <#break>
-                                <#case "uk.nhs.hee.web.beans.ActionLink">
-                                    <@hee.actionLink actionLink=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.BlockLinksReference">
-                                    <@hee.blockLinks block=block/>
-                                    <#break>
                                 <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                     <@hee.media media=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
-                                    <@hee.expanderTable table=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.TabsReference">
-                                    <@hee.tabs tabs=block/>
                                     <#break>
                                 <#case "uk.nhs.hee.web.beans.InsetReference">
                                     <@hee.inset inset=block/>
@@ -88,17 +95,40 @@
                             </#switch>
                         </#list>
                     </#if>
+                    
+                    <#--  Training journey component: START  -->
+                    <#if document.trainingJourneySummary?has_content || document.trainingJourneyPrerequisites?has_content>
+                        <div class="hee-training-journey">
+                            <h3>Your training journey</h3>
+                            <#if document.trainingJourneySummary?has_content>
+                                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.trainingJourneySummary!?replace('\n', '<br>')}"/></p>
+                            </#if>
+                            <#--  Prerequisites  -->
+                            <#if document.trainingJourneyPrerequisites?has_content>
+                                <@trainingGroup list=document.trainingJourneyPrerequisites title="Prerequisites"/>
+                            </#if>
+                            <#--  Your are here  -->
+                            <div class="hee-training-journey__group ">
+                                <h4>You are here</h4>
+                                <div class="hee-training-journey__group__container">
+                                    <div class="hee-training-journey__item first last active">
+                                        <a class="hee-training-journey__item__link" href="#">${document.title}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <#--  Optional Routes -->
+                            <#if document.trainingJourneyOptions?has_content>
+                                <@trainingGroup list=document.trainingJourneyOptions title="Optional routes"/>
+                            </#if>
+
+                        </div>
+                    </#if>
                 </div>
             </div>
 
             <#--  Sidebar sections: START  -->
             <#--  Right hand content blocks: Table of content and content blocks   -->
             <aside class="page__rightbar">
-                <#--  Table of content  -->
-                <div class="hee-anchorlinks" data-toc-js="true">
-                    <h2 data-anchorlinksignore="true">Table of Contents</h2>
-                </div>
-
                 <#--  Right hand content blocks: START  -->
                 <#if document.rightHandBlocks??>
                     <#list document.rightHandBlocks as block>
@@ -106,8 +136,8 @@
                             <#case "uk.nhs.hee.web.beans.QuickLinks">
                                 <@hee.quickLinks quickLinks=block/>
                                 <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                <@hee.contactCard contact=block.content/>
+                            <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
+                                <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
                                 <@hee.externalLinksCard card=block.externalLinksCard/>
