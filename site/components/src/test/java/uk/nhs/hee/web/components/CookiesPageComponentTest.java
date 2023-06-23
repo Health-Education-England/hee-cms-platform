@@ -29,7 +29,7 @@ import static org.mockito.Mockito.*;
 import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
 @RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"javax.management.*", "javax.script.*"})
+@PowerMockIgnore({"javax.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "javax.script.*"})
 @PrepareForTest({HstServices.class, RequestContextProvider.class, ContentBlocksUtils.class})
 public class CookiesPageComponentTest {
 

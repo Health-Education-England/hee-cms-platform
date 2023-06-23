@@ -4,14 +4,17 @@
 <@hst.setBundle basename="essentials.pagenotfound"/>
 <#include "../../include/page-meta-data.ftl">
 
-<div class="nhsuk-width-container">
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper">
-        <div>
-            <h1><@fmt.message key="pagenotfound.title" var="title"/>${title}</h1>
-            <p><@fmt.message key="pagenotfound.text" var="text"/>${text}</p>
+<main class="page page--fullwidth" id="maincontent" role="main">
+    <div class="page__header ">
+        <div class="nhsuk-width-container">
+            <h1><@fmt.message key="pagenotfound.title"/></h1>
+            <p class="nhsuk-lede-text"><@fmt.message key="pagenotfound.text"/></p>
         </div>
-        <div>
-            <@hst.include ref="container"/>
-        </div>
-    </main>
-</div>
+    </div>
+
+    <#--  Commenting out the following to restrict Editors
+          not to add page components to the page via experience manager  -->
+    <#--  <div class="page__main nhsuk-width-container">
+        <@hst.include ref="container"/>
+    </div>  -->
+</main>

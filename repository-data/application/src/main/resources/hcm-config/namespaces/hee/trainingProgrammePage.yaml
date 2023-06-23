@@ -73,7 +73,7 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:overview
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
+            hipposysedit:validators: [contentblocks-validator, required]
           /rightHandBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -153,12 +153,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Title
             field: title
-            hint: Enter a title e.g. Dental Core Training
+            hint: Enter a title e.g. Dental Core Training (60 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: ''
+              maxlength: '60'
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -205,8 +205,10 @@ definitions:
             field: overview
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /regions:
             jcr:primaryType: frontend:plugin
             caption: Regions
@@ -225,6 +227,7 @@ definitions:
             field: rightHandBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.right.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /left:

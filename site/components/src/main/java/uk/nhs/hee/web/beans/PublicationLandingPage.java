@@ -82,4 +82,9 @@ public class PublicationLandingPage extends BaseDocument {
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:otherFormatsEmail")
+    public String getOtherFormatsEmail() {
+        return getSingleProperty("hee:otherFormatsEmail");
+    }
 }

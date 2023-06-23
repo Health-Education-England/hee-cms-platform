@@ -42,7 +42,7 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
-          /boolean:
+          /addToAZ:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -58,12 +58,12 @@ definitions:
             hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
-          /text:
+          /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:text
+            hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: Text
           /overview:
@@ -127,7 +127,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          hee:text: ''
+          hee:caption: ''
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -195,7 +195,7 @@ definitions:
           /caption:
             jcr:primaryType: frontend:plugin
             caption: Caption
-            field: text
+            field: caption
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -258,7 +258,7 @@ definitions:
           /addToAZ:
             jcr:primaryType: frontend:plugin
             caption: Add to A to Z
-            field: boolean
+            field: addToAZ
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item

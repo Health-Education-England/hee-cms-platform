@@ -18,7 +18,7 @@ import static org.mockito.Mockito.times;
 import static org.powermock.api.mockito.PowerMockito.*;
 
 @RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"javax.management.*", "javax.script.*"})
+@PowerMockIgnore({"javax.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "javax.script.*"})
 @PrepareForTest({DocumentWorkflowImplWithoutCopyOperation.class})
 public class DocumentWorkflowImplWithoutCopyOperationTest {
 
