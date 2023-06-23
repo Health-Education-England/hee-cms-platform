@@ -3,6 +3,8 @@ package uk.nhs.hee.web.beans;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import uk.nhs.hee.web.beans.ImageSetWithCaption;
+import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import java.util.List;
 import java.util.Calendar;
 
@@ -99,20 +101,25 @@ public class TrainingProgrammePage extends BaseDocument {
     public List<Guidance> getApplicationInformation() {
         return getLinkedBeans("hee:applicationInformation", Guidance.class);
     }
-
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
     public String getTrainingJourneySummary() {
         return getSingleProperty("hee:trainingJourneySummary");
     }
-
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
     public List<HippoBean> getTrainingJourneyPrerequisites() {
         return getLinkedBeans("hee:trainingJourneyPrerequisites",
                 HippoBean.class);
     }
-
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
     public List<HippoBean> getTrainingJourneyOptions() {
         return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
+    }
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
+    public String getApplicationButtonTitle() {
+        return getSingleProperty("hee:applicationButtonTitle");
+    }
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonLink")
+    public String getApplicationButtonLink() {
+        return getSingleProperty("hee:applicationButtonLink");
     }
 }
