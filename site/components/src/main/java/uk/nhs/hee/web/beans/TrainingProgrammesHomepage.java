@@ -5,7 +5,6 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
-
 import java.util.List;
 
 /** 
@@ -29,11 +28,6 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getSingleProperty("hee:addToAZ");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:text")
-    public String getText() {
-        return getSingleProperty("hee:text");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:logoGroup")
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
@@ -49,20 +43,28 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getHippoHtml("hee:overview");
     }
 
-    //Content Blocks
     public List<?> getPathwaysBlocks() {
         return getChildBeansByName("hee:pathways");
     }
+
     public List<?> getTrainingRoutesBlocks() {
         return getChildBeansByName("hee:trainingRoutes");
     }
+
     public List<?> getSupportBlocks() {
         return getChildBeansByName("hee:support");
     }
+
     public List<?> getRegionsBlocks() {
         return getChildBeansByName("hee:regions");
     }
+
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:caption")
+    public String getCaption() {
+        return getSingleProperty("hee:caption");
     }
 }

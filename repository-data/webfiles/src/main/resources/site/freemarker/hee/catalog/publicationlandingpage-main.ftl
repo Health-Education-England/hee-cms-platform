@@ -124,9 +124,11 @@
                     <#--  Documents section: END  -->
 
                     <h2>Other formats</h2>
-                    <p>If you need documents in a different format like accessible PDF,&nbsp;
+                    <div class="hee-publication-doc">
+                        <p>If you need documents in a different format like accessible PDF,&nbsp;
                         large print, easy read, audio recording or braille please email&nbsp;
-                        <a href="email:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
+                        <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
+                    </div>
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
