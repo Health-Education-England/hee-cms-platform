@@ -877,7 +877,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
-  /**
+    /**
   * Tabs
   * Elements with the selector '.nhsuk-tabs' are passed into this class
   */
