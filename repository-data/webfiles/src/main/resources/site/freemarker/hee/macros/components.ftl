@@ -29,3 +29,4 @@
 <#include "applies-to-box.ftl">
 <#include "headings-toc.ftl">
 <#include "expander-table.ftl">
+<#include "sticky-toc.ftl">
