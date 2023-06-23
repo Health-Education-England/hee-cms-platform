@@ -37,6 +37,12 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:unique-web-publications-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.UniqueWebPublicationsValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-featured-method-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryFeaturedMethodValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-featured-documents-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryFeaturedDocumentsValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:google-map-embed-code-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: org.onehippo.cms.services.validation.validator.RegExpValidator

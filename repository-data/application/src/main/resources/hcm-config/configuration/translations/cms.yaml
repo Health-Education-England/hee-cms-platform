@@ -32,6 +32,17 @@ definitions:
         select a different Publication page.'
       hee:unique-web-publications-validator#duplicate-publication-pages: Please remove
         duplicate Publication page document(s)
+      hee:mandatory-featured-method-validator: Please select at least one option from
+        either Topics or Professions when the Method chosen is ‘Related’
+      hee:mandatory-featured-documents-validator: Please select at least one Featured
+        document when the Method chosen is ‘Manual’
+      hee:mandatory-featured-documents-validator#no-featured-documents-for-non-manual-method: Please
+        remove the Featured documents as they aren't required for Latest/Related methods
+      hee:mandatory-featured-method-validator#publication-landing-page: 'Please select
+        at least one of the following: Publication type, Topics or Professions when
+        the Method chosen is ‘Related’'
+      hee:mandatory-featured-documents-validator#content-type-and-featured-document-type-mismatch: The
+        selected Featured documents must be of the chosen Content type
       hee:google-map-embed-code-validator: Please enter a valid Google map embed code
       hee:mandatory-training-journey-validator: When 'Training journey summary' field
         is filled in, you must select at least one link from either 'Prerequisite'
