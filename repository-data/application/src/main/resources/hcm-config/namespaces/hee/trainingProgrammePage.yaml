@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: fb598427-1d6a-4a22-9167-6a80239440e8
+          jcr:uuid: 5e438f25-affb-4845-b454-d0c42eaa30da
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -103,7 +103,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: bf93bb10-645c-4e2c-aba7-de50e5c48803
+          jcr:uuid: 842c906b-9545-471c-86b9-6305ccb3f346
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -207,17 +207,16 @@ definitions:
             field: applicationButtonTitle
             hint: Enter a button title e.g. Apply in Oriel  (60 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '60'
-          /rightHandBlocks:
+          /applicationButtonLink:
             jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:contactCardWithDescriptionReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
-            contentPickerType: links
-            field: rightHandBlocks
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            caption: Application button link
+            field: applicationButtonLink
+            hint: Please enter a URL to an application system such as Oriel
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
@@ -231,13 +230,14 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
-          /applicationButtonLink:
+          /rightHandBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Application button link
-            field: applicationButtonLink
-            hint: Please enter a URL to an application system such as Oriel
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
+            caption: Right hand objects
+            compoundList: hee:contactCardWithDescriptionReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
+            contentPickerType: links
+            field: rightHandBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /regions:
