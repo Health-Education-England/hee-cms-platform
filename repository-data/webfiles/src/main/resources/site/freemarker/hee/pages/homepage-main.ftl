@@ -8,7 +8,7 @@
 <#if document??>
     <main class="page page--fullwidth" id="maincontent" role="main">
         <#--  Main header: START  -->
-        <div class="page__header has-microhero">
+        <div class="page__header has-nhsukhero">
             <#--  Hero: START  -->
             <section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description" style="background-image: url('<@hst.link hippobean=document.heroImage />');">
                 <div class="nhsuk-hero__overlay">
