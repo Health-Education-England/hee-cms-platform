@@ -2,17 +2,17 @@
 
 <#macro statementCard block>
     <#if block.statementCardContentBlock.title?? && block.statementCardContentBlock.richStatement?? >
-        <div class="nhsuk-care-card nhsuk-care-card--non-urgent">
-            <div class="nhsuk-care-card__heading-container">
-                <h3 class="nhsuk-care-card__heading" data-anchorlinksignore="true">
+        <div class="nhsuk-card nhsuk-card--care nhsuk-card--care--non-urgent">
+            <div class="nhsuk-card--care__heading-container">
+                <h3 class="nhsuk-card--care__heading" data-anchorlinksignore="true">
                 <span role="text">
                     <span class="nhsuk-u-visually-hidden">Non-urgent advice:</span>
                     ${block.statementCardContentBlock.title}
                 </span>
                 </h3>
-                <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+                <span class="nhsuk-card--care__arrow" aria-hidden="true"></span>
             </div>
-            <div class="nhsuk-care-card__content">
+            <div class="nhsuk-card__content">
                 <@hst.html hippohtml=block.statementCardContentBlock.richStatement/>
             </div>
         </div>
