@@ -1,6 +1,6 @@
-/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-blog-post-page-blog-page:
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-content-pages-vr-blog-post-page-blog-page:
   jcr:primaryType: hst:component
-  hst:lastmodified: 2023-02-06T07:25:57.514Z
+  hst:lastmodified: 2023-06-26T15:55:11.071+05:30
   hst:referencecomponent: hst:abstractpages/base
   /main:
     jcr:primaryType: hst:component
@@ -10,14 +10,14 @@
       jcr:primaryType: hst:containercomponent
       hippo:identifier: 3009ef19-c5f6-4583-876b-e2f0d52941ee
       hst:label: Comment Form
-      hst:lastmodified: 2023-02-06T07:26:34.352Z
+      hst:lastmodified: 2023-06-26T15:55:37.102+05:30
       hst:suppresswastemessage: true
       hst:xtype: hst.vbox
     /blog:
       jcr:primaryType: hst:containercomponent
       hippo:identifier: 9c5b2da6-9a3f-4964-8296-ac6af0793859
       hst:label: Blog Post
-      hst:lastmodified: 2023-02-06T07:26:34.352Z
+      hst:lastmodified: 2023-06-26T15:55:37.102+05:30
       hst:xtype: hst.vbox
       /blogpost:
         jcr:primaryType: hst:containeritemcomponent
@@ -25,7 +25,7 @@
         hst:iconpath: images/catalog-component-icons/simple-content.svg
         hst:label: BlogPost
         hst:parameternames: [document]
-        hst:parametervalues: [visual-regression/vr-blog-post-page]
+        hst:parametervalues: [visual-regression/content-pages/vr-blog-post-page]
         hst:template: blogpost-main
   /header:
     jcr:primaryType: hst:component
@@ -35,7 +35,7 @@
         jcr:primaryType: hst:containercomponent
         hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
         hst:label: Multi org logo
-        hst:lastmodified: 2023-02-06T07:26:34.352Z
+        hst:lastmodified: 2023-06-26T15:56:10.878+05:30
         hst:xtype: hst.vbox
         /multi-org-logo:
           jcr:primaryType: hst:containeritemcomponent
@@ -43,5 +43,5 @@
           hst:iconpath: images/catalog-component-icons/carousel.svg
           hst:label: Multi org logo
           hst:parameternames: [document]
-          hst:parametervalues: [visual-regression/vr-blog-post-page]
+          hst:parametervalues: [visual-regression/content-pages/vr-blog-post-page]
           hst:template: multi-org-logo

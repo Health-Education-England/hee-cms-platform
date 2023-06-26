@@ -28,47 +28,75 @@ module.exports = {
   'scenarios': [
     {
       'label': 'home_page',
-      'url': `${local_uri}/visual-regression/vr-home-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-home-page`,
     },
     {
       'label': 'landing_page',
-      'url': `${local_uri}/visual-regression/vr-landing-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-landing-page`,
     },
     {
       'label': 'blog_post_page',
-      'url': `${local_uri}/visual-regression/vr-blog-post-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-blog-post-page`,
     },
     {
       'label': 'news_article_page',
-      'url': `${local_uri}/visual-regression/vr-news-article-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-news-article-page`,
     },
     {
       'label': 'scp_page',
-      'url': `${local_uri}/visual-regression/vr-standard-content-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-standard-content-page`,
     },
     {
       'label': 'scp_newsletter_signup_page',
-      'url': `${local_uri}/visual-regression/vr-scp-newsletter-signup-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-scp-newsletter-signup-page`,
     },
     {
       'label': 'scp_cookies_page',
-      'url': `${local_uri}/visual-regression/vr-scp-cookies-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-scp-cookies-page`,
     },
     {
       'label': 'mini_hub_page',
-      'url': `${local_uri}/visual-regression/vr-mini-hub-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-mini-hub-page`,
     },
     {
       'label': 'publication_landing_page',
-      'url': `${local_uri}/visual-regression/vr-publication-landing-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-publication-landing-page`,
     },
     {
       'label': 'publication_page',
-      'url': `${local_uri}/visual-regression/vr-publication-landing-page/vr-publication-page`,
+      'url': `${local_uri}/visual-regression/vr-content-pages/vr-publication-landing-page/vr-publication-page`,
+    },
+    {
+      'label': 'bulletin_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-bulletin-collection-page`,
+    },
+    {
+      'label': 'blog_post_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-blog-post-collection-page`,
+    },
+    {
+      'label': 'news_article_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-news-article-collection-page`,
+    },
+    {
+      'label': 'case_study_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-case-study-collection-page`,
+    },
+    {
+      'label': 'search_bank_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-search-bank-collection-page`,
+    },
+    {
+      'label': 'event_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-event-collection-page`,
+    },
+    {
+      'label': 'publication_collection_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-publication-collection-page`,
     },
     {
       'label': 'a-z_listing_page',
-      'url': `${local_uri}/visual-regression/vr-a-z-listing-page`,
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-a-z-listing-page`,
     }
   ],
   'paths': {

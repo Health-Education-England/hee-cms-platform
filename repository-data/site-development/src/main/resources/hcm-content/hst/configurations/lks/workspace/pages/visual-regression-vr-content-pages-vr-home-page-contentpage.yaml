@@ -1,7 +1,11 @@
-/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-scp-cookies-page-contentpage:
+/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-content-pages-vr-home-page-contentpage:
   jcr:primaryType: hst:component
-  hst:lastmodified: 2023-02-06T08:45:30.461Z
+  hst:lastmodified: 2023-06-26T16:01:48.093+05:30
   hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: uk.nhs.hee.web.components.HomePageComponent
+    hst:template: homepage-main
   /header:
     jcr:primaryType: hst:component
     /top:
@@ -10,7 +14,7 @@
         jcr:primaryType: hst:containercomponent
         hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
         hst:label: Multi org logo
-        hst:lastmodified: 2023-02-21T12:00:45.183Z
+        hst:lastmodified: 2023-06-26T16:09:10.068+05:30
         hst:xtype: hst.vbox
         /multi-org-logo:
           jcr:primaryType: hst:containeritemcomponent
@@ -18,12 +22,5 @@
           hst:iconpath: images/catalog-component-icons/carousel.svg
           hst:label: Multi org logo
           hst:parameternames: [document]
-          hst:parametervalues: [visual-regression/vr-scp-cookies-page]
+          hst:parametervalues: [visual-regression/content-pages/vr-home-page]
           hst:template: multi-org-logo
-  /main:
-    jcr:primaryType: hst:component
-    hst:componentclassname: uk.nhs.hee.web.components.CookiesPageComponent
-    hst:parameternames: [document, fallbackSiteContentBasePath, fallbackChannelDomainWithProtocol]
-    hst:parametervalues: [visual-regression/vr-scp-cookies-page, /content/documents/lks,
-      'https://library.hee.nhs.uk']
-    hst:template: cookies-main
