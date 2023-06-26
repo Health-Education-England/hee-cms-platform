@@ -26,14 +26,14 @@
             <div class="page__content">
                 <#if atozmap??>
                     <#--  A-Z letters navigation: START  -->
-                    <nav class="nhsuk-nav-a-z" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
-                        <ol class="nhsuk-nav-a-z__list" role="list">
+                    <nav class="nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4" id="nhsuk-nav-a-z" role="navigation" aria-label="A to Z Navigation">
+                        <ol class="nhsuk-list nhsuk-u-clear nhsuk-u-margin-0" role="list">
                             <#list atozmap?keys as letter>
-                                <li class="nhsuk-nav-a-z__item">
+                                <li class="nhsuk-u-margin-bottom-0 nhsuk-u-float-left nhsuk-u-margin-right-1">
                                     <#if atozmap[letter]??>
-                                        <a class="nhsuk-nav-a-z__link" href="#${letter}">${letter}</a>
+                                        <a class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block" href="#${letter}">${letter}</a>
                                     <#else>
-                                        <span class="nhsuk-nav-a-z__link--disabled">${letter}</span>
+                                        <span class="nhsuk-u-font-size-22 nhsuk-u-padding-2 nhsuk-u-display-block nhsuk-u-secondary-text-color">${letter}</span>
                                     </#if>
                                 </li>
                             </#list>
