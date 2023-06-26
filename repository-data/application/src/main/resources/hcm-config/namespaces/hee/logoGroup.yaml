@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 49534908-41d8-4ac7-8e51-4007487155d3
+          jcr:uuid: a28aa03f-e63f-46f3-817a-ebaa2c6f6622
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -35,7 +35,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 1a64b2be-1b5a-41ed-bece-c5bf90c6e186
+          jcr:uuid: 0b1e75c7-38fb-42c8-aaf1-a58173ccbe48
           hippostdpubwf:lastModificationDate: 2021-12-17T15:27:19.109Z
           hippostdpubwf:creationDate: 2021-12-17T15:27:19.109Z
           /hee:logos:
@@ -61,3 +61,4 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']

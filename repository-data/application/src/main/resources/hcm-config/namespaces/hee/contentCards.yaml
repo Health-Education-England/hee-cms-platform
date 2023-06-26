@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 23a3980c-9327-412d-b2ec-c84aa1aa7063
+          jcr:uuid: c1f678aa-a841-46ca-8cfe-1b24a2ea7f32
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -23,6 +23,7 @@ definitions:
             hipposysedit:path: hee:header
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: [required]
           /mirror:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -31,6 +32,7 @@ definitions:
             hipposysedit:path: hee:cards
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [required]
           /cardGroupSummary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
