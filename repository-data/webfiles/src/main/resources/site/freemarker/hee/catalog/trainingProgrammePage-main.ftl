@@ -98,11 +98,12 @@
                     
                     <#--  Training journey component: START  -->
                     <#if document.trainingJourneySummary?has_content || document.trainingJourneyPrerequisites?has_content>
+                        <h2>Training journey</h2>
+                        <#if document.trainingJourneySummary?has_content>
+                            <p class="nhsuk-lede-text"><@hst.html formattedText="${document.trainingJourneySummary!?replace('\n', '<br>')}"/></p>
+                        </#if>
                         <div class="hee-training-journey">
                             <h3>Your training journey</h3>
-                            <#if document.trainingJourneySummary?has_content>
-                                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.trainingJourneySummary!?replace('\n', '<br>')}"/></p>
-                            </#if>
                             <#--  Prerequisites  -->
                             <#if document.trainingJourneyPrerequisites?has_content>
                                 <@trainingGroup list=document.trainingJourneyPrerequisites title="Prerequisites"/>
