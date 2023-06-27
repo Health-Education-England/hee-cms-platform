@@ -89,7 +89,9 @@
                 <#--  Blog details: END  -->
 
                 <#--  Summary  -->
-                <div class="hee-listing-item__summary">${item.summary!}</div>
+                <div class="hee-listing-item__summary">
+                    <@hst.html formattedText="${item.summary!?replace('\n', '<br>')}"/>
+                </div>
             </div>
         </#if>
     </#list>
@@ -140,7 +142,11 @@
                 <#--  News details: END  -->
 
                 <#--  Summary  -->
-                <div class="hee-listing-item__summary">${item.summary!}</div>
+                <#if item.summary?has_content>
+                    <div class="hee-listing-item__summary">
+                        <@hst.html formattedText="${item.summary!?replace('\n', '<br>')}"/>
+                    </div>
+                </#if>
             </div>
         </#if>
     </#list>
@@ -244,7 +250,7 @@
             <#--  Event details: END   -->
 
             <#--  Description  -->
-            <div class="hee-listing-item__summary">${item.description!}</div>
+            <div class="hee-listing-item__summary">${item.description!?replace('\n', '<br>')}</div>
         </div>
     </#list>
 </#macro>
@@ -259,8 +265,10 @@
 
         <#if pageURL != pageNotFoundURL>
             <div class="hee-listing-item">
+                <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
 
+                <#--  Publication details: START   -->
                 <div class="hee-listing-item__details">
                     <@newListItemRow key="${publicationTypeLabel}">
                         ${publicationTypeMap[item.publicationType]}
@@ -270,8 +278,10 @@
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@newListItemRow>
                 </div>
+                <#--  Publication details: END   -->
 
-                <div class="hee-listing-item__summary">${item.summary}</div>
+                <#--  Summary  -->
+                <div class="hee-listing-item__summary">${item.summary!?replace('\n', '<br>')}</div>
             </div>
         </#if>
     </#list>
