@@ -250,7 +250,9 @@
             <#--  Event details: END   -->
 
             <#--  Description  -->
-            <div class="hee-listing-item__summary">${item.description!?replace('\n', '<br>')}</div>
+            <div class="hee-listing-item__summary">
+                <@hst.html formattedText="${item.description!?replace('\n', '<br>')}"/>
+            </div>
         </div>
     </#list>
 </#macro>
@@ -281,7 +283,9 @@
                 <#--  Publication details: END   -->
 
                 <#--  Summary  -->
-                <div class="hee-listing-item__summary">${item.summary!?replace('\n', '<br>')}</div>
+                <div class="hee-listing-item__summary">
+                    <@hst.html formattedText="${item.summary!?replace('\n', '<br>')}"/>
+                </div>
             </div>
         </#if>
     </#list>
