@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 2bf099f4-43d8-48ab-8ba5-a33eee07c5a8
+          jcr:uuid: 800a9cfd-4739-4056-8f3e-fd80817b2b58
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -80,7 +80,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 170fa35c-93d9-481b-87fd-98a21fc9039c
+          jcr:uuid: fe4c5fd8-7ffd-41ee-bf24-99855dde2c8d
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -191,7 +191,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:statementCardReference,hee:expanderGroupReference,hippostd:html,hee:googleMapReference,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:headingsTOC,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
+            compoundList: hee:statementCardReference,hee:expanderGroupReference,hee:featuredContentReference,hippostd:html,hee:googleMapReference,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:headingsTOC,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             hint: Please enter your content

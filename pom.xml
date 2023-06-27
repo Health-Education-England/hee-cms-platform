@@ -60,7 +60,7 @@
 
   <properties>
     <!-- Maven CI Friendly Version -->
-    <revision>1.0.45</revision>
+    <revision>1.0.46</revision>
     <env>local</env>
 
     <!--***START temporary override of versions*** -->
@@ -203,9 +203,9 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>pl.project13.maven</groupId>
-        <artifactId>git-commit-id-plugin</artifactId>
-        <version>4.0.0</version>
+        <groupId>io.github.git-commit-id</groupId>
+        <artifactId>git-commit-id-maven-plugin</artifactId>
+        <version>6.0.0</version>
         <executions>
           <execution>
             <id>get-the-git-infos</id>
@@ -216,8 +216,6 @@
           </execution>
         </executions>
         <configuration>
-          <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-          <verbose>true</verbose>
           <skipPoms>false</skipPoms>
           <includeOnlyProperties>
             <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>

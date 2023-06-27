@@ -17,7 +17,7 @@
     </#if>
     <main id="maincontent" role="main" class="page page--rightbar page--specialty-homepage">
         <#--  Header section, includes hero image   -->
-        <div class="page__header">
+        <div class="page__header has-nhsukhero">
             <section class="nhsuk-hero${heroImgClass}"${backgroundImage}>
                 <div class="nhsuk-hero__overlay">
                     <div class="nhsuk-width-container">
