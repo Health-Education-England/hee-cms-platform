@@ -48,6 +48,9 @@
                 <#--  Title  -->
                 <h1>${document.title}</h1>
 
+                <#--  Subtitle  -->
+                <span class="nhsuk-caption-xl">${document.subtitle}</span>
+
                 <#--  Summary  -->
                 <#if document.summary?has_content>
                     <p class="nhsuk-lede-text">
