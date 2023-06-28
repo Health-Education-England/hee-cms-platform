@@ -50,6 +50,16 @@ public class TrainingProgrammePage extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
+    public String getApplicationButtonTitle() {
+        return getSingleProperty("hee:applicationButtonTitle");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonLink")
+    public String getApplicationButtonLink() {
+        return getSingleProperty("hee:applicationButtonLink");
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
     public String getTrainingJourneySummary() {
         return getSingleProperty("hee:trainingJourneySummary");

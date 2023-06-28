@@ -105,6 +105,24 @@ definitions:
             hipposysedit:path: hee:trainingJourneySummary
             hipposysedit:primary: false
             hipposysedit:type: String
+          /applicationButtonTitle:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:applicationButtonTitle
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
+          /applicationButtonLink:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:applicationButtonLink
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required, url]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -121,6 +139,8 @@ definitions:
           hippotranslation:id: ''
           hippotranslation:locale: ''
           hee:trainingJourneySummary: ''
+          hee:applicationButtonTitle: ''
+          hee:applicationButtonLink: ''
           /hee:microHero:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -209,14 +229,23 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /regions:
+          /applicationButtonTitle:
             jcr:primaryType: frontend:plugin
-            caption: Regions
-            compoundList: hee:navMap
-            contentPickerType: links
-            field: regions
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.left.item
+            caption: Application button title
+            field: applicationButtonTitle
+            hint: Enter a button title e.g. Apply in Oriel  (60 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
+          /applicationButtonLink:
+            jcr:primaryType: frontend:plugin
+            caption: Application button link
+            field: applicationButtonLink
+            hint: Please enter a URL to an application system such as Oriel
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
@@ -271,3 +300,13 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:trainingProgrammePage']
+          /regions:
+            jcr:primaryType: frontend:plugin
+            caption: Regions
+            compoundList: hee:navMap
+            contentPickerType: links
+            field: regions
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
