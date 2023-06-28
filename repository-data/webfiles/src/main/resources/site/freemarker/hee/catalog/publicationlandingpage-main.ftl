@@ -140,7 +140,7 @@
             <aside class="page__rightbar">
                 <#--  Publication Info section: START  -->
                 <div class="hee-card hee-card--details">
-                    <h3>Publication Info</h3>
+                    <h3>Publication info</h3>
 
                     <#--  Published date  -->
                     <div class="hee-card--details__item">
