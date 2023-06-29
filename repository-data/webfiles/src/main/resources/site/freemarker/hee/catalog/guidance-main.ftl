@@ -5,4 +5,6 @@
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.Guidance" -->
 
-<@guidance guidanceDocument=document />
+<#if document??>
+  <@guidance guidanceDocument=document />
+</#if>

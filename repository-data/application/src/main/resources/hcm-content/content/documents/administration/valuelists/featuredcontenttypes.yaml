@@ -1,0 +1,17 @@
+/content/documents/administration/valuelists/featuredcontenttypes:
+  .meta:order-before: dental
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 5ca02755-bd8b-498e-9d9b-6f65ec6b6b89
+  hippo:name: FeaturedContentTypes
+  /featuredcontenttypes:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 088899c3-c48b-4276-8a32-50ec1715d068
+    hippo:availability: [live, preview]
+    hippotranslation:id: ba068dff-ddd8-46b0-a74a-add5aa8b5dae
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: hee:publicationLandingPage
+      selection:label: Publication landing page

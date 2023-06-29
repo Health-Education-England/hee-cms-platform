@@ -113,6 +113,9 @@
                                 <#case "uk.nhs.hee.web.beans.GoogleMapReference">
                                     <@hee.googleMap block=block/>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                                    <@hee.featuredContent block=block/>
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
@@ -125,14 +128,14 @@
             <#--  Right hand content blocks: START  -->
             <aside class="page__rightbar">
                 <#--  TOC section: START  -->
-                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true>
+                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js="true" data-headings>
                     <h2 data-anchorlinksignore="true">Table of Contents</h2>
                 </div>
                 <#--  TOC section: END  -->
 
                 <#--  Publication Info: START  -->
                 <div class="hee-card hee-card--details">
-                    <h3>Publication Info</h3>
+                    <h3>Publication info</h3>
 
                     <#--  Published date  -->
                     <div class="hee-card--details__item">
@@ -219,5 +222,6 @@
             <#--  Right hand content blocks: END  -->
         </div>
         <#--  Main content: END  -->
+        <@hee.stickyTOC active="true"/>
     </main>
 </#if>
