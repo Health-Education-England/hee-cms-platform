@@ -10,4 +10,6 @@
     </@hst.headContribution>
 </#if>
 
-<@guidance guidanceDocument=document showCookiesButton=true />
+<#if document??>
+    <@guidance guidanceDocument=document showCookiesButton=true />
+</#if>
