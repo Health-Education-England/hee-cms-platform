@@ -3890,7 +3890,8 @@
         jcr:uuid: c1b05457-d9d0-446c-923c-de3f38976415
         hee:hideAuthorContactDetails: false
         hee:publicationDate: 2023-02-08T00:00:00Z
-        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals, medical_doctors]
+        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
+          medical_doctors]
         hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
         hee:publicationType: data
         hee:readTime: '5'
@@ -3941,7 +3942,8 @@
         jcr:uuid: 4a517cc6-31b3-4622-9ade-2c5468f16519
         hee:hideAuthorContactDetails: false
         hee:publicationDate: 2023-02-08T00:00:00Z
-        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals, medical_doctors]
+        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
+          medical_doctors]
         hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
         hee:publicationType: data
         hee:readTime: '5'
@@ -3992,7 +3994,8 @@
         jcr:uuid: 41f9016f-fcdf-4336-86ff-39220945154c
         hee:hideAuthorContactDetails: false
         hee:publicationDate: 2023-02-08T00:00:00Z
-        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals, medical_doctors]
+        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
+          medical_doctors]
         hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
         hee:publicationType: data
         hee:readTime: '5'
@@ -5160,6 +5163,106 @@
         hippostdpubwf:publicationDate: 2023-06-26T15:34:40.317+05:30
         hippotranslation:id: 7244b766-47de-4a07-a65d-731bf3365728
         hippotranslation:locale: en
+    /vr-search-listing-page:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+      jcr:uuid: fdcafc46-5800-4658-a5df-303d575f0ab4
+      hippo:name: '[VR] Search listing page'
+      hippo:versionHistory: 3de9be38-a44e-4183-b4d0-bfdf7b60fa24
+      /vr-search-listing-page[1]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: a4633c32-b498-4c75-a56c-4faea7ba9e77
+        hee:addToAZ: false
+        hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',
+          'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+          'hee:searchBank', 'hee:guidance']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:summary: Magna pars studiorum, prodita quaerimus. Magna pars studiorum,
+          prodita quaerimus. Cras mattis iudicium purus sit amet fermentum.
+        hee:title: '[VR] Search listing'
+        hippo:availability: []
+        hippostd:retainable: false
+        hippostd:state: draft
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-06-29T11:21:28.421+05:30
+        hippostdpubwf:lastModificationDate: 2023-06-29T11:21:28.421+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 9d7d4efa-f7a2-48b2-bb26-b31160a012e5
+        hippotranslation:locale: en
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /vr-search-listing-page[2]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:uuid: 2bff9de3-a7bc-4a69-b040-ca0221a314a6
+        hee:addToAZ: false
+        hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',
+          'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+          'hee:searchBank', 'hee:guidance']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:summary: Magna pars studiorum, prodita quaerimus. Magna pars studiorum,
+          prodita quaerimus. Cras mattis iudicium purus sit amet fermentum.
+        hee:title: '[VR] Search listing'
+        hippo:availability: [preview]
+        hippostd:retainable: false
+        hippostd:state: unpublished
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-06-29T11:21:28.421+05:30
+        hippostdpubwf:lastModificationDate: 2023-06-29T11:22:33.582+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippotranslation:id: 9d7d4efa-f7a2-48b2-bb26-b31160a012e5
+        hippotranslation:locale: en
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
+      /vr-search-listing-page[3]:
+        jcr:primaryType: hee:listingPage
+        jcr:mixinTypes: ['mix:referenceable']
+        jcr:uuid: 39405acd-7070-4df8-8349-64e6cf20c627
+        hee:addToAZ: false
+        hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',
+          'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+          'hee:searchBank', 'hee:guidance']
+        hee:listingPageType: search
+        hee:pageSize: 10
+        hee:summary: Magna pars studiorum, prodita quaerimus. Magna pars studiorum,
+          prodita quaerimus. Cras mattis iudicium purus sit amet fermentum.
+        hee:title: '[VR] Search listing'
+        hippo:availability: [live]
+        hippostd:retainable: false
+        hippostd:state: published
+        hippostdpubwf:createdBy: admin
+        hippostdpubwf:creationDate: 2023-06-29T11:21:28.421+05:30
+        hippostdpubwf:lastModificationDate: 2023-06-29T11:22:33.582+05:30
+        hippostdpubwf:lastModifiedBy: admin
+        hippostdpubwf:publicationDate: 2023-06-29T11:22:36.026+05:30
+        hippotranslation:id: 9d7d4efa-f7a2-48b2-bb26-b31160a012e5
+        hippotranslation:locale: en
+        /hee:logoGroup:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+        /hee:microHero:
+          jcr:primaryType: hippogallerypicker:imagelink
+          hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+          hippo:facets: []
+          hippo:modes: []
+          hippo:values: []
   /visual-regression-summary-page:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -5461,7 +5564,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: a3e8482d-c3f5-4d42-83fe-79cfffd9a139
     hippo:name: '[VR] Collection & listing pages'
-    hippo:versionHistory: 9da52b0c-6ccc-4809-9785-76ba5f47291e
+    hippo:versionHistory: c818527e-7c5f-4ebd-8bc3-040e6427afd1
     /vr-collection--listing-pages[1]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:versionable']
@@ -5475,7 +5578,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T09:12:36.323Z
-      hippostdpubwf:lastModificationDate: 2023-06-27T10:10:56.696+05:30
+      hippostdpubwf:lastModificationDate: 2023-06-29T11:24:24.515+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: a5bb40d8-7337-447a-8cf4-506bfb9f192f
       hippotranslation:locale: en
@@ -5517,9 +5620,12 @@
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
         hee:header: '[VR] Listing page cards'
-        /hee:cards:
+        /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 6fb37dc9-cadb-47f9-aa10-1618745b527b
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c7ed6656-a59c-438e-915d-d9700bc8324d
     /vr-collection--listing-pages[2]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -5533,7 +5639,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T09:12:36.323Z
-      hippostdpubwf:lastModificationDate: 2023-06-27T10:10:26.639+05:30
+      hippostdpubwf:lastModificationDate: 2023-06-29T11:23:45.647+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: a5bb40d8-7337-447a-8cf4-506bfb9f192f
       hippotranslation:locale: en
@@ -5575,9 +5681,12 @@
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
         hee:header: '[VR] Listing page cards'
-        /hee:cards:
+        /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 6fb37dc9-cadb-47f9-aa10-1618745b527b
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c7ed6656-a59c-438e-915d-d9700bc8324d
     /vr-collection--listing-pages[3]:
       jcr:primaryType: hee:landingPage
       jcr:mixinTypes: ['mix:referenceable']
@@ -5591,9 +5700,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-02-06T09:12:36.323Z
-      hippostdpubwf:lastModificationDate: 2023-06-27T10:10:56.696+05:30
+      hippostdpubwf:lastModificationDate: 2023-06-29T11:24:24.515+05:30
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-06-27T10:10:59.718+05:30
+      hippostdpubwf:publicationDate: 2023-06-29T11:24:26.195+05:30
       hippotranslation:id: a5bb40d8-7337-447a-8cf4-506bfb9f192f
       hippotranslation:locale: en
       /hee:logoGroup:
@@ -5634,6 +5743,9 @@
         jcr:primaryType: hee:contentCards
         hee:cardGroupSummary: ''
         hee:header: '[VR] Listing page cards'
-        /hee:cards:
+        /hee:cards[1]:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 6fb37dc9-cadb-47f9-aa10-1618745b527b
+        /hee:cards[2]:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c7ed6656-a59c-438e-915d-d9700bc8324d

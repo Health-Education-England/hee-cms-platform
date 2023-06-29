@@ -99,6 +99,10 @@ module.exports = {
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-a-z-listing-page`,
     },
     {
+      'label': 'search_listing_page',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-search-listing-page`,
+    },
+    {
       'label': 'page_not_found',
       'url': `${local_uri}/pagenotfound`,
     }
