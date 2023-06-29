@@ -117,6 +117,10 @@ public class SearchResultsComponent extends ListingPageComponent {
      * configured in the component. Otherwise, returns {@code false}.
      */
     private boolean hasInvalidSearchTerms(final String searchText) {
+        if (StringUtils.isEmpty(searchText)) {
+            return false;
+        }
+
         final String invalidSearchTerms = getComponentParameter("invalidSearchTerms");
 
         LOGGER.debug("Invalid search terms configured in the component: {}", invalidSearchTerms);
