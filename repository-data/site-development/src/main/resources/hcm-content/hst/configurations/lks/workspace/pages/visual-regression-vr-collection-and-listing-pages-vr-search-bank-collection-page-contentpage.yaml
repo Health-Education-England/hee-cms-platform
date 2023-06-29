@@ -1,21 +1,21 @@
-/hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-news-article-page-contentpage:
-  jcr:primaryType: hst:component
-  hst:lastmodified: 2023-02-06T07:56:59.336Z
+? /hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-collection-and-listing-pages-vr-search-bank-collection-page-contentpage
+: jcr:primaryType: hst:component
+  hst:lastmodified: 2023-06-26T16:45:35.398+05:30
   hst:referencecomponent: hst:abstractpages/base
   /main:
     jcr:primaryType: hst:containercomponent
     hippo:identifier: 43b034db-240d-480d-9a69-edea2f3c0cd4
     hst:label: Content Page Main
-    hst:lastmodified: 2023-02-06T07:57:26.449Z
+    hst:lastmodified: 2023-06-26T16:46:01.363+05:30
     hst:xtype: hst.vbox
-    /news:
+    /search-bank-listing:
       jcr:primaryType: hst:containeritemcomponent
-      hst:componentclassname: uk.nhs.hee.web.components.NewsComponent
-      hst:iconpath: images/catalog-component-icons/simple-content.svg
-      hst:label: News
+      hst:componentclassname: uk.nhs.hee.web.components.SearchBankListingPageComponent
+      hst:iconpath: images/catalog-component-icons/generic-list.svg
+      hst:label: Search Bank Listing Page
       hst:parameternames: [document]
-      hst:parametervalues: [visual-regression/vr-news-article-page]
-      hst:template: news-main
+      hst:parametervalues: [visual-regression/collection-pages/vr-search-bank-collection-page]
+      hst:template: searchbanklisting-main
   /header:
     jcr:primaryType: hst:component
     /top:
@@ -24,7 +24,7 @@
         jcr:primaryType: hst:containercomponent
         hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
         hst:label: Multi org logo
-        hst:lastmodified: 2023-02-06T07:57:26.449Z
+        hst:lastmodified: 2023-06-26T16:46:01.363+05:30
         hst:xtype: hst.vbox
         /multi-org-logo:
           jcr:primaryType: hst:containeritemcomponent
@@ -32,5 +32,5 @@
           hst:iconpath: images/catalog-component-icons/carousel.svg
           hst:label: Multi org logo
           hst:parameternames: [document]
-          hst:parametervalues: [visual-regression/vr-news-article-page]
+          hst:parametervalues: [visual-regression/collection-pages/vr-search-bank-collection-page]
           hst:template: multi-org-logo

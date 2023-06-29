@@ -1723,36 +1723,1778 @@
           /hee:document:
             jcr:primaryType: hippo:mirror
             hippo:docbase: ed4d5d76-15ab-4472-b368-33302a2c0599
-    /visual-regression-cards:
+    /visual-regression:
       jcr:primaryType: hippostd:folder
       jcr:mixinTypes: ['hippo:named', 'mix:versionable']
-      jcr:uuid: 0e4f4703-fac9-4efe-ac91-a116b8d60481
-      hippo:name: Visual regression cards
+      jcr:uuid: 2c531358-af75-443b-b363-e78ce50e50bd
+      hippo:name: Visual regression
       hippostd:foldertype: [new-document, new-folder]
-      /vr-home-page:
+      /content-page-cards:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+        jcr:uuid: 0e4f4703-fac9-4efe-ac91-a116b8d60481
+        hippo:name: Content page cards
+        hippostd:foldertype: [new-document, new-folder]
+        /vr-home-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 1cb1480c-5a7a-4db2-86c6-90d4220c60a8
+          hippo:name: '[VR] Home page'
+          hippo:versionHistory: 749b878e-1c2d-4864-af92-5215ab1e7f18
+          /vr-home-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: dc02a8de-2e6b-4ed9-8373-9d3b25efd0cf
+            hee:description: 'Visual regression: Home page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:35:35.293Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 86da4178-fb04-4706-8b0b-c71b2f60cde4
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Home page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
+          /vr-home-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 3d028eec-656c-4a91-8a39-7fa3db0ff81b
+            hee:description: 'Visual regression: Home page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:35:30.358Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 86da4178-fb04-4706-8b0b-c71b2f60cde4
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Home page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
+          /vr-home-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 3be859f1-3a4f-48c9-8e3e-67e958fad098
+            hee:description: 'Visual regression: Home page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:35:35.293Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:35:38.486Z
+            hippotranslation:id: 86da4178-fb04-4706-8b0b-c71b2f60cde4
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Home page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
+        /vr-landing-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: e03aa412-11e6-4b23-b093-dac878bd114f
+          hippo:name: '[VR] Landing page'
+          hippo:versionHistory: ef7406cc-a5a7-4abd-951f-b38149967714
+          /vr-landing-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 0a886580-f6cf-4dda-83b4-c13b87e9bbb4
+            hee:description: 'Visual regression: Landing page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:35:51.182Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 79bdadea-517a-4eca-8d76-219249c56f4a
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Landing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: e38793c1-576f-4240-829a-c3c7ce30a781
+          /vr-landing-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 8815695d-14d0-4ed1-8adf-dc2a3b742f3b
+            hee:description: 'Visual regression: Landing page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:35:45.636Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 79bdadea-517a-4eca-8d76-219249c56f4a
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Landing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: e38793c1-576f-4240-829a-c3c7ce30a781
+          /vr-landing-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 4589769b-83dc-4512-bfd8-d4073579a2c6
+            hee:description: 'Visual regression: Landing page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:35:51.182Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:35:53.029Z
+            hippotranslation:id: 79bdadea-517a-4eca-8d76-219249c56f4a
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Landing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: e38793c1-576f-4240-829a-c3c7ce30a781
+        /vr-blog-post-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 21e29c0f-fc77-410b-93a7-046702247d03
+          hippo:name: '[VR] Blog post page'
+          hippo:versionHistory: 8d2c47e7-0e23-4f4c-bf94-ae8bdf75de9f
+          /vr-blog-post-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 032c3d6b-ea0a-41e3-9ca0-84d3029e7406
+            hee:description: 'Visual regression: Blog post page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:36:37.477Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Blog post page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: b24655cf-b86d-41f2-843c-ee42b21ddc0c
+          /vr-blog-post-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 233e7de4-abef-4522-b032-5d67f9ff92f3
+            hee:description: 'Visual regression: Blog post page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostd:transferable: false
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-21T16:48:03.586Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Blog post page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: b24655cf-b86d-41f2-843c-ee42b21ddc0c
+          /vr-blog-post-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: c86a1642-a64f-4e9a-ae1d-995aade3e8bf
+            hee:description: 'Visual regression: Blog post page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:36:37.477Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:36:39.737Z
+            hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Blog post page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: b24655cf-b86d-41f2-843c-ee42b21ddc0c
+        /vr-news-article-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 80f37869-ba4c-4066-a7ed-8eecef4fad15
+          hippo:name: '[VR] News article page'
+          hippo:versionHistory: 84480ac0-89d2-40e6-8c11-864ab0d522a0
+          /vr-news-article-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 341f4c3f-4ea2-47a5-b805-fee2e3d1325f
+            hee:description: 'Visual regression: News article page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:37:03.798Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 4915f836-afb4-4168-9cf5-7653482661d4
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] News article page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2934f9c8-44ab-44ae-a151-678875621855
+          /vr-news-article-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: d9a0c743-1eeb-4275-862c-6f8a57e4c3b0
+            hee:description: 'Visual regression: News article page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:36:55.212Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 4915f836-afb4-4168-9cf5-7653482661d4
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] News article page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2934f9c8-44ab-44ae-a151-678875621855
+          /vr-news-article-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 203e55d9-0606-49d9-934d-a76d59c5fb36
+            hee:description: 'Visual regression: News article page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:37:03.798Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:39:51.151Z
+            hippotranslation:id: 4915f836-afb4-4168-9cf5-7653482661d4
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] News article page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2934f9c8-44ab-44ae-a151-678875621855
+        /vr-standard-content-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 6d29f67d-e686-4061-a7ef-1aee6de26184
+          hippo:name: '[VR] Standard content page'
+          hippo:versionHistory: 387b472c-c683-489a-858b-3cdd389de5f6
+          /vr-standard-content-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: db8d1f71-0712-4efd-8799-574e0f435cfa
+            hee:description: 'Visual regression: Standard content page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:37:59.580Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: a3ce2c32-e94c-4960-9104-fddebeedf972
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Standard content page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 59dda946-6c11-4e17-8fd3-caa3db43158d
+          /vr-standard-content-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 9c7de4b8-7426-45c9-9805-0cb2d427e6c4
+            hee:description: 'Visual regression: Standard content page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:37:42.708Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: a3ce2c32-e94c-4960-9104-fddebeedf972
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Standard content page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 59dda946-6c11-4e17-8fd3-caa3db43158d
+          /vr-standard-content-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 5aadb237-6728-4f33-8169-24276381a583
+            hee:description: 'Visual regression: Standard content page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:37:59.580Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:39:51.225Z
+            hippotranslation:id: a3ce2c32-e94c-4960-9104-fddebeedf972
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Standard content page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 59dda946-6c11-4e17-8fd3-caa3db43158d
+        /vr-scp-newsletter-signup-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 342e9048-6159-4a97-83b9-fb38c8d490d5
+          hippo:name: '[VR] [SCP] Newsletter signup page'
+          hippo:versionHistory: db9fb5e4-0ef7-4911-bd97-b6e499c37876
+          /vr-scp-newsletter-signup-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 59475ef9-1616-4427-8b4e-9d6de763ae24
+            hee:description: 'Visual regression: Newsletter signup page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:38:38.911Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 26fbe636-8144-4d81-a585-3a97f6253ec1
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Newsletter signup page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 14f69a7c-3920-4d93-b4ca-bd7fe889cd8f
+          /vr-scp-newsletter-signup-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 5cfb0d8b-139b-4927-80ac-1eebe2ca20a9
+            hee:description: 'Visual regression: Newsletter signup page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:38:34.612Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 26fbe636-8144-4d81-a585-3a97f6253ec1
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Newsletter signup page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 14f69a7c-3920-4d93-b4ca-bd7fe889cd8f
+          /vr-scp-newsletter-signup-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: d130eb49-2d1e-47a9-a3fc-2aeddce3b2e5
+            hee:description: 'Visual regression: Newsletter signup page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:38:38.911Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:39:50.969Z
+            hippotranslation:id: 26fbe636-8144-4d81-a585-3a97f6253ec1
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Newsletter signup page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 14f69a7c-3920-4d93-b4ca-bd7fe889cd8f
+        /vr-scp-cookies-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: ba93c955-2121-476f-bbe1-279a530cc038
+          hippo:name: '[VR] [SCP] Cookies page'
+          hippo:versionHistory: f61cb15e-96c3-4462-8b5c-299f77487231
+          /vr-scp-cookies-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: df43c308-1001-4dfb-94a8-e3c01e34f90d
+            hee:description: 'Visual regression: Cookies page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:39:03.896Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: e21fd719-df7d-43b6-8ccb-ecd51e607e4a
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Cookies page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: ccd70841-8384-4dcd-9dfc-17bb4d80c5a1
+          /vr-scp-cookies-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 34fec49d-12ed-41e5-bdf6-4153d756b791
+            hee:description: 'Visual regression: Cookies page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:38:52.074Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: e21fd719-df7d-43b6-8ccb-ecd51e607e4a
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Cookies page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: ccd70841-8384-4dcd-9dfc-17bb4d80c5a1
+          /vr-scp-cookies-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: cda7e3d7-e389-4819-8d89-05d442e12518
+            hee:description: 'Visual regression: Cookies page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:39:03.896Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:39:51.344Z
+            hippotranslation:id: e21fd719-df7d-43b6-8ccb-ecd51e607e4a
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Cookies page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: ccd70841-8384-4dcd-9dfc-17bb4d80c5a1
+        /vr-scp-mini-hub-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: c04df1e0-a9c1-4e81-a979-cab6518fd8b6
+          hippo:name: '[VR] [SCP] Mini-hub page'
+          hippo:versionHistory: f898673f-d3aa-4308-83ff-a342175aec92
+          /vr-scp-mini-hub-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 69b8307a-7121-43b1-86f9-f0feb94ad3eb
+            hee:description: 'Visual regression: Mini-hub page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:39:45.085Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 7bdce523-a52f-43d2-9f4c-d0328885342f
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Mini-hub page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 63a42782-36aa-4a06-9e9c-6fb81871ca41
+          /vr-scp-mini-hub-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: c9655ee0-e424-4a9b-b4f8-4d076af15f8a
+            hee:description: 'Visual regression: Mini-hub page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:39:34.603Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 7bdce523-a52f-43d2-9f4c-d0328885342f
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Mini-hub page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 63a42782-36aa-4a06-9e9c-6fb81871ca41
+          /vr-scp-mini-hub-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 690d3a5e-98aa-479e-9058-5614595e3e22
+            hee:description: 'Visual regression: Mini-hub page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-06T16:39:45.085Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-06T16:39:51.086Z
+            hippotranslation:id: 7bdce523-a52f-43d2-9f4c-d0328885342f
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Mini-hub page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 63a42782-36aa-4a06-9e9c-6fb81871ca41
+        /vr-publication-landing-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 4d5a2903-72bc-4c6c-a056-13971b0be6df
+          hippo:name: '[VR] Publication landing page'
+          hippo:versionHistory: 3b7875a4-bd2c-4bb8-8e69-fe04811e8006
+          /vr-publication-landing-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 8779bf6a-14af-40d6-9418-9834b509568c
+            hee:description: 'Visual regression: Publication landing page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-08T16:44:52.487Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: c44cd689-dd9e-480d-83de-062f63c38478
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication landing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
+          /vr-publication-landing-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 0a0f6561-a2d0-4c8c-b7d9-e48f603837e9
+            hee:description: 'Visual regression: Publication landing page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-08T16:43:28.051Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: c44cd689-dd9e-480d-83de-062f63c38478
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication landing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
+          /vr-publication-landing-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 6bcab6e1-d5b2-4bec-b95e-c66cb5e6a63e
+            hee:description: 'Visual regression: Publication landing page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-08T16:44:52.487Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-08T16:44:54.350Z
+            hippotranslation:id: c44cd689-dd9e-480d-83de-062f63c38478
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication landing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
+        /vr-publication-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 268aec2e-ad6a-4eb3-a714-9791631cafc9
+          hippo:name: '[VR] Publication page'
+          hippo:versionHistory: 5ba2ab3a-fbf8-44b8-9e38-73ae2fc99893
+          /vr-publication-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 729a21e5-e746-4cf5-852e-27471a35f0eb
+            hee:description: 'Visual regression: Publication page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-08T16:45:21.392Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: b02a1b7e-04f7-4d95-940d-8670e55fcd58
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 26b7efaf-f4af-464e-912e-bd88a93ee02d
+          /vr-publication-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: d6c93680-8734-4deb-9cd0-44ce97aca9dc
+            hee:description: 'Visual regression: Publication page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-08T16:45:08.850Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: b02a1b7e-04f7-4d95-940d-8670e55fcd58
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 26b7efaf-f4af-464e-912e-bd88a93ee02d
+          /vr-publication-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 12edb35f-7763-473e-a243-a998310938fb
+            hee:description: 'Visual regression: Publication page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-02-08T16:45:21.392Z
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-02-08T16:45:23.319Z
+            hippotranslation:id: b02a1b7e-04f7-4d95-940d-8670e55fcd58
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 26b7efaf-f4af-464e-912e-bd88a93ee02d
+      /collection--listing-page-cards:
+        jcr:primaryType: hippostd:folder
+        jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+        jcr:uuid: b56c172a-d524-408a-91da-5f5046dc6e80
+        hippo:name: Collection & listing page cards
+        hippostd:foldertype: [new-document, new-folder]
+        /vr-bulletin-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 11dbb4d5-0afb-4c4a-8625-ce8be4cd8650
+          hippo:name: '[VR] Bulletin collection page'
+          hippo:versionHistory: 4f7bb490-f71d-452f-bcf6-3630e543fef2
+          /vr-bulletin-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 44277540-24ff-4329-874c-cd359b2ce26d
+            hee:description: 'Visual regression: Bulletin collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T13:23:52.221+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 917e2d15-d781-427d-8036-9c149a9fb6c5
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Bulletin collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
+          /vr-bulletin-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 0b0c2744-39ed-4734-9555-9ff9555f2893
+            hee:description: 'Visual regression: Bulletin collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T13:23:04.544+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 917e2d15-d781-427d-8036-9c149a9fb6c5
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Bulletin collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
+          /vr-bulletin-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: d40603b2-0ba3-4196-b4f6-00bbd27df433
+            hee:description: 'Visual regression: Bulletin collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T13:23:52.221+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T15:39:39.800+05:30
+            hippotranslation:id: 917e2d15-d781-427d-8036-9c149a9fb6c5
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Bulletin collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
+        /vr-blog-post-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 9554f175-54ce-4f9a-a583-4246e7c9970a
+          hippo:name: '[VR] Blog post collection page'
+          hippo:versionHistory: 3a1cb9d0-aff2-4d09-8f59-a3fa4f56baac
+          /vr-blog-post-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 979509c8-44ad-45de-ba65-1dbd226dc338
+            hee:description: 'Visual regression: Blog post collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:49:06.106+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: c96a6142-12c8-4f1c-b968-7fa3ec2e7111
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Blog post collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2d8dacfe-9249-4cb4-925b-dd4faa4b123b
+          /vr-blog-post-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 4306c6b0-b551-4b83-83e9-bf0ab06a1b07
+            hee:description: 'Visual regression: Blog post collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:48:43.557+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: c96a6142-12c8-4f1c-b968-7fa3ec2e7111
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Blog post collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2d8dacfe-9249-4cb4-925b-dd4faa4b123b
+          /vr-blog-post-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: e0fcfbf0-5ee7-40e4-91ba-b252bb44f3fe
+            hee:description: 'Visual regression: Blog post collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:49:06.106+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T16:51:42.354+05:30
+            hippotranslation:id: c96a6142-12c8-4f1c-b968-7fa3ec2e7111
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Blog post collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 2d8dacfe-9249-4cb4-925b-dd4faa4b123b
+        /vr-news-article-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 3f3132bb-efa1-4637-acb8-19aa7ec6304c
+          hippo:name: '[VR] News article collection page'
+          hippo:versionHistory: 8e66c769-631f-4754-bddb-6be74df04aae
+          /vr-news-article-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 90496be8-47be-46d5-babd-3e700eb6c71e
+            hee:description: 'Visual regression: News article collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:50:02.325+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: b71bc5ca-743f-4f31-bf24-3716f5e86b73
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] News article collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 78f1ee24-b1e6-4248-a046-30aa75c6c820
+          /vr-news-article-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 448c0b54-e1ad-4215-ab24-19a63b609c4b
+            hee:description: 'Visual regression: News article collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:49:20.829+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: b71bc5ca-743f-4f31-bf24-3716f5e86b73
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] News article collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 78f1ee24-b1e6-4248-a046-30aa75c6c820
+          /vr-news-article-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 1fa2cab8-304d-47ec-8889-867a6a3957b6
+            hee:description: 'Visual regression: News article collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:50:02.325+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T16:51:42.454+05:30
+            hippotranslation:id: b71bc5ca-743f-4f31-bf24-3716f5e86b73
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] News article collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 78f1ee24-b1e6-4248-a046-30aa75c6c820
+        /vr-case-study-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 723a0a77-7c49-4bac-9862-c44cc60ae2a0
+          hippo:name: '[VR] Case study collection page'
+          hippo:versionHistory: 1a702e66-7600-460c-abc2-2ab586696bad
+          /vr-case-study-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 2ce321f1-3f9f-481e-99cd-5b851f3a08e6
+            hee:description: 'Visual regression: Case study collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:50:36.173+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 65780551-4cbd-47c3-8283-20a111be6ff3
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Case study collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: daf06de1-b0bc-4752-a1a8-1c14834d2d82
+          /vr-case-study-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 8be38f94-05be-47ad-a9c6-13741850ba60
+            hee:description: 'Visual regression: Case study collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:50:17.647+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 65780551-4cbd-47c3-8283-20a111be6ff3
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Case study collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: daf06de1-b0bc-4752-a1a8-1c14834d2d82
+          /vr-case-study-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 6c76a8e6-96c9-4682-8fb4-390c8f59c0cb
+            hee:description: 'Visual regression: Case study collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:50:36.173+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T16:51:42.270+05:30
+            hippotranslation:id: 65780551-4cbd-47c3-8283-20a111be6ff3
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Case study collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: daf06de1-b0bc-4752-a1a8-1c14834d2d82
+        /vr-search-bank-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 06f1a977-2d5a-4c6e-845d-6f0d70214dad
+          hippo:name: '[VR] Search bank collection page'
+          hippo:versionHistory: 4947df3f-6ae9-4129-941a-13602fdd8d6e
+          /vr-search-bank-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 3007ec9a-c2cd-4c80-b9c4-7594a8b79c6f
+            hee:description: 'Visual regression: Search bank collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:51:11.123+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 888b924a-a177-417a-bbca-c1e47655c1c6
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Search bank collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 6fab0889-14eb-4a9b-a5d7-b553e7c76bb1
+          /vr-search-bank-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 43eb7889-9d6e-4e3a-acf3-f7e71b8926fe
+            hee:description: 'Visual regression: Search bank collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:50:54.844+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 888b924a-a177-417a-bbca-c1e47655c1c6
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Search bank collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 6fab0889-14eb-4a9b-a5d7-b553e7c76bb1
+          /vr-search-bank-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 7f4d1b05-030e-4338-a3e3-3de532e986a3
+            hee:description: 'Visual regression: Search bank collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:51:11.123+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T16:51:42.596+05:30
+            hippotranslation:id: 888b924a-a177-417a-bbca-c1e47655c1c6
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Search bank collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 6fab0889-14eb-4a9b-a5d7-b553e7c76bb1
+        /vr-event-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 936bbff3-a4a9-42a2-a3fa-66aeaed9a3c8
+          hippo:name: '[VR] Event collection page'
+          hippo:versionHistory: c6a40443-f1f9-4ae6-a43c-2c8c1502dab2
+          /vr-event-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 86db1f55-4296-4911-a76e-d4c8818667a3
+            hee:description: 'Visual regression: Event collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:51:36.954+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 76151257-664f-406a-b31a-e1ee945c916e
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Event collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 20f45be5-5939-4b57-a5ab-9aeaaf166903
+          /vr-event-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 3e42613e-002c-47e4-817e-4210f9948201
+            hee:description: 'Visual regression: Event collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:51:23.767+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 76151257-664f-406a-b31a-e1ee945c916e
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Event collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 20f45be5-5939-4b57-a5ab-9aeaaf166903
+          /vr-event-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 2e9ec112-bc94-4729-880f-e66e61e5ceb0
+            hee:description: 'Visual regression: Event collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-26T16:51:36.954+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T16:51:42.525+05:30
+            hippotranslation:id: 76151257-664f-406a-b31a-e1ee945c916e
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Event collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 20f45be5-5939-4b57-a5ab-9aeaaf166903
+        /vr-publication-collection-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 4b92edb3-566e-437f-b057-57639cc2345b
+          hippo:name: '[VR] Publication collection page'
+          hippo:versionHistory: 674a052f-1f60-41e9-90c6-814f6d0e8bda
+          /vr-publication-collection-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 6b1d90c5-5941-4f47-9a8d-f3f0d4bf3f06
+            hee:description: 'Visual regression: Publication collection page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-27T10:09:09.054+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 41bb0d35-bb9d-4271-a58a-2ee35fb01013
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: e09271c7-580b-4c96-971f-2da91f0bdddc
+          /vr-publication-collection-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 001bb38a-e1a2-40c2-b58c-1f66cc95db9f
+            hee:description: 'Visual regression: Publication collection page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-27T10:08:09.655+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: 41bb0d35-bb9d-4271-a58a-2ee35fb01013
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: e09271c7-580b-4c96-971f-2da91f0bdddc
+          /vr-publication-collection-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: ea9c8162-6fb2-4c76-aef6-606acd148ae4
+            hee:description: 'Visual regression: Publication collection page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-27T10:09:09.054+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-27T10:09:10.838+05:30
+            hippotranslation:id: 41bb0d35-bb9d-4271-a58a-2ee35fb01013
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Publication collection page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: e09271c7-580b-4c96-971f-2da91f0bdddc
+        /vr-a-z-listing-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: 6fb37dc9-cadb-47f9-aa10-1618745b527b
+          hippo:name: '[VR] A-Z listing page'
+          hippo:versionHistory: daddd07f-ffef-4c1a-9065-025fd820dd68
+          /vr-a-z-listing-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: d0cfade3-aa7e-4e66-994a-830c08932f8d
+            hee:description: 'Visual regression: A-Z listing page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-05-11T16:58:34.043+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: df150ae3-1b37-49a7-8d2a-f2f957550557
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] A-Z listing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 32a42bda-e5a3-4db3-b5b0-7ec2228ad7b8
+          /vr-a-z-listing-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 35f9476d-1011-45b9-a819-08d2bb3ba7ca
+            hee:description: 'Visual regression: A-Z listing page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-05-11T16:58:18.335+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: df150ae3-1b37-49a7-8d2a-f2f957550557
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] A-Z listing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 32a42bda-e5a3-4db3-b5b0-7ec2228ad7b8
+          /vr-a-z-listing-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: e6ac0106-0490-4d7f-b832-bae7cbbfa11b
+            hee:description: 'Visual regression: A-Z listing page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-05-11T16:58:34.043+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-26T15:39:39.725+05:30
+            hippotranslation:id: df150ae3-1b37-49a7-8d2a-f2f957550557
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] A-Z listing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: 32a42bda-e5a3-4db3-b5b0-7ec2228ad7b8
+        /vr-search-listing-page:
+          jcr:primaryType: hippo:handle
+          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+          jcr:uuid: c7ed6656-a59c-438e-915d-d9700bc8324d
+          hippo:name: '[VR] Search listing page'
+          hippo:versionHistory: c6eaaf65-4662-45f2-ab98-02a44b10748b
+          /vr-search-listing-page[1]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:versionable']
+            jcr:uuid: 78c7f11b-146e-4d89-ac83-875e61418b27
+            hee:description: 'Visual regression: Search listing page'
+            hippo:availability: [preview]
+            hippostd:retainable: false
+            hippostd:state: unpublished
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-29T11:23:32.834+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: d25d8209-e9b8-4f8b-80b3-c8d451bb8865
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Search listing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: fdcafc46-5800-4658-a5df-303d575f0ab4
+          /vr-search-listing-page[2]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: 8e7ff84f-57b6-45f1-96a1-fc68cc176772
+            hee:description: 'Visual regression: Search listing page'
+            hippo:availability: []
+            hippostd:retainable: false
+            hippostd:state: draft
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-29T11:23:13.284+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippotranslation:id: d25d8209-e9b8-4f8b-80b3-c8d451bb8865
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Search listing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: fdcafc46-5800-4658-a5df-303d575f0ab4
+          /vr-search-listing-page[3]:
+            jcr:primaryType: hee:ContentCard
+            jcr:mixinTypes: ['mix:referenceable']
+            jcr:uuid: c83a2385-d4c5-4848-8593-11b29979e384
+            hee:description: 'Visual regression: Search listing page'
+            hippo:availability: [live]
+            hippostd:retainable: false
+            hippostd:state: published
+            hippostdpubwf:createdBy: admin
+            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
+            hippostdpubwf:lastModificationDate: 2023-06-29T11:23:32.834+05:30
+            hippostdpubwf:lastModifiedBy: admin
+            hippostdpubwf:publicationDate: 2023-06-29T11:23:34.472+05:30
+            hippotranslation:id: d25d8209-e9b8-4f8b-80b3-c8d451bb8865
+            hippotranslation:locale: en
+            /hee:header:
+              jcr:primaryType: hee:link
+              hee:openLinkUrlNewWindow: false
+              hee:text: '[VR] Search listing page'
+              hee:url: ''
+              hippostdpubwf:createdBy: ''
+              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+              hippostdpubwf:lastModifiedBy: ''
+              hippotranslation:id: document-type-locale-id
+              hippotranslation:locale: document-type-locale
+              /hee:document:
+                jcr:primaryType: hippo:mirror
+                hippo:docbase: fdcafc46-5800-4658-a5df-303d575f0ab4
+      /vr-content-pages:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 1cb1480c-5a7a-4db2-86c6-90d4220c60a8
-        hippo:name: '[VR] Home page'
-        hippo:versionHistory: 749b878e-1c2d-4864-af92-5215ab1e7f18
-        /vr-home-page[1]:
+        jcr:uuid: 49dd9d1e-2d69-4cbd-9121-237f0048a0fb
+        hippo:name: '[VR] Content pages'
+        hippo:versionHistory: 7778d146-8ade-45ec-a140-a3368dc47ede
+        /vr-content-pages[1]:
           jcr:primaryType: hee:ContentCard
           jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: dc02a8de-2e6b-4ed9-8373-9d3b25efd0cf
-          hee:description: 'Visual regression: Home page'
+          jcr:uuid: 7735ace0-6e6d-4203-8e26-32f97bc93560
+          hee:description: 'Visual regression: Content pages'
           hippo:availability: [preview]
           hippostd:retainable: false
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:35:35.293Z
+          hippostdpubwf:lastModificationDate: 2023-06-26T15:42:18.038+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 86da4178-fb04-4706-8b0b-c71b2f60cde4
+          hippotranslation:id: 5958b7b4-4eab-4f94-9090-84185eefec5a
           hippotranslation:locale: en
           /hee:header:
             jcr:primaryType: hee:link
             hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Home page'
+            hee:text: '[VR] Content pages'
             hee:url: ''
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -1762,208 +3504,26 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
-        /vr-home-page[2]:
+              hippo:docbase: 9f32258b-489b-4dba-a7d8-214c2db5c1a7
+        /vr-content-pages[2]:
           jcr:primaryType: hee:ContentCard
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 3d028eec-656c-4a91-8a39-7fa3db0ff81b
-          hee:description: 'Visual regression: Home page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:35:30.358Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 86da4178-fb04-4706-8b0b-c71b2f60cde4
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Home page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
-        /vr-home-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 3be859f1-3a4f-48c9-8e3e-67e958fad098
-          hee:description: 'Visual regression: Home page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:35:35.293Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:35:38.486Z
-          hippotranslation:id: 86da4178-fb04-4706-8b0b-c71b2f60cde4
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Home page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 18d273cf-1f0f-4aaa-96f5-a29d5392001b
-      /vr-landing-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: e03aa412-11e6-4b23-b093-dac878bd114f
-        hippo:name: '[VR] Landing page'
-        hippo:versionHistory: ef7406cc-a5a7-4abd-951f-b38149967714
-        /vr-landing-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 0a886580-f6cf-4dda-83b4-c13b87e9bbb4
-          hee:description: 'Visual regression: Landing page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:35:51.182Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 79bdadea-517a-4eca-8d76-219249c56f4a
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Landing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: e38793c1-576f-4240-829a-c3c7ce30a781
-        /vr-landing-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 8815695d-14d0-4ed1-8adf-dc2a3b742f3b
-          hee:description: 'Visual regression: Landing page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:35:45.636Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 79bdadea-517a-4eca-8d76-219249c56f4a
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Landing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: e38793c1-576f-4240-829a-c3c7ce30a781
-        /vr-landing-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 4589769b-83dc-4512-bfd8-d4073579a2c6
-          hee:description: 'Visual regression: Landing page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:35:51.182Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:35:53.029Z
-          hippotranslation:id: 79bdadea-517a-4eca-8d76-219249c56f4a
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Landing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: e38793c1-576f-4240-829a-c3c7ce30a781
-      /vr-blog-post-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 21e29c0f-fc77-410b-93a7-046702247d03
-        hippo:name: '[VR] Blog post page'
-        hippo:versionHistory: 8d2c47e7-0e23-4f4c-bf94-ae8bdf75de9f
-        /vr-blog-post-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 032c3d6b-ea0a-41e3-9ca0-84d3029e7406
-          hee:description: 'Visual regression: Blog post page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:36:37.477Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Blog post page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: b24655cf-b86d-41f2-843c-ee42b21ddc0c
-        /vr-blog-post-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 233e7de4-abef-4522-b032-5d67f9ff92f3
-          hee:description: 'Visual regression: Blog post page'
+          jcr:uuid: 7c53dd27-dd34-4df5-8306-a1d669dcdb67
+          hee:description: 'Visual regression: Content pages'
           hippo:availability: []
           hippostd:retainable: false
           hippostd:state: draft
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-21T16:48:03.586Z
+          hippostdpubwf:lastModificationDate: 2023-06-26T15:43:01.839+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
+          hippotranslation:id: 5958b7b4-4eab-4f94-9090-84185eefec5a
           hippotranslation:locale: en
           /hee:header:
             jcr:primaryType: hee:link
             hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Blog post page'
+            hee:text: '[VR] Content pages'
             hee:url: ''
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -1973,26 +3533,26 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: b24655cf-b86d-41f2-843c-ee42b21ddc0c
-        /vr-blog-post-page[3]:
+              hippo:docbase: 9f32258b-489b-4dba-a7d8-214c2db5c1a7
+        /vr-content-pages[3]:
           jcr:primaryType: hee:ContentCard
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: c86a1642-a64f-4e9a-ae1d-995aade3e8bf
-          hee:description: 'Visual regression: Blog post page'
+          jcr:uuid: 86d46f78-325f-4c7e-bb95-24007639c5bf
+          hee:description: 'Visual regression: Content pages'
           hippo:availability: [live]
           hippostd:retainable: false
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:36:37.477Z
+          hippostdpubwf:lastModificationDate: 2023-06-26T15:42:18.038+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:36:39.737Z
-          hippotranslation:id: 3e9dde00-517f-418f-9e5c-cb9dcf92ae53
+          hippostdpubwf:publicationDate: 2023-06-26T15:43:55.413+05:30
+          hippotranslation:id: 5958b7b4-4eab-4f94-9090-84185eefec5a
           hippotranslation:locale: en
           /hee:header:
             jcr:primaryType: hee:link
             hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Blog post page'
+            hee:text: '[VR] Content pages'
             hee:url: ''
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -2002,31 +3562,31 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: b24655cf-b86d-41f2-843c-ee42b21ddc0c
-      /vr-news-article-page:
+              hippo:docbase: 9f32258b-489b-4dba-a7d8-214c2db5c1a7
+      /vr-collection--listing-pages:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 80f37869-ba4c-4066-a7ed-8eecef4fad15
-        hippo:name: '[VR] News article page'
-        hippo:versionHistory: 84480ac0-89d2-40e6-8c11-864ab0d522a0
-        /vr-news-article-page[1]:
+        jcr:uuid: f2383be6-3146-44d7-adc3-33b74e700d76
+        hippo:name: '[VR] Collection & listing pages'
+        hippo:versionHistory: e13ecdad-f349-4e82-82a0-1afe546b3267
+        /vr-collection--listing-pages[1]:
           jcr:primaryType: hee:ContentCard
           jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 341f4c3f-4ea2-47a5-b805-fee2e3d1325f
-          hee:description: 'Visual regression: News article page'
+          jcr:uuid: e11a5c8f-ca4a-4c29-a7d6-1297112b6560
+          hee:description: 'Visual regression: Collection & listing pages'
           hippo:availability: [preview]
           hippostd:retainable: false
           hippostd:state: unpublished
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:37:03.798Z
+          hippostdpubwf:lastModificationDate: 2023-06-26T15:43:48.114+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 4915f836-afb4-4168-9cf5-7653482661d4
+          hippotranslation:id: b73caf63-3965-4717-bf91-201acd004795
           hippotranslation:locale: en
           /hee:header:
             jcr:primaryType: hee:link
             hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] News article page'
+            hee:text: '[VR] Collection & listing pages'
             hee:url: ''
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -2036,25 +3596,25 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 2934f9c8-44ab-44ae-a151-678875621855
-        /vr-news-article-page[2]:
+              hippo:docbase: a3e8482d-c3f5-4d42-83fe-79cfffd9a139
+        /vr-collection--listing-pages[2]:
           jcr:primaryType: hee:ContentCard
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: d9a0c743-1eeb-4275-862c-6f8a57e4c3b0
-          hee:description: 'Visual regression: News article page'
+          jcr:uuid: 206748f0-54c6-45aa-9c64-7a26ceaebddd
+          hee:description: 'Visual regression: Collection & listing pages'
           hippo:availability: []
           hippostd:retainable: false
           hippostd:state: draft
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:36:55.212Z
+          hippostdpubwf:lastModificationDate: 2023-06-26T15:43:25.528+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 4915f836-afb4-4168-9cf5-7653482661d4
+          hippotranslation:id: b73caf63-3965-4717-bf91-201acd004795
           hippotranslation:locale: en
           /hee:header:
             jcr:primaryType: hee:link
             hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] News article page'
+            hee:text: '[VR] Collection & listing pages'
             hee:url: ''
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -2064,26 +3624,26 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 2934f9c8-44ab-44ae-a151-678875621855
-        /vr-news-article-page[3]:
+              hippo:docbase: a3e8482d-c3f5-4d42-83fe-79cfffd9a139
+        /vr-collection--listing-pages[3]:
           jcr:primaryType: hee:ContentCard
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 203e55d9-0606-49d9-934d-a76d59c5fb36
-          hee:description: 'Visual regression: News article page'
+          jcr:uuid: 52cde686-58d6-41b6-a4d1-d6cf1ed71909
+          hee:description: 'Visual regression: Collection & listing pages'
           hippo:availability: [live]
           hippostd:retainable: false
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:37:03.798Z
+          hippostdpubwf:lastModificationDate: 2023-06-26T15:43:48.114+05:30
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:39:51.151Z
-          hippotranslation:id: 4915f836-afb4-4168-9cf5-7653482661d4
+          hippostdpubwf:publicationDate: 2023-06-26T15:43:55.483+05:30
+          hippotranslation:id: b73caf63-3965-4717-bf91-201acd004795
           hippotranslation:locale: en
           /hee:header:
             jcr:primaryType: hee:link
             hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] News article page'
+            hee:text: '[VR] Collection & listing pages'
             hee:url: ''
             hippostdpubwf:createdBy: ''
             hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
@@ -2093,644 +3653,7 @@
             hippotranslation:locale: document-type-locale
             /hee:document:
               jcr:primaryType: hippo:mirror
-              hippo:docbase: 2934f9c8-44ab-44ae-a151-678875621855
-      /vr-standard-content-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 6d29f67d-e686-4061-a7ef-1aee6de26184
-        hippo:name: '[VR] Standard content page'
-        hippo:versionHistory: 387b472c-c683-489a-858b-3cdd389de5f6
-        /vr-standard-content-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: db8d1f71-0712-4efd-8799-574e0f435cfa
-          hee:description: 'Visual regression: Standard content page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:37:59.580Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: a3ce2c32-e94c-4960-9104-fddebeedf972
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Standard content page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 59dda946-6c11-4e17-8fd3-caa3db43158d
-        /vr-standard-content-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 9c7de4b8-7426-45c9-9805-0cb2d427e6c4
-          hee:description: 'Visual regression: Standard content page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:37:42.708Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: a3ce2c32-e94c-4960-9104-fddebeedf972
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Standard content page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 59dda946-6c11-4e17-8fd3-caa3db43158d
-        /vr-standard-content-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 5aadb237-6728-4f33-8169-24276381a583
-          hee:description: 'Visual regression: Standard content page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:37:59.580Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:39:51.225Z
-          hippotranslation:id: a3ce2c32-e94c-4960-9104-fddebeedf972
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Standard content page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 59dda946-6c11-4e17-8fd3-caa3db43158d
-      /vr-scp-newsletter-signup-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 342e9048-6159-4a97-83b9-fb38c8d490d5
-        hippo:name: '[VR] [SCP] Newsletter signup page'
-        hippo:versionHistory: db9fb5e4-0ef7-4911-bd97-b6e499c37876
-        /vr-scp-newsletter-signup-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 59475ef9-1616-4427-8b4e-9d6de763ae24
-          hee:description: 'Visual regression: Newsletter signup page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:38:38.911Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 26fbe636-8144-4d81-a585-3a97f6253ec1
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Newsletter signup page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 14f69a7c-3920-4d93-b4ca-bd7fe889cd8f
-        /vr-scp-newsletter-signup-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 5cfb0d8b-139b-4927-80ac-1eebe2ca20a9
-          hee:description: 'Visual regression: Newsletter signup page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:38:34.612Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 26fbe636-8144-4d81-a585-3a97f6253ec1
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Newsletter signup page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 14f69a7c-3920-4d93-b4ca-bd7fe889cd8f
-        /vr-scp-newsletter-signup-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: d130eb49-2d1e-47a9-a3fc-2aeddce3b2e5
-          hee:description: 'Visual regression: Newsletter signup page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:38:38.911Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:39:50.969Z
-          hippotranslation:id: 26fbe636-8144-4d81-a585-3a97f6253ec1
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Newsletter signup page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 14f69a7c-3920-4d93-b4ca-bd7fe889cd8f
-      /vr-scp-cookies-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: ba93c955-2121-476f-bbe1-279a530cc038
-        hippo:name: '[VR] [SCP] Cookies page'
-        hippo:versionHistory: f61cb15e-96c3-4462-8b5c-299f77487231
-        /vr-scp-cookies-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: df43c308-1001-4dfb-94a8-e3c01e34f90d
-          hee:description: 'Visual regression: Cookies page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:39:03.896Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: e21fd719-df7d-43b6-8ccb-ecd51e607e4a
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Cookies page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: ccd70841-8384-4dcd-9dfc-17bb4d80c5a1
-        /vr-scp-cookies-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 34fec49d-12ed-41e5-bdf6-4153d756b791
-          hee:description: 'Visual regression: Cookies page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:38:52.074Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: e21fd719-df7d-43b6-8ccb-ecd51e607e4a
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Cookies page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: ccd70841-8384-4dcd-9dfc-17bb4d80c5a1
-        /vr-scp-cookies-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: cda7e3d7-e389-4819-8d89-05d442e12518
-          hee:description: 'Visual regression: Cookies page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:39:03.896Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:39:51.344Z
-          hippotranslation:id: e21fd719-df7d-43b6-8ccb-ecd51e607e4a
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Cookies page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: ccd70841-8384-4dcd-9dfc-17bb4d80c5a1
-      /vr-scp-mini-hub-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: c04df1e0-a9c1-4e81-a979-cab6518fd8b6
-        hippo:name: '[VR] [SCP] Mini-hub page'
-        hippo:versionHistory: f898673f-d3aa-4308-83ff-a342175aec92
-        /vr-scp-mini-hub-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 69b8307a-7121-43b1-86f9-f0feb94ad3eb
-          hee:description: 'Visual regression: Mini-hub page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:39:45.085Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 7bdce523-a52f-43d2-9f4c-d0328885342f
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Mini-hub page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 63a42782-36aa-4a06-9e9c-6fb81871ca41
-        /vr-scp-mini-hub-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: c9655ee0-e424-4a9b-b4f8-4d076af15f8a
-          hee:description: 'Visual regression: Mini-hub page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:39:34.603Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: 7bdce523-a52f-43d2-9f4c-d0328885342f
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Mini-hub page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 63a42782-36aa-4a06-9e9c-6fb81871ca41
-        /vr-scp-mini-hub-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 690d3a5e-98aa-479e-9058-5614595e3e22
-          hee:description: 'Visual regression: Mini-hub page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-06T16:39:45.085Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-06T16:39:51.086Z
-          hippotranslation:id: 7bdce523-a52f-43d2-9f4c-d0328885342f
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Mini-hub page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 63a42782-36aa-4a06-9e9c-6fb81871ca41
-      /vr-publication-landing-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 4d5a2903-72bc-4c6c-a056-13971b0be6df
-        hippo:name: '[VR] Publication landing page'
-        hippo:versionHistory: 3b7875a4-bd2c-4bb8-8e69-fe04811e8006
-        /vr-publication-landing-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 8779bf6a-14af-40d6-9418-9834b509568c
-          hee:description: 'Visual regression: Publication landing page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-08T16:44:52.487Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: c44cd689-dd9e-480d-83de-062f63c38478
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Publication landing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
-        /vr-publication-landing-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 0a0f6561-a2d0-4c8c-b7d9-e48f603837e9
-          hee:description: 'Visual regression: Publication landing page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-08T16:43:28.051Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: c44cd689-dd9e-480d-83de-062f63c38478
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Publication landing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
-        /vr-publication-landing-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 6bcab6e1-d5b2-4bec-b95e-c66cb5e6a63e
-          hee:description: 'Visual regression: Publication landing page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-08T16:44:52.487Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-08T16:44:54.350Z
-          hippotranslation:id: c44cd689-dd9e-480d-83de-062f63c38478
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Publication landing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
-      /vr-publication-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 268aec2e-ad6a-4eb3-a714-9791631cafc9
-        hippo:name: '[VR] Publication page'
-        hippo:versionHistory: 5ba2ab3a-fbf8-44b8-9e38-73ae2fc99893
-        /vr-publication-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: 729a21e5-e746-4cf5-852e-27471a35f0eb
-          hee:description: 'Visual regression: Publication page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-08T16:45:21.392Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: b02a1b7e-04f7-4d95-940d-8670e55fcd58
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Publication page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 26b7efaf-f4af-464e-912e-bd88a93ee02d
-        /vr-publication-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: d6c93680-8734-4deb-9cd0-44ce97aca9dc
-          hee:description: 'Visual regression: Publication page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-08T16:45:08.850Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: b02a1b7e-04f7-4d95-940d-8670e55fcd58
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Publication page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 26b7efaf-f4af-464e-912e-bd88a93ee02d
-        /vr-publication-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 12edb35f-7763-473e-a243-a998310938fb
-          hee:description: 'Visual regression: Publication page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-02-08T16:45:21.392Z
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-02-08T16:45:23.319Z
-          hippotranslation:id: b02a1b7e-04f7-4d95-940d-8670e55fcd58
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] Publication page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 26b7efaf-f4af-464e-912e-bd88a93ee02d
-      /vr-a-z-listing-page:
-        jcr:primaryType: hippo:handle
-        jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-        jcr:uuid: 6fb37dc9-cadb-47f9-aa10-1618745b527b
-        hippo:name: '[VR] A-Z listing page'
-        hippo:versionHistory: 69397035-4ce9-433f-96f9-a90e2027e82b
-        /vr-a-z-listing-page[1]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:versionable']
-          jcr:uuid: d0cfade3-aa7e-4e66-994a-830c08932f8d
-          hee:description: 'Visual regression: A-Z listing page'
-          hippo:availability: [preview]
-          hippostd:retainable: false
-          hippostd:state: unpublished
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-05-11T16:58:34.043+05:30
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: df150ae3-1b37-49a7-8d2a-f2f957550557
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] A-Z listing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 32a42bda-e5a3-4db3-b5b0-7ec2228ad7b8
-        /vr-a-z-listing-page[2]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 35f9476d-1011-45b9-a819-08d2bb3ba7ca
-          hee:description: 'Visual regression: A-Z listing page'
-          hippo:availability: []
-          hippostd:retainable: false
-          hippostd:state: draft
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-05-11T16:58:18.335+05:30
-          hippostdpubwf:lastModifiedBy: admin
-          hippotranslation:id: df150ae3-1b37-49a7-8d2a-f2f957550557
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] A-Z listing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 32a42bda-e5a3-4db3-b5b0-7ec2228ad7b8
-        /vr-a-z-listing-page[3]:
-          jcr:primaryType: hee:ContentCard
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: e6ac0106-0490-4d7f-b832-bae7cbbfa11b
-          hee:description: 'Visual regression: A-Z listing page'
-          hippo:availability: [live]
-          hippostd:retainable: false
-          hippostd:state: published
-          hippostdpubwf:createdBy: admin
-          hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-          hippostdpubwf:lastModificationDate: 2023-05-11T16:58:34.043+05:30
-          hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-05-11T16:58:35.932+05:30
-          hippotranslation:id: df150ae3-1b37-49a7-8d2a-f2f957550557
-          hippotranslation:locale: en
-          /hee:header:
-            jcr:primaryType: hee:link
-            hee:openLinkUrlNewWindow: false
-            hee:text: '[VR] A-Z listing page'
-            hee:url: ''
-            hippostdpubwf:createdBy: ''
-            hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-            hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-            hippostdpubwf:lastModifiedBy: ''
-            hippotranslation:id: document-type-locale-id
-            hippotranslation:locale: document-type-locale
-            /hee:document:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: 32a42bda-e5a3-4db3-b5b0-7ec2228ad7b8
+              hippo:docbase: a3e8482d-c3f5-4d42-83fe-79cfffd9a139
   /richtext-blocks:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
