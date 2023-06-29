@@ -71,28 +71,57 @@ module.exports = {
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-bulletin-collection-page`,
     },
     {
+      'label': 'bulletin_collection_page_with_filters_and_sorting_on',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-bulletin-collection-page?category=medical_oncology&sortBy=az`,
+    },
+    {
       'label': 'blog_post_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-blog-post-collection-page`,
+    },
+    {
+      'label': 'blog_post_collection_page_with_filters_and_sorting_on',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-blog-post-collection-page?category=RD-Discovery&category=Finance&sortBy=asc`,
     },
     {
       'label': 'news_article_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-news-article-collection-page`,
     },
     {
+      'label': 'news_article_collection_page_with_filters_and_sorting_on',
+      // The example doesn't include 'category' as 'NewsCategories' value-list isn't available for KLS channel
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-news-article-collection-page?sortBy=az`,
+    },
+    {
       'label': 'case_study_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-case-study-collection-page`,
+    },
+    {
+      'label': 'case_study_collection_page_with_filters_and_sorting_on',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-case-study-collection-page?impactGroup=admin_and_clerical&impactGroup=medicine_and_dental&sortBy=desc`,
     },
     {
       'label': 'search_bank_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-search-bank-collection-page`,
     },
     {
+      'label': 'search_bank_collection_page_with_filters_and_sorting_on',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-search-bank-collection-page?topic=prevention&sortBy=desc`,
+    },
+    {
       'label': 'event_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-event-collection-page`,
     },
     {
+      'label': 'event_collection_page_with_filters_and_sorting_on',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-event-collection-page?year=2021&sortBy=asc`,
+    },
+    {
       'label': 'publication_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-publication-collection-page`,
+    },
+    {
+      'label': 'publication_collection_page_with_filters_and_sorting_on',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-publication-collection-page?publicationType=consultation&publicationType=data_statistics&publicationType=data&publicationProfession=public_health_professionals&publicationTopic=workforce_planning&publicationTopic=workforce_transformation&sortBy=desc`,
     },
     {
       'label': 'a-z_listing_page',
@@ -101,6 +130,10 @@ module.exports = {
     {
       'label': 'search_listing_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-search-listing-page`,
+    },
+    {
+      'label': 'search_listing_page_with_search_query',
+      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-search-listing-page?q=nhs&page=2&pageSize=10`,
     },
     {
       'label': 'page_not_found',
