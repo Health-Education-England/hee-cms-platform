@@ -34,12 +34,12 @@ public class LinkValidator implements Validator<Node> {
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
             final String linkURL = node.getProperty(PROPERTY_HEE_LINK_URL).getString();
-            LOGGER.debug("{} = {}", PROPERTY_HEE_LINK_URL, linkURL);
+            LOGGER.debug("Link URL {} = {}", PROPERTY_HEE_LINK_URL, linkURL);
 
             if (StringUtils.isBlank(linkURL)) {
                 final Node linkDocumentNode = node.getNode(NODE_TYPE_HEE_LINK_DOCUMENT);
                 final String docBase = linkDocumentNode.getProperty(HippoNodeType.HIPPO_DOCBASE).getString();
-                LOGGER.debug("{} = {}", HippoNodeType.HIPPO_DOCBASE, docBase);
+                LOGGER.debug("Link document document base/id {} = {}", HippoNodeType.HIPPO_DOCBASE, docBase);
 
                 if (StringUtils.isBlank(docBase) || docBase.equals(JcrConstants.ROOT_NODE_ID)) {
                     return Optional.of(context.createViolation());
