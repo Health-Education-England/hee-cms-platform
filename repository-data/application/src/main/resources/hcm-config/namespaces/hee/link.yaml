@@ -11,11 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a3fe8e2f-983f-432a-9da3-f280cfb74b16
+          jcr:uuid: f356e9c7-dea2-4ecd-8f1a-4edd2cc65446
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:links-validator']
+          hipposysedit:validators: ['hee:link-validator']
           /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -33,6 +33,7 @@ definitions:
             hipposysedit:path: hee:url
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-url-validator']
           /document:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
