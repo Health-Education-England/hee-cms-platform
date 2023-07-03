@@ -39,7 +39,7 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator, required, 'hee:image-link-content-block-validator']
+            hipposysedit:validators: [contentblocks-validator, required, 'hee:image-link-content-block-validator', 'hee:html-content-block-validator']
           /pageLastNextReview:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
