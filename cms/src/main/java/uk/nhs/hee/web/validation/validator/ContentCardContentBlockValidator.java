@@ -4,7 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.repository.api.HippoNodeType;
 import org.hippoecm.repository.util.JcrUtils;
 import org.onehippo.cms.services.validation.api.ValidationContext;
-import org.onehippo.cms.services.validation.api.ValidationContextException;
 import org.onehippo.cms.services.validation.api.Validator;
 import org.onehippo.cms.services.validation.api.Violation;
 import org.onehippo.repository.util.JcrConstants;
@@ -17,7 +16,7 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Content card (compound type) ({@code hee:contentCards}) validator when used as a content block.
+ * Content card (compound type) ({@code hee:contentCards}) validator when used in a content block.
  *
  * <p>validates if the editor has provided the header ({@code hee:header}) as well as the navigation/content card
  * documents ({@code hee:cards}) for content/navigation cards {@code hee:contentCards} content block.</p>
