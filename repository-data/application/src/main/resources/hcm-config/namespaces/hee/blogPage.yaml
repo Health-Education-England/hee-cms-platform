@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: dce66e08-91c2-4788-b7f1-5529ac482d76
+          jcr:uuid: c8484146-96eb-490e-9720-79282439f4ca
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -134,7 +134,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: a6d25be6-a308-4125-ab67-856b9111f688
+          jcr:uuid: 284a81b6-462a-433f-becb-3febb7784e96
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -287,7 +287,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hippostd:html,hee:googleMapReference,hippogallerypicker:imagelink,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
+            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hippostd:html,hee:googleMapReference,hippogallerypicker:imagelink,hee:richTextReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
