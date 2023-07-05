@@ -123,6 +123,13 @@
                     </#if>
                     <#--  Documents section: END  -->
 
+                    <h2>Other formats</h2>
+                    <div class="hee-publication-doc">
+                        <p>If you need documents in a different format like accessible PDF,&nbsp;
+                        large print, easy read, audio recording or braille please email&nbsp;
+                        <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
+                    </div>
+
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
                 </div>
@@ -133,7 +140,7 @@
             <aside class="page__rightbar">
                 <#--  Publication Info section: START  -->
                 <div class="hee-card hee-card--details">
-                    <h3>Publication Info</h3>
+                    <h3>Publication info</h3>
 
                     <#--  Published date  -->
                     <div class="hee-card--details__item">

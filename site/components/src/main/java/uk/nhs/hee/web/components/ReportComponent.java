@@ -12,6 +12,7 @@ import uk.nhs.hee.web.beans.PublicationLandingPage;
 import uk.nhs.hee.web.beans.Report;
 import uk.nhs.hee.web.components.info.ReportComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -43,7 +44,8 @@ public class ReportComponent extends EssentialsDocumentComponent {
                     ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
 
-            request.setAttribute("tableComponentService", new TableComponentService());
+            request.setModel("tableComponentService", new TableComponentService());
+            request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
 
             addRelatedPublicationLandingPageToModel(request, reportPage);
             addPublicationTypeTopicAndProfessionMapsToModel(request);
@@ -60,6 +62,7 @@ public class ReportComponent extends EssentialsDocumentComponent {
      */
     private void addRelatedPublicationLandingPageToModel(final HstRequest request, final Report reportPage) {
         try {
+
             request.setModel("landingPage",
                     new ReportAndPublicationUtils().findMyParent(reportPage, request.getRequestContext()));
         } catch (final RepositoryException e) {

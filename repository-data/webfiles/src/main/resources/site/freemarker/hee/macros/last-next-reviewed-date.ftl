@@ -4,25 +4,40 @@
 <#assign datePattern = "d MMMM yyyy">
 <#macro lastNextReviewedDate lastNextReviewedDate contentType='page'>
     <#if lastNextReviewedDate.lastReviewed?? || lastNextReviewedDate.nextReviewed??>
-
         <#if contentType='media'>
-            <#assign wrapperDivClass='nhsuk-media__reviews'/>
-        <#else>
-            <#assign wrapperDivClass='hee-review-date'/>
-        </#if>
-
-        <div class="${wrapperDivClass}">
-            <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
+            <#--  Last & next reviewed dates for Media embed  -->
+            <div class="hee-media__reviews">
                 <#if lastNextReviewedDate.lastReviewed??>
-                    <@fmt.message key="${contentType}-last-reviewed"/>: ${lastNextReviewedDate.lastReviewed.getTime()?date?string["${datePattern}"]}
+                    <p>
+                        <@renderReviewDate msgKey="${contentType}-last-reviewed" reviewDate=lastNextReviewedDate.lastReviewed/>
+                    </p>
                 </#if>
                 <#if lastNextReviewedDate.nextReviewed??>
-                    <#if lastNextReviewedDate.lastReviewed??>
-                        <br/>
-                    </#if>
-                    <@fmt.message key="${contentType}-next-review"/>: ${lastNextReviewedDate.nextReviewed.getTime()?date?string["${datePattern}"]}
+                    <p>
+                        <@renderReviewDate msgKey="${contentType}-next-review" reviewDate=lastNextReviewedDate.nextReviewed/>
+                    </p>
                 </#if>
-            </p>
-        </div>
+            </div>
+        <#else>
+            <#--  Last & next reviewed dates for pages  -->
+            <div class="nhsuk-review-date">
+                <p class="nhsuk-body-s">
+                    <#if lastNextReviewedDate.lastReviewed??>
+                        <@renderReviewDate msgKey="${contentType}-last-reviewed" reviewDate=lastNextReviewedDate.lastReviewed/>
+                    </#if>
+                    <#if lastNextReviewedDate.nextReviewed??>
+                        <#if lastNextReviewedDate.lastReviewed??>
+                            <br/>
+                        </#if>
+                        <@renderReviewDate msgKey="${contentType}-next-review" reviewDate=lastNextReviewedDate.nextReviewed/>
+                    </#if>
+                </p>
+            </div>
+        </#if>
     </#if>
+</#macro>
+
+<#--  Renders review date with label  -->
+<#macro renderReviewDate msgKey reviewDate>
+    <@fmt.message key="${msgKey}"/>: ${reviewDate.getTime()?date?string["${datePattern}"]}
 </#macro>

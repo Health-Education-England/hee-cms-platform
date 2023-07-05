@@ -45,7 +45,6 @@ jobs:
 
   deploy-to-dev:
     name: Deploy to Dev Env. [on brCloud]
-    if: ${{ false }} # disable as isolating development environment from workflow
     needs: buildAndTest
     environment: development
 
@@ -78,7 +77,7 @@ jobs:
           servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
-        run: mvn -B verify && mvn -Pdist-with-development-data -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
+        run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
       - name: Setting distribution path (distPath) as an output parameter
         id: dist
