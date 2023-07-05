@@ -1,0 +1,37 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RefactorBlogPostPageMainComponent:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Refactors the 'main' component of blog post pages (/jcr:root/hst:hee/hst:configurations/element(*,
+        hst:configuration)/hst:workspace/hst:pages) to follow 'contentpage' prototype
+        'main' node structure which also gets rid of 'comment' container component.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(main,
+        hst:component)[@hst:template='blogpage-main']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.hippoecm.hst.configuration.HstNodeTypes\r\nimport org.hippoecm.repository.api.HippoNodeType\r\
+        \nimport org.hippoecm.repository.util.JcrUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass RefactorBlogPostPageMainComponent\
+        \ extends BaseNodeUpdateVisitor {\r\n    boolean doUpdate(Node node) {\r\n\
+        \        log.debug \"Processing '${node.path}'\"\r\n\r\n        Node baseComponentNode\
+        \ = node.parent\r\n        Node blogContainerComponentNode = node.getNodes(\"\
+        blog\")?.nextNode() ?: null\r\n\r\n        if (!blogContainerComponentNode)\
+        \ {\r\n            return false\r\n        }\r\n\r\n        String newMainNodeName\
+        \ = \"new-main\"\r\n        JcrUtils.copy(blogContainerComponentNode, newMainNodeName,\
+        \ baseComponentNode)\r\n        Node newMainNode = baseComponentNode.getNodes(newMainNodeName)?.nextNode()\
+        \ ?: null\r\n        newMainNode.setProperty(HippoNodeType.HIPPO_IDENTIFIER,\
+        \ \"43b034db-240d-480d-9a69-edea2f3c0cd4\")\r\n        newMainNode.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Content Page Main\")\r\n\r\n        node.remove()\r\n        node.session.move(newMainNode.path,\
+        \ newMainNode.parent.path + \"/main\")\r\n\r\n        if (newMainNode.index\
+        \ > 0) {\r\n            Node headerComponentNode = baseComponentNode.getNodes(\"\
+        header\")?.nextNode() ?: null\r\n            if (headerComponentNode) {\r\n\
+        \                baseComponentNode.orderBefore(newMainNode.name, headerComponentNode.name)\r\
+        \n            }\r\n        }\r\n\r\n        log.debug \"Successfully refactored\
+        \ '${newMainNode.path}'\"\r\n\r\n        return true\r\n    }\r\n\r\n    boolean\
+        \ undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000

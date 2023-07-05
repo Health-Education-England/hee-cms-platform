@@ -6,7 +6,6 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
-import uk.nhs.hee.web.beans.BlogComment;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
@@ -25,9 +24,6 @@ import java.util.stream.Collectors;
 
 @ParametersInfo(type = BlogPostComponentInfo.class)
 public class BlogPostComponent extends EssentialsDocumentComponent {
-
-    private static final int DEFAULT_NUMBER_OF_VISIBLE_COMMENTS = 3;
-
     @Override
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
@@ -36,12 +32,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         if (blogPost != null) {
             addCategoriesValueListMapToModel(request, blogPost);
             addValueListsForContentBlocks(request, blogPost);
-
             addBlogListingPageURLToModel(request);
-
-            // NWPS-1125: Commenting the following line in order to stop adding blog comments to the model
-            // as it isn't required to be displayed on 'site/freemarker/hee/catalog/blogpost-main.ftl' template.
-            // addBlogCommentsToModel(request, blogPost);
 
             request.setAttribute("tableComponentService", new TableComponentService());
             request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
@@ -107,34 +98,5 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         final Map<String, Map<String, String>> modelToValueListMap =
                 ContentBlocksUtils.getValueListMaps(pageContentBlocks);
         modelToValueListMap.forEach(request::setModel);
-    }
-
-    private void addBlogCommentsToModel(final HstRequest request, final BlogPost blogPost) {
-        final List<BlogComment> comments = getModeratedComments(blogPost.getComments());
-        request.setModel("totalComments", comments.size());
-
-        if (comments.isEmpty()) {
-            return;
-        }
-
-        Collections.reverse(comments);
-        final boolean showAllComments = Boolean.parseBoolean(getPublicRequestParameter(request, "showAllComments"));
-        if (!showAllComments) {
-            request.setModel("visibleComments", comments.subList(0, Math.min(DEFAULT_NUMBER_OF_VISIBLE_COMMENTS, comments.size())));
-        } else {
-            request.setModel("visibleComments", comments);
-        }
-    }
-
-    /**
-     * Returns moderated comments i.e. the comments whose {@code hee:moderated} property is {@code true}.
-     *
-     * @param comments the list of all blog comments.
-     * @return the moderated comments.
-     */
-    private List<BlogComment> getModeratedComments(final List<BlogComment> comments) {
-        return comments.stream()
-                .filter(comment -> Boolean.TRUE.equals(comment.getModerated()))
-                .collect(Collectors.toList());
     }
 }

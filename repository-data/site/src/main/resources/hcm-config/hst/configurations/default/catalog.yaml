@@ -5,21 +5,5 @@ definitions:
     /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-catalog/form:
       hst:parameternames: [behaviors]
       hst:parametervalues: [com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior]
-    /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-blog-catalog:
-      jcr:primaryType: hst:containeritempackage
-      hst:hiddeninchannelmanager: true
-      /blog-comment-form:
-        jcr:primaryType: hst:containeritemcomponent
-        hst:componentclassname: uk.nhs.hee.web.components.eforms.NoAutoDetectFormComponent
-        hst:iconpath: _cmsinternal/resources/addon/eforms/images/icons/form.svg
-        hst:label: Blog Comment Form
-        hst:parameternames: [behaviors, eforms-mailsession, eforms-use-freemarker,
-          eforms-from-name, eforms-from-email]
-        hst:parametervalues: ['com.onehippo.cms7.eforms.hst.behaviors.AfterProcessBehavior,
-            uk.nhs.hee.web.eforms.hst.behaviors.StoreBlogCommentBehavior, uk.nhs.hee.web.eforms.hst.behaviors.BlogPostCommentMailFormDataBehavior',
-          mail/Session, 'true', 'CMS Admin', cms.admin@hee.nhs.uk]
-        hst:resourcetemplate: eforms.validation.default
-        hst:template: eforms.default
-        hst:xtype: HST.Item
     /hst:hst/hst:configurations/hst:default/hst:catalog/eforms-catalog:
       hst:hiddeninchannelmanager: true
