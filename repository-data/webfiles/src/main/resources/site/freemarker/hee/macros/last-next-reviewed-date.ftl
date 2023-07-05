@@ -6,7 +6,7 @@
     <#if lastNextReviewedDate.lastReviewed?? || lastNextReviewedDate.nextReviewed??>
         <#if contentType='media'>
             <#--  Last & next reviewed dates for Media embed  -->
-            <div class="nhs-media__reviews">
+            <div class="nhsuk-media__reviews">
                 <#if lastNextReviewedDate.lastReviewed??>
                     <p>
                         <@renderReviewDate msgKey="${contentType}-last-reviewed" reviewDate=lastNextReviewedDate.lastReviewed/>
