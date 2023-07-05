@@ -6,7 +6,7 @@
     <#if lastNextReviewedDate.lastReviewed?? || lastNextReviewedDate.nextReviewed??>
         <#if contentType='media'>
             <#--  Last & next reviewed dates for Media embed  -->
-            <div class="hee-media__reviews">
+            <div class="nhs-media__reviews">
                 <#if lastNextReviewedDate.lastReviewed??>
                     <p>
                         <@renderReviewDate msgKey="${contentType}-last-reviewed" reviewDate=lastNextReviewedDate.lastReviewed/>
@@ -20,8 +20,8 @@
             </div>
         <#else>
             <#--  Last & next reviewed dates for pages  -->
-            <div class="nhsuk-review-date">
-                <p class="nhsuk-body-s">
+            <div class="hee-review-date">
+                <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
                     <#if lastNextReviewedDate.lastReviewed??>
                         <@renderReviewDate msgKey="${contentType}-last-reviewed" reviewDate=lastNextReviewedDate.lastReviewed/>
                     </#if>
