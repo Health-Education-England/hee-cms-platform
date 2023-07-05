@@ -8,11 +8,11 @@
         <#if contentType='media'>
             <#assign wrapperDivClass='nhsuk-media__reviews'/>
         <#else>
-            <#assign wrapperDivClass='nhsuk-review-date'/>
+            <#assign wrapperDivClass='hee-review-date'/>
         </#if>
 
         <div class="${wrapperDivClass}">
-            <p class="nhsuk-body-s">
+            <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
                 <#if lastNextReviewedDate.lastReviewed??>
                     <@fmt.message key="${contentType}-last-reviewed"/>: ${lastNextReviewedDate.lastReviewed.getTime()?date?string["${datePattern}"]}
                 </#if>
