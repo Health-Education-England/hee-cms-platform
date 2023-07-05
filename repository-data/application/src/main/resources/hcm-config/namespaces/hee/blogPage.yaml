@@ -73,14 +73,6 @@ definitions:
             hipposysedit:path: hee:categories
             hipposysedit:primary: false
             hipposysedit:type: String
-          /comments:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:comments
-            hipposysedit:primary: false
-            hipposysedit:type: hee:blogComment
           /rightHandBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -147,18 +139,6 @@ definitions:
             jcr:primaryType: hee:pageLastNextReview
             hee:lastReviewed: 0001-01-01T12:00:00Z
             hee:nextReviewed: 0001-01-01T12:00:00Z
-          /hee:comments:
-            jcr:primaryType: hee:blogComment
-            hee:message: ''
-            hee:postedDate: 0001-01-01T12:00:00Z
-            hee:moderated: false
-            /hee:author:
-              jcr:primaryType: hee:blogCommentAuthor
-              hee:email: ''
-              hee:string: ''
-              hee:string_: ''
-              hee:firstName: ''
-              hee:lastName: ''
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -314,14 +294,5 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /comments:
-            jcr:primaryType: frontend:plugin
-            caption: Comments
-            field: comments
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

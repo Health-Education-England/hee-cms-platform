@@ -6,9 +6,6 @@ import java.util.Calendar;
 import java.util.List;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:blogPost")
 @Node(jcrType = "hee:blogPost")
 public class BlogPost extends BaseDocument {
@@ -48,11 +45,6 @@ public class BlogPost extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:categories")
     public String[] getCategories() {
         return getMultipleProperty("hee:categories");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:comments")
-    public List<BlogComment> getComments() {
-        return getChildBeansByName("hee:comments", BlogComment.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:logoGroup")
