@@ -85,7 +85,7 @@
                     <#--  Filter group: END  -->
 
                     <input type="hidden" name="sortBy" value="${selectedSortOrder}">
-                    <button class="nhsuk-button nhsuk-filter__submit" type="submit" hidden>Update results</button>
+                    <button class="nhsuk-button nhsuk-filter__submit" data-module="nhsuk-button" type="submit" hidden> Update results </button>
                 </form>
                 <#--  Search filters: END  -->
             </aside>
@@ -132,7 +132,7 @@
                                     <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortByNewestLabel}", "asc":"${sortByOldestLabel}" } />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
 
-                                    <button class="nhsuk-button hee-listing__filter__submit" type="submit" hidden>Update</button>
+                                    <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit" hidden> Update </button>
                                 </form>
                             </div>
                             <#--  Search sort dropdown: END  -->
