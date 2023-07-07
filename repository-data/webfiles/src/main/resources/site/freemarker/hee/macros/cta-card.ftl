@@ -26,7 +26,7 @@
                         ${ctaCard.ctaCardContentBlock.title}
                     </h3>
                     <p class="nhsuk-card__description">${ctaCard.ctaCardContentBlock.description}</p>
-                    <a class="nhsuk-button" href="${link}" draggable="false" ${openInNewWindow?then('target="_blank"', '')}>
+                    <a class="nhsuk-button" href="${link}" draggable="false" role="button" data-module="nhsuk-button" ${openInNewWindow?then('target="_blank"', '')}>
                         ${ctaCard.ctaCardContentBlock.ctaLink.text}
                     </a>
                 </div>

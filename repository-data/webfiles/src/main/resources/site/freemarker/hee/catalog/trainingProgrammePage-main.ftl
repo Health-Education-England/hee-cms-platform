@@ -134,7 +134,7 @@
                     <div class="hee-card hee-card--cta">
                         <h3>Apply now</h3>
                         <div class="hee-card--cta__button">
-                            <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
+                            <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false" role="button" data-module="nhsuk-button">
                                 ${document.applicationButtonTitle}
                             </a>
                         </div>
