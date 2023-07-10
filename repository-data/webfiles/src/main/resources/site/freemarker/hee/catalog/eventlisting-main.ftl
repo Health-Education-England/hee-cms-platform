@@ -110,8 +110,7 @@
                                     <#list selectedYears as year>
                                         <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${year}">
                                             <span>${year}</span>
-                                            <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
-                                            <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
+                                            <a class="nhsuk-filter-tag__icon">Remove</a>
                                         </div>
                                     </#list>
                                 </div>

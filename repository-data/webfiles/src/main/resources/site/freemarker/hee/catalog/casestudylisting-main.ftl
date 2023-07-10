@@ -115,8 +115,7 @@
                                     <#list selectedImpactGroups as impactGroup>
                                         <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${impactGroup}">
                                             <span>${impactGroupMap[impactGroup]}</span>
-                                            <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
-                                            <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
+                                            <a class="nhsuk-filter-tag__icon">Remove</a>
                                         </div>
                                     </#list>
                                 </div>
