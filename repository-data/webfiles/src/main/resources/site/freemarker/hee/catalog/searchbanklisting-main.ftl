@@ -65,7 +65,7 @@
                     <#--  Filter group: END  -->
 
                     <input type="hidden" name="sortBy" value="${selectedSortOrder}">
-                    <button class="nhsuk-button nhsuk-filter__submit" type="submit" hidden>Update results</button>
+                    <button class="nhsuk-button nhsuk-filter__submit" data-module="nhsuk-button" type="submit" hidden> Update results </button>
                 </form>
                 <#--  Search filters: END  -->
             </aside>
@@ -101,7 +101,7 @@
                                     <#assign selectOptions= {"asc": "${sortByOldestLabel}", "desc":"${sortByNewestLabel}", "az":"${sortByAZ}"} />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
 
-                                    <button class="nhsuk-button hee-listing__filter__submit" type="submit" hidden>Update</button>
+                                    <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit" hidden> Update </button>
                                 </form>
                             </div>
                             <#--  Search sort dropdown: END  -->
@@ -110,11 +110,9 @@
                             <#if selectedTopics?has_content>
                                 <div class="hee-listing__tags">
                                     <#list selectedTopics as topic>
-                                        <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${topic
-                                        }">
+                                        <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${topic}">
                                             <span>${topicMap[topic]}</span>
-                                            <@hst.link path='/static/assets/icons/icon-close-white.svg' var="closeIcon"/>
-                                            <img class="nhsuk-filter-tag__icon" src="${closeIcon}" alt="Remove" hidden/>
+                                            <a class="nhsuk-filter-tag__icon">Remove</a>
                                         </div>
                                     </#list>
                                 </div>

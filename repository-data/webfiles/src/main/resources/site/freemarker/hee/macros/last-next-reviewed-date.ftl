@@ -20,8 +20,8 @@
             </div>
         <#else>
             <#--  Last & next reviewed dates for pages  -->
-            <div class="nhsuk-review-date">
-                <p class="nhsuk-body-s">
+            <div class="hee-review-date">
+                <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
                     <#if lastNextReviewedDate.lastReviewed??>
                         <@renderReviewDate msgKey="${contentType}-last-reviewed" reviewDate=lastNextReviewedDate.lastReviewed/>
                     </#if>

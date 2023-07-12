@@ -19,7 +19,9 @@
             <#-- For Mobile -->
             <#assign parentBreadcrumbLink=breadcrumbLinks[breadcrumbLinks?size - 1] />
             <p class="nhsuk-breadcrumb__back">
-                <a class="nhsuk-breadcrumb__backlink" href="${parentBreadcrumbLink.url}"><@fmt.message key="breadcrumb.backto"/> ${parentBreadcrumbLink.text}</a>
+                <a class="nhsuk-breadcrumb__backlink" href="${parentBreadcrumbLink.url}">
+                    <span class="nhsuk-u-visually-hidden"><@fmt.message key="breadcrumb.backto"/> &nbsp;</span>${parentBreadcrumbLink.text}
+                </a>
             </p>
         </div>
     </nav>

@@ -112,7 +112,7 @@
                                value="<#if button.value?has_content>${button.value}<#else>${button.name}</#if>"/>
                     <#elseif button.type == "submitbutton">
 
-                        <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}">
+                        <button class="nhsuk-button" type="submit" name="${button.formRelativeUniqueName}" data-module="nhsuk-button">
                             <#if button.value?has_content>${button.value}<#else>${button.name}</#if>
                         </button>
                     <#else>

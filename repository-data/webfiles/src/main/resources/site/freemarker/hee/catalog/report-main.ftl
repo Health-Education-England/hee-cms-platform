@@ -2,7 +2,6 @@
 <#include "../../include/imports.ftl">
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
-<#include "../macros/back-link.ftl">
 <#include "../utils/date-util.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>

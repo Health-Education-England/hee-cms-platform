@@ -139,7 +139,7 @@
                     <input type="hidden" name="doubleOptin" value="${block.newsletterSubscribeFormContentBlock.enableDoubleOptIn?c}" />
                 </fieldset>
 
-                <button class="nhsuk-button" disabled="disabled" type="submit">
+                <button class="nhsuk-button" disabled="disabled" type="submit" data-module="nhsuk-button">
                     ${block.newsletterSubscribeFormContentBlock.submitButtonText}
                 </button>
             </form>

@@ -176,7 +176,7 @@
                         <div>
                             ${comment.message}
                         </div>
-                        <div class="nhsuk-review-date nhsuk-u-margin-top-3">
+                        <div class="hee-review-date nhsuk-u-margin-top-3">
                             <@fmt.message key="comment.posted_on"/> ${comment.postedDate.getTime()?date?string["${datePattern}"]}
                         </div>
                     </div>
