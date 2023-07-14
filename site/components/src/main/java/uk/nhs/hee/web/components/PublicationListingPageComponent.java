@@ -15,6 +15,10 @@ import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 /**
  * Base component for Publication Listing Page.
  */
@@ -45,13 +49,32 @@ public class PublicationListingPageComponent extends ListingPageComponent {
                 HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_PROFESSION));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
 
+        Map<String, String> publicationTypeMap=  ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName());
+        Map<String, String> publicationTopicMap = ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName());
+        Map<String, String> publicationProfessionMap = ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName());
         // Adds all publications filters
         request.setModel("publicationTypeMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName()));
+                publicationTypeMap.entrySet()
+                        .stream()
+                        .sorted(Map.Entry.comparingByValue())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
         request.setModel("publicationTopicMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName()));
+                publicationTopicMap.entrySet()
+                        .stream().sorted(Map.Entry.comparingByValue())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
         request.setModel("publicationProfessionMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName()));
+                publicationProfessionMap.entrySet()
+                        .stream().sorted(Map.Entry.comparingByValue())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
 
         // Adds publication filter facets
         addPublicationFilterFacetsToModel(request);
