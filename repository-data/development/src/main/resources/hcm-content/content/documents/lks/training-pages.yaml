@@ -405,21 +405,32 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
     hippo:name: Training Programmes Page
-    hippo:versionHistory: 0301e46e-5300-4445-9f8e-76c59c02be38
+    hippo:versionHistory: b2b0da69-9477-418b-a11e-b57683bf6c60
     /training-programmes-page[1]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 1f5a271f-d82b-4f4b-bea2-a224e66dacd7
       hee:applicationButtonLink: https://xmdocumentation.bloomreach.com/library/concepts/document-types/document-type-field-validators.html
       hee:applicationButtonTitle: Button title
+      hee:closing: 0001-01-01T12:00:00Z
+      hee:competitionRatio: 10.0
+      hee:discipline: dental
+      hee:duration: 10
+      hee:fillRate: 11
+      hee:opening: 0001-01-01T12:00:00Z
+      hee:professions: [advanced-critical-care-practitioner-anaesthesia-associate]
+      hee:recruitmentFormat: runthrough
       hee:summary: Summary
       hee:title: Title
+      hee:topics: []
+      hee:trainingJourneySummary: Summary of training journey
+      hee:trainingType: DT
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-23T10:53:34.569+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-23T10:53:35.293+01:00
+      hippostdpubwf:lastModificationDate: 2023-07-14T14:38:21.390+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 8d1c3744-f15d-4863-acec-f8cfc70158e5
       hippotranslation:locale: en
@@ -438,20 +449,40 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
+      /hee:trainingJourneyPrerequisites:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
+      /hee:trainingJourneyOptions:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 6bf10fab-1586-4d3f-9d3a-441abd44fb15
+      /hee:overview:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Free text in the overview</p>
     /training-programmes-page[2]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: f2108f87-97c9-4085-9dc0-f38be4e085a7
       hee:applicationButtonLink: https://xmdocumentation.bloomreach.com/library/concepts/document-types/document-type-field-validators.html
       hee:applicationButtonTitle: Button title
+      hee:closing: 0001-01-01T12:00:00Z
+      hee:competitionRatio: 10.0
+      hee:discipline: dental
+      hee:duration: 10
+      hee:fillRate: 11
+      hee:opening: 0001-01-01T12:00:00Z
+      hee:professions: [advanced-critical-care-practitioner-anaesthesia-associate]
+      hee:recruitmentFormat: runthrough
       hee:summary: Summary
       hee:title: Title
+      hee:topics: []
+      hee:trainingJourneySummary: Summary of training journey
+      hee:trainingType: DT
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-23T10:53:34.569+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-23T10:55:25.093+01:00
+      hippostdpubwf:lastModificationDate: 2023-07-14T14:34:56.182+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 8d1c3744-f15d-4863-acec-f8cfc70158e5
       hippotranslation:locale: en
@@ -470,22 +501,42 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
+      /hee:trainingJourneyPrerequisites:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
+      /hee:trainingJourneyOptions:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 6bf10fab-1586-4d3f-9d3a-441abd44fb15
+      /hee:overview:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Free text in the overview</p>
     /training-programmes-page[3]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e6cf300f-ff01-43ee-86a7-ba6833083833
       hee:applicationButtonLink: https://xmdocumentation.bloomreach.com/library/concepts/document-types/document-type-field-validators.html
       hee:applicationButtonTitle: Button title
+      hee:closing: 0001-01-01T12:00:00Z
+      hee:competitionRatio: 10.0
+      hee:discipline: dental
+      hee:duration: 10
+      hee:fillRate: 11
+      hee:opening: 0001-01-01T12:00:00Z
+      hee:professions: [advanced-critical-care-practitioner-anaesthesia-associate]
+      hee:recruitmentFormat: runthrough
       hee:summary: Summary
       hee:title: Title
+      hee:topics: []
+      hee:trainingJourneySummary: Summary of training journey
+      hee:trainingType: DT
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-23T10:53:34.569+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-23T10:55:25.093+01:00
+      hippostdpubwf:lastModificationDate: 2023-07-14T14:34:56.182+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-06-23T10:55:27.897+01:00
+      hippostdpubwf:publicationDate: 2023-07-14T14:35:00.693+01:00
       hippotranslation:id: 8d1c3744-f15d-4863-acec-f8cfc70158e5
       hippotranslation:locale: en
       /hee:microHero:
@@ -503,3 +554,12 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
+      /hee:trainingJourneyPrerequisites:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
+      /hee:trainingJourneyOptions:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 6bf10fab-1586-4d3f-9d3a-441abd44fb15
+      /hee:overview:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Free text in the overview</p>

@@ -217,6 +217,16 @@
                     </div>
                 </div>
 
+                <#if document.applicationButtonLink?has_content>
+                    <div class="hee-card hee-card--cta">
+                        <h3>Apply now</h3>
+                        <div class="hee-card--cta__button">
+                            <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
+                                ${document.applicationButtonTitle}
+                            </a>
+                        </div>
+                    </div>
+                </#if>
                 <#--  Right hand content blocks: START  -->
                 <#if document.rightHandBlocks??>
                     <#list document.rightHandBlocks as block>
