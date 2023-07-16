@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 5e2f0028-9547-4f93-a5bc-0c894026121b
+          jcr:uuid: a0fc1619-cba7-4bac-834e-f225ae16f896
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -215,7 +215,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: c2b187d4-8aad-442e-8eb8-a28d63e85188
+          jcr:uuid: b1d1ac90-1f0e-4596-b9c2-d5065c103d1a
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -348,17 +348,16 @@ definitions:
               sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
               sortOrder: ascending
               source: /content/documents/administration/valuelists/training-type
-          /rightHandBlocks:
+          /applicationButtonTitle:
             jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:contactCardWithDescriptionReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
-            contentPickerType: links
-            field: rightHandBlocks
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            caption: Application button title
+            field: applicationButtonTitle
+            hint: Enter a button title e.g. Apply in Oriel  (60 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.right.item
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
           /left:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.left.item
@@ -474,19 +473,20 @@ definitions:
             field: applicationButtonLink
             hint: Please enter a URL to an application system such as Oriel
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
+            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /applicationButtonTitle:
+          /rightHandBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Application button title
-            field: applicationButtonTitle
-            hint: Enter a button title e.g. Apply in Oriel  (60 character limit)
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
+            caption: Right hand objects
+            compoundList: hee:contactCardWithDescriptionReference,hee:externalLinksCardReference,hee:fileLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
+            contentPickerType: links
+            field: rightHandBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '60'
           /trainingJourneySummary:
             jcr:primaryType: frontend:plugin
             caption: Training journey summary
