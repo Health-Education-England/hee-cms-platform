@@ -63,8 +63,8 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:caption")
-    public String getCaption() {
-        return getSingleProperty("hee:caption");
+    @HippoEssentialsGenerated(internalName = "hee:text")
+    public String getText() {
+        return getSingleProperty("hee:text");
     }
 }
