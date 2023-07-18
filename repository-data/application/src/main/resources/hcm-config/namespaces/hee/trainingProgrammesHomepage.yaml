@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a3872dd8-4d4e-41f6-a170-fa10065d7de7
+          jcr:uuid: 9352db0a-55b4-4b9c-a283-d0d06f96d67e
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -29,7 +29,7 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:summary
+            hipposysedit:path: hee:subtitle
             hipposysedit:primary: false
             hipposysedit:type: Text
             hipposysedit:validators: [required]
@@ -58,6 +58,7 @@ definitions:
             hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [required]
           /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -110,14 +111,29 @@ definitions:
             hipposysedit:path: hee:regions
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /programmeDescription:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:programmeDescription
+            hipposysedit:primary: false
+            hipposysedit:type: Text
+          /boolean1:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:boolean
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 8901c5ea-037b-42ff-a9e0-f87d9fad5610
+          jcr:uuid: 6c913ce2-965d-4313-898c-d7e4f620a3a6
           hee:addToAZ: false
-          hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -128,6 +144,9 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           hee:text: ''
+          hee:subtitle: ''
+          hee:programmeDescription: ''
+          hee:boolean: false
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -163,16 +182,16 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '60'
-          /summary:
+          /subtitle:
             jcr:primaryType: frontend:plugin
-            caption: Summary
+            caption: Page subtitle
             field: summary
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '185'
+              maxlength: '120'
           /heroImage:
             jcr:primaryType: frontend:plugin
             caption: Hero image
@@ -192,12 +211,13 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /caption:
+          /programmeDescription:
             jcr:primaryType: frontend:plugin
-            caption: Caption
-            field: caption
+            caption: Programme description
+            field: programmeDescription
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /overview:
@@ -206,10 +226,11 @@ definitions:
             field: overview
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source"
-                }'
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source",
+                stylesSet: "custom_styles:./custom_styles.js" }'
           /pathways:
             jcr:primaryType: frontend:plugin
             caption: Pathways
@@ -255,15 +276,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /addToAZ:
-            jcr:primaryType: frontend:plugin
-            caption: Add to A to Z
-            field: addToAZ
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
             jcr:primaryType: frontend:plugin
             caption: Right hand objects
@@ -285,3 +297,11 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
+          /boolean:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: boolean1
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig

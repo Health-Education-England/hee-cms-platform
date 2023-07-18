@@ -18,9 +18,9 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getSingleProperty("hee:title");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:summary")
+    @HippoEssentialsGenerated(internalName = "hee:subtitle")
     public String getSummary() {
-        return getSingleProperty("hee:summary");
+        return getSingleProperty("hee:subtitle");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:addToAZ")
@@ -63,8 +63,8 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:text")
+    @HippoEssentialsGenerated(internalName = "hee:programmeDescription")
     public String getText() {
-        return getSingleProperty("hee:text");
+        return getSingleProperty("hee:programmeDescription");
     }
 }
