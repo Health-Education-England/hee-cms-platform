@@ -33,6 +33,6 @@
                 </#list>
             </ul>
         </figcaption>
-        <object class="nhsuk-map__image" data="<@hst.link path='/static/assets/images/maps/${block.mapEducation}-regions.svg'/>" type="image/svg+xml" tabindex="-1"></object>
+        <object class="nhsuk-map__image" data="<@hst.webfile path='/images/maps/${block.mapEducation}-regions.svg'/>" type="image/svg+xml" tabindex="-1"></object>
     </figure>
 </#macro>

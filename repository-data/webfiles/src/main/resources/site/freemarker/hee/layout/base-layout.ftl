@@ -21,16 +21,16 @@
     </#if>
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="<@hst.link path='/static/assets/favicons/favicon.ico'/>" type="image/x-icon">
-    <link rel="apple-touch-icon" href="<@hst.link path='/static/assets/favicons/apple-touch-icon-180x180.png'/>">
-    <link rel="mask-icon" href="<@hst.link path='/static/assets/favicons/favicon.svg'/>" color="#005eb8">
-    <link rel="icon" sizes="192x192" href="<@hst.link path='/static/assets/favicons/favicon-192x192.png'/>">
-    <meta name="msapplication-TileImage" content="<@hst.link path='/static/assets/favicons/mediumtile-144x144.png'/>">
+    <link rel="shortcut icon" href="<@hst.webfile path='/favicons/favicon.ico'/>" type="image/x-icon">
+    <link rel="apple-touch-icon" href="<@hst.webfile path='/favicons/apple-touch-icon-180x180.png'/>">
+    <link rel="mask-icon" href="<@hst.webfile path='/favicons/favicon.svg'/>" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="<@hst.webfile path='/favicons/favicon-192x192.png'/>">
+    <meta name="msapplication-TileImage" content="<@hst.webfile path='/favicons/mediumtile-144x144.png'/>">
     <meta name="msapplication-TileColor" content="#005eb8">
-    <meta name="msapplication-square70x70logo" content="<@hst.link path='/static/assets/favicons/smalltile-70x70.png'/>">
-    <meta name="msapplication-square150x150logo" content="<@hst.link path='/static/assets/favicons/mediumtile-150x150.png'/>">
-    <meta name="msapplication-wide310x150logo" content="<@hst.link path='/static/assets/favicons/widetile-310x150.png'/>">
-    <meta name="msapplication-square310x310logo" content="<@hst.link path='/static/assets/favicons/largetile-310x310.png'/>">
+    <meta name="msapplication-square70x70logo" content="<@hst.webfile path='/favicons/smalltile-70x70.png'/>">
+    <meta name="msapplication-square150x150logo" content="<@hst.webfile path='/favicons/mediumtile-150x150.png'/>">
+    <meta name="msapplication-wide310x150logo" content="<@hst.webfile path='/favicons/widetile-310x150.png'/>">
+    <meta name="msapplication-square310x310logo" content="<@hst.webfile path='/favicons/largetile-310x310.png'/>">
 
     <@hst.headContributions categoryExcludes="htmlBodyEnd, scripts, gtmNoScript, pageMetaData" xhtml=true/>
   </head>

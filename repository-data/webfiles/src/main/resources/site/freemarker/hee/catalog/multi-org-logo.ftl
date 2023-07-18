@@ -39,7 +39,7 @@
                     <#break>
             </#switch>
 
-            <@hst.link path="/static/assets/images/logos/${logoFileName}" var="logoSrc"/>
+            <@hst.webfile path="/images/logos/${logoFileName}" var="logoSrc"/>
             <#assign logoAltText="Logo for ${logoTypes[logo.logoType]}">
 
             <#--  Renders logo  -->

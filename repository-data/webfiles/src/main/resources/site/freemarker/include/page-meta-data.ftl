@@ -72,7 +72,7 @@
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:image" content="<@hst.link path='/static/assets/images/logos/hee-logo.png' fullyQualified=true/>" />
+    <meta property="og:image" content="<@hst.webfile path='/images/logos/hee-logo.png' fullyQualified=true/>" />
 </@hst.headContribution>
 
 <@hst.headContribution category="pageMetaData">
