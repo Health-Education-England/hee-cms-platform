@@ -1,16 +1,12 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
-import java.util.Calendar;
-import uk.nhs.hee.web.beans.PageLastNextReview;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import java.util.List;
-import org.hippoecm.hst.content.beans.standard.HippoResourceBean;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
+import java.util.Calendar;
+import java.util.List;
+
 @HippoEssentialsGenerated(internalName = "hee:publicationLandingPage")
 @Node(jcrType = "hee:publicationLandingPage")
 public class PublicationLandingPage extends BaseDocument {
@@ -86,5 +82,15 @@ public class PublicationLandingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:otherFormatsEmail")
     public String getOtherFormatsEmail() {
         return getSingleProperty("hee:otherFormatsEmail");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:assetVersionsContent")
+    public List<AssetResource> getAssetVersionsContent() {
+        return getChildBeansByName("hee:assetVersionsContent", AssetResource.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:languageVersionsContent")
+    public List<AssetResource> getLanguageVersionsContent() {
+        return getChildBeansByName("hee:languageVersionsContent", AssetResource.class);
     }
 }
