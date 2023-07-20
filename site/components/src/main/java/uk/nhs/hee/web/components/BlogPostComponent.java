@@ -11,6 +11,7 @@ import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.TableComponentService;
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -43,6 +44,7 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
             // addBlogCommentsToModel(request, blogPost);
 
             request.setAttribute("tableComponentService", new TableComponentService());
+            request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
         }
     }
 
