@@ -3,10 +3,8 @@ package uk.nhs.hee.web.beans;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import java.util.Calendar;
-import uk.nhs.hee.web.beans.PageLastNextReview;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import java.util.List;
-import org.hippoecm.hst.content.beans.standard.HippoResourceBean;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -86,5 +84,10 @@ public class PublicationLandingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:otherFormatsEmail")
     public String getOtherFormatsEmail() {
         return getSingleProperty("hee:otherFormatsEmail");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContent")
+    public FeaturedContentReference getFeaturedContent() {
+        return getBean("hee:featuredContent", FeaturedContentReference.class);
     }
 }

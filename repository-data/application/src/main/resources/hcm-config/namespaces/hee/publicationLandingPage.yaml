@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 21db191c-84af-463d-b36d-f459c019ab51
+          jcr:uuid: 945ef826-fa93-424a-9b3d-de32a076cd24
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -151,12 +151,20 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [email, required]
+          /featuredContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:featuredContent
+            hipposysedit:primary: false
+            hipposysedit:type: hee:featuredContentReference
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 8b71a890-c2ac-4ea5-b848-1d3689f9b64a
+          jcr:uuid: 775fb0bb-1433-49b9-90f7-e96f5cf4c120
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:publicationProfessions: []
           hee:publicationTopics: []
@@ -185,6 +193,11 @@ definitions:
           /hee:authors:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -374,6 +387,15 @@ definitions:
             hint: Enter the email for the team to be contacted for accessible formats
               e.g. email@nhs.uk
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /featuredContent:
+            jcr:primaryType: frontend:plugin
+            caption: Featured Content
+            field: featuredContent
+            hint: Add featured content here
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
