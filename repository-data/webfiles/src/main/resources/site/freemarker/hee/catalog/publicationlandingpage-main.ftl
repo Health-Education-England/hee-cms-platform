@@ -123,12 +123,16 @@
                     </#if>
                     <#--  Documents section: END  -->
 
-                    <h2>Other formats</h2>
-                    <div class="hee-publication-doc">
-                        <p>If you need documents in a different format like accessible PDF,&nbsp;
-                        large print, easy read, audio recording or braille please email&nbsp;
-                        <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
-                    </div>
+                    <#--  Other document formats: START  -->
+                    <#if document.otherFormatsEmail?has_content>
+                        <h2>Other formats</h2>
+                        <div class="hee-publication-doc">
+                            <p>If you need documents in a different format like accessible PDF,&nbsp;
+                            large print, easy read, audio recording or braille please email&nbsp;
+                            <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
+                        </div>
+                    </#if>
+                    <#--  Other document formats: END  -->
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
