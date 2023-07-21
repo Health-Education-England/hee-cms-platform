@@ -5,7 +5,7 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
-
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.beans.TrainingProgrammesHomepage;
 import uk.nhs.hee.web.components.info.TrainingProgrammesHomepageComponentInfo;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
@@ -32,6 +32,8 @@ public class TrainingProgrammesHomepageComponent extends EssentialsDocumentCompo
             Map<String, Map<String, String>> modelToValueListMap =
                     ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
+
+            request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
         }
     }
 }

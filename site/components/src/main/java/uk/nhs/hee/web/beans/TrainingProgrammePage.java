@@ -7,6 +7,7 @@ import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import java.util.List;
 import java.util.Calendar;
+import uk.nhs.hee.web.beans.FeaturedContentReference;
 
 /** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
@@ -124,5 +125,10 @@ public class TrainingProgrammePage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
     public List<HippoBean> getTrainingJourneyOptions() {
         return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContent")
+    public FeaturedContentReference getFeaturedContent() {
+        return getBean("hee:featuredContent", FeaturedContentReference.class);
     }
 }

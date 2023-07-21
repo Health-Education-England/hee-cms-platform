@@ -171,10 +171,14 @@
             </div>
         </div>
 
-        <#--  Feature section will be a future work, not implemented yet  -->
+        <#--  Featured Content: STARTS  -->
         <section class="page__feature">
-            <div class="nhsuk-width-container">
-            </div>
+            <#if document.featuredContent.getFeaturedContentBlock()??>
+                <div class="nhsuk-section__content">
+                    <@hee.featuredContent block=document.featuredContent/>
+                </div>
+            </#if>
         </section>
+        <#--  Feature Content: END  -->
     </main>
 </#if>

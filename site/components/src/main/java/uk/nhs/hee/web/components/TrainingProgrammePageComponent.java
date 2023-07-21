@@ -11,6 +11,7 @@ import uk.nhs.hee.web.beans.TrainingProgrammesHomepage;
 import uk.nhs.hee.web.components.info.TrainingProgrammePageComponentInfo;
 import uk.nhs.hee.web.components.info.TrainingProgrammesHomepageComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
@@ -45,6 +46,7 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
 
             Map<String, Map<String, String>> modelToValueListMap = ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
+            request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
         }
     }
 

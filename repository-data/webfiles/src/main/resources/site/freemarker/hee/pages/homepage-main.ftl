@@ -96,6 +96,15 @@
                 </#if>
                 <#--  Content blocks: END  -->
             </div>
+            <#--  Featured Content: STARTS  -->
+            <section>
+                <#if document.featuredContent.getFeaturedContentBlock()??>
+                    <div class="nhsuk-section__content">
+                        <@hee.featuredContent block=document.featuredContent/>
+                    </div>
+                </#if>
+            </section>
+            <#--  Feature Content: END  -->
         </div>
         <#--  Main content: END  -->
     </main>
