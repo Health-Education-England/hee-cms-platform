@@ -126,6 +126,9 @@
                             <#case "uk.nhs.hee.web.beans.StatementCardReference">
                                 <@hee.statementCard block=block/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                                <@hee.featuredContent block=block/>
+                                <#break>
                             <#default>
                         </#switch>
                     </#list>
