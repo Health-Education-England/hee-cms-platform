@@ -1,0 +1,53 @@
+/content/urlrewriter/website-testing/redirecthometopublciation:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 6b95f001-cd57-4b98-80eb-0c65dbbd22e6
+  hippo:name: RedirectHomeToPublciation
+  hippo:versionHistory: 73260ead-803d-4aa0-a1ca-3c5c004b1ed0
+  /redirecthometopublciation[1]:
+    jcr:primaryType: urlrewriter:rule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: aa20fd72-3b11-4979-9b58-5d20d92ea7fd
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: francisco.ruiz
+    hippostdpubwf:creationDate: 2023-07-06T17:24:25.671+02:00
+    hippostdpubwf:lastModificationDate: 2023-07-07T15:32:02.403+02:00
+    hippostdpubwf:lastModifiedBy: francisco.ruiz
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:ruledescription: Redirect home to publications
+    urlrewriter:rulefrom: /
+    urlrewriter:ruleto: https://staging.hee.nhs.uk/website-testing/publication
+    urlrewriter:ruletype: temporary-redirect
+  /redirecthometopublciation[2]:
+    jcr:primaryType: urlrewriter:rule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 88c60d7a-799f-41e1-926e-01918f28c323
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: francisco.ruiz
+    hippostdpubwf:creationDate: 2023-07-06T17:24:25.671+02:00
+    hippostdpubwf:lastModificationDate: 2023-07-07T15:32:20.832+02:00
+    hippostdpubwf:lastModifiedBy: francisco.ruiz
+    urlrewriter:ruledescription: Redirect home to publications
+    urlrewriter:rulefrom: /
+    urlrewriter:ruleto: https://staging.hee.nhs.uk/website-testing/publication
+    urlrewriter:ruletype: temporary-redirect
+  /redirecthometopublciation[3]:
+    jcr:primaryType: urlrewriter:rule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: b6081bcb-7821-4848-af1a-de3e5fc7e5cc
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: francisco.ruiz
+    hippostdpubwf:creationDate: 2023-07-06T17:24:25.671+02:00
+    hippostdpubwf:lastModificationDate: 2023-07-07T15:32:20.832+02:00
+    hippostdpubwf:lastModifiedBy: francisco.ruiz
+    hippostdpubwf:publicationDate: 2023-07-07T15:32:22.627+02:00
+    urlrewriter:ruledescription: Redirect home to publications
+    urlrewriter:rulefrom: /
+    urlrewriter:ruleto: https://staging.hee.nhs.uk/website-testing/publication
+    urlrewriter:ruletype: temporary-redirect

@@ -1,4 +1,5 @@
 /content/urlrewriter/digital-transformation/revertshorteneddigitalacademy:
+  .meta:order-before: philipsivesreviewpages
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: edc760b6-7868-4668-9e58-4c28514fac17
@@ -32,7 +33,7 @@
       \n</rule>"
   /revertshorteneddigitalacademy[2]:
     jcr:primaryType: urlrewriter:xmlrule
-    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:mixinTypes: ['mix:versionable']
     jcr:uuid: a9a3d62e-1ab6-4cce-8cc3-f559858a9910
     hippo:availability: [preview]
     hippostd:retainable: false

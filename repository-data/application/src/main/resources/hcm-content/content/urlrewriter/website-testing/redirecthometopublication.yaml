@@ -1,0 +1,84 @@
+/content/urlrewriter/website-testing/redirecthometopublication:
+  .meta:order-before: redirecthometopublciation
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 54634b85-75a9-43a2-92c6-dd07fbe76093
+  hippo:name: RedirectHomeToPublication
+  hippo:versionHistory: c12b0964-6da9-4003-9929-430a40bd0911
+  /redirecthometopublication[1]:
+    jcr:primaryType: urlrewriter:advancedrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: fc519a9c-f4bf-4ca4-9b9c-093f6b59865d
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: francisco.ruiz
+    hippostdpubwf:creationDate: 2023-07-06T16:48:49.782+02:00
+    hippostdpubwf:lastModificationDate: 2023-07-07T15:34:01.313+02:00
+    hippostdpubwf:lastModifiedBy: francisco.ruiz
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:casesensitive: false
+    urlrewriter:isnotlast: true
+    urlrewriter:iswildcardtype: false
+    urlrewriter:qsappend: false
+    urlrewriter:ruledescription: Redirect home to publications
+    urlrewriter:rulefrom: ^/website-testing/$
+    urlrewriter:ruleto: https://staging.hee.nhs.uk/website-testing/publication
+    urlrewriter:ruletype: permanent-redirect
+    /urlrewriter:rulecondition:
+      jcr:primaryType: urlrewriter:rulecondition
+      urlrewriter:conditionname: host
+      urlrewriter:conditionoperator: equal
+      urlrewriter:conditiontype: header
+      urlrewriter:conditionvalue: staging.hee.nhs.uk
+  /redirecthometopublication[2]:
+    jcr:primaryType: urlrewriter:advancedrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 64497ce6-02e4-4772-87b6-4e4197c0de61
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: francisco.ruiz
+    hippostdpubwf:creationDate: 2023-07-06T16:48:49.782+02:00
+    hippostdpubwf:lastModificationDate: 2023-07-07T15:34:57.637+02:00
+    hippostdpubwf:lastModifiedBy: francisco.ruiz
+    urlrewriter:casesensitive: false
+    urlrewriter:isnotlast: true
+    urlrewriter:iswildcardtype: false
+    urlrewriter:qsappend: false
+    urlrewriter:ruledescription: Redirect home to publications
+    urlrewriter:rulefrom: ^/website-testing/$
+    urlrewriter:ruleto: https://staging.hee.nhs.uk/website-testing/publication
+    urlrewriter:ruletype: permanent-redirect
+    /urlrewriter:rulecondition:
+      jcr:primaryType: urlrewriter:rulecondition
+      urlrewriter:conditionname: host
+      urlrewriter:conditionoperator: equal
+      urlrewriter:conditiontype: header
+      urlrewriter:conditionvalue: staging.hee.nhs.uk
+  /redirecthometopublication[3]:
+    jcr:primaryType: urlrewriter:advancedrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 7820ae4f-24d9-4f22-a8fe-8925b26b4427
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: francisco.ruiz
+    hippostdpubwf:creationDate: 2023-07-06T16:48:49.782+02:00
+    hippostdpubwf:lastModificationDate: 2023-07-07T15:34:57.637+02:00
+    hippostdpubwf:lastModifiedBy: francisco.ruiz
+    hippostdpubwf:publicationDate: 2023-07-07T15:35:02.598+02:00
+    urlrewriter:casesensitive: false
+    urlrewriter:isnotlast: true
+    urlrewriter:iswildcardtype: false
+    urlrewriter:qsappend: false
+    urlrewriter:ruledescription: Redirect home to publications
+    urlrewriter:rulefrom: ^/website-testing/$
+    urlrewriter:ruleto: https://staging.hee.nhs.uk/website-testing/publication
+    urlrewriter:ruletype: permanent-redirect
+    /urlrewriter:rulecondition:
+      jcr:primaryType: urlrewriter:rulecondition
+      urlrewriter:conditionname: host
+      urlrewriter:conditionoperator: equal
+      urlrewriter:conditiontype: header
+      urlrewriter:conditionvalue: staging.hee.nhs.uk

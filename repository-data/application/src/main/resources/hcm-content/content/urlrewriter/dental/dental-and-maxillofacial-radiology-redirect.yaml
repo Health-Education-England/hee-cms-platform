@@ -1,0 +1,108 @@
+/content/urlrewriter/dental/dental-and-maxillofacial-radiology-redirect:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: bc50b42f-dca3-42f4-a32e-019ab7b6d42e
+  hippo:name: Dental and Maxillofacial Radiology Redirect
+  hippo:versionHistory: 67d43307-9eb2-4d00-b732-a6fd683072c0
+  /dental-and-maxillofacial-radiology-redirect[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 8fb83b81-0cd0-49bc-b630-70d35e27ea51
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostd:transferable: false
+    hippostdpubwf:createdBy: sankar.shunmuga
+    hippostdpubwf:creationDate: 2023-01-10T16:02:38.064+01:00
+    hippostdpubwf:lastModificationDate: 2023-07-24T06:16:29.625+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-overview/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-recruitment-timeline/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-recruitment-timeline</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/applying-for-dental-and-maxillofacial-radiology/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/applying-for-dental-and-maxillofacial-radiology</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/vacancies-and-preferencing/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/vacancies-and-preferencing</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-self-assessment/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-self-assessment</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-virtual-interviews/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-virtual-interviews</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-offer-process/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-offer-process</to>\r\
+      \n</rule>"
+  /dental-and-maxillofacial-radiology-redirect[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 06f97841-aeb9-4fd0-a870-491703a9c974
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: sankar.shunmuga
+    hippostdpubwf:creationDate: 2023-01-10T16:02:38.064+01:00
+    hippostdpubwf:lastModificationDate: 2023-01-10T16:08:16.824+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-overview/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-recruitment-timeline/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-recruitment-timeline</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/applying-for-dental-and-maxillofacial-radiology/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/applying-for-dental-and-maxillofacial-radiology</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/vacancies-and-preferencing/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/vacancies-and-preferencing</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-self-assessment/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-self-assessment</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-virtual-interviews/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-virtual-interviews</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-offer-process/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-offer-process</to>\r\
+      \n</rule>"
+  /dental-and-maxillofacial-radiology-redirect[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 748ab9bc-30e5-44ac-86f3-f055e2275c26
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: sankar.shunmuga
+    hippostdpubwf:creationDate: 2023-01-10T16:02:38.064+01:00
+    hippostdpubwf:lastModificationDate: 2023-01-10T16:08:16.824+01:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2023-01-10T16:31:35.548+01:00
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-overview/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-recruitment-timeline/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-recruitment-timeline</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/applying-for-dental-and-maxillofacial-radiology/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/applying-for-dental-and-maxillofacial-radiology</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/vacancies-and-preferencing/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/vacancies-and-preferencing</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-self-assessment/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-self-assessment</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-virtual-interviews/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-virtual-interviews</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">dental.hee.nhs.uk</condition>\r\
+      \n  <from>^/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-offer-process/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/preview/dental-trainee-recruitment/dental-specialty-training/dental-and-maxillofacial-radiology/overview-of-dental-and-maxillofacial-radiology/dental-and-maxillofacial-radiology-offer-process</to>\r\
+      \n</rule>"
