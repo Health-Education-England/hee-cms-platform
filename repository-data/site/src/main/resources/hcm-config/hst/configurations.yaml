@@ -80,9 +80,6 @@ definitions:
           /formpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/formpage-main.ftl
-          /afterform-main:
-            jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/afterform-main.ftl
           /blogpost-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/blogpost-main.ftl
@@ -163,12 +160,6 @@ definitions:
               hst:iconpath: images/catalog-component-icons/simple-content.svg
               hst:label: MiniHub
               hst:template: minihub-main
-            /after-form:
-              jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsDocumentComponent
-              hst:iconpath: images/catalog-component-icons/simple-content.svg
-              hst:label: AfterForm
-              hst:template: afterform-main
             /category-based-listing:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
