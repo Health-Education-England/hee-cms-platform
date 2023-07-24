@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 2b61ffdd-18b2-48ee-a635-ad5eacdb1363
+          jcr:uuid: 5707e37e-6c55-4dfb-a514-b67959389691
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -118,13 +118,12 @@ definitions:
             hipposysedit:path: hee:featuredContent
             hipposysedit:primary: false
             hipposysedit:type: hee:featuredContentReference
-            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 7488a1bd-964e-4304-93ff-a8c7c27c81e2
+          jcr:uuid: 70c9b45a-9a3f-48d3-9206-89ba9324250e
           hee:addToAZ: false
           hee:summary: ''
           hee:title: ''
