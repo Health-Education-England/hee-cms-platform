@@ -94,7 +94,7 @@ definitions:
             hipposysedit:path: hee:logoGroup
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-          /webPublication:
+          /webPublications:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
@@ -353,7 +353,7 @@ definitions:
           /webPublications:
             jcr:primaryType: frontend:plugin
             caption: Publication pages
-            field: webPublication
+            field: webPublications
             hint: Browse to a publication page(s)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
