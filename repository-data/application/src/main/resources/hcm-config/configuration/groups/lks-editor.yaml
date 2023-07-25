@@ -1,16 +1,15 @@
 definitions:
   config:
-    /hippo:configuration/hippo:groups/lks-editor:
+    /hippo:configuration/hippo:groups/lks-editor-group:
       jcr:primaryType: hipposys:group
       hipposys:members:
         .meta:category: system
         .meta:add-new-system-values: true
         type: string
-        value: [lks-editor]
+        value: [lks-editor, lks-editor-2]
       hipposys:securityprovider: internal
       hipposys:userroles:
         .meta:category: system
         .meta:add-new-system-values: true
         type: string
-        value: [xm.cms.user, xm.content.user, xm.channel.user, xm.channel.webmaster,
-          xm.dashboard.user]
+        value: [xm.channel.webmaster, xm.dashboard.user, xm.channel.user, xm.cms.user, xm.content.user]

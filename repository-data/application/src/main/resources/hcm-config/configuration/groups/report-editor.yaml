@@ -1,17 +1,15 @@
 definitions:
   config:
-    /hippo:configuration/hippo:groups/medical-editor-group:
+    /hippo:configuration/hippo:groups/report-editor:
       jcr:primaryType: hipposys:group
       hipposys:members:
         .meta:category: system
         .meta:add-new-system-values: true
-        operation: override
         type: string
-        value: [med-editor]
+        value: [lks-editor, lks-editor-2, med-editor]
       hipposys:securityprovider: internal
       hipposys:userroles:
         .meta:category: system
         .meta:add-new-system-values: true
         type: string
-        value: [xm.cms.user, xm.content.user, xm.channel.user, xm.channel.webmaster,
-          xm.dashboard.user]
+        value: [xm.report.user]
