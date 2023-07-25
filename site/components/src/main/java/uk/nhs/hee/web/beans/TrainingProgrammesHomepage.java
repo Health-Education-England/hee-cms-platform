@@ -64,7 +64,7 @@ public class TrainingProgrammesHomepage extends BaseDocument {
     }
 
     @HippoEssentialsGenerated(internalName = "hee:programmeDescription")
-    public String getText() {
+    public String getProgrammeDescription() {
         return getSingleProperty("hee:programmeDescription");
     }
 }
