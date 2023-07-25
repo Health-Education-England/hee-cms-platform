@@ -20,57 +20,71 @@ public class MiniHubComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
-        MiniHub miniHub = request.getModel(REQUEST_ATTR_DOCUMENT);
-        if (miniHub != null) {
-            // When the page accessed from URL minihubName/guidanceName, request will be forward to te related _default_ sitemap item
-            boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
-            Guidance previousGuidance = null, nextGuidance = null, currentGuidance = null;
-            boolean accessFromRootHub = false;
-            List<Guidance> guidancePages = miniHub.getGuidancePages();
+        final MiniHub miniHub = request.getModel(REQUEST_ATTR_DOCUMENT);
+        if (miniHub == null) {
+            return;
+        }
 
-            if (accessWithGuidancePath) {
-                // The guidance name in URL will be resolved as "1" parameter name
-                String guidanceName = (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
-                for (int i = 0; i < guidancePages.size(); i++) {
-                    Guidance guidance = guidancePages.get(i);
-                    if (guidance.getName().equalsIgnoreCase(guidanceName)) {
-                        currentGuidance = guidance;
-                        if (i > 0) {
-                            previousGuidance = guidancePages.get(i - 1);
-                        }
-                        if (i < guidancePages.size() - 1) {
-                            nextGuidance = guidancePages.get(i + 1);
-                        }
-                        break;
+        // When the page accessed from URL minihubName/guidanceName,
+        // request will be forward to te related _default_ sitemap item
+        final boolean accessWithGuidancePath =
+                request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
+        Guidance previousGuidance = null, nextGuidance = null, currentGuidance = null;
+        boolean accessFromRootHub = false;
+        final List<Guidance> guidancePages = miniHub.getGuidancePages();
+
+        if (guidancePages.isEmpty()) {
+            return;
+        }
+
+        if (accessWithGuidancePath) {
+            // The guidance name in URL will be resolved as "1" parameter name
+            final String guidanceName =
+                    (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
+            for (int i = 0; i < guidancePages.size(); i++) {
+                final Guidance guidance = guidancePages.get(i);
+                if (guidance.getName().equalsIgnoreCase(guidanceName)) {
+                    currentGuidance = guidance;
+                    if (i > 0) {
+                        previousGuidance = guidancePages.get(i - 1);
                     }
+                    if (i < guidancePages.size() - 1) {
+                        nextGuidance = guidancePages.get(i + 1);
+                    }
+                    break;
                 }
-            } else {
-                accessFromRootHub = true;
-                // There is restriction in the CMS to make sure having at least one guidance on hub
-                currentGuidance = guidancePages.get(0);
-                if (guidancePages.size() > 1) {
-                    nextGuidance = guidancePages.get(1);
-                }
-
-                String minihubName = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().getValue();
-                request.setModel("minihubName", minihubName);
+            }
+        } else {
+            accessFromRootHub = true;
+            // There is restriction in the CMS to make sure having at least one guidance on hub
+            currentGuidance = guidancePages.get(0);
+            if (guidancePages.size() > 1) {
+                nextGuidance = guidancePages.get(1);
             }
 
-            request.setModel("previousGuidance", previousGuidance);
-            request.setModel("currentGuidance", currentGuidance);
-            request.setModel("nextGuidance", nextGuidance);
-            request.setModel("accessFromRootHub", accessFromRootHub);
-            request.setModel("isFirstPage", guidancePages.get(0).equals(currentGuidance));
-
-            // the guidance page contains content blocks that need valueLists to be set on the model
-            List<HippoBean> pageContentBlocks = currentGuidance.getContentBlocks();
-            pageContentBlocks.addAll(currentGuidance.getRightHandBlocks());
-
-            Map<String, Map<String, String>> modelToValueListMap =
-                    ContentBlocksUtils.getValueListMaps(pageContentBlocks);
-            modelToValueListMap.forEach(request::setModel);
-
-            request.setAttribute("tableComponentService", new TableComponentService());
+            final String minihubName =
+                    request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().getValue();
+            request.setModel("minihubName", minihubName);
         }
+
+        request.setModel("previousGuidance", previousGuidance);
+        request.setModel("currentGuidance", currentGuidance);
+        request.setModel("nextGuidance", nextGuidance);
+        request.setModel("accessFromRootHub", accessFromRootHub);
+        request.setModel("isFirstPage", guidancePages.get(0).equals(currentGuidance));
+
+        if (currentGuidance == null) {
+            return;
+        }
+
+        // the guidance page contains content blocks that need valueLists to be set on the model
+        final List<HippoBean> pageContentBlocks = currentGuidance.getContentBlocks();
+        pageContentBlocks.addAll(currentGuidance.getRightHandBlocks());
+
+        final Map<String, Map<String, String>> modelToValueListMap =
+                ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+        modelToValueListMap.forEach(request::setModel);
+
+        request.setAttribute("tableComponentService", new TableComponentService());
     }
 }

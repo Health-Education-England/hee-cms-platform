@@ -28,7 +28,9 @@
 
             <div class="nhsuk-width-container">
                 <#--  Guidance title  -->
-                <h1>${currentGuidance.title}</h1>
+                <#if currentGuidance??>
+                    <h1>${currentGuidance.title}</h1>
+                </#if>
 
                 <#--  Mini-hub title [as caption]  -->
                 <span class="nhsuk-caption-xl">${document.title}</span>
@@ -42,23 +44,25 @@
             <div class="page__main">
                 <div class="page__content">
                     <#--  Content list section: START  -->
-                    <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
-                        <h2>Contents</h2>
-                        <ol class="nhsuk-contents-list__list">
-                            <#list document.guidancePages as guidance>
-                                <#if guidance == currentGuidance>
-                                    <li class="nhsuk-contents-list__item" aria-current="page">
-                                        <span class="nhsuk-contents-list__current">${guidance.title}</span>
-                                    </li>
-                                <#else>
-                                    <li class="nhsuk-contents-list__item">
-                                        <a class="nhsuk-contents-list__link"
-                                        href="${(accessFromRootHub && !accessWithEndSlash)?then(minihubName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
-                                    </li>
-                                </#if>
-                            </#list>
-                        </ol>
-                    </nav>
+                    <#if document.guidancePages?has_content>
+                        <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
+                            <h2>Contents</h2>
+                            <ol class="nhsuk-contents-list__list">
+                                <#list document.guidancePages as guidance>
+                                    <#if currentGuidance?? && guidance == currentGuidance>
+                                        <li class="nhsuk-contents-list__item" aria-current="page">
+                                            <span class="nhsuk-contents-list__current">${guidance.title}</span>
+                                        </li>
+                                    <#else>
+                                        <li class="nhsuk-contents-list__item">
+                                            <a class="nhsuk-contents-list__link"
+                                            href="${(accessFromRootHub && !accessWithEndSlash)?then(minihubName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
+                                        </li>
+                                    </#if>
+                                </#list>
+                            </ol>
+                        </nav>
+                    </#if>
                     <#--  Content list section: END  -->
 
                     <#--  Guidance content: START  -->
@@ -198,7 +202,7 @@
             <#--  Main sections: END  -->
 
             <#--  Sidebar sections: START  -->
-            <#if currentGuidance.rightHandBlocks?? && currentGuidance.rightHandBlocks?size gt 0>
+            <#if currentGuidance?? && currentGuidance.rightHandBlocks?? && currentGuidance.rightHandBlocks?size gt 0>
                 <#--  Right hand content blocks: START  -->
                 <aside class="page__rightbar">
                     <#list currentGuidance.rightHandBlocks as block>
