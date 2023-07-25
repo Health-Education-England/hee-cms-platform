@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4ea7e638-9c62-460c-afe4-dd93fc7514ba
+          jcr:uuid: 718f983d-1540-4bbd-95b5-2a1498ab3bdc
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -87,13 +87,14 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: 8bf151d5-1b94-4bb4-b364-04b687aabdb5
+          jcr:uuid: e43f2ea2-4c5a-4d00-9c46-599964a1dc30
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:topics: []
           hee:professions: []
           hee:featuredContentType: ''
           hee:publicationtype: ''
+          hee:publicationType: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -111,7 +112,7 @@ definitions:
             field: featuredContentType
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
+            hint: Please select the content type to display
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               observableId: ${cluster.id}publicationtype

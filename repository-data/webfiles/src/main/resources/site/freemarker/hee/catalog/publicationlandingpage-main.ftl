@@ -136,6 +136,10 @@
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
+
+                    <#-- Related content -->
+                    <@hee.featuredContent block=document.featuredContent/>
+
                 </div>
             </div>
             <#--  Main sections: END  -->
