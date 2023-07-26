@@ -2,40 +2,6 @@ definitions:
   config:
     /hippo:configuration/hippo:domains/tags:
       jcr:primaryType: hipposys:domain
-      /author:
-        jcr:primaryType: hipposys:authrole
-        hipposys:groups:
-          .meta:category: system
-          .meta:add-new-system-values: true
-          type: string
-          value: []
-        hipposys:role: author
-        hipposys:userrole:
-          .meta:category: system
-          type: string
-          value: xm.content.author
-        hipposys:users:
-          .meta:category: system
-          .meta:add-new-system-values: true
-          type: string
-          value: []
-      /editor:
-        jcr:primaryType: hipposys:authrole
-        hipposys:groups:
-          .meta:category: system
-          .meta:add-new-system-values: true
-          type: string
-          value: []
-        hipposys:role: editor
-        hipposys:userrole:
-          .meta:category: system
-          type: string
-          value: xm.content.editor
-        hipposys:users:
-          .meta:category: system
-          .meta:add-new-system-values: true
-          type: string
-          value: []
       /admin:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
