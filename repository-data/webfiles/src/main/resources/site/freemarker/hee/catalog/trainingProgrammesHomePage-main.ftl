@@ -25,8 +25,8 @@
                             <div class="nhsuk-grid-column-two-thirds">
                                 <div${heroType}>
                                     <h1 class="nhsuk-u-margin-bottom-3">${document.title}</h1>
-                                    <#if document.subtitle?has_content>
-                                        <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">${document.subtitle}</p>
+                                    <#if document.summary??>
+                                        <p class="nhsuk-body-l nhsuk-u-margin-bottom-0"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                                     </#if>
                                     <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
                                 </div>
@@ -41,8 +41,8 @@
             <div class="page__layout">
                 <div class="page__main">
                     <section class="nhsuk-section__content">
-                        <#if document.programmeDescription?has_content>
-                            <p class="nhsuk-body-l"><@hst.html formattedText="${document.programmeDescription!?replace('\n', '<br>')}"/></p>
+                        <#if document.caption??>
+                            <p class="nhsuk-body-l"><@hst.html formattedText="${document.caption!?replace('\n', '<br>')}"/></p>
                         </#if>
 
                         <#if document.overview??>

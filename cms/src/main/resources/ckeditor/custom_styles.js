@@ -6,7 +6,7 @@
 (function () {
   "use strict";
 
-  CKEDITOR.stylesSet.add('styles_without_h1', [
+  CKEDITOR.stylesSet.add('custom_styles', [
 	{ name: 'Normal',		element: 'p' },
 	{ name: 'Heading 2',		element: 'h2' },
 	{ name: 'Heading 3',		element: 'h3' },
