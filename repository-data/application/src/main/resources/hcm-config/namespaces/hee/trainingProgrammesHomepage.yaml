@@ -24,14 +24,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /summary:
+          /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:summary
+            hipposysedit:path: hee:subtitle
             hipposysedit:primary: false
-            hipposysedit:type: Text
+            hipposysedit:type: String
             hipposysedit:validators: [required]
           /logoGroup:
             jcr:primaryType: hipposysedit:field
@@ -59,12 +59,12 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [required]
-          /caption:
+          /programmeDescription:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:caption
+            hipposysedit:path: hee:programmeDescription
             hipposysedit:primary: false
             hipposysedit:type: Text
           /overview:
@@ -118,7 +118,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: ccba69dd-0b6d-4110-a85d-8bc3aa360f9e
           hee:addToAZ: false
-          hee:summary: ''
+          hee:subtitle: ''
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -128,7 +128,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          hee:caption: ''
+          hee:programmeDescription: ''
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -164,16 +164,16 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '60'
-          /summary:
+          /subtitle:
             jcr:primaryType: frontend:plugin
-            caption: Summary
-            field: summary
+            caption: Page subtitle
+            field: subtitle
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '185'
+              maxlength: '120'
           /heroImage:
             jcr:primaryType: frontend:plugin
             caption: Hero image
@@ -193,10 +193,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /caption:
+          /programmeDescription:
             jcr:primaryType: frontend:plugin
-            caption: Caption
-            field: caption
+            caption: Programme description
+            field: programmeDescription
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -209,8 +209,8 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source"
-                }'
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source",
+                stylesSet: "styles_without_h1-h2:./styles_without_h1-h2.js" }'
           /pathways:
             jcr:primaryType: frontend:plugin
             caption: Pathways
