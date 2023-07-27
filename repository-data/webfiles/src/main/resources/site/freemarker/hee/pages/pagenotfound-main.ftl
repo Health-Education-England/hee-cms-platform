@@ -11,4 +11,10 @@
             <p class="nhsuk-lede-text"><@fmt.message key="pagenotfound.text"/></p>
         </div>
     </div>
+
+    <#--  Commenting out the following to restrict Editors
+          not to add page components to the page via experience manager  -->
+    <#--  <div class="page__main nhsuk-width-container">
+        <@hst.include ref="container"/>
+    </div>  -->
 </main>
