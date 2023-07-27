@@ -24,7 +24,7 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /summary:
+          /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
@@ -185,7 +185,7 @@ definitions:
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
-            field: summary
+            field: subtitle
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
