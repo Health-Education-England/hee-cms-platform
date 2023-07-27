@@ -69,6 +69,6 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ stylesSet: "styles_without_h1:./styles_without_h1.js"
+              ckeditor.config.appended.json: '{ stylesSet: "custom_styles:./custom_styles.js"
                 }'
               ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
