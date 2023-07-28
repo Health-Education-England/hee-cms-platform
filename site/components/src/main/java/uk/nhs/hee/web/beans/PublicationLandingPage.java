@@ -91,6 +91,7 @@ public class PublicationLandingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:languageVersionsContent")
     public List<AssetResource> getLanguageVersionsContent() {
         return getChildBeansByName("hee:languageVersionsContent", AssetResource.class);
+    }
 
     @HippoEssentialsGenerated(internalName = "hee:featuredContent")
     public FeaturedContentReference getFeaturedContent() {
