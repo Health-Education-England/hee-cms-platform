@@ -214,7 +214,7 @@ definitions:
           /pathways:
             jcr:primaryType: frontend:plugin
             caption: Pathways
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
+            compoundList: hee:htmlWithoutHeadingOneAndTwo,hippogallerypicker:imagelink,hee:richTextReference
             contentPickerType: links
             field: pathways
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -225,7 +225,7 @@ definitions:
           /trainingRoutes:
             jcr:primaryType: frontend:plugin
             caption: Training Routes
-            compoundList: hee:ActionLink,hee:blockLinksReference,hippostd:html,hee:richTextReference
+            compoundList: hee:ActionLink,hee:blockLinksReference,hee:htmlWithoutHeadingOneAndTwo,hee:richTextReference
             contentPickerType: links
             field: trainingRoutes
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -237,7 +237,7 @@ definitions:
           /support:
             jcr:primaryType: frontend:plugin
             caption: Support
-            compoundList: hee:ActionLink,hippostd:html,hee:richTextReference
+            compoundList: hee:ActionLink,hee:htmlWithoutHeadingOneAndTwo,hee:richTextReference
             contentPickerType: links
             field: support
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
