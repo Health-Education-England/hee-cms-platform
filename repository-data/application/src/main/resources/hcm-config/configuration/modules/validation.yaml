@@ -46,7 +46,7 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:google-map-embed-code-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: org.onehippo.cms.services.validation.validator.RegExpValidator
-      regexp.pattern: ^(?!.*<iframe src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*><\/iframe>.*<iframe).*<iframe
+      regexp.pattern: ^(?!.*<iframe src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*>(?:(?!<\/iframe>).*<iframe|<\/iframe>(?!.*<iframe)).*<\/iframe>).*<iframe
         src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*><\/iframe>(?![\s\S]*<iframe)
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-training-journey-validator:
       jcr:primaryType: hipposys:moduleconfig
