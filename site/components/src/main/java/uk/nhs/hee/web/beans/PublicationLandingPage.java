@@ -3,7 +3,6 @@ package uk.nhs.hee.web.beans;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-
 import java.util.Calendar;
 import java.util.List;
 
@@ -92,5 +91,9 @@ public class PublicationLandingPage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:languageVersionsContent")
     public List<AssetResource> getLanguageVersionsContent() {
         return getChildBeansByName("hee:languageVersionsContent", AssetResource.class);
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContent")
+    public FeaturedContentReference getFeaturedContent() {
+        return getBean("hee:featuredContent", FeaturedContentReference.class);
     }
 }

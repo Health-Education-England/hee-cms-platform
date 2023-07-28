@@ -25,7 +25,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: 39d9f3ac-dd3d-444c-a2bf-90a5a16524a8
+        hippo:versionHistory: 975e3e9a-6ac1-4660-a00a-4175ea074413
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
@@ -46,13 +46,12 @@
           hee:title: Reasonable adjustments policy
           hee:updatedDate: 2022-12-31T00:00:00Z
           hippo:availability: []
-          hippostd:holder: admin
           hippostd:retainable: false
           hippostd:state: draft
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-06-21T15:22:06.588+01:00
+          hippostdpubwf:lastModificationDate: 2023-07-20T12:51:11.471+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -85,6 +84,11 @@
             /hee:assetData:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /reasonable-adjustments-policy---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -110,7 +114,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-06-20T18:26:57.168+01:00
+          hippostdpubwf:lastModificationDate: 2023-07-20T12:51:11.441+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -143,6 +147,11 @@
             /hee:assetData:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /reasonable-adjustments-policy---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
@@ -168,9 +177,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-06-20T18:26:57.168+01:00
+          hippostdpubwf:lastModificationDate: 2023-07-20T12:51:11.441+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-06-20T18:27:00.255+01:00
+          hippostdpubwf:publicationDate: 2023-07-20T12:51:13.636+01:00
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -202,6 +211,11 @@
             /hee:assetData:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
       /reasonable-adjustments-policy---publication-1:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1078,12 +1092,15 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 126cc010-dbdd-4149-bc68-68312a63fc2f
         hippo:name: Higher Specialist Scientist Training - Publication landing
-        hippo:versionHistory: a515f498-3074-48e8-bc69-9f773ae8d431
+        hippo:versionHistory: 08e91a96-74f8-4d42-a0bf-dbabb6f0f7ed
         /higher-specialist-scientist-training---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 73871551-caa4-4b43-8501-6ca011e09c7a
+          hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: other@formats.co.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
+          hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
           hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
             pre_employment, careers]
@@ -1101,7 +1118,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:23:22.091Z
+          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.524+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1131,11 +1148,19 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /higher-specialist-scientist-training---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
           jcr:uuid: e1650153-5391-4632-9d27-7965b47ce4fa
+          hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: other@formats.co.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
+          hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
           hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
             pre_employment, careers]
@@ -1153,7 +1178,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:36:05.299Z
+          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.454+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1183,11 +1208,19 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /higher-specialist-scientist-training---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: 7204e177-bb3e-4ced-be5c-89ae36034711
+          hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: other@formats.co.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
+          hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
           hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
             pre_employment, careers]
@@ -1205,9 +1238,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:36:05.299Z
+          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.454+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-28T21:53:36.327Z
+          hippostdpubwf:publicationDate: 2023-07-20T12:52:56.576+01:00
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -1236,6 +1269,11 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
+          /hee:featuredContent:
+            jcr:primaryType: hee:featuredContentReference
+            /hee:featuredContentBlock:
+              jcr:primaryType: hippo:mirror
+              hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
       /higher-specialist-scientist-training---publication:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
