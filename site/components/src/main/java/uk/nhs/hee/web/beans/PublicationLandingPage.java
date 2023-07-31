@@ -86,8 +86,8 @@ public class PublicationLandingPage extends BaseDocument {
         return getSingleProperty("hee:otherFormatsEmail");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:featuredContent")
-    public FeaturedContentReference getFeaturedContent() {
-        return getBean("hee:featuredContent", FeaturedContentReference.class);
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 }
