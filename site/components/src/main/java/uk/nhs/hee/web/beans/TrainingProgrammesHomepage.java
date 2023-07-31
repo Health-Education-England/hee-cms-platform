@@ -1,16 +1,13 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+
 import java.util.List;
 import uk.nhs.hee.web.beans.FeaturedContentReference;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammesHomepage")
 @Node(jcrType = "hee:trainingProgrammesHomepage")
 public class TrainingProgrammesHomepage extends BaseDocument {
@@ -44,29 +41,34 @@ public class TrainingProgrammesHomepage extends BaseDocument {
         return getHippoHtml("hee:overview");
     }
 
-    public List<?> getPathwaysBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:pathways")
+    public <T extends HippoBean> List<T> getPathwaysBlocks() {
         return getChildBeansByName("hee:pathways");
     }
 
-    public List<?> getTrainingRoutesBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:trainingRoutes")
+    public <T extends HippoBean> List<T> getTrainingRoutesBlocks() {
         return getChildBeansByName("hee:trainingRoutes");
     }
 
-    public List<?> getSupportBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:support")
+    public <T extends HippoBean> List<T> getSupportBlocks() {
         return getChildBeansByName("hee:support");
     }
 
-    public List<?> getRegionsBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:regions")
+    public <T extends HippoBean> List<T> getRegionsBlocks() {
         return getChildBeansByName("hee:regions");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:rightHandBlocks")
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:text")
-    public String getText() {
-        return getSingleProperty("hee:text");
+    @HippoEssentialsGenerated(internalName = "hee:caption")
+    public String getCaption() {
+        return getSingleProperty("hee:caption");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:featuredContent")

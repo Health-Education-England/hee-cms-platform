@@ -8,6 +8,7 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.components.info.PublicationLandingPageComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
 
@@ -22,6 +23,8 @@ public class PublicationLandingPageComponent extends EssentialsDocumentComponent
         super.doBeforeRender(request, response);
         addPublicationTypeTopicAndProfessionMapsToModel(request);
         addPublicationListingPageURLToModel(request);
+
+        request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
     }
 
     /**

@@ -1,17 +1,11 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
-import org.hippoecm.hst.content.beans.standard.HippoHtml;
-import java.util.List;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import java.util.Calendar;
-import uk.nhs.hee.web.beans.FeaturedContentReference;
+import java.util.List;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
 @Node(jcrType = "hee:trainingProgrammePage")
 public class TrainingProgrammePage extends BaseDocument {
@@ -40,66 +34,19 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBean("hee:cardImage", ImageSetWithCaption.class);
     }
 
-    public List<?> getRegionsBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:regions")
+    public <T extends HippoBean> List<T> getRegionsBlocks() {
         return getChildBeansByName("hee:regions");
     }
 
-    public List<?> getOverviewBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:overview")
+    public <T extends HippoBean> List<T> getOverviewBlocks() {
         return getChildBeansByName("hee:overview");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:rightHandBlocks")
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:trainingType")
-    public String getTrainingType() {
-        return getSingleProperty("hee:trainingType");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:professions")
-    public String[] getProfessions() {
-        return getMultipleProperty("hee:professions");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:topics")
-    public String[] getTopics() {
-        return getMultipleProperty("hee:topics");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:discipline")
-    public String getDiscipline() {
-        return getSingleProperty("hee:discipline");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:recruitmentFormat")
-    public String getRecruitmentFormat() {
-        return getSingleProperty("hee:recruitmentFormat");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:duration")
-    public Long getDuration() {
-        return getSingleProperty("hee:duration");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:fillRate")
-    public Long getFillRate() {
-        return getSingleProperty("hee:fillRate");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:opening")
-    public Calendar getOpening() {
-        return getSingleProperty("hee:opening");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:closing")
-    public Calendar getClosing() {
-        return getSingleProperty("hee:closing");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:competitionRatio")
-    public Double getCompetitionRatio() {
-        return getSingleProperty("hee:competitionRatio");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
