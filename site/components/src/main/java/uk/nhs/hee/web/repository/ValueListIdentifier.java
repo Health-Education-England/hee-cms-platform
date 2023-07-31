@@ -113,7 +113,7 @@ public enum ValueListIdentifier {
     /**
      * {@code topic} value-list identifier.
      */
-    TOPIC("topic"),
+    TOPIC("trainingTopic"),
 
     /**
      * {@code clinicleDiscipline} value-list identifier.
@@ -123,7 +123,7 @@ public enum ValueListIdentifier {
     /**
      * {@code profession} value-list identifier.
      */
-    PROFESSION("profession");
+    PROFESSION("trainingProfession");
 
 
     private final String name;

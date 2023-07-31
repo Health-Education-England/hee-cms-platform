@@ -1,0 +1,24 @@
+/content/documents/administration/valuelists/training-recruitment-format:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 3241387f-747d-4a31-8dcf-81ab477a13a4
+  hippo:name: TrainingRecruitmentFormat
+  /training-recruitment-format:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 841b7a3d-f9a5-4cfa-93aa-c7614650b186
+    hippo:availability: [live, preview]
+    hippotranslation:id: dab677b0-4af7-42e3-b1a3-53c331d8f819
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: uncoupled
+      selection:label: Uncoupled
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: runthrough
+      selection:label: Runthrough
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: standard
+      selection:label: Standard
