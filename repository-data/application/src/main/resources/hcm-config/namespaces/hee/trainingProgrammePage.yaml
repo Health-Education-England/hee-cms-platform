@@ -11,11 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 07e45714-8e91-4f49-a40e-4f463ce1d439
+          jcr:uuid: 4360bba4-a786-4ec4-944a-708cd5267c01
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-training-journey-validator']
+          hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -81,54 +81,106 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /trainingJourneyPrerequisites:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:trainingJourneyPrerequisites
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-          /trainingJourneyOptions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:trainingJourneyOptions
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-          /trainingJourneySummary:
+          /trainingType:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:trainingJourneySummary
+            hipposysedit:path: hee:trainingType
             hipposysedit:primary: false
-            hipposysedit:type: String
-          /applicationButtonTitle:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:applicationButtonTitle
-            hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
-          /applicationButtonLink:
+          /professions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:professions
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /topics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:topics
+            hipposysedit:primary: false
+            hipposysedit:type: String
+          /discipline:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:applicationButtonLink
+            hipposysedit:path: hee:discipline
             hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required, url]
+            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [required]
+          /recruitmentFormat:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:recruitmentFormat
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [required]
+          /duration:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:duration
+            hipposysedit:primary: false
+            hipposysedit:type: Long
+            hipposysedit:validators: [required]
+          /competitionRatio:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:competitionRatio
+            hipposysedit:primary: false
+            hipposysedit:type: Double
+            hipposysedit:validators: [optional]
+          /fillRate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:fillRate
+            hipposysedit:primary: false
+            hipposysedit:type: Long
+            hipposysedit:validators: [optional]
+          /opening:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:opening
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+          /closing:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:closing
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+          /applicationInformation:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:applicationInformation
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 326662b5-1cfd-406d-b69d-a34fc1ff6294
+          jcr:uuid: 1bd1447a-6ca3-484b-ab93-2ee3ea94a60c
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -138,9 +190,16 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: ''
           hippotranslation:locale: ''
-          hee:trainingJourneySummary: ''
-          hee:applicationButtonTitle: ''
-          hee:applicationButtonLink: ''
+          hee:duration: 0
+          hee:closing: 0001-01-01T12:00:00Z
+          hee:discipline: ''
+          hee:fillRate: 0
+          hee:opening: 0001-01-01T12:00:00Z
+          hee:trainingType: ''
+          hee:topics: []
+          hee:professions: []
+          hee:recruitmentFormat: ''
+          hee:competitionRatio: 0.0
           /hee:microHero:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -156,6 +215,9 @@ definitions:
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /hee:applicationInformation:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -229,23 +291,135 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /applicationButtonTitle:
+          /applicationInformation:
             jcr:primaryType: frontend:plugin
-            caption: Application button title
-            field: applicationButtonTitle
-            hint: Enter a button title e.g. Apply in Oriel  (60 character limit)
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Application information
+            field: applicationInformation
+            hint: Browse to and select one or more Standard content pages
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '60'
-          /applicationButtonLink:
+              nodetypes: ['hee:guidance']
+          /left:
             jcr:primaryType: frontend:plugin
-            caption: Application button link
-            field: applicationButtonLink
-            hint: Please enter a URL to an application system such as Oriel
+            item: ${cluster.id}.left.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.left
+          /right:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.right.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.right
+          /trainingType:
+            jcr:primaryType: frontend:plugin
+            caption: Training Type
+            field: trainingType
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.right.item
+            wicket.id: ${cluster.id}.left.item
+            hint: Please select the training class
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              sortOrder: ascending
+              source: /content/documents/administration/valuelists/training-type
+          /professions:
+            jcr:primaryType: frontend:plugin
+            caption: Professions
+            field: professions
+            multiselect.type: palette
+            palette.alloworder: true
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.left.item
+            hint: Select professions relevant to this training programme
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              source: /content/documents/administration/valuelists/training-profession
+          /topics:
+            jcr:primaryType: frontend:plugin
+            caption: Topics
+            field: topics
+            multiselect.type: palette
+            palette.alloworder: true
+            palette.maxrows: '10'
+            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
+            selectlist.maxrows: '10'
+            valuelist.provider: service.valuelist.default
+            wicket.id: ${cluster.id}.left.item
+            hint: Select relevant topics
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              source: /content/documents/administration/valuelists/training-topic
+          /discipline:
+            jcr:primaryType: frontend:plugin
+            caption: Discipline
+            field: discipline
+            hint: Please select the discipline associated with this training programme
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              sortOrder: ascending
+              source: /content/documents/administration/valuelists/training-clinical-discipline
+          /recruitmentFormat:
+            jcr:primaryType: frontend:plugin
+            caption: Recruitment Format
+            field: recruitmentFormat
+            hint: Please select the training type
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              sortOrder: ascending
+              source: /content/documents/administration/valuelists/training-recruitment-format
+          /duration:
+            jcr:primaryType: frontend:plugin
+            caption: Duration
+            field: duration
+            hint: Enter the training programme duration in months (e.g. 24)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /competitionRatio:
+            jcr:primaryType: frontend:plugin
+            caption: Competition Ratio
+            field: competitionRatio
+            hint: Please enter the training programme competition ratio
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /fillRate:
+            jcr:primaryType: frontend:plugin
+            caption: Fill rate
+            field: fillRate
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /opening:
+            jcr:primaryType: frontend:plugin
+            caption: Opening
+            field: opening
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /closing:
+            jcr:primaryType: frontend:plugin
+            caption: Closing
+            field: closing
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /rightHandBlocks:
@@ -257,56 +431,5 @@ definitions:
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.right.item
             hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /left:
-            jcr:primaryType: frontend:plugin
-            item: ${cluster.id}.left.item
-            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-            wicket.id: ${cluster.id}.left
-          /right:
-            jcr:primaryType: frontend:plugin
-            item: ${cluster.id}.right.item
-            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-            wicket.id: ${cluster.id}.right
-          /trainingJourneySummary:
-            jcr:primaryType: frontend:plugin
-            caption: Training journey summary
-            field: trainingJourneySummary
-            hint: Enter a summary for the training journey (120 character limit)
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              maxlength: '120'
-          /trainingJourneyPrerequisites:
-            jcr:primaryType: frontend:plugin
-            caption: Training journey prerequisites
-            field: trainingJourneyPrerequisites
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            hint: Please browse to and select at least one Training programme page
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              last.visited.nodetypes: []
-              nodetypes: ['hee:trainingProgrammePage']
-          /trainingJourneyOptions:
-            jcr:primaryType: frontend:plugin
-            caption: Training journey optional routes
-            field: trainingJourneyOptions
-            hint: Please browse to and select at least one Training programme page
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:trainingProgrammePage']
-          /regions:
-            jcr:primaryType: frontend:plugin
-            caption: Regions
-            compoundList: hee:navMap
-            contentPickerType: links
-            field: regions
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
