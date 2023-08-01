@@ -45,9 +45,13 @@ definitions:
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryFeaturedDocumentsValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:google-map-embed-code-validator:
       jcr:primaryType: hipposys:moduleconfig
-      hipposys:className: org.onehippo.cms.services.validation.validator.RegExpValidator
-      regexp.pattern: ^(?!.*<iframe src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*><\/iframe>.*<iframe).*<iframe
-        src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*><\/iframe>(?![\s\S]*<iframe)
+      hipposys:className: uk.nhs.hee.web.validation.validator.EmbedCodeIFrameValidator
+      embed.code.src.prefix: ['https://www.google.com/maps/embed?pb=']
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-training-journey-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryTrainingJourneyValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:media-embed-code-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      embed.code.src.prefix: ['https://www.youtube.com/embed/', 'https://player.vimeo.com/video/',
+        'https://anchor.fm/health-education-england/embed/episodes/', 'https://podcasters.spotify.com/pod/show/nhse-wte/embed/episodes/']
+      hipposys:className: uk.nhs.hee.web.validation.validator.EmbedCodeIFrameValidator
