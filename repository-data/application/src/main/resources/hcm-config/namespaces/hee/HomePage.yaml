@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 8bc6b409-a808-4758-856d-8a974736ce59
+          jcr:uuid: be91b0ca-7422-4abb-8564-05044ee9ab61
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -58,14 +58,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
             hipposysedit:validators: [optional]
-          /featuredContent:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:featuredContent
-            hipposysedit:primary: false
-            hipposysedit:type: hee:featuredContentReference
           /featuredContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -85,7 +77,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 0da7567e-a6df-4dbe-893f-ca061e0085e7
+          jcr:uuid: 99e59a59-c340-4485-b06d-d50310480288
           hippostdpubwf:lastModificationDate: 2021-03-24T17:00:07.151+07:00
           hippostdpubwf:creationDate: 2021-03-24T17:00:07.151+07:00
           hee:title: ''
@@ -99,11 +91,6 @@ definitions:
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:featuredContent:
-            jcr:primaryType: hee:featuredContentReference
-            /hee:featuredContentBlock:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:featuredContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -167,15 +154,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
-          /featuredContent:
-            jcr:primaryType: frontend:plugin
-            caption: Featured content
-            field: featuredContent
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /featuredContentBlock:
             jcr:primaryType: frontend:plugin
             caption: Featured content

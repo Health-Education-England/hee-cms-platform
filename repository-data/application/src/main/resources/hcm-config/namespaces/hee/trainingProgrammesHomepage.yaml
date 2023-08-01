@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 98c8f247-7487-4ea1-8265-a9f47830caaf
+          jcr:uuid: 8958cc5d-5571-418f-a26d-d500ad74518d
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -111,14 +111,6 @@ definitions:
             hipposysedit:path: hee:regions
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /featuredContent:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:featuredContent
-            hipposysedit:primary: false
-            hipposysedit:type: hee:featuredContentReference
           /featuredContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -132,7 +124,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 918d841c-949c-475d-be00-dc2434ee9b6a
+          jcr:uuid: 4cb18c5f-804b-4212-8961-735494e5e87c
           hee:addToAZ: false
           hee:summary: ''
           hee:title: ''
@@ -157,11 +149,6 @@ definitions:
           /hee:overview:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
-          /hee:featuredContent:
-            jcr:primaryType: hee:featuredContentReference
-            /hee:featuredContentBlock:
-              jcr:primaryType: hippo:mirror
-              hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
           /hee:featuredContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -310,15 +297,6 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
-          /featuredContent:
-            jcr:primaryType: frontend:plugin
-            caption: Featured content
-            field: featuredContent
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /featuredContentBlock:
             jcr:primaryType: frontend:plugin
             caption: Featured content
