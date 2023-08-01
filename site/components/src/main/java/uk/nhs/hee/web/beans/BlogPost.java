@@ -1,14 +1,12 @@
 package uk.nhs.hee.web.beans;
 
 import org.hippoecm.hst.content.beans.Node;
+import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+
 import java.util.Calendar;
 import java.util.List;
-import org.hippoecm.hst.content.beans.standard.HippoBean;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:blogPost")
 @Node(jcrType = "hee:blogPost")
 public class BlogPost extends BaseDocument {
@@ -27,11 +25,13 @@ public class BlogPost extends BaseDocument {
         return getSingleProperty("hee:summary");
     }
 
-    public List<HippoBean> getContentBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:contentBlocks")
+    public <T extends HippoBean> List<T> getContentBlocks() {
         return getChildBeansByName("hee:contentBlocks");
     }
 
-    public List<HippoBean> getRightHandBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:rightHandBlocks")
+    public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 

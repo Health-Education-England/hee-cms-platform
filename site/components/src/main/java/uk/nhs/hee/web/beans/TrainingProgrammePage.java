@@ -1,15 +1,11 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
-import org.hippoecm.hst.content.beans.standard.HippoHtml;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import java.util.Calendar;
 import java.util.List;
 
-/**
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
 @Node(jcrType = "hee:trainingProgrammePage")
 public class TrainingProgrammePage extends BaseDocument {
@@ -38,16 +34,24 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBean("hee:cardImage", ImageSetWithCaption.class);
     }
 
-    public List<?> getRegionsBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:regions")
+    public <T extends HippoBean> List<T> getRegionsBlocks() {
         return getChildBeansByName("hee:regions");
     }
 
-    public List<?> getOverviewBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:overview")
+    public <T extends HippoBean> List<T> getOverviewBlocks() {
         return getChildBeansByName("hee:overview");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:rightHandBlocks")
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
+    public String getTrainingJourneySummary() {
+        return getSingleProperty("hee:trainingJourneySummary");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
@@ -60,15 +64,9 @@ public class TrainingProgrammePage extends BaseDocument {
         return getSingleProperty("hee:applicationButtonLink");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
-    public String getTrainingJourneySummary() {
-        return getSingleProperty("hee:trainingJourneySummary");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
     public List<HippoBean> getTrainingJourneyPrerequisites() {
-        return getLinkedBeans("hee:trainingJourneyPrerequisites",
-                HippoBean.class);
+        return getLinkedBeans("hee:trainingJourneyPrerequisites", HippoBean.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
