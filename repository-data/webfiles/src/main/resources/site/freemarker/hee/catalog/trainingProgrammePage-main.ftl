@@ -171,9 +171,9 @@
 
         <#--  Featured Content: STARTS  -->
         <section class="page__feature">
-            <#if document.featuredContent.getFeaturedContentBlock()??>
-                <div class="nhsuk-section__content">
-                    <@hee.featuredContent block=document.featuredContent/>
+            <#if document.featuredContentBlock??>
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document/>
                 </div>
             </#if>
         </section>

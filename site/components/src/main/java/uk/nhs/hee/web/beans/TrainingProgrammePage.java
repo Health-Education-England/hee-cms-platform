@@ -74,8 +74,8 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:featuredContent")
-    public FeaturedContentReference getFeaturedContent() {
-        return getBean("hee:featuredContent", FeaturedContentReference.class);
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 }

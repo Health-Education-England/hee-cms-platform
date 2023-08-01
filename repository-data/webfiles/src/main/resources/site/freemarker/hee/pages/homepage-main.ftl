@@ -98,9 +98,9 @@
             </div>
             <#--  Featured Content: STARTS  -->
             <section class="page__feature">
-                <#if document.featuredContent.getFeaturedContentBlock()??>
+                <#if document.featuredContentBlock??>
                     <div class="nhsuk-section__content">
-                        <@hee.featuredContent block=document.featuredContent/>
+                        <@hee.featuredContent block=document/>
                     </div>
                 </#if>
             </section>

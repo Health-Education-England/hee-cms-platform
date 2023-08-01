@@ -4,7 +4,6 @@ import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoHtml;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-
 import java.util.List;
 import uk.nhs.hee.web.beans.FeaturedContentReference;
 
@@ -74,5 +73,10 @@ public class TrainingProgrammesHomepage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:featuredContent")
     public FeaturedContentReference getFeaturedContent() {
         return getBean("hee:featuredContent", FeaturedContentReference.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 }

@@ -3,7 +3,7 @@
 <#include "../utils/date-util.ftl">
 <#include "../macros/internal-link.ftl">
 
-<#macro featuredContent block maxCards=2>
+<#macro featuredContent block maxCards=3>
     <#if block.featuredContentBlock??>
         <#assign fcBlock=block.featuredContentBlock>
         <#assign featuredDocuments = featuredContentBlockService.getFeaturedContent(hstRequest, fcBlock, maxCards)>
