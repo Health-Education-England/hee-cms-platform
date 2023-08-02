@@ -60,7 +60,7 @@
 
   <properties>
     <!-- Maven CI Friendly Version -->
-    <revision>1.0.50</revision>
+    <revision>1.0.52</revision>
     <env>local</env>
 
     <!--***START temporary override of versions*** -->
@@ -70,6 +70,7 @@
     <jsp-api.version>2.2</jsp-api.version>
     <taglibs.version>1.2.5</taglibs.version>
     <bloomreach.text-search-replace.version>3.0.1</bloomreach.text-search-replace.version>
+    <jsoup.version>1.15.3</jsoup.version>
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
     <docker.postgres.bind.1>${project.basedir}/target/postgres-data:/var/lib/postgresql/data</docker.postgres.bind.1>
     <hippo.cms.locales>nl,de,fr,es,zh</hippo.cms.locales>
@@ -122,6 +123,12 @@
         <groupId>org.freemarker</groupId>
         <artifactId>freemarker</artifactId>
         <version>${freemarker.version}</version>
+      </dependency>
+
+      <dependency>
+        <artifactId>jsoup</artifactId>
+        <groupId>org.jsoup</groupId>
+        <version>${jsoup.version}</version>
       </dependency>
 
       <dependency>

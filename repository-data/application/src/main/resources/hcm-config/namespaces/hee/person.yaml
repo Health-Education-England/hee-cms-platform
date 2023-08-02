@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9d966755-812c-4190-87be-7b8a082d850e
+          jcr:uuid: 0113968f-a62d-4505-a4a3-8ef80e7d30f0
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -132,7 +132,6 @@ definitions:
             hipposysedit:path: hee:title
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
           /phoneExtension:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -167,7 +166,7 @@ definitions:
           hee:phoneNumber: ''
           hee:email: ''
           hee:address: ''
-          jcr:uuid: 1c9bd495-9d64-40fd-96a8-953098ddad02
+          jcr:uuid: cc5acf95-f13c-4612-a0b1-54559f44e91b
           hippostdpubwf:lastModificationDate: 2021-05-13T16:45:32.265+07:00
           hippostdpubwf:creationDate: 2021-05-13T16:45:32.266+07:00
           hee:bio: ''
