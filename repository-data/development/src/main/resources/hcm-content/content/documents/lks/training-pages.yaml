@@ -18,8 +18,8 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: c0662a71-5458-4d26-8ef6-03177733d542
       hee:addToAZ: false
-      hee:caption: I am the caption
-      hee:summary: This is the training programmes homepage
+      hee:programmeDescription: I am the Programme description
+      hee:subtitle: I am the subtitle
       hee:title: Training Homepage
       hippo:availability: []
       hippostd:retainable: false
@@ -40,16 +40,16 @@
         hippo:modes: []
         hippo:values: []
       /hee:overview:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>This is the overview section</p>
       /hee:trainingRoutes[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the training routes</p>
       /hee:pathways[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the pathways</p>
       /hee:support[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the support</p>
       /hee:rightHandBlocks[1]:
         jcr:primaryType: hee:QuickLinks
@@ -154,8 +154,8 @@
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: dface5d9-3912-444f-b9a8-b05a11049915
       hee:addToAZ: false
-      hee:caption: I am the caption
-      hee:summary: This is the training programmes homepage
+      hee:programmeDescription: I am the Programme description
+      hee:subtitle: I am the subtitle
       hee:title: Training Homepage
       hippo:availability: [preview]
       hippostd:retainable: false
@@ -176,16 +176,16 @@
         hippo:modes: []
         hippo:values: []
       /hee:overview:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>This is the overview section</p>
       /hee:trainingRoutes[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the training routes</p>
       /hee:pathways[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the pathways</p>
       /hee:support[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the support</p>
       /hee:rightHandBlocks[1]:
         jcr:primaryType: hee:QuickLinks
@@ -282,8 +282,8 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: c7baa9bb-d1c9-48c0-b8f3-6bb303c96ae9
       hee:addToAZ: false
-      hee:caption: I am the caption
-      hee:summary: This is the training programmes homepage
+      hee:programmeDescription: I am the Programme description
+      hee:subtitle: I am the subtitle
       hee:title: Training Homepage
       hippo:availability: [live]
       hippostd:retainable: false
@@ -305,16 +305,16 @@
         hippo:modes: []
         hippo:values: []
       /hee:overview:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>This is the overview section</p>
       /hee:trainingRoutes[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the training routes</p>
       /hee:pathways[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the pathways</p>
       /hee:support[1]:
-        jcr:primaryType: hippostd:html
+        jcr:primaryType: hee:htmlWithoutHeadingOneAndTwo
         hippostd:content: <p>I am the support</p>
       /hee:rightHandBlocks[1]:
         jcr:primaryType: hee:QuickLinks
