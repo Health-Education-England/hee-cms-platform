@@ -85,15 +85,17 @@ public class EmbedCodeIFrameValidator implements Validator<String> {
         final Elements allEls = embedCodeDoc.getAllElements();
         final Elements iframeEls = embedCodeDoc.select(ELEMENT_IFRAME);
 
-        // Validates if the embed code doesn't contain any element(s) other than iframe element
-        // Deducting #root element (added by Jsoup by default) from 'allEls'
-        if (iframeEls.size() == 0 || ((iframeEls.size() != allEls.size() - 1))) {
-            return Optional.of(context.createViolation("non-iframe-elements-error"));
-        }
-
         // Validates if the embed code doesn't contain more than one iframe element
         if (iframeEls.size() > 1) {
             return Optional.of(context.createViolation("multiple-iframe-elements-error"));
+        }
+
+        // Validates if the embed code doesn't contain any element(s) other than iframe element
+        // Deducting #root element (added by Jsoup by default) from 'allEls'
+        if (iframeEls.size() == 0
+                || (iframeEls.size() != allEls.size() - 1)
+                || !iframeEls.get(0).outerHtml().equals(embedCodeDoc.html())) {
+            return Optional.of(context.createViolation("non-iframe-elements-error"));
         }
 
         // Validates if the embed code iframe src matches
