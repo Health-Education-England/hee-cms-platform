@@ -2,7 +2,7 @@
 
 <#macro rightHandImage image>
     <@hst.link var="imgLink" hippobean=image.rightHandImageReference.imageLink/>
-    <figure class="nhsuk-image--card" style="width: 100%">
+    <figure class="nhsuk-image--card">
         <img class="nhsuk-image__img" src="${imgLink}" alt="${image.rightHandImageReference.alternateText}">
         <#if image.rightHandImageReference.caption?has_content>
             <figcaption class="nhsuk-image__caption">
