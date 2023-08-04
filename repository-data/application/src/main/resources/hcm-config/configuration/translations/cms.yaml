@@ -19,7 +19,7 @@ definitions:
         a different person.'
       hee:numeric-validator: Please enter a number
       hee:mandatory-publication-professions-or-topics-validator: Please select at
-        least one option from either Professions or Topics
+        least one option from either Professions or Healthcare topics
       hee:phone-number-validator#uk-country-code-error: Please remove UK country code
         prefix '+44' from the phone number
       hee:phone-number-validator#invalid-phone-number: Please enter a valid phone
@@ -66,6 +66,7 @@ definitions:
         ${supportedEmbedSrcPrefixes}'
       hee:media-embed-code-validator#invalid-embed-code-error: Enter a valid embed
         code
+      hee:mandatory-publication-type-validator: Please select a Publication type
     /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
       jcr:primaryType: hipposys:resourcebundles
       /en:

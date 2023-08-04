@@ -1,0 +1,2836 @@
+/content/taxonomies:
+  jcr:primaryType: hippotaxonomy:container
+  /GlobalProfessions:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: 724343aa-7729-4f98-a70d-6778dc4ee8db
+    /GlobalProfessions[1]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 2f46ac86-5518-4776-a0a3-b0a62f40d051
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-04T07:52:31.051+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-04T07:58:08.177+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /advanced-critical-care-practitioners:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advanced-critical-care-practitioners
+        locale.en.name: Advanced critical care practitioners
+        /anaesthesia-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anaesthesia-associate
+          locale.en.name: Anaesthesia associate
+        /physician-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: physician-associate
+          locale.en.name: Physician associate
+        /surgical-care-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: surgical-care-practitioner
+          locale.en.name: Surgical care practitioner
+      /allied-health-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: allied-health-professionals
+        locale.en.name: Allied health professionals
+        /art-therapist_x002f_art-psychotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: art-therapist_x002f_art-psychotherapist
+          locale.en.name: Art therapist/art psychotherapist
+        /diagnostic-radiographer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: diagnostic-radiographer
+          locale.en.name: Diagnostic radiographer
+        /dietitian:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dietitian
+          locale.en.name: Dietitian
+        /dramatherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dramatherapist
+          locale.en.name: Dramatherapist
+        /music-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: music-therapist
+          locale.en.name: Music therapist
+        /occupational-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-therapist
+          locale.en.name: Occupational therapist
+        /operating-department-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: operating-department-practitioner
+          locale.en.name: Operating department practitioner
+        /orthoptist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: orthoptist
+          locale.en.name: Orthoptist
+        /osteopath:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: osteopath
+          locale.en.name: Osteopath
+        /physiotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: physiotherapist
+          locale.en.name: Physiotherapist
+        /podiatrist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: podiatrist
+          locale.en.name: Podiatrist
+        /prosthetist_x002f_orthotist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: prosthetist_x002f_orthotist
+          locale.en.name: Prosthetist/orthotist
+        /speech-and-language-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: speech-and-language-therapist
+          locale.en.name: Speech and language therapist
+        /therapeutic-radiographer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: therapeutic-radiographer
+          locale.en.name: Therapeutic radiographer
+      /ambulance-service-team:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ambulance-service-team
+        locale.en.name: Ambulance service team
+      /ambulance-care-assistant-and-patient-transport-service-(pts)-driver:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ambulance-care-assistant-and-patient-transport-service-(pts)-driver
+        locale.en.name: Ambulance care assistant and Patient Transport Service (PTS)
+          driver
+      /call-handler_x002f_emergency-medical-dispatcher:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: call-handler_x002f_emergency-medical-dispatcher
+        locale.en.name: Call handler/emergency medical dispatcher
+      /emergency-care-assistant:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emergency-care-assistant
+        locale.en.name: Emergency care assistant
+        /emergency-medical-technician:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: emergency-medical-technician
+          locale.en.name: Emergency medical technician
+        /experienced-paramedic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: experienced-paramedic
+          locale.en.name: Experienced paramedic
+        /paramedic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paramedic
+          locale.en.name: Paramedic
+        /patient-transport-service--pts--call-handler:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: patient-transport-service--pts--call-handler
+          locale.en.name: Patient Transport Service (PTS) call handler
+      /dental-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental-professionals
+        locale.en.name: Dental professionals
+        /dental-hygienist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-hygienist
+          locale.en.name: Dental hygienist
+        /dental-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-nurse
+          locale.en.name: Dental nurse
+        /dental-technician-dental-technologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-technician-dental-technologist
+          locale.en.name: Dental technician/dental technologist
+        /dental-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-therapist
+          locale.en.name: Dental therapist
+        /dentist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dentist
+          locale.en.name: Dentist
+      /health-informaticians:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health-informaticians
+        locale.en.name: Health informaticians
+        /clinical-informatics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-informatics
+          locale.en.name: Clinical informatics
+        /education-and-training-roles:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: education-and-training-roles
+          locale.en.name: Education and training roles
+        /health-records-and-patient-administration:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-records-and-patient-administration
+          locale.en.name: Health records and patient administration
+        /information-and-communication-technology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: information-and-communication-technology
+          locale.en.name: Information and communication technology
+        /information-management-staff:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: information-management-staff
+          locale.en.name: Information management staff
+        /library,-knowledge-and-information-services:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: library,-knowledge-and-information-services
+          locale.en.name: Library, knowledge and information services
+        /project-and-programme-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-and-programme-management
+          locale.en.name: Project and programme management
+      /healthcare-scientists:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: healthcare-scientists
+        locale.en.name: Healthcare scientists
+        /analytical-toxicology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: analytical-toxicology
+          locale.en.name: Analytical toxicology
+        /anatomical-pathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anatomical-pathology
+          locale.en.name: Anatomical pathology
+        /audiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: audiology
+          locale.en.name: Audiology
+        /biomedical-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: biomedical-science
+          locale.en.name: Biomedical science
+        /blood-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: blood-sciences
+          locale.en.name: Blood sciences
+        /cancer-genomics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cancer-genomics
+          locale.en.name: Cancer genomics
+        /cardiac-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiac-sciences
+          locale.en.name: Cardiac sciences
+        /cellular-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cellular-sciences
+          locale.en.name: Cellular sciences
+        /clinical-biochemistry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-biochemistry
+          locale.en.name: Clinical biochemistry
+        /clinical-bioinformatics--genomics-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--genomics-
+          locale.en.name: Clinical bioinformatics (genomics)
+        /clinical-bioinformatics--health-informatics-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--health-informatics-
+          locale.en.name: Clinical bioinformatics (health informatics)
+        /clinical-bioinformatics--physical-sciences-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--physical-sciences-
+          locale.en.name: Clinical bioinformatics (physical sciences)
+        /clinical-immunology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-immunology
+          locale.en.name: Clinical immunology
+        /clinical-measurement:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-measurement
+          locale.en.name: Clinical measurement
+        /clinical-or-medical-technology-in-medical-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-or-medical-technology-in-medical-physics
+          locale.en.name: Clinical or medical technology in medical physics
+        /clinical-perfusion-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-perfusion-science
+          locale.en.name: Clinical perfusion science
+        /clinical-pharmaceutical-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-pharmaceutical-science
+          locale.en.name: Clinical pharmaceutical science
+        /clinical-photography:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-photography
+          locale.en.name: Clinical photography
+        /critical-care-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: critical-care-science
+          locale.en.name: Critical care science
+        /cytopathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cytopathology
+          locale.en.name: Cytopathology
+        /decontamination-and-sterile-services:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: decontamination-and-sterile-services
+          locale.en.name: Decontamination and sterile services
+        /gastrointestinal-physiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: gastrointestinal-physiology
+          locale.en.name: Gastrointestinal physiology
+        /genomic-counselling:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genomic-counselling
+          locale.en.name: Genomic counselling
+        /genomics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genomics
+          locale.en.name: Genomics
+        /haematology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: haematology--healthcare-scientist-
+          locale.en.name: Haematology (healthcare scientist)
+        /hearing-aid-dispenser:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: hearing-aid-dispenser
+          locale.en.name: Hearing aid dispenser
+        /histocompatibility-and-immunogenetics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: histocompatibility-and-immunogenetics
+          locale.en.name: Histocompatibility and immunogenetics
+        /histopathology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: histopathology--healthcare-scientist-
+          locale.en.name: Histopathology (healthcare scientist)
+        /imaging--ionising-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: imaging--ionising-
+          locale.en.name: Imaging (ionising)
+        /imaging--non-ionising-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: imaging--non-ionising-
+          locale.en.name: Imaging (non-ionising)
+        /infection-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: infection-sciences
+          locale.en.name: Infection sciences
+        /medical-device-risk-management-and-governance:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-device-risk-management-and-governance
+          locale.en.name: Medical device risk management and governance
+        /medical-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-engineering
+          locale.en.name: Medical engineering
+        /microbiology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: microbiology--healthcare-scientist-
+          locale.en.name: Microbiology (healthcare scientist)
+        /neurophysiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurophysiology
+          locale.en.name: Neurophysiology
+        /nuclear-medicine--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nuclear-medicine--healthcare-scientist-
+          locale.en.name: Nuclear medicine (healthcare scientist)
+        /ophthalmic-and-vision-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: ophthalmic-and-vision-science
+          locale.en.name: Ophthalmic and vision science
+        /radiation-physics-and-radiation-safety-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: radiation-physics-and-radiation-safety-physics
+          locale.en.name: Radiation physics and radiation safety physics
+        /radiotherapy-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: radiotherapy-physics
+          locale.en.name: Radiotherapy physics
+        /reconstructive-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: reconstructive-science
+          locale.en.name: Reconstructive science
+        /rehabilitation-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rehabilitation-engineering
+          locale.en.name: Rehabilitation engineering
+        /renal-technology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: renal-technology
+          locale.en.name: Renal technology
+        /reproductive-science-and-andrology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: reproductive-science-and-andrology
+          locale.en.name: Reproductive science and andrology
+        /respiratory-physiology-and-sleep-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: respiratory-physiology-and-sleep-sciences
+          locale.en.name: Respiratory physiology and sleep sciences
+        /urodynamic-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: urodynamic-science
+          locale.en.name: Urodynamic science
+        /vascular-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: vascular-science
+          locale.en.name: Vascular science
+        /virology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: virology--healthcare-scientist-
+          locale.en.name: Virology (healthcare scientist)
+      /management-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: management-professionals
+        locale.en.name: Management professionals
+        /administrative-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: administrative-management
+          locale.en.name: Administrative management
+        /clinical-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-manager
+          locale.en.name: Clinical manager
+        /communications-and-corporate-affairs:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: communications-and-corporate-affairs
+          locale.en.name: Communications and corporate affairs
+        /decontamination-services-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: decontamination-services-management
+          locale.en.name: Decontamination services management
+        /design-and-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: design-and-engineering
+          locale.en.name: Design and engineering
+        /estates-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: estates-manager
+          locale.en.name: Estates manager
+        /facilities-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: facilities-management
+          locale.en.name: Facilities management
+        /finance-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: finance-manager
+          locale.en.name: Finance manager
+        /hotel-services-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: hotel-services-management
+          locale.en.name: Hotel services management
+        /human-resources--hr--manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: human-resources--hr--manager
+          locale.en.name: Human resources (HR) manager
+        /integrated-urgent-care-nhs-111-team-leader:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: integrated-urgent-care-nhs-111-team-leader
+          locale.en.name: Integrated urgent care/NHS 111 team leader
+        /performance-and-quality-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: performance-and-quality-management
+          locale.en.name: Performance and quality management
+        /practice-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: practice-manager
+          locale.en.name: Practice manager
+        /project-management-and-procurement:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-management-and-procurement
+          locale.en.name: Project management and procurement
+        /project-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-manager
+          locale.en.name: Project manager
+        /purchasing-and-contract-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: purchasing-and-contract-management
+          locale.en.name: Purchasing and contract management
+        /strategic-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: strategic-management
+          locale.en.name: Strategic management
+      /medical-associate-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medical-associate-professionals
+        locale.en.name: Medical associate professionals
+      /medical-doctors:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medical-doctors
+        locale.en.name: Medical doctors
+        /acute-internal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: acute-internal-medicine
+          locale.en.name: Acute internal medicine
+        /allergy:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: allergy
+          locale.en.name: Allergy
+        /anaesthesia:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anaesthesia
+          locale.en.name: Anaesthesia
+        /audiovestibular-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: audiovestibular-medicine
+          locale.en.name: Audiovestibular medicine
+        /cardiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiology
+          locale.en.name: Cardiology
+        /cardiothoracic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiothoracic-surgery
+          locale.en.name: Cardiothoracic surgery
+        /chemical-pathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: chemical-pathology
+          locale.en.name: Chemical pathology
+        /child-and-adolescent-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: child-and-adolescent-psychiatry
+          locale.en.name: Child and adolescent psychiatry
+        /clinical-genetics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-genetics
+          locale.en.name: Clinical genetics
+        /clinical-neurophysiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-neurophysiology
+          locale.en.name: Clinical neurophysiology
+        /clinical-oncology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-oncology
+          locale.en.name: Clinical oncology
+        /clinical-pharmacology-and-therapeutics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-pharmacology-and-therapeutics
+          locale.en.name: Clinical pharmacology and therapeutics
+        /clinical-radiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-radiology
+          locale.en.name: Clinical radiology
+        /community-sexual-and-reproductive-health:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: community-sexual-and-reproductive-health
+          locale.en.name: Community sexual and reproductive health
+        /dermatology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dermatology
+          locale.en.name: Dermatology
+        /emergency-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: emergency-medicine
+          locale.en.name: Emergency medicine
+        /endocrinology-and-diabetes:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: endocrinology-and-diabetes
+          locale.en.name: Endocrinology and diabetes
+        /forensic-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: forensic-psychiatry
+          locale.en.name: Forensic psychiatry
+        /gastroenterology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: gastroenterology
+          locale.en.name: Gastroenterology
+        /general-internal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-internal-medicine
+          locale.en.name: General internal medicine
+        /general-practice--gp-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-practice--gp-
+          locale.en.name: General practice (GP)
+        /general-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-psychiatry
+          locale.en.name: General psychiatry
+        /general-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-surgery
+          locale.en.name: General surgery
+        /genitourinary-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genitourinary-medicine
+          locale.en.name: Genitourinary medicine
+        /geriatric-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: geriatric-medicine
+          locale.en.name: Geriatric medicine
+        /haematology--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: haematology--doctor-
+          locale.en.name: Histopathology (doctor)
+        /immunology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: immunology
+          locale.en.name: Infectious diseases
+        /intensive-care-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: intensive-care-medicine
+          locale.en.name: Liaison psychiatry
+        /medical-microbiology-and-virology--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-microbiology-and-virology--doctor-
+          locale.en.name: Medical microbiology and virology (doctor)
+        /medical-oncology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-oncology
+          locale.en.name: Medical oncology
+        /medical-ophthalmology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-ophthalmology
+          locale.en.name: Medical ophthalmology
+        /medical-psychotherapy:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-psychotherapy
+          locale.en.name: Medical psychotherapy
+        /metabolic-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: metabolic-medicine
+          locale.en.name: Metabolic Medicine
+        /neurology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurology
+          locale.en.name: Neurology
+        /neurosurgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurosurgery
+          locale.en.name: Neurosurgery
+        /nuclear-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nuclear-medicine
+          locale.en.name: Nuclear medicine
+        /obstetrics-and-gynaecology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: obstetrics-and-gynaecology
+          locale.en.name: Obstetrics and gynaecology
+        /occupational-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-medicine
+          locale.en.name: Occupational medicine
+        /old-age-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: old-age-psychiatry
+          locale.en.name: Old age psychiatry
+        /ophthalmology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: ophthalmology
+          locale.en.name: Ophthalmology
+        /oral-and-maxillofacial-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: oral-and-maxillofacial-surgery
+          locale.en.name: Oral and maxillofacial surgery
+        /otorhinolaryngology--ear,-nose-and-throat-surgery,-ent-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: otorhinolaryngology--ear,-nose-and-throat-surgery,-ent-
+          locale.en.name: Otorhinolaryngology (ear, nose and throat surgery, ENT)
+        /paediatric-cardiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatric-cardiology
+          locale.en.name: Paediatric cardiology
+        /paediatric-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatric-surgery
+          locale.en.name: Paediatric surgery
+        /paediatrics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatrics
+          locale.en.name: Paediatrics
+        /palliative-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: palliative-medicine
+          locale.en.name: Palliative medicine
+        /pharmaceutical-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmaceutical-medicine
+          locale.en.name: Pharmaceutical medicine
+        /plastic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: plastic-surgery
+          locale.en.name: Plastic surgery
+        /psychiatry-of-intellectual-disability--pid-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychiatry-of-intellectual-disability--pid-
+          locale.en.name: Psychiatry of intellectual disability (PID)
+        /public-health--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health--doctor-
+          locale.en.name: Public health (doctor)
+        /rehabilitation-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rehabilitation-medicine
+          locale.en.name: Rehabilitation medicine
+        /renal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: renal-medicine
+          locale.en.name: Renal medicine
+        /respiratory-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: respiratory-medicine
+          locale.en.name: Respiratory medicine
+        /rheumatology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rheumatology
+          locale.en.name: Rheumatology
+        /sport-and-exercise-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: sport-and-exercise-medicine
+          locale.en.name: Sport and exercise medicine
+        /stroke-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: stroke-medicine
+          locale.en.name: Stroke medicine
+        /trauma-and-orthopaedic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: trauma-and-orthopaedic-surgery
+          locale.en.name: Trauma and orthopaedic surgery
+        /tropical-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: tropical-medicine
+          locale.en.name: Tropical medicine
+        /urology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: urology
+          locale.en.name: Urology
+        /vascular-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: vascular-surgery
+          locale.en.name: Vascular surgery
+      /midwives:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: midwives
+        locale.en.name: Midwives
+        /midwife:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: midwife
+          locale.en.name: Midwife
+      /nurses:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nurses
+        locale.en.name: Nurses
+        /adult-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: adult-nurse
+          locale.en.name: Adult nurse
+        /children's-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: children's-nurse
+          locale.en.name: Children's nurse
+        /district-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: district-nurse
+          locale.en.name: District nurse
+        /general-practice-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-practice-nurse
+          locale.en.name: General practice nurse
+        /learning-disability-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: learning-disability-nurse
+          locale.en.name: Learning disability nurse
+        /mental-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: mental-health-nurse
+          locale.en.name: Mental health nurse
+        /neonatal-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neonatal-nurse
+          locale.en.name: Neonatal nurse
+        /nursing-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nursing-associate
+          locale.en.name: Nursing associate
+        /prison-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: prison-nurse
+          locale.en.name: Prison nurse
+        /theatre-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: theatre-nurse
+          locale.en.name: Theatre nurse
+      /pharmacy-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pharmacy-professionals
+        locale.en.name: Pharmacy professionals
+        /pharmacist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacist
+          locale.en.name: Pharmacist
+        /pharmacy-assistant:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacy-assistant
+          locale.en.name: Pharmacy assistant
+        /pharmacy-technician:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacy-technician
+          locale.en.name: Pharmacy technician
+      /psychological-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: psychological-professionals
+        locale.en.name: Psychological professionals
+        /assistant-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: assistant-psychologist
+          locale.en.name: Assistant psychologist
+        /clinical-neuropsychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-neuropsychologist
+          locale.en.name: Clinical neuropsychologist
+        /clinical-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-psychologist
+          locale.en.name: Clinical psychologist
+        /counselling-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: counselling-psychologist
+          locale.en.name: Counselling psychologist
+        /counsellor:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: counsellor
+          locale.en.name: Counsellor
+        /forensic-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: forensic-psychologist
+          locale.en.name: Forensic psychologist
+        /health-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-psychologist
+          locale.en.name: Health psychologist
+        /high-intensity-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: high-intensity-therapist
+          locale.en.name: High intensity therapist
+        /psychological-wellbeing-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychological-wellbeing-practitioner
+          locale.en.name: Psychological wellbeing practitioner
+        /psychotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychotherapist
+          locale.en.name: Psychotherapist
+      /public-health-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: public-health-professionals
+        locale.en.name: Public health professionals
+        /director-of-public-health:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: director-of-public-health
+          locale.en.name: Director of public health
+        /environmental-health-professional:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: environmental-health-professional
+          locale.en.name: Environmental health professional
+        /health-coach:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-coach
+          locale.en.name: Health coach
+        /health-trainer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-trainer
+          locale.en.name: Health trainer
+        /health-visitor:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-visitor
+          locale.en.name: Health visitor
+        /occupational-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-health-nurse
+          locale.en.name: Occupational health nurse
+        /public-health-academic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-academic
+          locale.en.name: Public health academic
+        /public-health-consultants-and-specialists:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-consultants-and-specialists
+          locale.en.name: Public health consultants and specialists
+        /public-health-knowledge-and-intelligence-professional:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-knowledge-and-intelligence-professional
+          locale.en.name: Public health knowledge and intelligence professional
+        /public-health-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-manager
+          locale.en.name: Public health manager
+        /public-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-nurse
+          locale.en.name: Public health nurse
+        /public-health-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-practitioner
+          locale.en.name: Public health practitioner
+        /school-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: school-nurse
+          locale.en.name: School nurse
+    /GlobalProfessions[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: 79283053-824e-4a51-92fe-a56e5e222411
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-04T07:52:31.051+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-04T07:58:08.448+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /advanced-critical-care-practitioners:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advanced-critical-care-practitioners
+        locale.en.name: Advanced critical care practitioners
+        /anaesthesia-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anaesthesia-associate
+          locale.en.name: Anaesthesia associate
+        /physician-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: physician-associate
+          locale.en.name: Physician associate
+        /surgical-care-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: surgical-care-practitioner
+          locale.en.name: Surgical care practitioner
+      /allied-health-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: allied-health-professionals
+        locale.en.name: Allied health professionals
+        /art-therapist_x002f_art-psychotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: art-therapist_x002f_art-psychotherapist
+          locale.en.name: Art therapist/art psychotherapist
+        /diagnostic-radiographer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: diagnostic-radiographer
+          locale.en.name: Diagnostic radiographer
+        /dietitian:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dietitian
+          locale.en.name: Dietitian
+        /dramatherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dramatherapist
+          locale.en.name: Dramatherapist
+        /music-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: music-therapist
+          locale.en.name: Music therapist
+        /occupational-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-therapist
+          locale.en.name: Occupational therapist
+        /operating-department-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: operating-department-practitioner
+          locale.en.name: Operating department practitioner
+        /orthoptist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: orthoptist
+          locale.en.name: Orthoptist
+        /osteopath:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: osteopath
+          locale.en.name: Osteopath
+        /physiotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: physiotherapist
+          locale.en.name: Physiotherapist
+        /podiatrist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: podiatrist
+          locale.en.name: Podiatrist
+        /prosthetist_x002f_orthotist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: prosthetist_x002f_orthotist
+          locale.en.name: Prosthetist/orthotist
+        /speech-and-language-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: speech-and-language-therapist
+          locale.en.name: Speech and language therapist
+        /therapeutic-radiographer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: therapeutic-radiographer
+          locale.en.name: Therapeutic radiographer
+      /ambulance-service-team:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ambulance-service-team
+        locale.en.name: Ambulance service team
+      /ambulance-care-assistant-and-patient-transport-service-(pts)-driver:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ambulance-care-assistant-and-patient-transport-service-(pts)-driver
+        locale.en.name: Ambulance care assistant and Patient Transport Service (PTS)
+          driver
+      /call-handler_x002f_emergency-medical-dispatcher:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: call-handler_x002f_emergency-medical-dispatcher
+        locale.en.name: Call handler/emergency medical dispatcher
+      /emergency-care-assistant:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emergency-care-assistant
+        locale.en.name: Emergency care assistant
+        /emergency-medical-technician:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: emergency-medical-technician
+          locale.en.name: Emergency medical technician
+        /experienced-paramedic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: experienced-paramedic
+          locale.en.name: Experienced paramedic
+        /paramedic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paramedic
+          locale.en.name: Paramedic
+        /patient-transport-service--pts--call-handler:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: patient-transport-service--pts--call-handler
+          locale.en.name: Patient Transport Service (PTS) call handler
+      /dental-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental-professionals
+        locale.en.name: Dental professionals
+        /dental-hygienist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-hygienist
+          locale.en.name: Dental hygienist
+        /dental-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-nurse
+          locale.en.name: Dental nurse
+        /dental-technician-dental-technologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-technician-dental-technologist
+          locale.en.name: Dental technician/dental technologist
+        /dental-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-therapist
+          locale.en.name: Dental therapist
+        /dentist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dentist
+          locale.en.name: Dentist
+      /health-informaticians:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health-informaticians
+        locale.en.name: Health informaticians
+        /clinical-informatics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-informatics
+          locale.en.name: Clinical informatics
+        /education-and-training-roles:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: education-and-training-roles
+          locale.en.name: Education and training roles
+        /health-records-and-patient-administration:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-records-and-patient-administration
+          locale.en.name: Health records and patient administration
+        /information-and-communication-technology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: information-and-communication-technology
+          locale.en.name: Information and communication technology
+        /information-management-staff:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: information-management-staff
+          locale.en.name: Information management staff
+        /library,-knowledge-and-information-services:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: library,-knowledge-and-information-services
+          locale.en.name: Library, knowledge and information services
+        /project-and-programme-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-and-programme-management
+          locale.en.name: Project and programme management
+      /healthcare-scientists:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: healthcare-scientists
+        locale.en.name: Healthcare scientists
+        /analytical-toxicology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: analytical-toxicology
+          locale.en.name: Analytical toxicology
+        /anatomical-pathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anatomical-pathology
+          locale.en.name: Anatomical pathology
+        /audiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: audiology
+          locale.en.name: Audiology
+        /biomedical-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: biomedical-science
+          locale.en.name: Biomedical science
+        /blood-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: blood-sciences
+          locale.en.name: Blood sciences
+        /cancer-genomics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cancer-genomics
+          locale.en.name: Cancer genomics
+        /cardiac-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiac-sciences
+          locale.en.name: Cardiac sciences
+        /cellular-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cellular-sciences
+          locale.en.name: Cellular sciences
+        /clinical-biochemistry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-biochemistry
+          locale.en.name: Clinical biochemistry
+        /clinical-bioinformatics--genomics-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--genomics-
+          locale.en.name: Clinical bioinformatics (genomics)
+        /clinical-bioinformatics--health-informatics-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--health-informatics-
+          locale.en.name: Clinical bioinformatics (health informatics)
+        /clinical-bioinformatics--physical-sciences-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--physical-sciences-
+          locale.en.name: Clinical bioinformatics (physical sciences)
+        /clinical-immunology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-immunology
+          locale.en.name: Clinical immunology
+        /clinical-measurement:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-measurement
+          locale.en.name: Clinical measurement
+        /clinical-or-medical-technology-in-medical-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-or-medical-technology-in-medical-physics
+          locale.en.name: Clinical or medical technology in medical physics
+        /clinical-perfusion-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-perfusion-science
+          locale.en.name: Clinical perfusion science
+        /clinical-pharmaceutical-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-pharmaceutical-science
+          locale.en.name: Clinical pharmaceutical science
+        /clinical-photography:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-photography
+          locale.en.name: Clinical photography
+        /critical-care-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: critical-care-science
+          locale.en.name: Critical care science
+        /cytopathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cytopathology
+          locale.en.name: Cytopathology
+        /decontamination-and-sterile-services:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: decontamination-and-sterile-services
+          locale.en.name: Decontamination and sterile services
+        /gastrointestinal-physiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: gastrointestinal-physiology
+          locale.en.name: Gastrointestinal physiology
+        /genomic-counselling:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genomic-counselling
+          locale.en.name: Genomic counselling
+        /genomics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genomics
+          locale.en.name: Genomics
+        /haematology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: haematology--healthcare-scientist-
+          locale.en.name: Haematology (healthcare scientist)
+        /hearing-aid-dispenser:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: hearing-aid-dispenser
+          locale.en.name: Hearing aid dispenser
+        /histocompatibility-and-immunogenetics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: histocompatibility-and-immunogenetics
+          locale.en.name: Histocompatibility and immunogenetics
+        /histopathology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: histopathology--healthcare-scientist-
+          locale.en.name: Histopathology (healthcare scientist)
+        /imaging--ionising-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: imaging--ionising-
+          locale.en.name: Imaging (ionising)
+        /imaging--non-ionising-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: imaging--non-ionising-
+          locale.en.name: Imaging (non-ionising)
+        /infection-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: infection-sciences
+          locale.en.name: Infection sciences
+        /medical-device-risk-management-and-governance:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-device-risk-management-and-governance
+          locale.en.name: Medical device risk management and governance
+        /medical-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-engineering
+          locale.en.name: Medical engineering
+        /microbiology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: microbiology--healthcare-scientist-
+          locale.en.name: Microbiology (healthcare scientist)
+        /neurophysiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurophysiology
+          locale.en.name: Neurophysiology
+        /nuclear-medicine--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nuclear-medicine--healthcare-scientist-
+          locale.en.name: Nuclear medicine (healthcare scientist)
+        /ophthalmic-and-vision-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: ophthalmic-and-vision-science
+          locale.en.name: Ophthalmic and vision science
+        /radiation-physics-and-radiation-safety-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: radiation-physics-and-radiation-safety-physics
+          locale.en.name: Radiation physics and radiation safety physics
+        /radiotherapy-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: radiotherapy-physics
+          locale.en.name: Radiotherapy physics
+        /reconstructive-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: reconstructive-science
+          locale.en.name: Reconstructive science
+        /rehabilitation-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rehabilitation-engineering
+          locale.en.name: Rehabilitation engineering
+        /renal-technology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: renal-technology
+          locale.en.name: Renal technology
+        /reproductive-science-and-andrology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: reproductive-science-and-andrology
+          locale.en.name: Reproductive science and andrology
+        /respiratory-physiology-and-sleep-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: respiratory-physiology-and-sleep-sciences
+          locale.en.name: Respiratory physiology and sleep sciences
+        /urodynamic-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: urodynamic-science
+          locale.en.name: Urodynamic science
+        /vascular-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: vascular-science
+          locale.en.name: Vascular science
+        /virology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: virology--healthcare-scientist-
+          locale.en.name: Virology (healthcare scientist)
+      /management-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: management-professionals
+        locale.en.name: Management professionals
+        /administrative-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: administrative-management
+          locale.en.name: Administrative management
+        /clinical-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-manager
+          locale.en.name: Clinical manager
+        /communications-and-corporate-affairs:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: communications-and-corporate-affairs
+          locale.en.name: Communications and corporate affairs
+        /decontamination-services-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: decontamination-services-management
+          locale.en.name: Decontamination services management
+        /design-and-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: design-and-engineering
+          locale.en.name: Design and engineering
+        /estates-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: estates-manager
+          locale.en.name: Estates manager
+        /facilities-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: facilities-management
+          locale.en.name: Facilities management
+        /finance-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: finance-manager
+          locale.en.name: Finance manager
+        /hotel-services-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: hotel-services-management
+          locale.en.name: Hotel services management
+        /human-resources--hr--manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: human-resources--hr--manager
+          locale.en.name: Human resources (HR) manager
+        /integrated-urgent-care-nhs-111-team-leader:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: integrated-urgent-care-nhs-111-team-leader
+          locale.en.name: Integrated urgent care/NHS 111 team leader
+        /performance-and-quality-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: performance-and-quality-management
+          locale.en.name: Performance and quality management
+        /practice-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: practice-manager
+          locale.en.name: Practice manager
+        /project-management-and-procurement:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-management-and-procurement
+          locale.en.name: Project management and procurement
+        /project-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-manager
+          locale.en.name: Project manager
+        /purchasing-and-contract-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: purchasing-and-contract-management
+          locale.en.name: Purchasing and contract management
+        /strategic-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: strategic-management
+          locale.en.name: Strategic management
+      /medical-associate-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medical-associate-professionals
+        locale.en.name: Medical associate professionals
+      /medical-doctors:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medical-doctors
+        locale.en.name: Medical doctors
+        /acute-internal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: acute-internal-medicine
+          locale.en.name: Acute internal medicine
+        /allergy:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: allergy
+          locale.en.name: Allergy
+        /anaesthesia:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anaesthesia
+          locale.en.name: Anaesthesia
+        /audiovestibular-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: audiovestibular-medicine
+          locale.en.name: Audiovestibular medicine
+        /cardiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiology
+          locale.en.name: Cardiology
+        /cardiothoracic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiothoracic-surgery
+          locale.en.name: Cardiothoracic surgery
+        /chemical-pathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: chemical-pathology
+          locale.en.name: Chemical pathology
+        /child-and-adolescent-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: child-and-adolescent-psychiatry
+          locale.en.name: Child and adolescent psychiatry
+        /clinical-genetics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-genetics
+          locale.en.name: Clinical genetics
+        /clinical-neurophysiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-neurophysiology
+          locale.en.name: Clinical neurophysiology
+        /clinical-oncology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-oncology
+          locale.en.name: Clinical oncology
+        /clinical-pharmacology-and-therapeutics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-pharmacology-and-therapeutics
+          locale.en.name: Clinical pharmacology and therapeutics
+        /clinical-radiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-radiology
+          locale.en.name: Clinical radiology
+        /community-sexual-and-reproductive-health:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: community-sexual-and-reproductive-health
+          locale.en.name: Community sexual and reproductive health
+        /dermatology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dermatology
+          locale.en.name: Dermatology
+        /emergency-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: emergency-medicine
+          locale.en.name: Emergency medicine
+        /endocrinology-and-diabetes:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: endocrinology-and-diabetes
+          locale.en.name: Endocrinology and diabetes
+        /forensic-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: forensic-psychiatry
+          locale.en.name: Forensic psychiatry
+        /gastroenterology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: gastroenterology
+          locale.en.name: Gastroenterology
+        /general-internal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-internal-medicine
+          locale.en.name: General internal medicine
+        /general-practice--gp-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-practice--gp-
+          locale.en.name: General practice (GP)
+        /general-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-psychiatry
+          locale.en.name: General psychiatry
+        /general-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-surgery
+          locale.en.name: General surgery
+        /genitourinary-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genitourinary-medicine
+          locale.en.name: Genitourinary medicine
+        /geriatric-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: geriatric-medicine
+          locale.en.name: Geriatric medicine
+        /haematology--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: haematology--doctor-
+          locale.en.name: Histopathology (doctor)
+        /immunology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: immunology
+          locale.en.name: Infectious diseases
+        /intensive-care-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: intensive-care-medicine
+          locale.en.name: Liaison psychiatry
+        /medical-microbiology-and-virology--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-microbiology-and-virology--doctor-
+          locale.en.name: Medical microbiology and virology (doctor)
+        /medical-oncology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-oncology
+          locale.en.name: Medical oncology
+        /medical-ophthalmology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-ophthalmology
+          locale.en.name: Medical ophthalmology
+        /medical-psychotherapy:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-psychotherapy
+          locale.en.name: Medical psychotherapy
+        /metabolic-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: metabolic-medicine
+          locale.en.name: Metabolic Medicine
+        /neurology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurology
+          locale.en.name: Neurology
+        /neurosurgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurosurgery
+          locale.en.name: Neurosurgery
+        /nuclear-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nuclear-medicine
+          locale.en.name: Nuclear medicine
+        /obstetrics-and-gynaecology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: obstetrics-and-gynaecology
+          locale.en.name: Obstetrics and gynaecology
+        /occupational-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-medicine
+          locale.en.name: Occupational medicine
+        /old-age-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: old-age-psychiatry
+          locale.en.name: Old age psychiatry
+        /ophthalmology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: ophthalmology
+          locale.en.name: Ophthalmology
+        /oral-and-maxillofacial-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: oral-and-maxillofacial-surgery
+          locale.en.name: Oral and maxillofacial surgery
+        /otorhinolaryngology--ear,-nose-and-throat-surgery,-ent-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: otorhinolaryngology--ear,-nose-and-throat-surgery,-ent-
+          locale.en.name: Otorhinolaryngology (ear, nose and throat surgery, ENT)
+        /paediatric-cardiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatric-cardiology
+          locale.en.name: Paediatric cardiology
+        /paediatric-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatric-surgery
+          locale.en.name: Paediatric surgery
+        /paediatrics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatrics
+          locale.en.name: Paediatrics
+        /palliative-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: palliative-medicine
+          locale.en.name: Palliative medicine
+        /pharmaceutical-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmaceutical-medicine
+          locale.en.name: Pharmaceutical medicine
+        /plastic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: plastic-surgery
+          locale.en.name: Plastic surgery
+        /psychiatry-of-intellectual-disability--pid-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychiatry-of-intellectual-disability--pid-
+          locale.en.name: Psychiatry of intellectual disability (PID)
+        /public-health--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health--doctor-
+          locale.en.name: Public health (doctor)
+        /rehabilitation-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rehabilitation-medicine
+          locale.en.name: Rehabilitation medicine
+        /renal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: renal-medicine
+          locale.en.name: Renal medicine
+        /respiratory-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: respiratory-medicine
+          locale.en.name: Respiratory medicine
+        /rheumatology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rheumatology
+          locale.en.name: Rheumatology
+        /sport-and-exercise-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: sport-and-exercise-medicine
+          locale.en.name: Sport and exercise medicine
+        /stroke-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: stroke-medicine
+          locale.en.name: Stroke medicine
+        /trauma-and-orthopaedic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: trauma-and-orthopaedic-surgery
+          locale.en.name: Trauma and orthopaedic surgery
+        /tropical-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: tropical-medicine
+          locale.en.name: Tropical medicine
+        /urology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: urology
+          locale.en.name: Urology
+        /vascular-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: vascular-surgery
+          locale.en.name: Vascular surgery
+      /midwives:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: midwives
+        locale.en.name: Midwives
+        /midwife:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: midwife
+          locale.en.name: Midwife
+      /nurses:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nurses
+        locale.en.name: Nurses
+        /adult-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: adult-nurse
+          locale.en.name: Adult nurse
+        /children's-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: children's-nurse
+          locale.en.name: Children's nurse
+        /district-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: district-nurse
+          locale.en.name: District nurse
+        /general-practice-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-practice-nurse
+          locale.en.name: General practice nurse
+        /learning-disability-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: learning-disability-nurse
+          locale.en.name: Learning disability nurse
+        /mental-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: mental-health-nurse
+          locale.en.name: Mental health nurse
+        /neonatal-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neonatal-nurse
+          locale.en.name: Neonatal nurse
+        /nursing-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nursing-associate
+          locale.en.name: Nursing associate
+        /prison-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: prison-nurse
+          locale.en.name: Prison nurse
+        /theatre-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: theatre-nurse
+          locale.en.name: Theatre nurse
+      /pharmacy-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pharmacy-professionals
+        locale.en.name: Pharmacy professionals
+        /pharmacist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacist
+          locale.en.name: Pharmacist
+        /pharmacy-assistant:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacy-assistant
+          locale.en.name: Pharmacy assistant
+        /pharmacy-technician:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacy-technician
+          locale.en.name: Pharmacy technician
+      /psychological-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: psychological-professionals
+        locale.en.name: Psychological professionals
+        /assistant-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: assistant-psychologist
+          locale.en.name: Assistant psychologist
+        /clinical-neuropsychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-neuropsychologist
+          locale.en.name: Clinical neuropsychologist
+        /clinical-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-psychologist
+          locale.en.name: Clinical psychologist
+        /counselling-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: counselling-psychologist
+          locale.en.name: Counselling psychologist
+        /counsellor:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: counsellor
+          locale.en.name: Counsellor
+        /forensic-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: forensic-psychologist
+          locale.en.name: Forensic psychologist
+        /health-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-psychologist
+          locale.en.name: Health psychologist
+        /high-intensity-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: high-intensity-therapist
+          locale.en.name: High intensity therapist
+        /psychological-wellbeing-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychological-wellbeing-practitioner
+          locale.en.name: Psychological wellbeing practitioner
+        /psychotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychotherapist
+          locale.en.name: Psychotherapist
+      /public-health-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: public-health-professionals
+        locale.en.name: Public health professionals
+        /director-of-public-health:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: director-of-public-health
+          locale.en.name: Director of public health
+        /environmental-health-professional:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: environmental-health-professional
+          locale.en.name: Environmental health professional
+        /health-coach:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-coach
+          locale.en.name: Health coach
+        /health-trainer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-trainer
+          locale.en.name: Health trainer
+        /health-visitor:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-visitor
+          locale.en.name: Health visitor
+        /occupational-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-health-nurse
+          locale.en.name: Occupational health nurse
+        /public-health-academic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-academic
+          locale.en.name: Public health academic
+        /public-health-consultants-and-specialists:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-consultants-and-specialists
+          locale.en.name: Public health consultants and specialists
+        /public-health-knowledge-and-intelligence-professional:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-knowledge-and-intelligence-professional
+          locale.en.name: Public health knowledge and intelligence professional
+        /public-health-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-manager
+          locale.en.name: Public health manager
+        /public-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-nurse
+          locale.en.name: Public health nurse
+        /public-health-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-practitioner
+          locale.en.name: Public health practitioner
+        /school-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: school-nurse
+          locale.en.name: School nurse
+    /GlobalProfessions[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: ba17e8e9-a76e-46c1-b9ec-e013b104a949
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-04T07:52:31.051+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-04T07:58:08.177+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-08-04T07:58:13.387+01:00
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /advanced-critical-care-practitioners:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advanced-critical-care-practitioners
+        locale.en.name: Advanced critical care practitioners
+        /anaesthesia-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anaesthesia-associate
+          locale.en.name: Anaesthesia associate
+        /physician-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: physician-associate
+          locale.en.name: Physician associate
+        /surgical-care-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: surgical-care-practitioner
+          locale.en.name: Surgical care practitioner
+      /allied-health-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: allied-health-professionals
+        locale.en.name: Allied health professionals
+        /art-therapist_x002f_art-psychotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: art-therapist_x002f_art-psychotherapist
+          locale.en.name: Art therapist/art psychotherapist
+        /diagnostic-radiographer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: diagnostic-radiographer
+          locale.en.name: Diagnostic radiographer
+        /dietitian:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dietitian
+          locale.en.name: Dietitian
+        /dramatherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dramatherapist
+          locale.en.name: Dramatherapist
+        /music-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: music-therapist
+          locale.en.name: Music therapist
+        /occupational-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-therapist
+          locale.en.name: Occupational therapist
+        /operating-department-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: operating-department-practitioner
+          locale.en.name: Operating department practitioner
+        /orthoptist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: orthoptist
+          locale.en.name: Orthoptist
+        /osteopath:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: osteopath
+          locale.en.name: Osteopath
+        /physiotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: physiotherapist
+          locale.en.name: Physiotherapist
+        /podiatrist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: podiatrist
+          locale.en.name: Podiatrist
+        /prosthetist_x002f_orthotist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: prosthetist_x002f_orthotist
+          locale.en.name: Prosthetist/orthotist
+        /speech-and-language-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: speech-and-language-therapist
+          locale.en.name: Speech and language therapist
+        /therapeutic-radiographer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: therapeutic-radiographer
+          locale.en.name: Therapeutic radiographer
+      /ambulance-service-team:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ambulance-service-team
+        locale.en.name: Ambulance service team
+      /ambulance-care-assistant-and-patient-transport-service-(pts)-driver:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ambulance-care-assistant-and-patient-transport-service-(pts)-driver
+        locale.en.name: Ambulance care assistant and Patient Transport Service (PTS)
+          driver
+      /call-handler_x002f_emergency-medical-dispatcher:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: call-handler_x002f_emergency-medical-dispatcher
+        locale.en.name: Call handler/emergency medical dispatcher
+      /emergency-care-assistant:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emergency-care-assistant
+        locale.en.name: Emergency care assistant
+        /emergency-medical-technician:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: emergency-medical-technician
+          locale.en.name: Emergency medical technician
+        /experienced-paramedic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: experienced-paramedic
+          locale.en.name: Experienced paramedic
+        /paramedic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paramedic
+          locale.en.name: Paramedic
+        /patient-transport-service--pts--call-handler:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: patient-transport-service--pts--call-handler
+          locale.en.name: Patient Transport Service (PTS) call handler
+      /dental-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental-professionals
+        locale.en.name: Dental professionals
+        /dental-hygienist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-hygienist
+          locale.en.name: Dental hygienist
+        /dental-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-nurse
+          locale.en.name: Dental nurse
+        /dental-technician-dental-technologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-technician-dental-technologist
+          locale.en.name: Dental technician/dental technologist
+        /dental-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dental-therapist
+          locale.en.name: Dental therapist
+        /dentist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dentist
+          locale.en.name: Dentist
+      /health-informaticians:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health-informaticians
+        locale.en.name: Health informaticians
+        /clinical-informatics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-informatics
+          locale.en.name: Clinical informatics
+        /education-and-training-roles:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: education-and-training-roles
+          locale.en.name: Education and training roles
+        /health-records-and-patient-administration:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-records-and-patient-administration
+          locale.en.name: Health records and patient administration
+        /information-and-communication-technology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: information-and-communication-technology
+          locale.en.name: Information and communication technology
+        /information-management-staff:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: information-management-staff
+          locale.en.name: Information management staff
+        /library,-knowledge-and-information-services:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: library,-knowledge-and-information-services
+          locale.en.name: Library, knowledge and information services
+        /project-and-programme-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-and-programme-management
+          locale.en.name: Project and programme management
+      /healthcare-scientists:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: healthcare-scientists
+        locale.en.name: Healthcare scientists
+        /analytical-toxicology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: analytical-toxicology
+          locale.en.name: Analytical toxicology
+        /anatomical-pathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anatomical-pathology
+          locale.en.name: Anatomical pathology
+        /audiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: audiology
+          locale.en.name: Audiology
+        /biomedical-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: biomedical-science
+          locale.en.name: Biomedical science
+        /blood-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: blood-sciences
+          locale.en.name: Blood sciences
+        /cancer-genomics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cancer-genomics
+          locale.en.name: Cancer genomics
+        /cardiac-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiac-sciences
+          locale.en.name: Cardiac sciences
+        /cellular-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cellular-sciences
+          locale.en.name: Cellular sciences
+        /clinical-biochemistry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-biochemistry
+          locale.en.name: Clinical biochemistry
+        /clinical-bioinformatics--genomics-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--genomics-
+          locale.en.name: Clinical bioinformatics (genomics)
+        /clinical-bioinformatics--health-informatics-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--health-informatics-
+          locale.en.name: Clinical bioinformatics (health informatics)
+        /clinical-bioinformatics--physical-sciences-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-bioinformatics--physical-sciences-
+          locale.en.name: Clinical bioinformatics (physical sciences)
+        /clinical-immunology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-immunology
+          locale.en.name: Clinical immunology
+        /clinical-measurement:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-measurement
+          locale.en.name: Clinical measurement
+        /clinical-or-medical-technology-in-medical-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-or-medical-technology-in-medical-physics
+          locale.en.name: Clinical or medical technology in medical physics
+        /clinical-perfusion-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-perfusion-science
+          locale.en.name: Clinical perfusion science
+        /clinical-pharmaceutical-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-pharmaceutical-science
+          locale.en.name: Clinical pharmaceutical science
+        /clinical-photography:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-photography
+          locale.en.name: Clinical photography
+        /critical-care-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: critical-care-science
+          locale.en.name: Critical care science
+        /cytopathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cytopathology
+          locale.en.name: Cytopathology
+        /decontamination-and-sterile-services:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: decontamination-and-sterile-services
+          locale.en.name: Decontamination and sterile services
+        /gastrointestinal-physiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: gastrointestinal-physiology
+          locale.en.name: Gastrointestinal physiology
+        /genomic-counselling:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genomic-counselling
+          locale.en.name: Genomic counselling
+        /genomics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genomics
+          locale.en.name: Genomics
+        /haematology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: haematology--healthcare-scientist-
+          locale.en.name: Haematology (healthcare scientist)
+        /hearing-aid-dispenser:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: hearing-aid-dispenser
+          locale.en.name: Hearing aid dispenser
+        /histocompatibility-and-immunogenetics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: histocompatibility-and-immunogenetics
+          locale.en.name: Histocompatibility and immunogenetics
+        /histopathology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: histopathology--healthcare-scientist-
+          locale.en.name: Histopathology (healthcare scientist)
+        /imaging--ionising-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: imaging--ionising-
+          locale.en.name: Imaging (ionising)
+        /imaging--non-ionising-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: imaging--non-ionising-
+          locale.en.name: Imaging (non-ionising)
+        /infection-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: infection-sciences
+          locale.en.name: Infection sciences
+        /medical-device-risk-management-and-governance:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-device-risk-management-and-governance
+          locale.en.name: Medical device risk management and governance
+        /medical-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-engineering
+          locale.en.name: Medical engineering
+        /microbiology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: microbiology--healthcare-scientist-
+          locale.en.name: Microbiology (healthcare scientist)
+        /neurophysiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurophysiology
+          locale.en.name: Neurophysiology
+        /nuclear-medicine--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nuclear-medicine--healthcare-scientist-
+          locale.en.name: Nuclear medicine (healthcare scientist)
+        /ophthalmic-and-vision-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: ophthalmic-and-vision-science
+          locale.en.name: Ophthalmic and vision science
+        /radiation-physics-and-radiation-safety-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: radiation-physics-and-radiation-safety-physics
+          locale.en.name: Radiation physics and radiation safety physics
+        /radiotherapy-physics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: radiotherapy-physics
+          locale.en.name: Radiotherapy physics
+        /reconstructive-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: reconstructive-science
+          locale.en.name: Reconstructive science
+        /rehabilitation-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rehabilitation-engineering
+          locale.en.name: Rehabilitation engineering
+        /renal-technology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: renal-technology
+          locale.en.name: Renal technology
+        /reproductive-science-and-andrology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: reproductive-science-and-andrology
+          locale.en.name: Reproductive science and andrology
+        /respiratory-physiology-and-sleep-sciences:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: respiratory-physiology-and-sleep-sciences
+          locale.en.name: Respiratory physiology and sleep sciences
+        /urodynamic-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: urodynamic-science
+          locale.en.name: Urodynamic science
+        /vascular-science:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: vascular-science
+          locale.en.name: Vascular science
+        /virology--healthcare-scientist-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: virology--healthcare-scientist-
+          locale.en.name: Virology (healthcare scientist)
+      /management-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: management-professionals
+        locale.en.name: Management professionals
+        /administrative-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: administrative-management
+          locale.en.name: Administrative management
+        /clinical-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-manager
+          locale.en.name: Clinical manager
+        /communications-and-corporate-affairs:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: communications-and-corporate-affairs
+          locale.en.name: Communications and corporate affairs
+        /decontamination-services-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: decontamination-services-management
+          locale.en.name: Decontamination services management
+        /design-and-engineering:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: design-and-engineering
+          locale.en.name: Design and engineering
+        /estates-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: estates-manager
+          locale.en.name: Estates manager
+        /facilities-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: facilities-management
+          locale.en.name: Facilities management
+        /finance-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: finance-manager
+          locale.en.name: Finance manager
+        /hotel-services-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: hotel-services-management
+          locale.en.name: Hotel services management
+        /human-resources--hr--manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: human-resources--hr--manager
+          locale.en.name: Human resources (HR) manager
+        /integrated-urgent-care-nhs-111-team-leader:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: integrated-urgent-care-nhs-111-team-leader
+          locale.en.name: Integrated urgent care/NHS 111 team leader
+        /performance-and-quality-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: performance-and-quality-management
+          locale.en.name: Performance and quality management
+        /practice-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: practice-manager
+          locale.en.name: Practice manager
+        /project-management-and-procurement:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-management-and-procurement
+          locale.en.name: Project management and procurement
+        /project-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: project-manager
+          locale.en.name: Project manager
+        /purchasing-and-contract-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: purchasing-and-contract-management
+          locale.en.name: Purchasing and contract management
+        /strategic-management:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: strategic-management
+          locale.en.name: Strategic management
+      /medical-associate-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medical-associate-professionals
+        locale.en.name: Medical associate professionals
+      /medical-doctors:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medical-doctors
+        locale.en.name: Medical doctors
+        /acute-internal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: acute-internal-medicine
+          locale.en.name: Acute internal medicine
+        /allergy:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: allergy
+          locale.en.name: Allergy
+        /anaesthesia:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: anaesthesia
+          locale.en.name: Anaesthesia
+        /audiovestibular-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: audiovestibular-medicine
+          locale.en.name: Audiovestibular medicine
+        /cardiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiology
+          locale.en.name: Cardiology
+        /cardiothoracic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: cardiothoracic-surgery
+          locale.en.name: Cardiothoracic surgery
+        /chemical-pathology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: chemical-pathology
+          locale.en.name: Chemical pathology
+        /child-and-adolescent-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: child-and-adolescent-psychiatry
+          locale.en.name: Child and adolescent psychiatry
+        /clinical-genetics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-genetics
+          locale.en.name: Clinical genetics
+        /clinical-neurophysiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-neurophysiology
+          locale.en.name: Clinical neurophysiology
+        /clinical-oncology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-oncology
+          locale.en.name: Clinical oncology
+        /clinical-pharmacology-and-therapeutics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-pharmacology-and-therapeutics
+          locale.en.name: Clinical pharmacology and therapeutics
+        /clinical-radiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-radiology
+          locale.en.name: Clinical radiology
+        /community-sexual-and-reproductive-health:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: community-sexual-and-reproductive-health
+          locale.en.name: Community sexual and reproductive health
+        /dermatology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: dermatology
+          locale.en.name: Dermatology
+        /emergency-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: emergency-medicine
+          locale.en.name: Emergency medicine
+        /endocrinology-and-diabetes:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: endocrinology-and-diabetes
+          locale.en.name: Endocrinology and diabetes
+        /forensic-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: forensic-psychiatry
+          locale.en.name: Forensic psychiatry
+        /gastroenterology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: gastroenterology
+          locale.en.name: Gastroenterology
+        /general-internal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-internal-medicine
+          locale.en.name: General internal medicine
+        /general-practice--gp-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-practice--gp-
+          locale.en.name: General practice (GP)
+        /general-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-psychiatry
+          locale.en.name: General psychiatry
+        /general-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-surgery
+          locale.en.name: General surgery
+        /genitourinary-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: genitourinary-medicine
+          locale.en.name: Genitourinary medicine
+        /geriatric-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: geriatric-medicine
+          locale.en.name: Geriatric medicine
+        /haematology--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: haematology--doctor-
+          locale.en.name: Histopathology (doctor)
+        /immunology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: immunology
+          locale.en.name: Infectious diseases
+        /intensive-care-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: intensive-care-medicine
+          locale.en.name: Liaison psychiatry
+        /medical-microbiology-and-virology--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-microbiology-and-virology--doctor-
+          locale.en.name: Medical microbiology and virology (doctor)
+        /medical-oncology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-oncology
+          locale.en.name: Medical oncology
+        /medical-ophthalmology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-ophthalmology
+          locale.en.name: Medical ophthalmology
+        /medical-psychotherapy:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: medical-psychotherapy
+          locale.en.name: Medical psychotherapy
+        /metabolic-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: metabolic-medicine
+          locale.en.name: Metabolic Medicine
+        /neurology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurology
+          locale.en.name: Neurology
+        /neurosurgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neurosurgery
+          locale.en.name: Neurosurgery
+        /nuclear-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nuclear-medicine
+          locale.en.name: Nuclear medicine
+        /obstetrics-and-gynaecology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: obstetrics-and-gynaecology
+          locale.en.name: Obstetrics and gynaecology
+        /occupational-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-medicine
+          locale.en.name: Occupational medicine
+        /old-age-psychiatry:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: old-age-psychiatry
+          locale.en.name: Old age psychiatry
+        /ophthalmology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: ophthalmology
+          locale.en.name: Ophthalmology
+        /oral-and-maxillofacial-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: oral-and-maxillofacial-surgery
+          locale.en.name: Oral and maxillofacial surgery
+        /otorhinolaryngology--ear,-nose-and-throat-surgery,-ent-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: otorhinolaryngology--ear,-nose-and-throat-surgery,-ent-
+          locale.en.name: Otorhinolaryngology (ear, nose and throat surgery, ENT)
+        /paediatric-cardiology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatric-cardiology
+          locale.en.name: Paediatric cardiology
+        /paediatric-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatric-surgery
+          locale.en.name: Paediatric surgery
+        /paediatrics:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: paediatrics
+          locale.en.name: Paediatrics
+        /palliative-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: palliative-medicine
+          locale.en.name: Palliative medicine
+        /pharmaceutical-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmaceutical-medicine
+          locale.en.name: Pharmaceutical medicine
+        /plastic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: plastic-surgery
+          locale.en.name: Plastic surgery
+        /psychiatry-of-intellectual-disability--pid-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychiatry-of-intellectual-disability--pid-
+          locale.en.name: Psychiatry of intellectual disability (PID)
+        /public-health--doctor-:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health--doctor-
+          locale.en.name: Public health (doctor)
+        /rehabilitation-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rehabilitation-medicine
+          locale.en.name: Rehabilitation medicine
+        /renal-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: renal-medicine
+          locale.en.name: Renal medicine
+        /respiratory-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: respiratory-medicine
+          locale.en.name: Respiratory medicine
+        /rheumatology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: rheumatology
+          locale.en.name: Rheumatology
+        /sport-and-exercise-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: sport-and-exercise-medicine
+          locale.en.name: Sport and exercise medicine
+        /stroke-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: stroke-medicine
+          locale.en.name: Stroke medicine
+        /trauma-and-orthopaedic-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: trauma-and-orthopaedic-surgery
+          locale.en.name: Trauma and orthopaedic surgery
+        /tropical-medicine:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: tropical-medicine
+          locale.en.name: Tropical medicine
+        /urology:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: urology
+          locale.en.name: Urology
+        /vascular-surgery:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: vascular-surgery
+          locale.en.name: Vascular surgery
+      /midwives:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: midwives
+        locale.en.name: Midwives
+        /midwife:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: midwife
+          locale.en.name: Midwife
+      /nurses:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nurses
+        locale.en.name: Nurses
+        /adult-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: adult-nurse
+          locale.en.name: Adult nurse
+        /children's-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: children's-nurse
+          locale.en.name: Children's nurse
+        /district-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: district-nurse
+          locale.en.name: District nurse
+        /general-practice-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: general-practice-nurse
+          locale.en.name: General practice nurse
+        /learning-disability-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: learning-disability-nurse
+          locale.en.name: Learning disability nurse
+        /mental-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: mental-health-nurse
+          locale.en.name: Mental health nurse
+        /neonatal-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: neonatal-nurse
+          locale.en.name: Neonatal nurse
+        /nursing-associate:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: nursing-associate
+          locale.en.name: Nursing associate
+        /prison-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: prison-nurse
+          locale.en.name: Prison nurse
+        /theatre-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: theatre-nurse
+          locale.en.name: Theatre nurse
+      /pharmacy-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pharmacy-professionals
+        locale.en.name: Pharmacy professionals
+        /pharmacist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacist
+          locale.en.name: Pharmacist
+        /pharmacy-assistant:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacy-assistant
+          locale.en.name: Pharmacy assistant
+        /pharmacy-technician:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: pharmacy-technician
+          locale.en.name: Pharmacy technician
+      /psychological-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: psychological-professionals
+        locale.en.name: Psychological professionals
+        /assistant-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: assistant-psychologist
+          locale.en.name: Assistant psychologist
+        /clinical-neuropsychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-neuropsychologist
+          locale.en.name: Clinical neuropsychologist
+        /clinical-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: clinical-psychologist
+          locale.en.name: Clinical psychologist
+        /counselling-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: counselling-psychologist
+          locale.en.name: Counselling psychologist
+        /counsellor:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: counsellor
+          locale.en.name: Counsellor
+        /forensic-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: forensic-psychologist
+          locale.en.name: Forensic psychologist
+        /health-psychologist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-psychologist
+          locale.en.name: Health psychologist
+        /high-intensity-therapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: high-intensity-therapist
+          locale.en.name: High intensity therapist
+        /psychological-wellbeing-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychological-wellbeing-practitioner
+          locale.en.name: Psychological wellbeing practitioner
+        /psychotherapist:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: psychotherapist
+          locale.en.name: Psychotherapist
+      /public-health-professionals:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: public-health-professionals
+        locale.en.name: Public health professionals
+        /director-of-public-health:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: director-of-public-health
+          locale.en.name: Director of public health
+        /environmental-health-professional:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: environmental-health-professional
+          locale.en.name: Environmental health professional
+        /health-coach:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-coach
+          locale.en.name: Health coach
+        /health-trainer:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-trainer
+          locale.en.name: Health trainer
+        /health-visitor:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: health-visitor
+          locale.en.name: Health visitor
+        /occupational-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: occupational-health-nurse
+          locale.en.name: Occupational health nurse
+        /public-health-academic:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-academic
+          locale.en.name: Public health academic
+        /public-health-consultants-and-specialists:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-consultants-and-specialists
+          locale.en.name: Public health consultants and specialists
+        /public-health-knowledge-and-intelligence-professional:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-knowledge-and-intelligence-professional
+          locale.en.name: Public health knowledge and intelligence professional
+        /public-health-manager:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-manager
+          locale.en.name: Public health manager
+        /public-health-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-nurse
+          locale.en.name: Public health nurse
+        /public-health-practitioner:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: public-health-practitioner
+          locale.en.name: Public health practitioner
+        /school-nurse:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: school-nurse
+          locale.en.name: School nurse
+  /GlobalPublicationTypes:
+    jcr:primaryType: hippo:handle
+    /GlobalPublicationTypes:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
+      jcr:uuid: 40451e36-45ea-4cdf-9edf-fc7a53e92a4d
+      hippo:availability: [live, preview]
+      hippostd:holder: admin
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-03T14:28:11.978+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-03T14:28:11.978+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-08-03T14:28:11.978+01:00
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /briefing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: briefing
+        locale.en.name: Briefing
+      /consultation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: consultation
+        locale.en.name: Consultation
+      /data-and-statistics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data-and-statistics
+        locale.en.name: Data and statistics
+      /decision:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: decision
+        locale.en.name: Decision
+      /foi-release:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: foi-release
+        locale.en.name: FOI release
+      /guidance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: guidance
+        locale.en.name: Guidance
+      /independent-report:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: independent-report
+        locale.en.name: Independent report
+      /letter:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: letter
+        locale.en.name: Letter
+      /meeting-papers-and-minutes:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: meeting-papers-and-minutes
+        locale.en.name: Meeting papers and minutes
+      /contract:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: contract
+        locale.en.name: Contract
+      /policy-or-strategy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: policy-or-strategy
+        locale.en.name: Policy or strategy
+      /promotional-material:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: promotional-material
+        locale.en.name: Promotional material
+      /regulatory:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: regulatory
+        locale.en.name: Regulatory
+      /report:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: report
+        locale.en.name: Report
+      /research:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: research
+        locale.en.name: Research
+      /statement:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statement
+        locale.en.name: Statement
+      /data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data
+        locale.en.name: Data
+      /review:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: review
+        locale.en.name: Review
+      /business-plan:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: business-plan
+        locale.en.name: Business Plan
+      /framework:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: framework
+        locale.en.name: Framework
+  /GlobalHealthcareTopics:
+    jcr:primaryType: hippo:handle
+    /GlobalHealthcareTopics:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
+      jcr:uuid: 5382556c-d708-4075-aa80-dff32c31fd08
+      hippo:availability: [live, preview]
+      hippostd:holder: admin
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-03T14:27:59.125+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-03T14:27:59.125+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-08-03T14:27:59.125+01:00
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /addiction:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: addiction
+        locale.en.name: Addiction
+      /advanced-clinical-practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advanced-clinical-practice
+      /antimicrobial-resistance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: antimicrobial-resistance
+        locale.en.name: Antimicrobial esistance
+      /armed-forces:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: armed-forces
+        locale.en.name: Armed Forces
+      /cancer:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cancer
+        locale.en.name: Cancer
+      /careers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: careers
+        locale.en.name: Careers
+      /children-and-young-people:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: children-and-young-people
+        locale.en.name: Children and Young People
+      /community-care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: community-care
+        locale.en.name: Community Care
+      /cosmetic-procedures:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cosmetic-procedures
+        locale.en.name: Cosmetic procedures
+      /covid-19:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: covid-19
+        locale.en.name: Covid-19
+      /critical-care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: critical-care
+        locale.en.name: Critical Care
+      /dementia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dementia
+        locale.en.name: Dementia
+      /digital-skills:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital-skills
+        locale.en.name: Digital skills
+      /end-of-life-care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: end-of-life-care
+        locale.en.name: End of life care
+      /genomics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: genomics
+        locale.en.name: Genomics
+      /global-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: global-health
+        locale.en.name: Global Health
+      /health-academia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health-academia
+        locale.en.name: Health Academia
+      /health-inequalities:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health-inequalities
+        locale.en.name: Health inequalities
+      /infection-management:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: infection-management
+        locale.en.name: Infection management
+      /knowledge-management:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: knowledge-management
+        locale.en.name: Knowledge Management
+      /learning-disability-and-autism:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning-disability-and-autism
+        locale.en.name: Learning Disability and Autism
+      /long-term-conditions:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: long-term-conditions
+        locale.en.name: Long term conditions
+      /maternity:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: maternity
+        locale.en.name: Maternity
+      /medicines-optimisation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medicines-optimisation
+        locale.en.name: Medicines optimisation
+      /mental-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mental-health
+        locale.en.name: Mental Health
+      /neonatal:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: neonatal
+        locale.en.name: Neonatal
+      /nhs-screening-services:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs-screening-services
+        locale.en.name: NHS Screening Services
+      /personalised-care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: personalised-care
+        locale.en.name: Personalised Care
+      /pre-employment:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pre-employment
+        locale.en.name: Pre-employment
+      /prevention-and-public-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: prevention-and-public-health
+        locale.en.name: Prevention and Public Health
+      /primary-care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: primary-care
+        locale.en.name: Primary Care
+      /quality:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality
+        locale.en.name: Quality
+      /sexual-and-reproductive-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: sexual-and-reproductive-health
+        locale.en.name: Sexual and reproductive health
+      /urgent-and-emergency-care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: urgent-and-emergency-care
+        locale.en.name: Urgent and Emergency Care
+      /workforce-planning:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce-planning
+        locale.en.name: Workforce Planning
+      /workforce-transformation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce-transformation
+        locale.en.name: Workforce Transformation

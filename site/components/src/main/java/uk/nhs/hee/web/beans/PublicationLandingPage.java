@@ -97,4 +97,19 @@ public class PublicationLandingPage extends BaseDocument {
     public HippoBean getFeaturedContentBlock() {
         return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics")
+    public String[] getGlobalTaxonomyHealthcareTopics() {
+        return getMultipleProperty("hee:globalTaxonomyHealthcareTopics");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions")
+    public String[] getGlobalTaxonomyProfessions() {
+        return getMultipleProperty("hee:globalTaxonomyProfessions");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationTypes")
+    public String[] getGlobalTaxonomyPublicationTypes() {
+        return getMultipleProperty("hee:globalTaxonomyPublicationTypes");
+    }
 }
