@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c6aabab2-081c-4902-a411-6d6f7e8fe801
+          jcr:uuid: 94cf0565-c9ca-47d1-b7ec-7a8c6e87b565
           hipposysedit:node: true
           hipposysedit:supertype: ['hippotranslation:translated', 'hee:basedocument',
             'hippostd:relaxed']
@@ -164,7 +164,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: e5968866-5f1d-4f7a-9706-56f5163d6f4b
+          jcr:uuid: 9ab23cc4-2a70-4580-bb26-afd757a3e3ab
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:subtitle: ''
           hee:summary: ''
@@ -259,7 +259,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Publication type *
             field: globalTaxonomyPublicationTypes
-            hint: ''
+            hint: Select the publication type
             plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
