@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 /**
  * Validator for embed code based document types like {@code hee:googleMap}, {@code hee:mediaEmbed}, etc.
@@ -38,6 +39,9 @@ public class EmbedCodeIFrameValidator implements Validator<String> {
 
     // YouTube 'submessage' for valid embed codes
     private static final String YOUTUBE_VALID_EMBED_CODE_SUB_MESSAGE = "Try watching this video on www.youtube.com";
+
+    // iframe tag pattern
+    private static final Pattern IFRAME_TAG_PATTERN = Pattern.compile("^<iframe[^>]*>[^<]*</iframe>$");
 
     private final String[] embedCodeSrcPrefixes;
 
@@ -98,6 +102,12 @@ public class EmbedCodeIFrameValidator implements Validator<String> {
             return Optional.of(context.createViolation("non-iframe-elements-error"));
         }
 
+        // Validates if the given input contains a valid iframe tag
+        // (by validating against the 'IFRAME_TAG_PATTERN' regex pattern)
+        if (!isValidIFrameTag(value)) {
+            return Optional.of(context.createViolation("invalid-iframe-tag-error"));
+        }
+
         // Validates if the embed code iframe src matches
         // one of the configured embed code src prefixes (embed.code.src.prefix)
         final String embedCodeSrc = iframeEls.get(0).attr("src");
@@ -145,5 +155,17 @@ public class EmbedCodeIFrameValidator implements Validator<String> {
      */
     private Connection.Response getResponseCode(final String url) throws IOException {
         return Jsoup.connect(url).execute();
+    }
+
+    /**
+     * Returns {@code true} if the given {@code inputSnippet} matches the {@code IFRAME_TAG_PATTERN}.
+     * Otherwise, returns {@code false}.
+     *
+     * @param inputSnippet the given input snippet which needs to be matched for iframe tag.
+     * @return {@code true} if the given {@code inputSnippet} matches the {@code IFRAME_TAG_PATTERN}.
+     * Otherwise, returns {@code false}.
+     */
+    private boolean isValidIFrameTag(final String inputSnippet) {
+        return IFRAME_TAG_PATTERN.matcher(inputSnippet).matches();
     }
 }
