@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 7151a013-faa7-4e19-bf20-97d7b1b36f6e
+          jcr:uuid: c6aabab2-081c-4902-a411-6d6f7e8fe801
           hipposysedit:node: true
           hipposysedit:supertype: ['hippotranslation:translated', 'hee:basedocument',
             'hippostd:relaxed']
@@ -53,31 +53,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
             hipposysedit:validators: [required]
-          /publicationType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationType
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [required]
-          /publicationTopics:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationTopics
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /publicationProfessions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationProfessions
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /readTime:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -189,11 +164,8 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 99389233-4275-4f2d-948c-5cb8e814d219
+          jcr:uuid: e5968866-5f1d-4f7a-9706-56f5163d6f4b
           hee:publicationDate: 0001-01-01T12:00:00Z
-          hee:publicationProfessions: []
-          hee:publicationTopics: []
-          hee:publicationType: ''
           hee:subtitle: ''
           hee:summary: ''
           hee:title: ''
@@ -293,17 +265,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalPublicationTypes
-          /publicationType:
-            jcr:primaryType: frontend:plugin
-            caption: Publication type
-            field: publicationType
-            hint: Select the publication type
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              source: /content/documents/administration/valuelists/publicationtypes
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -335,22 +296,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalProfessions
-          /publicationProfessions:
-            jcr:primaryType: frontend:plugin
-            caption: Professions
-            field: publicationProfessions
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.left.item
-            hint: Select professions relevant to this publication
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationprofessions
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
@@ -362,22 +307,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalHealthcareTopics
-          /publicationTopics:
-            jcr:primaryType: frontend:plugin
-            caption: Topics
-            field: publicationTopics
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.left.item
-            hint: Select relevant topics
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtopics
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
           /webPublications:
             jcr:primaryType: frontend:plugin
             caption: Publication pages

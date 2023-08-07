@@ -25,7 +25,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: f9cf3e78-537b-4b9c-a052-34a5781c9997
+        hippo:versionHistory: d0234cf1-094a-41e4-a8f6-7442a2fdb734
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
@@ -53,13 +53,12 @@
           hee:title: Reasonable adjustments policy
           hee:updatedDate: 2022-12-31T00:00:00Z
           hippo:availability: []
-          hippostd:holder: admin
           hippostd:retainable: false
           hippostd:state: draft
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-08-04T17:57:15.627+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T14:50:34.235+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -182,8 +181,8 @@
           hee:globalTaxonomyProfessions: [ambulance-service-team, dental-hygienist]
           hee:globalTaxonomyProfessions__with_ancestors: [ambulance-service-team,
             dental-professionals, dental-hygienist]
-          hee:globalTaxonomyPublicationTypes: []
-          hee:globalTaxonomyPublicationTypes__with_ancestors: []
+          hee:globalTaxonomyPublicationTypes: [research]
+          hee:globalTaxonomyPublicationTypes__with_ancestors: [research]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -205,9 +204,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-08-04T17:05:34.754+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-04T17:57:06.133+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-08-04T17:46:49.566+01:00
+          hippostdpubwf:publicationDate: 2023-08-07T13:17:09.042+01:00
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -1123,11 +1122,20 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 126cc010-dbdd-4149-bc68-68312a63fc2f
         hippo:name: Higher Specialist Scientist Training - Publication landing
-        hippo:versionHistory: 08e91a96-74f8-4d42-a0bf-dbabb6f0f7ed
+        hippo:versionHistory: f9113900-f07c-4701-aa28-df67def728dc
         /higher-specialist-scientist-training---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 73871551-caa4-4b43-8501-6ca011e09c7a
+          hee:globalTaxonomyHealthcareTopics: [workforce-planning, workforce-transformation,
+            pre-employment, learning-disability-and-autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce-planning,
+            workforce-transformation, pre-employment, learning-disability-and-autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare-scientists, public-health-professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare-scientists, public-health-professionals]
+          hee:globalTaxonomyPublicationTypes: [consultation]
+          hee:globalTaxonomyPublicationTypes__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1148,7 +1156,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.524+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.997+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1183,10 +1191,22 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /higher-specialist-scientist-training---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: e1650153-5391-4632-9d27-7965b47ce4fa
+          hee:globalTaxonomyHealthcareTopics: [workforce-planning, workforce-transformation,
+            pre-employment, learning-disability-and-autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce-planning,
+            workforce-transformation, pre-employment, learning-disability-and-autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare-scientists, public-health-professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare-scientists, public-health-professionals]
+          hee:globalTaxonomyPublicationTypes: [consultation]
+          hee:globalTaxonomyPublicationTypes__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1207,7 +1227,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.454+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.963+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1242,10 +1262,22 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /higher-specialist-scientist-training---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 7204e177-bb3e-4ced-be5c-89ae36034711
+          hee:globalTaxonomyHealthcareTopics: [workforce-planning, workforce-transformation,
+            pre-employment, learning-disability-and-autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce-planning,
+            workforce-transformation, pre-employment, learning-disability-and-autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare-scientists, public-health-professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare-scientists, public-health-professionals]
+          hee:globalTaxonomyPublicationTypes: [consultation]
+          hee:globalTaxonomyPublicationTypes__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1266,9 +1298,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.454+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.963+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-07-20T12:52:56.576+01:00
+          hippostdpubwf:publicationDate: 2023-08-07T15:03:39.789+01:00
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -1302,6 +1334,9 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /higher-specialist-scientist-training---publication:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

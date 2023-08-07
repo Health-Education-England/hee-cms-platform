@@ -8,16 +8,21 @@ import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
+import org.hippoecm.hst.site.HstServices;
 import org.hippoecm.hst.util.ContentBeanUtils;
+import org.onehippo.taxonomy.api.Taxonomies;
+import org.onehippo.taxonomy.api.Taxonomy;
+import org.onehippo.taxonomy.api.TaxonomyManager;
 import uk.nhs.hee.web.components.info.PublicationListingPageComponentInfo;
+import uk.nhs.hee.web.constants.HEETaxonomy;
 import uk.nhs.hee.web.repository.HEEField;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
+import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
-import java.util.stream.Collectors;
+
 
 /**
  * Base component for Publication Listing Page.
@@ -49,36 +54,33 @@ public class PublicationListingPageComponent extends ListingPageComponent {
                 HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_PROFESSION));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
 
-        Map<String, String> publicationTypeMap=  ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName());
-        Map<String, String> publicationTopicMap = ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName());
-        Map<String, String> publicationProfessionMap = ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName());
-        // Adds all publications filters
-        request.setModel("publicationTypeMap",
-                publicationTypeMap.entrySet()
-                        .stream()
-                        .sorted(Map.Entry.comparingByValue())
-                        .collect(Collectors.toMap(
-                                Map.Entry::getKey,
-                                Map.Entry::getValue,
-                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
-        request.setModel("publicationTopicMap",
-                publicationTopicMap.entrySet()
-                        .stream().sorted(Map.Entry.comparingByValue())
-                        .collect(Collectors.toMap(
-                                Map.Entry::getKey,
-                                Map.Entry::getValue,
-                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
-        request.setModel("publicationProfessionMap",
-                publicationProfessionMap.entrySet()
-                        .stream().sorted(Map.Entry.comparingByValue())
-                        .collect(Collectors.toMap(
-                                Map.Entry::getKey,
-                                Map.Entry::getValue,
-                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
+        loadTaxonomiesIntoKeyValueMaps(request);
 
         // Adds publication filter facets
         addPublicationFilterFacetsToModel(request);
     }
+
+    private void loadTaxonomiesIntoKeyValueMaps(HstRequest request) {
+        final TaxonomyManager taxonomyManager = HstServices.getComponentManager()
+                .getComponent(TaxonomyManager.class.getSimpleName(),"org.onehippo.taxonomy.contentbean");
+        final Taxonomies taxonomies = taxonomyManager.getTaxonomies();
+        final Locale locale = request.getLocale();
+
+        request.setModel("publicationProfessionMap", getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PROFESSIONS.getName(), locale));
+        request.setModel("publicationTopicMap", getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName(), locale));
+        request.setModel("publicationTypeMap", getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES.getName(), locale));
+    }
+
+    private Map<String, String> getMapFor(Taxonomies taxonomies, String taxonomyName, Locale locale) {
+        Taxonomy taxonomy = taxonomies.getTaxonomy(taxonomyName);
+
+        if (taxonomy != null) {
+            return TaxonomyTemplateUtils.getTaxonomyAsMap(taxonomy, locale);
+        } else {
+            return new HashMap<>();
+        }
+    }
+
 
     /**
      * Builds Query {@link Filter} for publication listing.
@@ -93,18 +95,18 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         return createOrFilter(
                 query,
                 HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_TYPE),
-                HEEField.PUBLICATION_TYPE.getName()
+                HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES.getName()
         ).addAndFilter(
                 createOrFilter(
-                    query,
-                    HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_TOPIC),
-                    HEEField.PUBLICATION_TOPICS.getName()
+                        query,
+                        HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_TOPIC),
+                        HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName()
                 )
         ).addAndFilter(
                 createOrFilter(
                         query,
                         HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_PROFESSION),
-                        HEEField.PUBLICATION_PROFESSIONS.getName()
+                        HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName()
                 )
         );
     }
@@ -133,11 +135,11 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         }
 
         for (final HippoFolderBean folder : facetNavigation.getFolders()) {
-            if (HEEField.PUBLICATION_TYPE.getName().equals(folder.getName())) {
+            if (HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES.getName().equals(folder.getName())) {
                 request.setModel("publicationTypeFacet", folder);
-            } else if (HEEField.PUBLICATION_TOPICS.getName().equals(folder.getName())) {
+            } else if (HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName().equals(folder.getName())) {
                 request.setModel("publicationTopicFacet", folder);
-            } else if (HEEField.PUBLICATION_PROFESSIONS.getName().equals(folder.getName())) {
+            } else if (HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName().equals(folder.getName())) {
                 request.setModel("publicationProfessionFacet", folder);
             }
         }

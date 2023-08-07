@@ -42,18 +42,42 @@ public enum HEEField {
 
     /**
      * {@code publicationType} field/property.
+     *
+     * This will need to change to the taxonomy variant once all refs are removed
      */
+    @Deprecated
     PUBLICATION_TYPE("hee:publicationType"),
 
     /**
-     * {@code publicationTopics} field/property.
+     * This is the taxonomy driven version of the field that will replace the one above
      */
+    HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES ("hee:globalTaxonomyPublicationTypes"),
+
+    /**
+     * {@code publicationTopics} field/property.
+     *
+     * This will need to change to the taxonomy variant once all refs are removed
+     */
+    @Deprecated
     PUBLICATION_TOPICS("hee:publicationTopics"),
 
     /**
-     * {@code publicationProfessions} field/property.
+     * This is the taxonomy driven version of the field that will replace the one above
      */
+    HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS("hee:globalTaxonomyHealthcareTopics"),
+
+    /**
+     * {@code publicationProfessions} field/property.
+     *
+     * This will need to change to the taxonomy variant once all refs are removed
+     */
+    @Deprecated
     PUBLICATION_PROFESSIONS("hee:publicationProfessions"),
+
+    /**
+     * This is the taxonomy driven version of the field that will replace the one above
+     */
+    HEE_GLOBAL_TAXONOMY_PROFESSIONS ("hee:globalTaxonomyProfessions"),
 
     /**
      * {@code topics} field/property.
