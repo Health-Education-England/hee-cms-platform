@@ -4,9 +4,9 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_PROFESSIONS ("GlobalProfessions"),
 
-    HEE_GLOBAL_HEALTHCARE_TOPICS("GlobalHealthcareTopics"),
+    HEE_GLOBAL_HEALTHCARE_TOPICS ("GlobalHealthcareTopics"),
 
-    HEE_GLOBAL_PUBLICATION_TYPES ("GlobalPublicationTypes");
+    HEE_GLOBAL_PUBLICATION_TYPE ("GlobalPublicationType");
 
     private final String name;
 

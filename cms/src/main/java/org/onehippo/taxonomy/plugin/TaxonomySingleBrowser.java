@@ -98,7 +98,7 @@ public class TaxonomySingleBrowser extends TaxonomyBrowser {
                     String key = getModelObject().getKey();
                     boolean isMulti = TaxonomySingleBrowser.this.getMultiple();
                     return !parameterisedDetailsReadOnly && !getKeys().contains(key) &&
-                            ((!isMulti && getKeys().size() == 0) || isMulti);
+                            (isMulti || getKeys().size() == 0);
                 }
             });
 

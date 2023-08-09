@@ -64,7 +64,7 @@ public enum Model {
      */
     GLOBAL_TOPICS_MAP("globalTopicsMap");
 
-        private final String key;
+    private final String key;
 
     /**
      * Constructor that initialises the Model Key names.

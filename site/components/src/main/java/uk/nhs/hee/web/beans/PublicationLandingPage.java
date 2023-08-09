@@ -29,21 +29,6 @@ public class PublicationLandingPage extends BaseDocument {
         return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:publicationType")
-    public String getPublicationType() {
-        return getSingleProperty("hee:publicationType");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:publicationTopics")
-    public String[] getPublicationTopics() {
-        return getMultipleProperty("hee:publicationTopics");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:publicationProfessions")
-    public String[] getPublicationProfessions() {
-        return getMultipleProperty("hee:publicationProfessions");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:readTime")
     public String getReadTime() {
         return getSingleProperty("hee:readTime");
@@ -108,8 +93,8 @@ public class PublicationLandingPage extends BaseDocument {
         return getMultipleProperty("hee:globalTaxonomyProfessions");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationTypes")
-    public String[] getGlobalTaxonomyPublicationTypes() {
-        return getMultipleProperty("hee:globalTaxonomyPublicationTypes");
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationType")
+    public String[] getGlobalTaxonomyPublicationType() {
+        return getMultipleProperty("hee:globalTaxonomyPublicationType");
     }
 }

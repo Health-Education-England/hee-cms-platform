@@ -4,9 +4,7 @@ public enum HEETaxonomyNodeNames {
 
     HEE_GLOBAL_TAXONOMY_PROFESSIONS ("hee:globalTaxonomyProfessions"),
 
-    HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS("hee:globalTaxonomyHealthcareTopics"),
-
-    HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES ("hee:globalTaxonomyPublicationTypes");
+    HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS("hee:globalTaxonomyHealthcareTopics");
 
     private final String name;
 

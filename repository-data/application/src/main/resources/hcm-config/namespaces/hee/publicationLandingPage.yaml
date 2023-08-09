@@ -11,13 +11,13 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 94cf0565-c9ca-47d1-b7ec-7a8c6e87b565
+          jcr:uuid: 562040bc-40cb-4bb3-b31e-75136ba416c4
           hipposysedit:node: true
           hipposysedit:supertype: ['hippotranslation:translated', 'hee:basedocument',
             'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
-            'hee:unique-web-publications-validator', 'hee:mandatory-publication-type-validator']
+            'hee:unique-web-publications-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -156,15 +156,16 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
             hipposysedit:ordered: true
-            hipposysedit:path: hee:globalTaxonomyPublicationTypes
+            hipposysedit:path: hee:globalTaxonomyPublicationType
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 9ab23cc4-2a70-4580-bb26-afd757a3e3ab
+          jcr:uuid: 9c3177b7-5eec-4d56-aeca-8451c02e20e7
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:subtitle: ''
           hee:summary: ''
@@ -255,16 +256,16 @@ definitions:
             hint: Check the box to hide the authors email address and work address.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /globalTaxonomyPublicationTypes:
+          /globalTaxonomyPublicationType:
             jcr:primaryType: frontend:plugin
-            caption: Publication type *
+            caption: Publication type
             field: globalTaxonomyPublicationTypes
             hint: Select the publication type
             plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              taxonomy.name: GlobalPublicationTypes
+              taxonomy.name: GlobalPublicationType
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary

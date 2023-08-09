@@ -84,9 +84,9 @@ public class ReportAndPublicationUtils {
     }
 
     private void addPublicationTypeMapIntoModel(HstRequest request, Locale locale, Taxonomies taxonomies, PublicationLandingPage landingPage) {
-        final String[] selectedTerms = landingPage.getGlobalTaxonomyPublicationTypes();
+        final String[] selectedTerms = landingPage.getGlobalTaxonomyPublicationType();
 
-        Map<String, String> keysAndCats = addTaxonomyKeysAndValues(locale, taxonomies.getTaxonomy(HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES.getName()), selectedTerms);
+        Map<String, String> keysAndCats = addTaxonomyKeysAndValues(locale, taxonomies.getTaxonomy(HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPE.getName()), selectedTerms);
         if (keysAndCats != null) {
             request.setModel(Model.GLOBAL_PUBLICATION_TYPE_MAP.getKey(), keysAndCats);
         }

@@ -25,7 +25,7 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: d0234cf1-094a-41e4-a8f6-7442a2fdb734
+        hippo:versionHistory: 45fa31cd-f734-4d74-8db1-b35e46b52117
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
@@ -35,8 +35,8 @@
           hee:globalTaxonomyProfessions: [ambulance-service-team, dental-hygienist]
           hee:globalTaxonomyProfessions__with_ancestors: [ambulance-service-team,
             dental-professionals, dental-hygienist]
-          hee:globalTaxonomyPublicationTypes: [research]
-          hee:globalTaxonomyPublicationTypes__with_ancestors: [research]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -58,7 +58,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-08-07T14:50:34.235+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.658+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -108,8 +108,8 @@
           hee:globalTaxonomyProfessions: [ambulance-service-team, dental-hygienist]
           hee:globalTaxonomyProfessions__with_ancestors: [ambulance-service-team,
             dental-professionals, dental-hygienist]
-          hee:globalTaxonomyPublicationTypes: [research]
-          hee:globalTaxonomyPublicationTypes__with_ancestors: [research]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -131,7 +131,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-08-04T17:57:06.133+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.578+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -181,8 +181,8 @@
           hee:globalTaxonomyProfessions: [ambulance-service-team, dental-hygienist]
           hee:globalTaxonomyProfessions__with_ancestors: [ambulance-service-team,
             dental-professionals, dental-hygienist]
-          hee:globalTaxonomyPublicationTypes: [research]
-          hee:globalTaxonomyPublicationTypes__with_ancestors: [research]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -204,9 +204,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-08-04T17:57:06.133+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.578+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-08-07T13:17:09.042+01:00
+          hippostdpubwf:publicationDate: 2023-08-09T20:01:40.131+01:00
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -1134,8 +1134,8 @@
             careers]
           hee:globalTaxonomyProfessions: [healthcare-scientists, public-health-professionals]
           hee:globalTaxonomyProfessions__with_ancestors: [healthcare-scientists, public-health-professionals]
-          hee:globalTaxonomyPublicationTypes: [consultation]
-          hee:globalTaxonomyPublicationTypes__with_ancestors: [consultation]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1205,8 +1205,8 @@
             careers]
           hee:globalTaxonomyProfessions: [healthcare-scientists, public-health-professionals]
           hee:globalTaxonomyProfessions__with_ancestors: [healthcare-scientists, public-health-professionals]
-          hee:globalTaxonomyPublicationTypes: [consultation]
-          hee:globalTaxonomyPublicationTypes__with_ancestors: [consultation]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -1276,8 +1276,8 @@
             careers]
           hee:globalTaxonomyProfessions: [healthcare-scientists, public-health-professionals]
           hee:globalTaxonomyProfessions__with_ancestors: [healthcare-scientists, public-health-professionals]
-          hee:globalTaxonomyPublicationTypes: [consultation]
-          hee:globalTaxonomyPublicationTypes__with_ancestors: [consultation]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
