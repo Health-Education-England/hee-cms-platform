@@ -6,13 +6,9 @@ import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
-import uk.nhs.hee.web.beans.PublicationLandingPage;
 import uk.nhs.hee.web.components.info.PublicationLandingPageComponentInfo;
 import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.ReportAndPublicationUtils;
-
-import java.util.Locale;
 
 /**
  * Component class for {@code hee:publicationLandingPage} document type pages.
@@ -25,15 +21,7 @@ public class PublicationLandingPageComponent extends EssentialsDocumentComponent
         super.doBeforeRender(request, response);
         addPublicationListingPageURLToModel(request);
 
-        final PublicationLandingPage publicationLandingPage = request.getModel(REQUEST_ATTR_DOCUMENT);
-        addTaxonomyFieldsToMap(request, publicationLandingPage);
-
         request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
-    }
-
-    private void addTaxonomyFieldsToMap(final HstRequest request, PublicationLandingPage publicationLandingPage) {
-        final Locale locale = request.getLocale();
-        new ReportAndPublicationUtils().addPublicationLandingPageTaxonomyFieldsToModel(request, locale, publicationLandingPage);
     }
 
     /**
@@ -52,10 +40,8 @@ public class PublicationLandingPageComponent extends EssentialsDocumentComponent
             return;
         }
 
-        request.setModel(
-                "publicationListingPageURL",
+        request.setModel("publicationListingPageURL",
                 HstUtils.getURLByBean(hstRequestContext, publicationListingPageBean, false));
     }
-
 }
 

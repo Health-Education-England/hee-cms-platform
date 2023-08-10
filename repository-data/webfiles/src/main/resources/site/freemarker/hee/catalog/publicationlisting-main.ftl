@@ -142,7 +142,7 @@
                         <#if pageable??>
                             <#--  Search results: START  -->
                             <div class="hee-listing__results">
-                                <@publicationListItem items=pageable.items publicationTypeMap=publicationTypeMap/>
+                                <@publicationListItem items=pageable.items publicationTypeMap=selectedPublicationTypes/>
                             </div>
                             <#--  Search results: END  -->
 

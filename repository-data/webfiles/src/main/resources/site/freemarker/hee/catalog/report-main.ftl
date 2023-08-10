@@ -148,10 +148,10 @@
 
 
                     <#if landingPage??>
-                        <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL
-                                    globalPublicationTypeMap=globalPublicationTypeMap
-                                    globalProfessionsMap=globalProfessionsMap
-                                    globalTopicsMap=globalTopicsMap/>
+                        <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
+                                                    globalPublicationTypeMap=landingPage.globalTaxonomyPublicationType
+                                                    globalProfessionsMap=landingPage.globalTaxonomyProfessions
+                                                    globalTopicsMap=landingPage.globalTaxonomyHealthcareTopics/>
                     </#if>
                 </div>
                 <#--  Publication Info: END  -->

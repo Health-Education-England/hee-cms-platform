@@ -3,8 +3,13 @@ package uk.nhs.hee.web.beans;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
+import uk.nhs.hee.web.constants.HEETaxonomy;
+
 import java.util.Calendar;
 import java.util.List;
+
+import javax.jcr.RepositoryException;
 
 @HippoEssentialsGenerated(internalName = "hee:publicationLandingPage")
 @Node(jcrType = "hee:publicationLandingPage")
@@ -83,18 +88,24 @@ public class PublicationLandingPage extends BaseDocument {
         return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics")
-    public String[] getGlobalTaxonomyHealthcareTopics() {
-        return getMultipleProperty("hee:globalTaxonomyHealthcareTopics");
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
+        return new TaxonomyClassification(
+                this.getNode().getProperty("hee:globalTaxonomyProfessions"),
+                getTaxonomy(HEETaxonomy.HEE_GLOBAL_PROFESSIONS.getName()));
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions")
-    public String[] getGlobalTaxonomyProfessions() {
-        return getMultipleProperty("hee:globalTaxonomyProfessions");
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyHealthcareTopics() throws RepositoryException {
+        return new TaxonomyClassification(
+                this.getNode().getProperty("hee:globalTaxonomyHealthcareTopics"),
+                getTaxonomy(HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName()));
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationType")
-    public String[] getGlobalTaxonomyPublicationType() {
-        return getMultipleProperty("hee:globalTaxonomyPublicationType");
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationTypes", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyPublicationType() throws RepositoryException {
+        return new TaxonomyClassification(
+                this.getNode().getProperty("hee:globalTaxonomyPublicationType"),
+                getTaxonomy(HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPE.getName()));
     }
 }

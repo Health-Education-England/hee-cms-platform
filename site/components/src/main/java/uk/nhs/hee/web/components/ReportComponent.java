@@ -68,7 +68,6 @@ public class ReportComponent extends EssentialsDocumentComponent {
 
             if (publicationLandingPage != null) {
                 request.setModel("landingPage", publicationLandingPage);
-                reportAndPublicationUtils.addPublicationLandingPageTaxonomyFieldsToModel(request, locale, publicationLandingPage);
             }
         } catch (final RepositoryException e) {
             log.error("Caught error '{}' while getting the Publication landing page document to which " +

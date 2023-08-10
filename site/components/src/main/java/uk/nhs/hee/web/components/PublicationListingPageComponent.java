@@ -95,7 +95,7 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         return createOrFilter(
                 query,
                 HstUtils.getQueryParameterValues(request, QUERY_PARAM_PUBLICATION_TYPE),
-                HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES.getName()
+                HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()
         ).addAndFilter(
                 createOrFilter(
                         query,
@@ -135,7 +135,7 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         }
 
         for (final HippoFolderBean folder : facetNavigation.getFolders()) {
-            if (HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES.getName().equals(folder.getName())) {
+            if (HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName().equals(folder.getName())) {
                 request.setModel("publicationTypeFacet", folder);
             } else if (HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName().equals(folder.getName())) {
                 request.setModel("publicationTopicFacet", folder);

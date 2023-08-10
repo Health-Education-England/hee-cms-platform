@@ -151,7 +151,7 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyProfessions
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
-          /globalTaxonomyPublicationTypes:
+          /globalTaxonomyPublicationType:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: true
@@ -259,7 +259,7 @@ definitions:
           /globalTaxonomyPublicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
-            field: globalTaxonomyPublicationTypes
+            field: globalTaxonomyPublicationType
             hint: Select the publication type
             plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item

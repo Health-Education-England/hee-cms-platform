@@ -276,9 +276,9 @@
                 <h3><a href="${pageURL}">${item.title}</a></h3>
 
                 <div class="hee-listing-item__details">
-                    <#if item.globalTaxonomyPublicationTypes?has_content>
+                    <#if item.globalTaxonomyPublicationType?has_content>
                         <@listItemRow key="${publicationTypeLabel}">
-                            ${publicationTypeMap[item.globalTaxonomyPublicationTypes[0]]}
+                            ${item.globalTaxonomyPublicationType.taxonomyValues[0].label}
                         </@listItemRow>
                     </#if>
 

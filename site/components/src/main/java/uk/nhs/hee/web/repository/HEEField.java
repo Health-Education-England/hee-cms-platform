@@ -51,7 +51,7 @@ public enum HEEField {
     /**
      * This is the taxonomy driven version of the field that will replace the one above
      */
-    HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPES ("hee:globalTaxonomyPublicationTypes"),
+    HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE("hee:globalTaxonomyPublicationType"),
 
     /**
      * {@code publicationTopics} field/property.
