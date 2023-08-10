@@ -5,21 +5,28 @@
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.TrainingProgrammesHomepage" -->
 <#if document??>
-    <main class="page page--rightbar page--specialty-homepage" id="maincontent" role="main">
-        <#--  Main header: START  -->
+    <@hst.link var="heroImage" hippobean=document.heroImage />
+    <#assign heroImgClass=''>
+    <#assign backgroundImage=''>
+    <#if heroImage??>
+        <#assign backgroundImage=' style="background-image: url(\'${heroImage}\');"'>
+        <#assign heroType=' class="nhsuk-hero-content"'>
+        <#assign heroImgClass=' nhsuk-hero--image nhsuk-hero--image-description'>
+    <#else>
+        <#assign heroType=' class="nhsuk-hero__wrapper"'>
+    </#if>
+    <main id="maincontent" role="main" class="page page--rightbar page--specialty-homepage">
+        <#--  Header section, includes hero image   -->
         <div class="page__header has-nhsukhero">
-            <#--  Hero: START  -->
-            <section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description" style="background-image: url('<@hst.link hippobean=document.heroImage />');">
+            <section class="nhsuk-hero${heroImgClass}"${backgroundImage}>
                 <div class="nhsuk-hero__overlay">
                     <div class="nhsuk-width-container">
                         <div class="nhsuk-grid-row">
                             <div class="nhsuk-grid-column-two-thirds">
-                                <div class="nhsuk-hero-content">
-                                    <#--  Title  -->
+                                <div${heroType}>
                                     <h1 class="nhsuk-u-margin-bottom-3">${document.title}</h1>
-                                    <#if document.summary?has_content>
-                                        <#--  Summary  -->
-                                        <p class="nhsuk-body-l nhsuk-u-margin-bottom-0"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                                    <#if document.subtitle?has_content>
+                                        <p class="nhsuk-body-l nhsuk-u-margin-bottom-0">${document.subtitle}</p>
                                     </#if>
                                     <span class="nhsuk-hero__arrow" aria-hidden="true"></span>
                                 </div>
@@ -28,29 +35,23 @@
                     </div>
                 </div>
             </section>
-            <#--  Hero: END  -->
         </div>
-        <#--  Main header: END  -->
-
-        <#--  Main content: START  -->
+        <#-- Main section  -->
         <div class="page__layout nhsuk-width-container">
-            <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
-                    <#--  Caption  -->
-                    <#if document.caption??>
-                        <p class="nhsuk-body-l"><@hst.html formattedText="${document.caption!?replace('\n', '<br>')}"/></p>
+                    <#if document.programmeDescription?has_content>
+                        <p class="nhsuk-body-l"><@hst.html formattedText="${document.programmeDescription!?replace('\n', '<br>')}"/></p>
                     </#if>
 
-                    <#--  Overview  -->
                     <#if document.overview??>
-                        <h2 class="toc_h2" id="overview0">Overview</h2>
+                        <h2 class="toc_h2"  id="overview0">Overview</h2>
                         <p class="nhsuk-lede-text"><@hst.html hippohtml=document.overview/></p>
                     </#if>
 
-                    <#--  Pathways content blocks: START  -->
-                    <#if document.pathwaysBlocks??>
-                        <h2 class="toc_h2" id="pathways">Pathways</h2>
+                    <#--  Pathways content blocks  -->
+                    <#if document.pathwaysBlocks?has_content>
+                        <h2  class="toc_h2" id="pathways">Pathways</h2>
                         <#list document.pathwaysBlocks as block>
                             <#switch block.getClass().getName()>
                                 <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
@@ -68,10 +69,9 @@
                             </#switch>
                         </#list>
                     </#if>
-                    <#--  Pathways content blocks: END  -->
 
-                    <#--  Training routes content blocks: START  -->
-                    <#if document.trainingRoutesBlocks??>
+                    <#--  Training Route content blocks, at least 1 is mandatory  -->
+                    <#if document.trainingRoutesBlocks?? >
                         <h2 class="toc_h2">Training routes</h2>
                         <#list document.trainingRoutesBlocks as block>
                             <#switch block.getClass().getName()>
@@ -91,9 +91,8 @@
                             </#switch>
                         </#list>
                     </#if>
-                    <#--  Training routes content blocks: END  -->
 
-                    <#--  Support content blocks: START  -->
+                    <#--  Support content blocks  -->
                     <#if document.supportBlocks?has_content>
                         <h2 class="toc_h2" id="support">Support</h2>
                         <#list document.supportBlocks as block>
@@ -111,9 +110,8 @@
                             </#switch>
                         </#list>
                     </#if>
-                    <#--  Support content blocks: END  -->
 
-                    <#--  Region content blocks: START  -->
+                    <#--  Region content blocks  -->
                     <#if document.regionsBlocks?has_content>
                         <h2  class="toc_h2" id="regions">Regions</h2>
                         <#list document.regionsBlocks as block>
@@ -125,19 +123,18 @@
                             </#switch>
                         </#list>
                     </#if>
-                    <#--  Region content blocks: END  -->
                 </div>
             </div>
-            <#--  Main sections: END  -->
 
-            <#--  Sidebar sections: START  -->
+            <#--  Right hand content blocks: Table of content and content blocks   -->
             <aside class="page__rightbar">
                 <#--  Table of content  -->
-                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js=true data-headings="">
+
+                <div class="hee-anchorlinks" data-toc-js="true">
                     <h2 data-anchorlinksignore="true">Table of Contents</h2>
                 </div>
 
-                <#--  Right hand content blocks: START  -->
+                <#--  Righthand content blocks -->
                 <#if document.rightHandBlocks??>
                     <#list document.rightHandBlocks as block>
                         <#switch block.getClass().getName()>
@@ -169,10 +166,13 @@
                         </#switch>
                     </#list>
                 </#if>
-                <#--  Right hand content blocks: END  -->
             </aside>
-            <#--  Sidebar sections: END  -->
         </div>
-        <#--  Main content: END  -->
+
+        <#--  Feature section will be a future work, not implemented yet  -->
+        <section class="page__feature">
+            <div class="nhsuk-width-container">
+            </div>
+        </section>
     </main>
 </#if>
