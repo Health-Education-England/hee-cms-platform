@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4705581e-bdc0-4ce9-8e82-70c8733090c9
+          jcr:uuid: fbc53bdd-b84a-4da8-bdfd-e86782116d6b
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -54,21 +54,21 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /caption:
-            jcr:primaryType: frontend:plugin
-            caption: Caption
-            field: caption
-            hint: Please enter the caption of the image
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /image:
             jcr:primaryType: frontend:plugin
             caption: Image
             field: image
-            hint: Please select the image
+            hint: Select an image
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /caption:
+            jcr:primaryType: frontend:plugin
+            caption: Caption
+            field: caption
+            hint: Enter text to be displayed under the image on the page
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
