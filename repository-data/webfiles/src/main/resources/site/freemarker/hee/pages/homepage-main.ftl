@@ -54,6 +54,9 @@
                             <#case "uk.nhs.hee.web.beans.ActionLink">
                                 <@hee.actionLink actionLink=block/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.ImageBlock">
+                                <@hee.imageBlock imageBlock=block/>
+                                <#break>
                             <#case "uk.nhs.hee.web.beans.ContentCards">
                                 <@hee.contentCards contentCards=block/>
                                 <#break>
