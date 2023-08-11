@@ -883,7 +883,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-08-04T07:52:31.051+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-04T07:58:08.448+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T19:18:44.854+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotaxonomy:defaultLocale: en
       hippotaxonomy:locales: [en]
@@ -2617,28 +2617,43 @@
           locale.en.name: School nurse
   /GlobalPublicationType:
     jcr:primaryType: hippo:handle
-    /GlobalPublicationType:
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: 8869092f-8520-4477-860e-7facad41b035
+    /GlobalPublicationType[1]:
       jcr:primaryType: hippotaxonomy:taxonomy
       jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
       jcr:uuid: 40451e36-45ea-4cdf-9edf-fc7a53e92a4d
-      hippo:availability: [live, preview]
+      hippo:availability: [live]
       hippostd:holder: admin
+      hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-08-03T14:28:11.978+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-03T14:28:11.978+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T18:30:34.472+05:30
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-08-03T14:28:11.978+01:00
+      hippostdpubwf:publicationDate: 2023-08-11T18:30:36.810+05:30
       hippotaxonomy:defaultLocale: en
       hippotaxonomy:locales: [en]
       /briefing:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: briefing
         locale.en.name: Briefing
+      /business_plan:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: business_plan
+        locale.en.name: Business plan
       /consultation:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: consultation
         locale.en.name: Consultation
+      /contract:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: contract
+        locale.en.name: Contract
+      /data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data
+        locale.en.name: Data
       /data_and_statistics:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: data_and_statistics
@@ -2651,6 +2666,10 @@
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: foi_release
         locale.en.name: FOI release
+      /framework:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: framework
+        locale.en.name: Framework
       /guidance:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: guidance
@@ -2667,10 +2686,6 @@
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: meeting_papers_and_minutes
         locale.en.name: Meeting papers and minutes
-      /contract:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: contract
-        locale.en.name: Contract
       /policy_or_strategy:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: policy_or_strategy
@@ -2691,40 +2706,217 @@
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: research
         locale.en.name: Research
-      /statement:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: statement
-        locale.en.name: Statement
-      /data:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: data
-        locale.en.name: Data
       /review:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: review
         locale.en.name: Review
+      /statement:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statement
+        locale.en.name: Statement
+    /GlobalPublicationType[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: b6df282e-9409-4703-b56f-3238f47424c4
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-03T14:28:11.978+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T18:30:34.472+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /briefing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: briefing
+        locale.en.name: Briefing
       /business_plan:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: business_plan
-        locale.en.name: Business Plan
+        locale.en.name: Business plan
+      /consultation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: consultation
+        locale.en.name: Consultation
+      /contract:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: contract
+        locale.en.name: Contract
+      /data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data
+        locale.en.name: Data
+      /data_and_statistics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data_and_statistics
+        locale.en.name: Data and statistics
+      /decision:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: decision
+        locale.en.name: Decision
+      /foi_release:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: foi_release
+        locale.en.name: FOI release
       /framework:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: framework
         locale.en.name: Framework
+      /guidance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: guidance
+        locale.en.name: Guidance
+      /independent_report:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: independent_report
+        locale.en.name: Independent report
+      /letter:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: letter
+        locale.en.name: Letter
+      /meeting_papers_and_minutes:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: meeting_papers_and_minutes
+        locale.en.name: Meeting papers and minutes
+      /policy_or_strategy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: policy_or_strategy
+        locale.en.name: Policy or strategy
+      /promotional_material:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: promotional_material
+        locale.en.name: Promotional material
+      /regulatory:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: regulatory
+        locale.en.name: Regulatory
+      /report:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: report
+        locale.en.name: Report
+      /research:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: research
+        locale.en.name: Research
+      /review:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: review
+        locale.en.name: Review
+      /statement:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statement
+        locale.en.name: Statement
+    /GlobalPublicationType[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: c95f58e0-1486-4eb7-b303-88eb1504c44b
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-03T14:28:11.978+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T19:18:52.350+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /briefing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: briefing
+        locale.en.name: Briefing
+      /business_plan:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: business_plan
+        locale.en.name: Business plan
+      /consultation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: consultation
+        locale.en.name: Consultation
+      /contract:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: contract
+        locale.en.name: Contract
+      /data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data
+        locale.en.name: Data
+      /data_and_statistics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: data_and_statistics
+        locale.en.name: Data and statistics
+      /decision:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: decision
+        locale.en.name: Decision
+      /foi_release:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: foi_release
+        locale.en.name: FOI release
+      /framework:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: framework
+        locale.en.name: Framework
+      /guidance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: guidance
+        locale.en.name: Guidance
+      /independent_report:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: independent_report
+        locale.en.name: Independent report
+      /letter:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: letter
+        locale.en.name: Letter
+      /meeting_papers_and_minutes:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: meeting_papers_and_minutes
+        locale.en.name: Meeting papers and minutes
+      /policy_or_strategy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: policy_or_strategy
+        locale.en.name: Policy or strategy
+      /promotional_material:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: promotional_material
+        locale.en.name: Promotional material
+      /regulatory:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: regulatory
+        locale.en.name: Regulatory
+      /report:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: report
+        locale.en.name: Report
+      /research:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: research
+        locale.en.name: Research
+      /review:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: review
+        locale.en.name: Review
+      /statement:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statement
+        locale.en.name: Statement
   /GlobalHealthcareTopics:
     jcr:primaryType: hippo:handle
-    /GlobalHealthcareTopics:
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: f410cf0e-52fe-4073-a21d-d5cc8d9df705
+    /GlobalHealthcareTopics[1]:
       jcr:primaryType: hippotaxonomy:taxonomy
       jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
       jcr:uuid: 5382556c-d708-4075-aa80-dff32c31fd08
-      hippo:availability: [live, preview]
+      hippo:availability: [live]
       hippostd:holder: admin
+      hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-08-03T14:27:59.125+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-03T14:27:59.125+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T18:30:41.278+05:30
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-08-03T14:27:59.125+01:00
+      hippostdpubwf:publicationDate: 2023-08-11T18:30:44.102+05:30
       hippotaxonomy:defaultLocale: en
       hippotaxonomy:locales: [en]
       /addiction:
@@ -2734,14 +2926,15 @@
       /advanced_clinical_practice:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: advanced_clinical_practice
+        locale.en.name: Advanced clinical practice
       /antimicrobial_resistance:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: antimicrobial_resistance
-        locale.en.name: Antimicrobial esistance
+        locale.en.name: Antimicrobial resistance
       /armed_forces:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: armed_forces
-        locale.en.name: Armed Forces
+        locale.en.name: Armed forces
       /cancer:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: cancer
@@ -2753,11 +2946,11 @@
       /children_and_young_people:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: children_and_young_people
-        locale.en.name: Children and Young People
+        locale.en.name: Children and young people
       /community_care:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: community_care
-        locale.en.name: Community Care
+        locale.en.name: Community care
       /cosmetic_procedures:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: cosmetic_procedures
@@ -2769,7 +2962,7 @@
       /critical_care:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: critical_care
-        locale.en.name: Critical Care
+        locale.en.name: Critical care
       /dementia:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: dementia
@@ -2789,11 +2982,11 @@
       /global_health:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: global_health
-        locale.en.name: Global Health
+        locale.en.name: Global health
       /health_academia:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: health_academia
-        locale.en.name: Health Academia
+        locale.en.name: Health academia
       /health_inequalities:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: health_inequalities
@@ -2805,11 +2998,11 @@
       /knowledge_management:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: knowledge_management
-        locale.en.name: Knowledge Management
+        locale.en.name: Knowledge management
       /learning_disability_and_autism:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: learning_disability_and_autism
-        locale.en.name: Learning Disability and Autism
+        locale.en.name: Learning disability and autism
       /long_term_conditions:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: long_term_conditions
@@ -2825,7 +3018,7 @@
       /mental_health:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: mental_health
-        locale.en.name: Mental Health
+        locale.en.name: Mental health
       /neonatal:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: neonatal
@@ -2837,19 +3030,19 @@
       /personalised_care:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: personalised_care
-        locale.en.name: Personalised Care
+        locale.en.name: Personalised care
       /pre_employment:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: pre_employment
-        locale.en.name: Pre_employment
+        locale.en.name: Pre-employment
       /prevention_and_public_health:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: prevention_and_public_health
-        locale.en.name: Prevention and Public Health
+        locale.en.name: Prevention and public health
       /primary_care:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: primary_care
-        locale.en.name: Primary Care
+        locale.en.name: Primary care
       /quality:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: quality
@@ -2861,12 +3054,350 @@
       /urgent_and_emergency_care:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: urgent_and_emergency_care
-        locale.en.name: Urgent and Emergency Care
+        locale.en.name: Urgent and emergency care
       /workforce_planning:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: workforce_planning
-        locale.en.name: Workforce Planning
+        locale.en.name: Workforce planning
+        /funding:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: funding
+          locale.en.name: Funding
       /workforce_transformation:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: workforce_transformation
-        locale.en.name: Workforce Transformation
+        locale.en.name: Workforce transformation
+        /digital_transformation:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: digital_transformation
+          locale.en.name: Digital transformation
+    /GlobalHealthcareTopics[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 2f9d3e79-02e8-42be-9b1c-b5f14098ed95
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-03T14:27:59.125+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T18:30:41.278+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /addiction:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: addiction
+        locale.en.name: Addiction
+      /advanced_clinical_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advanced_clinical_practice
+        locale.en.name: Advanced clinical practice
+      /antimicrobial_resistance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: antimicrobial_resistance
+        locale.en.name: Antimicrobial resistance
+      /armed_forces:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: armed_forces
+        locale.en.name: Armed forces
+      /cancer:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cancer
+        locale.en.name: Cancer
+      /careers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: careers
+        locale.en.name: Careers
+      /children_and_young_people:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: children_and_young_people
+        locale.en.name: Children and young people
+      /community_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: community_care
+        locale.en.name: Community care
+      /cosmetic_procedures:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cosmetic_procedures
+        locale.en.name: Cosmetic procedures
+      /covid_19:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: covid_19
+        locale.en.name: Covid-19
+      /critical_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: critical_care
+        locale.en.name: Critical care
+      /dementia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dementia
+        locale.en.name: Dementia
+      /digital_skills:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_skills
+        locale.en.name: Digital skills
+      /end_of_life_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: end_of_life_care
+        locale.en.name: End of life care
+      /genomics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: genomics
+        locale.en.name: Genomics
+      /global_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: global_health
+        locale.en.name: Global health
+      /health_academia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_academia
+        locale.en.name: Health academia
+      /health_inequalities:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_inequalities
+        locale.en.name: Health inequalities
+      /infection_management:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: infection_management
+        locale.en.name: Infection management
+      /knowledge_management:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: knowledge_management
+        locale.en.name: Knowledge management
+      /learning_disability_and_autism:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_disability_and_autism
+        locale.en.name: Learning disability and autism
+      /long_term_conditions:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: long_term_conditions
+        locale.en.name: Long term conditions
+      /maternity:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: maternity
+        locale.en.name: Maternity
+      /medicines_optimisation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medicines_optimisation
+        locale.en.name: Medicines optimisation
+      /mental_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mental_health
+        locale.en.name: Mental health
+      /neonatal:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: neonatal
+        locale.en.name: Neonatal
+      /nhs_screening_services:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_screening_services
+        locale.en.name: NHS Screening Services
+      /personalised_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: personalised_care
+        locale.en.name: Personalised care
+      /pre_employment:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pre_employment
+        locale.en.name: Pre-employment
+      /prevention_and_public_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: prevention_and_public_health
+        locale.en.name: Prevention and public health
+      /primary_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: primary_care
+        locale.en.name: Primary care
+      /quality:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality
+        locale.en.name: Quality
+      /sexual_and_reproductive_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: sexual_and_reproductive_health
+        locale.en.name: Sexual and reproductive health
+      /urgent_and_emergency_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: urgent_and_emergency_care
+        locale.en.name: Urgent and emergency care
+      /workforce_planning:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce_planning
+        locale.en.name: Workforce planning
+        /funding:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: funding
+          locale.en.name: Funding
+      /workforce_transformation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce_transformation
+        locale.en.name: Workforce transformation
+        /digital_transformation:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: digital_transformation
+          locale.en.name: Digital transformation
+    /GlobalHealthcareTopics[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: 48129c18-ba31-411e-8005-3ac457d1b1b6
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-03T14:27:59.125+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-11T18:30:39.766+05:30
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /addiction:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: addiction
+        locale.en.name: Addiction
+      /advanced_clinical_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advanced_clinical_practice
+        locale.en.name: Advanced clinical practice
+      /antimicrobial_resistance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: antimicrobial_resistance
+        locale.en.name: Antimicrobial resistance
+      /armed_forces:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: armed_forces
+        locale.en.name: Armed forces
+      /cancer:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cancer
+        locale.en.name: Cancer
+      /careers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: careers
+        locale.en.name: Careers
+      /children_and_young_people:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: children_and_young_people
+        locale.en.name: Children and young people
+      /community_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: community_care
+        locale.en.name: Community care
+      /cosmetic_procedures:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cosmetic_procedures
+        locale.en.name: Cosmetic procedures
+      /covid_19:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: covid_19
+        locale.en.name: Covid-19
+      /critical_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: critical_care
+        locale.en.name: Critical care
+      /dementia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dementia
+        locale.en.name: Dementia
+      /digital_skills:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_skills
+        locale.en.name: Digital skills
+      /end_of_life_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: end_of_life_care
+        locale.en.name: End of life care
+      /genomics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: genomics
+        locale.en.name: Genomics
+      /global_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: global_health
+        locale.en.name: Global health
+      /health_academia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_academia
+        locale.en.name: Health academia
+      /health_inequalities:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_inequalities
+        locale.en.name: Health inequalities
+      /infection_management:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: infection_management
+        locale.en.name: Infection management
+      /knowledge_management:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: knowledge_management
+        locale.en.name: Knowledge management
+      /learning_disability_and_autism:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_disability_and_autism
+        locale.en.name: Learning disability and autism
+      /long_term_conditions:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: long_term_conditions
+        locale.en.name: Long term conditions
+      /maternity:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: maternity
+        locale.en.name: Maternity
+      /medicines_optimisation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medicines_optimisation
+        locale.en.name: Medicines optimisation
+      /mental_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mental_health
+        locale.en.name: Mental health
+      /neonatal:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: neonatal
+        locale.en.name: Neonatal
+      /nhs_screening_services:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_screening_services
+        locale.en.name: NHS Screening Services
+      /personalised_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: personalised_care
+        locale.en.name: Personalised care
+      /pre_employment:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pre_employment
+        locale.en.name: Pre-employment
+      /prevention_and_public_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: prevention_and_public_health
+        locale.en.name: Prevention and public health
+      /primary_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: primary_care
+        locale.en.name: Primary care
+      /quality:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality
+        locale.en.name: Quality
+      /sexual_and_reproductive_health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: sexual_and_reproductive_health
+        locale.en.name: Sexual and reproductive health
+      /urgent_and_emergency_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: urgent_and_emergency_care
+        locale.en.name: Urgent and emergency care
+      /workforce_planning:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce_planning
+        locale.en.name: Workforce planning
+        /funding:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: funding
+          locale.en.name: Funding
+      /workforce_transformation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce_transformation
+        locale.en.name: Workforce transformation
+        /digital_transformation:
+          jcr:primaryType: hippotaxonomy:category
+          hippotaxonomy:key: digital_transformation
+          locale.en.name: Digital transformation
