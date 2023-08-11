@@ -188,10 +188,8 @@
                             <h2 class="toc_h2" id="overview">Overview</h2>
                             <#list document.overviewBlocks as block>
                                 <#switch block.getClass().getName()>
-                                    <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
-                                        <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
-                                            <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
-                                        </#if>
+                                    <#case "uk.nhs.hee.web.beans.ImageBlock">
+                                        <@hee.imageBlock imageBlock=block/>
                                         <#break>
                                     <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
                                         <@hst.html hippohtml=block/>
