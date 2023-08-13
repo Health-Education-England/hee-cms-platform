@@ -263,7 +263,7 @@
 </#macro>
 
 <#--  Lists publication (landing) result items  -->
-<#macro publicationListItem items publicationTypeMap>
+<#macro publicationListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
     <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
     <@fmt.message key="publication.type" var="publicationTypeLabel"/>
