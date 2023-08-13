@@ -1,5 +1,5 @@
 <#macro publicationPartialInfo publicationListingPageURL globalPublicationTypeMap globalProfessionsMap globalTopicsMap>
-<#--  Publication type  -->
+    <#--  Publication type  -->
     <#if globalPublicationTypeMap?? && globalPublicationTypeMap.taxonomyValues?has_content>
         <div class="hee-card--details__item">
             <span>Publication type:</span>
@@ -11,7 +11,7 @@
         </div>
     </#if>
 
-<#--  Publication professions  -->
+    <#--  Publication professions  -->
     <#if globalProfessionsMap?? && globalProfessionsMap.taxonomyValues?has_content>
         <div class="hee-card--details__item">
             <span>Professions:</span>
@@ -27,7 +27,7 @@
         </div>
     </#if>
 
-<#--  Publication topics  -->
+    <#--  Publication topics  -->
     <#if globalTopicsMap?? && globalTopicsMap.taxonomyValues?has_content>
         <div class="hee-card--details__item">
             <span>Topics:</span>

@@ -5,11 +5,11 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
 import uk.nhs.hee.web.constants.HEETaxonomy;
-
-import java.util.Calendar;
-import java.util.List;
+import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 
 import javax.jcr.RepositoryException;
+import java.util.Calendar;
+import java.util.List;
 
 @HippoEssentialsGenerated(internalName = "hee:publicationLandingPage")
 @Node(jcrType = "hee:publicationLandingPage")
@@ -90,22 +90,25 @@ public class PublicationLandingPage extends BaseDocument {
 
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
-        return new TaxonomyClassification(
-                this.getNode().getProperty("hee:globalTaxonomyProfessions"),
-                getTaxonomy(HEETaxonomy.HEE_GLOBAL_PROFESSIONS.getName()));
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyProfessions",
+                HEETaxonomy.HEE_GLOBAL_PROFESSIONS);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyHealthcareTopics() throws RepositoryException {
-        return new TaxonomyClassification(
-                this.getNode().getProperty("hee:globalTaxonomyHealthcareTopics"),
-                getTaxonomy(HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName()));
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyHealthcareTopics",
+                HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationTypes", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyPublicationType() throws RepositoryException {
-        return new TaxonomyClassification(
-                this.getNode().getProperty("hee:globalTaxonomyPublicationType"),
-                getTaxonomy(HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPE.getName()));
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyPublicationType",
+                HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPE);
     }
 }

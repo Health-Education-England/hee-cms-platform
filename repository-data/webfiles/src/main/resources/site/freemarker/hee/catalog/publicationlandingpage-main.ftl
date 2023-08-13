@@ -161,9 +161,9 @@
 
                     <#-- partial -->
                     <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
-                            globalPublicationTypeMap=document.globalTaxonomyPublicationType
-                            globalProfessionsMap=document.globalTaxonomyProfessions
-                            globalTopicsMap=document.globalTaxonomyHealthcareTopics/>
+                        globalPublicationTypeMap=document.globalTaxonomyPublicationType!
+                        globalProfessionsMap=document.globalTaxonomyProfessions!
+                        globalTopicsMap=document.globalTaxonomyHealthcareTopics!/>
 
                     <#--  Read time  -->
                     <div class="hee-card--details__item">

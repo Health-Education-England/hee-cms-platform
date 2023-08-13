@@ -54,7 +54,6 @@ public class ReportComponent extends EssentialsDocumentComponent {
     /**
      * Gets the Publication landing page document {@link PublicationLandingPage} to which
      * the given {@code reportPage} document has been associated to and adds it to the model.
-     * Also adds the taxinomy fields from that Publication for use in the Report's sidebar
      *
      * @param request    the {@link HstRequest} instance.
      * @param reportPage the {@link Report} instance.
