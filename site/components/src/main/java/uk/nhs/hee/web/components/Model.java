@@ -50,7 +50,6 @@ public enum Model {
      */
     NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap");
 
-
     private final String key;
 
     /**

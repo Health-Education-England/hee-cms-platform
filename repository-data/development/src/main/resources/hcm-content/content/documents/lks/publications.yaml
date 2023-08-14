@@ -25,11 +25,18 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: 975e3e9a-6ac1-4660-a00a-4175ea074413
+        hippo:versionHistory: 45fa31cd-f734-4d74-8db1-b35e46b52117
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 48e8515a-6a01-4e04-bb8e-6f06775f58f2
+          hee:globalTaxonomyHealthcareTopics: [antimicrobial_resistance]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [antimicrobial_resistance]
+          hee:globalTaxonomyProfessions: [ambulance_service_team, dental_hygienist]
+          hee:globalTaxonomyProfessions__with_ancestors: [ambulance_service_team,
+            dental_professionals, dental_hygienist]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -51,7 +58,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:51:11.471+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.658+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -89,10 +96,20 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /reasonable-adjustments-policy---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: 0abfe671-b25a-49d9-adab-4288e720fd55
+          hee:globalTaxonomyHealthcareTopics: [antimicrobial_resistance]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [antimicrobial_resistance]
+          hee:globalTaxonomyProfessions: [ambulance_service_team, dental_hygienist]
+          hee:globalTaxonomyProfessions__with_ancestors: [ambulance_service_team,
+            dental_professionals, dental_hygienist]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -114,7 +131,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:51:11.441+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.578+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -152,10 +169,20 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /reasonable-adjustments-policy---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 11dacd51-85cc-42b7-b3e6-dd7b9880a83a
+          hee:globalTaxonomyHealthcareTopics: [antimicrobial_resistance]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [antimicrobial_resistance]
+          hee:globalTaxonomyProfessions: [ambulance_service_team, dental_hygienist]
+          hee:globalTaxonomyProfessions__with_ancestors: [ambulance_service_team,
+            dental_professionals, dental_hygienist]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
@@ -177,9 +204,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:51:11.441+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.578+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-07-20T12:51:13.636+01:00
+          hippostdpubwf:publicationDate: 2023-08-09T20:01:40.131+01:00
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -216,6 +243,9 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /reasonable-adjustments-policy---publication-1:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1092,15 +1122,23 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 126cc010-dbdd-4149-bc68-68312a63fc2f
         hippo:name: Higher Specialist Scientist Training - Publication landing
-        hippo:versionHistory: 08e91a96-74f8-4d42-a0bf-dbabb6f0f7ed
+        hippo:versionHistory: f9113900-f07c-4701-aa28-df67def728dc
         /higher-specialist-scientist-training---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 73871551-caa4-4b43-8501-6ca011e09c7a
+          hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation,
+            pre_employment, learning_disability_and_autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning,
+            workforce_transformation, pre_employment, learning_disability_and_autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
-          hee:otherFormatsEmail: other@formats.co.uk
-          hee:publicationDate: 2022-11-28T00:00:00Z
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
+          hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
           hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
             pre_employment, careers]
@@ -1118,7 +1156,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.524+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.997+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1153,14 +1191,25 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /higher-specialist-scientist-training---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: e1650153-5391-4632-9d27-7965b47ce4fa
+          hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation,
+            pre_employment, learning_disability_and_autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning,
+            workforce_transformation, pre_employment, learning_disability_and_autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
-          hee:otherFormatsEmail: other@formats.co.uk
-          hee:publicationDate: 2022-11-28T00:00:00Z
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
+          hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
           hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
             pre_employment, careers]
@@ -1178,7 +1227,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.454+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.963+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1213,14 +1262,25 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
         /higher-specialist-scientist-training---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 7204e177-bb3e-4ced-be5c-89ae36034711
+          hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation,
+            pre_employment, learning_disability_and_autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning,
+            workforce_transformation, pre_employment, learning_disability_and_autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
           hee:hideAuthorContactDetails: false
-          hee:otherFormatsEmail: other@formats.co.uk
-          hee:publicationDate: 2022-11-28T00:00:00Z
           hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
+          hee:publicationDate: 2022-11-28T00:00:00Z
           hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
           hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
             pre_employment, careers]
@@ -1238,9 +1298,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2023-07-20T12:52:54.454+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.963+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-07-20T12:52:56.576+01:00
+          hippostdpubwf:publicationDate: 2023-08-07T15:03:39.789+01:00
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -1274,6 +1334,9 @@
             /hee:featuredContentBlock:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /higher-specialist-scientist-training---publication:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
