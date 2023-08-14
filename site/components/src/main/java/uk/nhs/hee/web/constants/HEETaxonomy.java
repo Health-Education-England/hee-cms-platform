@@ -6,7 +6,7 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_HEALTHCARE_TOPICS ("GlobalHealthcareTopics"),
 
-    HEE_GLOBAL_PUBLICATION_TYPE ("GlobalPublicationType");
+    HEE_GLOBAL_PUBLICATION_TYPE ("GlobalPublicationTypes");
 
     private final String name;
 
