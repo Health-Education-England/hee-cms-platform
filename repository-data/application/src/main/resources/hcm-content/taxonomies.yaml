@@ -1,5 +1,998 @@
 /content/taxonomies:
   jcr:primaryType: hippotaxonomy:container
+  /GlobalTags:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: 159c5ccf-0c04-40b8-82bf-c75386f8dea6
+    /GlobalTags[1]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
+      jcr:uuid: f5320263-6b28-4b47-bfcb-39962d11a829
+      hippo:availability: [live]
+      hippostd:holder: admin
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-08T11:56:51.509+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-08T15:24:07.409+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-08-08T15:37:12.480+01:00
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /advocacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advocacy
+        locale.en.name: Advocacy
+      /apprenticeship:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: apprenticeship
+        locale.en.name: Apprenticeship
+      /aritificial_intelligence_and_robotics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: aritificial_intelligence_and_robotics
+        locale.en.name: Aritificial intelligence and robotics
+      /authentication:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: authentication
+        locale.en.name: Authentication
+      /best_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: best_practice
+        locale.en.name: Best practice
+      /blended_learning:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: blended_learning
+        locale.en.name: Blended learning
+      /board_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: board_development
+        locale.en.name: Board development
+      /bursaries_grants_and_awards:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: bursaries_grants_and_awards
+        locale.en.name: Bursaries, grants and awards
+      /cataloguing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cataloguing
+        locale.en.name: Cataloguing
+      /circulation_and_counter_activities:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: circulation_and_counter_activities
+        locale.en.name: Circulation and counter activities
+      /collaboration_and_partnership:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: collaboration_and_partnership
+        locale.en.name: Collaboration and partnership
+      /consultation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: consultation
+        locale.en.name: Consultation
+      /covid_19:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: covid_19
+        locale.en.name: COVID-19
+      /continuing_professional_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: continuing_professional_development
+        locale.en.name: Continuing professional development
+      /copyright_and_licensing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: copyright_and_licensing
+        locale.en.name: Copyright and licensing
+      /databases:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: databases
+        locale.en.name: Databases
+      /development_needs:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: development_needs
+        locale.en.name: Development needs
+      /digital_capability_frameworks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_capability_frameworks
+        locale.en.name: Digital capability frameworks
+      /digital_health_leadership:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_health_leadership
+        locale.en.name: Digital health leadership
+      /digital_literacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_literacy
+        locale.en.name: Digital literacy
+      /digital_roles_and_career_pathways:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_roles_and_career_pathways
+        locale.en.name: Digital roles and career pathways
+      /discovery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: discovery
+        locale.en.name: Discovery
+      /electronic_resources:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: electronic_resources
+        locale.en.name: Electronic resources
+      /emerging_technology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emerging_technology
+        locale.en.name: Emerging technology
+      /equality_impact_and_diversity:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: equality_impact_and_diversity
+        locale.en.name: Equality, impact and diversity
+      /evaluation_framework:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: evaluation_framework
+        locale.en.name: Evaluation framework
+      /events:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: events
+        locale.en.name: Events
+      /evidence_and_knowledge_self_assessments:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: evidence_and_knowledge_self_assessments
+        locale.en.name: Evidence and knowledge self assessments
+      /fellowships_and_scholarships:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: fellowships_and_scholarships
+        locale.en.name: Fellowships and scholarships
+      /finance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: finance
+        locale.en.name: Finance
+      /graduates:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: graduates
+        locale.en.name: Graduates
+      /communities_of_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: communities_of_practice
+        locale.en.name: Communities of practice
+      /health_literacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_literacy
+        locale.en.name: Health literacy
+      /help_and_guidance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: help_and_guidance
+        locale.en.name: Help and guidance
+      /impact_and_value:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: impact_and_value
+        locale.en.name: Impact and value
+      /industry:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: industry
+        locale.en.name: Industry
+      /innovation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: innovation
+        locale.en.name: Innovation
+      /inter_library_loan_and_document_supply:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: inter_library_loan_and_document_supply
+        locale.en.name: Inter-library loan and document supply
+      /knowledge_for_healthcare:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: knowledge_for_healthcare
+        locale.en.name: Knowledge for Healthcare
+      /learning_and_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_and_development
+        locale.en.name: Learning and development
+      /learning_zone:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_zone
+        locale.en.name: Learning zone
+      /libkey_nomad:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: libkey_nomad
+        locale.en.name: LibKey Nomad
+      /library_management_systems:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: library_management_systems
+        locale.en.name: Library management systems
+      /literature_searching:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: literature_searching
+        locale.en.name: Literature searching
+      /managing_talent:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: managing_talent
+        locale.en.name: Managing talent
+      /marketing_and_campaigns:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: marketing_and_campaigns
+        locale.en.name: Marketing and campaigns
+      /mentoring:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mentoring
+        locale.en.name: Mentoring
+      /mergers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mergers
+        locale.en.name: Mergers
+      /mobilising_evidence_and_knowledge:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mobilising_evidence_and_knowledge
+        locale.en.name: Mobilising evidence and knowledge
+      /networking:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: networking
+        locale.en.name: Networking
+      /nhs_and_healthcare_systems:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_and_healthcare_systems
+        locale.en.name: NHS and healthcare systems
+      /nhs_digital_academy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_digital_academy
+        locale.en.name: NHS Digital Academy
+      /occupational_frameworks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: occupational_frameworks
+        locale.en.name: Occupational frameworks
+      /open_access:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: open_access
+        locale.en.name: Open access
+      /patient_information:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: patient_information
+        locale.en.name: Patient information
+      /professional_knowledge_and_skills_base_pksb:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: professional_knowledge_and_skills_base_pksb
+        locale.en.name: Professional Knowledge and Skills Base (PKSB)
+      /placements:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: placements
+        locale.en.name: Placements
+      /policy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: policy
+        locale.en.name: Policy
+      /professional_networks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: professional_networks
+        locale.en.name: Professional networks
+      /quality:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality
+        locale.en.name: Quality
+      /quality_and_improvement_outcomes:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality_and_improvement_outcomes
+        locale.en.name: Quality and Improvement Outcomes
+      /regional_skills_development_networks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: regional_skills_development_networks
+        locale.en.name: Regional Skills Development Networks
+      /repositories:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: repositories
+        locale.en.name: Repositories
+      /research:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: research
+        locale.en.name: Research
+      /resource_discovery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: resource_discovery
+        locale.en.name: Resource Discovery
+      /school_leavers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: school_leavers
+        locale.en.name: School leavers
+      /service_delivery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: service_delivery
+        locale.en.name: Service delivery
+      /social_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: social_care
+        locale.en.name: Social care
+      /statistics_and_data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statistics_and_data
+        locale.en.name: Statistics and data
+      /strategy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: strategy
+        locale.en.name: Strategy
+      /streamlining:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: streamlining
+        locale.en.name: Streamlining
+      /sustainability:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: sustainability
+        locale.en.name: Sustainability
+      /tools_and_techniques:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: tools_and_techniques
+        locale.en.name: Tools and techniques
+      /training:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: training
+        locale.en.name: Training
+      /use_of_technology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: use_of_technology
+        locale.en.name: Use of technology
+      /user_experience:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: user_experience
+        locale.en.name: User experience
+      /wellbeing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: wellbeing
+        locale.en.name: Wellbeing
+      /wider_profession:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: wider_profession
+        locale.en.name: Wider profession
+      /workforce:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce
+        locale.en.name: Workforce
+    /GlobalTags[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 1ae97b65-2aa2-4aca-93d5-c56b44cebcae
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-08T11:56:51.509+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-08T15:24:07.409+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /advocacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advocacy
+        locale.en.name: Advocacy
+      /apprenticeship:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: apprenticeship
+        locale.en.name: Apprenticeship
+      /aritificial_intelligence_and_robotics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: aritificial_intelligence_and_robotics
+        locale.en.name: Aritificial intelligence and robotics
+      /authentication:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: authentication
+        locale.en.name: Authentication
+      /best_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: best_practice
+        locale.en.name: Best practice
+      /blended_learning:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: blended_learning
+        locale.en.name: Blended learning
+      /board_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: board_development
+        locale.en.name: Board development
+      /bursaries_grants_and_awards:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: bursaries_grants_and_awards
+        locale.en.name: Bursaries, grants and awards
+      /cataloguing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cataloguing
+        locale.en.name: Cataloguing
+      /circulation_and_counter_activities:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: circulation_and_counter_activities
+        locale.en.name: Circulation and counter activities
+      /collaboration_and_partnership:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: collaboration_and_partnership
+        locale.en.name: Collaboration and partnership
+      /consultation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: consultation
+        locale.en.name: Consultation
+      /covid_19:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: covid_19
+        locale.en.name: COVID-19
+      /continuing_professional_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: continuing_professional_development
+        locale.en.name: Continuing professional development
+      /copyright_and_licensing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: copyright_and_licensing
+        locale.en.name: Copyright and licensing
+      /databases:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: databases
+        locale.en.name: Databases
+      /development_needs:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: development_needs
+        locale.en.name: Development needs
+      /digital_capability_frameworks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_capability_frameworks
+        locale.en.name: Digital capability frameworks
+      /digital_health_leadership:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_health_leadership
+        locale.en.name: Digital health leadership
+      /digital_literacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_literacy
+        locale.en.name: Digital literacy
+      /digital_roles_and_career_pathways:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_roles_and_career_pathways
+        locale.en.name: Digital roles and career pathways
+      /discovery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: discovery
+        locale.en.name: Discovery
+      /electronic_resources:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: electronic_resources
+        locale.en.name: Electronic resources
+      /emerging_technology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emerging_technology
+        locale.en.name: Emerging technology
+      /equality_impact_and_diversity:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: equality_impact_and_diversity
+        locale.en.name: Equality, impact and diversity
+      /evaluation_framework:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: evaluation_framework
+        locale.en.name: Evaluation framework
+      /events:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: events
+        locale.en.name: Events
+      /evidence_and_knowledge_self_assessments:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: evidence_and_knowledge_self_assessments
+        locale.en.name: Evidence and knowledge self assessments
+      /fellowships_and_scholarships:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: fellowships_and_scholarships
+        locale.en.name: Fellowships and scholarships
+      /finance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: finance
+        locale.en.name: Finance
+      /graduates:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: graduates
+        locale.en.name: Graduates
+      /communities_of_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: communities_of_practice
+        locale.en.name: Communities of practice
+      /health_literacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_literacy
+        locale.en.name: Health literacy
+      /help_and_guidance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: help_and_guidance
+        locale.en.name: Help and guidance
+      /impact_and_value:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: impact_and_value
+        locale.en.name: Impact and value
+      /industry:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: industry
+        locale.en.name: Industry
+      /innovation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: innovation
+        locale.en.name: Innovation
+      /inter_library_loan_and_document_supply:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: inter_library_loan_and_document_supply
+        locale.en.name: Inter-library loan and document supply
+      /knowledge_for_healthcare:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: knowledge_for_healthcare
+        locale.en.name: Knowledge for Healthcare
+      /learning_and_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_and_development
+        locale.en.name: Learning and development
+      /learning_zone:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_zone
+        locale.en.name: Learning zone
+      /libkey_nomad:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: libkey_nomad
+        locale.en.name: LibKey Nomad
+      /library_management_systems:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: library_management_systems
+        locale.en.name: Library management systems
+      /literature_searching:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: literature_searching
+        locale.en.name: Literature searching
+      /managing_talent:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: managing_talent
+        locale.en.name: Managing talent
+      /marketing_and_campaigns:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: marketing_and_campaigns
+        locale.en.name: Marketing and campaigns
+      /mentoring:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mentoring
+        locale.en.name: Mentoring
+      /mergers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mergers
+        locale.en.name: Mergers
+      /mobilising_evidence_and_knowledge:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mobilising_evidence_and_knowledge
+        locale.en.name: Mobilising evidence and knowledge
+      /networking:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: networking
+        locale.en.name: Networking
+      /nhs_and_healthcare_systems:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_and_healthcare_systems
+        locale.en.name: NHS and healthcare systems
+      /nhs_digital_academy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_digital_academy
+        locale.en.name: NHS Digital Academy
+      /occupational_frameworks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: occupational_frameworks
+        locale.en.name: Occupational frameworks
+      /open_access:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: open_access
+        locale.en.name: Open access
+      /patient_information:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: patient_information
+        locale.en.name: Patient information
+      /professional_knowledge_and_skills_base_pksb:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: professional_knowledge_and_skills_base_pksb
+        locale.en.name: Professional Knowledge and Skills Base (PKSB)
+      /placements:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: placements
+        locale.en.name: Placements
+      /policy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: policy
+        locale.en.name: Policy
+      /professional_networks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: professional_networks
+        locale.en.name: Professional networks
+      /quality:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality
+        locale.en.name: Quality
+      /quality_and_improvement_outcomes:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality_and_improvement_outcomes
+        locale.en.name: Quality and Improvement Outcomes
+      /regional_skills_development_networks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: regional_skills_development_networks
+        locale.en.name: Regional Skills Development Networks
+      /repositories:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: repositories
+        locale.en.name: Repositories
+      /research:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: research
+        locale.en.name: Research
+      /resource_discovery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: resource_discovery
+        locale.en.name: Resource Discovery
+      /school_leavers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: school_leavers
+        locale.en.name: School leavers
+      /service_delivery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: service_delivery
+        locale.en.name: Service delivery
+      /social_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: social_care
+        locale.en.name: Social care
+      /statistics_and_data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statistics_and_data
+        locale.en.name: Statistics and data
+      /strategy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: strategy
+        locale.en.name: Strategy
+      /streamlining:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: streamlining
+        locale.en.name: Streamlining
+      /sustainability:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: sustainability
+        locale.en.name: Sustainability
+      /tools_and_techniques:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: tools_and_techniques
+        locale.en.name: Tools and techniques
+      /training:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: training
+        locale.en.name: Training
+      /use_of_technology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: use_of_technology
+        locale.en.name: Use of technology
+      /user_experience:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: user_experience
+        locale.en.name: User experience
+      /wellbeing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: wellbeing
+        locale.en.name: Wellbeing
+      /wider_profession:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: wider_profession
+        locale.en.name: Wider profession
+      /workforce:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce
+        locale.en.name: Workforce
+    /GlobalTags[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: b534d3c3-4faf-41d8-ad72-d3ea621a93c4
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-08-08T11:56:51.509+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-08T15:24:07.468+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /advocacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: advocacy
+        locale.en.name: Advocacy
+      /apprenticeship:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: apprenticeship
+        locale.en.name: Apprenticeship
+      /aritificial_intelligence_and_robotics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: aritificial_intelligence_and_robotics
+        locale.en.name: Aritificial intelligence and robotics
+      /authentication:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: authentication
+        locale.en.name: Authentication
+      /best_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: best_practice
+        locale.en.name: Best practice
+      /blended_learning:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: blended_learning
+        locale.en.name: Blended learning
+      /board_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: board_development
+        locale.en.name: Board development
+      /bursaries_grants_and_awards:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: bursaries_grants_and_awards
+        locale.en.name: Bursaries, grants and awards
+      /cataloguing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: cataloguing
+        locale.en.name: Cataloguing
+      /circulation_and_counter_activities:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: circulation_and_counter_activities
+        locale.en.name: Circulation and counter activities
+      /collaboration_and_partnership:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: collaboration_and_partnership
+        locale.en.name: Collaboration and partnership
+      /consultation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: consultation
+        locale.en.name: Consultation
+      /covid_19:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: covid_19
+        locale.en.name: COVID-19
+      /continuing_professional_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: continuing_professional_development
+        locale.en.name: Continuing professional development
+      /copyright_and_licensing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: copyright_and_licensing
+        locale.en.name: Copyright and licensing
+      /databases:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: databases
+        locale.en.name: Databases
+      /development_needs:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: development_needs
+        locale.en.name: Development needs
+      /digital_capability_frameworks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_capability_frameworks
+        locale.en.name: Digital capability frameworks
+      /digital_health_leadership:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_health_leadership
+        locale.en.name: Digital health leadership
+      /digital_literacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_literacy
+        locale.en.name: Digital literacy
+      /digital_roles_and_career_pathways:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: digital_roles_and_career_pathways
+        locale.en.name: Digital roles and career pathways
+      /discovery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: discovery
+        locale.en.name: Discovery
+      /electronic_resources:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: electronic_resources
+        locale.en.name: Electronic resources
+      /emerging_technology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emerging_technology
+        locale.en.name: Emerging technology
+      /equality_impact_and_diversity:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: equality_impact_and_diversity
+        locale.en.name: Equality, impact and diversity
+      /evaluation_framework:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: evaluation_framework
+        locale.en.name: Evaluation framework
+      /events:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: events
+        locale.en.name: Events
+      /evidence_and_knowledge_self_assessments:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: evidence_and_knowledge_self_assessments
+        locale.en.name: Evidence and knowledge self assessments
+      /fellowships_and_scholarships:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: fellowships_and_scholarships
+        locale.en.name: Fellowships and scholarships
+      /finance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: finance
+        locale.en.name: Finance
+      /graduates:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: graduates
+        locale.en.name: Graduates
+      /communities_of_practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: communities_of_practice
+        locale.en.name: Communities of practice
+      /health_literacy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: health_literacy
+        locale.en.name: Health literacy
+      /help_and_guidance:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: help_and_guidance
+        locale.en.name: Help and guidance
+      /impact_and_value:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: impact_and_value
+        locale.en.name: Impact and value
+      /industry:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: industry
+        locale.en.name: Industry
+      /innovation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: innovation
+        locale.en.name: Innovation
+      /inter_library_loan_and_document_supply:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: inter_library_loan_and_document_supply
+        locale.en.name: Inter-library loan and document supply
+      /knowledge_for_healthcare:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: knowledge_for_healthcare
+        locale.en.name: Knowledge for Healthcare
+      /learning_and_development:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_and_development
+        locale.en.name: Learning and development
+      /learning_zone:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: learning_zone
+        locale.en.name: Learning zone
+      /libkey_nomad:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: libkey_nomad
+        locale.en.name: LibKey Nomad
+      /library_management_systems:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: library_management_systems
+        locale.en.name: Library management systems
+      /literature_searching:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: literature_searching
+        locale.en.name: Literature searching
+      /managing_talent:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: managing_talent
+        locale.en.name: Managing talent
+      /marketing_and_campaigns:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: marketing_and_campaigns
+        locale.en.name: Marketing and campaigns
+      /mentoring:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mentoring
+        locale.en.name: Mentoring
+      /mergers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mergers
+        locale.en.name: Mergers
+      /mobilising_evidence_and_knowledge:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: mobilising_evidence_and_knowledge
+        locale.en.name: Mobilising evidence and knowledge
+      /networking:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: networking
+        locale.en.name: Networking
+      /nhs_and_healthcare_systems:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_and_healthcare_systems
+        locale.en.name: NHS and healthcare systems
+      /nhs_digital_academy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: nhs_digital_academy
+        locale.en.name: NHS Digital Academy
+      /occupational_frameworks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: occupational_frameworks
+        locale.en.name: Occupational frameworks
+      /open_access:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: open_access
+        locale.en.name: Open access
+      /patient_information:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: patient_information
+        locale.en.name: Patient information
+      /professional_knowledge_and_skills_base_pksb:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: professional_knowledge_and_skills_base_pksb
+        locale.en.name: Professional Knowledge and Skills Base (PKSB)
+      /placements:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: placements
+        locale.en.name: Placements
+      /policy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: policy
+        locale.en.name: Policy
+      /professional_networks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: professional_networks
+        locale.en.name: Professional networks
+      /quality:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality
+        locale.en.name: Quality
+      /quality_and_improvement_outcomes:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: quality_and_improvement_outcomes
+        locale.en.name: Quality and Improvement Outcomes
+      /regional_skills_development_networks:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: regional_skills_development_networks
+        locale.en.name: Regional Skills Development Networks
+      /repositories:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: repositories
+        locale.en.name: Repositories
+      /research:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: research
+        locale.en.name: Research
+      /resource_discovery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: resource_discovery
+        locale.en.name: Resource Discovery
+      /school_leavers:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: school_leavers
+        locale.en.name: School leavers
+      /service_delivery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: service_delivery
+        locale.en.name: Service delivery
+      /social_care:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: social_care
+        locale.en.name: Social care
+      /statistics_and_data:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: statistics_and_data
+        locale.en.name: Statistics and data
+      /strategy:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: strategy
+        locale.en.name: Strategy
+      /streamlining:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: streamlining
+        locale.en.name: Streamlining
+      /sustainability:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: sustainability
+        locale.en.name: Sustainability
+      /tools_and_techniques:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: tools_and_techniques
+        locale.en.name: Tools and techniques
+      /training:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: training
+        locale.en.name: Training
+      /use_of_technology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: use_of_technology
+        locale.en.name: Use of technology
+      /user_experience:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: user_experience
+        locale.en.name: User experience
+      /wellbeing:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: wellbeing
+        locale.en.name: Wellbeing
+      /wider_profession:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: wider_profession
+        locale.en.name: Wider profession
+      /workforce:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: workforce
+        locale.en.name: Workforce
   /GlobalProfessions:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:versionInfo']
