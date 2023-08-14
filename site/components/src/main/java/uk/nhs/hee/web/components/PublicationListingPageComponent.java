@@ -71,7 +71,7 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         request.setModel("publicationTopicMap",
                 getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName(), locale));
         request.setModel("publicationTypeMap",
-                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPE.getName(), locale));
+                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES.getName(), locale));
     }
 
     private Map<String, String> getMapFor(Taxonomies taxonomies, String taxonomyName, Locale locale) {

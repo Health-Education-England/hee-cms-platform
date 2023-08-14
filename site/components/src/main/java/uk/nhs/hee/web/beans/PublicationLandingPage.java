@@ -109,6 +109,6 @@ public class PublicationLandingPage extends BaseDocument {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
                 this.getNode(),
                 "hee:globalTaxonomyPublicationType",
-                HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPE);
+                HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES);
     }
 }
