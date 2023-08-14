@@ -159,11 +159,11 @@
                     </div>
 
 
-                    <#-- partial -->
+                    <#-- Publication info partial [publication type, professions and topics] -->
                     <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
-                        globalPublicationTypeMap=document.globalTaxonomyPublicationType!
-                        globalProfessionsMap=document.globalTaxonomyProfessions!
-                        globalTopicsMap=document.globalTaxonomyHealthcareTopics!/>
+                        publicationTypeTaxClass=document.globalTaxonomyPublicationType!
+                        professionTaxClass=document.globalTaxonomyProfessions!
+                        topicTaxClass=document.globalTaxonomyHealthcareTopics!/>
 
                     <#--  Read time  -->
                     <div class="hee-card--details__item">

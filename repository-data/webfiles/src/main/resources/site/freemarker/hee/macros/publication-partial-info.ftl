@@ -1,26 +1,26 @@
-<#macro publicationPartialInfo publicationListingPageURL globalPublicationTypeMap globalProfessionsMap globalTopicsMap>
+<#macro publicationPartialInfo publicationListingPageURL publicationTypeTaxClass professionTaxClass topicTaxClass>
     <#--  Publication type  -->
-    <#if globalPublicationTypeMap?? && globalPublicationTypeMap.taxonomyValues?has_content>
+    <#if publicationTypeTaxClass?? && publicationTypeTaxClass.taxonomyValues?has_content>
         <div class="hee-card--details__item">
             <span>Publication type:</span>
             <#if publicationListingPageURL?has_content>
-                <a href=${publicationListingPageURL}?publicationType=${globalPublicationTypeMap.taxonomyValues[0].key}>${globalPublicationTypeMap.taxonomyValues[0].label}</a>
+                <a href=${publicationListingPageURL}?publicationType=${publicationTypeTaxClass.taxonomyValues[0].key}>${publicationTypeTaxClass.taxonomyValues[0].label}</a>
             <#else>
-                ${globalPublicationTypeMap.taxonomyValues[0].label}
+                ${publicationTypeTaxClass.taxonomyValues[0].label}
             </#if>
         </div>
     </#if>
 
     <#--  Publication professions  -->
-    <#if globalProfessionsMap?? && globalProfessionsMap.taxonomyValues?has_content>
+    <#if professionTaxClass?? && professionTaxClass.taxonomyValues?has_content>
         <div class="hee-card--details__item">
             <span>Professions:</span>
             <#if publicationListingPageURL?has_content>
-                <#list globalProfessionsMap.taxonomyValues as category>
+                <#list professionTaxClass.taxonomyValues as category>
                     <a href=${publicationListingPageURL}?publicationProfession=${category.key}>${category.label}</a><#sep>, </#sep>
                 </#list>
             <#else>
-                <#list globalProfessionsMap.taxonomyValues as category>
+                <#list professionTaxClass.taxonomyValues as category>
                     ${category.label}<#sep>, </#sep>
                 </#list>
             </#if>
@@ -28,15 +28,15 @@
     </#if>
 
     <#--  Publication topics  -->
-    <#if globalTopicsMap?? && globalTopicsMap.taxonomyValues?has_content>
+    <#if topicTaxClass?? && topicTaxClass.taxonomyValues?has_content>
         <div class="hee-card--details__item">
             <span>Topics:</span>
             <#if publicationListingPageURL?has_content>
-                <#list globalTopicsMap.taxonomyValues as category>
+                <#list topicTaxClass.taxonomyValues as category>
                     <a href=${publicationListingPageURL}?publicationTopic=${category.key}>${category.label}</a><#sep>, </#sep>
                 </#list>
             <#else>
-                <#list globalTopicsMap.taxonomyValues as category>
+                <#list topicTaxClass.taxonomyValues as category>
                     ${category.label}<#sep>, </#sep>
                 </#list>
             </#if>
