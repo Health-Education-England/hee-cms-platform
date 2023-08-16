@@ -137,9 +137,6 @@
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
 
-                    <#-- Related content -->
-                    <@hee.featuredContent block=document.featuredContent/>
-
                 </div>
             </div>
             <#--  Main sections: END  -->
@@ -211,6 +208,17 @@
             </aside>
             <#--  Sidebar sections: END  -->
         </div>
+
+        <#-- Related content -->
+        <#if document.featuredContentBlock??>
+            <section class="page__feature">
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document/>
+                </div>
+            </section>
+        </#if>
+        <#-- Related content: END -->
+
         <#--  Main content: END  -->
     </main>
 </#if>
