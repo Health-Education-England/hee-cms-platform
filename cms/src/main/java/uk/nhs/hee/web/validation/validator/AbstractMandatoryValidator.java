@@ -26,7 +26,7 @@ public abstract class AbstractMandatoryValidator implements Validator<Node> {
     public Optional<Violation> validate(ValidationContext context, final Node node) {
         try {
             for (String fieldName : combinationFields) {
-                if (node.getProperty(fieldName).getValues().length > 0) {
+                if (node.hasProperty(fieldName) && node.getProperty(fieldName).getValues().length > 0) {
                     return Optional.empty();
                 }
             }

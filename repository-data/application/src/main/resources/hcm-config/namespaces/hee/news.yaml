@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c58d130b-75db-4322-aba9-53ad23452ff4
+          jcr:uuid: ff9451eb-d1a5-4af7-bf39-b3b9ea534e2f
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -122,6 +123,22 @@ definitions:
             hipposysedit:path: hee:hideAuthorContactDetails
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -134,7 +151,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: a22d5d21-48b5-4b4c-836d-576f1b585c08
+          jcr:uuid: c8eefa6a-61ec-41c8-a836-51bb14898f42
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:summary: ''
@@ -275,6 +292,28 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
+          /globalTaxonomyProfessions:
+            jcr:primaryType: frontend:plugin
+            caption: Professions
+            field: globalTaxonomyProfessions
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content.
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Healthcare topics
+            field: globalTaxonomyHealthcareTopics
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content.
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalHealthcareTopics
           /categories:
             jcr:primaryType: frontend:plugin
             caption: Categories

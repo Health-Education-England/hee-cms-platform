@@ -3,7 +3,6 @@ package uk.nhs.hee.web.beans;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
-
 import java.util.Calendar;
 import java.util.List;
 
@@ -73,5 +72,15 @@ public class News extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions")
+    public String[] getGlobalTaxonomyProfessions() {
+        return getMultipleProperty("hee:globalTaxonomyProfessions");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics")
+    public String[] getGlobalTaxonomyHealthcareTopics() {
+        return getMultipleProperty("hee:globalTaxonomyHealthcareTopics");
     }
 }
