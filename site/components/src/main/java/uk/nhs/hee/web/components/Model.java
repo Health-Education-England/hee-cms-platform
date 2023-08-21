@@ -48,7 +48,17 @@ public enum Model {
     /**
      * Model key for Newsletter Profession ValueList Map
      */
-    NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap");
+    NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap"),
+
+    /**
+     * Model key for Topic Valuelist map
+     */
+    TOPIC_MAP("topicMap"),
+
+    /**
+     * Model key for Profession Valuelist map
+     */
+    PROFESSION_MAP("professionMap");
 
 
     private final String key;
