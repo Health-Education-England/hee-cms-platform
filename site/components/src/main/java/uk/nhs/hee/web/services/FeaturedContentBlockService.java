@@ -5,18 +5,19 @@ import org.hippoecm.hst.content.beans.query.exceptions.QueryException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoBeanIterator;
+import org.hippoecm.hst.content.beans.standard.KeyLabelPathValue;
 import org.hippoecm.hst.core.component.HstRequest;
+import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.FeaturedContent;
 import uk.nhs.hee.web.repository.HEEField;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.enums.FeaturedContentMethod;
 import uk.nhs.hee.web.utils.QueryAndFiltersUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
 
 import javax.jcr.RepositoryException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class FeaturedContentBlockService {
     // Logger
@@ -26,8 +27,9 @@ public class FeaturedContentBlockService {
     public static final String DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE = "hee:publicationLandingPage";
 
     private static final Map<String, String> CONTENT_TYPE_TO_LISTING_TYPE_MAP =
-            Collections.unmodifiableMap(new HashMap<String, String>() {
+            Collections.unmodifiableMap(new HashMap<>() {
                 private static final long serialVersionUID = 475609862051094917L;
+
                 {
                     // Uncomment during the future iteration when we add support for the following content types
                     /*put("hee:blogPost", "blog");
@@ -74,32 +76,35 @@ public class FeaturedContentBlockService {
                     final Filter baseFilter = query.createFilter();
 
                     if (DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE.equals(featuredContentBlock.getFeaturedContentType())
-                            && !featuredContentBlock.getPublicationType().isEmpty()) {
+                            && !isEmpty(featuredContentBlock.getGlobalTaxonomyPublicationType())) {
                         baseFilter.addAndFilter(
                                 queryAndFiltersUtils.createOrFilter(
                                         query,
-                                        Collections.singletonList(featuredContentBlock.getPublicationType()),
-                                        HEEField.PUBLICATION_TYPE.getName()
+                                        getTaxonomyValueKeysAsList(featuredContentBlock
+                                                .getGlobalTaxonomyPublicationType().getTaxonomyValues()),
+                                        HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()
                                 )
                         );
                     }
 
-                    if (featuredContentBlock.getTopics().length > 0) {
+                    if (!isEmpty(featuredContentBlock.getGlobalTaxonomyHealthcareTopics())) {
                         baseFilter.addAndFilter(
                                 queryAndFiltersUtils.createOrFilter(
                                         query,
-                                        Arrays.asList(featuredContentBlock.getTopics()),
-                                        HEEField.PUBLICATION_TOPICS.getName()
+                                        getTaxonomyValueKeysAsList(featuredContentBlock
+                                                .getGlobalTaxonomyHealthcareTopics().getTaxonomyValues()),
+                                        HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName()
                                 )
                         );
                     }
 
-                    if (featuredContentBlock.getProfessions().length > 0) {
+                    if (!isEmpty(featuredContentBlock.getGlobalTaxonomyProfessions())) {
                         baseFilter.addAndFilter(
                                 queryAndFiltersUtils.createOrFilter(
                                         query,
-                                        Arrays.asList(featuredContentBlock.getProfessions()),
-                                        HEEField.PUBLICATION_PROFESSIONS.getName()
+                                        getTaxonomyValueKeysAsList(featuredContentBlock
+                                                .getGlobalTaxonomyProfessions().getTaxonomyValues()),
+                                        HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName()
                                 )
                         );
                     }
@@ -128,15 +133,6 @@ public class FeaturedContentBlockService {
     }
 
     /**
-     * Returns the {@code value-list} map of {@code Publication types}.
-     *
-     * @return the {@code value-list} map of {@code Publication types}.
-     */
-    public Map<String, String> getPublicationTypesValueList() {
-        return ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName());
-    }
-
-    /**
      * Transforms the given {@code beans} {@link HippoBeanIterator} into {@link List<HippoBean>} and returns it.
      *
      * @param beans the {@link HippoBeanIterator} which needs to be transformed into {@link List<HippoBean>}.
@@ -150,5 +146,26 @@ public class FeaturedContentBlockService {
         }
 
         return beanList;
+    }
+
+    /**
+     * Transforms the given {@link List<KeyLabelPathValue>} {@code taxonomyValues} into {@link List<String>}
+     * and returns it.
+     *
+     * @param taxonomyValues the {@link List<KeyLabelPathValue>} instance containing taxonomy values.
+     * @return {@link List<String>} transformed from the given {@link List<KeyLabelPathValue>} {@code taxonomyValues}.
+     */
+    private List<String> getTaxonomyValueKeysAsList(final List<KeyLabelPathValue> taxonomyValues) {
+        return taxonomyValues.stream().map(KeyLabelPathValue::getKey).collect(Collectors.toList());
+    }
+
+    /**
+     * Returns {@code true} if the given {@link TaxonomyClassification} is empty. Otherwise, returns {@code false}.
+     *
+     * @param taxonomyClassification the given {@link TaxonomyClassification} which needs to be verified if empty or not.
+     * @return {@code true} if the given {@link TaxonomyClassification} is empty. Otherwise, returns {@code false}.
+     */
+    private boolean isEmpty(final TaxonomyClassification taxonomyClassification) {
+        return taxonomyClassification == null || taxonomyClassification.getTaxonomyValues().isEmpty();
     }
 }
