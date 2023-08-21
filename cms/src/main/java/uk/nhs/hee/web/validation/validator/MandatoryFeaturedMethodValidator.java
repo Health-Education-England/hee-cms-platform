@@ -1,6 +1,5 @@
 package uk.nhs.hee.web.validation.validator;
 
-import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.repository.util.JcrUtils;
 import org.onehippo.cms.services.validation.api.ValidationContext;
 import org.onehippo.cms.services.validation.api.Validator;
@@ -13,8 +12,9 @@ import javax.jcr.RepositoryException;
 import java.util.Optional;
 
 /**
- * Validates if Publication type or topics or professions have been provided for Publication landing page content type.
- * For content types other than publication landing page, it validates if topics or professions have been provided.
+ * Validates if Publication type or healthcare topic or profession taxonomies have been provided
+ * for Publication landing page content type. For content types other than publication landing page,
+ * it validates if healthcare topic or profession taxonomies have been provided.
  */
 public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     // Logger
@@ -24,12 +24,12 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     private static final String PROPERTY_HEE_METHOD = "hee:method";
     // Content type property
     private static final String PROPERTY_HEE_FEATURED_CONTENT_TYPE = "hee:featuredContentType";
-    // Publication type property
-    private static final String PROPERTY_HEE_PUBLICATION_TYPE = "hee:publicationType";
-    // Profession property
-    private static final String PROPERTY_HEE_PROFESSIONS = "hee:professions";
-    // Topics property
-    private static final String PROPERTY_HEE_TOPICS = "hee:topics";
+    // Publication type taxonomy property
+    private static final String PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY = "hee:globalTaxonomyPublicationType";
+    // Profession taxonomy property
+    private static final String PROPERTY_HEE_PROFESSIONS_TAXONOMY = "hee:globalTaxonomyProfessions";
+    // Healthcare topic taxonomy property
+    private static final String PROPERTY_HEE_TOPICS_TAXONOMY = "hee:globalTaxonomyHealthcareTopics";
 
     // Related method value
     private static final String METHOD_VALUE_RELATED = "Related";
@@ -45,15 +45,15 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
 
             if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
                 // For publication landing page content type
-                if (StringUtils.isEmpty(node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE).getString())
-                        && node.getProperty(PROPERTY_HEE_PROFESSIONS).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_TOPICS).getValues().length == 0) {
+                if (node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY).getValues().length == 0
+                        && node.getProperty(PROPERTY_HEE_PROFESSIONS_TAXONOMY).getValues().length == 0
+                        && node.getProperty(PROPERTY_HEE_TOPICS_TAXONOMY).getValues().length == 0) {
                     return Optional.of(context.createViolation("publication-landing-page"));
                 }
             } else {
                 // For content types other than publication landing page
-                if (node.getProperty(PROPERTY_HEE_PROFESSIONS).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_TOPICS).getValues().length == 0) {
+                if (node.getProperty(PROPERTY_HEE_PROFESSIONS_TAXONOMY).getValues().length == 0
+                        && node.getProperty(PROPERTY_HEE_TOPICS_TAXONOMY).getValues().length == 0) {
                     return Optional.of(context.createViolation());
                 }
             }

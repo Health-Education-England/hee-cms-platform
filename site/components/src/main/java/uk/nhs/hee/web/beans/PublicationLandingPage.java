@@ -104,7 +104,7 @@ public class PublicationLandingPage extends BaseDocument {
                 HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationTypes", allowModifications = false)
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationType", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyPublicationType() throws RepositoryException {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
                 this.getNode(),
