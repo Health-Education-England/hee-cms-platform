@@ -60,7 +60,6 @@ public enum Model {
      */
     PROFESSION_MAP("professionMap");
 
-
     private final String key;
 
     /**
