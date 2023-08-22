@@ -1,0 +1,113 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/TaxonomyMigrationForFeaturedContent:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Migrates 'hee:publicationType', 'hee:topics' and 'hee:professions'
+        value-list-based fields into its corresponding taxonomy-based fields i.e.
+        into 'hee:globalTaxonomyPublicationType', 'hee:globalTaxonomyHealthcareTopics'
+        and 'hee:globalTaxonomyProfessions' taxonomy-based fields (including ancestor
+        fields) for 'hee:featuredContent' document type.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:featuredContent)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.commons.lang3.StringUtils\r\nimport org.hippoecm.repository.HippoStdNodeType\r\
+        \nimport org.hippoecm.repository.util.JcrUtils\r\nimport org.hippoecm.repository.util.RepoUtils\r\
+        \nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport org.onehippo.taxonomy.api.TaxonomyNodeTypes\r\
+        \nimport org.onehippo.taxonomy.plugin.TaxonomyClassificationDao\r\nimport\
+        \ org.onehippo.taxonomy.plugin.api.TaxonomyFieldTypeUtils\r\n\r\nimport javax.jcr.*\r\
+        \nimport javax.jcr.query.Query\r\n\r\nclass TaxonomyMigrationForFeaturedContent\
+        \ extends BaseNodeUpdateVisitor {\r\n    private static final String TAXONOMY_GLOBAL_PUBLICATION_TYPES\
+        \ = \"GlobalPublicationTypes\"\r\n    private static final String TAXONOMY_GLOBAL_HEALTH_CARE_TOPICS\
+        \ = \"GlobalHealthcareTopics\"\r\n    private static final String TAXONOMY_GLOBAL_PROFESSIONS\
+        \ = \"GlobalProfessions\"\r\n\r\n    private static List<String> globalPublicationTypeTaxonomyCategoryKeys\r\
+        \n    private static List<String> globalHealthCareTopicTaxonomyCategoryKeys\r\
+        \n    private static List<String> globalProfessionTaxonomyCategoryKeys\r\n\
+        \r\n    @Override\r\n    void initialize(Session session) throws RepositoryException\
+        \ {\r\n        super.initialize(session)\r\n\r\n        // Get all category\
+        \ keys of 'GlobalPublicationTypes', 'GlobalHealthcareTopics'\r\n        //\
+        \ and 'GlobalProfessions' taxonomies\r\n        globalPublicationTypeTaxonomyCategoryKeys\
+        \ =\r\n                getTaxonomyCategoryKeys(session, TAXONOMY_GLOBAL_PUBLICATION_TYPES)\r\
+        \n        globalHealthCareTopicTaxonomyCategoryKeys =\r\n                getTaxonomyCategoryKeys(session,\
+        \ TAXONOMY_GLOBAL_HEALTH_CARE_TOPICS)\r\n        globalProfessionTaxonomyCategoryKeys\
+        \ =\r\n                getTaxonomyCategoryKeys(session, TAXONOMY_GLOBAL_PROFESSIONS)\r\
+        \n    }\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Updating\
+        \ node '${node.path}'\"\r\n\r\n        migrateTaxonomyProperty(\r\n      \
+        \          node,\r\n                \"hee:publicationType\",\r\n         \
+        \       \"hee:globalTaxonomyPublicationType\",\r\n                \"GlobalPublicationTypes\"\
+        ,\r\n                globalPublicationTypeTaxonomyCategoryKeys)\r\n      \
+        \  migrateTaxonomyProperty(\r\n                node,\r\n                \"\
+        hee:topics\",\r\n                \"hee:globalTaxonomyHealthcareTopics\",\r\
+        \n                \"GlobalHealthcareTopics\",\r\n                globalHealthCareTopicTaxonomyCategoryKeys)\r\
+        \n        migrateTaxonomyProperty(\r\n                node,\r\n          \
+        \      \"hee:professions\",\r\n                \"hee:globalTaxonomyProfessions\"\
+        ,\r\n                \"GlobalProfessions\",\r\n                globalProfessionTaxonomyCategoryKeys)\r\
+        \n\r\n        log.debug \"Taxonomy migration has been completed for '${node.path}'\"\
+        \r\n        return true\r\n    }\r\n\r\n    private void migrateTaxonomyProperty(final\
+        \ Node node, final String oldPropertyName, final String newPropertyName,\r\
+        \n                                         final String taxonomyName, final\
+        \ List<String> taxonomyCategoryKeys) {\r\n        // Get old values\r\n  \
+        \      if (!node.hasProperty(oldPropertyName)) {\r\n            log.warn \"\
+        '${oldPropertyName}' doesn't exists on '${node.path}'. Will initialise '${newPropertyName}'\
+        \ \" +\r\n                    \"and '${newPropertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX}'\
+        \ \" +\r\n                    \"taxonomy properties if not already exists\"\
+        \r\n            initializeTaxonomyProperties(node, newPropertyName)\r\n  \
+        \          return\r\n        }\r\n\r\n        final Property property = node.getProperty(oldPropertyName)\r\
+        \n        List<String> oldValues\r\n        if (property.isMultiple()) {\r\
+        \n            oldValues = JcrUtils.getStringListProperty(node, oldPropertyName,\
+        \ Collections.emptyList())\r\n        } else {\r\n            oldValues =\
+        \ Collections.singletonList(node.getProperty(oldPropertyName).getString())\r\
+        \n        }\r\n\r\n        log.debug \"${oldPropertyName} = ${oldValues} for\
+        \ '${node.path}'\"\r\n\r\n        if (oldValues.isEmpty() || (oldValues.size()\
+        \ == 1 && StringUtils.isEmpty(oldValues.get(0)))) {\r\n            log.warn\
+        \ \"'${oldPropertyName}' is empty on '${node.path}'. Will initialise '${newPropertyName}'\
+        \ \" +\r\n                    \"and '${newPropertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX}'\
+        \ \" +\r\n                    \"taxonomy properties if not already exists\"\
+        \r\n            initializeTaxonomyProperties(node, newPropertyName)\r\n  \
+        \          node.getProperty(oldPropertyName).remove()\r\n            return\r\
+        \n        }\r\n\r\n        // Set new taxonomy values\r\n        Set<String>\
+        \ categoryWithAncestorKeys\r\n        if (taxonomyCategoryKeys.containsAll(oldValues))\
+        \ {\r\n            // Get categories with ancestor keys\r\n            categoryWithAncestorKeys\
+        \ = TaxonomyFieldTypeUtils.getAncestorKeys(oldValues,\r\n                \
+        \    TaxonomyFieldTypeUtils.getTaxonomyNode(taxonomyName, node.getSession()))\r\
+        \n\r\n            node.setProperty(newPropertyName, oldValues as String[])\r\
+        \n            node.setProperty(newPropertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX,\r\
+        \n                    categoryWithAncestorKeys as String[])\r\n        } else\
+        \ {\r\n            log.warn \"MANUAL: Failed to migrate '${oldPropertyName}\
+        \ = ${oldValues}' for '${node.path}'. \" +\r\n                    \"Please\
+        \ migrate manually\"\r\n            log.warn \"Will initialise '${newPropertyName}'\
+        \ \" +\r\n                    \"and '${newPropertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX}'\
+        \ \" +\r\n                    \"taxonomy properties if not already exists\"\
+        \r\n            initializeTaxonomyProperties(node, newPropertyName)\r\n  \
+        \          return\r\n        }\r\n\r\n        // Delete the old property\r\
+        \n        node.getProperty(oldPropertyName).remove()\r\n\r\n        log.debug\
+        \ \"Successfully migrated '${oldPropertyName} = ${oldValues}' value-list property\
+        \ \" +\r\n                \"as '${newPropertyName} = ${oldValues}' \" +\r\n\
+        \                \"and '${newPropertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX}\
+        \ = \" +\r\n                \"${categoryWithAncestorKeys}' taxonomy properties\
+        \ for '${node.path}'\"\r\n    }\r\n\r\n    private static void initializeTaxonomyProperties(final\
+        \ Node node, final String propertyName) {\r\n        if (!node.hasProperty(propertyName))\
+        \ {\r\n            node.setProperty(propertyName, new String[0])\r\n     \
+        \   }\r\n\r\n        if (!node.hasProperty(propertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX))\
+        \ {\r\n            node.setProperty(propertyName + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX,\
+        \ new String[0])\r\n        }\r\n    }\r\n\r\n    private static List<String>\
+        \ getTaxonomyCategoryKeys(final Session session, final String taxonomyName)\r\
+        \n            throws RepositoryException {\r\n        final List<String> taxonomyCategoryKeys\
+        \ = new ArrayList<>()\r\n        final String taxonomyCategoriesStmt = String.format(\"\
+        /jcr:root/content/taxonomies/%s\" +\r\n                \"/element(%s, %s)[%s\
+        \ = '%s']\" +\r\n                \"//element(*, %s)\",\r\n               \
+        \ taxonomyName,\r\n                taxonomyName,\r\n                TaxonomyNodeTypes.NODETYPE_HIPPOTAXONOMY_TAXONOMY,\r\
+        \n                HippoStdNodeType.HIPPOSTD_STATE,\r\n                HippoStdNodeType.PUBLISHED,\r\
+        \n                TaxonomyNodeTypes.NODETYPE_HIPPOTAXONOMY_CATEGORY)\r\n\r\
+        \n        @SuppressWarnings(\"deprecation\")\r\n        final Query taxonomyCategoriesQuery\
+        \ = session.getWorkspace().getQueryManager()\r\n                .createQuery(RepoUtils.encodeXpath(taxonomyCategoriesStmt),\
+        \ Query.XPATH)\r\n        final NodeIterator categoryNodeIterator = taxonomyCategoriesQuery.execute().getNodes()\r\
+        \n\r\n        while (categoryNodeIterator.hasNext()) {\r\n            taxonomyCategoryKeys.add(\r\
+        \n                    categoryNodeIterator.nextNode().getProperty(TaxonomyNodeTypes.HIPPOTAXONOMY_KEY).getString())\r\
+        \n        }\r\n\r\n        return taxonomyCategoryKeys\r\n    }\r\n\r\n  \
+        \  boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

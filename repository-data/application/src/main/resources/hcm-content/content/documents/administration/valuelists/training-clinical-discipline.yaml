@@ -1,0 +1,73 @@
+/content/documents/administration/valuelists/training-clinical-discipline:
+  .meta:order-before: lks
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 41c7dfa1-e1cb-4d8e-bf06-63f166bb8a46
+  hippo:name: TrainingClinicalDiscipline
+  /training-clinical-discipline:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: 107a91fa-c97f-4173-98aa-850b5f0428ed
+    hippo:availability: [live, preview]
+    hippotranslation:id: b05cb7b1-401f-4679-bd43-e97ec8dc369c
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: acute-care-common-stem
+      selection:label: Acute Care Common Stem
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: anaesthesia
+      selection:label: Anaesthesia
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: dental
+      selection:label: Dental
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: emergency-medicine
+      selection:label: Emergency Medicine
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: foundation
+      selection:label: Foundation
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: general-practice
+      selection:label: General Practice
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: medicine
+      selection:label: Medicine
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: obstetrics-&-gynaecology
+      selection:label: Obstetrics & Gynaecology
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: ophthalmology
+      selection:label: Ophthalmology
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: paediatrics
+      selection:label: Paediatrics
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: pathology
+      selection:label: Pathology
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: psychiatry
+      selection:label: Psychiatry
+    /selection:listitem[13]:
+      jcr:primaryType: selection:listitem
+      selection:key: public-health
+      selection:label: Public Health
+    /selection:listitem[14]:
+      jcr:primaryType: selection:listitem
+      selection:key: radiology
+      selection:label: Radiology
+    /selection:listitem[15]:
+      jcr:primaryType: selection:listitem
+      selection:key: surgery
+      selection:label: Surgery
