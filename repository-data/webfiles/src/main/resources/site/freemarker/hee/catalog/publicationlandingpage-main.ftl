@@ -129,8 +129,8 @@
                         <h2>Other formats</h2>
                         <div class="hee-publication-doc">
                             <p>If you need documents in a different format like accessible PDF,&nbsp;
-                            large print, easy read, audio recording or braille please email&nbsp;
-                            <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
+                            large print, easy read, audio recording or braille please email
+                            <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a>.</p>
                         </div>
                     </#if>
                     <#--  Other document formats: END  -->

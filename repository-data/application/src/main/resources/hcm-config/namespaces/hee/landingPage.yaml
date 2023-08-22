@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 6010d40a-0021-4e4b-85a4-645c2cc08d37
+          jcr:uuid: b9dbecf6-320e-4478-8afd-6f21bfc53cf4
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -32,7 +32,7 @@ definitions:
             hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-            hipposysedit:validators: [optional]
+            hipposysedit:validators: [required]
           /heroImage:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -79,7 +79,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
-          jcr:uuid: c985ca5d-ec01-48e2-8b5a-7575057b8ac6
+          jcr:uuid: d91207df-738f-48d5-8487-5693714f9282
           hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
           hee:addToAZ: false
