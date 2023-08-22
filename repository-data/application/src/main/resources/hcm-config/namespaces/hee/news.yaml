@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ae2fe29f-3c67-4850-94ec-a30b0c5e3844
+          jcr:uuid: b1199670-ea66-47a3-8d77-ab290a424342
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -122,6 +123,30 @@ definitions:
             hipposysedit:path: hee:hideAuthorContactDetails
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyTags:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyTags
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -134,7 +159,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: fa592eca-1e3f-4306-a10c-166774bb4391
+          jcr:uuid: 5de29c1f-0561-4e18-9798-5a351ee3b16c
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:summary: ''
@@ -275,6 +300,38 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
+          /globalTaxonomyProfessions:
+            jcr:primaryType: frontend:plugin
+            caption: Professions
+            field: taxonomy
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Healthcare topics
+            field: taxonomy1
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalHealthcareTopics
+          /globalTaxonomyTags:
+            jcr:primaryType: frontend:plugin
+            caption: Tags
+            field: taxonomy2
+            hint: Choose any appropriate tags
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalTags
           /categories:
             jcr:primaryType: frontend:plugin
             caption: Categories
