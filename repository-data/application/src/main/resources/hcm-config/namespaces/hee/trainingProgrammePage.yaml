@@ -15,7 +15,7 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator']
+          hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator','hee:mandatory-training-journey-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -175,6 +175,30 @@ definitions:
             hipposysedit:path: hee:applicationInformation
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /trainingJourneyPrerequisites:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:trainingJourneyPrerequisites
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /trainingJourneyOptions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:trainingJourneyOptions
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /trainingJourneySummary:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:trainingJourneySummary
+            hipposysedit:primary: false
+            hipposysedit:type: String
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -200,6 +224,7 @@ definitions:
           hee:professions: []
           hee:recruitmentFormat: ''
           hee:competitionRatio: 0.0
+          hee:trainingJourneySummary: ''
           /hee:microHero:
             jcr:primaryType: hippogallerypicker:imagelink
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -433,3 +458,34 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /trainingJourneySummary:
+            jcr:primaryType: frontend:plugin
+            caption: Training journey summary
+            field: trainingJourneySummary
+            hint: Enter a summary for the training journey (120 character limit)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              maxlength: '120'
+          /trainingJourneyPrerequisites:
+            jcr:primaryType: frontend:plugin
+            caption: Training journey prerequisites
+            field: trainingJourneyPrerequisites
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Please browse to and select at least one Training programme page
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              last.visited.nodetypes: []
+              nodetypes: ['hee:trainingProgrammePage']
+          /trainingJourneyOptions:
+            jcr:primaryType: frontend:plugin
+            caption: Training journey optional routes
+            field: trainingJourneyOptions
+            hint: Please browse to and select at least one Training programme page
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:trainingProgrammePage']

@@ -171,6 +171,34 @@
                                 </#switch>
                             </#list>
                         </#if>
+                    <#--  Training journey component: START  -->
+                        <#if document.trainingJourneySummary?has_content || document.trainingJourneyPrerequisites?has_content>
+
+                            <h2>Your training journey</h2>
+                            <#if document.trainingJourneySummary?has_content>
+                                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.trainingJourneySummary!?replace('\n', '<br>')}"/></p>
+                            </#if>
+                            <div class="hee-training-journey">
+                                <#--  Prerequisites  -->
+                                <#if document.trainingJourneyPrerequisites?has_content>
+                                    <@trainingGroup list=document.trainingJourneyPrerequisites title="Prerequisites"/>
+                                </#if>
+                                <#--  Your are here  -->
+                                <div class="hee-training-journey__group ">
+                                    <h4>You are here</h4>
+                                    <div class="hee-training-journey__group__container">
+                                        <div class="hee-training-journey__item first last active">
+                                            <a class="hee-training-journey__item__link" href="#">${document.title}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <#--  Optional Routes -->
+                                <#if document.trainingJourneyOptions?has_content>
+                                    <@trainingGroup list=document.trainingJourneyOptions title="Optional routes"/>
+                                </#if>
+
+                            </div>
+                        </#if>
                     </#if>
                 </div>
             </div>
