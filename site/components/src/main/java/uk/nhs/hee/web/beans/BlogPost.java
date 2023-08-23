@@ -100,6 +100,6 @@ public class BlogPost extends BaseDocument {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
                 this.getNode(),
                 "hee:globalTaxonomyTags",
-                HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES);
+                HEETaxonomy.HEE_GLOBAL_TAGS);
     }
 }

@@ -8393,14 +8393,12 @@
         hee:globalTaxonomyPublicationType: []
         hee:globalTaxonomyPublicationType__with_ancestors: []
         hee:method: Manual
-        hee:publicationType: ''
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
-        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:24:43.290+05:30
-        hippostdpubwf:lastModificationDate: 2023-08-21T12:07:32.603+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-31T16:38:44.732+05:30
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7b815917-3a60-4e7a-a5ef-7e6805c6ed2e
         hippotranslation:locale: document-type-locale
@@ -8472,26 +8470,27 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: 6d635eff-30c8-49d3-8479-da42bd232dd4
       hippo:name: Sample featured content - Related
-      hippo:versionHistory: 889e094b-e49d-40c1-bde3-63fac3a61650
+      hippo:versionHistory: 5cce9279-8766-4267-8ce4-66d7c40b8aa7
       /sample-featured-content---related[1]:
         jcr:primaryType: hee:featuredContent
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 0f0190f9-cdcb-4084-a1cd-fc27aed3081b
         hee:description: ''
         hee:featuredContentType: hee:publicationLandingPage
-        hee:globalTaxonomyHealthcareTopics: []
-        hee:globalTaxonomyHealthcareTopics__with_ancestors: []
-        hee:globalTaxonomyProfessions: []
-        hee:globalTaxonomyProfessions__with_ancestors: []
-        hee:globalTaxonomyPublicationType: [regulatory]
-        hee:globalTaxonomyPublicationType__with_ancestors: [regulatory]
+        hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation]
+        hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning, workforce_transformation]
+        hee:globalTaxonomyProfessions: [public_health_professionals]
+        hee:globalTaxonomyProfessions__with_ancestors: [public_health_professionals]
+        hee:globalTaxonomyPublicationType: [consultation]
+        hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
         hee:method: Related
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
+        hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:26:58.439+05:30
-        hippostdpubwf:lastModificationDate: 2023-08-21T12:25:30.940+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-31T15:21:09.660+05:30
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7dffb549-0937-4952-9287-6a17f5f85e4a
         hippotranslation:locale: document-type-locale
@@ -8501,19 +8500,19 @@
         jcr:uuid: f1d047bc-22f8-400c-a815-1b0c20a7b765
         hee:description: ''
         hee:featuredContentType: hee:publicationLandingPage
-        hee:globalTaxonomyHealthcareTopics: []
-        hee:globalTaxonomyHealthcareTopics__with_ancestors: []
-        hee:globalTaxonomyProfessions: []
-        hee:globalTaxonomyProfessions__with_ancestors: []
-        hee:globalTaxonomyPublicationType: [regulatory]
-        hee:globalTaxonomyPublicationType__with_ancestors: [regulatory]
+        hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation]
+        hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning, workforce_transformation]
+        hee:globalTaxonomyProfessions: [public_health_professionals]
+        hee:globalTaxonomyProfessions__with_ancestors: [public_health_professionals]
+        hee:globalTaxonomyPublicationType: [consultation]
+        hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
         hee:method: Related
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:26:58.439+05:30
-        hippostdpubwf:lastModificationDate: 2023-08-21T12:25:36.848+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-25T19:12:25.488+05:30
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 7dffb549-0937-4952-9287-6a17f5f85e4a
         hippotranslation:locale: document-type-locale
@@ -8523,21 +8522,21 @@
         jcr:uuid: 08a55d80-fd08-4271-acec-4fbb5eb06d56
         hee:description: ''
         hee:featuredContentType: hee:publicationLandingPage
-        hee:globalTaxonomyHealthcareTopics: []
-        hee:globalTaxonomyHealthcareTopics__with_ancestors: []
-        hee:globalTaxonomyProfessions: []
-        hee:globalTaxonomyProfessions__with_ancestors: []
-        hee:globalTaxonomyPublicationType: [regulatory]
-        hee:globalTaxonomyPublicationType__with_ancestors: [regulatory]
+        hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation]
+        hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning, workforce_transformation]
+        hee:globalTaxonomyProfessions: [public_health_professionals]
+        hee:globalTaxonomyProfessions__with_ancestors: [public_health_professionals]
+        hee:globalTaxonomyPublicationType: [consultation]
+        hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
         hee:method: Related
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-05-18T16:26:58.439+05:30
-        hippostdpubwf:lastModificationDate: 2023-08-21T12:25:36.848+01:00
+        hippostdpubwf:lastModificationDate: 2023-05-25T19:12:25.488+05:30
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2023-08-21T12:25:39.028+01:00
+        hippostdpubwf:publicationDate: 2023-05-25T19:12:27.346+05:30
         hippotranslation:id: 7dffb549-0937-4952-9287-6a17f5f85e4a
         hippotranslation:locale: document-type-locale
     /sample-featured-content---latest:
