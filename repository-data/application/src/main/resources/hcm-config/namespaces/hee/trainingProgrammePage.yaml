@@ -11,11 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4360bba4-a786-4ec4-944a-708cd5267c01
+          jcr:uuid: 430bb914-fa4d-44d3-b3c1-5f861d534fc7
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator','hee:mandatory-training-journey-validator']
+          hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator',
+            'hee:mandatory-training-journey-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -51,13 +52,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [required]
-          /regions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:regions
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
           /cardImage:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -222,7 +216,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 1bd1447a-6ca3-484b-ab93-2ee3ea94a60c
+          jcr:uuid: 34ebc470-9140-4d80-90fe-fa7864fe6204
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -528,13 +522,3 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:trainingProgrammePage']
-          /regions:
-            jcr:primaryType: frontend:plugin
-            caption: Regions
-            compoundList: hee:navMap
-            contentPickerType: links
-            field: regions
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
