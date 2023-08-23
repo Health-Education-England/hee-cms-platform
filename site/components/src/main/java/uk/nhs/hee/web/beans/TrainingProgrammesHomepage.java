@@ -69,4 +69,10 @@ public class TrainingProgrammesHomepage extends BaseDocument {
     public String getProgrammeDescription() {
         return getSingleProperty("hee:programmeDescription");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
+
 }

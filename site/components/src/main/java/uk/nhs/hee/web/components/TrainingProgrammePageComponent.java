@@ -10,6 +10,7 @@ import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.TrainingProgrammePage;
 import uk.nhs.hee.web.components.info.TrainingProgrammePageComponentInfo;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
@@ -68,6 +69,7 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             modelToValueListMap.forEach(request::setModel);
 
             request.setAttribute("tableComponentService", new TableComponentService());
+            request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
         }
     }
 

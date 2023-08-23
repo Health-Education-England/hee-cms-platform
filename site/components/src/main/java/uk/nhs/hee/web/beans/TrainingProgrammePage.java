@@ -99,4 +99,10 @@ public class TrainingProgrammePage extends BaseDocument {
     public List<Guidance> getApplicationInformation() {
         return getLinkedBeans("hee:applicationInformation", Guidance.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
+
 }

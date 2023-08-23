@@ -221,9 +221,12 @@
         <#--  Main content: END  -->
 
         <#--  Feature section will be a future work, not implemented yet  -->
-        <section class="page__feature">
-            <div class="nhsuk-width-container">
-            </div>
-        </section>
+        <#if document.featuredContentBlock??>
+            <section class="page__feature">
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document/>
+                </div>
+            </section>
+        </#if>
     </main>
 </#if>

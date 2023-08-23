@@ -12,7 +12,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 6bf10fab-1586-4d3f-9d3a-441abd44fb15
     hippo:name: Example training programme page
-    hippo:versionHistory: 37af6ff4-d5c0-4b7b-9abc-46be037e8313
+    hippo:versionHistory: f83a1aae-3f99-45e7-8d82-00fc508a0af3
     /example-training-programme-page[1]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -33,10 +33,9 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
-      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-12T17:52:12.862+01:00
-      hippostdpubwf:lastModificationDate: 2023-07-31T08:55:15.205+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-23T22:32:53.836+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: b95772fc-4f22-4459-a278-3f5b9fd49b2f
       hippotranslation:locale: en
@@ -66,6 +65,9 @@
           <p>&nbsp;</p>
 
           <p>When you switch to a new page, the overview text will not show</p>
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
     /example-training-programme-page[2]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -88,7 +90,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-12T17:52:12.862+01:00
-      hippostdpubwf:lastModificationDate: 2023-07-31T08:55:15.156+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-23T22:54:39.442+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: b95772fc-4f22-4459-a278-3f5b9fd49b2f
       hippotranslation:locale: en
@@ -118,6 +120,9 @@
           <p>&nbsp;</p>
 
           <p>When you switch to a new page, the overview text will not show</p>
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
     /example-training-programme-page[3]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -140,9 +145,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-12T17:52:12.862+01:00
-      hippostdpubwf:lastModificationDate: 2023-07-31T08:55:15.156+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-23T22:54:39.442+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-07-31T08:55:44.497+01:00
+      hippostdpubwf:publicationDate: 2023-08-23T22:54:45.735+01:00
       hippotranslation:id: b95772fc-4f22-4459-a278-3f5b9fd49b2f
       hippotranslation:locale: en
       /hee:microHero:
@@ -171,3 +176,6 @@
           <p>&nbsp;</p>
 
           <p>When you switch to a new page, the overview text will not show</p>
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
