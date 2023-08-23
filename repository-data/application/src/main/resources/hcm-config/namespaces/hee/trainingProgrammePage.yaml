@@ -11,12 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4360bba4-a786-4ec4-944a-708cd5267c01
+          jcr:uuid: 430bb914-fa4d-44d3-b3c1-5f861d534fc7
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator',
-                                    'hee:mandatory-training-journey-validator']
+            'hee:mandatory-training-journey-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -52,13 +52,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [required]
-          /regions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:regions
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
           /cardImage:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
