@@ -303,7 +303,7 @@ definitions:
           /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
-            field: taxonomy
+            field: globalTaxonomyProfessions
             hint: Choose at least one relevant profession and/or healthcare topic
               for this content
             plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
@@ -314,7 +314,7 @@ definitions:
           /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
-            field: taxonomy1
+            field: globalTaxonomyHealthcareTopics
             hint: Choose at least one relevant profession and/or healthcare topic
               for this content
             plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
@@ -325,7 +325,7 @@ definitions:
           /globalTaxonomyTags:
             jcr:primaryType: frontend:plugin
             caption: Tags
-            field: taxonomy2
+            field: globalTaxonomyTags
             hint: Choose any appropriate tags
             plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
