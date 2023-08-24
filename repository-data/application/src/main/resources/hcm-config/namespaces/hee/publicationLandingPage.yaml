@@ -11,164 +11,13 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 1df32376-822b-4177-94e6-f06133b72fa0
+          jcr:uuid: 562040bc-40cb-4bb3-b31e-75136ba416c4
           hipposysedit:node: true
           hipposysedit:supertype: ['hippotranslation:translated', 'hee:basedocument',
-            'hippostd:relaxed']
+                                   'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
-            'hee:unique-web-publications-validator']
-          /title:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:title
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /summary:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:summary
-            hipposysedit:primary: false
-            hipposysedit:type: Text
-            hipposysedit:validators: [required]
-          /subtitle:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:subtitle
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /publicationDate:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationDate
-            hipposysedit:primary: false
-            hipposysedit:type: CalendarDate
-            hipposysedit:validators: [required]
-          /readTime:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:readTime
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required, 'hee:numeric-validator']
-          /logoGroup:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:logoGroup
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-          /webPublications:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:webPublications
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-            hipposysedit:validators: [required]
-          /updatedDate:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:updatedDate
-            hipposysedit:primary: false
-            hipposysedit:type: CalendarDate
-            hipposysedit:validators: [required]
-          /authors:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:authors
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-          /hideAuthorContactDetails:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:hideAuthorContactDetails
-            hipposysedit:primary: false
-            hipposysedit:type: Boolean
-          /assetVersionsContent:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:assetVersionsContent
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
-          /languageVersionsContent:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:languageVersionsContent
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
-          /otherFormatsEmail:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: true
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:otherFormatsEmail
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [email, required]
-          /featuredContentBlock:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:featuredContentBlock
-            hipposysedit:primary: false
-            hipposysedit:type: hippo:mirror
-          /globalTaxonomyHealthcareTopics:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
-            hipposysedit:primary: false
-            hipposysedit:type: Taxonomy
-          /globalTaxonomyProfessions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:globalTaxonomyProfessions
-            hipposysedit:primary: false
-            hipposysedit:type: Taxonomy
-          /globalTaxonomyPublicationType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:globalTaxonomyPublicationType
-            hipposysedit:primary: false
-            hipposysedit:type: Taxonomy
-            hipposysedit:validators: [required]
-        /hipposysedit:nodetype[2]:
-          jcr:primaryType: hipposysedit:nodetype
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: cb82c3a9-56fd-4f37-8f15-feab55ae75cb
-          hipposysedit:node: true
-          hipposysedit:supertype: ['hippotranslation:translated', 'hee:basedocument',
-            'hippostd:relaxed']
-          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
-            'hee:unique-web-publications-validator']
+                                    'hee:unique-web-publications-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -316,7 +165,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: b1ed1a5a-a43f-4594-94d5-24ef838e0dc6
+          jcr:uuid: 9c3177b7-5eec-4d56-aeca-8451c02e20e7
           hee:publicationDate: 0001-01-01T12:00:00Z
           hee:subtitle: ''
           hee:summary: ''
@@ -333,39 +182,6 @@ definitions:
           hee:updatedDate: 0001-01-01T12:00:00Z
           hee:hideAuthorContactDetails: false
           hee:otherFormatsEmail: ''
-          /hee:logoGroup:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:webPublications:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:authors:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-          /hee:featuredContentBlock:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        /hipposysedit:prototype[2]:
-          jcr:primaryType: nt:unstructured
-          jcr:mixinTypes: ['hippostd:publishableSummary', 'hippostd:relaxed', 'hippostdpubwf:document',
-            'hippotranslation:translated', 'mix:referenceable']
-          jcr:uuid: 11ea5c78-fde5-48a8-844e-063eb49dd236
-          hee:hideAuthorContactDetails: false
-          hee:otherFormatsEmail: ''
-          hee:publicationDate: 0001-01-01T12:00:00Z
-          hee:readTime: ''
-          hee:subtitle: ''
-          hee:summary: ''
-          hee:title: ''
-          hee:updatedDate: 0001-01-01T12:00:00Z
-          hippostd:holder: holder
-          hippostd:state: draft
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

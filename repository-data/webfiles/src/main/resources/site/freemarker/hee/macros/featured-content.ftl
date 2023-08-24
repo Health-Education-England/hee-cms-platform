@@ -3,7 +3,7 @@
 <#include "../utils/date-util.ftl">
 <#include "../macros/internal-link.ftl">
 
-<#macro featuredContent block maxCards=3>
+<#macro featuredContent block maxCards=2>
     <#if block.featuredContentBlock??>
         <#assign fcBlock=block.featuredContentBlock>
         <#assign featuredDocuments = featuredContentBlockService.getFeaturedContent(hstRequest, fcBlock, maxCards)>
@@ -21,7 +21,7 @@
                 <#--  Description: END  -->
 
                 <#--  Featured content items/cards: START  -->
-                <div class="hee-featured-content-wrapper${(featuredDocuments?size = 2)?then(' double', '')}">
+                <div class="hee-featured-content-wrapper${(maxCards = 2)?then(' double', (featuredDocuments?size = 2)?then(' double',''))}">
                     <#list featuredDocuments as featuredDoc>
                         <div class="hee-featured-content__item">
                             <div class="hee-listing-item">

@@ -173,7 +173,7 @@
         <#if document.featuredContentBlock??>
             <section class="page__feature">
                 <div class="nhsuk-width-container">
-                    <@hee.featuredContent block=document/>
+                    <@hee.featuredContent block=document maxCards=3/>
                 </div>
             </section>
         </#if>
