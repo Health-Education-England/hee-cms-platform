@@ -220,12 +220,14 @@
                 </div>
 
                 <#if document.applicationButtonLink?has_content>
-                    <div class="hee-card hee-card--cta">
-                        <h3>Apply now</h3>
-                        <div class="hee-card--cta__button">
-                            <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
-                                ${document.applicationButtonTitle}
-                            </a>
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h3 class="nhsuk-card__heading">Apply now</h3>
+                            <div class="hee-card--cta__button">
+                                <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
+                                    ${document.applicationButtonTitle}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </#if>
