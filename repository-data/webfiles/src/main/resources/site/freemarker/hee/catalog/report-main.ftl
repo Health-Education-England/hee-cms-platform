@@ -14,10 +14,10 @@
     </@hst.link>
 
     <div class="hee-card--details__item">
-        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.assetData.asset.filename}">
+        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.title}">
             <div class="hee-resources__wrapper">
                 <#--  File name  -->
-                <span class="hee-resources__text">${assetLink.assetData.asset.filename?keep_before_last(".")}</span>
+                <span class="hee-resources__text">${assetLink.title}</span>
 
                 <#--  File size: START  -->
                 <#if (assetLink.assetData.asset.lengthMB > 1)>
