@@ -100,7 +100,6 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBeans("hee:applicationInformation", Guidance.class);
     }
 
-    
     @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
     public String getApplicationButtonTitle() {
         return getSingleProperty("hee:applicationButtonTitle");
@@ -125,5 +124,10 @@ public class TrainingProgrammePage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
     public List<HippoBean> getTrainingJourneyOptions() {
         return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 }
