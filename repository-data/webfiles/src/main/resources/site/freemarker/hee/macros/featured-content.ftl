@@ -21,7 +21,7 @@
                 <#--  Description: END  -->
 
                 <#--  Featured content items/cards: START  -->
-                <div class="hee-featured-content-wrapper${(maxCards = 2)?then(' double', (featuredDocuments?size = 2)?then(' double',''))}">
+                <div class="hee-featured-content-wrapper${(maxCards = 2)?then(' double', '')}">
                     <#list featuredDocuments as featuredDoc>
                         <div class="hee-featured-content__item">
                             <div class="hee-listing-item">
