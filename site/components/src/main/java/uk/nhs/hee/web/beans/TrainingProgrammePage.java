@@ -6,7 +6,7 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import java.util.List;
 import java.util.Calendar;
 
-/** 
+/**
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
@@ -98,5 +98,32 @@ public class TrainingProgrammePage extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:applicationInformation")
     public List<Guidance> getApplicationInformation() {
         return getLinkedBeans("hee:applicationInformation", Guidance.class);
+    }
+
+    
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
+    public String getApplicationButtonTitle() {
+        return getSingleProperty("hee:applicationButtonTitle");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonLink")
+    public String getApplicationButtonLink() {
+        return getSingleProperty("hee:applicationButtonLink");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
+    public String getTrainingJourneySummary() {
+        return getSingleProperty("hee:trainingJourneySummary");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
+    public List<HippoBean> getTrainingJourneyPrerequisites() {
+        return getLinkedBeans("hee:trainingJourneyPrerequisites",
+                HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
+    public List<HippoBean> getTrainingJourneyOptions() {
+        return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
     }
 }
