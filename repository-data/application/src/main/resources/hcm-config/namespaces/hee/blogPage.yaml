@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c8484146-96eb-490e-9720-79282439f4ca
+          jcr:uuid: 41418121-2568-42bb-aa8e-a42e05896574
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -123,6 +124,30 @@ definitions:
             hipposysedit:path: hee:hideAuthorContactDetails
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyTags:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyTags
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -134,7 +159,7 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 284a81b6-462a-433f-becb-3febb7784e96
+          jcr:uuid: 4162c985-5b0c-473c-962c-95d69d9ec2a5
           hippostdpubwf:lastModificationDate: 2021-03-30T21:24:39.977+01:00
           hippostdpubwf:creationDate: 2021-03-30T21:24:39.977+01:00
           hee:title: ''
@@ -240,6 +265,38 @@ definitions:
             hint: Add an image that's 260 pixels high and 1600 pixels wide.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /globalTaxonomyProfessions:
+            jcr:primaryType: frontend:plugin
+            caption: Professions
+            field: globalTaxonomyProfessions
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content.
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Healthcare topics
+            field: globalTaxonomyHealthcareTopics
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content.
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalHealthcareTopics
+          /globalTaxonomyTags:
+            jcr:primaryType: frontend:plugin
+            caption: Tags
+            field: globalTaxonomyTags
+            hint: Choose any appropriate tags
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalTags
           /categories:
             jcr:primaryType: frontend:plugin
             caption: Categories
@@ -265,6 +322,17 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /rightHandBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Right hand objects
+            compoundList: hee:contactCardWithDescriptionReference,hee:fileLinksCardReference,hee:externalLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
+            contentPickerType: links
+            field: rightHandBlocks
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.right.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -293,17 +361,6 @@ definitions:
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
-          /rightHandBlocks:
-            jcr:primaryType: frontend:plugin
-            caption: Right hand objects
-            compoundList: hee:contactCardWithDescriptionReference,hee:fileLinksCardReference,hee:externalLinksCardReference,hee:internalLinksCardReference,hee:QuickLinks
-            contentPickerType: links
-            field: rightHandBlocks
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
-            wicket.id: ${cluster.id}.right.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'

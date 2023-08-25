@@ -5,13 +5,13 @@
         <#if media.mediaEmbedContentBlock.embedCode?has_content>
             <#assign embedSrc=getEmbedCodeAttrValue(media.mediaEmbedContentBlock.embedCode, 'src')>
             <#if embedSrc?has_content>
-                <div class="nhsuk-media">
+                <div class="hee-media">
                     <#--  Title  -->
                     <h2>${media.mediaEmbedContentBlock.title}</h2>
 
                     <#--  Description  -->
                     <#if media.mediaEmbedContentBlock.description?has_content && media.mediaEmbedContentBlock.description?trim != ''>
-                        <div class="nhsuk-media__description">
+                        <div class="hee-media__description">
                             <p>${media.mediaEmbedContentBlock.description}</p>
                         </div>
                     </#if>
@@ -27,7 +27,7 @@
 
                     <#--  Player  -->
                     <#assign iframetitle=getEmbedCodeAttrValue(media.mediaEmbedContentBlock.embedCode, 'title')>
-                    <div class="nhsuk-media__container ${embedMediaType}">
+                    <div class="hee-media__container ${embedMediaType}">
                         <#if embedMediaType='anchor'>
                             <iframe src="${embedSrc}" ${(iframetitle?has_content)?then('title="${iframetitle}"', '')} frameborder="0" scrolling="no"></iframe>
                         <#else>
@@ -36,15 +36,15 @@
                     </div>
 
                     <#--  Media info: START  -->
-                    <div class="nhsuk-media__info">
+                    <div class="hee-media__info">
                         <#--  Transcript  -->
                         <#if media.mediaEmbedContentBlock.transcript.content?has_content && media.mediaEmbedContentBlock.transcript.content?trim != ''>
-                            <div class="nhsuk-media__transcript">
+                            <div class="hee-media__transcript">
                                 <a href="javascript:void(0);">
-                                    <span class="nhsuk-media__show-text">${media.mediaEmbedContentBlock.showTranscriptButtonText}</span>
-                                    <span class="nhsuk-media__hide-text">${media.mediaEmbedContentBlock.hideTranscriptButtonText}</span>
+                                    <span class="hee-media__show-text">${media.mediaEmbedContentBlock.showTranscriptButtonText}</span>
+                                    <span class="hee-media__hide-text">${media.mediaEmbedContentBlock.hideTranscriptButtonText}</span>
                                 </a>
-                                <div class="nhsuk-media__transcript-text">
+                                <div class="hee-media__transcript-text">
                                     <@hst.html hippohtml=media.mediaEmbedContentBlock.transcript />
                                 </div>
                             </div>

@@ -263,24 +263,24 @@
 </#macro>
 
 <#--  Lists publication (landing) result items  -->
-<#macro publicationListItem items publicationTypeMap>
+<#macro publicationListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
     <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
     <@fmt.message key="publication.type" var="publicationTypeLabel"/>
 
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
-
         <#if pageURL != pageNotFoundURL>
             <div class="hee-listing-item">
                 <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
 
-                <#--  Publication details: START   -->
                 <div class="hee-listing-item__details">
-                    <@listItemRow key="${publicationTypeLabel}">
-                        ${publicationTypeMap[item.publicationType]}
-                    </@listItemRow>
+                    <#if item.globalTaxonomyPublicationType?? && item.globalTaxonomyPublicationType.taxonomyValues?has_content>
+                        <@listItemRow key="${publicationTypeLabel}">
+                            ${item.globalTaxonomyPublicationType.taxonomyValues[0].label}
+                        </@listItemRow>
+                    </#if>
 
                     <@listItemRow key="${publishDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}

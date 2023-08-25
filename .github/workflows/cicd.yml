@@ -45,7 +45,6 @@ jobs:
 
   deploy-to-dev:
     name: Deploy to Dev Env. [on brCloud]
-    if: ${{ false }}
     needs: buildAndTest
     environment: development
 

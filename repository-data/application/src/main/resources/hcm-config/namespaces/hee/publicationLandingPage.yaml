@@ -11,9 +11,10 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 9b7d59de-ff7d-4472-a8c9-f0126152abf0
+          jcr:uuid: 562040bc-40cb-4bb3-b31e-75136ba416c4
           hipposysedit:node: true
-          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
+          hipposysedit:supertype: ['hippotranslation:translated', 'hee:basedocument',
+            'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-publication-professions-or-topics-validator',
             'hee:unique-web-publications-validator']
@@ -52,31 +53,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: CalendarDate
             hipposysedit:validators: [required]
-          /publicationType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationType
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [required]
-          /publicationTopics:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationTopics
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /publicationProfessions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationProfessions
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /readTime:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -159,16 +135,38 @@ definitions:
             hipposysedit:path: hee:featuredContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyPublicationType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyPublicationType
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:publicationLandingPage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 49112d89-f120-4f01-8d99-cc9a0cf8c704
+          jcr:uuid: 9c3177b7-5eec-4d56-aeca-8451c02e20e7
           hee:publicationDate: 0001-01-01T12:00:00Z
-          hee:publicationProfessions: []
-          hee:publicationTopics: []
-          hee:publicationType: ''
           hee:subtitle: ''
           hee:summary: ''
           hee:title: ''
@@ -258,17 +256,16 @@ definitions:
             hint: Check the box to hide the authors email address and work address.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /publicationType:
+          /globalTaxonomyPublicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
-            field: publicationType
+            field: globalTaxonomyPublicationType
             hint: Select the publication type
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              source: /content/documents/administration/valuelists/publicationtypes
+              taxonomy.name: GlobalPublicationTypes
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -289,38 +286,38 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /publicationProfessions:
+          /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
-            field: publicationProfessions
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            field: globalTaxonomyProfessions
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: Select professions relevant to this publication
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationprofessions
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-          /publicationTopics:
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
-            caption: Topics
-            field: publicationTopics
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: Healthcare topics
+            field: globalTaxonomyHealthcareTopics
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: Select relevant topics
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtopics
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              taxonomy.name: GlobalHealthcareTopics
+          /webPublications:
+            jcr:primaryType: frontend:plugin
+            caption: Publication pages
+            field: webPublications
+            hint: Browse to a publication page(s)
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:report']
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date
@@ -348,16 +345,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /webPublications:
-            jcr:primaryType: frontend:plugin
-            caption: Publication pages
-            field: webPublications
-            hint: Browse to a publication page(s)
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:report']
           /assetVersionsContent:
             jcr:primaryType: frontend:plugin
             caption: Document versions
