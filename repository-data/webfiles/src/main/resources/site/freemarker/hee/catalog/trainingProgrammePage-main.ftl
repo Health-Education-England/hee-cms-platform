@@ -5,6 +5,8 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/micro-hero.ftl">
 
+<@hst.setBundle basename="uk.nhs.hee.web.global"/>
+
 <#--  Macro to create the Prerequisites or Optional Routes part for the Training Journey Component -->
 <#macro trainingGroup list title>
     <div class="hee-training-journey__group ">
@@ -220,9 +222,9 @@
                 </div>
 
                 <#if document.applicationButtonLink?has_content>
-                    <div class="hee-card hee-card--cta">
-                        <h3>Apply now</h3>
-                        <div class="hee-card--cta__button">
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h3 class="nhsuk-card__heading">Apply now</h3>
                             <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
                                 ${document.applicationButtonTitle}
                             </a>
