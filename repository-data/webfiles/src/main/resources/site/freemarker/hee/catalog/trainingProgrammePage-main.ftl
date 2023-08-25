@@ -184,7 +184,11 @@
                                 </#switch>
                             </#list>
                         </#if>
+<<<<<<< HEAD
                     <#--  Training journey component: START  -->
+=======
+                        <#--  Training journey component: START  -->
+>>>>>>> c4a0422de02c2578edda609ac05562d9efc4640c
                         <#if document.trainingJourneySummary?has_content || document.trainingJourneyPrerequisites?has_content>
 
                             <h2>Your training journey</h2>
@@ -231,6 +235,10 @@
                         </ul>
                     </div>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c4a0422de02c2578edda609ac05562d9efc4640c
                 <#if document.applicationButtonLink?has_content>
                     <div class="hee-card hee-card--cta">
                         <h3>Apply now</h3>
