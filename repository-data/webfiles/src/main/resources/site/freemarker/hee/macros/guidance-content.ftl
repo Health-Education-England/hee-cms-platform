@@ -1,6 +1,5 @@
 <#include "../../include/imports.ftl">
 <#import "../macros/components.ftl" as hee>
-<
 <#-- @ftlvariable name="guidanceDocument" type="uk.nhs.hee.web.beans.Guidance" -->
 
 <@hst.setBundle basename="uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
@@ -27,7 +26,7 @@
                 <#--  Main sections: START  -->
                 <div class="page__main">
                     <div class="page__content">
-                        <@guidanceDetail guidanceDocument=guidanceDocument/>
+                        <@hee.guidanceDetail guidanceDocument=guidanceDocument/>
 
                         <#--  Cookie button [for cookies page]  -->
                         <#if showCookiesButton>

@@ -140,4 +140,8 @@ public class TrainingProgrammePage extends BaseDocument {
                 HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES);
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
 }

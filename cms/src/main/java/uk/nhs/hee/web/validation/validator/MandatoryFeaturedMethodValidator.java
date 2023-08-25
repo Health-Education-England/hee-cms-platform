@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -43,17 +45,17 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
                 return Optional.empty();
             }
 
-            if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
-                // For publication landing page content type
-                if (node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_PROFESSIONS_TAXONOMY).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_TOPICS_TAXONOMY).getValues().length == 0) {
+            if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(
+                    node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
+                if (!isAnyAvailable(node, Arrays.asList(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY,
+                        PROPERTY_HEE_PROFESSIONS_TAXONOMY, PROPERTY_HEE_TOPICS_TAXONOMY))) {
+                    // For publication landing page content type
                     return Optional.of(context.createViolation("publication-landing-page"));
                 }
             } else {
                 // For content types other than publication landing page
-                if (node.getProperty(PROPERTY_HEE_PROFESSIONS_TAXONOMY).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_TOPICS_TAXONOMY).getValues().length == 0) {
+                if (!isAnyAvailable(node,
+                        Arrays.asList(PROPERTY_HEE_PROFESSIONS_TAXONOMY, PROPERTY_HEE_TOPICS_TAXONOMY))) {
                     return Optional.of(context.createViolation());
                 }
             }
@@ -66,5 +68,25 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
         }
 
         return Optional.empty();
+    }
+
+    /**
+     * Returns {@code true} if the value is available i.e. if the taxonomy has been chosen
+     * for any of the given fields identified by {@code taxonomyFieldNameList}. Otherwise, returns {@code false}.
+     *
+     * @param node                  the featured content document {@link Node} instance being edited.
+     * @param taxonomyFieldNameList the list of taxonomy-based fields whose value(s) availability needs to be verified.
+     * @return {@code true} if the value is available i.e. if the taxonomy has been chosen
+     * for any of the given fields identified by {@code taxonomyFieldNameList}. Otherwise, returns {@code false}.
+     * @throws RepositoryException thrown when an error occurs while querying the given {@code node} properties.
+     */
+    public boolean isAnyAvailable(final Node node, final List<String> taxonomyFieldNameList) throws RepositoryException {
+        for (final String taxonomyFieldName : taxonomyFieldNameList) {
+            if (node.hasProperty(taxonomyFieldName) && node.getProperty(taxonomyFieldName).getValues().length > 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

@@ -240,9 +240,9 @@
 
 >>>>>>> c4a0422de02c2578edda609ac05562d9efc4640c
                 <#if document.applicationButtonLink?has_content>
-                    <div class="hee-card hee-card--cta">
-                        <h3>Apply now</h3>
-                        <div class="hee-card--cta__button">
+                    <div class="nhsuk-card nhsuk-card--clickable">
+                        <div class="nhsuk-card__content">
+                            <h3 class="nhsuk-card__heading">Apply now</h3>
                             <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">
                                 ${document.applicationButtonTitle}
                             </a>
@@ -279,9 +279,12 @@
         <#--  Main content: END  -->
 
         <#--  Feature section will be a future work, not implemented yet  -->
-        <section class="page__feature">
-            <div class="nhsuk-width-container">
-            </div>
-        </section>
+        <#if document.featuredContentBlock??>
+            <section class="page__feature">
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document maxCards=3/>
+                </div>
+            </section>
+        </#if>
     </main>
 </#if>

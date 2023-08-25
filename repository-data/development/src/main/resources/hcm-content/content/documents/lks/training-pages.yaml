@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 393966e5-04ad-4da8-8c14-44f7d04e3d83
     hippo:name: Training Homepage
-    hippo:versionHistory: fb55d9e9-ea72-47b8-b352-f55191727e2a
+    hippo:versionHistory: 11a77630-8740-48d7-afbe-6dacbdf3fcb2
     /training-homepage[1]:
       jcr:primaryType: hee:trainingProgrammesHomepage
       jcr:mixinTypes: ['mix:referenceable']
@@ -141,6 +141,9 @@
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
     /training-homepage[2]:
       jcr:primaryType: hee:trainingProgrammesHomepage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -154,7 +157,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-19T12:09:07.063+01:00
-      hippostdpubwf:lastModificationDate: 2023-05-19T13:28:05.631+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-24T14:41:41.980+05:30
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: b5b581cf-02ee-40be-b193-15ef228e3ee7
       hippotranslation:locale: en
@@ -269,6 +272,9 @@
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
     /training-homepage[3]:
       jcr:primaryType: hee:trainingProgrammesHomepage
       jcr:mixinTypes: ['mix:referenceable']
@@ -282,9 +288,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-19T12:09:07.063+01:00
-      hippostdpubwf:lastModificationDate: 2023-05-19T13:28:05.631+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-24T14:41:41.980+05:30
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-05-19T13:28:09.011+01:00
+      hippostdpubwf:publicationDate: 2023-08-24T14:41:44.205+05:30
       hippotranslation:id: b5b581cf-02ee-40be-b193-15ef228e3ee7
       hippotranslation:locale: en
       /hee:logoGroup:
@@ -398,6 +404,9 @@
         /hee:richTextBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
   /training-programmes-page:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

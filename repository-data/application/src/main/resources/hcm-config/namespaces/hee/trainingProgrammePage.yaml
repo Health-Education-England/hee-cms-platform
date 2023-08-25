@@ -211,6 +211,14 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyHealthcareTopics
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
+          /featuredContentBlock:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:featuredContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -252,6 +260,9 @@ definitions:
             hippo:modes: []
             hippo:values: []
           /hee:applicationInformation:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:featuredContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -507,3 +518,13 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:trainingProgrammePage']
+          /featuredContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Featured content
+            field: featuredContentBlock
+            hint: Select the featured content
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:featuredContent']
