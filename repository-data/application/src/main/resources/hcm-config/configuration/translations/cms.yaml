@@ -18,14 +18,16 @@ definitions:
         as an Author in the CMS. A person cannot be multiple authors. Please select
         a different person.'
       hee:numeric-validator: Please enter a number
-      hee:mandatory-publication-professions-or-topics-validator: Please select at
-        least one option from either profession or healthcare topic
+      hee:mandatory-professions-or-topics-validator: Please select at
+        least one option from either professions or healthcare topics
       hee:phone-number-validator#uk-country-code-error: Please remove UK country code
         prefix '+44' from the phone number
       hee:phone-number-validator#invalid-phone-number: Please enter a valid phone
         number containing 10 digits (excluding trunk[0]/country code[44] prefixes)
         (e.g. 123 456 7891)
       hee:banner-phase-name-validator: Please choose a Phase
+      hee:unique-guidance-page-validator: Guidance pages added to the Application
+        information section can only appear once in the list
       hee:unique-web-publications-validator: '''${PublicationPageDocumentDisplayName}''
         already exists as a Web publication for another Publication landing page document
         in the CMS. A Publication page cannot be multiple Web publications. Please
