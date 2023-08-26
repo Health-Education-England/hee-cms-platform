@@ -13,8 +13,7 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 
 /**
- * Validates if there is a Trainning Journey Summary
- * at least one link of Prerequisite or Optional Routes is available
+ * Validates that a Guidance page added to the Application Information list is unique within that list
  */
 public class UniqueGuidancePageValidator implements Validator<Node> {
     private static final Logger LOGGER = LoggerFactory.getLogger(UniqueGuidancePageValidator.class);
@@ -29,7 +28,7 @@ public class UniqueGuidancePageValidator implements Validator<Node> {
             }
         } catch (final RepositoryException e) {
             LOGGER.warn(
-                    "Caught '{}' error while reading Additional Information ({}) from the node '{}'",
+                    "Caught '{}' error while reading Application Information ({}) from the node '{}'",
                     e.getMessage(),
                     PROPERTY_HEE_APPLICATION_INFORMATION,
                     JcrUtils.getNodePathQuietly(node),
