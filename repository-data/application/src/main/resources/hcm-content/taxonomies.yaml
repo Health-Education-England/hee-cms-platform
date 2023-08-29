@@ -4,11 +4,11 @@
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:versionInfo']
     hippo:versionHistory: 5bb39aab-c0b8-4538-830d-b13d9282217a
-    /GlobalTrainingTypes[1]:
+    /GlobalTrainingTypes:
       jcr:primaryType: hippotaxonomy:taxonomy
       jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
       jcr:uuid: 66ce5dbc-7c03-4c4b-ab1d-cd9c7aaaf81e
-      hippo:availability: [ live ]
+      hippo:availability: [live]
       hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: published
@@ -58,121 +58,6 @@
       /self_learning:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: self-learning
-        locale.en.name: Self learning
-      /speciality:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: speciality
-        locale.en.name: Speciality
-    /GlobalTrainingTypes[2]:
-      jcr:primaryType: hippotaxonomy:taxonomy
-      jcr:mixinTypes: [ 'hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable' ]
-      jcr:uuid: 26accdf5-f262-4b64-8cf0-c64b2c91f95b
-      hippo:availability: [ preview ]
-      hippostd:retainable: false
-      hippostd:state: unpublished
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2023-08-23T16:46:17.798+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-23T16:53:23.920+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotaxonomy:defaultLocale: en
-      hippotaxonomy:locales: [ en ]
-      /academic:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: academic
-        locale.en.name: Academic
-      /core:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: core
-        locale.en.name: Core
-      /foundation:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: foundation
-        locale.en.name: Foundation
-      /formal_training:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: formal_training
-        locale.en.name: Formal training
-      /higher_specialist_scientist_training:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: higher_specialist_scientist_training
-        locale.en.name: Higher specialist scientist training
-      /higher_speciality:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: higher_speciality
-        locale.en.name: Higher speciality
-      /mentoring:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: mentoring
-        locale.en.name: Mentoring
-      /practitioner_training_programme:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: practitioner_training_programme
-        locale.en.name: Practitioner training programme
-      /scientist_training_programme:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: scientist_training_programme
-        locale.en.name: Scientist training programme
-      /self_learning:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: self_learning
-        locale.en.name: Self learning
-      /speciality:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: speciality
-        locale.en.name: Speciality
-    /GlobalTrainingTypes[3]:
-      jcr:primaryType: hippotaxonomy:taxonomy
-      jcr:mixinTypes: [ 'hippostd:publishableSummary', 'mix:referenceable' ]
-      jcr:uuid: ae954f58-96d2-406d-b688-60c224b3ce79
-      hippo:availability: [ ]
-      hippostd:retainable: false
-      hippostd:state: draft
-      hippostd:transferable: false
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2023-08-23T16:46:17.798+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-23T16:53:46.350+01:00
-      hippostdpubwf:lastModifiedBy: admin
-      hippotaxonomy:defaultLocale: en
-      hippotaxonomy:locales: [ en ]
-      /academic:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: academic
-        locale.en.name: Academic
-      /core:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: core
-        locale.en.name: Core
-      /foundation:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: foundation
-        locale.en.name: Foundation
-      /formal_training:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: formal_training
-        locale.en.name: Formal training
-      /higher_specialist_scientist_training:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: higher_specialist_scientist_training
-        locale.en.name: Higher specialist scientist training
-      /higher_speciality:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: higher_speciality
-        locale.en.name: Higher speciality
-      /mentoring:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: mentoring
-        locale.en.name: Mentoring
-      /practitioner_training_programme:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: practitioner_training_programme
-        locale.en.name: Practitioner training programme
-      /scientist_training_programme:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: scientist_training_programme
-        locale.en.name: Scientist training programme
-      /self_learning:
-        jcr:primaryType: hippotaxonomy:category
-        hippotaxonomy:key: self_learning
         locale.en.name: Self learning
       /speciality:
         jcr:primaryType: hippotaxonomy:category
