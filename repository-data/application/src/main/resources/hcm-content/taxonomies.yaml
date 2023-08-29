@@ -2,11 +2,11 @@
   jcr:primaryType: hippotaxonomy:container
   /GlobalTrainingTypes:
     jcr:primaryType: hippo:handle
-    jcr:mixinTypes: [ 'hippo:versionInfo' ]
+    jcr:mixinTypes: ['hippo:versionInfo']
     hippo:versionHistory: 5bb39aab-c0b8-4538-830d-b13d9282217a
     /GlobalTrainingTypes[1]:
       jcr:primaryType: hippotaxonomy:taxonomy
-      jcr:mixinTypes: [ 'hippostd:publishableSummary', 'mix:versionable' ]
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
       jcr:uuid: 66ce5dbc-7c03-4c4b-ab1d-cd9c7aaaf81e
       hippo:availability: [ live ]
       hippostd:holder: admin
@@ -18,7 +18,7 @@
       hippostdpubwf:lastModifiedBy: admin
       hippostdpubwf:publicationDate: 2023-08-23T16:55:00.464+01:00
       hippotaxonomy:defaultLocale: en
-      hippotaxonomy:locales: [ en ]
+      hippotaxonomy:locales: [en]
       /academic:
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: academic
