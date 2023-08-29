@@ -22,6 +22,14 @@ public abstract class AbstractMandatoryValidator implements Validator<Node> {
         combinationFields = fields;
     }
 
+    /**
+     * We're checking whether any of the fields listed in combinationFields have a value or not.
+     *
+     * This works for combinations of fields (like the topics/professions relationship in pub landing page
+     * as well as checking whether a single field (like publication type) has a value. This is particularly
+     * useful when we replace a single-select value list with a taxonomy
+     * @return an empty value indicates success and a validation error will create a violation
+     */
     @Override
     public Optional<Violation> validate(ValidationContext context, final Node node) {
         try {

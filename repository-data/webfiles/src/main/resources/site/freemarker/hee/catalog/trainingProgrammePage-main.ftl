@@ -38,8 +38,10 @@
                 <#--  Title  -->
                 <h1>${document.title}</h1>
 
-                <#--  Summary  -->
-                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                <#if !currentGuidance??>
+                    <#--  Summary  -->
+                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                </#if>
             </div>
         </div>
         <#--  Main header: END  -->
@@ -61,22 +63,29 @@
                                     <span class="hee-card--summary__item__label">Training programme</span>
                                     <span class="hee-card--summary__item__value">${document.title}</span>
                                 </li>
+
+                                <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?size gt 0>
                                 <li class="hee-card--summary__item">
                                     <span class="hee-card--summary__item__label">Training type</span>
                                     <span class="hee-card--summary__item__value">
-                                        <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${trainingType}</a>
+                                        <a class="hee-card--summary__item__link" href="http://www.abc1234.com?publicationType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
+                                            ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                                        </a>
                                     </span>
                                 </li>
-                                <li class="hee-card--summary__item">
-                                    <span class="hee-card--summary__item__label">Professions</span>
-                                    <#if professionMap?has_content>
-                                        <#list professionMap as professionKey, professionValue>
+                                </#if>
+
+                                <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?size gt 0>
+                                    <li class="hee-card--summary__item">
+                                        <span class="hee-card--summary__item__label">Professions</span>
+                                        <#list document.globalTaxonomyProfessions.taxonomyValues as category>
                                             <span class="hee-card--summary__item__value">
-                                                <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${professionValue}</a>
+                                                <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${category.label}</a>
                                             </span>
                                         </#list>
-                                    </#if>
-                                </li>
+                                    </li>
+                                </#if>
+
                                 <#if clinicalDiscipline?has_content>
                                 <li class="hee-card--summary__item">
                                     <span class="hee-card--summary__item__label">Discipline</span>
@@ -125,6 +134,8 @@
                     </#if>
 
                     <#if currentGuidance??>
+                        <h2  class="toc_h2" id="overview">${currentGuidance.title}</h2>
+
                         <#--  Guidance content: START  -->
                         <@hee.guidanceDetail guidanceDocument=currentGuidance/>
 
@@ -173,6 +184,7 @@
                                 </#switch>
                             </#list>
                         </#if>
+
                         <#--  Training journey component: START  -->
                         <#if document.trainingJourneySummary?has_content || document.trainingJourneyPrerequisites?has_content>
 

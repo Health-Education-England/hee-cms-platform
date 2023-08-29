@@ -13,16 +13,15 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.utils.ChannelUtils;
 import uk.nhs.hee.web.utils.DocumentUtils;
 
+import java.util.List;
+import java.util.Optional;
+
 import javax.jcr.Node;
 import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryResult;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
 
 /**
  * <p>Validates if non-duplicate and unique Web publications ({@code hee:webPublications}) have been added
@@ -99,7 +98,7 @@ public class UniqueWebPublicationsValidator extends AbstractNodeValidator {
         @SuppressWarnings("unchecked") final List<Node> webPubNodeList = IteratorUtils.<Node>toList(webPubNodeIterator);
 
         // Validates whether Web publications field has duplicate Publication page documents
-        if (hasDuplicatePubPageDocs(webPubNodeList)) {
+        if (ValidationHelper.hasDuplicateNodes(webPubNodeList)) {
             final Violation violation = context.createViolation("duplicate-publication-pages");
 
             LOGGER.debug(violation.getMessage());
@@ -121,32 +120,6 @@ public class UniqueWebPublicationsValidator extends AbstractNodeValidator {
         }
 
         return Optional.empty();
-    }
-
-    /**
-     * Returns {@code true} if the given {@code webPubNodeIterator} has duplicate nodes
-     * i.e. if Web publications ({@code hee:webPublications}) field
-     * has duplicate Publication page {@code hee:report} documents associated with it. Otherwise, returns {@code false}.
-     *
-     * @param webPubNodeList the {@link List<Node>} Web publication nodes whose Publication page ({@code hippo:docbase})
-     *                       needs to be verified for duplicates.
-     * @return {@code true} if the given {@code webPubNodeIterator} has duplicate nodes
-     * i.e. if Web publications ({@code hee:webPublications}) field
-     * has duplicate Publication page {@code hee:report} documents associated with it. Otherwise, returns {@code false}.
-     * @throws RepositoryException thrown when an error occurs while getting {@code hippo:docbase}
-     *                             from Web publication nodes.
-     */
-    private boolean hasDuplicatePubPageDocs(final List<Node> webPubNodeList) throws RepositoryException {
-        final Set<String> pubPageDocIds = new HashSet<>();
-
-        for (final Node webPubNode : webPubNodeList) {
-            final String pubPageDocId = webPubNode.getProperty(HippoNodeType.HIPPO_DOCBASE).getString();
-
-            if (!pubPageDocIds.add(pubPageDocId)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     /**

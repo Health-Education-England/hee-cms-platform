@@ -37,8 +37,8 @@ public class MandatoryTrainingJourneyValidator implements Validator<Node> {
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
             //Get the list of nodes from prerequisites and optional routes
-            final List<String> prerequisiteNodes = getDocBases(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE));
-            final List<String> optionRoutesNodes = getDocBases(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_OPTIONS));
+            final List<String> prerequisiteNodes = ValidationHelper.getDocBases(node, PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE);
+            final List<String> optionRoutesNodes = ValidationHelper.getDocBases(node, PROPERTY_HEE_TRAINING_JOURNEY_OPTIONS);
 
             //if Sumary is not empty, some prerequisite or optional routes link is needed
             //also check if the first node has a valid link to a document. 
@@ -69,24 +69,5 @@ public class MandatoryTrainingJourneyValidator implements Validator<Node> {
         return Optional.empty();
     }
 
-    private List<String> getDocBases(final NodeIterator docsNodeIterator)
-            throws RepositoryException {
-        final List<String> docBases = new ArrayList<>();
-
-        while (docsNodeIterator.hasNext()) {
-            // Collect only non-null/root featured documents
-            final String docNodeDocBase =
-                    docsNodeIterator.nextNode().getProperty(HippoNodeType.HIPPO_DOCBASE).getString();
-
-            if (StringUtils.isBlank(docNodeDocBase)
-                    || docNodeDocBase.equals(JcrConstants.ROOT_NODE_ID)) {
-                continue;
-            }
-
-            docBases.add(docNodeDocBase);
-        }
-
-        return docBases;
-    }
 
 }

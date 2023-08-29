@@ -11,12 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 430bb914-fa4d-44d3-b3c1-5f861d534fc7
+          jcr:uuid: 7c2d263d-436e-47a7-a1e7-e64bdec69643
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          hipposysedit:validators: ['hee:mandatory-training-programme-professions-or-topics-validator',
-            'hee:mandatory-training-journey-validator']
+          hipposysedit:validators: ['hee:mandatory-professions-or-topics-validator',
+            'hee:mandatory-training-journey-validator', 'hee:unique-guidance-page-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -75,31 +75,6 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /trainingType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:trainingType
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [required]
-          /professions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:professions
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /topics:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:topics
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /discipline:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -211,6 +186,31 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required, url]
+          /globalTaxonomyTrainingType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyTrainingType
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+            hipposysedit:validators: [required]
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
           /featuredContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -224,7 +224,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 34ebc470-9140-4d80-90fe-fa7864fe6204
+          jcr:uuid: badb255c-dcc0-4cb0-bad5-ac99069a4f21
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -239,9 +239,6 @@ definitions:
           hee:discipline: ''
           hee:fillRate: 0
           hee:opening: 0001-01-01T12:00:00Z
-          hee:trainingType: ''
-          hee:topics: []
-          hee:professions: []
           hee:recruitmentFormat: ''
           hee:competitionRatio: 0.0
           hee:trainingJourneySummary: ''
@@ -361,50 +358,38 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
-          /trainingType:
+          /globalTaxonomyTrainingType:
             jcr:primaryType: frontend:plugin
-            caption: Training Type
-            field: trainingType
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
+            caption: Training type
+            field: globalTaxonomyTrainingType
             hint: Please select the training class
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              sortOrder: ascending
-              source: /content/documents/administration/valuelists/training-type
-          /professions:
+              taxonomy.name: GlobalTrainingTypes
+          /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
-            field: professions
-            multiselect.type: palette
-            palette.alloworder: true
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            field: globalTaxonomyProfessions
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: Select professions relevant to this training programme
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              source: /content/documents/administration/valuelists/training-profession
-          /topics:
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
-            caption: Topics
-            field: topics
-            multiselect.type: palette
-            palette.alloworder: true
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: Healthcare topics
+            field: globalTaxonomyHealthcareTopics
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: Select relevant topics
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              source: /content/documents/administration/valuelists/training-topic
+              taxonomy.name: GlobalHealthcareTopics
           /discipline:
             jcr:primaryType: frontend:plugin
             caption: Discipline
@@ -447,31 +432,6 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /fillRate:
-            jcr:primaryType: frontend:plugin
-            caption: Fill rate
-            field: fillRate
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /opening:
-            jcr:primaryType: frontend:plugin
-            caption: Opening
-            field: opening
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /closing:
-            jcr:primaryType: frontend:plugin
-            caption: Closing
-            field: closing
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /applicationButtonTitle:
             jcr:primaryType: frontend:plugin
             caption: Application button title
@@ -500,6 +460,31 @@ definitions:
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.right.item
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /fillRate:
+            jcr:primaryType: frontend:plugin
+            caption: Fill rate
+            field: fillRate
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /opening:
+            jcr:primaryType: frontend:plugin
+            caption: Opening
+            field: opening
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /closing:
+            jcr:primaryType: frontend:plugin
+            caption: Closing
+            field: closing
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /trainingJourneySummary:

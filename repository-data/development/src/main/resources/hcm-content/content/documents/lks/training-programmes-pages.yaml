@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 100d42bc-8c13-4c27-aa90-676525d65ec4
     hippo:name: Training Programmes Page
-    hippo:versionHistory: 0a413c7b-9e44-4f8d-859e-8ae56d843aad
+    hippo:versionHistory: 07ad755e-aec5-4a0d-81e7-4e4f4f221ca2
     /training-programmes-page[1]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable']
@@ -21,6 +21,12 @@
       hee:closing: 0001-01-01T12:00:00Z
       hee:discipline: ophthalmology
       hee:duration: 24
+      hee:globalTaxonomyHealthcareTopics: []
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: []
+      hee:globalTaxonomyProfessions: [dental_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals]
+      hee:globalTaxonomyTrainingType: [academic]
+      hee:globalTaxonomyTrainingType__with_ancestors: [academic]
       hee:opening: 0001-01-01T12:00:00Z
       hee:professions: []
       hee:recruitmentFormat: standard
@@ -34,7 +40,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-30T17:36:34.473+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-24T19:47:29.270+05:30
+      hippostdpubwf:lastModificationDate: 2023-08-25T17:17:09.801+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 0e4f50a9-4101-4078-ba02-437bc48f43df
       hippotranslation:locale: en
@@ -71,6 +77,18 @@
       /hee:trainingJourneyOptions:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
+      /hee:applicationInformation[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:applicationInformation[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+      /hee:applicationInformation[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: f4fb5b81-8054-495f-b1bd-7cf0f0aba641
+      /hee:applicationInformation[4]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
       /hee:featuredContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
@@ -83,6 +101,12 @@
       hee:closing: 0001-01-01T12:00:00Z
       hee:discipline: ophthalmology
       hee:duration: 24
+      hee:globalTaxonomyHealthcareTopics: []
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: []
+      hee:globalTaxonomyProfessions: [dental_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals]
+      hee:globalTaxonomyTrainingType: [academic]
+      hee:globalTaxonomyTrainingType__with_ancestors: [academic]
       hee:opening: 0001-01-01T12:00:00Z
       hee:professions: []
       hee:recruitmentFormat: standard
@@ -96,7 +120,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-30T17:36:34.473+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-24T19:47:41.283+05:30
+      hippostdpubwf:lastModificationDate: 2023-08-25T17:17:09.588+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 0e4f50a9-4101-4078-ba02-437bc48f43df
       hippotranslation:locale: en
@@ -133,6 +157,18 @@
       /hee:trainingJourneyOptions:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
+      /hee:applicationInformation[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:applicationInformation[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+      /hee:applicationInformation[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: f4fb5b81-8054-495f-b1bd-7cf0f0aba641
+      /hee:applicationInformation[4]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
       /hee:featuredContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
@@ -145,6 +181,12 @@
       hee:closing: 0001-01-01T12:00:00Z
       hee:discipline: ophthalmology
       hee:duration: 24
+      hee:globalTaxonomyHealthcareTopics: []
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: []
+      hee:globalTaxonomyProfessions: [dental_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals]
+      hee:globalTaxonomyTrainingType: [academic]
+      hee:globalTaxonomyTrainingType__with_ancestors: [academic]
       hee:opening: 0001-01-01T12:00:00Z
       hee:professions: []
       hee:recruitmentFormat: standard
@@ -158,9 +200,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-30T17:36:34.473+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-24T19:47:41.283+05:30
+      hippostdpubwf:lastModificationDate: 2023-08-25T17:17:09.588+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-08-24T19:47:42.847+05:30
+      hippostdpubwf:publicationDate: 2023-08-25T17:17:29.718+01:00
       hippotranslation:id: 0e4f50a9-4101-4078-ba02-437bc48f43df
       hippotranslation:locale: en
       /hee:microHero:
@@ -196,6 +238,18 @@
       /hee:trainingJourneyOptions:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 3a8eb9c2-5eb6-4be4-9c71-d77bfcc15bbb
+      /hee:applicationInformation[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:applicationInformation[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c2a82e35-2945-4350-825d-b56c7d46f68d
+      /hee:applicationInformation[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: f4fb5b81-8054-495f-b1bd-7cf0f0aba641
+      /hee:applicationInformation[4]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
       /hee:featuredContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670

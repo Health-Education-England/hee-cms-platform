@@ -3,10 +3,16 @@ package uk.nhs.hee.web.beans;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
+import uk.nhs.hee.web.constants.HEETaxonomy;
+import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
+
 import java.util.List;
 import java.util.Calendar;
 
-/**
+import javax.jcr.RepositoryException;
+
+/** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
@@ -43,21 +49,6 @@ public class TrainingProgrammePage extends BaseDocument {
 
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:trainingType")
-    public String getTrainingType() {
-        return getSingleProperty("hee:trainingType");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:professions")
-    public String[] getProfessions() {
-        return getMultipleProperty("hee:professions");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:topics")
-    public String[] getTopics() {
-        return getMultipleProperty("hee:topics");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:discipline")
@@ -100,6 +91,21 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBeans("hee:applicationInformation", Guidance.class);
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
+    public String getTrainingJourneySummary() {
+        return getSingleProperty("hee:trainingJourneySummary");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
+    public List<HippoBean> getTrainingJourneyPrerequisites() {
+        return getLinkedBeans("hee:trainingJourneyPrerequisites", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
+    public List<HippoBean> getTrainingJourneyOptions() {
+        return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
     public String getApplicationButtonTitle() {
         return getSingleProperty("hee:applicationButtonTitle");
@@ -110,20 +116,28 @@ public class TrainingProgrammePage extends BaseDocument {
         return getSingleProperty("hee:applicationButtonLink");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
-    public String getTrainingJourneySummary() {
-        return getSingleProperty("hee:trainingJourneySummary");
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyProfessions",
+                HEETaxonomy.HEE_GLOBAL_PROFESSIONS);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
-    public List<HippoBean> getTrainingJourneyPrerequisites() {
-        return getLinkedBeans("hee:trainingJourneyPrerequisites",
-                HippoBean.class);
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyHealthcareTopics() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyHealthcareTopics",
+                HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
-    public List<HippoBean> getTrainingJourneyOptions() {
-        return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyTrainingType", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyTrainingType() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyTrainingType",
+                HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")

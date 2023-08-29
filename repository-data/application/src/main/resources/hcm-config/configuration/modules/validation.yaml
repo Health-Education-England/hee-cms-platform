@@ -28,7 +28,7 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:numeric-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.NumericValidator
-    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-publication-professions-or-topics-validator:
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-professions-or-topics-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryPublicationProfessionsOrTopicsValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:banner-phase-name-validator:
@@ -37,6 +37,9 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:unique-web-publications-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.UniqueWebPublicationsValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:unique-guidance-page-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.UniqueGuidancePageValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-featured-method-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryFeaturedMethodValidator

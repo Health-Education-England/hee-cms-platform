@@ -15,7 +15,6 @@ import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.ValueListUtils;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -57,14 +56,10 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             pageContentBlocks.addAll(trainingProgramPage.getRightHandBlocks());
 
             // Locate single fields and get their Values
-            doModelUpdateForValueListField(trainingProgramPage.getTrainingType(), request, ValueListIdentifier.TRAINING_TYPE);
             doModelUpdateForValueListField(trainingProgramPage.getDiscipline(), request, ValueListIdentifier.CLINICAL_DISCIPLINE);
             doModelUpdateForValueListField(trainingProgramPage.getRecruitmentFormat(), request, ValueListIdentifier.RECRUITMENT_FORMAT);
 
             // Build the maps of repeating Values
-            doModelUpdateForValueListMap(Arrays.asList(trainingProgramPage.getProfessions()), request, ValueListIdentifier.PROFESSION, Model.PROFESSION_MAP, true);
-            doModelUpdateForValueListMap(Arrays.asList(trainingProgramPage.getTopics()), request, ValueListIdentifier.TOPIC, Model.TOPIC_MAP, false);
-
             Map<String, Map<String, String>> modelToValueListMap = ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
 
