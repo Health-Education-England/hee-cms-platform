@@ -195,15 +195,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required, url]
-          /globalTaxonomyTrainingType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:globalTaxonomyTrainingType
-            hipposysedit:primary: false
-            hipposysedit:type: Taxonomy
-            hipposysedit:validators: [required]
           /globalTaxonomyProfessions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
