@@ -1,6 +1,5 @@
 package uk.nhs.hee.web.components;
 
-import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
@@ -17,7 +16,7 @@ import uk.nhs.hee.web.utils.ValueListUtils;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+
 
 @ParametersInfo(type = TrainingProgrammePageComponentInfo.class)
 public class TrainingProgrammePageComponent extends EssentialsDocumentComponent {
@@ -56,6 +55,7 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             pageContentBlocks.addAll(trainingProgramPage.getRightHandBlocks());
 
             // Locate single fields and get their Values
+            doModelUpdateForValueListField(trainingProgramPage.getTrainingType(), request, ValueListIdentifier.TRAINING_TYPE);
             doModelUpdateForValueListField(trainingProgramPage.getDiscipline(), request, ValueListIdentifier.CLINICAL_DISCIPLINE);
             doModelUpdateForValueListField(trainingProgramPage.getRecruitmentFormat(), request, ValueListIdentifier.RECRUITMENT_FORMAT);
 
@@ -81,44 +81,5 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
 
             request.setModel(identifier.getName(), trainingTypeValue);
         }
-    }
-
-    /**
-     * Fill up a map with keys and values by pulling them from a named valuelist
-     * @param itemKeysInValueList is the set of keys that are in the content bean
-     * @param request is teh Hst Request object
-     * @param identifier is the name of the ValueList we're referencing to grab the values
-     * @param modelMapIdentifier is the name of teh map that we are loading up
-     */
-    protected void doModelUpdateForValueListMap(List<String> itemKeysInValueList, HstRequest request, ValueListIdentifier identifier, Model modelMapIdentifier, boolean trimHyphens) {
-        if (itemKeysInValueList != null) {
-            final Map<String, String> valueListMap = ValueListUtils.getValueListMap(identifier.getName());
-
-            if (trimHyphens) {
-                valueListMap.replaceAll((key, entry) -> stripSpace(entry));
-            }
-
-            request.setModel(
-                    modelMapIdentifier.getKey(),
-                    itemKeysInValueList.stream()
-                            .filter(itemAsKey -> valueListMap.get(itemAsKey) != null)
-                            .collect(Collectors.toMap(itemAsKey -> itemAsKey, valueListMap::get)));
-        }
-    }
-
-    /**
-     * Lose the first part of a value as it's essentially a classification
-     * @param entry
-     * @return
-     */
-    private String stripSpace(String entry) {
-        if (entry != null) {
-            int index = entry.indexOf("-");
-            if (index > -1) {
-                return StringUtils.stripStart(entry.substring(index+1), null);
-            }
-            return entry;
-        }
-        return null;
     }
 }

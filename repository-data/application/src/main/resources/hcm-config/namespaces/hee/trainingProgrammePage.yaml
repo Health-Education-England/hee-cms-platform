@@ -16,7 +16,7 @@ definitions:
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-professions-or-topics-validator',
-            'hee:mandatory-training-journey-validator', 'hee:unique-guidance-page-validator']
+                                    'hee:mandatory-training-journey-validator', 'hee:unique-guidance-page-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -75,6 +75,15 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /trainingType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:trainingType
+            hipposysedit:primary: false
+            hipposysedit:type: DynamicDropdown
+            hipposysedit:validators: [required]
           /discipline:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -186,15 +195,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required, url]
-          /globalTaxonomyTrainingType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:globalTaxonomyTrainingType
-            hipposysedit:primary: false
-            hipposysedit:type: Taxonomy
-            hipposysedit:validators: [required]
           /globalTaxonomyProfessions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -239,6 +239,7 @@ definitions:
           hee:discipline: ''
           hee:fillRate: 0
           hee:opening: 0001-01-01T12:00:00Z
+          hee:trainingType: ''
           hee:recruitmentFormat: ''
           hee:competitionRatio: 0.0
           hee:trainingJourneySummary: ''
@@ -358,16 +359,18 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
-          /globalTaxonomyTrainingType:
+          /trainingType:
             jcr:primaryType: frontend:plugin
-            caption: Training type
-            field: globalTaxonomyTrainingType
-            hint: Please select the training class
-            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            caption: Training Type
+            field: trainingType
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: Please select the training class
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              taxonomy.name: GlobalTrainingTypes
+              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              sortOrder: ascending
+              source: /content/documents/administration/valuelists/training-type
           /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
