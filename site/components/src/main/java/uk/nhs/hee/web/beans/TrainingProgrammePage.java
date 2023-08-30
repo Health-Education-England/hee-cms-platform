@@ -132,12 +132,9 @@ public class TrainingProgrammePage extends BaseDocument {
                 HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyTrainingType", allowModifications = false)
-    public TaxonomyClassification getGlobalTaxonomyTrainingType() throws RepositoryException {
-        return TaxonomyTemplateUtils.getTaxonomyClassification(
-                this.getNode(),
-                "hee:globalTaxonomyTrainingType",
-                HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES);
+    @HippoEssentialsGenerated(internalName = "hee:trainingType")
+    public String getTrainingType() {
+        return getSingleProperty("hee:trainingType");
     }
 
     @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
