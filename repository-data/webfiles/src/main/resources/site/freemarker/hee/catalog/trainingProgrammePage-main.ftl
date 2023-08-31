@@ -64,12 +64,16 @@
                                     <span class="hee-card--summary__item__value">${document.title}</span>
                                 </li>
 
-                                <li class="hee-card--summary__item">
-                                    <span class="hee-card--summary__item__label">Training type</span>
-                                    <span class="hee-card--summary__item__value">
-                                        <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${trainingType}</a>
-                                    </span>
-                                </li>
+                                <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?size gt 0>
+                                    <li class="hee-card--summary__item">
+                                        <span class="hee-card--summary__item__label">Training type</span>
+                                        <span class="hee-card--summary__item__value">
+                                            <a class="hee-card--summary__item__link" href="http://www.abc1234.com?publicationType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
+                                                ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                                            </a>
+                                        </span>
+                                    </li>
+                                </#if>
 
                                 <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?size gt 0>
                                     <li class="hee-card--summary__item">

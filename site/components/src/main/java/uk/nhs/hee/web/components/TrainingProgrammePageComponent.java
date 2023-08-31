@@ -55,7 +55,6 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             pageContentBlocks.addAll(trainingProgramPage.getRightHandBlocks());
 
             // Locate single fields and get their Values
-            doModelUpdateForValueListField(trainingProgramPage.getTrainingType(), request, ValueListIdentifier.TRAINING_TYPE);
             doModelUpdateForValueListField(trainingProgramPage.getDiscipline(), request, ValueListIdentifier.CLINICAL_DISCIPLINE);
             doModelUpdateForValueListField(trainingProgramPage.getRecruitmentFormat(), request, ValueListIdentifier.RECRUITMENT_FORMAT);
 
