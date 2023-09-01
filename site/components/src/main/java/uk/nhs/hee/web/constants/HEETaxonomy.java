@@ -8,7 +8,9 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_PUBLICATION_TYPES ("GlobalPublicationTypes"),
 
-    HEE_GLOBAL_TAGS ("GlobalTags");
+    HEE_GLOBAL_TAGS ("GlobalTags"),
+
+    HEE_GLOBAL_TRAINING_TYPES ("GlobalTrainingTypes");
 
     private final String name;
 
