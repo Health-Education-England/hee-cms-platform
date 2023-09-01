@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ac637d29-249b-46bc-860d-dc78c39cc616
+          jcr:uuid: a1416b6e-c1fd-4103-bef7-6d7ce3ba0eed
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -111,12 +111,20 @@ definitions:
             hipposysedit:path: hee:regions
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /featuredContentBlock:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:featuredContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: ccba69dd-0b6d-4110-a85d-8bc3aa360f9e
+          jcr:uuid: 44de6668-3b9d-4919-9f2e-0d4263e7b345
           hee:addToAZ: false
           hee:subtitle: ''
           hee:title: ''
@@ -141,6 +149,9 @@ definitions:
           /hee:overview:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -286,3 +297,13 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
+          /featuredContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Featured content
+            field: featuredContentBlock
+            hint: Select the featured content
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:featuredContent']

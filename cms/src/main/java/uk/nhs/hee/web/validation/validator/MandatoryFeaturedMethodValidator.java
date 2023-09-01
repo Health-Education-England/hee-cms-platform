@@ -1,6 +1,5 @@
 package uk.nhs.hee.web.validation.validator;
 
-import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.repository.util.JcrUtils;
 import org.onehippo.cms.services.validation.api.ValidationContext;
 import org.onehippo.cms.services.validation.api.Validator;
@@ -10,11 +9,14 @@ import org.slf4j.LoggerFactory;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 /**
- * Validates if Publication type or topics or professions have been provided for Publication landing page content type.
- * For content types other than publication landing page, it validates if topics or professions have been provided.
+ * Validates if Publication type or healthcare topic or profession taxonomies have been provided
+ * for Publication landing page content type. For content types other than publication landing page,
+ * it validates if healthcare topic or profession taxonomies have been provided.
  */
 public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     // Logger
@@ -24,12 +26,12 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     private static final String PROPERTY_HEE_METHOD = "hee:method";
     // Content type property
     private static final String PROPERTY_HEE_FEATURED_CONTENT_TYPE = "hee:featuredContentType";
-    // Publication type property
-    private static final String PROPERTY_HEE_PUBLICATION_TYPE = "hee:publicationType";
-    // Profession property
-    private static final String PROPERTY_HEE_PROFESSIONS = "hee:professions";
-    // Topics property
-    private static final String PROPERTY_HEE_TOPICS = "hee:topics";
+    // Publication type taxonomy property
+    private static final String PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY = "hee:globalTaxonomyPublicationType";
+    // Profession taxonomy property
+    private static final String PROPERTY_HEE_PROFESSIONS_TAXONOMY = "hee:globalTaxonomyProfessions";
+    // Healthcare topic taxonomy property
+    private static final String PROPERTY_HEE_TOPICS_TAXONOMY = "hee:globalTaxonomyHealthcareTopics";
 
     // Related method value
     private static final String METHOD_VALUE_RELATED = "Related";
@@ -43,17 +45,17 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
                 return Optional.empty();
             }
 
-            if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
-                // For publication landing page content type
-                if (StringUtils.isEmpty(node.getProperty(PROPERTY_HEE_PUBLICATION_TYPE).getString())
-                        && node.getProperty(PROPERTY_HEE_PROFESSIONS).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_TOPICS).getValues().length == 0) {
+            if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(
+                    node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
+                if (!isAnyAvailable(node, Arrays.asList(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY,
+                        PROPERTY_HEE_PROFESSIONS_TAXONOMY, PROPERTY_HEE_TOPICS_TAXONOMY))) {
+                    // For publication landing page content type
                     return Optional.of(context.createViolation("publication-landing-page"));
                 }
             } else {
                 // For content types other than publication landing page
-                if (node.getProperty(PROPERTY_HEE_PROFESSIONS).getValues().length == 0
-                        && node.getProperty(PROPERTY_HEE_TOPICS).getValues().length == 0) {
+                if (!isAnyAvailable(node,
+                        Arrays.asList(PROPERTY_HEE_PROFESSIONS_TAXONOMY, PROPERTY_HEE_TOPICS_TAXONOMY))) {
                     return Optional.of(context.createViolation());
                 }
             }
@@ -66,5 +68,25 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
         }
 
         return Optional.empty();
+    }
+
+    /**
+     * Returns {@code true} if the value is available i.e. if the taxonomy has been chosen
+     * for any of the given fields identified by {@code taxonomyFieldNameList}. Otherwise, returns {@code false}.
+     *
+     * @param node                  the featured content document {@link Node} instance being edited.
+     * @param taxonomyFieldNameList the list of taxonomy-based fields whose value(s) availability needs to be verified.
+     * @return {@code true} if the value is available i.e. if the taxonomy has been chosen
+     * for any of the given fields identified by {@code taxonomyFieldNameList}. Otherwise, returns {@code false}.
+     * @throws RepositoryException thrown when an error occurs while querying the given {@code node} properties.
+     */
+    public boolean isAnyAvailable(final Node node, final List<String> taxonomyFieldNameList) throws RepositoryException {
+        for (final String taxonomyFieldName : taxonomyFieldNameList) {
+            if (node.hasProperty(taxonomyFieldName) && node.getProperty(taxonomyFieldName).getValues().length > 0) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

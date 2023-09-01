@@ -1,0 +1,61 @@
+/content/documents/administration/valuelists/training-type:
+  .meta:order-before: training-recruitment-format
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+  jcr:uuid: 097bb9e3-e03d-44f6-a039-da22282abae8
+  hippo:name: TrainingType
+  /training-type:
+    jcr:primaryType: selection:valuelist
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+    jcr:uuid: f932653c-547e-4514-8bd5-0c4864320081
+    hippo:availability: [live, preview]
+    hippotranslation:id: 3a6488c1-63d6-48b1-b613-0cf3fa04ab06
+    hippotranslation:locale: inherited - from query
+    /selection:listitem[1]:
+      jcr:primaryType: selection:listitem
+      selection:key: foundation
+      selection:label: Foundation
+    /selection:listitem[2]:
+      jcr:primaryType: selection:listitem
+      selection:key: core
+      selection:label: Core
+    /selection:listitem[3]:
+      jcr:primaryType: selection:listitem
+      selection:key: speciality
+      selection:label: Speciality
+    /selection:listitem[4]:
+      jcr:primaryType: selection:listitem
+      selection:key: higher speciality
+      selection:label: Higher Speciality
+    /selection:listitem[5]:
+      jcr:primaryType: selection:listitem
+      selection:key: academic
+      selection:label: Academic
+    /selection:listitem[6]:
+      jcr:primaryType: selection:listitem
+      selection:key: higher specialist scientist training
+      selection:label: Higher Specialist Scientist Training
+    /selection:listitem[7]:
+      jcr:primaryType: selection:listitem
+      selection:key: scientist training programme
+      selection:label: Scientist Training Programme
+    /selection:listitem[8]:
+      jcr:primaryType: selection:listitem
+      selection:key: practitioner training programme
+      selection:label: Practitioner Training Programme
+    /selection:listitem[9]:
+      jcr:primaryType: selection:listitem
+      selection:key: DT
+      selection:label: DT
+    /selection:listitem[10]:
+      jcr:primaryType: selection:listitem
+      selection:key: formal training
+      selection:label: Formal Training
+    /selection:listitem[11]:
+      jcr:primaryType: selection:listitem
+      selection:key: self learning
+      selection:label: Self Learning
+    /selection:listitem[12]:
+      jcr:primaryType: selection:listitem
+      selection:key: mentoring
+      selection:label: Mentoring

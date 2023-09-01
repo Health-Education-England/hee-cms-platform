@@ -11,10 +11,11 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c58d130b-75db-4322-aba9-53ad23452ff4
+          jcr:uuid: b1199670-ea66-47a3-8d77-ab290a424342
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-professions-or-topics-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -32,7 +33,7 @@ definitions:
             hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-            hipposysedit:validators: [optional]
+            hipposysedit:validators: [required]
           /contentBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -122,6 +123,30 @@ definitions:
             hipposysedit:path: hee:hideAuthorContactDetails
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyTags:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyTags
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -134,7 +159,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: a22d5d21-48b5-4b4c-836d-576f1b585c08
+          jcr:uuid: 5de29c1f-0561-4e18-9798-5a351ee3b16c
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:summary: ''
@@ -275,6 +300,38 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               showCompoundNames: 'true'
+          /globalTaxonomyProfessions:
+            jcr:primaryType: frontend:plugin
+            caption: Professions
+            field: globalTaxonomyProfessions
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Healthcare topics
+            field: globalTaxonomyHealthcareTopics
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalHealthcareTopics
+          /globalTaxonomyTags:
+            jcr:primaryType: frontend:plugin
+            caption: Tags
+            field: globalTaxonomyTags
+            hint: Choose any appropriate tags
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalTags
           /categories:
             jcr:primaryType: frontend:plugin
             caption: Categories

@@ -64,9 +64,15 @@ public class TrainingProgrammesHomepage extends BaseDocument {
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }
-
+  
     @HippoEssentialsGenerated(internalName = "hee:programmeDescription")
     public String getProgrammeDescription() {
         return getSingleProperty("hee:programmeDescription");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
+
 }

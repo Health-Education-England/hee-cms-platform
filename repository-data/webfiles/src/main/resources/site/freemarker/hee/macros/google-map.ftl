@@ -1,7 +1,7 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 
 <#macro googleMap block>
-    <div class="hee-google-map">
+    <div class="hee-google-map" aria-label="Google Map">
         <#--  Google map embed code  -->
         <#assign embedCode = block.googleMapContentBlock.embedCode>
         <#assign startDoubleQuote= embedCode?index_of('src="')>

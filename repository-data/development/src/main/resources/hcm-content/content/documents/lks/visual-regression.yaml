@@ -3883,18 +3883,20 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: f0d11554-8116-4ec9-b614-fbc9f2b3b8b6
       hippo:name: '[VR] Publication landing page'
-      hippo:versionHistory: bdf438a0-870d-4e37-8753-a7323aa97683
+      hippo:versionHistory: 001914b4-9148-47ce-8626-826bfbc8e5f1
       /vr-publication-landing-page[1]:
         jcr:primaryType: hee:publicationLandingPage
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
         jcr:uuid: c1b05457-d9d0-446c-923c-de3f38976415
+        hee:globalTaxonomyHealthcareTopics: [armed_forces]
+        hee:globalTaxonomyHealthcareTopics__with_ancestors: [armed_forces]
+        hee:globalTaxonomyProfessions: []
+        hee:globalTaxonomyProfessions__with_ancestors: []
+        hee:globalTaxonomyPublicationType: [regulatory]
+        hee:globalTaxonomyPublicationType__with_ancestors: [regulatory]
         hee:hideAuthorContactDetails: false
-        hee:publicationDate: 2023-02-08T00:00:00Z
         hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
-        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
-          medical_doctors]
-        hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
-        hee:publicationType: data
+        hee:publicationDate: 2023-02-08T00:00:00Z
         hee:readTime: '5'
         hee:subtitle: Curabitur non nulla sit amet nisl tempus
         hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies
@@ -3907,7 +3909,7 @@
         hippostd:state: draft
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-02-08T16:29:02.361Z
-        hippostdpubwf:lastModificationDate: 2023-05-30T15:47:42.037+01:00
+        hippostdpubwf:lastModificationDate: 2023-08-07T15:09:47.738+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 93d735b2-65ea-47d7-8a4e-c186e21a3703
         hippotranslation:locale: en
@@ -3937,17 +3939,22 @@
           /hee:assetData:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+        /hee:featuredContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /vr-publication-landing-page[2]:
         jcr:primaryType: hee:publicationLandingPage
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
         jcr:uuid: 4a517cc6-31b3-4622-9ade-2c5468f16519
+        hee:globalTaxonomyHealthcareTopics: [armed_forces]
+        hee:globalTaxonomyHealthcareTopics__with_ancestors: [armed_forces]
+        hee:globalTaxonomyProfessions: []
+        hee:globalTaxonomyProfessions__with_ancestors: []
+        hee:globalTaxonomyPublicationType: [regulatory]
+        hee:globalTaxonomyPublicationType__with_ancestors: [regulatory]
         hee:hideAuthorContactDetails: false
-        hee:publicationDate: 2023-02-08T00:00:00Z
         hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
-        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
-          medical_doctors]
-        hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
-        hee:publicationType: data
+        hee:publicationDate: 2023-02-08T00:00:00Z
         hee:readTime: '5'
         hee:subtitle: Curabitur non nulla sit amet nisl tempus
         hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies
@@ -3960,7 +3967,7 @@
         hippostd:state: unpublished
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-02-08T16:29:02.361Z
-        hippostdpubwf:lastModificationDate: 2023-05-30T15:48:17.665+01:00
+        hippostdpubwf:lastModificationDate: 2023-08-07T15:09:47.668+01:00
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: 93d735b2-65ea-47d7-8a4e-c186e21a3703
         hippotranslation:locale: en
@@ -3990,17 +3997,22 @@
           /hee:assetData:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+        /hee:featuredContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /vr-publication-landing-page[3]:
         jcr:primaryType: hee:publicationLandingPage
-        jcr:mixinTypes: ['mix:referenceable']
+        jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
         jcr:uuid: 41f9016f-fcdf-4336-86ff-39220945154c
+        hee:globalTaxonomyHealthcareTopics: [armed_forces]
+        hee:globalTaxonomyHealthcareTopics__with_ancestors: [armed_forces]
+        hee:globalTaxonomyProfessions: []
+        hee:globalTaxonomyProfessions__with_ancestors: []
+        hee:globalTaxonomyPublicationType: [regulatory]
+        hee:globalTaxonomyPublicationType__with_ancestors: [regulatory]
         hee:hideAuthorContactDetails: false
-        hee:publicationDate: 2023-02-08T00:00:00Z
         hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
-        hee:publicationProfessions: [pharmacy_professionals, public_health_professionals,
-          medical_doctors]
-        hee:publicationTopics: [global_health, health_academia, learning_disability_and_autism]
-        hee:publicationType: data
+        hee:publicationDate: 2023-02-08T00:00:00Z
         hee:readTime: '5'
         hee:subtitle: Curabitur non nulla sit amet nisl tempus
         hee:summary: Vivamus suscipit tortor eget felis porttitor volutpat. Cras ultricies
@@ -4013,9 +4025,9 @@
         hippostd:state: published
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2023-02-08T16:29:02.361Z
-        hippostdpubwf:lastModificationDate: 2023-05-30T15:48:17.665+01:00
+        hippostdpubwf:lastModificationDate: 2023-08-07T15:09:47.668+01:00
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2023-06-26T15:34:40.217+05:30
+        hippostdpubwf:publicationDate: 2023-08-07T18:48:26.488+01:00
         hippotranslation:id: 93d735b2-65ea-47d7-8a4e-c186e21a3703
         hippotranslation:locale: en
         /hee:logoGroup:
@@ -4044,6 +4056,9 @@
           /hee:assetData:
             jcr:primaryType: hippo:mirror
             hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+        /hee:featuredContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /vr-publication-page:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 718f983d-1540-4bbd-95b5-2a1498ab3bdc
+          jcr:uuid: 16b02739-1ff3-458b-aab0-27b43201f231
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -34,22 +34,6 @@ definitions:
             hipposysedit:path: hee:featuredDocuments
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
-          /topics:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:topics
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /professions:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:professions
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /featuredContentType:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -59,14 +43,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
-          /publicationType:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:publicationType
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
           /description:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -75,6 +51,30 @@ definitions:
             hipposysedit:path: hee:description
             hipposysedit:primary: false
             hipposysedit:type: Text
+          /globalTaxonomyPublicationType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyPublicationType
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -87,14 +87,11 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: e43f2ea2-4c5a-4d00-9c46-599964a1dc30
+          jcr:uuid: 407a6afa-8d93-4779-a105-4bae093bbae9
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
-          hee:topics: []
-          hee:professions: []
           hee:featuredContentType: ''
           hee:publicationtype: ''
-          hee:publicationType: ''
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -115,23 +112,19 @@ definitions:
             hint: Please select the content type to display
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              observableId: ${cluster.id}publicationtype
               source: /content/documents/administration/valuelists/featuredcontenttypes
               sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-          /publicationType:
+          /globalTaxonomyPublicationType:
             jcr:primaryType: frontend:plugin
             caption: Publication type
-            field: publicationType
+            field: globalTaxonomyPublicationType
             hint: 'Please select the publication type. Note: Only select a value if
               the ‘Publication Landing pages’ was selected from the Content type field'
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nameProvider: uk.nhs.hee.web.selection.frontend.provider.PublicationTypeNameProviderForFeaturedContent
-              observerId: ${cluster.id}publicationtype
-              sourceBasePath: /content/documents/administration/valuelists
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              taxonomy.name: GlobalPublicationTypes
           /description:
             jcr:primaryType: frontend:plugin
             caption: Description
@@ -157,45 +150,34 @@ definitions:
             caption: Featured documents
             field: featuredDocuments
             hint: 'Please select the documents you wish to display (maximum of three).
-              Note: Only select documents where  ‘Manual’ was selected as the Method'
+              Note: Only select documents where  ''Manual'' was selected as the Method'
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             maxitems: '3'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:publicationLandingPage']
-          /topics:
+          /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
-            caption: Topics
-            field: topics
-            multiselect.type: selectlist
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: Healthcare topics
+            field: globalTaxonomyHealthcareTopics
+            hint: 'Please select relevant healthcare topics that you would like to
+              filter. Note: Only select values where ''Related'' was selected as the
+              Method'
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: 'Please select relevant topics that you would like to filter. Note:
-              Only select values where ‘Related’ was selected as the Method'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationtopics
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-          /professions:
+              taxonomy.name: GlobalHealthcareTopics
+          /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
-            field: professions
-            multiselect.type: selectlist
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.field
+            field: globalTaxonomyProfessions
             hint: 'Please select relevant professions relevant that you would like
-              to filter. Note: Only select values where ‘Related’ was selected as
+              to filter. Note: Only select values where ''Related'' was selected as
               the Method'
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/publicationprofessions
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
+              taxonomy.name: GlobalProfessions

@@ -16,6 +16,7 @@ import java.util.regex.Pattern;
 public class PageCreateEventListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(PageCreateEventListener.class);
     private static final String MINI_HUB_PAGE_PROTOTYPE_NAME = "minihub-page";
+    private static final String TRAINING_PROGRAMME_PAGE_NAME = "training-programme-page";
 
     public void init() {
         ChannelEventListenerRegistry.get().register(this);
@@ -38,21 +39,29 @@ public class PageCreateEventListener {
         String newPageName = JcrUtils.getNodeNameQuietly(pageActionContext.getNewPageNode());
         // The new page name will have pattern `page-title-page-prototype-name-optional-running-number`
         // For example `patient-and-public-information-minihub-page` or `patient-and-public-information-minihub-page-1`
-        Pattern pattern = Pattern.compile(MINI_HUB_PAGE_PROTOTYPE_NAME + "[-]?[0-9]*$");
-        boolean isMiniHubPage = pattern.matcher(newPageName).find();
-        if (isMiniHubPage) {
-            processMiniHubPageCreation(pageActionContext, newPageName);
+
+        //todo this can all be rolled into one block of code after doing the two pattern actions
+        Pattern compositePattern = Pattern.compile("(" + MINI_HUB_PAGE_PROTOTYPE_NAME + "|" + TRAINING_PROGRAMME_PAGE_NAME + ")[-]?[0-9]*$");
+
+        if (compositePattern.matcher(newPageName).find()) {
+            processWildcardPageCreation(pageActionContext, newPageName);
         }
     }
 
-    private void processMiniHubPageCreation(PageCreateContext pageActionContext, String newPageName) {
+    /**
+     * This will create the "_default_" (wildcard) sitemapitem for a minihub or training page
+     *
+     * @param pageActionContext
+     * @param newPageName
+     */
+    private void processWildcardPageCreation(PageCreateContext pageActionContext, String newPageName) {
         Node newSiteMapItemNode = pageActionContext.getNewSiteMapItemNode();
         try {
             Node defaultNode = newSiteMapItemNode.addNode(HstNodeTypes.WILDCARD, HstNodeTypes.NODETYPE_HST_SITEMAPITEM);
             defaultNode.setProperty(HstNodeTypes.SITEMAPITEM_PROPERTY_COMPONENTCONFIGURATIONID, newSiteMapItemNode.getProperty(HstNodeTypes.SITEMAPITEM_PROPERTY_COMPONENTCONFIGURATIONID).getString());
             defaultNode.setProperty(HstNodeTypes.SITEMAPITEM_PAGE_TITLE, newSiteMapItemNode.getProperty(HstNodeTypes.SITEMAPITEM_PAGE_TITLE).getString());
         } catch (RepositoryException e) {
-            LOGGER.error(String.format("Error on creating %s sitemap item for MiniHub page %s", HstNodeTypes.WILDCARD, newPageName), e);
+            LOGGER.error(String.format("Error on creating %s sitemap item for MiniHub/Training Programme page %s", HstNodeTypes.WILDCARD, newPageName), e);
         }
     }
 }

@@ -3,7 +3,11 @@ package uk.nhs.hee.web.beans;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
+import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
+import uk.nhs.hee.web.constants.HEETaxonomy;
+import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 
+import javax.jcr.RepositoryException;
 import java.util.Calendar;
 import java.util.List;
 
@@ -73,5 +77,29 @@ public class News extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyProfessions",
+                HEETaxonomy.HEE_GLOBAL_PROFESSIONS);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyHealthcareTopics() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyHealthcareTopics",
+                HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyTags", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyTags() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyTags",
+                HEETaxonomy.HEE_GLOBAL_TAGS);
     }
 }

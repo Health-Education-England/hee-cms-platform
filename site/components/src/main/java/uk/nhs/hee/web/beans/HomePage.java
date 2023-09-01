@@ -33,4 +33,10 @@ public class HomePage extends BaseDocument {
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
+
 }

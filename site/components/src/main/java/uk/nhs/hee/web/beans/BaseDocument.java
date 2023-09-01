@@ -7,7 +7,7 @@ import uk.nhs.hee.web.utils.DateUtils;
 
 import javax.jcr.RepositoryException;
 
-@Node(jcrType="hee:basedocument")
+@Node(jcrType = "hee:basedocument")
 public class BaseDocument extends HippoDocument {
     public String getPublishedDate() throws RepositoryException {
         return DateUtils.formatDate(
