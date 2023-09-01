@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ff23f258-bb03-4297-b57b-fcaab2b733b5
+          jcr:uuid: 7649afb5-9bcb-404c-9489-7313162c51d4
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -33,6 +33,13 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -45,7 +52,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:summary: ''
-          jcr:uuid: 7cb9362a-21d5-48ad-94c0-4b96b0df82a4
+          jcr:uuid: 8d7b39df-5b07-4ad7-bbdd-089dcc9bc295
           hippostdpubwf:lastModificationDate: 2022-01-17T21:00:21.639Z
           hippostdpubwf:creationDate: 2022-01-17T21:00:21.639Z
           /hee:richStatement:
@@ -73,10 +80,24 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /richStatement:
             jcr:primaryType: frontend:plugin
-            caption: Content
+            caption: Details content objects
             field: content
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
+            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons: "PickImage", forcePasteAsPlainText: true }'
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table",
+                forcePasteAsPlainText: true }'
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Detail objects
+            compoundList: hee:ActionLink,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference
+            contentPickerType: links
+            field: contentBlocks
+            hint: ''
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'

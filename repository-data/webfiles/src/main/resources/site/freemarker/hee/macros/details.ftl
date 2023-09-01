@@ -12,6 +12,34 @@
             </summary>
             <div class="nhsuk-details__text">
                 <@hst.html hippohtml=detailsDocument.richStatement/>
+
+                <#if detailsDocument.contentBlocks??>
+                    <#list detailsDocument.contentBlocks as block>
+                        <#switch block.getClass().getName()>
+                            <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
+                                <#if block.referencedBean?? && hst.isBeanType(block.referencedBean, 'uk.nhs.hee.web.beans.ImageSetWithCaption')>
+                                    <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
+                                </#if>
+                                <#break>
+                            <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                                <@hst.html hippohtml=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.RichTextReference">
+                                <@hst.html hippohtml=block.richTextBlock.html/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.ActionLink">
+                                <@hee.actionLink actionLink=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
+                                <@hee.media media=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.InsetReference">
+                                <@hee.inset inset=block/>
+                                <#break>
+                            <#default>
+                        </#switch>
+                    </#list>
+                </#if>
             </div>
         </details>
     </#if>
