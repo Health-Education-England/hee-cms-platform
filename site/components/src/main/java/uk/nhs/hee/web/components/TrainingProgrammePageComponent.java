@@ -76,9 +76,9 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
     protected void doModelUpdateForValueListField(String keyFromField, HstRequest request, ValueListIdentifier identifier) {
         if (keyFromField != null) {
             Map<String, String> valueListMap = ValueListUtils.getValueListMap(identifier.getName());
-            String trainingTypeValue = valueListMap.get(keyFromField);
+            String fieldValueLabel = valueListMap.get(keyFromField);
 
-            request.setModel(identifier.getName(), trainingTypeValue);
+            request.setModel(identifier.getName(), fieldValueLabel);
         }
     }
 }
