@@ -24,6 +24,14 @@
     </div>
 </#macro>
 
+<#--  Macro that renders rows of the Programme summary section  -->
+<#macro programmeSummaryRow rowTitle>
+    <li class="hee-card--summary__item">
+        <span class="hee-card--summary__item__label">${rowTitle}</span>
+        <span class="hee-card--summary__item__value"><#nested></span>
+    </li>
+</#macro>
+
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.TrainingProgrammePage" -->
 <#if document??>
     <main class="page page--rightbar" id="maincontent" role="main" xmlns="http://www.w3.org/1999/html">
@@ -59,75 +67,99 @@
                             </a>
                             <h3 class="hee-card--summary__heading">Programme summary</h3>
                             <ul class="hee-card--summary__list">
-                                <li class="hee-card--summary__item">
-                                    <span class="hee-card--summary__item__label">Training programme</span>
-                                    <span class="hee-card--summary__item__value">${document.title}</span>
-                                </li>
+                                <#--  Training programme  -->
+                                <@programmeSummaryRow rowTitle="Training programme">
+                                    ${document.title}
+                                </@programmeSummaryRow>
 
-                                <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?size gt 0>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Training type</span>
-                                        <span class="hee-card--summary__item__value">
-                                            <a class="hee-card--summary__item__link" href="http://www.abc1234.com?publicationType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
-                                                ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                                            </a>
-                                        </span>
-                                    </li>
+                                <#--  Training type  -->
+                                <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?has_content>
+                                    <@programmeSummaryRow rowTitle="Training type">
+                                        <#--  The following block can be used when training listing page is available  -->
+                                        <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?trainingType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
+                                            ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                                        </a>  -->
+                                        ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                                    </@programmeSummaryRow>
                                 </#if>
 
-                                <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?size gt 0>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Professions</span>
+                                <#--  Professions  -->
+                                <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?has_content>
+                                    <@programmeSummaryRow rowTitle="Professions">
+                                        <#--  The following block can be used when training listing page is available  -->
+                                        <#--  <#list document.globalTaxonomyProfessions.taxonomyValues as category>
+                                            <a href=${publicationListingPageURL}?profession=${category.key}>${category.label}</a><#sep>, </#sep>
+                                        </#list>  -->
                                         <#list document.globalTaxonomyProfessions.taxonomyValues as category>
-                                            <span class="hee-card--summary__item__value">
-                                                <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${category.label}</a>
-                                            </span>
+                                            ${category.label}<#sep>, </#sep>
                                         </#list>
-                                    </li>
+                                    </@programmeSummaryRow>
                                 </#if>
 
+                                <#--  Healthcare topics  -->
+                                <#if document.globalTaxonomyHealthcareTopics?? && document.globalTaxonomyHealthcareTopics.taxonomyValues?has_content>
+                                    <@programmeSummaryRow rowTitle="Healthcare topics">
+                                        <#--  The following block can be used when training listing page is available  -->
+                                        <#--  <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
+                                            <a href=${publicationListingPageURL}?topic=${category.key}>${category.label}</a><#sep>, </#sep>
+                                        </#list>  -->
+                                        <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
+                                            ${category.label}<#sep>, </#sep>
+                                        </#list>
+                                    </@programmeSummaryRow>
+                                </#if>
+
+                                <#--  Discipline  -->
                                 <#if clinicalDiscipline?has_content>
-                                <li class="hee-card--summary__item">
-                                    <span class="hee-card--summary__item__label">Discipline</span>
-                                    <span class="hee-card--summary__item__value">
-                                      <a class="hee-card--summary__item__link" href="http://www.abc1234.com">${clinicalDiscipline}</a>
-                                    </span>
-                                </li>
+                                    <@programmeSummaryRow rowTitle="Discipline">
+                                        <#--  The following block can be used when training listing page is available  -->
+                                        <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?discipline=${document.discipline}">
+                                            ${clinicalDiscipline}
+                                        </a>  -->
+                                        ${clinicalDiscipline}
+                                    </@programmeSummaryRow>
                                 </#if>
 
+                                <#--  Recruitment format  -->
                                 <#if recruitmentFormat?has_content>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Recruitment format</span>
-                                        <span class="hee-card--summary__item__value">${recruitmentFormat}</span>
-                                    </li>
+                                    <@programmeSummaryRow rowTitle="Recruitment format">
+                                        ${recruitmentFormat}
+                                    </@programmeSummaryRow>
                                 </#if>
-                                <li class="hee-card--summary__item">
-                                    <span class="hee-card--summary__item__label">Duration</span>
-                                    <span class="hee-card--summary__item__value">${document.duration}&nbsp; months</span>
-                                </li>
+
+                                <#--  Duration  -->
+                                <#if recruitmentFormat?has_content>
+                                    <@programmeSummaryRow rowTitle="Duration">
+                                        ${document.duration} months
+                                    </@programmeSummaryRow>
+                                </#if>
+
+                                <#--  Competition ratio  -->
                                 <#if document.competitionRatio?has_content>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Competition ratio</span>
-                                        <span class="hee-card--summary__item__value">${document.competitionRatio}</span>
-                                    </li>
+                                    <@programmeSummaryRow rowTitle="Competition ratio">
+                                        ${document.competitionRatio}
+                                    </@programmeSummaryRow>
                                 </#if>
+
+                                <#--  Fill rate  -->
                                 <#if document.fillRate?has_content>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Fill rate</span>
-                                        <span class="hee-card--summary__item__value">${document.fillRate}%</span>
-                                    </li>
+                                    <@programmeSummaryRow rowTitle="Fill rate">
+                                        ${document.fillRate}%
+                                    </@programmeSummaryRow>
                                 </#if>
+
+                                <#--  Opening date  -->
                                 <#if document.opening?has_content>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Opening</span>
-                                        <span class="hee-card--summary__item__value">${document.opening.time?datetime?string['EEE dd/MM/yyyy']}</span>
-                                    </li>
+                                    <@programmeSummaryRow rowTitle="Opening">
+                                        ${document.opening.time?string['EEE dd/MM/yyyy']}
+                                    </@programmeSummaryRow>
                                 </#if>
+
+                                <#--  Closing date  -->
                                 <#if document.closing?has_content>
-                                    <li class="hee-card--summary__item">
-                                        <span class="hee-card--summary__item__label">Closing</span>
-                                        <span class="hee-card--summary__item__value">${document.closing.time?datetime?string['EEE dd/MM/yyyy']}</span>
-                                    </li>
+                                    <@programmeSummaryRow rowTitle="Closing">
+                                        ${document.closing.time?string['EEE dd/MM/yyyy']}
+                                    </@programmeSummaryRow>
                                 </#if>
                             </ul>
                         </div>
