@@ -121,12 +121,20 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
       /hee:support[2]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+      /hee:pathways[4]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
-          hee:openLinkUrlNewWindow: false
-          hee:text: copyright
-          hee:url: ''
+          hee:openLinkUrlNewWindow: true
+          hee:text: Test action link
+          hee:url: https://www.hee.nhs.uk
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -135,15 +143,42 @@
           hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
-            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:support[3]:
-        jcr:primaryType: hee:richTextReference
-        /hee:richTextBlock:
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pathways[5]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
-      /hee:featuredContentBlock:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:pathways[6]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
+      /hee:pathways[7]:
+        jcr:primaryType: hee:quoteReference
+        /hee:quoteContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      /hee:support[3]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:support[4]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:support[5]:
+        jcr:primaryType: hee:googleMapReference
+        /hee:googleMapContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
+      /hee:support[6]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
     /training-homepage[2]:
       jcr:primaryType: hee:trainingProgrammesHomepage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -252,12 +287,20 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
       /hee:support[2]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+      /hee:pathways[4]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
-          hee:openLinkUrlNewWindow: false
-          hee:text: copyright
-          hee:url: ''
+          hee:openLinkUrlNewWindow: true
+          hee:text: Test action link
+          hee:url: https://www.hee.nhs.uk
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -266,15 +309,42 @@
           hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
-            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:support[3]:
-        jcr:primaryType: hee:richTextReference
-        /hee:richTextBlock:
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pathways[5]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
-      /hee:featuredContentBlock:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:pathways[6]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
+      /hee:pathways[7]:
+        jcr:primaryType: hee:quoteReference
+        /hee:quoteContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      /hee:support[3]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:support[4]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:support[5]:
+        jcr:primaryType: hee:googleMapReference
+        /hee:googleMapContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
+      /hee:support[6]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
     /training-homepage[3]:
       jcr:primaryType: hee:trainingProgrammesHomepage
       jcr:mixinTypes: ['mix:referenceable']
@@ -384,12 +454,20 @@
           jcr:primaryType: hippo:mirror
           hippo:docbase: 4f411e92-6576-4ce1-91da-e432ec9142ab
       /hee:support[2]:
+        jcr:primaryType: hee:richTextReference
+        /hee:richTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+      /hee:pathways[4]:
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
-          hee:openLinkUrlNewWindow: false
-          hee:text: copyright
-          hee:url: ''
+          hee:openLinkUrlNewWindow: true
+          hee:text: Test action link
+          hee:url: https://www.hee.nhs.uk
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -398,15 +476,42 @@
           hippotranslation:locale: document-type-locale
           /hee:document:
             jcr:primaryType: hippo:mirror
-            hippo:docbase: 9071bfc1-35e4-4cb8-852c-c91f97fb43f0
-      /hee:support[3]:
-        jcr:primaryType: hee:richTextReference
-        /hee:richTextBlock:
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      /hee:pathways[5]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
           jcr:primaryType: hippo:mirror
-          hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
-      /hee:featuredContentBlock:
-        jcr:primaryType: hippo:mirror
-        hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:pathways[6]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
+      /hee:pathways[7]:
+        jcr:primaryType: hee:quoteReference
+        /hee:quoteContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: bef94dde-831c-48e1-b5ae-2a35899c94a1
+      /hee:support[3]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:support[4]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:support[5]:
+        jcr:primaryType: hee:googleMapReference
+        /hee:googleMapContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
+      /hee:support[6]:
+        jcr:primaryType: hee:insetReference
+        /hee:insetTextBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c8396cf8-7507-4508-845e-9a3c47e79572
   /training-programmes-page:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

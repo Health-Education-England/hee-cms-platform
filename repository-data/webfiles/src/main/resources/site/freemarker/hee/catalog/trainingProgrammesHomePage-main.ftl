@@ -65,6 +65,18 @@
                                         <@hee.imageWithCaption imageWithCaption=block.referencedBean/>
                                     </#if>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.QuoteReference">
+                                    <@hee.quote block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.ActionLink">
+                                    <@hee.actionLink actionLink=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.InsetReference">
+                                    <@hee.inset inset=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                    <@hee.details block=block/>
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
@@ -103,8 +115,17 @@
                                 <#case "uk.nhs.hee.web.beans.RichTextReference">
                                     <@hst.html hippohtml=block.richTextBlock.html/>
                                     <#break>
-                                <#case "uk.nhs.hee.web.beans.ActionLink">
-                                    <@hee.actionLink actionLink=block/>
+                                <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
+                                    <@hee.expander expander=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.InsetReference">
+                                    <@hee.inset inset=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.GoogleMapReference">
+                                    <@hee.googleMap block=block/>
+                                    <#break>
+                                <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                    <@hee.details block=block/>
                                     <#break>
                                 <#default>
                             </#switch>

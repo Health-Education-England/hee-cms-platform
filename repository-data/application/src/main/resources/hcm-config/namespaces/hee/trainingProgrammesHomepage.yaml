@@ -225,7 +225,7 @@ definitions:
           /pathways:
             jcr:primaryType: frontend:plugin
             caption: Pathways
-            compoundList: hee:htmlWithoutHeadingOneAndTwo,hippogallerypicker:imagelink,hee:richTextReference
+            compoundList: hee:ActionLink,hee:detailsReference,hee:htmlWithoutHeadingOneAndTwo,hippogallerypicker:imagelink,hee:insetReference,hee:quoteReference,hee:richTextReference
             contentPickerType: links
             field: pathways
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -248,7 +248,7 @@ definitions:
           /support:
             jcr:primaryType: frontend:plugin
             caption: Support
-            compoundList: hee:ActionLink,hee:htmlWithoutHeadingOneAndTwo,hee:richTextReference
+            compoundList: hee:detailsReference,hee:expanderGroupReference,hee:htmlWithoutHeadingOneAndTwo,hee:googleMapReference,hee:insetReference,hee:richTextReference
             contentPickerType: links
             field: support
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
