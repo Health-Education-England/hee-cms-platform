@@ -1,20 +1,16 @@
 package uk.nhs.hee.web.beans;
 
-import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
+import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
 import uk.nhs.hee.web.constants.HEETaxonomy;
 import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 
-import java.util.List;
-import java.util.Calendar;
-
 import javax.jcr.RepositoryException;
+import java.util.Calendar;
+import java.util.List;
 
-/** 
- * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
- */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
 @Node(jcrType = "hee:trainingProgrammePage")
 public class TrainingProgrammePage extends BaseDocument {
@@ -43,10 +39,12 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBean("hee:cardImage", ImageSetWithCaption.class);
     }
 
-    public List<?> getOverviewBlocks() {
+    @HippoEssentialsGenerated(internalName = "hee:overview")
+    public <T extends HippoBean> List<T> getOverviewBlocks() {
         return getChildBeansByName("hee:overview");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:rightHandBlocks")
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
     }

@@ -258,9 +258,32 @@
                     <div class="hee-card--related-links__content">
                         <h3 class="hee-card--related-links__heading">Pages related to this programme</h3>
                         <ul class="hee-card--related-links__list">
-                            <li>
-                                <a class="hee-card--related-links__link" href="#">Overview</a>
-                            </li>
+                            <#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?ends_with("/")/>
+                            <#--  Overview link  -->
+                            <#if isOverview>
+                                <li aria-current="page">
+                                    <a class="hee-card--related-links__link" style="cursor: default; color: inherit; text-decoration: none;">Overview</a>
+                                </li>
+                            <#else>
+                                <li>
+                                    <a class="hee-card--related-links__link" href="${(accessFromRootHub && !accessWithEndSlash)?then(tppSiteMapItemName + '/overview', 'overview')}">Overview</a>
+                                </li>
+                            </#if>
+
+                            <#--  Application information (guidance) page links  -->
+                            <#list document.applicationInformation as guidance>
+                                <#if currentGuidance?? && guidance == currentGuidance>
+                                    <li aria-current="page">
+                                        <a class="hee-card--related-links__link" href="#" style="cursor: default; color: inherit; text-decoration: none;">
+                                            ${guidance.title}
+                                        </a>
+                                    </li>
+                                <#else>
+                                    <li>
+                                        <a class="hee-card--related-links__link" href="${(accessFromRootHub && !accessWithEndSlash)?then(tppSiteMapItemName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
+                                    </li>
+                                </#if>
+                            </#list>
                         </ul>
                     </div>
                 </div>
