@@ -80,7 +80,7 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /richStatement:
             jcr:primaryType: frontend:plugin
-            caption: Details content objects
+            caption: Content
             field: content
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
@@ -91,7 +91,7 @@ definitions:
                 forcePasteAsPlainText: true }'
           /contentBlocks:
             jcr:primaryType: frontend:plugin
-            caption: Detail objects
+            caption: Details content objects
             compoundList: hee:ActionLink,hippostd:html,hippogallerypicker:imagelink,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference
             contentPickerType: links
             field: contentBlocks
