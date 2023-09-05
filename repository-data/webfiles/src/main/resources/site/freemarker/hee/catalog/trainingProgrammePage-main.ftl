@@ -262,7 +262,7 @@
                             <#--  Overview link  -->
                             <#if isOverview>
                                 <li aria-current="page">
-                                    <a class="hee-card--related-links__link" style="cursor: default; color: inherit; text-decoration: none;">Overview</a>
+                                    <span aria-current="page" class="hee-card--related-links__link active">Overview</span>
                                 </li>
                             <#else>
                                 <li>
@@ -274,9 +274,7 @@
                             <#list document.applicationInformation as guidance>
                                 <#if currentGuidance?? && guidance == currentGuidance>
                                     <li aria-current="page">
-                                        <a class="hee-card--related-links__link" href="#" style="cursor: default; color: inherit; text-decoration: none;">
-                                            ${guidance.title}
-                                        </a>
+                                        <span aria-current="page" class="hee-card--related-links__link active">${guidance.title}</span>
                                     </li>
                                 <#else>
                                     <li>
