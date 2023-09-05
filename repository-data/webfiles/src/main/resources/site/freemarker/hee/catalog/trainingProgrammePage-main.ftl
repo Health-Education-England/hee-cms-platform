@@ -183,7 +183,7 @@
                     <#else>
                         <#--  Main content blocks: START  -->
                         <#if document.overviewBlocks??>
-                            <h2  class="toc_h2" id="overview">Overview</h2>
+                            <h2 class="toc_h2" id="overview">Overview</h2>
                             <#list document.overviewBlocks as block>
                                 <#switch block.getClass().getName()>
                                     <#case "org.hippoecm.hst.content.beans.standard.HippoFacetSelect">
@@ -211,6 +211,24 @@
                                         <#break>
                                     <#case "uk.nhs.hee.web.beans.StatementCardReference">
                                         <@hee.statementCard block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                        <@hee.details block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
+                                        <@hee.expander expander=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.GoogleMapReference">
+                                        <@hee.googleMap block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.TabsReference">
+                                        <@hee.tabs tabs=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.TableReference">
+                                        <@hee.table table=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
+                                        <@hee.expanderTable table=block/>
                                         <#break>
                                     <#default>
                                 </#switch>
