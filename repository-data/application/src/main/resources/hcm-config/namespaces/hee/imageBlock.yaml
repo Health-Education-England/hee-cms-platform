@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: fbc53bdd-b84a-4da8-bdfd-e86782116d6b
+          jcr:uuid: a595a0e9-af20-46b7-8c7a-1ec25ae5a06d
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -56,13 +56,14 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /image:
             jcr:primaryType: frontend:plugin
-            caption: Image
+            caption: Select image
             field: image
             hint: Select an image
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:imagesetWithCaption']
           /caption:
             jcr:primaryType: frontend:plugin
             caption: Caption

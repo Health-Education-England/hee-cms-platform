@@ -2,7 +2,7 @@
 
 <#macro imageBlock imageBlock>
     <@hst.link var="imgLink" hippobean=imageBlock.image/>
-    <figure class="nhsuk-image" style="width: 100%">
+    <figure class="nhsuk-image">
         <img class="nhsuk-image__img" src="${imgLink}" alt="${imageBlock.image.description!}">
         <#if imageBlock.caption?has_content>
             <figcaption class="nhsuk-image__caption">
