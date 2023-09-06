@@ -29,7 +29,7 @@
                         <@checkboxItem name=name value=value text=text selected=selectedItemsList?seq_contains("${value}") facet=facet />
                     </#list>
                 <#elseif items?is_sequence>
-                    <#list items as value>
+                    <#list items?sort as value>
                         <#assign strValue="${(value?is_number)?then(value?c, value)}">
 
                         <@checkboxItem name=name value=strValue text=strValue selected=selectedItemsList?seq_contains("${strValue}") facet=facet />

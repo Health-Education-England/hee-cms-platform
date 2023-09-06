@@ -31,3 +31,4 @@
 <#include "featured-content.ftl">
 <#include "expander-table.ftl">
 <#include "sticky-toc.ftl">
+<#include "guidance-detail.ftl">

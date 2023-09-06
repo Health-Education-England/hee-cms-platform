@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 800a9cfd-4739-4056-8f3e-fd80817b2b58
+          jcr:uuid: 316011c8-2a04-4184-92ff-bab7f94c0e64
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -80,7 +80,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:report
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: fe4c5fd8-7ffd-41ee-bf24-99855dde2c8d
+          jcr:uuid: e810f059-7422-47c7-aae8-79c1c139a3ec
           hee:summary: ''
           hee:title: ''
           hippostd:holder: holder
@@ -134,12 +134,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Page title
             field: title
-            hint: Enter the publication title (60 character limit)
+            hint: Enter the publication title (120 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '60'
+              maxlength: '120'
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle

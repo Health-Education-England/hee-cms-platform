@@ -1,8 +1,9 @@
+<#ftl output_format="HTML">
 <#include "../include/imports.ftl">
 <@hst.defineObjects />
 
 <#if document??>
-    <#if document.contentType = 'hee:MiniHub'>
+    <#if document.contentType = 'hee:MiniHub' && currentGuidance??>
         <#--  For Mini-hub, generates meta title and description based on child Standard content page document's Title and Summary  -->
         <#assign pageTitle="${currentGuidance.title!}">
         <#assign pageSummary="${currentGuidance.summary!}">

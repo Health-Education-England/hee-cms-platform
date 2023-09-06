@@ -28,7 +28,7 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:numeric-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.NumericValidator
-    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-publication-professions-or-topics-validator:
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-professions-or-topics-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryPublicationProfessionsOrTopicsValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:banner-phase-name-validator:
@@ -37,6 +37,9 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:unique-web-publications-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.UniqueWebPublicationsValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:unique-guidance-page-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.UniqueGuidancePageValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-featured-method-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryFeaturedMethodValidator
@@ -45,9 +48,8 @@ definitions:
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryFeaturedDocumentsValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:google-map-embed-code-validator:
       jcr:primaryType: hipposys:moduleconfig
-      hipposys:className: org.onehippo.cms.services.validation.validator.RegExpValidator
-      regexp.pattern: ^(?!.*<iframe src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*><\/iframe>.*<iframe).*<iframe
-        src="https:\/\/www\.google\.com\/maps\/embed\?pb=![^"]*"[^>]*><\/iframe>(?![\s\S]*<iframe)
+      hipposys:className: uk.nhs.hee.web.validation.validator.EmbedCodeIFrameValidator
+      embed.code.src.prefix: ['https://www.google.com/maps/embed?pb=']
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-training-journey-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryTrainingJourneyValidator
@@ -60,3 +62,8 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:html-content-block-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.RichTextContentBlockValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:media-embed-code-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      embed.code.src.prefix: ['https://www.youtube.com/embed/', 'https://player.vimeo.com/video/',
+        'https://anchor.fm/health-education-england/embed/episodes/', 'https://podcasters.spotify.com/pod/show/nhse-wte/embed/episodes/']
+      hipposys:className: uk.nhs.hee.web.validation.validator.EmbedCodeIFrameValidator

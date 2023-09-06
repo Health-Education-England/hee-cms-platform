@@ -11,16 +11,15 @@ import org.slf4j.LoggerFactory;
 import uk.nhs.hee.web.beans.PublicationLandingPage;
 import uk.nhs.hee.web.beans.Report;
 import uk.nhs.hee.web.components.info.ReportComponentInfo;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.ReportAndPublicationUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
 
 import javax.jcr.RepositoryException;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 /**
@@ -48,7 +47,6 @@ public class ReportComponent extends EssentialsDocumentComponent {
             request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
 
             addRelatedPublicationLandingPageToModel(request, reportPage);
-            addPublicationTypeTopicAndProfessionMapsToModel(request);
             addPublicationListingPageURLToModel(request);
         }
     }
@@ -62,28 +60,18 @@ public class ReportComponent extends EssentialsDocumentComponent {
      */
     private void addRelatedPublicationLandingPageToModel(final HstRequest request, final Report reportPage) {
         try {
+            final Locale locale = request.getLocale();
+            final ReportAndPublicationUtils reportAndPublicationUtils = new ReportAndPublicationUtils();
 
-            request.setModel("landingPage",
-                    new ReportAndPublicationUtils().findMyParent(reportPage, request.getRequestContext()));
+            PublicationLandingPage publicationLandingPage = reportAndPublicationUtils.findMyParent(reportPage, request.getRequestContext());
+
+            if (publicationLandingPage != null) {
+                request.setModel("landingPage", publicationLandingPage);
+            }
         } catch (final RepositoryException e) {
             log.error("Caught error '{}' while getting the Publication landing page document to which " +
                     "the Publication page document '{}' is associated to", e.getMessage(), reportPage.getPath(), e);
         }
-    }
-
-    /**
-     * Adds Publication type, topic and profession value-list maps to model.
-     *
-     * @param request the {@link HstRequest} instance.
-     */
-    private void addPublicationTypeTopicAndProfessionMapsToModel(final HstRequest request) {
-        // Adds publications topic and profession value-lists
-        request.setModel("publicationTopicMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TOPICS.getName()));
-        request.setModel("publicationProfessionMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_PROFESSIONS.getName()));
-        request.setModel("publicationTypeMap",
-                ValueListUtils.getValueListMap(ValueListIdentifier.PUBLICATION_TYPES.getName()));
     }
 
     /**

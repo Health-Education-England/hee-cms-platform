@@ -14,8 +14,8 @@
                 <#--  Replacing '##COOKIES_PAGE##' PlaceHolder dynamically with channel specific cookies page link  -->
                 <@hst.html formattedText="${cookieBannerText?replace('##COOKIES_PAGE##', cookiesPageLink)}"/>
                 <ul>
-                    <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_accept_analytics" tabindex="2"><@fmt.message key="cookie.button.accept"/></button></li>
-                    <li><button class="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3"><@fmt.message key="cookie.button.reject"/></button></li>
+                    <li><button class="nhsuk-button" data-module="nhsuk-button" id="nhsuk-cookie-banner__link_accept_analytics" tabindex="2"><@fmt.message key="cookie.button.accept"/></button></li>
+                    <li><button class="nhsuk-button" data-module="nhsuk-button" id="nhsuk-cookie-banner__link_decline_analytics" tabindex="3"><@fmt.message key="cookie.button.reject"/></button></li>
                 </ul>
             </div>
     </div>

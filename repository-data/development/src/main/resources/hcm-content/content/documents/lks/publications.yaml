@@ -25,18 +25,21 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 973c1c98-ab7a-420f-bb7c-109a9ddd9926
         hippo:name: Reasonable adjustments policy - Publication landing
-        hippo:versionHistory: 39d9f3ac-dd3d-444c-a2bf-90a5a16524a8
+        hippo:versionHistory: 45fa31cd-f734-4d74-8db1-b35e46b52117
         /reasonable-adjustments-policy---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 48e8515a-6a01-4e04-bb8e-6f06775f58f2
+          hee:globalTaxonomyHealthcareTopics: [antimicrobial_resistance]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [antimicrobial_resistance]
+          hee:globalTaxonomyProfessions: [ambulance_service_team, dental_hygienist]
+          hee:globalTaxonomyProfessions__with_ancestors: [ambulance_service_team,
+            dental_professionals, dental_hygienist]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
-          hee:publicationProfessions: [public_health_professionals]
-          hee:publicationTopics: [knowledge_management, quality, workforce_planning,
-            workforce_transformation]
-          hee:publicationType: policy_strategy
           hee:readTime: '5'
           hee:subtitle: NSHCS Policies
           hee:summary: The Reasonable Adjustments Policy enables you to request reasonable
@@ -46,13 +49,12 @@
           hee:title: Reasonable adjustments policy
           hee:updatedDate: 2022-12-31T00:00:00Z
           hippo:availability: []
-          hippostd:holder: admin
           hippostd:retainable: false
           hippostd:state: draft
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-06-21T15:22:06.588+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.658+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -85,17 +87,23 @@
             /hee:assetData:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /reasonable-adjustments-policy---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: 0abfe671-b25a-49d9-adab-4288e720fd55
+          hee:globalTaxonomyHealthcareTopics: [antimicrobial_resistance]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [antimicrobial_resistance]
+          hee:globalTaxonomyProfessions: [ambulance_service_team, dental_hygienist]
+          hee:globalTaxonomyProfessions__with_ancestors: [ambulance_service_team,
+            dental_professionals, dental_hygienist]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
-          hee:publicationProfessions: [public_health_professionals]
-          hee:publicationTopics: [knowledge_management, quality, workforce_planning,
-            workforce_transformation]
-          hee:publicationType: policy_strategy
           hee:readTime: '5'
           hee:subtitle: NSHCS Policies
           hee:summary: The Reasonable Adjustments Policy enables you to request reasonable
@@ -110,7 +118,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-06-20T18:26:57.168+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.578+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
@@ -143,17 +151,23 @@
             /hee:assetData:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /reasonable-adjustments-policy---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 11dacd51-85cc-42b7-b3e6-dd7b9880a83a
+          hee:globalTaxonomyHealthcareTopics: [antimicrobial_resistance]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [antimicrobial_resistance]
+          hee:globalTaxonomyProfessions: [ambulance_service_team, dental_hygienist]
+          hee:globalTaxonomyProfessions__with_ancestors: [ambulance_service_team,
+            dental_professionals, dental_hygienist]
+          hee:globalTaxonomyPublicationType: [guidance]
+          hee:globalTaxonomyPublicationType__with_ancestors: [guidance]
           hee:hideAuthorContactDetails: true
           hee:otherFormatsEmail: charles@king.com
           hee:publicationDate: 2022-11-28T00:00:00Z
-          hee:publicationProfessions: [public_health_professionals]
-          hee:publicationTopics: [knowledge_management, quality, workforce_planning,
-            workforce_transformation]
-          hee:publicationType: policy_strategy
           hee:readTime: '5'
           hee:subtitle: NSHCS Policies
           hee:summary: The Reasonable Adjustments Policy enables you to request reasonable
@@ -168,9 +182,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T20:59:50.608Z
-          hippostdpubwf:lastModificationDate: 2023-06-20T18:26:57.168+01:00
+          hippostdpubwf:lastModificationDate: 2023-08-09T20:01:15.578+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2023-06-20T18:27:00.255+01:00
+          hippostdpubwf:publicationDate: 2023-08-09T20:01:40.131+01:00
           hippotranslation:id: 29f7255a-eaaf-4cfe-8c4c-095423031152
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -202,6 +216,9 @@
             /hee:assetData:
               jcr:primaryType: hippo:mirror
               hippo:docbase: 7e13bd69-b4d5-461a-8564-e0436ba5813e
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
       /reasonable-adjustments-policy---publication-1:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1078,16 +1095,23 @@
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
         jcr:uuid: 126cc010-dbdd-4149-bc68-68312a63fc2f
         hippo:name: Higher Specialist Scientist Training - Publication landing
-        hippo:versionHistory: a515f498-3074-48e8-bc69-9f773ae8d431
+        hippo:versionHistory: f9113900-f07c-4701-aa28-df67def728dc
         /higher-specialist-scientist-training---publication-landing[1]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 73871551-caa4-4b43-8501-6ca011e09c7a
+          hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation,
+            pre_employment, learning_disability_and_autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning,
+            workforce_transformation, pre_employment, learning_disability_and_autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
+          hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
-          hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
-          hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
-            pre_employment, careers]
-          hee:publicationType: consultation
           hee:readTime: '10'
           hee:subtitle: HSST Recruitment
           hee:summary: This is the job advertisement for recruitment to the HSST programme
@@ -1101,7 +1125,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:23:22.091Z
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.997+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1131,15 +1155,25 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /higher-specialist-scientist-training---publication-landing[2]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable', 'mix:versionable']
           jcr:uuid: e1650153-5391-4632-9d27-7965b47ce4fa
+          hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation,
+            pre_employment, learning_disability_and_autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning,
+            workforce_transformation, pre_employment, learning_disability_and_autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
+          hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
-          hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
-          hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
-            pre_employment, careers]
-          hee:publicationType: consultation
           hee:readTime: '10'
           hee:subtitle: HSST Recruitment
           hee:summary: This is the job advertisement for recruitment to the HSST programme
@@ -1153,7 +1187,7 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:36:05.299Z
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.963+01:00
           hippostdpubwf:lastModifiedBy: admin
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
@@ -1183,15 +1217,25 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
         /higher-specialist-scientist-training---publication-landing[3]:
           jcr:primaryType: hee:publicationLandingPage
-          jcr:mixinTypes: ['mix:referenceable']
+          jcr:mixinTypes: ['hippotaxonomy:classifiable', 'mix:referenceable']
           jcr:uuid: 7204e177-bb3e-4ced-be5c-89ae36034711
+          hee:globalTaxonomyHealthcareTopics: [workforce_planning, workforce_transformation,
+            pre_employment, learning_disability_and_autism, careers]
+          hee:globalTaxonomyHealthcareTopics__with_ancestors: [workforce_planning,
+            workforce_transformation, pre_employment, learning_disability_and_autism,
+            careers]
+          hee:globalTaxonomyProfessions: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyProfessions__with_ancestors: [healthcare_scientists, public_health_professionals]
+          hee:globalTaxonomyPublicationType: [consultation]
+          hee:globalTaxonomyPublicationType__with_ancestors: [consultation]
+          hee:hideAuthorContactDetails: false
+          hee:otherFormatsEmail: contact.other_document_formats@hee.nhs.uk
           hee:publicationDate: 2022-11-28T00:00:00Z
-          hee:publicationProfessions: [healthcare_scientists, public_health_professionals]
-          hee:publicationTopics: [workforce_planning, workforce_transformation, learning_disability_and_autism,
-            pre_employment, careers]
-          hee:publicationType: consultation
           hee:readTime: '10'
           hee:subtitle: HSST Recruitment
           hee:summary: This is the job advertisement for recruitment to the HSST programme
@@ -1205,9 +1249,9 @@
           hippostd:transferable: false
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2022-11-28T21:23:22.091Z
-          hippostdpubwf:lastModificationDate: 2022-11-28T21:36:05.299Z
+          hippostdpubwf:lastModificationDate: 2023-08-07T15:03:36.963+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2022-11-28T21:53:36.327Z
+          hippostdpubwf:publicationDate: 2023-08-07T15:03:39.789+01:00
           hippotranslation:id: 377227c3-25e1-4ded-83cd-7b04d6f9f404
           hippotranslation:locale: en
           /hee:logoGroup:
@@ -1236,6 +1280,9 @@
             jcr:encoding: UTF-8
             jcr:lastModified: 2008-03-26T12:03:00+01:00
             jcr:mimeType: application/vnd.hippo.blank
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
       /higher-specialist-scientist-training---publication:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

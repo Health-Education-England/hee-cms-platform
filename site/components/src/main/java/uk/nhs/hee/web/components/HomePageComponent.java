@@ -4,6 +4,7 @@ import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.onehippo.cms7.essentials.components.EssentialsContentComponent;
 import uk.nhs.hee.web.beans.HomePage;
+import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
@@ -26,5 +27,6 @@ public class HomePageComponent extends EssentialsContentComponent {
         modelToValueListMap.forEach(request::setModel);
 
         request.setAttribute("tableComponentService", new TableComponentService());
+        request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
     }
 }

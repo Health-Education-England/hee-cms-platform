@@ -8,7 +8,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Built With
 
-* [BloomReach DXP 15.2.3](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
+* [BloomReach DXP 15.3.0](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
 * [brCloud](https://www.bloomreach.com/en/products/experience-manager/cloud-cms) - Bloomreach Cloud Managed Hosting
 
 ## Getting Started
@@ -128,9 +128,9 @@ mvn checkstyle:checkstyle
 ### Locations for front end prototype css and js
 To manually update the css and javascript files with the those built with [HEE prototype kit](https://github.com/Health-Education-England/hee-prototypes):
 
-- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\nhsuk-4.1.0.min.css
+- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\nhsuk-7.0.0.min.css
 - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\css\hee.min.css
-- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\nhsuk-4.1.0.min.js
+- \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\nhsuk-7.0.0.min.js
 - \hee-cms-platform\repository-data\webfiles\src\main\resources\site\js\hee.min.js
 
 ## Building a project distribution

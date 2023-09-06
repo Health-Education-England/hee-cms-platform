@@ -14,7 +14,7 @@
     <!-- Page meta data: END -->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-4.1.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-7.0.0.min.css'/>" type="text/css"/>
     <link rel="stylesheet" href="<@hst.webfile path='/css/hee.min.css'/>" type="text/css"/>
     <#if hstRequest.requestContext.channelManagerPreviewRequest>
       <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
@@ -64,7 +64,7 @@
     <@hst.include ref="footer"/>
 
     <!-- Scripts -->
-    <script src="<@hst.webfile path='/js/nhsuk-4.1.0.min.js'/>" defer></script>
+    <script src="<@hst.webfile path='/js/nhsuk-7.0.0.min.js'/>" defer></script>
     <script src="<@hst.webfile path='/js/hee.min.js'/>" defer></script>
     <@hst.headContributions categoryIncludes="htmlBodyEnd, scripts" xhtml=true/>
   </body>

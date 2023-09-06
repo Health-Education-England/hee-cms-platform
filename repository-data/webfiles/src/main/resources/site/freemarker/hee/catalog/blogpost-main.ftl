@@ -83,6 +83,9 @@
                         <#case "uk.nhs.hee.web.beans.RichTextReference">
                             <@hst.html hippohtml=block.richTextBlock.html/>
                             <#break>
+                        <#case "uk.nhs.hee.web.beans.InsetReference">
+                            <@hee.inset inset=block/>
+                            <#break>
                         <#case "uk.nhs.hee.web.beans.Contact">
                             <@hee.contact block=block/>
                             <#break>
@@ -115,6 +118,9 @@
                             <#break>
                         <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
                             <@hee.warningCallout block=block/>
+                            <#break>
+                        <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                            <@hee.featuredContent block=block/>
                             <#break>
                         <#default>
                     </#switch>
@@ -176,7 +182,7 @@
                         <div>
                             ${comment.message}
                         </div>
-                        <div class="nhsuk-review-date nhsuk-u-margin-top-3">
+                        <div class="hee-review-date nhsuk-u-margin-top-3">
                             <@fmt.message key="comment.posted_on"/> ${comment.postedDate.getTime()?date?string["${datePattern}"]}
                         </div>
                     </div>

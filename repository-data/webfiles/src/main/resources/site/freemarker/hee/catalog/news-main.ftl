@@ -84,6 +84,9 @@
                             <#case "uk.nhs.hee.web.beans.RichTextReference">
                                 <@hst.html hippohtml=block.richTextBlock.html/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.InsetReference">
+                                <@hee.inset inset=block/>
+                                <#break>
                             <#case "uk.nhs.hee.web.beans.Contact">
                                 <@hee.contact block=block/>
                                 <#break>
@@ -122,6 +125,9 @@
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.StatementCardReference">
                                 <@hee.statementCard block=block/>
+                                <#break>
+                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                                <@hee.featuredContent block=block/>
                                 <#break>
                             <#default>
                         </#switch>

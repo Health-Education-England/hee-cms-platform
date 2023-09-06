@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 96bdcaa9-7068-4489-9537-6897d6212459
+          jcr:uuid: c51acf26-3436-46d0-87b3-9dde9f67fe64
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -69,5 +69,6 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: ''
+              ckeditor.config.appended.json: '{ stylesSet: "styles_without_h1:./styles_without_h1.js"
+                }'
               ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'

@@ -18,14 +18,16 @@ definitions:
         as an Author in the CMS. A person cannot be multiple authors. Please select
         a different person.'
       hee:numeric-validator: Please enter a number
-      hee:mandatory-publication-professions-or-topics-validator: Please select at
-        least one option from either Professions or Topics
+      hee:mandatory-professions-or-topics-validator: Please select at
+        least one option from either professions or healthcare topics
       hee:phone-number-validator#uk-country-code-error: Please remove UK country code
         prefix '+44' from the phone number
       hee:phone-number-validator#invalid-phone-number: Please enter a valid phone
         number containing 10 digits (excluding trunk[0]/country code[44] prefixes)
         (e.g. 123 456 7891)
       hee:banner-phase-name-validator: Please choose a Phase
+      hee:unique-guidance-page-validator: Guidance pages added to the Application
+        information section can only appear once in the list
       hee:unique-web-publications-validator: '''${PublicationPageDocumentDisplayName}''
         already exists as a Web publication for another Publication landing page document
         in the CMS. A Publication page cannot be multiple Web publications. Please
@@ -43,7 +45,6 @@ definitions:
         the Method chosen is ‘Related’'
       hee:mandatory-featured-documents-validator#content-type-and-featured-document-type-mismatch: The
         selected Featured documents must be of the chosen Content type
-      hee:google-map-embed-code-validator: Please enter a valid Google map embed code
       hee:mandatory-training-journey-validator: When 'Training journey summary' field
         is filled in, you must select at least one link from either 'Prerequisite'
         or 'Optional Route'
@@ -54,6 +55,30 @@ definitions:
         either select a navigation card or remove the unused navigation card selector
       hee:image-link-content-block-validator: Please select an image
       hee:html-content-block-validator: Enter some text
+      hee:mandatory-training-journey-validator#summary-empty: Please enter Training
+        journey summary value
+      hee:google-map-embed-code-validator#multiple-iframe-elements-error: Enter one
+        embed code only
+      hee:google-map-embed-code-validator#non-iframe-elements-error: Non iframe-based
+        embed codes aren't supported
+      hee:google-map-embed-code-validator#does-not-match-embed-code-src-prefixes-error: 'Embed
+        code (source) src must start with one of the following supported prefixes:
+        ${supportedEmbedSrcPrefixes}'
+      hee:google-map-embed-code-validator#invalid-embed-code-error: Enter a valid
+        embed code
+      hee:media-embed-code-validator#multiple-iframe-elements-error: Enter one embed
+        code only
+      hee:media-embed-code-validator#non-iframe-elements-error: Non iframe-based embed
+        codes aren't supported
+      hee:media-embed-code-validator#does-not-match-embed-code-src-prefixes-error: 'Embed
+        code (source) src must start with one of the following supported prefixes:
+        ${supportedEmbedSrcPrefixes}'
+      hee:media-embed-code-validator#invalid-embed-code-error: Enter a valid embed
+        code
+      hee:google-map-embed-code-validator#invalid-iframe-tag-error: Enter a valid
+        'iframe' embed tag
+      hee:media-embed-code-validator#invalid-iframe-tag-error: Enter a valid 'iframe'
+        embed tag
     /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
       jcr:primaryType: hipposys:resourcebundles
       /en:

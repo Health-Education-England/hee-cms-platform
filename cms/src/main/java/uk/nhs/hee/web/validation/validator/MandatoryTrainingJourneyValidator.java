@@ -17,6 +17,7 @@ import javax.jcr.Node;
 import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
 import java.util.List;
+import java.util.ArrayList;
 import java.util.Optional;
 
 /**
@@ -36,17 +37,23 @@ public class MandatoryTrainingJourneyValidator implements Validator<Node> {
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
         try {
             //Get the list of nodes from prerequisites and optional routes
-            final List<Node> prerequisiteNodes = IteratorUtils.<Node>toList(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE));
-            final List<Node> optionRoutesNodes = IteratorUtils.<Node>toList(node.getNodes(PROPERTY_HEE_TRAINING_JOURNEY_OPTIONS));
+            final List<String> prerequisiteNodes = ValidationHelper.getDocBases(node, PROPERTY_HEE_TRAINING_JOURNEY_PREREQUISITE);
+            final List<String> optionRoutesNodes = ValidationHelper.getDocBases(node, PROPERTY_HEE_TRAINING_JOURNEY_OPTIONS);
 
             //if Sumary is not empty, some prerequisite or optional routes link is needed
             //also check if the first node has a valid link to a document. 
             if (!StringUtils.isEmpty(node.getProperty(PROPERTY_HEE_TRAINING_JOURNEY_SUMMARY).getString())
-                    && (optionRoutesNodes.size()==0?true:optionRoutesNodes.get(0).getProperty(HippoNodeType.HIPPO_DOCBASE).getString().equals(JcrConstants.ROOT_NODE_ID))
-                    && (prerequisiteNodes.size()==0?true:prerequisiteNodes.get(0).getProperty(HippoNodeType.HIPPO_DOCBASE).getString().equals(JcrConstants.ROOT_NODE_ID))
+                    && optionRoutesNodes.size()==0 && prerequisiteNodes.size()==0
                     ){
 
                 return Optional.of(context.createViolation());
+            }
+
+            if (StringUtils.isEmpty(node.getProperty(PROPERTY_HEE_TRAINING_JOURNEY_SUMMARY).getString())
+                    && (optionRoutesNodes.size()!=0 || prerequisiteNodes.size()!=0)
+            ){
+
+                return Optional.of(context.createViolation("summary-empty"));
             }
         } catch (final RepositoryException e) {
             LOGGER.warn(
@@ -61,4 +68,6 @@ public class MandatoryTrainingJourneyValidator implements Validator<Node> {
 
         return Optional.empty();
     }
+
+
 }

@@ -2,7 +2,7 @@
 <#include "../../include/imports.ftl">
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
-<#include "../macros/back-link.ftl">
+<#include "../macros/publication-partial-info.ftl">
 <#include "../utils/date-util.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
@@ -14,10 +14,10 @@
     </@hst.link>
 
     <div class="hee-card--details__item">
-        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.assetData.asset.filename}">
+        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.title}">
             <div class="hee-resources__wrapper">
                 <#--  File name  -->
-                <span class="hee-resources__text">${assetLink.assetData.asset.filename?keep_before_last(".")}</span>
+                <span class="hee-resources__text">${assetLink.title}</span>
 
                 <#--  File size: START  -->
                 <#if (assetLink.assetData.asset.lengthMB > 1)>
@@ -77,9 +77,6 @@
                                 <#case "uk.nhs.hee.web.beans.RichTextReference">
                                     <@hst.html hippohtml=block.richTextBlock.html/>
                                     <#break>
-                                <#case "uk.nhs.hee.web.beans.AnchorLinks">
-                                    <@hee.anchorLinks anchor=block/>
-                                    <#break>
                                 <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
                                     <@hee.media media=block/>
                                     <#break>
@@ -135,7 +132,7 @@
 
                 <#--  Publication Info: START  -->
                 <div class="hee-card hee-card--details">
-                    <h3>Publication Info</h3>
+                    <h3>Publication info</h3>
 
                     <#--  Published date  -->
                     <div class="hee-card--details__item">
@@ -151,47 +148,11 @@
 
 
                     <#if landingPage??>
-                        <#--  Publication type  -->
-                        <div class="hee-card--details__item">
-                            <span>Publication Type:</span>
-                            <#if publicationListingPageURL?has_content>
-                                <a href=${publicationListingPageURL}?publicationType=${landingPage.publicationType}>${publicationTypeMap[landingPage.publicationType]}</a>
-                            <#else>
-                                ${publicationTypeMap[landingPage.publicationType]}
-                            </#if>
-                        </div>
-
-                        <#--  Publication professions  -->
-                        <#if landingPage.publicationProfessions?has_content>
-                            <div class="hee-card--details__item">
-                                <span>Professions:</span>
-                                <#if publicationListingPageURL?has_content>
-                                    <#list landingPage.publicationProfessions as profession>
-                                        <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
-                                    </#list>
-                                <#else>
-                                    <#list landingPage.publicationProfessions as profession>
-                                        ${publicationProfessionMap[profession]}<#sep>, </#sep>
-                                    </#list>
-                                </#if>
-                            </div>
-                        </#if>
-
-                        <#--  Publication topics  -->
-                        <#if landingPage.publicationTopics?has_content>
-                            <div class="hee-card--details__item">
-                                <span>Topics:</span>
-                                <#if publicationListingPageURL?has_content>
-                                    <#list landingPage.publicationTopics as topic>
-                                        <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
-                                    </#list>
-                                <#else>
-                                    <#list landingPage.publicationTopics as topic>
-                                        ${publicationTopicMap[topic]}<#sep>, </#sep>
-                                    </#list>
-                                </#if>
-                            </div>
-                        </#if>
+                        <#-- Publication info partial [publication type, professions and topics] -->
+                        <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
+                            publicationTypeTaxClass=landingPage.globalTaxonomyPublicationType!
+                            professionTaxClass=landingPage.globalTaxonomyProfessions!
+                            topicTaxClass=landingPage.globalTaxonomyHealthcareTopics!/>
                     </#if>
                 </div>
                 <#--  Publication Info: END  -->

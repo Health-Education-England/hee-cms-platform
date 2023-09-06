@@ -26,79 +26,101 @@
 
 <#macro renderCheckboxGroup name titleKey itemMap selectedItemList facet>
     <div class="nhsuk-filter__group">
+        <#--  Clear link  -->
+        <@fmt.message key="filter.clear.label" var="clearLabel"/>
+        <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
+
         <@fmt.message key="${titleKey}" var="filterTitle"/>
-        <a class="nhsuk-filter__group__clear " href="#">Clear</a>
         <@checkboxGroup title="${filterTitle}" name="${name}" items=itemMap selectedItemsList=selectedItemList facet=facet! />
     </div>
 </#macro>
 
 <#if document??>
-    <#if document.microHero??>
-        <@microHero microHeroImage=document.microHero />
-    </#if>
-    <main id="maincontent" role="main" class="page page--leftbar">
-        <div class="page__header">
+    <main class="page page--leftbar" id="maincontent" role="main">
+        <#--  Main header: START  -->
+        <div class="page__header${(document.microHero?has_content)?then(' has-microhero', '')}">
+            <#--  Micro hero  -->
+            <#if document.microHero??>
+                <@microHero microHeroImage=document.microHero />
+            </#if>
+
             <div class="nhsuk-width-container">
-                <#--  Title & subtitle  -->
+                <#--  Title  -->
                 <h1>${document.title}</h1>
+
+                <#--  Subtitle  -->
                 <span class="nhsuk-caption-xl">${document.subtitle}</span>
+
                 <#--  Summary  -->
-                <#if document.summary??>
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                <#if document.summary?has_content>
+                    <p class="nhsuk-lede-text">
+                        <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
+                    </p>
                 </#if>
             </div>
         </div>
+        <#--  Main header: END  -->
 
-        <#--  Filters  -->
-        <div class="nhsuk-width-container">
-            <div class="page__layout">
-                <aside class="page__leftbar">
-                    <#-- Filters -->
-                    <@hst.renderURL var="pagelink"/>
-                    <form class="nhsuk-filter nhsuk-filter--js" method="get" action="${pagelink}">
-                        <@fmt.message key="filters.label" var="filtersLabel"/>
-                        <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
+        <#--  Main content: START  -->
+        <div class="page__layout nhsuk-width-container">
+            <#--  Left bar: START  -->
+            <aside class="page__leftbar">
+                <#--  Search filters: START  -->
+                <@hst.renderURL var="pageLink"/>
+                <form class="nhsuk-filter" method="get" action="${pageLink}">
+                    <@fmt.message key="filters.label" var="filtersLabel"/>
+                    <p class="nhsuk-filter__title nhsuk-heading-l">${filtersLabel}</p>
 
-                        <div class="nhsuk-filter__groups">
-                            <#--  Renders Publication type checkbox filter  -->
-                            <@renderCheckboxGroup name="publicationType" titleKey="publication.type" itemMap=publicationTypeMap selectedItemList=selectedPublicationTypes facet=publicationTypeFacet! />
+                    <#--  Filter group: START  -->
+                    <div class="nhsuk-filter__groups">
+                        <#--  Publication type filter  -->
+                        <@renderCheckboxGroup name="publicationType" titleKey="publication.type" itemMap=publicationTypeMap selectedItemList=selectedPublicationTypes facet=publicationTypeFacet! />
 
-                            <#--  Renders Publication professions checkbox filter  -->
-                            <@renderCheckboxGroup name="publicationProfession" titleKey="publication.profession" itemMap=publicationProfessionMap selectedItemList=selectedPublicationProfessions facet=publicationProfessionFacet! />
+                        <#--  Publication professions filter  -->
+                        <@renderCheckboxGroup name="publicationProfession" titleKey="publication.profession" itemMap=publicationProfessionMap selectedItemList=selectedPublicationProfessions facet=publicationProfessionFacet! />
 
-                            <#--  Renders Publication topics checkbox filter  -->
-                            <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=publicationTopicMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
-                        </div>
-                        <input type="hidden" name="sortBy" value="${selectedSortOrder}">
-                    </form>
-                    <#-- End Filters -->
-                </aside>
+                        <#--  Publication topics filter  -->
+                        <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=publicationTopicMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
+                    </div>
+                    <#--  Filter group: END  -->
 
-                <div class="page__main">
+                    <input type="hidden" name="sortBy" value="${selectedSortOrder}">
+                    <button class="nhsuk-button nhsuk-filter__submit" data-module="nhsuk-button" type="submit" hidden> Update results </button>
+                </form>
+                <#--  Search filters: END  -->
+            </aside>
+            <#--  Left bar: END  -->
+
+            <#--  Main sections: START  -->
+            <div class="page__main">
+                <div class="page__content">
                     <div class="hee-listing">
+                        <#--  Search result summary: START  -->
                         <div class="hee-listing__summary">
-                            <#-- Results number -->
+                            <#--  Result count: START  -->
                             <div class="hee-listing__count">
                                 <@fmt.message key="results.count.text" var="resultsCountText"/>
-                                <h2 class="nhsuk-listing__title nhsuk-heading-l">
+                                <h2 class="hee-listing__title nhsuk-heading-l">
                                     ${pageable.total} ${resultsCountText}
                                 </h2>
                             </div>
-                            <#-- End Results number -->
+                            <#--  Result count: END  -->
 
-                            <#-- Sort DropDown-->
+                            <#--  Search sort dropdown: START  -->
                             <div class="hee-listing__filter">
-                                <@hst.renderURL var="pagelink" />
-                                <form method="get" class="hee-listing__filter__sort" action="${pagelink}">
-
+                                <@hst.renderURL var="pageLink" />
+                                <form method="get" class="hee-listing__filter__sort" action="${pageLink}">
+                                    <#--  Publication type hidden input  -->
                                     <#list selectedPublicationTypes as publicationType>
                                         <input type="hidden" name="publicationType" value="${publicationType}">
                                     </#list>
 
+                                    <#--  Publication topics hidden inputs  -->
                                     <#list selectedPublicationTopics as publicationTopic>
                                         <input type="hidden" name="publicationTopic" value="${publicationTopic}">
                                     </#list>
 
+                                    <#--  Publication professions hidden inputs  -->
                                     <#list selectedPublicationProfessions as publicationProfession>
                                         <input type="hidden" name="publicationProfession" value="${publicationProfession}">
                                     </#list>
@@ -109,23 +131,29 @@
                                     <@fmt.message key="sort.option.az" var="sortByAZ"/>
                                     <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortByNewestLabel}", "asc":"${sortByOldestLabel}" } />
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
+
+                                    <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit" hidden> Update </button>
                                 </form>
                             </div>
-                            <#-- End Sort DropDown -->
+                            <#--  Search sort dropdown: END  -->
                         </div>
+                        <#--  Search result summary: END  -->
+
+                        <#if pageable??>
+                            <#--  Search results: START  -->
+                            <div class="hee-listing__results">
+                                <@publicationListItem items=pageable.items/>
+                            </div>
+                            <#--  Search results: END  -->
+
+                            <#--  Pagination  -->
+                            <#include "../../include/pagination-nhs.ftl">
+                        </#if>
                     </div>
-
-                    <#if pageable??>
-                        <#--  Search results  -->
-                        <div class="hee-listing__results">
-                            <@publicationListItem items=pageable.items publicationTypeMap=publicationTypeMap/>
-                        </div>
-
-                        <#--  Pagination  -->
-                        <#include "../../include/pagination-nhs.ftl">
-                    </#if>
                 </div>
             </div>
+            <#--  Main sections: END  -->
         </div>
+        <#--  Main content: END  -->
     </main>
 </#if>

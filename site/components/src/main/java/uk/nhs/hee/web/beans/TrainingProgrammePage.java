@@ -3,11 +3,16 @@ package uk.nhs.hee.web.beans;
 import org.onehippo.cms7.essentials.dashboard.annotations.HippoEssentialsGenerated;
 import org.hippoecm.hst.content.beans.Node;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
-import uk.nhs.hee.web.beans.ImageSetWithCaption;
-import org.hippoecm.hst.content.beans.standard.HippoHtml;
-import java.util.List;
+import org.onehippo.taxonomy.contentbean.TaxonomyClassification;
+import uk.nhs.hee.web.constants.HEETaxonomy;
+import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 
-/**
+import java.util.List;
+import java.util.Calendar;
+
+import javax.jcr.RepositoryException;
+
+/** 
  * TODO: Beanwriter: Failed to create getter for node type: hippo:compound
  */
 @HippoEssentialsGenerated(internalName = "hee:trainingProgrammePage")
@@ -38,16 +43,52 @@ public class TrainingProgrammePage extends BaseDocument {
         return getLinkedBean("hee:cardImage", ImageSetWithCaption.class);
     }
 
-    public List<?> getRegionsBlocks() {
-        return getChildBeansByName("hee:regions");
-    }
-
     public List<?> getOverviewBlocks() {
         return getChildBeansByName("hee:overview");
     }
 
     public <T extends HippoBean> List<T> getRightHandBlocks() {
         return getChildBeansByName("hee:rightHandBlocks");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:discipline")
+    public String getDiscipline() {
+        return getSingleProperty("hee:discipline");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:recruitmentFormat")
+    public String getRecruitmentFormat() {
+        return getSingleProperty("hee:recruitmentFormat");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:duration")
+    public Long getDuration() {
+        return getSingleProperty("hee:duration");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:fillRate")
+    public Long getFillRate() {
+        return getSingleProperty("hee:fillRate");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:opening")
+    public Calendar getOpening() {
+        return getSingleProperty("hee:opening");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:closing")
+    public Calendar getClosing() {
+        return getSingleProperty("hee:closing");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:competitionRatio")
+    public Double getCompetitionRatio() {
+        return getSingleProperty("hee:competitionRatio");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:applicationInformation")
+    public List<Guidance> getApplicationInformation() {
+        return getLinkedBeans("hee:applicationInformation", Guidance.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneySummary")
@@ -57,12 +98,50 @@ public class TrainingProgrammePage extends BaseDocument {
 
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyPrerequisites")
     public List<HippoBean> getTrainingJourneyPrerequisites() {
-        return getLinkedBeans("hee:trainingJourneyPrerequisites",
-                HippoBean.class);
+        return getLinkedBeans("hee:trainingJourneyPrerequisites", HippoBean.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:trainingJourneyOptions")
     public List<HippoBean> getTrainingJourneyOptions() {
         return getLinkedBeans("hee:trainingJourneyOptions", HippoBean.class);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonTitle")
+    public String getApplicationButtonTitle() {
+        return getSingleProperty("hee:applicationButtonTitle");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:applicationButtonLink")
+    public String getApplicationButtonLink() {
+        return getSingleProperty("hee:applicationButtonLink");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyProfessions",
+                HEETaxonomy.HEE_GLOBAL_PROFESSIONS);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyHealthcareTopics() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyHealthcareTopics",
+                HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyTrainingType", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyTrainingType() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyTrainingType",
+                HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 }

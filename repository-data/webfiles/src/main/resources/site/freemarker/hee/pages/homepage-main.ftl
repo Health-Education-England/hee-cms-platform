@@ -8,7 +8,7 @@
 <#if document??>
     <main class="page page--fullwidth" id="maincontent" role="main">
         <#--  Main header: START  -->
-        <div class="page__header has-microhero">
+        <div class="page__header has-nhsukhero">
             <#--  Hero: START  -->
             <section class="nhsuk-hero nhsuk-hero--image nhsuk-hero--image-description" style="background-image: url('<@hst.link hippobean=document.heroImage />');">
                 <div class="nhsuk-hero__overlay">
@@ -98,5 +98,12 @@
             </div>
         </div>
         <#--  Main content: END  -->
+        <#if document.featuredContentBlock??>
+            <section class="page__feature">
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document maxCards=3/>
+                </div>
+            </section>
+        </#if>
     </main>
 </#if>

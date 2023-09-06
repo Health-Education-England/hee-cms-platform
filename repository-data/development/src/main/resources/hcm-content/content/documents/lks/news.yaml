@@ -12,13 +12,19 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 36a67992-dbec-4649-a43c-150643316a93
     hippo:name: Record number of GPs accepted on training placements
-    hippo:versionHistory: eb1569b7-2e18-4834-b5b3-a7233f1d77cf
+    hippo:versionHistory: b7435810-ffba-4894-a761-39a2fa6c2241
     /record-number-of-gps-accepted-on-training-placements[1]:
       jcr:primaryType: hee:news
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 625c02f0-d009-44d0-b824-fa64e6ae62cd
       hee:author: Joe Bloggs
       hee:categories: []
+      hee:globalTaxonomyHealthcareTopics: []
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: []
+      hee:globalTaxonomyProfessions: [allied_health_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [allied_health_professionals]
+      hee:globalTaxonomyTags: []
+      hee:globalTaxonomyTags__with_ancestors: []
       hee:hideAuthorContactDetails: true
       hee:publicationDate: 2021-12-16T18:20:00Z
       hee:summary: A record number of new trainees have accepted placements to become
@@ -29,7 +35,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2023-06-20T16:26:41.412+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-22T13:47:18.476+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
@@ -104,13 +110,9 @@
         jcr:primaryType: hee:ActionLink
         /hee:link:
           jcr:primaryType: hee:link
-          jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 1b0c7ac9-42fc-4626-9944-d9acc2037cbe
           hee:openLinkUrlNewWindow: false
           hee:text: Action Link
           hee:url: ''
-          hippostd:holder: holder
-          hippostd:state: draft
           hippostdpubwf:createdBy: ''
           hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
           hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
@@ -131,6 +133,12 @@
       jcr:uuid: 42cc15c0-32e9-43c1-bf2b-4a561310530f
       hee:author: Joe Bloggs
       hee:categories: []
+      hee:globalTaxonomyHealthcareTopics: []
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: []
+      hee:globalTaxonomyProfessions: [allied_health_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [allied_health_professionals]
+      hee:globalTaxonomyTags: []
+      hee:globalTaxonomyTags__with_ancestors: []
       hee:hideAuthorContactDetails: true
       hee:publicationDate: 2021-12-16T18:20:00Z
       hee:summary: A record number of new trainees have accepted placements to become
@@ -141,7 +149,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2023-06-20T16:28:04.438+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-22T13:47:16.814+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
@@ -239,6 +247,12 @@
       jcr:uuid: 1582f76a-7f86-4cad-8233-5e5c52facea3
       hee:author: Joe Bloggs
       hee:categories: []
+      hee:globalTaxonomyHealthcareTopics: []
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: []
+      hee:globalTaxonomyProfessions: [allied_health_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [allied_health_professionals]
+      hee:globalTaxonomyTags: []
+      hee:globalTaxonomyTags__with_ancestors: []
       hee:hideAuthorContactDetails: true
       hee:publicationDate: 2021-12-16T18:20:00Z
       hee:summary: A record number of new trainees have accepted placements to become
@@ -249,9 +263,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-12-16T01:34:39.757Z
-      hippostdpubwf:lastModificationDate: 2023-06-20T16:28:04.438+01:00
+      hippostdpubwf:lastModificationDate: 2023-08-22T13:47:16.814+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-06-20T16:28:07.641+01:00
+      hippostdpubwf:publicationDate: 2023-08-22T14:00:23.221+01:00
       hippotranslation:id: c4bde089-d4d4-4dac-ab56-8de92a62ab41
       hippotranslation:locale: en
       /hee:relatedContent:
@@ -354,6 +368,14 @@
       jcr:uuid: 4f988973-ca43-4f09-b5b2-99ede28d74f2
       hee:author: Sam Sparks
       hee:categories: []
+      hee:globalTaxonomyHealthcareTopics: [learning_disability_and_autism, cosmetic_procedures]
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: [learning_disability_and_autism,
+        cosmetic_procedures]
+      hee:globalTaxonomyProfessions: []
+      hee:globalTaxonomyProfessions__with_ancestors: []
+      hee:globalTaxonomyTags: [resource_discovery, networking]
+      hee:globalTaxonomyTags__with_ancestors: [resource_discovery, networking]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-05-04T00:00:00+01:00
       hee:summary: Healthcare students across England are being asked to consider
         taking up bank roles to support the expansion of the Covid-19 vaccination
@@ -415,6 +437,14 @@
       jcr:uuid: 98ab13c1-3fac-41ff-ba90-f51a55d22b01
       hee:author: Sam Sparks
       hee:categories: []
+      hee:globalTaxonomyHealthcareTopics: [learning_disability_and_autism, cosmetic_procedures]
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: [learning_disability_and_autism,
+        cosmetic_procedures]
+      hee:globalTaxonomyProfessions: []
+      hee:globalTaxonomyProfessions__with_ancestors: []
+      hee:globalTaxonomyTags: [resource_discovery, networking]
+      hee:globalTaxonomyTags__with_ancestors: [resource_discovery, networking]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-05-04T00:00:00+01:00
       hee:summary: Healthcare students across England are being asked to consider
         taking up bank roles to support the expansion of the Covid-19 vaccination
@@ -476,6 +506,14 @@
       jcr:uuid: cb2ef81c-4c08-4205-9b01-3af7c6ffd713
       hee:author: Sam Sparks
       hee:categories: []
+      hee:globalTaxonomyHealthcareTopics: [learning_disability_and_autism, cosmetic_procedures]
+      hee:globalTaxonomyHealthcareTopics__with_ancestors: [learning_disability_and_autism,
+        cosmetic_procedures]
+      hee:globalTaxonomyProfessions: []
+      hee:globalTaxonomyProfessions__with_ancestors: []
+      hee:globalTaxonomyTags: [resource_discovery, networking]
+      hee:globalTaxonomyTags__with_ancestors: [resource_discovery, networking]
+      hee:hideAuthorContactDetails: false
       hee:publicationDate: 2021-05-04T00:00:00+01:00
       hee:summary: Healthcare students across England are being asked to consider
         taking up bank roles to support the expansion of the Covid-19 vaccination

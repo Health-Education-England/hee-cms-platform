@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: a3872dd8-4d4e-41f6-a170-fa10065d7de7
+          jcr:uuid: a1416b6e-c1fd-4103-bef7-6d7ce3ba0eed
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,14 +24,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /summary:
+          /subtitle:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:summary
+            hipposysedit:path: hee:subtitle
             hipposysedit:primary: false
-            hipposysedit:type: Text
+            hipposysedit:type: String
             hipposysedit:validators: [required]
           /logoGroup:
             jcr:primaryType: hipposysedit:field
@@ -58,12 +58,13 @@ definitions:
             hipposysedit:path: hee:heroImage
             hipposysedit:primary: false
             hipposysedit:type: hippogallerypicker:imagelink
-          /caption:
+            hipposysedit:validators: [required]
+          /programmeDescription:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:caption
+            hipposysedit:path: hee:programmeDescription
             hipposysedit:primary: false
             hipposysedit:type: Text
           /overview:
@@ -110,14 +111,22 @@ definitions:
             hipposysedit:path: hee:regions
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
+          /featuredContentBlock:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:featuredContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 895cb42f-adf6-4951-9df0-0d6931a276f8
+          jcr:uuid: 44de6668-3b9d-4919-9f2e-0d4263e7b345
           hee:addToAZ: false
-          hee:summary: ''
+          hee:subtitle: ''
           hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
@@ -127,7 +136,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          hee:caption: ''
+          hee:programmeDescription: ''
           /hee:logoGroup:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
@@ -140,6 +149,9 @@ definitions:
           /hee:overview:
             jcr:primaryType: hippostd:html
             hippostd:content: ''
+          /hee:featuredContentBlock:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -163,16 +175,16 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '60'
-          /summary:
+          /subtitle:
             jcr:primaryType: frontend:plugin
-            caption: Summary
-            field: summary
+            caption: Page subtitle
+            field: subtitle
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              maxlength: '185'
+              maxlength: '120'
           /heroImage:
             jcr:primaryType: frontend:plugin
             caption: Hero image
@@ -192,10 +204,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:logoGroup']
-          /caption:
+          /programmeDescription:
             jcr:primaryType: frontend:plugin
-            caption: Caption
-            field: caption
+            caption: Programme description
+            field: programmeDescription
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -208,12 +220,12 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source"
-                }'
+              ckeditor.config.appended.json: '{ removeButtons: "PickImage,Table,Source",
+                stylesSet: "styles_without_h1-h2:./styles_without_h1-h2.js" }'
           /pathways:
             jcr:primaryType: frontend:plugin
             caption: Pathways
-            compoundList: hippostd:html,hippogallerypicker:imagelink,hee:richTextReference
+            compoundList: hee:ActionLink,hee:detailsReference,hee:htmlWithoutHeadingOneAndTwo,hippogallerypicker:imagelink,hee:insetReference,hee:quoteReference,hee:richTextReference
             contentPickerType: links
             field: pathways
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -224,7 +236,7 @@ definitions:
           /trainingRoutes:
             jcr:primaryType: frontend:plugin
             caption: Training Routes
-            compoundList: hee:ActionLink,hee:blockLinksReference,hippostd:html,hee:richTextReference
+            compoundList: hee:ActionLink,hee:blockLinksReference,hee:htmlWithoutHeadingOneAndTwo,hee:richTextReference
             contentPickerType: links
             field: trainingRoutes
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -236,7 +248,7 @@ definitions:
           /support:
             jcr:primaryType: frontend:plugin
             caption: Support
-            compoundList: hee:ActionLink,hippostd:html,hee:richTextReference
+            compoundList: hee:detailsReference,hee:expanderGroupReference,hee:htmlWithoutHeadingOneAndTwo,hee:googleMapReference,hee:insetReference,hee:richTextReference
             contentPickerType: links
             field: support
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
@@ -285,3 +297,13 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
+          /featuredContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Featured content
+            field: featuredContentBlock
+            hint: Select the featured content
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:featuredContent']

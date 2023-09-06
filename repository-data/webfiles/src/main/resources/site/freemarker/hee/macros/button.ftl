@@ -26,7 +26,7 @@
             <#assign cssname=buttonTypeBySelection(button.buttonContentBlock.buttontype)>
         </#if>
         <#if link?has_content>
-				<button class="${cssname}" type="submit" onclick="location.href ='${link}'">
+				<button class="${cssname}" type="submit" data-module="nhsuk-button" onclick="location.href ='${link}'">
 					${button.buttonContentBlock.label}
 				</button>
         </#if>

@@ -15,49 +15,65 @@
 <#-- @ftlvariable name="pageable" type="org.onehippo.cms7.essentials.components.paging.Pageable" -->
 
 <#if document??>
-    <#if document.microHero??>
-        <@microHero microHeroImage=document.microHero />
-    </#if>
-    <main id="maincontent" role="main" class="nhsuk-main-wrapper" xmlns="http://www.w3.org/1999/html"
-          xmlns="http://www.w3.org/1999/html">
-        <div class="nhsuk-width-container">
-            <h1>${document.title}</h1>
-            <#if document.summary?has_content>
-                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+    <main class="page page--search" id="maincontent" role="main">
+        <#--  Main header: START  -->
+        <div class="page__header${(document.microHero?has_content)?then(' has-microhero', '')}">
+            <#--  Micro hero  -->
+            <#if document.microHero??>
+                <@microHero microHeroImage=document.microHero />
             </#if>
-            <form method="get" action="">
-                <div class="nhsuk-form-group nhsuk-header__search-form--search-results">
-                    <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
-                    <input class="nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="${searchText!''}">
-                    <button class="nhsuk-search__submit--search-results" type="submit">
-                        <span class="nhsuk-u-visually-hidden">Submit</span>
-                        <svg class="nhsuk-icon nhsuk-icon__search--search-results" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                            <path d="M19.71 18.29l-4.11-4.1a7 7 0 1 0-1.41 1.41l4.1 4.11a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 10a5 5 0 1 1 5 5 5 5 0 0 1-5-5z"></path>
-                        </svg>
-                    </button>
-                </div>
-            </form>
-            <div class="nhsuk-listing">
-                <div class="nhsuk-grid-row">
-                    <div class="nhsuk-listing__list nhsuk-grid-column-two-thirds">
-                        <div class="nhsuk-listing__summary o-flex@tablet">
-                            <#-- Results number -->
-                            <@fmt.message key="results.count.text" var="resultsCountText"/>
-                            <h2 class="nhsuk-listing__title nhsuk-heading-l o-flex__grow">
-                                ${pageable.total} ${resultsCountText}
-                            </h2>
-                            <#-- End Results number -->
-                        </div>
 
-                        <#if pageable??>
-                            <ul class="nhsuk-list nhsuk-list--border">
-                                <@searchListItem items=pageable.items/>
-                            </ul>
-                            <#include "../../include/pagination-nhs.ftl">
-                        </#if>
+            <div class="nhsuk-width-container">
+                <#--  Title  -->
+                <h1>${document.title}</h1>
+
+                <#--  Summary  -->
+                <#if document.summary?has_content>
+                    <p class="nhsuk-lede-text">
+                        <@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/>
+                    </p>
+                </#if>
+
+                <!-- Search box: START -->
+                <form class="hee-search-form" method="get" action="">
+                    <div class="hee-search-form__wrapper nhsuk-form-group">
+                        <label class="nhsuk-label nhsuk-u-visually-hidden" for="search-field">Enter a search term</label>
+                        <input class="hee-search-form__input nhsuk-input nhsuk-search__input--search-results" type="search" name="q" autocomplete="off" id="search-field" value="${searchText!''}">
+                        <button class="hee-search-form__submit" type="submit">
+                            <span class="nhsuk-u-visually-hidden">Submit</span>
+                            <svg class="hee-search-form__icon nhsuk-icon" width="14" height="14" viewBox="-5 -5 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10C3 13.866 6.13401 17 10 17Z" stroke="#F0F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.9531 14.95L19.0032 19.0001" stroke="#F0F4F5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
                     </div>
-                </div>
+                </form>
+                <!-- Search box: END -->
             </div>
         </div>
+        <#--  Main header: END  -->
+
+        <#--  Main sections: START  -->
+        <div class="page__main nhsuk-width-container">
+            <div class="hee-search-listing">
+                <#--  Search result summary: START  -->
+                <@fmt.message key="results.count.text" var="resultsCountText"/>
+                <#--  Result count  -->
+                <h2>${pageable.total} ${resultsCountText}</h2>
+                <#--  Search result summary: END  -->
+
+                <#if pageable??>
+                    <#--  Search results: START  -->
+                    <div class="hee-search-listing__items">
+                        <@searchListItem items=pageable.items/>
+                    </div>
+                    <#--  Search results: END  -->
+
+                    <#--  Pagination  -->
+                    <#include "../../include/pagination-nhs.ftl">
+                </#if>
+            </div>
+        </div>
+        <#--  Main sections: END  -->
     </main>
 </#if>

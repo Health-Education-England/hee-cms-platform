@@ -1,0 +1,28 @@
+? /hst:hst/hst:configurations/lks/hst:workspace/hst:pages/visual-regression-vr-collection-and-listing-pages-vr-search-listing-page-contentpage
+: jcr:primaryType: hst:component
+  hst:lastmodified: 2023-06-29T11:25:18.531+05:30
+  hst:referencecomponent: hst:abstractpages/base
+  /main:
+    jcr:primaryType: hst:component
+    hst:componentclassname: uk.nhs.hee.web.components.SearchResultsComponent
+    hst:parameternames: [document, invalidSearchTerms]
+    hst:parametervalues: [listing-pages/search-results, 'cheapfifa23coins,fifa2022,seo4now']
+    hst:template: searchresults-main
+  /header:
+    jcr:primaryType: hst:component
+    /top:
+      jcr:primaryType: hst:component
+      /multi-org-logo:
+        jcr:primaryType: hst:containercomponent
+        hippo:identifier: f2a42c7a-42e2-45a0-bd69-a31516459acf
+        hst:label: Multi org logo
+        hst:lastmodified: 2023-06-29T11:25:50.563+05:30
+        hst:xtype: hst.vbox
+        /multi-org-logo:
+          jcr:primaryType: hst:containeritemcomponent
+          hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
+          hst:iconpath: images/catalog-component-icons/carousel.svg
+          hst:label: Multi org logo
+          hst:parameternames: [document]
+          hst:parametervalues: [visual-regression/collection-pages/vr-search-listing-page]
+          hst:template: multi-org-logo

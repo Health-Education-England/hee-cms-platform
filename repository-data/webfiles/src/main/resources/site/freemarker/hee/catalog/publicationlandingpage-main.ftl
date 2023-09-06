@@ -4,6 +4,7 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/author-cards.ftl">
 <#include "../macros/internal-link.ftl">
+<#include "../macros/publication-partial-info.ftl">
 <#include '../utils/author-util.ftl'>
 <#include '../utils/date-util.ftl'>
 <#include "../utils/document-formats.ftl">
@@ -123,15 +124,20 @@
                     </#if>
                     <#--  Documents section: END  -->
 
-                    <h2>Other formats</h2>
-                    <div class="hee-publication-doc">
-                        <p>If you need documents in a different format like accessible PDF,&nbsp;
-                        large print, easy read, audio recording or braille please email&nbsp;
-                        <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a></p>
-                    </div>
+                    <#--  Other document formats: START  -->
+                    <#if document.otherFormatsEmail?has_content>
+                        <h2>Other formats</h2>
+                        <div class="hee-publication-doc">
+                            <p>If you need documents in a different format like accessible PDF,
+                                large print, easy read, audio recording or braille please email
+                            <a href="mailto:${document.otherFormatsEmail}">${document.otherFormatsEmail}</a>.</p>
+                        </div>
+                    </#if>
+                    <#--  Other document formats: END  -->
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
+
                 </div>
             </div>
             <#--  Main sections: END  -->
@@ -140,7 +146,7 @@
             <aside class="page__rightbar">
                 <#--  Publication Info section: START  -->
                 <div class="hee-card hee-card--details">
-                    <h3>Publication Info</h3>
+                    <h3>Publication info</h3>
 
                     <#--  Published date  -->
                     <div class="hee-card--details__item">
@@ -152,47 +158,12 @@
                         <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
                     </div>
 
-                    <#--  Publication type  -->
-                    <div class="hee-card--details__item">
-                        <span>Publication Type:</span>
-                        <#if publicationListingPageURL?has_content>
-                            <a href=${publicationListingPageURL}?publicationType=${document.publicationType}>${publicationTypeMap[document.publicationType]}</a>
-                        <#else>
-                            ${publicationTypeMap[document.publicationType]}
-                        </#if>
-                    </div>
 
-                    <#--  Publication professions  -->
-                    <#if document.publicationProfessions?has_content>
-                        <div class="hee-card--details__item">
-                            <span>Professions:</span>
-                            <#if publicationListingPageURL?has_content>
-                                <#list document.publicationProfessions as profession>
-                                    <a href=${publicationListingPageURL}?publicationProfession=${profession}>${publicationProfessionMap[profession]}</a><#sep>, </#sep>
-                                </#list>
-                            <#else>
-                                <#list document.publicationProfessions as profession>
-                                    ${publicationProfessionMap[profession]}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </div>
-                        </#if>
-
-                    <#--  Publication topics  -->
-                    <#if document.publicationTopics?has_content>
-                        <div class="hee-card--details__item">
-                            <span>Topics:</span>
-                            <#if publicationListingPageURL?has_content>
-                                <#list document.publicationTopics as topic>
-                                    <a href=${publicationListingPageURL}?publicationTopic=${topic}>${publicationTopicMap[topic]}</a><#sep>, </#sep>
-                                </#list>
-                            <#else>
-                                <#list document.publicationTopics as topic>
-                                    ${publicationTopicMap[topic]}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </div>
-                    </#if>
+                    <#-- Publication info partial [publication type, professions and topics] -->
+                    <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
+                        publicationTypeTaxClass=document.globalTaxonomyPublicationType!
+                        professionTaxClass=document.globalTaxonomyProfessions!
+                        topicTaxClass=document.globalTaxonomyHealthcareTopics!/>
 
                     <#--  Read time  -->
                     <div class="hee-card--details__item">
@@ -203,6 +174,17 @@
             </aside>
             <#--  Sidebar sections: END  -->
         </div>
+
+        <#-- Related content -->
+        <#if document.featuredContentBlock??>
+            <section class="page__feature">
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document maxCards=3/>
+                </div>
+            </section>
+        </#if>
+        <#-- Related content: END -->
+
         <#--  Main content: END  -->
     </main>
 </#if>
