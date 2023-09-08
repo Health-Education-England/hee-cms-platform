@@ -56,7 +56,6 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
 
             // Locate single fields and get their Values
             doModelUpdateForValueListField(trainingProgramPage.getDiscipline(), request, ValueListIdentifier.CLINICAL_DISCIPLINE);
-            doModelUpdateForValueListField(trainingProgramPage.getRecruitmentFormat(), request, ValueListIdentifier.RECRUITMENT_FORMAT);
 
             // Build the maps of repeating Values
             Map<String, Map<String, String>> modelToValueListMap = ContentBlocksUtils.getValueListMaps(pageContentBlocks);

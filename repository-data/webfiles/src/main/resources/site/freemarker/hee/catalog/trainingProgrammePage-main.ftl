@@ -75,10 +75,6 @@
                                 <#--  Training type  -->
                                 <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?has_content>
                                     <@programmeSummaryRow rowTitle="Training type">
-                                        <#--  The following block can be used when training listing page is available  -->
-                                        <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?trainingType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
-                                            ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                                        </a>  -->
                                         ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
                                     </@programmeSummaryRow>
                                 </#if>
@@ -87,9 +83,6 @@
                                 <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?has_content>
                                     <@programmeSummaryRow rowTitle="Professions">
                                         <#--  The following block can be used when training listing page is available  -->
-                                        <#--  <#list document.globalTaxonomyProfessions.taxonomyValues as category>
-                                            <a href=${publicationListingPageURL}?profession=${category.key}>${category.label}</a><#sep>, </#sep>
-                                        </#list>  -->
                                         <#list document.globalTaxonomyProfessions.taxonomyValues as category>
                                             ${category.label}<#sep>, </#sep>
                                         </#list>
@@ -121,16 +114,18 @@
                                 </#if>
 
                                 <#--  Recruitment format  -->
-                                <#if recruitmentFormat?has_content>
+                                <#if document.globalRecruitmentFormat??
+                                        && document.globalRecruitmentFormat.taxonomyValues?has_content
+                                        && document.globalRecruitmentFormat.taxonomyValues[0].label != 'N/A'>
                                     <@programmeSummaryRow rowTitle="Recruitment format">
-                                        ${recruitmentFormat}
+                                        ${document.globalRecruitmentFormat.taxonomyValues[0].label}
                                     </@programmeSummaryRow>
                                 </#if>
 
                                 <#--  Duration  -->
-                                <#if recruitmentFormat?has_content>
+                                <#if document.duration?has_content>
                                     <@programmeSummaryRow rowTitle="Duration">
-                                        ${document.duration} months
+                                        ${document.duration} month<#if document.duration gt 1>s</#if>
                                     </@programmeSummaryRow>
                                 </#if>
 
