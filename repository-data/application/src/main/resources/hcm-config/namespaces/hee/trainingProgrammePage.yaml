@@ -11,12 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 7c2d263d-436e-47a7-a1e7-e64bdec69643
+          jcr:uuid: 4c93943d-5a03-4cc9-be14-ed663b825b2c
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           hipposysedit:validators: ['hee:mandatory-professions-or-topics-validator',
-                                    'hee:mandatory-training-journey-validator', 'hee:unique-guidance-page-validator']
+            'hee:mandatory-training-journey-validator', 'hee:unique-guidance-page-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -84,14 +84,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: DynamicDropdown
             hipposysedit:validators: [required]
-          /recruitmentFormat:
+          /globalRecruitmentFormat:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
-            hipposysedit:multiple: false
+            hipposysedit:multiple: true
             hipposysedit:ordered: false
-            hipposysedit:path: hee:recruitmentFormat
+            hipposysedit:path: hee:globalRecruitmentFormat
             hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
+            hipposysedit:type: Taxonomy
             hipposysedit:validators: [required]
           /duration:
             jcr:primaryType: hipposysedit:field
@@ -224,7 +224,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: badb255c-dcc0-4cb0-bad5-ac99069a4f21
+          jcr:uuid: 39ee8574-c639-43e2-bcd8-91bebf39ce94
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -239,7 +239,6 @@ definitions:
           hee:discipline: ''
           hee:fillRate: 0
           hee:opening: 0001-01-01T12:00:00Z
-          hee:recruitmentFormat: ''
           hee:competitionRatio: 0.0
           hee:trainingJourneySummary: ''
           hee:applicationButtonTitle: ''
@@ -372,8 +371,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Professions
             field: globalTaxonomyProfessions
-            hint: Choose at least one relevant profession and/or healthcare topic
-              for this content
+            hint: Select professions relevant to this training programme
             plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -383,8 +381,7 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
             field: globalTaxonomyHealthcareTopics
-            hint: Choose at least one relevant profession and/or healthcare topic
-              for this content
+            hint: Select relevant topics
             plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -402,18 +399,16 @@ definitions:
               sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
               sortOrder: ascending
               source: /content/documents/administration/valuelists/training-clinical-discipline
-          /recruitmentFormat:
+          /globalRecruitmentFormat:
             jcr:primaryType: frontend:plugin
             caption: Recruitment Format
-            field: recruitmentFormat
+            field: globalRecruitmentFormat
             hint: Please select the training type
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              sortOrder: ascending
-              source: /content/documents/administration/valuelists/training-recruitment-format
+              taxonomy.name: GlobalRecruitmentFormat
           /duration:
             jcr:primaryType: frontend:plugin
             caption: Duration

@@ -18,32 +18,33 @@
       jcr:uuid: c10adc7a-4906-4441-970c-dbd7be3e69cf
       hee:applicationButtonLink: http://www.google.com
       hee:applicationButtonTitle: Application button
-      hee:closing: 2025-09-01T13:29:00+05:30
-      hee:competitionRatio: 2.56
+      hee:closing: 0001-01-01T12:00:00Z
       hee:discipline: ophthalmology
-      hee:duration: 24
-      hee:fillRate: 75
+      hee:duration: 2
+      hee:fillRate: 23
+      hee:globalRecruitmentFormat: [n_a]
+      hee:globalRecruitmentFormat__with_ancestors: [n_a]
       hee:globalTaxonomyHealthcareTopics: []
       hee:globalTaxonomyHealthcareTopics__with_ancestors: []
-      hee:globalTaxonomyProfessions: [dental_professionals, clinical_manager, nurses,
-        district_nurse]
-      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals, management_professionals,
-        clinical_manager, nurses, district_nurse]
-      hee:globalTaxonomyTrainingType: [formal_training]
-      hee:globalTaxonomyTrainingType__with_ancestors: [formal_training]
-      hee:opening: 2023-09-01T13:29:00+05:30
+      hee:globalTaxonomyProfessions: [dental_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals]
+      hee:globalTaxonomyTrainingType: [core]
+      hee:globalTaxonomyTrainingType__with_ancestors: [core]
+      hee:opening: 0001-01-01T12:00:00Z
       hee:professions: []
       hee:recruitmentFormat: standard
       hee:summary: Summary for training programme page
       hee:title: Training Programme Page
       hee:topics: []
       hee:trainingJourneySummary: Training journey summary
+      hee:trainingType: core
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-30T17:36:34.473+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-31T14:22:53.028+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-08T06:18:10.263+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 0e4f50a9-4101-4078-ba02-437bc48f43df
       hippotranslation:locale: en
@@ -62,7 +63,7 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:overview:
+      /hee:overview[1]:
         jcr:primaryType: hee:appliesToBoxReference
         /hee:appliesToContentBlock:
           jcr:primaryType: hippo:mirror
@@ -95,38 +96,68 @@
       /hee:featuredContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+      /hee:overview[2]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:overview[3]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /hee:overview[4]:
+        jcr:primaryType: hee:expanderTableReference
+        /hee:expanderTableContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
+      /hee:overview[5]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 35a8e7f3-89aa-432c-9352-77d2f66fda7b
+      /hee:overview[6]:
+        jcr:primaryType: hee:tabsReference
+        /hee:tabsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 01128cc5-221f-4894-a953-22acb3f8b2a7
+      /hee:overview[7]:
+        jcr:primaryType: hee:googleMapReference
+        /hee:googleMapContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
     /training-programmes-page[2]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: a6783064-188f-499f-849f-e4a7ad959885
       hee:applicationButtonLink: http://www.google.com
       hee:applicationButtonTitle: Application button
-      hee:closing: 2025-09-01T13:29:00+05:30
-      hee:competitionRatio: 2.56
+      hee:closing: 0001-01-01T12:00:00Z
       hee:discipline: ophthalmology
-      hee:duration: 24
-      hee:fillRate: 75
+      hee:duration: 2
+      hee:fillRate: 23
+      hee:globalRecruitmentFormat: [n_a]
+      hee:globalRecruitmentFormat__with_ancestors: [n_a]
       hee:globalTaxonomyHealthcareTopics: []
       hee:globalTaxonomyHealthcareTopics__with_ancestors: []
-      hee:globalTaxonomyProfessions: [dental_professionals, clinical_manager, nurses,
-        district_nurse]
-      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals, management_professionals,
-        clinical_manager, nurses, district_nurse]
-      hee:globalTaxonomyTrainingType: [formal_training]
-      hee:globalTaxonomyTrainingType__with_ancestors: [formal_training]
-      hee:opening: 2023-09-01T13:29:00+05:30
+      hee:globalTaxonomyProfessions: [dental_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals]
+      hee:globalTaxonomyTrainingType: [core]
+      hee:globalTaxonomyTrainingType__with_ancestors: [core]
+      hee:opening: 0001-01-01T12:00:00Z
       hee:professions: []
       hee:recruitmentFormat: standard
       hee:summary: Summary for training programme page
       hee:title: Training Programme Page
       hee:topics: []
       hee:trainingJourneySummary: Training journey summary
+      hee:trainingType: core
       hippo:availability: [preview]
       hippostd:retainable: false
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-30T17:36:34.473+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-31T14:22:52.951+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-06T18:50:56.800+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 0e4f50a9-4101-4078-ba02-437bc48f43df
       hippotranslation:locale: en
@@ -145,7 +176,7 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:overview:
+      /hee:overview[1]:
         jcr:primaryType: hee:appliesToBoxReference
         /hee:appliesToContentBlock:
           jcr:primaryType: hippo:mirror
@@ -178,40 +209,70 @@
       /hee:featuredContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+      /hee:overview[2]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:overview[3]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /hee:overview[4]:
+        jcr:primaryType: hee:expanderTableReference
+        /hee:expanderTableContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
+      /hee:overview[5]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 35a8e7f3-89aa-432c-9352-77d2f66fda7b
+      /hee:overview[6]:
+        jcr:primaryType: hee:tabsReference
+        /hee:tabsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 01128cc5-221f-4894-a953-22acb3f8b2a7
+      /hee:overview[7]:
+        jcr:primaryType: hee:googleMapReference
+        /hee:googleMapContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
     /training-programmes-page[3]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: b48a7187-875c-4ea3-9b9c-fe171c9ac688
       hee:applicationButtonLink: http://www.google.com
       hee:applicationButtonTitle: Application button
-      hee:closing: 2025-09-01T13:29:00+05:30
-      hee:competitionRatio: 2.56
+      hee:closing: 0001-01-01T12:00:00Z
       hee:discipline: ophthalmology
-      hee:duration: 24
-      hee:fillRate: 75
+      hee:duration: 2
+      hee:fillRate: 23
+      hee:globalRecruitmentFormat: [n_a]
+      hee:globalRecruitmentFormat__with_ancestors: [n_a]
       hee:globalTaxonomyHealthcareTopics: []
       hee:globalTaxonomyHealthcareTopics__with_ancestors: []
-      hee:globalTaxonomyProfessions: [dental_professionals, clinical_manager, nurses,
-        district_nurse]
-      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals, management_professionals,
-        clinical_manager, nurses, district_nurse]
-      hee:globalTaxonomyTrainingType: [formal_training]
-      hee:globalTaxonomyTrainingType__with_ancestors: [formal_training]
-      hee:opening: 2023-09-01T13:29:00+05:30
+      hee:globalTaxonomyProfessions: [dental_professionals]
+      hee:globalTaxonomyProfessions__with_ancestors: [dental_professionals]
+      hee:globalTaxonomyTrainingType: [core]
+      hee:globalTaxonomyTrainingType__with_ancestors: [core]
+      hee:opening: 0001-01-01T12:00:00Z
       hee:professions: []
       hee:recruitmentFormat: standard
       hee:summary: Summary for training programme page
       hee:title: Training Programme Page
       hee:topics: []
       hee:trainingJourneySummary: Training journey summary
+      hee:trainingType: core
       hippo:availability: [live]
       hippostd:retainable: false
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-05-30T17:36:34.473+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-31T14:22:52.951+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-06T18:50:56.800+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-08-31T14:22:56.680+01:00
+      hippostdpubwf:publicationDate: 2023-09-06T18:50:59.237+01:00
       hippotranslation:id: 0e4f50a9-4101-4078-ba02-437bc48f43df
       hippotranslation:locale: en
       /hee:microHero:
@@ -229,7 +290,7 @@
         hippo:facets: []
         hippo:modes: []
         hippo:values: []
-      /hee:overview:
+      /hee:overview[1]:
         jcr:primaryType: hee:appliesToBoxReference
         /hee:appliesToContentBlock:
           jcr:primaryType: hippo:mirror
@@ -262,3 +323,33 @@
       /hee:featuredContentBlock:
         jcr:primaryType: hippo:mirror
         hippo:docbase: 91a74faa-0fb9-4a0c-ac70-ed3becedd670
+      /hee:overview[2]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
+      /hee:overview[3]:
+        jcr:primaryType: hee:tableReference
+        /hee:tabledataContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 94afb585-a7a3-4eb9-a2fd-0836aec4d05a
+      /hee:overview[4]:
+        jcr:primaryType: hee:expanderTableReference
+        /hee:expanderTableContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 4c72c1f9-22a7-4819-be39-f1cf1c54e21a
+      /hee:overview[5]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 35a8e7f3-89aa-432c-9352-77d2f66fda7b
+      /hee:overview[6]:
+        jcr:primaryType: hee:tabsReference
+        /hee:tabsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 01128cc5-221f-4894-a953-22acb3f8b2a7
+      /hee:overview[7]:
+        jcr:primaryType: hee:googleMapReference
+        /hee:googleMapContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: 9f09cb7d-5099-4dba-8683-fc453dfdcb16
