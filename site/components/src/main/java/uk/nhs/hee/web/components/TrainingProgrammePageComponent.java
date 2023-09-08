@@ -26,33 +26,45 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
         super.doBeforeRender(request, response);
 
         final TrainingProgrammePage trainingProgramPage = request.getModel(REQUEST_ATTR_DOCUMENT);
+        Guidance currentGuidance = null;
         if (trainingProgramPage != null) {
             boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
             boolean isOverview = true;
+            boolean accessFromRootHub = true;
 
             if (accessWithGuidancePath) {
+                accessFromRootHub = false;
                 List<Guidance> guidancePages = trainingProgramPage.getApplicationInformation();
 
                 // The guidance name in URL will be resolved as "1" parameter name
                 String guidanceName = (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
 
                 if (!"overview".equals(guidanceName)) {
-                    for (int i = 0; i < guidancePages.size(); i++) {
-                        Guidance guidance = guidancePages.get(i);
+                    for (final Guidance guidance : guidancePages) {
                         if (guidance.getName().equalsIgnoreCase(guidanceName)) {
                             isOverview = false;
+                            currentGuidance = guidance;
                             request.setModel("currentGuidance", guidance);
                             break;
                         }
                     }
                 }
+            } else {
+                request.setModel("tppSiteMapItemName",
+                        request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().getValue());
             }
 
+            request.setModel("accessFromRootHub", accessFromRootHub);
             request.setModel("isOverview", isOverview);
 
             // the page content blocks needs valueLists to be set on the model
             List<HippoBean> pageContentBlocks = (List<HippoBean>) trainingProgramPage.getOverviewBlocks();
             pageContentBlocks.addAll(trainingProgramPage.getRightHandBlocks());
+
+            // Adding current (application information) guidance content blocks as well
+            if (currentGuidance != null) {
+                pageContentBlocks.addAll(currentGuidance.getContentBlocks());
+            }
 
             // Locate single fields and get their Values
             doModelUpdateForValueListField(trainingProgramPage.getDiscipline(), request, ValueListIdentifier.CLINICAL_DISCIPLINE);
