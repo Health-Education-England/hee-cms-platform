@@ -121,16 +121,18 @@
                                 </#if>
 
                                 <#--  Recruitment format  -->
-                                <#if recruitmentFormat?has_content>
+                                <#if document.globalRecruitmentFormat??
+                                        && document.globalRecruitmentFormat.taxonomyValues?has_content
+                                        && document.globalRecruitmentFormat.taxonomyValues[0].label != 'N/A'>
                                     <@programmeSummaryRow rowTitle="Recruitment format">
-                                        ${recruitmentFormat}
+                                        ${document.globalRecruitmentFormat.taxonomyValues[0].label}
                                     </@programmeSummaryRow>
                                 </#if>
 
                                 <#--  Duration  -->
-                                <#if recruitmentFormat?has_content>
+                                <#if document.duration?has_content>
                                     <@programmeSummaryRow rowTitle="Duration">
-                                        ${document.duration} months
+                                        ${document.duration} month<#if document.duration gt 1>s</#if>
                                     </@programmeSummaryRow>
                                 </#if>
 

@@ -54,9 +54,12 @@ public class TrainingProgrammePage extends BaseDocument {
         return getSingleProperty("hee:discipline");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:recruitmentFormat")
-    public String getRecruitmentFormat() {
-        return getSingleProperty("hee:recruitmentFormat");
+    @HippoEssentialsGenerated(internalName = "hee:globalRecruitmentFormat", allowModifications = false)
+    public TaxonomyClassification getGlobalRecruitmentFormat() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalRecruitmentFormat",
+                HEETaxonomy.HEE_GLOBAL_RECRUITMENT_FORMAT);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:duration")
