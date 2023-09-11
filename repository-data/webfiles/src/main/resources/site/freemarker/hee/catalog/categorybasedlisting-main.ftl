@@ -65,6 +65,7 @@
 
                     <input type="hidden" name="sortBy" value="${selectedSortOrder}">
                     <button class="nhsuk-button nhsuk-filter__submit" data-module="nhsuk-button" type="submit" hidden> Update results </button>
+                    <input data-update-flag="filter" name="results_updated" type="hidden" value="false">
                 </form>
                 <#--  Search filters: END  -->
             </aside>
@@ -73,7 +74,7 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
-                    <div class="hee-listing">
+                    <div class="hee-listing" id="results">
                         <#--  Search result summary: START  -->
                         <div class="hee-listing__summary">
                             <#--  Result count: START  -->
@@ -101,6 +102,7 @@
                                     <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
 
                                     <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit" hidden> Update </button>
+                                    <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
                                 </form>
                             </div>
                             <#--  Search sort dropdown: END  -->
