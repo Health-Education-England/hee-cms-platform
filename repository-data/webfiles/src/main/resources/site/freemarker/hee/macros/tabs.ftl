@@ -24,6 +24,7 @@
                     <#list tabs.tabsContentBlock.tabPanel as tabPanel>
                         <div class="nhsuk-tabs__panel" id="td${randPref}-panel-${tabPanel?index}" role="tabpanel" tabindex="0" aria-labelledby="td${randPref}-tab-${tabPanel?index}"${tabPanel?is_first?then('',' hidden')}>
                             <@hst.html hippohtml=tabPanel.tabBody/>
+                            <@contentBlocks panel=tabPanel/>
                         </div>
                     </#list>
                 </div>
@@ -37,6 +38,7 @@
                             </button>
                             <div class="nhsuk-tabs__panel" id="tm${randPref}-panel-${tabPanel?index}" role="tabpanel" tabindex="0" aria-labelledby="tm${randPref}-tab-${tabPanel?index}" hidden>
                                 <@hst.html hippohtml=tabPanel.tabBody/>
+                                <@contentBlocks panel=tabPanel/>
                             </div>
                         </#list>
                     </div>
@@ -44,5 +46,24 @@
 
             </div>
         </#if>
+    </#if>
+</#macro>
+
+<#macro contentBlocks panel>
+    <#if panel.contentBlocks??>
+        <#list panel.contentBlocks as block>
+            <#switch block.getClass().getName()>
+                <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                    <@hst.html hippohtml=block/>
+                    <#break>
+                <#case "uk.nhs.hee.web.beans.RichTextReference">
+                    <@hst.html hippohtml=block.richTextBlock.html/>
+                    <#break>
+                <#case "uk.nhs.hee.web.beans.ActionLink">
+                    <@hee.actionLink actionLink=block/>
+                    <#break>
+                <#default>
+            </#switch>
+        </#list>
     </#if>
 </#macro>

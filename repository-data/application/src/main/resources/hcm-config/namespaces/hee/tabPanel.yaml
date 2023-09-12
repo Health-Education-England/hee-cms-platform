@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: c51acf26-3436-46d0-87b3-9dde9f67fe64
+          jcr:uuid: 0b9bb42e-a3f4-4d90-a2cc-6951ef3fd1bb
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -33,6 +33,13 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: hippostd:html
             hipposysedit:validators: [required]
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -62,13 +69,22 @@ definitions:
               jcr:primaryType: frontend:pluginconfig
           /tabBody:
             jcr:primaryType: frontend:plugin
-            caption: Tab body
+            caption: Tab content
             field: tabBody
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ stylesSet: "styles_without_h1:./styles_without_h1.js"
-                }'
-              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Tab content objects
+            compoundList: hee:ActionLink,hippostd:html,hee:richTextReference
+            contentPickerType: links
+            field: contentBlocks
+            hint: ''
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
