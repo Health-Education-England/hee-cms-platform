@@ -76,9 +76,6 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              ckeditor.config.appended.json: '{ removeButtons:"Table",stylesSet: "styles_without_h1:./styles_without_h1.js"
-                }'
-              ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Tab content objects
