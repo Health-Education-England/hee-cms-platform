@@ -261,11 +261,12 @@ definitions:
             caption: Publication type
             field: globalTaxonomyPublicationType
             hint: Select the publication type
-            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalPublicationTypes
+              multiple: false
           /summary:
             jcr:primaryType: frontend:plugin
             caption: Summary
@@ -292,7 +293,7 @@ definitions:
             field: globalTaxonomyProfessions
             hint: Choose at least one relevant profession and/or healthcare topic
               for this content
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
@@ -303,7 +304,7 @@ definitions:
             field: globalTaxonomyHealthcareTopics
             hint: Choose at least one relevant profession and/or healthcare topic
               for this content
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

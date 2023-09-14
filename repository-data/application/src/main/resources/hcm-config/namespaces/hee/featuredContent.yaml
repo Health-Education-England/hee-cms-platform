@@ -120,11 +120,12 @@ definitions:
             field: globalTaxonomyPublicationType
             hint: 'Please select the publication type. Note: Only select a value if
               the ‘Publication Landing pages’ was selected from the Content type field'
-            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalPublicationTypes
+              multiple: false
           /description:
             jcr:primaryType: frontend:plugin
             caption: Description
@@ -164,7 +165,7 @@ definitions:
             hint: 'Please select relevant healthcare topics that you would like to
               filter. Note: Only select values where ''Related'' was selected as the
               Method'
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
@@ -176,7 +177,7 @@ definitions:
             hint: 'Please select relevant professions relevant that you would like
               to filter. Note: Only select values where ''Related'' was selected as
               the Method'
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

@@ -362,17 +362,18 @@ definitions:
             caption: Training type
             field: globalTaxonomyTrainingType
             hint: Please select the training class
-            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalTrainingTypes
+              multiple: false
           /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
             field: globalTaxonomyProfessions
             hint: Select professions relevant to this training programme
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
@@ -382,7 +383,7 @@ definitions:
             caption: Healthcare topics
             field: globalTaxonomyHealthcareTopics
             hint: Select relevant topics
-            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
@@ -404,11 +405,12 @@ definitions:
             caption: Recruitment Format
             field: globalRecruitmentFormat
             hint: Please select the training type
-            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            plugin.class: uk.nhs.hee.web.taxonomy.CustomTaxonomyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalRecruitmentFormat
+              multiple: false
           /duration:
             jcr:primaryType: frontend:plugin
             caption: Duration
