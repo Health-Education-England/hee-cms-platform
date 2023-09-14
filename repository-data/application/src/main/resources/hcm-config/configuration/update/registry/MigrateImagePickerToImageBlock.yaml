@@ -17,31 +17,32 @@ definitions:
         \ javax.jcr.Node\r\nimport javax.jcr.RepositoryException\r\nimport javax.jcr.Session\r\
         \n\r\nclass UpdaterTemplate extends BaseNodeUpdateVisitor {\r\n\r\n   boolean\
         \ doUpdate(Node node) {\r\n    log.debug \"Start updating node ${node.path}\"\
-        \r\n\r\n        try {\r\n            // get image identifier from hee:heroImage\
+        \r\n\r\n        try {\r\n            // get image identifier from hippogallerypicker:imagelink\
         \ node\r\n            String imageIdentifier = node.getProperty(\"hippo:docbase\"\
         ).getString()\r\n\r\n            // validate image identifier has the correct\
         \ format\r\n            UUID.fromString(imageIdentifier)\r\n\r\n         \
-        \   // skip heroImage nodes that have no image selected\r\n            if\
-        \ (imageIdentifier == \"cafebabe-cafe-babe-cafe-babecafebabe\") {\r\n    \
-        \            log.debug \"Skip node - image has no image selected\"\r\n   \
-        \             return false\r\n            }\r\n          \r\n            Node\
-        \ parent = node.parent\r\n          \r\n            // create new hee:contentBlocks\
-        \ node and set caption field\r\n            Node imageBlockNode = parent.addNode(\"\
-        hee:contentBlocks\", \"hee:imageBlock\")\r\n          \r\n            imageBlockNode.setProperty(\"\
-        hee:caption\",\"\")\r\n          \r\n          \r\n            // create new\
-        \ hee:imageBlock node and imageIdentifier\r\n            Node imageNode =\
-        \ imageBlockNode.addNode(\"hee:image\", \"hippogallerypicker:imagelink\")\r\
-        \n            \r\n            \r\n            imageNode.setProperty(\"hippo:docbase\"\
-        , imageIdentifier)\r\n            imageNode.setProperty(\"hippo:values\",\
-        \ new String[0])\r\n            imageNode.setProperty(\"hippo:modes\", new\
-        \ String[0])\r\n            imageNode.setProperty(\"hippo:facets\", new String[0])\r\
-        \n          \r\n          \r\n            log.debug \"Node processed with\
-        \ success ${node.path}\"\r\n          \r\n            // remove oldImage node\r\
-        \n            node.remove()\r\n            \r\n            return true\r\n\
+        \   // skip contentBlocks nodes that have no image selected\r\n          \
+        \  if (imageIdentifier == \"cafebabe-cafe-babe-cafe-babecafebabe\") {\r\n\
+        \                log.debug \"Skip node - contentBlock has no image selected\"\
+        \r\n                return false\r\n            }\r\n          \r\n      \
+        \      Node parent = node.parent\r\n          \r\n            // create new\
+        \ hee:contentBlocks node and set caption field\r\n            Node imageBlockNode\
+        \ = parent.addNode(\"hee:contentBlocks\", \"hee:imageBlock\")\r\n        \
+        \  \r\n            imageBlockNode.setProperty(\"hee:caption\",\"\")\r\n  \
+        \        \r\n          \r\n            // create new hee:imageBlock node and\
+        \ imageIdentifier\r\n            Node imageNode = imageBlockNode.addNode(\"\
+        hee:image\", \"hippogallerypicker:imagelink\")\r\n            \r\n       \
+        \     \r\n            imageNode.setProperty(\"hippo:docbase\", imageIdentifier)\r\
+        \n            imageNode.setProperty(\"hippo:values\", new String[0])\r\n \
+        \           imageNode.setProperty(\"hippo:modes\", new String[0])\r\n    \
+        \        imageNode.setProperty(\"hippo:facets\", new String[0])\r\n      \
+        \    \r\n          \r\n            log.debug \"Node processed with success\
+        \ ${node.path}\"\r\n          \r\n            // remove oldImage node\r\n\
+        \            node.remove()\r\n            \r\n            return true\r\n\
         \        } catch (IllegalArgumentException exception) {\r\n            log.error(\"\
         Invalid image identifier. \\n More details: ${exception.getStackTrace()}\"\
         )\r\n        }\r\n        catch (PathNotFoundException ignored) {\r\n    \
-        \        log.error(\"Document ${node.path} does not contain node hee:heroImage.\"\
+        \        log.error(\"Document ${node.path} does not contain node hippogallerypicker:imagelink.\"\
         )\r\n        } catch (Exception exception) {\r\n            log.error \"Exception\
         \ occurred while trying to migrate Image node for document ${node.path}\"\r\
         \n            log.error \"${exception.getStackTrace()}\"\r\n        }\r\n\r\
