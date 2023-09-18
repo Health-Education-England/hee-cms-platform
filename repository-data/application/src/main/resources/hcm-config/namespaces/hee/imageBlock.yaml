@@ -1,53 +1,48 @@
 definitions:
   config:
-    /hippo:namespaces/hee/expanderPanel:
+    /hippo:namespaces/hee/imageBlock:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 7205a482-c8ee-4f46-8305-3cade4cf7f3a
+      jcr:uuid: c718e3df-4464-42ee-a695-69260f0f1c65
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 2b1d09d3-fbb0-4a1e-bd86-08f1e31b4073
+        jcr:uuid: c060655f-f95b-4939-b1cc-98cfe03dc703
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 48d89267-4250-4e5f-9d1f-91337a07e54c
+          jcr:uuid: a595a0e9-af20-46b7-8c7a-1ec25ae5a06d
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
-          /expanderTitle:
+          /caption:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:expanderSummary
+            hipposysedit:path: hee:caption
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /expanderBody:
+          /image:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:expanderDetails
+            hipposysedit:path: hee:image
             hipposysedit:primary: false
-            hipposysedit:type: hippostd:html
+            hipposysedit:type: hippogallerypicker:imagelink
             hipposysedit:validators: [required]
-          /contentBlocks:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:multiple: true
-            hipposysedit:ordered: true
-            hipposysedit:path: hee:contentBlocks
-            hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:expanderPanel
-          hee:expanderSummary: ''
-          /hee:expanderDetails:
-            jcr:primaryType: hippostd:html
-            hippostd:content: ''
+          jcr:primaryType: hee:imageBlock
+          hee:caption: ''
+          /hee:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -59,32 +54,22 @@ definitions:
             jcr:primaryType: frontend:plugin
             item: ${cluster.id}.field
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
-          /expanderSummary:
+          /image:
             jcr:primaryType: frontend:plugin
-            caption: Summary
-            field: expanderTitle
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /expanderDetails:
-            jcr:primaryType: frontend:plugin
-            caption: Content
-            field: expanderBody
-            hint: ''
+            caption: Image
+            field: image
+            hint: Select an image
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /contentBlocks:
+              nodetypes: ['hee:imagesetWithCaption']
+          /caption:
             jcr:primaryType: frontend:plugin
-            caption: Expander content objects
-            compoundList: hee:ActionLink,hippostd:html,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference
-            contentPickerType: links
-            field: contentBlocks
-            hint: ''
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            caption: Caption
+            field: caption
+            hint: Enter text to be displayed under the image on the page
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'

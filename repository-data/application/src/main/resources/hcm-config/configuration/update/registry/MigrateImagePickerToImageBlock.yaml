@@ -1,0 +1,48 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/MigrateImagePickerToImageBlock:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Migrates 'hippogallerypicker:imagelink' as 'hee:imageBlock'
+        nodes.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hippogallerypicker:imagelink)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.commons.lang3.StringUtils\r\nimport org.hippoecm.repository.api.HippoNodeType\r\
+        \nimport org.onehippo.addon.frontend.gallerypicker.GalleryPickerNodeType\r\
+        \nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\nimport javax.jcr.Property\r\n\r\nclass MigrateImagePickerToImageBlock\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Started processing the node '${node.path}'\"\r\n\r\n\
+        \        // Skip non-content block 'hippogallerypicker:imagelink' type nodes\
+        \ (e.g. hee:heroImage, etc).\r\n        if (![\"hee:contentBlocks\", \"hee:overview\"\
+        , \"hee:pathways\"].contains(node.name)) {\r\n            log.debug \"Skipping\
+        \ '${node.path}' node\" +\r\n                    \" as it's a non-content\
+        \ block 'hippogallerypicker:imagelink' type node\"\r\n            return false\r\
+        \n        }\r\n\r\n        // Add 'hee:image' node of 'hippogallerypicker:imagelink'\
+        \ type under the content block node.\r\n        final Node imageNode = node.addNode(\"\
+        hee:image\", GalleryPickerNodeType.NT_IMAGE_LINK)\r\n\r\n        // Move the\
+        \ 'hippogallerypicker:imagelink' node type properties (e.g. hippo:docbase,\
+        \ etc)\r\n        // from the content block node to 'hee:image' child node.\r\
+        \n        for (imageLinkPropertyName in [HippoNodeType.HIPPO_DOCBASE, HippoNodeType.HIPPO_FACETS,\r\
+        \n                                       HippoNodeType.HIPPO_MODES, HippoNodeType.HIPPO_VALUES])\
+        \ {\r\n            final Property imageLinkProperty = node.getProperty(imageLinkPropertyName)\r\
+        \n\r\n            if (imageLinkProperty.isMultiple()) {\r\n              \
+        \  // Copy multi-valued property\r\n                imageNode.setProperty(imageLinkProperty.getName(),\
+        \ imageLinkProperty.getValues());\r\n            } else {\r\n            \
+        \    // Copy single-valued property\r\n                imageNode.setProperty(imageLinkProperty.getName(),\
+        \ imageLinkProperty.getValue());\r\n            }\r\n\r\n            // Finally,\
+        \ delete the property from the content block node.\r\n            imageLinkProperty.remove()\r\
+        \n        }\r\n\r\n        // Set 'hee:imageBlock' as the primary type for\
+        \ content block node\r\n        node.setPrimaryType(\"hee:imageBlock\")\r\n\
+        \        // Add an empty 'hee:caption' property for the content block node\r\
+        \n        node.setProperty(\"hee:caption\", StringUtils.EMPTY)\r\n\r\n   \
+        \     log.debug \"Successfully migrated '${node.path}' '${GalleryPickerNodeType.NT_IMAGE_LINK}'\
+        \ type node \" +\r\n                \"as 'hee:imageBlock' type node!\"\r\n\
+        \        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\
+        \n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

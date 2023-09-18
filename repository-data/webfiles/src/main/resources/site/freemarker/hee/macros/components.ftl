@@ -32,3 +32,4 @@
 <#include "expander-table.ftl">
 <#include "sticky-toc.ftl">
 <#include "guidance-detail.ftl">
+<#include "image-block.ftl">
