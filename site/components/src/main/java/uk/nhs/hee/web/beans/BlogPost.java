@@ -54,11 +54,6 @@ public class BlogPost extends BaseDocument {
         return getMultipleProperty("hee:categories");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:comments")
-    public List<BlogComment> getComments() {
-        return getChildBeansByName("hee:comments", BlogComment.class);
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:logoGroup")
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
