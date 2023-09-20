@@ -1,5 +1,6 @@
 package uk.nhs.hee.web.utils;
 
+import org.hippoecm.hst.content.beans.standard.KeyLabelValue;
 import org.hippoecm.hst.site.HstServices;
 import org.onehippo.taxonomy.api.Category;
 import org.onehippo.taxonomy.api.Taxonomy;
@@ -9,10 +10,11 @@ import uk.nhs.hee.web.constants.HEETaxonomy;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
-import java.util.HashMap;
-import java.util.List;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * A class to support the loading of taxonomy details into the display template.
@@ -27,10 +29,12 @@ public class TaxonomyTemplateUtils {
     }
 
     /**
-     * Returns {@link TaxonomyClassification} for the given {@code taxonomyPropertyName} and {@code taxonomy}.
+     * Returns {@link TaxonomyClassification} for the given {@code taxonomyPropertyName} and {@code taxonomyEnum}.
      *
+     * @param documentNode         the document {@link Node} instance from which the property
+     *                             identified by {@code taxonomyPropertyName} needs to be extracted.
      * @param taxonomyPropertyName the taxonomy field name.
-     * @param taxonomy             the taxonomy configured for the {@code taxonomyPropertyName} field.
+     * @param taxonomyNameEnum     the taxonomy configured for the {@code taxonomyPropertyName} field.
      * @return the {@link TaxonomyClassification} for the given {@code taxonomyPropertyName} and {@code taxonomy}.
      * @throws RepositoryException thrown when an error occurs while reading the {@code taxonomyPropertyName}
      *                             from the repository.
@@ -38,11 +42,11 @@ public class TaxonomyTemplateUtils {
     public static TaxonomyClassification getTaxonomyClassification(
             final Node documentNode,
             final String taxonomyPropertyName,
-            final HEETaxonomy taxonomy) throws RepositoryException {
+            final HEETaxonomy taxonomyNameEnum) throws RepositoryException {
         if (documentNode.hasProperty(taxonomyPropertyName)) {
             return new TaxonomyClassification(
                     documentNode.getProperty(taxonomyPropertyName),
-                    getTaxonomy(taxonomy.getName())
+                    getTaxonomy(taxonomyNameEnum.getName())
             );
         } else {
             return null;
@@ -50,18 +54,58 @@ public class TaxonomyTemplateUtils {
     }
 
     /**
-     * This initiates the loading of a map from the named taxonomy
+     * Returns a {@link Map} containing root categories (as key/name pairs) filtered
+     * from the given {@code taxonomyPropertyName}.
      *
-     * @param taxonomy that we are reading
-     * @param locale   that we used to enable us to find the textual value for a key
-     * @return a {@link Map} with keys and values for use in the template
+     * @param documentNode         the document {@link Node} instance from which the property
+     *                             identified by {@code taxonomyPropertyName} needs to be extracted.
+     * @param taxonomyPropertyName the taxonomy field name.
+     * @param taxonomyNameEnum     the taxonomy configured for the {@code taxonomyPropertyName} field.
+     * @return a {@link Map} containing root categories (as key/name pairs) filtered
+     * from the given {@code taxonomyPropertyName}.
+     * @throws RepositoryException thrown when an error occurs while reading the {@code taxonomyPropertyName}
+     *                             from the repository.
      */
-    public static Map<String, String> getTaxonomyAsMap(final Taxonomy taxonomy, final Locale locale) {
-        final List<? extends Category> categories = taxonomy.getCategories();
-        final Map<String, String> catsMap = new HashMap<>();
+    public static Map<String, String> getSelectedRootCategoriesAsMap(
+            final Node documentNode,
+            final String taxonomyPropertyName,
+            final HEETaxonomy taxonomyNameEnum) throws RepositoryException {
+        if (documentNode.hasProperty(taxonomyPropertyName)) {
+            final TaxonomyClassification taxonomyClassification = new TaxonomyClassification(
+                    documentNode.getProperty(taxonomyPropertyName),
+                    getTaxonomy(taxonomyNameEnum.getName())
+            );
 
-        getChildren(categories, catsMap, locale);
-        return catsMap;
+            final Map<String, String> taxonomyRootCategories = getRootCategoriesAsMap(taxonomyNameEnum.getName());
+
+            return taxonomyClassification.getTaxonomyValues().stream()
+                    .filter(keyLabelPathValue -> taxonomyRootCategories.containsKey(keyLabelPathValue.getKey()))
+                    .collect(Collectors.toMap(
+                            KeyLabelValue::getKey,
+                            keyLabelPathValue -> taxonomyRootCategories.get(keyLabelPathValue.getKey()),
+                            (v1, v2) -> v1,
+                            LinkedHashMap::new));
+        } else {
+            return Collections.emptyMap();
+        }
+    }
+
+    /**
+     * Returns a {@link Map} of root categories key/name pairs of the taxonomy identified by {@code taxonomyName}.
+     *
+     * @param taxonomyName the name of the taxonomy whose root categories needs to be returned as a {@link Map}.
+     * @return a {@link Map} of root categories key/name pairs of the taxonomy identified by {@code taxonomyName}.
+     */
+    public static Map<String, String> getRootCategoriesAsMap(final String taxonomyName) {
+        final Taxonomy taxonomy = getTaxonomy(taxonomyName);
+        if (taxonomy != null) {
+            return taxonomy.getCategories().stream()
+                    .collect(Collectors.toMap(
+                            Category::getKey, category -> category.getInfo(Locale.ENGLISH).getName())
+                    );
+        }
+
+        return Collections.emptyMap();
     }
 
     /**
@@ -74,25 +118,5 @@ public class TaxonomyTemplateUtils {
         final TaxonomyManager taxonomyManager = HstServices.getComponentManager().getComponent(
                 TaxonomyManager.class.getSimpleName(), "org.onehippo.taxonomy.contentbean");
         return taxonomyManager.getTaxonomies().getTaxonomy(taxonomyName);
-    }
-
-    /**
-     * This is a recursively called function that will iterate through a category's children
-     * and load all keys and values into the map.
-     *
-     * @param categories the list of {@link Category} whose children needs to be loaded into {@code catsMap}.
-     * @param catsMap    the {@link Map} to which the categories will be loaded.
-     * @param locale     that we used to enable us to find the textual value for a key.
-     */
-    private static void getChildren(final List<? extends Category> categories, final Map<String, String> catsMap, final Locale locale) {
-        for (final Category category : categories) {
-            final String name = category.getInfo(locale).getName();
-            final String key = category.getKey();
-            catsMap.put(key, name);
-            final List<? extends Category> childCats = category.getChildren();
-            if (childCats != null && childCats.size() > 0) {
-                getChildren(childCats, catsMap, locale);
-            }
-        }
     }
 }

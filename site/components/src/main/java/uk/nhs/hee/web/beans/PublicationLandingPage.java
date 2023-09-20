@@ -10,6 +10,7 @@ import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 import javax.jcr.RepositoryException;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 
 @HippoEssentialsGenerated(internalName = "hee:publicationLandingPage")
 @Node(jcrType = "hee:publicationLandingPage")
@@ -96,6 +97,20 @@ public class PublicationLandingPage extends BaseDocument {
                 HEETaxonomy.HEE_GLOBAL_PROFESSIONS);
     }
 
+    /**
+     * @return the root categories (as key/name pairs) filtered
+     * from {@code hee:globalTaxonomyProfessions__with_ancestors} property (derived by brXM out-of-the-box).
+     * @throws RepositoryException thrown when an error occurs while interacting with the jcr repository
+     *                             during taxonomy values processing.
+     */
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions__with_ancestors", allowModifications = false)
+    public Map<String, String> getRootGlobalTaxonomyProfessions() throws RepositoryException {
+        return TaxonomyTemplateUtils.getSelectedRootCategoriesAsMap(
+                this.getNode(),
+                "hee:globalTaxonomyProfessions__with_ancestors",
+                HEETaxonomy.HEE_GLOBAL_PROFESSIONS);
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyHealthcareTopics", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyHealthcareTopics() throws RepositoryException {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
@@ -104,11 +119,45 @@ public class PublicationLandingPage extends BaseDocument {
                 HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
     }
 
+    /**
+     * @return the root categories (as key/name pairs) filtered
+     * from {@code hee:globalTaxonomyHealthcareTopics__with_ancestors} property (derived by brXM out-of-the-box).
+     * @throws RepositoryException thrown when an error occurs while interacting with the jcr repository
+     *                             during taxonomy values processing.
+     */
+    @HippoEssentialsGenerated(
+            internalName = "hee:globalTaxonomyHealthcareTopics__with_ancestors",
+            allowModifications = false
+    )
+    public Map<String, String> getRootGlobalTaxonomyHealthcareTopics() throws RepositoryException {
+        return TaxonomyTemplateUtils.getSelectedRootCategoriesAsMap(
+                this.getNode(),
+                "hee:globalTaxonomyHealthcareTopics__with_ancestors",
+                HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS);
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyPublicationType", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyPublicationType() throws RepositoryException {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
                 this.getNode(),
                 "hee:globalTaxonomyPublicationType",
+                HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES);
+    }
+
+    /**
+     * @return the root categories (as key/name pairs) filtered
+     * from {@code hee:globalTaxonomyPublicationType__with_ancestors} property (derived by brXM out-of-the-box).
+     * @throws RepositoryException thrown when an error occurs while interacting with the jcr repository
+     *                             during taxonomy values processing.
+     */
+    @HippoEssentialsGenerated(
+            internalName = "hee:globalTaxonomyPublicationType__with_ancestors",
+            allowModifications = false
+    )
+    public Map<String, String> getRootGlobalTaxonomyPublicationType() throws RepositoryException {
+        return TaxonomyTemplateUtils.getSelectedRootCategoriesAsMap(
+                this.getNode(),
+                "hee:globalTaxonomyPublicationType__with_ancestors",
                 HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES);
     }
 }

@@ -1,10 +1,10 @@
-<#macro publicationPartialInfo publicationListingPageURL publicationTypeTaxClass professionTaxClass topicTaxClass>
+<#macro publicationPartialInfo publicationListingPageURL rootPublicationTypeMap rootProfessionMap rootTopicMap>
     <#--  Publication type  -->
-    <#if publicationTypeTaxClass?? && publicationTypeTaxClass.taxonomyValues?has_content>
+    <#if rootPublicationTypeMap?has_content>
         <div class="hee-card--details__item">
             <span>Publication type:</span>
             <#if publicationListingPageURL?has_content>
-                <a href=${publicationListingPageURL}?publicationType=${publicationTypeTaxClass.taxonomyValues[0].key}>${publicationTypeTaxClass.taxonomyValues[0].label}</a>
+                <a href=${publicationListingPageURL}?publicationType=${rootPublicationTypeMap?keys[0]}>${rootPublicationTypeMap?values[0]}</a>
             <#else>
                 ${publicationTypeTaxClass.taxonomyValues[0].label}
             </#if>
@@ -12,32 +12,32 @@
     </#if>
 
     <#--  Publication professions  -->
-    <#if professionTaxClass?? && professionTaxClass.taxonomyValues?has_content>
+    <#if rootProfessionMap?has_content>
         <div class="hee-card--details__item">
             <span>Professions:</span>
             <#if publicationListingPageURL?has_content>
-                <#list professionTaxClass.taxonomyValues as category>
-                    <a href=${publicationListingPageURL}?publicationProfession=${category.key}>${category.label}</a><#sep>, </#sep>
+                <#list rootProfessionMap as key, value>
+                    <a href=${publicationListingPageURL}?publicationProfession=${key}>${value}</a><#sep>, </#sep>
                 </#list>
             <#else>
-                <#list professionTaxClass.taxonomyValues as category>
-                    ${category.label}<#sep>, </#sep>
+                <#list rootProfessionMap?values as value>
+                    ${value}<#sep>, </#sep>
                 </#list>
             </#if>
         </div>
     </#if>
 
     <#--  Publication topics  -->
-    <#if topicTaxClass?? && topicTaxClass.taxonomyValues?has_content>
+    <#if rootTopicMap?has_content>
         <div class="hee-card--details__item">
             <span>Topics:</span>
             <#if publicationListingPageURL?has_content>
-                <#list topicTaxClass.taxonomyValues as category>
-                    <a href=${publicationListingPageURL}?publicationTopic=${category.key}>${category.label}</a><#sep>, </#sep>
+                <#list rootTopicMap as key, value>
+                    <a href=${publicationListingPageURL}?publicationTopic=${key}>${value}</a><#sep>, </#sep>
                 </#list>
             <#else>
-                <#list topicTaxClass.taxonomyValues as category>
-                    ${category.label}<#sep>, </#sep>
+                <#list rootTopicMap?values as value>
+                    ${value}<#sep>, </#sep>
                 </#list>
             </#if>
         </div>

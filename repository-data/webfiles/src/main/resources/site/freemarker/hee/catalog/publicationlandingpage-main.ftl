@@ -158,12 +158,11 @@
                         <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
                     </div>
 
-
                     <#-- Publication info partial [publication type, professions and topics] -->
                     <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
-                        publicationTypeTaxClass=document.globalTaxonomyPublicationType!
-                        professionTaxClass=document.globalTaxonomyProfessions!
-                        topicTaxClass=document.globalTaxonomyHealthcareTopics!/>
+                        rootPublicationTypeMap=document.rootGlobalTaxonomyPublicationType
+                        rootProfessionMap=document.rootGlobalTaxonomyProfessions
+                        rootTopicMap=document.rootGlobalTaxonomyHealthcareTopics/>
 
                     <#--  Read time  -->
                     <div class="hee-card--details__item">

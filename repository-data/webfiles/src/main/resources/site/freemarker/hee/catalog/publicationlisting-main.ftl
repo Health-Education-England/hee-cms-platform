@@ -17,9 +17,9 @@
 <#-- @ftlvariable name="selectedPublicationTopics" type="java.util.List" -->
 <#-- @ftlvariable name="selectedPublicationProfessions" type="java.util.List" -->
 <#-- @ftlvariable name="selectedSortOrder" type="java.lang.String" -->
-<#-- @ftlvariable name="publicationTypeMap" type="java.util.Map" -->
-<#-- @ftlvariable name="publicationTopicMap" type="java.util.Map" -->
-<#-- @ftlvariable name="publicationProfessionMap" type="java.util.Map" -->
+<#-- @ftlvariable name="publicationTypeRootCategoryMap" type="java.util.Map" -->
+<#-- @ftlvariable name="healthCareTopicRootCategoryMap" type="java.util.Map" -->
+<#-- @ftlvariable name="professionRootCategoryMap" type="java.util.Map" -->
 <#-- @ftlvariable name="publicationTypeFacet" type="org.hippoecm.hst.content.beans.standard.HippoFolderBean" -->
 <#-- @ftlvariable name="publicationTopicFacet" type="org.hippoecm.hst.content.beans.standard.HippoFolderBean" -->
 <#-- @ftlvariable name="publicationProfessionFacet" type="org.hippoecm.hst.content.beans.standard.HippoFolderBean" -->
@@ -74,13 +74,13 @@
                     <#--  Filter group: START  -->
                     <div class="nhsuk-filter__groups">
                         <#--  Publication type filter  -->
-                        <@renderCheckboxGroup name="publicationType" titleKey="publication.type" itemMap=publicationTypeMap selectedItemList=selectedPublicationTypes facet=publicationTypeFacet! />
+                        <@renderCheckboxGroup name="publicationType" titleKey="publication.type" itemMap=publicationTypeRootCategoryMap selectedItemList=selectedPublicationTypes facet=publicationTypeFacet! />
 
                         <#--  Publication professions filter  -->
-                        <@renderCheckboxGroup name="publicationProfession" titleKey="publication.profession" itemMap=publicationProfessionMap selectedItemList=selectedPublicationProfessions facet=publicationProfessionFacet! />
+                        <@renderCheckboxGroup name="publicationProfession" titleKey="publication.profession" itemMap=professionRootCategoryMap selectedItemList=selectedPublicationProfessions facet=publicationProfessionFacet! />
 
                         <#--  Publication topics filter  -->
-                        <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=publicationTopicMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
+                        <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=healthCareTopicRootCategoryMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
                     </div>
                     <#--  Filter group: END  -->
 

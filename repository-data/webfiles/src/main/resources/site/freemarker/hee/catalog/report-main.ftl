@@ -148,9 +148,10 @@
                     <#if landingPage??>
                         <#-- Publication info partial [publication type, professions and topics] -->
                         <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
-                            publicationTypeTaxClass=landingPage.globalTaxonomyPublicationType!
-                            professionTaxClass=landingPage.globalTaxonomyProfessions!
-                            topicTaxClass=landingPage.globalTaxonomyHealthcareTopics!/>
+                            rootPublicationTypeMap=landingPage.rootGlobalTaxonomyPublicationType
+                            rootProfessionMap=landingPage.rootGlobalTaxonomyProfessions
+                            rootTopicMap=landingPage.rootGlobalTaxonomyHealthcareTopics/>
+
                     </#if>
                 </div>
                 <#--  Publication Info: END  -->
