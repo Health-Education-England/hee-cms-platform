@@ -41,6 +41,11 @@ public enum HEEField {
     PUBLICATION_DATE("hee:publicationDate"),
 
     /**
+     * {@code publicationDate} field/property.
+     */
+    TRAINING_DURATION("hee:duration"),
+
+    /**
      * {@code publicationType} field/property.
      *
      * This will need to change to the taxonomy variant once all refs are removed
@@ -52,6 +57,12 @@ public enum HEEField {
      * This is the taxonomy driven version of the field that will replace the one above
      */
     HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE("hee:globalTaxonomyPublicationType"),
+
+    /**
+     * {@code trainingType} field/property.
+     */
+    HEE_GLOBAL_TAXONOMY_TRAINING_TYPE("hee:globalTaxonomyTrainingType"),
+
 
     /**
      * {@code publicationTopics} field/property.

@@ -91,6 +91,19 @@ public enum ListingPageType {
             Boolean.FALSE),
 
     /**
+     * Publication listing
+     */
+    TRAINING_LISTING(
+            "training",
+            new String[]{"hee:trainingProgrammePage"},
+            Boolean.TRUE,
+            HEEField.PUBLICATION_DATE.getName(),
+            StringUtils.EMPTY,
+            Boolean.FALSE),
+
+
+
+    /**
      * Search listing
      */
     SEARCH_LISTING(

@@ -131,6 +131,9 @@ definitions:
           /trainingprogrammepage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/trainingProgrammePage-main.ftl
+          /trainingprogrammecollection-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/trainingProgrammeCollection-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -235,6 +238,12 @@ definitions:
               hst:iconpath: _cmsinternal/images/catalog-component-icons/simple-content.svg
               hst:label: Training Programme Page
               hst:template: trainingprogrammepage-main
+            /trainingprogramme-colletion:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.TrainingProgrammeCollectionComponent
+              hst:iconpath: _cmsinternal/images/catalog-component-icons/generic-list.svg
+              hst:label: Training Programme Collection Page
+              hst:template: trainingprogrammecollection-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

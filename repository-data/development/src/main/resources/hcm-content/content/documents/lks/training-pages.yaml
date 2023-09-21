@@ -546,11 +546,12 @@
       hee:title: Title
       hee:trainingJourneySummary: ''
       hippo:availability: []
+      hippostd:holder: admin
       hippostd:retainable: false
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-23T10:53:34.569+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-25T17:18:18.305+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-19T17:07:49.282+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 8d1c3744-f15d-4863-acec-f8cfc70158e5
       hippotranslation:locale: en
@@ -572,6 +573,9 @@
       /hee:overview:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>An overview</p>
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /training-programmes-page[2]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -663,3 +667,91 @@
       /hee:overview:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>An overview</p>
+  /training-programme-collection:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: e94c7494-91d5-4cca-a131-6bea5b610ddd
+    hippo:name: Training Programme Collection
+    hippo:versionHistory: 7c465101-3267-4375-af4d-4b5bc6786a0e
+    /training-programme-collection[1]:
+      jcr:primaryType: hee:trainingProgrammeCollection
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 87ea356c-a6eb-43cd-ae3a-c27a54cad02d
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Collection Subtitle
+      hee:summary: Summary Collection
+      hee:title: Training Programme Collection
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-09-20T16:41:18.191+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-20T16:41:18.191+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: b135d11f-b430-4a2c-841e-f060fe4c4b38
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /training-programme-collection[2]:
+      jcr:primaryType: hee:trainingProgrammeCollection
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: db41063d-11f7-47b5-825c-dac9bd5c19c1
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Collection Subtitle
+      hee:summary: Summary Collection
+      hee:title: Training Programme Collection
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-09-20T16:41:18.191+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-20T16:41:42.859+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: b135d11f-b430-4a2c-841e-f060fe4c4b38
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /training-programme-collection[3]:
+      jcr:primaryType: hee:trainingProgrammeCollection
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 2ce3f352-8f74-4f68-a3b4-430ec534257f
+      hee:addToAZ: false
+      hee:pageSize: 10
+      hee:subtitle: Collection Subtitle
+      hee:summary: Summary Collection
+      hee:title: Training Programme Collection
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-09-20T16:41:18.191+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-20T16:41:42.859+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-09-20T16:41:45.207+01:00
+      hippotranslation:id: b135d11f-b430-4a2c-841e-f060fe4c4b38
+      hippotranslation:locale: en
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe

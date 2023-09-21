@@ -297,6 +297,53 @@
     </#list>
 </#macro>
 
+<#--  Lists training programme (page) result items  -->
+<#macro trainingListItem items>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+    <@fmt.message key="training.duration" var="durationLabel"/>
+    <@fmt.message key="training.type" var="trainingTypeLabel"/>
+    <@fmt.message key="training.discipline" var="disciplineLabel"/>
+
+    <#list items as item>
+        <#assign pageURL=getInternalLinkURL(item)>
+        <#if pageURL != pageNotFoundURL>
+            <div class="hee-listing-item">
+                <#--  Image  -->
+                <#if item.cardImage?has_content>
+                    <@hst.link var="imgLink" hippobean=item.cardImage/>
+                    <img class="nhsuk-image__img" src="${imgLink}" alt="${item.cardImage.description!}">
+                </#if>
+                
+                <#--  Title  -->
+                <h3><a href="${pageURL}">${item.title}</a></h3>
+
+                <div class="hee-listing-item__details">
+                    <#if item.globalTaxonomyTrainingType?? && item.globalTaxonomyTrainingType.taxonomyValues?has_content>
+                        <@listItemRow key="${trainingTypeLabel}">
+                            ${item.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                        </@listItemRow>
+                    </#if>
+                    <#if item.discipline?has_content>
+                        <@listItemRow key="${disciplineLabel}">
+                            ${item.discipline}
+                        </@listItemRow>
+                    </#if>
+
+                    <@listItemRow key="${durationLabel}">
+                        ${item.duration}
+                    </@listItemRow>
+                </div>
+                    <#--  Training details: END   -->
+
+                <#--  Summary  -->
+                <div class="hee-listing-item__summary">
+                    <@hst.html formattedText="${item.summary!?replace('\n', '<br>')}"/>
+                </div>
+            </div>
+        </#if>
+    </#list>
+</#macro>
+
 <#--  Lists search bank result items  -->
 <#macro searchbankListItem items topicMap keyTermMap providerMap>
     <#list items as item>
