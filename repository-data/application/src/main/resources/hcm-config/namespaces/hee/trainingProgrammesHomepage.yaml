@@ -89,21 +89,21 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:pathways
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
+            hipposysedit:validators: [contentblocks-validator, 'hee:image-link-content-block-validator', 'hee:html-content-block-validator']
           /trainingRoutes:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
             hipposysedit:ordered: true
             hipposysedit:path: hee:trainingRoutes
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator, required]
+            hipposysedit:validators: [contentblocks-validator, required, 'hee:html-content-block-validator']
           /support:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
             hipposysedit:ordered: true
             hipposysedit:path: hee:support
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
+            hipposysedit:validators: [contentblocks-validator, 'hee:html-content-block-validator']
           /regions:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true

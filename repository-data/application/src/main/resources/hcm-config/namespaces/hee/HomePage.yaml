@@ -21,7 +21,7 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator]
+            hipposysedit:validators: [contentblocks-validator, 'hee:content-card-content-block-validator', 'hee:image-link-content-block-validator', 'hee:html-content-block-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false

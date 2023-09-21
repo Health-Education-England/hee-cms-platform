@@ -15,6 +15,7 @@ definitions:
           hipposysedit:node: true
           hipposysedit:supertype: ['hippo:compound', 'hippostd:relaxed']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:link-validator']
           /text:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -32,6 +33,7 @@ definitions:
             hipposysedit:path: hee:url
             hipposysedit:primary: false
             hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-url-validator']
           /document:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -97,6 +99,10 @@ definitions:
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:atozPage', 'hee:blogPost', 'hee:guidance', 'hee:HomePage',
+                'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+                'hee:publicationListingPage', 'hee:report', 'hee:trainingProgrammePage',
+                'hee:trainingProgrammesHomepage']
           /url:
             jcr:primaryType: frontend:plugin
             caption: Link URL
