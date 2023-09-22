@@ -302,6 +302,7 @@
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
     <@fmt.message key="training.duration" var="durationLabel"/>
     <@fmt.message key="training.type" var="trainingTypeLabel"/>
+    <@fmt.message key="training.profession" var="trainingProfessionLabel"/>
     <@fmt.message key="training.discipline" var="disciplineLabel"/>
 
     <#list items as item>
@@ -317,7 +318,23 @@
                 <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
 
+                <#assign categories = []/>
+                <#if (item.globalTaxonomyProfessions?? && item.globalTaxonomyProfessions.taxonomyValues?has_content)>
+                    <#assign categories += item.globalTaxonomyProfessions.taxonomyValues/>
+                </#if>
+                <#if (item.globalTaxonomyHealthcareTopics?? && item.globalTaxonomyHealthcareTopics.taxonomyValues?has_content)>
+                    <#assign categories += item.globalTaxonomyHealthcareTopics.taxonomyValues/>
+                </#if>
+
+
                 <div class="hee-listing-item__details">
+                    <#if categories?has_content>
+                        <@listItemRow key="${trainingProfessionLabel}">
+                            <#list categories as category>
+                                ${category.label}<#sep>, </#sep>
+                            </#list>
+                        </@listItemRow>
+                    </#if>
                     <#if item.globalTaxonomyTrainingType?? && item.globalTaxonomyTrainingType.taxonomyValues?has_content>
                         <@listItemRow key="${trainingTypeLabel}">
                             ${item.globalTaxonomyTrainingType.taxonomyValues[0].label}
