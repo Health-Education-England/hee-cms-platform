@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/RemoveHippoStdTaggableMixinFromDocuments:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 100
+      hipposys:description: '[NWPS-1696] Removes ''hippostd:taggable'' mixin node
+        type from ''jcr:mixinTypes'' property of all documents (as part of removing
+        content-tagging plugin from the platform)'
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hippostd:taggable)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.jackrabbit.JcrConstants\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass RemoveHippoStdTaggableMixinFromDocuments\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    public static final String NODE_TYPE_TAGGABLE\
+        \ = \"hippostd:taggable\";\r\n\r\n    boolean doUpdate(Node node) {\r\n  \
+        \      log.debug \"Started processing the node '${node.path}'\"\r\n\r\n  \
+        \      node.removeMixin(NODE_TYPE_TAGGABLE)\r\n\r\n        log.debug \"Successfully\
+        \ removed '${NODE_TYPE_TAGGABLE}' mixin node type \" +\r\n               \
+        \ \"from '${JcrConstants.JCR_MIXINTYPES}' property of '${node.path}' node\"\
+        \r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
+        \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

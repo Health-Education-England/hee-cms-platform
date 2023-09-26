@@ -53,9 +53,4 @@ public class Guidance extends BaseDocument {
     public ImageSetWithCaption getMicroHero() {
         return getLinkedBean("hee:microHero", ImageSetWithCaption.class);
     }
-
-    @HippoEssentialsGenerated(internalName = "hippostd:tags")
-    public String[] getTags() {
-        return getMultipleProperty("hippostd:tags");
-    }
 }

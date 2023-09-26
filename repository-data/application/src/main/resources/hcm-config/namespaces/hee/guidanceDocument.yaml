@@ -13,8 +13,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
           jcr:uuid: b101e8b7-c48f-45fb-81e6-aa863b83d1a0
           hipposysedit:node: true
-          hipposysedit:supertype: ['hippostd:taggable', 'hippotranslation:translated',
-            'hee:basedocument', 'hippostd:relaxed']
+          hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
           /title:
             jcr:primaryType: hipposysedit:field
@@ -100,7 +99,7 @@ definitions:
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          jcr:mixinTypes: ['mix:referenceable', 'hippostd:taggable']
+          jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:summary: ''
           jcr:uuid: a23f28ca-8698-4d1c-b4c4-27a147894905
@@ -246,31 +245,3 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /tags:
-            jcr:primaryType: frontend:plugin
-            engine: ${engine}
-            mode: ${mode}
-            plugin.class: org.onehippo.forge.ecmtagging.editor.TagsPlugin
-            search.paths: /content
-            wicket.id: ${cluster.id}.left.item
-            wicket.model: ${wicket.model}
-            widget.cols: '20'
-            widget.rows: '2'
-            /yui.config:
-              jcr:primaryType: frontend:pluginconfig
-              anim.vert: true
-              container.id: tagging-autocomplete
-              schema.fields: [label, url]
-              schema.result.list: response.results
-              use.shadow: true
-              /schema.meta.fields:
-                jcr:primaryType: frontend:pluginconfig
-                totalHits: response.totalHits
-          /tagsuggest:
-            jcr:primaryType: frontend:plugin
-            engine: ${engine}
-            mode: ${mode}
-            numberOfSuggestions: 10
-            plugin.class: org.onehippo.forge.ecmtagging.editor.TagSuggestPlugin
-            wicket.id: ${cluster.id}.left.item
-            wicket.model: ${wicket.model}
