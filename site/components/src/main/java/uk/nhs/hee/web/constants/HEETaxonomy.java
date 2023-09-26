@@ -12,7 +12,9 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_TRAINING_TYPES ("GlobalTrainingTypes"),
 
-    HEE_GLOBAL_RECRUITMENT_FORMAT ("GlobalRecruitmentFormat");
+    HEE_GLOBAL_RECRUITMENT_FORMAT ("GlobalRecruitmentFormat"),
+
+    HEE_GLOBAL_CLINICAL_DISCIPLINE ("GlobalClinicalDiscipline");
 
     private final String name;
 

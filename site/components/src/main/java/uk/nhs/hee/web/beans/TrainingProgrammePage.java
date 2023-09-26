@@ -49,11 +49,6 @@ public class TrainingProgrammePage extends BaseDocument {
         return getChildBeansByName("hee:rightHandBlocks");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:discipline")
-    public String getDiscipline() {
-        return getSingleProperty("hee:discipline");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:globalRecruitmentFormat", allowModifications = false)
     public TaxonomyClassification getGlobalRecruitmentFormat() throws RepositoryException {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
@@ -139,6 +134,14 @@ public class TrainingProgrammePage extends BaseDocument {
                 this.getNode(),
                 "hee:globalTaxonomyTrainingType",
                 HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyClinicalDiscipline", allowModifications = false)
+    public TaxonomyClassification getDiscipline() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyClinicalDiscipline",
+                HEETaxonomy.HEE_GLOBAL_CLINICAL_DISCIPLINE);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
