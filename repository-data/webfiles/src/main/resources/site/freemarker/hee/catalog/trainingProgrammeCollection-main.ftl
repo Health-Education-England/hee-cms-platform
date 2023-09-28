@@ -81,6 +81,9 @@
 
                         <#--  Training topics filter  -->
                         <@renderCheckboxGroup name="trainingTopic" titleKey="training.topic" itemMap=trainingTopicMap selectedItemList=selectedTrainingTopics facet=trainingTopicFacet! />
+
+                        <#--  Training topics filter  -->
+                        <@renderCheckboxGroup name="trainingDiscipline" titleKey="training.discipline" itemMap=clinicalDisciplineMap selectedItemList=selectedClinicalDiscipline facet=trainingDisciplineFacet! />
                     </div>
                     <#--  Filter group: END  -->
 
@@ -124,6 +127,10 @@
                                     <#--  Training professions hidden inputs  -->
                                     <#list selectedTrainingProfessions as trainingProfession>
                                         <input type="hidden" name="trainingProfession" value="${trainingProfession}">
+                                    </#list>
+
+                                    <#list selectedClinicalDiscipline as trainingDiscipline>
+                                        <input type="hidden" name="trainingDiscipline" value="${trainingDiscipline}">
                                     </#list>
 
                                     <@fmt.message key="sort.label" var="sortLabel"/>

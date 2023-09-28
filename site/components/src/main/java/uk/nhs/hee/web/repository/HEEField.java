@@ -98,7 +98,9 @@ public enum HEEField {
     /**
      * {@code submittedDate} field/property.
      */
-    SUBMITTED_DATE("hee:submittedDate");
+    SUBMITTED_DATE("hee:submittedDate"),
+
+    HEE_GLOBAL_TAXONOMY_CLINICAL_DISCIPLINE("hee:globalTaxonomyClinicalDiscipline");
 
     private final String name;
 

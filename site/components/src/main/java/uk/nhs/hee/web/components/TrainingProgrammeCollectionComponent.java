@@ -34,8 +34,10 @@ public class TrainingProgrammeCollectionComponent extends ListingPageComponent {
     private static final String QUERY_PARAM_TRAINING_TOPIC = "trainingTopic";
     private static final String QUERY_PARAM_TRAINING_PROFESSION = "trainingProfession";
 
+    private static final String QUERY_PARAM_CLINICAL_DISCIPLINE = "clinicalDiscipline";
     // training facet name
     private static final String TRAINING_FACET_NAVIGATION_RELATIVE_PATH = "trainingfacets";
+
 
     /* (non-Javadoc)
      * @see uk.nhs.hee.web.components.ListingPageComponent.doBeforeRender(final HstRequest request,
@@ -52,6 +54,8 @@ public class TrainingProgrammeCollectionComponent extends ListingPageComponent {
                 HstUtils.getQueryParameterValues(request, QUERY_PARAM_TRAINING_TOPIC));
         request.setModel("selectedTrainingProfessions",
                 HstUtils.getQueryParameterValues(request, QUERY_PARAM_TRAINING_PROFESSION));
+        request.setModel("selectedClinicalDiscipline",
+                HstUtils.getQueryParameterValues(request, QUERY_PARAM_CLINICAL_DISCIPLINE));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));
 
         loadTaxonomiesIntoKeyValueMaps(request);
@@ -72,6 +76,8 @@ public class TrainingProgrammeCollectionComponent extends ListingPageComponent {
                 getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName(), locale));
         request.setModel("trainingTypeMap",
                 getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES.getName(), locale));
+        request.setModel("clinicalDisciplineMap",
+                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_CLINICAL_DISCIPLINE.getName(), locale));
     }
 
     private Map<String, String> getMapFor(Taxonomies taxonomies, String taxonomyName, Locale locale) {
@@ -111,6 +117,12 @@ public class TrainingProgrammeCollectionComponent extends ListingPageComponent {
                         HstUtils.getQueryParameterValues(request, QUERY_PARAM_TRAINING_PROFESSION),
                         HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName()
                 )
+        ).addAndFilter(
+                createOrFilter(
+                        query,
+                        HstUtils.getQueryParameterValues(request, QUERY_PARAM_CLINICAL_DISCIPLINE),
+                        HEEField.HEE_GLOBAL_TAXONOMY_CLINICAL_DISCIPLINE.getName()
+                )
         );
     }
 
@@ -144,6 +156,8 @@ public class TrainingProgrammeCollectionComponent extends ListingPageComponent {
                 request.setModel("trainingTopicFacet", folder);
             } else if (HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName().equals(folder.getName())) {
                 request.setModel("trainingProfessionFacet", folder);
+            } else if (HEEField.HEE_GLOBAL_TAXONOMY_CLINICAL_DISCIPLINE.getName().equals(folder.getName())) {
+                request.setModel("trainingDisciplineFacet", folder);
             }
         }
     }
