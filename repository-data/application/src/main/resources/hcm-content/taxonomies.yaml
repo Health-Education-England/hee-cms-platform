@@ -127,9 +127,10 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-08-23T16:46:17.798+01:00
-      hippostdpubwf:lastModificationDate: 2023-09-06T18:54:11.718+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-25T16:20:45.820+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotaxonomy:defaultLocale: en
       hippotaxonomy:locales: [en]
@@ -4664,3 +4665,228 @@
         jcr:primaryType: hippotaxonomy:category
         hippotaxonomy:key: uncoupled
         locale.en.name: Uncoupled
+  /GlobalClinicalDiscipline:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:versionInfo']
+    hippo:versionHistory: 6fb0e28e-887b-4896-9734-3261e610cd4f
+    /GlobalClinicalDiscipline[1]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:versionable']
+      jcr:uuid: 1ae5018a-4cd4-4647-bfd8-3f19173268a2
+      hippo:availability: [live]
+      hippostd:holder: admin
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-09-25T16:28:30.901+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-26T10:18:53.869+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-09-26T10:20:31.927+01:00
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /foundation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: foundation
+        locale.en.name: Foundation
+      /acute-care-common-stem:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: acute-care-common-stem
+        locale.en.name: Acute care common stem
+      /anaesthesia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: anaesthesia
+        locale.en.name: Anaesthesia
+      /dental:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental
+        locale.en.name: Dental
+      /emergency-medicine:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emergency-medicine
+        locale.en.name: Emergency medicine
+      /general-practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: general-practice
+        locale.en.name: General Practice
+      /medicine:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medicine
+        locale.en.name: Medicine
+      /obstetrics-and-gynaecology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: obstetrics-and-gynaecology
+        locale.en.name: Obstetrics and gynaecology
+      /ophthalmology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ophthalmology
+        locale.en.name: Ophthalmology
+      /paediatrics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: paediatrics
+        locale.en.name: Paediatrics
+      /pathology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pathology
+        locale.en.name: Pathology
+      /psychiatry:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: psychiatry
+        locale.en.name: Psychiatry
+      /public-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: public-health
+        locale.en.name: Public health
+      /radiology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: radiology
+        locale.en.name: Radiology
+      /surgery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: surgery
+        locale.en.name: Surgery
+    /GlobalClinicalDiscipline[2]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable', 'mix:versionable']
+      jcr:uuid: 87b16c68-8dbb-4b43-889d-c0706c14d576
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-09-25T16:28:30.901+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-26T10:18:53.869+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /foundation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: foundation
+        locale.en.name: Foundation
+      /acute-care-common-stem:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: acute-care-common-stem
+        locale.en.name: Acute care common stem
+      /anaesthesia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: anaesthesia
+        locale.en.name: Anaesthesia
+      /dental:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental
+        locale.en.name: Dental
+      /emergency-medicine:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emergency-medicine
+        locale.en.name: Emergency medicine
+      /general-practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: general-practice
+        locale.en.name: General Practice
+      /medicine:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medicine
+        locale.en.name: Medicine
+      /obstetrics-and-gynaecology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: obstetrics-and-gynaecology
+        locale.en.name: Obstetrics and gynaecology
+      /ophthalmology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ophthalmology
+        locale.en.name: Ophthalmology
+      /paediatrics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: paediatrics
+        locale.en.name: Paediatrics
+      /pathology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pathology
+        locale.en.name: Pathology
+      /psychiatry:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: psychiatry
+        locale.en.name: Psychiatry
+      /public-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: public-health
+        locale.en.name: Public health
+      /radiology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: radiology
+        locale.en.name: Radiology
+      /surgery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: surgery
+        locale.en.name: Surgery
+    /GlobalClinicalDiscipline[3]:
+      jcr:primaryType: hippotaxonomy:taxonomy
+      jcr:mixinTypes: ['hippostd:publishableSummary', 'mix:referenceable']
+      jcr:uuid: b532f5d2-097d-4431-9d6d-c6c55370f5af
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2023-09-25T16:28:30.901+01:00
+      hippostdpubwf:lastModificationDate: 2023-09-26T10:06:07.854+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotaxonomy:defaultLocale: en
+      hippotaxonomy:locales: [en]
+      /foundation:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: foundation
+        locale.en.name: Foundation
+      /acute-care-common-stem:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: acute-care-common-stem
+        locale.en.name: Acute care common stem
+      /anaesthesia:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: anaesthesia
+        locale.en.name: Anaesthesia
+      /dental:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: dental
+        locale.en.name: Dental
+      /emergency-medicine:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: emergency-medicine
+        locale.en.name: Emergency medicine
+      /general-practice:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: general-practice
+        locale.en.name: General Practice
+      /medicine:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: medicine
+        locale.en.name: Medicine
+      /obstetrics-and-gynaecology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: obstetrics-and-gynaecology
+        locale.en.name: Obstetrics and gynaecology
+      /ophthalmology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: ophthalmology
+        locale.en.name: Ophthalmology
+      /paediatrics:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: paediatrics
+        locale.en.name: Paediatrics
+      /pathology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: pathology
+        locale.en.name: Pathology
+      /psychiatry:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: psychiatry
+        locale.en.name: Psychiatry
+      /public-health:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: public-health
+        locale.en.name: Public health
+      /radiology:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: radiology
+        locale.en.name: Radiology
+      /surgery:
+        jcr:primaryType: hippotaxonomy:category
+        hippotaxonomy:key: surgery
+        locale.en.name: Surgery

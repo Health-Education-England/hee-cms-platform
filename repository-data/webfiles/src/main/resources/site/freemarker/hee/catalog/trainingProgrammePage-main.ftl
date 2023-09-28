@@ -110,13 +110,15 @@
                                 </#if>
 
                                 <#--  Discipline  -->
-                                <#if clinicalDiscipline?has_content>
-                                    <@programmeSummaryRow rowTitle="Discipline">
+                                <#if document.globalTaxonomyClinicalDiscipline?? && document.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
+                                    <@programmeSummaryRow rowTitle="Clinical discipline">
                                         <#--  The following block can be used when training listing page is available  -->
                                         <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?discipline=${document.discipline}">
                                             ${clinicalDiscipline}
                                         </a>  -->
-                                        ${clinicalDiscipline}
+                                        <#list document.globalTaxonomyClinicalDiscipline.taxonomyValues as category>
+                                            ${category.label}<#sep>, </#sep>
+                                        </#list>
                                     </@programmeSummaryRow>
                                 </#if>
 
