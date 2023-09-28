@@ -8,8 +8,10 @@
     <#else>
         <#assign cssname='nhsuk-table nhsuk-hee-table nhsuk-table-responsive'/>
     </#if>
-    <table role="table" class="${cssname}">
-        <caption class="nhsuk-table__caption">${table.tabledataContentBlock.caption}</caption>
+    <table role="table" class="${cssname}${(table.tabledataContentBlock.caption?has_content)?then(' has-caption', '')}">
+        <#if table.tabledataContentBlock.caption?has_content>
+            <caption class="nhsuk-table__caption">${table.tabledataContentBlock.caption}</caption>
+        </#if>
         <#if tableData.headerCount gt 0>
             <thead role="rowgroup" class="nhsuk-table__head">
             <tr role="row">

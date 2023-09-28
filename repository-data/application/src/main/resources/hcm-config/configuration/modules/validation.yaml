@@ -53,6 +53,12 @@ definitions:
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:mandatory-training-journey-validator:
       jcr:primaryType: hipposys:moduleconfig
       hipposys:className: uk.nhs.hee.web.validation.validator.MandatoryTrainingJourneyValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:content-card-content-block-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.ContentCardContentBlockValidator
+    /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:html-content-block-validator:
+      jcr:primaryType: hipposys:moduleconfig
+      hipposys:className: uk.nhs.hee.web.validation.validator.RichTextContentBlockValidator
     /hippo:configuration/hippo:modules/validation/hippo:moduleconfig/hee:media-embed-code-validator:
       jcr:primaryType: hipposys:moduleconfig
       embed.code.src.prefix: ['https://www.youtube.com/embed/', 'https://player.vimeo.com/video/',

@@ -1,0 +1,23 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/DeleteHippoStdTagsPropertyFromDocuments:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: '[NWPS-1696] Deletes ''hippostd:tags'' property from all
+        documents (as part of removing content-tagging plugin from the platform)'
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:script: "import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass DeleteHippoStdTagsPropertyFromDocuments\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n    public static final String PROPERTY_TAGS\
+        \ = \"hippostd:tags\";\r\n\r\n    boolean doUpdate(Node node) {\r\n      \
+        \  log.debug \"Started processing the node '${node.path}'\"\r\n\r\n      \
+        \  node.getProperty(PROPERTY_TAGS).remove()\r\n\r\n        log.debug \"Successfully\
+        \ deleted '${PROPERTY_TAGS}' property from '${node.path}' node\"\r\n     \
+        \   return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n  \
+        \      throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000
+      hipposys:query: /jcr:root/content/documents//element(*, hee:guidance)[@hippostd:tags]

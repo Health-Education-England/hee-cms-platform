@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 4c93943d-5a03-4cc9-be14-ed663b825b2c
+          jcr:uuid: 06a87c59-de2f-47db-9dba-6366d5b191d8
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -67,7 +67,7 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:overview
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator, required]
+            hipposysedit:validators: [contentblocks-validator, required, 'hee:html-content-block-validator']
           /rightHandBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -75,15 +75,6 @@ definitions:
             hipposysedit:path: hee:rightHandBlocks
             hipposysedit:type: hippo:compound
             hipposysedit:validators: [contentblocks-validator]
-          /discipline:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:discipline
-            hipposysedit:primary: false
-            hipposysedit:type: DynamicDropdown
-            hipposysedit:validators: [required]
           /globalRecruitmentFormat:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -210,7 +201,6 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyTrainingType
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
-            hipposysedit:validators: [required]
           /featuredContentBlock:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -219,12 +209,20 @@ definitions:
             hipposysedit:path: hee:featuredContentBlock
             hipposysedit:primary: false
             hipposysedit:type: hippo:mirror
+          /globalTaxonomyClinicalDiscipline:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyClinicalDiscipline
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 39ee8574-c639-43e2-bcd8-91bebf39ce94
+          jcr:uuid: ab57f9fa-c89e-4145-9806-1c71483f9298
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -236,7 +234,6 @@ definitions:
           hippotranslation:locale: ''
           hee:duration: 0
           hee:closing: 0001-01-01T12:00:00Z
-          hee:discipline: ''
           hee:fillRate: 0
           hee:opening: 0001-01-01T12:00:00Z
           hee:competitionRatio: 0.0
@@ -387,18 +384,16 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalHealthcareTopics
-          /discipline:
+          /globalTaxonomyClinicalDiscipline:
             jcr:primaryType: frontend:plugin
-            caption: Discipline
-            field: discipline
-            hint: Please select the discipline associated with this training programme
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            caption: Clinical Discipline
+            field: globalTaxonomyClinicalDiscipline
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: Please select the discipline associated with this training programme
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator
-              sortOrder: ascending
-              source: /content/documents/administration/valuelists/training-clinical-discipline
+              taxonomy.name: GlobalClinicalDiscipline
           /globalRecruitmentFormat:
             jcr:primaryType: frontend:plugin
             caption: Recruitment Format
@@ -414,15 +409,6 @@ definitions:
             caption: Duration
             field: duration
             hint: Enter the training programme duration in months (e.g. 24)
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /competitionRatio:
-            jcr:primaryType: frontend:plugin
-            caption: Competition Ratio
-            field: competitionRatio
-            hint: Please enter the training programme competition ratio
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
@@ -455,6 +441,15 @@ definitions:
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
             wicket.id: ${cluster.id}.right.item
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /competitionRatio:
+            jcr:primaryType: frontend:plugin
+            caption: Competition Ratio
+            field: competitionRatio
+            hint: Please enter the training programme competition ratio
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /fillRate:

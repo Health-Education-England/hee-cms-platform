@@ -56,7 +56,7 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator, required]
+            hipposysedit:validators: [contentblocks-validator, required, 'hee:content-card-content-block-validator', 'hee:html-content-block-validator']
           /publicationDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
