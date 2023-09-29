@@ -22,6 +22,7 @@ import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
@@ -84,7 +85,7 @@ public class TrainingProgrammeCollectionComponent extends ListingPageComponent {
         Taxonomy taxonomy = taxonomies.getTaxonomy(taxonomyName);
 
         if (taxonomy != null) {
-            return TaxonomyTemplateUtils.getTaxonomyAsMap(taxonomy, locale);
+            return new TreeMap<>(TaxonomyTemplateUtils.getTaxonomyAsMap(taxonomy, locale));
         } else {
             return new HashMap<>();
         }

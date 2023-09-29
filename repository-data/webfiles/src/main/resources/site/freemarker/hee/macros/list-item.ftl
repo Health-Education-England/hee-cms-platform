@@ -335,14 +335,14 @@
                             </#list>
                         </@listItemRow>
                     </#if>
+                    <#if item.globalTaxonomyClinicalDiscipline?? && item.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
+                        <@listItemRow key="${disciplineLabel}">
+                            ${item.globalTaxonomyClinicalDiscipline.taxonomyValues[0].label}
+                        </@listItemRow>
+                    </#if>
                     <#if item.globalTaxonomyTrainingType?? && item.globalTaxonomyTrainingType.taxonomyValues?has_content>
                         <@listItemRow key="${trainingTypeLabel}">
                             ${item.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                        </@listItemRow>
-                    </#if>
-                    <#if item.discipline?has_content>
-                        <@listItemRow key="${disciplineLabel}">
-                            ${item.discipline}
                         </@listItemRow>
                     </#if>
 
