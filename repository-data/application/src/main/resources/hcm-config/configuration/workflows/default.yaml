@@ -94,3 +94,7 @@ definitions:
           jcr:primaryType: frontend:plugin
           plugin.class: org.onehippo.cms7.channelmanager.plugins.channelactions.ChannelActionsPlugin
           wicket.id: ${item}
+    /hippo:configuration/hippo:workflows/default/handle/frontend:renderer/review:
+      onlineRequestReview.enabled: true
+    /hippo:configuration/hippo:workflows/default/handle/frontend:renderer/publication:
+      plugin.class: uk.nhs.hee.web.workflow.HEEAuthorPublicationWorkflowPlugin

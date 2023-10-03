@@ -1,5 +1,40 @@
 /content/documents/administration:
   jcr:primaryType: hippostd:folder
-  jcr:mixinTypes: ['mix:referenceable']
-  jcr:uuid: 19150e0d-a4aa-418a-beaa-47989c3cf505
-  hippostd:foldertype: [new-resource-bundle, new-untranslated-folder]
+  /review-workflow:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippo:named', 'mix:versionable']
+    jcr:uuid: 9aa84dca-8581-44b5-a620-b991b58d27a6
+    hippo:name: Review Workflow
+    hippostd:foldertype: [new-document, new-folder]
+    /internal-assign-list:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: c0abab97-8ef4-4f38-80fd-994f60bded63
+      hippo:name: internal assign list
+      /internal-assign-list:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: fbaf1959-8c4b-4849-bc80-8f1324f08029
+        hippo:availability: [live, preview]
+        hippotranslation:id: 9e23ef4d-4801-4493-8049-b773b1011e5e
+        hippotranslation:locale: inherited - from query
+    /online-review-list:
+      jcr:primaryType: hippo:handle
+      jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+      jcr:uuid: 736df49d-92a5-40d4-9a7c-05d12c3b8692
+      hippo:name: online review list
+      /online-review-list:
+        jcr:primaryType: selection:valuelist
+        jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+        jcr:uuid: 6bbcfdf7-9b60-4c29-9420-dac267378125
+        hippo:availability: [live, preview]
+        hippotranslation:id: 213ae73f-999b-494b-8710-f2b1f87bf595
+        hippotranslation:locale: inherited - from query
+        /selection:listitem[1]:
+          jcr:primaryType: selection:listitem
+          selection:key: info@onehippo.com
+          selection:label: Hippo
+        /selection:listitem[2]:
+          jcr:primaryType: selection:listitem
+          selection:key: jeff@jeff.com
+          selection:label: YP

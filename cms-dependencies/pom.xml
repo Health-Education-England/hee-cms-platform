@@ -10,7 +10,35 @@
   <packaging>pom</packaging>
   <name>HEE CMS Platform CMS Dependencies</name>
   <description>HEE CMS Platform CMS Dependencies</description>
+
+  <properties>
+      <review-workflow.version>1.2.1</review-workflow.version>
+  </properties>
+
   <dependencies>
+    <dependency>
+      <groupId>uk.nhs.hee.web</groupId>
+      <artifactId>hee-cms-workflow-notifications-email-addon</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>uk.nhs.hee.web</groupId>
+      <artifactId>hee-cms-workflow-notifications-event-handler</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bloomreach.forge.review-workflow</groupId>
+      <artifactId>review-workflow-frontend</artifactId>
+      <version>${review-workflow.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bloomreach.forge.review-workflow</groupId>
+      <artifactId>review-workflow-repository</artifactId>
+      <version>${review-workflow.version}</version>
+    </dependency>
 
     <dependency>
       <groupId>uk.nhs.hee.web</groupId>
@@ -110,6 +138,18 @@
     <dependency>
       <artifactId>hippo-addon-reporting-dashboard-repository</artifactId>
       <groupId>com.onehippo.cms7</groupId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bloomreach.forge.review-workflow</groupId>
+      <artifactId>review-workflow-frontend</artifactId>
+      <version>${review-workflow.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.bloomreach.forge.review-workflow</groupId>
+      <artifactId>review-workflow-repository</artifactId>
+      <version>${review-workflow.version}</version>
     </dependency>
   </dependencies>
 </project>

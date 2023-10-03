@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>uk.nhs.hee.web</groupId>
+        <artifactId>hee-cms-workflow-notifications</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>hee-cms-workflow-notifications-event-handler</artifactId>
+    <name>HEE CMS Platform Event Handler</name>
+
+    <properties>
+        <httpclient.version>4.5.13</httpclient.version>
+        <htmldiff.version>2.0.0</htmldiff.version>
+        <cxf-version>3.3.9</cxf-version>
+        <jaxrs.version>2.1.1</jaxrs.version>
+        <jackson-jaxrs-json-provider.version>2.10.5</jackson-jaxrs-json-provider.version>
+        <commons-lang.version>2.6</commons-lang.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>uk.nhs.hee.web</groupId>
+            <artifactId>hee-cms-workflow-notifications-email-addon</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>${commons-lang.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hippoecm</groupId>
+            <artifactId>htmldiff</artifactId>
+            <version>${htmldiff.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>${jaxrs.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-client</artifactId>
+            <version>${cxf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>${jackson-jaxrs-json-provider.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <defaultGoal>package</defaultGoal>
+        <resources>
+            <resource>
+                <filtering>false</filtering>
+                <directory>${basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.yaml</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+
+</project>

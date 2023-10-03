@@ -1,0 +1,8 @@
+<!-- Spring beans that override exsiting behavious. This bean will look for groups to whom workflow can be asssigned -->
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="org.bloomreach.forge.reviewworkflow.cms.reviewedactions.AssignableGroupsProvider"
+          class="uk.nhs.hee.web.workflow.HEEAssignableGroupsProvider"/>
+</beans>

@@ -1,0 +1,8 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/emailmodule:
+      jcr:primaryType: hipposys:module
+      hipposys:className: org.uk.nhs.hee.web.email.EmailModule
+      /hippo:moduleconfig:
+        jcr:primaryType: nt:unstructured
+        email.cmsroot: http://localhost:8080/cms
