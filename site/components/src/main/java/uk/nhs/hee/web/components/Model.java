@@ -11,11 +11,6 @@ public enum Model {
     BLOG_LISTING_PAGE_URL("blogListingPageURL"),
 
     /**
-     * Model key for Categories ValueList Map
-     */
-    CATEGORIES_VALUE_LIST_MAP("categoriesValueListMap"),
-
-    /**
      * Model key for Canonical URL
      */
     CANONICAL_URL("canonicalURL"),
