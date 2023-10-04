@@ -3,13 +3,13 @@
 <#include "../../include/page-meta-data.ftl">
 <#include "../macros/micro-hero.ftl">
 <#include "../macros/author-cards.ftl">
-<#include '../utils/author-util.ftl'>
+<#include "../macros/taxonomy-info.ftl">
 <#import "../macros/components.ftl" as hee>
+<#include "../utils/date-util.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.News" -->
-<#-- @ftlvariable name="categoriesValueListMap" type="java.util.Map" -->
 
 <#if document??>
     <main class="page page--rightbar" id="maincontent" role="main">
@@ -32,37 +32,6 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
-                    <#--  Author and published date: START  -->
-                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
-                        <@fmt.message key="publication.by" var="byLabel" />
-                        <@fmt.message key="published.on" var="publishedOnLabel"/>
-
-                        <#if document.authors?has_content>
-                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(document.authors)}</#assign>
-                        <#else>
-                            <#assign commaSeparatedAuthorNames>${document.author!}</#assign>
-                        </#if>
-
-                        ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}<#if commaSeparatedAuthorNames?has_content>, ${byLabel} ${commaSeparatedAuthorNames}</#if>
-                    </p>
-                    <#--  Author and published date: END  -->
-
-                    <#--  News categories collection link(s): START  -->
-                    <#if categoriesValueListMap?has_content>
-                        <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-                            <#if newsListingPageURL?has_content>
-                                <#list categoriesValueListMap as key, value>
-                                    <a href=${newsListingPageURL}?category=${key}>${value}</a><#sep>, </#sep>
-                                </#list>
-                                <#else>
-                                    <#list categoriesValueListMap?values as value>
-                                    ${value}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </p>
-                    </#if>
-                    <#--  News categories collection link(s): END  -->
-
                     <#--  Summary  -->
                     <#if document.summary?has_content>
                         <p class="nhsuk-body-l">
@@ -149,8 +118,43 @@
 
             <#--  Sidebar sections: START  -->
             <#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>
-                <#--  Right hand content blocks: START  -->
                 <aside class="page__rightbar">
+                    <#--  News info: START  -->
+                    <div class="hee-card hee-card--details">
+                        <h3>News info</h3>
+
+                        <#--  Published date  -->
+                        <div class="hee-card--details__item">
+                            <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
+                        </div>
+
+                        <#--  Professions  -->
+                        <@taxonomyInfo
+                            taxClass=document.globalTaxonomyProfessions!
+                            taxLabel='Professions'
+                            taxParameter='profession'
+                            multiValued=true
+                            collectionPageURL=newsListingPageURL/>
+
+                        <#--  Topics  -->
+                        <@taxonomyInfo
+                            taxClass=document.globalTaxonomyHealthcareTopics!
+                            taxLabel='Topics'
+                            taxParameter='topic'
+                            multiValued=true
+                            collectionPageURL=newsListingPageURL/>
+
+                        <#--  Tags  -->
+                        <@taxonomyInfo
+                            taxClass=document.globalTaxonomyTags!
+                            taxLabel='Tags'
+                            taxParameter='tag'
+                            multiValued=true
+                            collectionPageURL=newsListingPageURL/>
+                    </div>
+                    <#--  News info: END  -->
+
+                    <#--  Right hand content blocks: START  -->
                     <#list document.rightHandBlocks as block>
                         <#switch block.getClass().getName()>
                             <#case "uk.nhs.hee.web.beans.QuickLinks">
@@ -177,8 +181,8 @@
                             <#default>
                         </#switch>
                     </#list>
+                    <#--  Right hand content blocks: END  -->
                 </aside>
-                <#--  Right hand content blocks: END  -->
             </#if>
             <#--  Sidebar sections: END  -->
         </div>

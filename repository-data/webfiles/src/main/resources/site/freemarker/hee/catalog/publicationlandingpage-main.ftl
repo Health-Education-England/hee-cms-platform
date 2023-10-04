@@ -5,7 +5,6 @@
 <#include "../macros/author-cards.ftl">
 <#include "../macros/internal-link.ftl">
 <#include "../macros/publication-partial-info.ftl">
-<#include '../utils/author-util.ftl'>
 <#include '../utils/date-util.ftl'>
 <#include "../utils/document-formats.ftl">
 

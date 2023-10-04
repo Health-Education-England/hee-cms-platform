@@ -8,19 +8,13 @@ import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
-import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.services.FeaturedContentBlockService;
+import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
-import uk.nhs.hee.web.utils.DocumentUtils;
 import uk.nhs.hee.web.utils.HstUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 @ParametersInfo(type = BlogPostComponentInfo.class)
 public class BlogPostComponent extends EssentialsDocumentComponent {
@@ -30,7 +24,6 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
 
         final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
-            addCategoriesValueListMapToModel(request, blogPost);
             addValueListsForContentBlocks(request, blogPost);
             addBlogListingPageURLToModel(request);
 
@@ -56,33 +49,6 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         request.setModel(
                 Model.BLOG_LISTING_PAGE_URL.getKey(),
                 HstUtils.getURLByBean(hstRequestContext, blogListingPageBean, false));
-    }
-
-    /**
-     * Creates a Map that has as the key the name of the blog category and as the value the URL path
-     * to the Blog Overview page filtered by category.
-     *
-     * <p>
-     * Example: given the categories = ["data_search"],
-     * the response will be [{"Data Search", "/blogs?category=data_search" }]
-     * </p>
-     */
-    private void addCategoriesValueListMapToModel(
-            final HstRequest request,
-            final BlogPost blogPost) {
-        final List<String> blogCategories = Arrays.asList(blogPost.getCategories());
-
-        if (blogCategories.isEmpty()) {
-            return;
-        }
-        final Map<String, String> allBlogCategoriesValueListMap = ValueListUtils.getValueListMap(
-                ValueListIdentifier.BLOG_CATEGORIES.getName(), DocumentUtils.getChannel(blogPost.getPath()));
-
-        request.setModel(
-                Model.CATEGORIES_VALUE_LIST_MAP.getKey(),
-                blogCategories.stream()
-                        .filter(category -> allBlogCategoriesValueListMap.get(category) != null)
-                        .collect(Collectors.toMap(category -> category, allBlogCategoriesValueListMap::get)));
     }
 
     /**
