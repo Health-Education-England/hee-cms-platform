@@ -32,9 +32,9 @@ public class FeaturedContentBlockService {
 
                 {
                     // Uncomment during the future iteration when we add support for the following content types
-                    /*put("hee:blogPost", "blog");
-                    put("hee:caseStudy", "casestudy");
-                    put("hee:news", "news");*/
+                    //put("hee:caseStudy", "casestudy");
+                    put("hee:blogPost", "blog");
+                    put("hee:news", "news");
                     put("hee:publicationLandingPage", "publication");
                 }
             });
@@ -105,6 +105,18 @@ public class FeaturedContentBlockService {
                                         getTaxonomyValueKeysAsList(featuredContentBlock
                                                 .getGlobalTaxonomyProfessions().getTaxonomyValues()),
                                         HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName()
+                                )
+                        );
+                    }
+
+                    if (!DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE.equals(featuredContentBlock.getFeaturedContentType())
+                            && !isEmpty(featuredContentBlock.getGlobalTaxonomyTags())) {
+                        baseFilter.addAndFilter(
+                                queryAndFiltersUtils.createOrFilter(
+                                        query,
+                                        getTaxonomyValueKeysAsList(featuredContentBlock
+                                                .getGlobalTaxonomyTags().getTaxonomyValues()),
+                                        HEEField.HEE_GLOBAL_TAXONOMY_TAGS.getName()
                                 )
                         );
                     }

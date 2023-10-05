@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 16b02739-1ff3-458b-aab0-27b43201f231
+          jcr:uuid: be75cb1b-5fc3-4946-b920-9196352f5718
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -75,6 +75,14 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyProfessions
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
+          /globalTaxonomyTags:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyTags
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -87,7 +95,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: 407a6afa-8d93-4779-a105-4bae093bbae9
+          jcr:uuid: 93097ac4-901f-4a37-8d0e-6545e6feb0dc
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:featuredContentType: ''
@@ -156,7 +164,7 @@ definitions:
             maxitems: '3'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:publicationLandingPage']
+              nodetypes: ['hee:publicationLandingPage', 'hee:blogPost', 'hee:news']
           /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
@@ -181,3 +189,14 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalProfessions
+          /globalTaxonomyTags:
+            jcr:primaryType: frontend:plugin
+            caption: Tags
+            field: globalTaxonomyTags
+            hint: 'Please select relevant global tags. Note: Only select values  where  ‘Related’
+              was selected as the Method.'
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalTags

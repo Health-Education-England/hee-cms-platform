@@ -18,8 +18,8 @@ definitions:
         as an Author in the CMS. A person cannot be multiple authors. Please select
         a different person.'
       hee:numeric-validator: Please enter a number
-      hee:mandatory-professions-or-topics-validator: Please select at
-        least one option from either professions or healthcare topics
+      hee:mandatory-professions-or-topics-validator: Please select at least one option
+        from either professions or healthcare topics
       hee:phone-number-validator#uk-country-code-error: Please remove UK country code
         prefix '+44' from the phone number
       hee:phone-number-validator#invalid-phone-number: Please enter a valid phone
@@ -78,6 +78,8 @@ definitions:
         'iframe' embed tag
       hee:media-embed-code-validator#invalid-iframe-tag-error: Enter a valid 'iframe'
         embed tag
+      hee:mandatory-featured-method-validator#no-taxonomy: Please clear '${taxonomy}'
+        as it is not required for '${contentType}' content type
     /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
       jcr:primaryType: hipposys:resourcebundles
       /en:
