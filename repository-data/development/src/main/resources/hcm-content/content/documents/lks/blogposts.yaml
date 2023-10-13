@@ -11,7 +11,7 @@
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
     jcr:uuid: 93ffaaf2-ec10-4ebc-a1ca-9bc421108dd1
     hippo:name: ExpertsSearch
-    hippo:versionHistory: 82ed231f-9cd3-478c-92b5-9d54fa21074f
+    hippo:versionHistory: 11a5b8fa-8968-4ac3-b86e-6552c3e0a3f9
     /expertssearch[1]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -36,7 +36,7 @@
       hippostd:state: draft
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-20T15:02:04.910+01:00
+      hippostdpubwf:lastModificationDate: 2023-10-13T12:34:05.138+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -136,6 +136,16 @@
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[7]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:contentBlocks[8]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
     /expertssearch[2]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -160,7 +170,7 @@
       hippostd:state: unpublished
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-20T15:03:29.706+01:00
+      hippostdpubwf:lastModificationDate: 2023-10-13T12:34:41.001+01:00
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
@@ -260,6 +270,16 @@
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[7]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:contentBlocks[8]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
     /expertssearch[3]:
       jcr:primaryType: hee:blogPost
       jcr:mixinTypes: ['mix:referenceable']
@@ -284,9 +304,9 @@
       hippostd:state: published
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2021-03-31T13:40:03.121+01:00
-      hippostdpubwf:lastModificationDate: 2023-06-20T15:03:29.706+01:00
+      hippostdpubwf:lastModificationDate: 2023-10-13T12:34:41.001+01:00
       hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2023-06-20T15:03:33.638+01:00
+      hippostdpubwf:publicationDate: 2023-10-13T12:34:44.316+01:00
       hippotranslation:id: 218a718e-20bb-418f-bb6c-cd85561b56d4
       hippotranslation:locale: en
       /hee:pageLastNextReview:
@@ -385,3 +405,13 @@
         /hee:warningCalloutContentBlock:
           jcr:primaryType: hippo:mirror
           hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
+      /hee:contentBlocks[7]:
+        jcr:primaryType: hee:detailsReference
+        /hee:detailsContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: fdf33d93-cb1f-4a12-a954-c5f187e767d2
+      /hee:contentBlocks[8]:
+        jcr:primaryType: hee:expanderGroupReference
+        /hee:expanderContentBlock:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: c6a5f1d2-0b3e-4f0f-bc1a-375146b710fd
