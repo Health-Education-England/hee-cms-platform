@@ -111,6 +111,9 @@
                                 <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
                                     <@hee.featuredContent block=block/>
                                     <#break>
+                                <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                    <@hee.details block=block/>
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
