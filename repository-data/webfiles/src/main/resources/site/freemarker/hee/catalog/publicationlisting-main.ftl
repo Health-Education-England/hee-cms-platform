@@ -5,6 +5,7 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group-with-filter-count.ftl">
+<#include "../macros/selectbox-group-with-filter-count.ftl">
 <#include "../macros/micro-hero.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
@@ -15,11 +16,15 @@
 <#-- @ftlvariable name="searchText" type="java.lang.String" -->
 <#-- @ftlvariable name="selectedPublicationTypes" type="java.util.List" -->
 <#-- @ftlvariable name="selectedPublicationTopics" type="java.util.List" -->
+<#-- @ftlvariable name="selectedPublicationSubTopics" type="java.util.List" -->
 <#-- @ftlvariable name="selectedPublicationProfessions" type="java.util.List" -->
+<#-- @ftlvariable name="selectedPublicationSubProfessions" type="java.util.List" -->
 <#-- @ftlvariable name="selectedSortOrder" type="java.lang.String" -->
 <#-- @ftlvariable name="publicationTypeMap" type="java.util.Map" -->
-<#-- @ftlvariable name="publicationTopicMap" type="java.util.Map" -->
-<#-- @ftlvariable name="publicationProfessionMap" type="java.util.Map" -->
+<#-- @ftlvariable name="publicationRootTopicMap" type="java.util.Map" -->
+<#-- @ftlvariable name="publicationSubTopicMap" type="java.util.Map" -->
+<#-- @ftlvariable name="publicationRootProfessionMap" type="java.util.Map" -->
+<#-- @ftlvariable name="publicationSubProfessionMap" type="java.util.Map" -->
 <#-- @ftlvariable name="publicationTypeFacet" type="org.hippoecm.hst.content.beans.standard.HippoFolderBean" -->
 <#-- @ftlvariable name="publicationTopicFacet" type="org.hippoecm.hst.content.beans.standard.HippoFolderBean" -->
 <#-- @ftlvariable name="publicationProfessionFacet" type="org.hippoecm.hst.content.beans.standard.HippoFolderBean" -->
@@ -33,6 +38,33 @@
         <@fmt.message key="${titleKey}" var="filterTitle"/>
         <@checkboxGroup title="${filterTitle}" name="${name}" items=itemMap selectedItemsList=selectedItemList facet=facet! />
     </div>
+</#macro>
+
+<#macro renderSelectboxGroup name titleKey defaultOptionLabel itemMap selectedItemList facet level1Selectbox=true>
+    <div class="nhsuk-filter__group${(!level1Selectbox)?then(' level-two', '')}">
+        <#--  Clear link  -->
+        <@fmt.message key="filter.clear.label" var="clearLabel"/>
+        <a class="nhsuk-filter__group__clear for-select" href="#">${clearLabel}</a>
+
+        <@fmt.message key="${titleKey}" var="filterTitle"/>
+        <@selectboxGroup
+            title=filterTitle
+            name=name
+            defaultOptionLabel=defaultOptionLabel
+            items=itemMap
+            selectedItemsList=selectedItemList
+            facet=facet!
+            level1Selectbox=level1Selectbox />
+    </div>
+</#macro>
+
+<#macro renderActiveFilters selectedFilterTags filterMap>
+    <#list selectedFilterTags as tag>
+        <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${tag}">
+            <span>${filterMap[tag]}</span>
+            <a class="nhsuk-filter-tag__icon">Remove</a>
+        </div>
+    </#list>
 </#macro>
 
 <#if document??>
@@ -76,11 +108,47 @@
                         <#--  Publication type filter  -->
                         <@renderCheckboxGroup name="publicationType" titleKey="publication.type" itemMap=publicationTypeMap selectedItemList=selectedPublicationTypes facet=publicationTypeFacet! />
 
-                        <#--  Publication professions filter  -->
-                        <@renderCheckboxGroup name="publicationProfession" titleKey="publication.profession" itemMap=publicationProfessionMap selectedItemList=selectedPublicationProfessions facet=publicationProfessionFacet! />
+                        <#--  Publication professions filter: START  -->
+                        <#--  Professions  -->
+                        <@renderSelectboxGroup
+                            name="publicationProfession"
+                            titleKey="publication.profession"
+                            defaultOptionLabel="All professions"
+                            itemMap=publicationRootProfessionMap!
+                            selectedItemList=selectedPublicationProfessions
+                            facet=publicationProfessionFacet! />
 
-                        <#--  Publication topics filter  -->
-                        <@renderCheckboxGroup name="publicationTopic" titleKey="publication.topic" itemMap=publicationTopicMap selectedItemList=selectedPublicationTopics facet=publicationTopicFacet! />
+                        <#--  Sub professions  -->
+                        <@renderSelectboxGroup
+                            name="publicationSubProfession"
+                            titleKey="publication.sub_profession"
+                            defaultOptionLabel="All sub professions"
+                            itemMap=publicationSubProfessionMap!
+                            selectedItemList=selectedPublicationSubProfessions
+                            facet=publicationProfessionFacet!
+                            level1Selectbox=false />
+                        <#--  Publication professions filter: END  -->
+
+                        <#--  Publication topics filter: START  -->
+                        <#--  Topics  -->
+                        <@renderSelectboxGroup
+                            name="publicationTopic"
+                            titleKey="publication.topic"
+                            defaultOptionLabel="All topics"
+                            itemMap=publicationRootTopicMap!
+                            selectedItemList=selectedPublicationTopics
+                            facet=publicationTopicFacet! />
+
+                        <#--  Sub topics  -->
+                        <@renderSelectboxGroup
+                            name="publicationSubTopic"
+                            titleKey="publication.sub_topic"
+                            defaultOptionLabel="All sub topics"
+                            itemMap=publicationSubTopicMap!
+                            selectedItemList=selectedPublicationSubTopics
+                            facet=publicationTopicFacet!
+                            level1Selectbox=false />
+                        <#--  Publication topics filter: END  -->
                     </div>
                     <#--  Filter group: END  -->
 
@@ -138,6 +206,53 @@
                                 </form>
                             </div>
                             <#--  Search sort dropdown: END  -->
+
+                            <#-- Active filters: START -->
+                            <#-- Publication types -->
+                            <#if selectedPublicationTypes?has_content>
+                                <div class="hee-listing__tags">
+                                    <h4>Publication types:</h4>
+                                    <@renderActiveFilters
+                                        selectedFilterTags=selectedPublicationTypes
+                                        filterMap=publicationTypeMap/>
+                                </div>
+                            </#if>
+
+                            <#-- Professions & sub-professions -->
+                            <#if selectedPublicationProfessions?has_content>
+                                <div class="hee-listing__tags">
+                                    <h4>Profession & sub-profession:</h4>
+                                    <@renderActiveFilters
+                                        selectedFilterTags=selectedPublicationProfessions
+                                        filterMap=publicationRootProfessionMap/>
+
+                                    <#if selectedPublicationSubProfessions?has_content>
+                                        &nbsp;and&nbsp;
+                                        <@renderActiveFilters
+                                            selectedFilterTags=selectedPublicationSubProfessions
+                                            filterMap=publicationSubProfessionMap/>
+                                    </#if>
+
+                                </div>
+                            </#if>
+
+                            <#-- Topics & sub-topics -->
+                            <#if selectedPublicationTopics?has_content>
+                                <div class="hee-listing__tags">
+                                    <h4>Topic & sub-topic:</h4>
+                                    <@renderActiveFilters
+                                        selectedFilterTags=selectedPublicationTopics
+                                        filterMap=publicationRootTopicMap/>
+
+                                    <#if selectedPublicationSubTopics?has_content>
+                                        &nbsp;and&nbsp;
+                                        <@renderActiveFilters
+                                            selectedFilterTags=selectedPublicationSubTopics
+                                            filterMap=publicationSubTopicMap/>
+                                    </#if>
+                                </div>
+                            </#if>
+                            <#-- Active filters: END -->
                         </div>
                         <#--  Search result summary: END  -->
 

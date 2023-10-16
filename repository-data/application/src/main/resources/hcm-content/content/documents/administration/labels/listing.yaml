@@ -20,7 +20,7 @@
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -32,14 +32,15 @@
       searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
       sort.option.submitted_date_newest, sort.option.submitted_date_oldest, publication.type,
       publication.topic, publication.profession, publication.publish_date, filter.clear.label,
-      categories.text, published_date.text, authors.text]
+      categories.text, published_date.text, authors.text, publication.sub_profession,
+      publication.sub_topic]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get strategy, Search, Get search, Completed on,
       Provider, Category, Document, Get document, Year, Date, Location, Group impacted,
       Impact types, Key terms, A to Z, Organisation, Date submitted, Date submitted
         - Newest, Date submitted - Oldest, Publication type, Topic, Profession, Publish
-        date, Clear, Categories, Published date, Author(s)]
+        date, Clear, Categories, Published date, Author(s), Sub profession, Sub topic]
   /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -55,7 +56,7 @@
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -67,14 +68,15 @@
       searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
       sort.option.submitted_date_newest, sort.option.submitted_date_oldest, publication.type,
       publication.topic, publication.profession, publication.publish_date, filter.clear.label,
-      categories.text, published_date.text, authors.text]
+      categories.text, published_date.text, authors.text, publication.sub_profession,
+      publication.sub_topic]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get strategy, Search, Get search, Completed on,
       Provider, Category, Document, Get document, Year, Date, Location, Group impacted,
       Impact types, Key terms, A to Z, Organisation, Date submitted, Date submitted
         - Newest, Date submitted - Oldest, Publication type, Topic, Profession, Publish
-        date, Clear, Categories, Published date, Author(s)]
+        date, Clear, Categories, Published date, Author(s), Sub profession, Sub topic]
   /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -91,7 +93,7 @@
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -103,11 +105,12 @@
       searchbank.key_terms, sort.option.az, casestudy.provider, casestudy.submitted_date,
       sort.option.submitted_date_newest, sort.option.submitted_date_oldest, publication.type,
       publication.topic, publication.profession, publication.publish_date, filter.clear.label,
-      categories.text, published_date.text, authors.text]
+      categories.text, published_date.text, authors.text, publication.sub_profession,
+      publication.sub_topic]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get strategy, Search, Get search, Completed on,
       Provider, Category, Document, Get document, Year, Date, Location, Group impacted,
       Impact types, Key terms, A to Z, Organisation, Date submitted, Date submitted
         - Newest, Date submitted - Oldest, Publication type, Topic, Profession, Publish
-        date, Clear, Categories, Published date, Author(s)]
+        date, Clear, Categories, Published date, Author(s), Sub profession, Sub topic]
