@@ -5,8 +5,10 @@ definitions:
       hst:referencecomponent: hst:abstractpages/base
       /main:
         jcr:primaryType: hst:component
-        hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsPageNotFoundComponent
+        hst:componentclassname: uk.nhs.hee.web.components.PageNotFoundComponent
         hst:template: pagenotfound-main
+        hst:parameternames: [document]
+        hst:parametervalues: [settings/pages/page-not-found]
       /header:
         jcr:primaryType: hst:component
         /top:
@@ -15,3 +17,5 @@ definitions:
             jcr:primaryType: hst:component
             hst:componentclassname: uk.nhs.hee.web.components.MultiOrgLogoComponent
             hst:template: multi-org-logo
+            hst:parameternames: [document]
+            hst:parametervalues: [settings/pages/page-not-found]
