@@ -18,15 +18,12 @@ import java.util.Optional;
 /**
  * Content card (compound type) ({@code hee:contentCards}) validator when used as a content block.
  *
- * <p>validates if the editor has provided the header ({@code hee:header}) as well as the navigation/content card
- * documents ({@code hee:cards}) for content/navigation cards {@code hee:contentCards} content block.</p>
+ * <p>validates if the editor has provided the navigation/content card documents ({@code hee:cards})
+ * for content/navigation cards {@code hee:contentCards} content block.</p>
  */
 public class ContentCardContentBlockValidator implements Validator<Node> {
     // Logger
     private static final Logger LOGGER = LoggerFactory.getLogger(ContentCardContentBlockValidator.class);
-
-    // Header property
-    private static final String PROPERTY_HEE_HEADER = "hee:header";
 
     // Content cards node type
     private static final String NODE_TYPE_HEE_CARDS = "hee:cards";
@@ -41,15 +38,7 @@ public class ContentCardContentBlockValidator implements Validator<Node> {
             if (!node.isNodeType(NODE_HEE_CONTENT_CARDS)) {
                 return Optional.empty();
             }
-
-            // Validation for the header
-            final String header = node.getProperty(PROPERTY_HEE_HEADER).getString();
-            LOGGER.debug("Content card header ({}) = {}", PROPERTY_HEE_HEADER, header);
-
-            if (StringUtils.isBlank(header)) {
-                return Optional.of(context.createViolation("empty-header"));
-            }
-
+            
             // Validation for the cards
             final NodeIterator contentCardIterator = node.getNodes(NODE_TYPE_HEE_CARDS);
             if (contentCardIterator.getSize() == 0) {
