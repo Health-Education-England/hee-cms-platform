@@ -274,19 +274,19 @@
             <aside class="page__rightbar">
 
                 <#--  Table of content  -->
-                <div class="hee-card hee-card--related-links theme__item-border">
-                    <div class="hee-card--related-links__content">
-                        <h3 class="hee-card--related-links__heading">Pages related to this programme</h3>
-                        <ul class="hee-card--related-links__list">
+                <div class="hee-card hee-card--programme-info theme__item-border">
+                    <div class="hee-card--programme-info__content">
+                        <h3 class="hee-card--programme-info__heading">Pages related to this programme</h3>
+                        <ul class="hee-card--programme-info__list">
                             <#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?ends_with("/")/>
                             <#--  Overview link  -->
                             <#if isOverview>
                                 <li aria-current="page">
-                                    <span aria-current="page" class="hee-card--related-links__link active">Overview</span>
+                                    <span aria-current="page" class="hee-card--programme-info__link active">Overview</span>
                                 </li>
                             <#else>
                                 <li>
-                                    <a class="hee-card--related-links__link" href="${(accessFromRootHub && !accessWithEndSlash)?then(tppSiteMapItemName + '/overview', 'overview')}">Overview</a>
+                                    <a class="hee-card--programme-info__link" href="${(accessFromRootHub && !accessWithEndSlash)?then(tppSiteMapItemName + '/overview', 'overview')}">Overview</a>
                                 </li>
                             </#if>
 
@@ -294,11 +294,11 @@
                             <#list document.applicationInformation as guidance>
                                 <#if currentGuidance?? && guidance == currentGuidance>
                                     <li aria-current="page">
-                                        <span aria-current="page" class="hee-card--related-links__link active">${guidance.title}</span>
+                                        <span aria-current="page" class="hee-card--programme-info__link active">${guidance.title}</span>
                                     </li>
                                 <#else>
                                     <li>
-                                        <a class="hee-card--related-links__link" href="${(accessFromRootHub && !accessWithEndSlash)?then(tppSiteMapItemName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
+                                        <a class="hee-card--programme-info__link" href="${(accessFromRootHub && !accessWithEndSlash)?then(tppSiteMapItemName + '/' + guidance.name, guidance.name)}">${guidance.title}</a>
                                     </li>
                                 </#if>
                             </#list>
