@@ -82,7 +82,7 @@ public class FeaturedContentBlockService {
                                         query,
                                         getTaxonomyValueKeysAsList(featuredContentBlock
                                                 .getGlobalTaxonomyPublicationType().getTaxonomyValues()),
-                                        HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()
+                                        HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE_WITH_ANCESTORS.getName()
                                 )
                         );
                     }
@@ -93,7 +93,7 @@ public class FeaturedContentBlockService {
                                         query,
                                         getTaxonomyValueKeysAsList(featuredContentBlock
                                                 .getGlobalTaxonomyHealthcareTopics().getTaxonomyValues()),
-                                        HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName()
+                                        HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS_WITH_ANCESTORS.getName()
                                 )
                         );
                     }
@@ -104,7 +104,7 @@ public class FeaturedContentBlockService {
                                         query,
                                         getTaxonomyValueKeysAsList(featuredContentBlock
                                                 .getGlobalTaxonomyProfessions().getTaxonomyValues()),
-                                        HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS.getName()
+                                        HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS_WITH_ANCESTORS.getName()
                                 )
                         );
                     }
@@ -116,7 +116,7 @@ public class FeaturedContentBlockService {
                                         query,
                                         getTaxonomyValueKeysAsList(featuredContentBlock
                                                 .getGlobalTaxonomyTags().getTaxonomyValues()),
-                                        HEEField.HEE_GLOBAL_TAXONOMY_TAGS.getName()
+                                        HEEField.HEE_GLOBAL_TAXONOMY_TAGS_WITH_ANCESTORS.getName()
                                 )
                         );
                     }
