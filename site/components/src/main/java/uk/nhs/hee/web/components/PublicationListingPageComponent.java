@@ -22,6 +22,8 @@ import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.LinkedHashMap;
+import java.util.stream.Collectors;
 
 
 /**
@@ -67,11 +69,29 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         final Locale locale = request.getLocale();
 
         request.setModel("publicationProfessionMap",
-                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PROFESSIONS.getName(), locale));
+                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PROFESSIONS.getName(), locale).entrySet()
+                        .stream()
+                        .sorted(Map.Entry.comparingByValue())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
         request.setModel("publicationTopicMap",
-                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName(), locale));
+                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS.getName(), locale).entrySet()
+                        .stream()
+                        .sorted(Map.Entry.comparingByValue())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
         request.setModel("publicationTypeMap",
-                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES.getName(), locale));
+                getMapFor(taxonomies, HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES.getName(), locale).entrySet()
+                        .stream()
+                        .sorted(Map.Entry.comparingByValue())
+                        .collect(Collectors.toMap(
+                                Map.Entry::getKey,
+                                Map.Entry::getValue,
+                                (oldValue, newValue) -> oldValue, LinkedHashMap::new)));
     }
 
     private Map<String, String> getMapFor(Taxonomies taxonomies, String taxonomyName, Locale locale) {
