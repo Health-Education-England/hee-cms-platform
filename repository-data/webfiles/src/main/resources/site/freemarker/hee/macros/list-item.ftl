@@ -411,7 +411,7 @@
                             </@listItemRow>
 
                             <#--  Published date  -->
-                            <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                            <@fmt.message key="results.last_updated.label" var="publishedDateLabel"/>
                             <@listItemRow key="${publishedDateLabel}">
                                 ${item.publishedDate}
                             </@listItemRow>
@@ -436,7 +436,7 @@
                         <#--  Case study details: START   -->
                         <div class="hee-listing-item__details">
                             <#--  Published date  -->
-                            <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                            <@fmt.message key="results.last_updated.label" var="publishedDateLabel"/>
                             <@listItemRow key="${publishedDateLabel}">
                                 ${item.publishedDate}
                             </@listItemRow>
@@ -513,7 +513,7 @@
                             </#if>
 
                             <#--  Published date  -->
-                            <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                            <@fmt.message key="results.last_updated.label" var="publishedDateLabel"/>
                             <@listItemRow key="${publishedDateLabel}">
                                 ${item.publishedDate}
                             </@listItemRow>
@@ -528,7 +528,7 @@
                         <#--  Item details: START  -->
                         <div class="hee-listing-item__details">
                             <#--  Published date  -->
-                            <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                            <@fmt.message key="results.last_updated.label" var="publishedDateLabel"/>
                             <@listItemRow key="${publishedDateLabel}">
                                 ${item.publishedDate}
                             </@listItemRow>
