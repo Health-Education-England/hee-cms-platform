@@ -19,9 +19,11 @@ import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.TaxonomyTemplateUtils;
 
-import java.util.HashMap;
+import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 
 /**
@@ -78,9 +80,16 @@ public class PublicationListingPageComponent extends ListingPageComponent {
         Taxonomy taxonomy = taxonomies.getTaxonomy(taxonomyName);
 
         if (taxonomy != null) {
-            return TaxonomyTemplateUtils.getTaxonomyAsMap(taxonomy, locale);
+            return TaxonomyTemplateUtils.getTaxonomyAsMap(taxonomy, locale)
+                    .entrySet()
+                    .stream()
+                    .sorted(Map.Entry.comparingByValue())
+                    .collect(Collectors.toMap(
+                            Map.Entry::getKey,
+                            Map.Entry::getValue,
+                            (oldValue, newValue) -> oldValue, LinkedHashMap::new));
         } else {
-            return new HashMap<>();
+            return Collections.emptyMap();
         }
     }
 
