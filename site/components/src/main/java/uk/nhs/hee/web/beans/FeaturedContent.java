@@ -56,4 +56,12 @@ public class FeaturedContent extends BaseDocument {
                 "hee:globalTaxonomyPublicationType",
                 HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyTags", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyTags() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyTags",
+                HEETaxonomy.HEE_GLOBAL_TAGS);
+    }
 }

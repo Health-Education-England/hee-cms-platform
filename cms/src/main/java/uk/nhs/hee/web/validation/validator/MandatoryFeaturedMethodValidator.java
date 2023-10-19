@@ -11,12 +11,13 @@ import javax.jcr.Node;
 import javax.jcr.RepositoryException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 /**
- * Validates if Publication type or healthcare topic or profession taxonomies have been provided
+ * Validates primarily if Publication type or healthcare topic or profession taxonomies have been provided
  * for Publication landing page content type. For content types other than publication landing page,
- * it validates if healthcare topic or profession taxonomies have been provided.
+ * it validates primarily if healthcare topic or profession taxonomies have been provided.
  */
 public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     // Logger
@@ -32,6 +33,8 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     private static final String PROPERTY_HEE_PROFESSIONS_TAXONOMY = "hee:globalTaxonomyProfessions";
     // Healthcare topic taxonomy property
     private static final String PROPERTY_HEE_TOPICS_TAXONOMY = "hee:globalTaxonomyHealthcareTopics";
+    // Tags taxonomy property
+    private static final String PROPERTY_HEE_TAGS_TAXONOMY = "hee:globalTaxonomyTags";
 
     // Related method value
     private static final String METHOD_VALUE_RELATED = "Related";
@@ -47,16 +50,27 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
 
             if (CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE.equals(
                     node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())) {
+                // For publication landing page content type
                 if (!isAnyAvailable(node, Arrays.asList(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY,
                         PROPERTY_HEE_PROFESSIONS_TAXONOMY, PROPERTY_HEE_TOPICS_TAXONOMY))) {
-                    // For publication landing page content type
                     return Optional.of(context.createViolation("publication-landing-page"));
+                }
+
+                if (isAnyAvailable(node, List.of(PROPERTY_HEE_TAGS_TAXONOMY))) {
+                    return Optional.of(context.createViolation("no-taxonomy",
+                            Map.of("taxonomy", "Tags", "contentType", "Publication landing page")));
                 }
             } else {
                 // For content types other than publication landing page
                 if (!isAnyAvailable(node,
                         Arrays.asList(PROPERTY_HEE_PROFESSIONS_TAXONOMY, PROPERTY_HEE_TOPICS_TAXONOMY))) {
                     return Optional.of(context.createViolation());
+                }
+
+                if (isAnyAvailable(node, List.of(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY))) {
+                    return Optional.of(context.createViolation("no-taxonomy",
+                            Map.of("taxonomy", "Publication type",
+                                    "contentType", "News article or Blogs post")));
                 }
             }
         } catch (final RepositoryException e) {
