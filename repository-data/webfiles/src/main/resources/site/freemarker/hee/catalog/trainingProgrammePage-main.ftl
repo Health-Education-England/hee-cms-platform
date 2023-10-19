@@ -46,10 +46,8 @@
                 <#--  Title  -->
                 <h1>${document.title}</h1>
 
-                <#if !currentGuidance??>
-                    <#--  Summary  -->
-                    <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
-                </#if>
+                <#--  Summary  -->
+                <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
             </div>
         </div>
         <#--  Main header: END  -->
@@ -60,114 +58,113 @@
             <div class="page__main">
                 <div class="page__content">
 
-                    <#if isOverview>
-                        <div class="hee-card hee-card--summary default">
-                            <a aria-label="Toggle Programme summary" class="hee-card--summary__toggle" href="#">
-                                <span class="nhsuk-u-visually-hidden">Toggle Programme summary</span>
-                            </a>
-                            <h3 class="hee-card--summary__heading">Programme summary</h3>
-                            <ul class="hee-card--summary__list">
-                                <#--  Training programme  -->
-                                <@programmeSummaryRow rowTitle="Training programme">
-                                    ${document.title}
-                                </@programmeSummaryRow>
+                    <div class="hee-card hee-card--summary default">
+                        <a aria-label="Toggle Programme summary" class="hee-card--summary__toggle" href="#">
+                            <span class="nhsuk-u-visually-hidden">Toggle Programme summary</span>
+                        </a>
+                        <h3 class="hee-card--summary__heading">Programme summary</h3>
+                        <ul class="hee-card--summary__list">
+                            <#--  Training programme  -->
+                            <@programmeSummaryRow rowTitle="Training programme">
+                                ${document.title}
+                            </@programmeSummaryRow>
 
-                                <#--  Training type  -->
-                                <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?has_content>
-                                    <@programmeSummaryRow rowTitle="Training type">
-                                        <#--  The following block can be used when training listing page is available  -->
-                                        <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?trainingType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
-                                            ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                                        </a>  -->
+                            <#--  Training type  -->
+                            <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?has_content>
+                                <@programmeSummaryRow rowTitle="Training type">
+                                    <#--  The following block can be used when training listing page is available  -->
+                                    <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?trainingType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
                                         ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                                    </@programmeSummaryRow>
-                                </#if>
+                                    </a>  -->
+                                    ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Professions  -->
-                                <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?has_content>
-                                    <@programmeSummaryRow rowTitle="Professions">
-                                        <#--  The following block can be used when training listing page is available  -->
-                                        <#--  <#list document.globalTaxonomyProfessions.taxonomyValues as category>
-                                            <a href=${publicationListingPageURL}?profession=${category.key}>${category.label}</a><#sep>, </#sep>
-                                        </#list>  -->
-                                        <#list document.globalTaxonomyProfessions.taxonomyValues as category>
-                                            ${category.label}<#sep>, </#sep>
-                                        </#list>
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Professions  -->
+                            <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?has_content>
+                                <@programmeSummaryRow rowTitle="Professions">
+                                    <#--  The following block can be used when training listing page is available  -->
+                                    <#--  <#list document.globalTaxonomyProfessions.taxonomyValues as category>
+                                        <a href=${publicationListingPageURL}?profession=${category.key}>${category.label}</a><#sep>, </#sep>
+                                    </#list>  -->
+                                    <#list document.globalTaxonomyProfessions.taxonomyValues as category>
+                                        ${category.label}<#sep>, </#sep>
+                                    </#list>
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Healthcare topics  -->
-                                <#if document.globalTaxonomyHealthcareTopics?? && document.globalTaxonomyHealthcareTopics.taxonomyValues?has_content>
-                                    <@programmeSummaryRow rowTitle="Healthcare topics">
-                                        <#--  The following block can be used when training listing page is available  -->
-                                        <#--  <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
-                                            <a href=${publicationListingPageURL}?topic=${category.key}>${category.label}</a><#sep>, </#sep>
-                                        </#list>  -->
-                                        <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
-                                            ${category.label}<#sep>, </#sep>
-                                        </#list>
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Healthcare topics  -->
+                            <#if document.globalTaxonomyHealthcareTopics?? && document.globalTaxonomyHealthcareTopics.taxonomyValues?has_content>
+                                <@programmeSummaryRow rowTitle="Healthcare topics">
+                                    <#--  The following block can be used when training listing page is available  -->
+                                    <#--  <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
+                                        <a href=${publicationListingPageURL}?topic=${category.key}>${category.label}</a><#sep>, </#sep>
+                                    </#list>  -->
+                                    <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
+                                        ${category.label}<#sep>, </#sep>
+                                    </#list>
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Discipline  -->
-                                <#if document.globalTaxonomyClinicalDiscipline?? && document.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
-                                    <@programmeSummaryRow rowTitle="Clinical discipline">
-                                        <#--  The following block can be used when training listing page is available  -->
-                                        <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?discipline=${document.discipline}">
-                                            ${clinicalDiscipline}
-                                        </a>  -->
-                                        <#list document.globalTaxonomyClinicalDiscipline.taxonomyValues as category>
-                                            ${category.label}<#sep>, </#sep>
-                                        </#list>
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Discipline  -->
+                            <#if document.globalTaxonomyClinicalDiscipline?? && document.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
+                                <@programmeSummaryRow rowTitle="Clinical discipline">
+                                    <#--  The following block can be used when training listing page is available  -->
+                                    <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?discipline=${document.discipline}">
+                                        ${clinicalDiscipline}
+                                    </a>  -->
+                                    <#list document.globalTaxonomyClinicalDiscipline.taxonomyValues as category>
+                                        ${category.label}<#sep>, </#sep>
+                                    </#list>
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Recruitment format  -->
-                                <#if document.globalRecruitmentFormat??
-                                        && document.globalRecruitmentFormat.taxonomyValues?has_content
-                                        && document.globalRecruitmentFormat.taxonomyValues[0].label != 'N/A'>
-                                    <@programmeSummaryRow rowTitle="Recruitment format">
-                                        ${document.globalRecruitmentFormat.taxonomyValues[0].label}
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Recruitment format  -->
+                            <#if document.globalRecruitmentFormat??
+                                    && document.globalRecruitmentFormat.taxonomyValues?has_content
+                                    && document.globalRecruitmentFormat.taxonomyValues[0].label != 'N/A'>
+                                <@programmeSummaryRow rowTitle="Recruitment format">
+                                    ${document.globalRecruitmentFormat.taxonomyValues[0].label}
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Duration  -->
-                                <#if document.duration?has_content>
-                                    <@programmeSummaryRow rowTitle="Duration">
-                                        ${document.duration} month<#if document.duration gt 1>s</#if>
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Duration  -->
+                            <#if document.duration?has_content>
+                                <@programmeSummaryRow rowTitle="Duration">
+                                    ${document.duration} month<#if document.duration gt 1>s</#if>
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Competition ratio  -->
-                                <#if document.competitionRatio?has_content>
-                                    <@programmeSummaryRow rowTitle="Competition ratio">
-                                        ${document.competitionRatio}
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Competition ratio  -->
+                            <#if document.competitionRatio?has_content>
+                                <@programmeSummaryRow rowTitle="Competition ratio">
+                                    ${document.competitionRatio}
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Fill rate  -->
-                                <#if document.fillRate?has_content>
-                                    <@programmeSummaryRow rowTitle="Fill rate">
-                                        ${document.fillRate}%
-                                    </@programmeSummaryRow>
-                                </#if>
+                            <#--  Fill rate  -->
+                            <#if document.fillRate?has_content>
+                                <@programmeSummaryRow rowTitle="Fill rate">
+                                    ${document.fillRate}%
+                                </@programmeSummaryRow>
+                            </#if>
 
-                                <#--  Opening date  -->
-                                <#if document.opening?has_content>
-                                    <@programmeSummaryRow rowTitle="Opening">
-                                        ${document.opening.time?string['EEE dd/MM/yyyy']}
-                                    </@programmeSummaryRow>
-                                </#if>
 
-                                <#--  Closing date  -->
-                                <#if document.closing?has_content>
-                                    <@programmeSummaryRow rowTitle="Closing">
-                                        ${document.closing.time?string['EEE dd/MM/yyyy']}
-                                    </@programmeSummaryRow>
-                                </#if>
-                            </ul>
-                        </div>
-                    </#if>
+                            <#--  Opening date  -->
+                            <#if document.opening?has_content>
+                                <@programmeSummaryRow rowTitle="Opening">
+                                    ${document.opening.time?string['EEE dd/MM/yyyy, hh:mma']}
+                                </@programmeSummaryRow>
+                            </#if>
+
+                            <#--  Closing date  -->
+                            <#if document.closing?has_content>
+                                <@programmeSummaryRow rowTitle="Closing">
+                                    ${document.closing.time?string['EEE dd/MM/yyyy, hh:mma']}
+                                </@programmeSummaryRow>
+                            </#if>
+                        </ul>
+                    </div>
 
                     <#if currentGuidance??>
                         <h2  class="toc_h2" id="overview">${currentGuidance.title}</h2>
@@ -266,6 +263,9 @@
                             </div>
                         </#if>
                     </#if>
+                    <#if isOverview>
+                        <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
+                    </#if>
                 </div>
             </div>
 
@@ -276,7 +276,7 @@
                 <#--  Table of content  -->
                 <div class="hee-card hee-card--programme-info theme__item-border">
                     <div class="hee-card--programme-info__content">
-                        <h3 class="hee-card--programme-info__heading">Pages related to this programme</h3>
+                        <h3 class="hee-card--programme-info__heading">Programme information</h3>
                         <ul class="hee-card--programme-info__list">
                             <#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?ends_with("/")/>
                             <#--  Overview link  -->

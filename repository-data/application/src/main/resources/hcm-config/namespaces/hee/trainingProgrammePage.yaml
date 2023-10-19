@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 06a87c59-de2f-47db-9dba-6366d5b191d8
+          jcr:uuid: ca553a97-74ca-4d9a-932a-5a566a7c6b25
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -217,12 +217,20 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyClinicalDiscipline
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
+          /pageLastNextReview:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:pageLastNextReview
+            hipposysedit:primary: false
+            hipposysedit:type: hee:pageLastNextReview
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: ab57f9fa-c89e-4145-9806-1c71483f9298
+          jcr:uuid: 877ad04a-7b30-456c-bc0b-be412d1d43a1
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -261,6 +269,10 @@ definitions:
           /hee:featuredContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:pageLastNextReview:
+            jcr:primaryType: hee:pageLastNextReview
+            hee:lastReviewed: 0001-01-01T12:00:00Z
+            hee:nextReviewed: 0001-01-01T12:00:00Z
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -322,18 +334,16 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /overview:
+          /globalTaxonomyTrainingType:
             jcr:primaryType: frontend:plugin
-            caption: Overview
-            compoundList: hee:appliesToBoxReference,hee:statementCardReference,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
-            contentPickerType: links
-            field: overview
-            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            caption: Training type
+            field: globalTaxonomyTrainingType
+            hint: Please select the training class
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              showCompoundNames: 'true'
+              taxonomy.name: GlobalTrainingTypes
           /applicationInformation:
             jcr:primaryType: frontend:plugin
             caption: Application information
@@ -354,16 +364,6 @@ definitions:
             item: ${cluster.id}.right.item
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
             wicket.id: ${cluster.id}.right
-          /globalTaxonomyTrainingType:
-            jcr:primaryType: frontend:plugin
-            caption: Training type
-            field: globalTaxonomyTrainingType
-            hint: Please select the training class
-            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              taxonomy.name: GlobalTrainingTypes
           /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
@@ -413,6 +413,15 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /competitionRatio:
+            jcr:primaryType: frontend:plugin
+            caption: Competition Ratio
+            field: competitionRatio
+            hint: Please enter the training programme competition ratio
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /applicationButtonTitle:
             jcr:primaryType: frontend:plugin
             caption: Application button title
@@ -443,15 +452,6 @@ definitions:
             hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /competitionRatio:
-            jcr:primaryType: frontend:plugin
-            caption: Competition Ratio
-            field: competitionRatio
-            hint: Please enter the training programme competition ratio
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /fillRate:
             jcr:primaryType: frontend:plugin
             caption: Fill rate
@@ -477,6 +477,18 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /overview:
+            jcr:primaryType: frontend:plugin
+            caption: Overview
+            compoundList: hee:appliesToBoxReference,hee:statementCardReference,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
+            contentPickerType: links
+            field: overview
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
           /trainingJourneySummary:
             jcr:primaryType: frontend:plugin
             caption: Training journey summary
@@ -508,6 +520,14 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:trainingProgrammePage']
+          /pageLastNextReview:
+            jcr:primaryType: frontend:plugin
+            caption: Page review dates
+            field: pageLastNextReview
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /featuredContentBlock:
             jcr:primaryType: frontend:plugin
             caption: Featured content
