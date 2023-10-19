@@ -72,9 +72,9 @@
 <#--  Constructs and returns title for the featured content  -->
 <#function contentTitle contentType method>
     <#assign contentTypeToTitleMap = {
-        "hee:blogPost": "Blog posts",
-        "hee:news": "News articles",
-        "hee:publicationLandingPage": "Publications"}>
+        "hee:blogPost": "blogs",
+        "hee:news": "news",
+        "hee:publicationLandingPage": "publications"}>
 
     <#return "${((method = 'Latest'))?then('${method}', 'Related')} ${contentTypeToTitleMap[contentType]}">
 </#function>
