@@ -25,10 +25,10 @@
         <#--  Main header: END  -->
 
         <#--  Main content: START  -->
-        <div class="page__main nhsuk-width-container">
-            <div class="page__content">
-                <#--  Main content blocks: START  -->
-                <#if document.contentBlocks??>
+        <#if document.contentBlocks?? && document.contentBlocks?has_content>
+            <div class="page__main nhsuk-width-container">
+                <div class="page__content">
+                    <#--  Main content blocks: START  -->
                     <#list document.contentBlocks as block>
                         <#switch block.getClass().getName()>
                             <#case "uk.nhs.hee.web.beans.ContentCards">
@@ -46,10 +46,10 @@
                             <#default>
                         </#switch>
                     </#list>
-                </#if>
-                <#--  Main content blocks: END  -->
+                    <#--  Main content blocks: END  -->
+                </div>
             </div>
-        </div>
+        </#if>
         <#--  Main content: END  -->
     </main>
 </#if>
