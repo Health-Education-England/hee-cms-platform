@@ -149,18 +149,20 @@
                                 </@programmeSummaryRow>
                             </#if>
 
-
+                            <#assign defaultHour="12:00am">
                             <#--  Opening date  -->
                             <#if document.opening?has_content>
                                 <@programmeSummaryRow rowTitle="Opening">
-                                    ${document.opening.time?string['EEE dd/MM/yyyy, hh:mma']}
+                                    <#assign time=document.opening.time?string['hh:mma']/>
+                                    ${document.opening.time?string['EEE dd/MM/yyyy'+ (time==defaultHour)?then('',', hh:mma')]}
                                 </@programmeSummaryRow>
                             </#if>
 
                             <#--  Closing date  -->
                             <#if document.closing?has_content>
                                 <@programmeSummaryRow rowTitle="Closing">
-                                    ${document.closing.time?string['EEE dd/MM/yyyy, hh:mma']}
+                                    <#assign time=document.closing.time?string['hh:mma']/>
+                                    ${document.closing.time?string['EEE dd/MM/yyyy'+ (time==defaultHour)?then('',', hh:mma')]}
                                 </@programmeSummaryRow>
                             </#if>
                         </ul>
