@@ -148,4 +148,9 @@ public class TrainingProgrammePage extends BaseDocument {
     public HippoBean getFeaturedContentBlock() {
         return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:pageLastNextReview")
+    public PageLastNextReview getPageLastNextReview() {
+        return getBean("hee:pageLastNextReview", PageLastNextReview.class);
+    }
 }
