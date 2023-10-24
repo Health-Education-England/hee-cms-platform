@@ -1,7 +1,7 @@
 <#include "last-next-reviewed-date.ftl">
 
 <#macro media media>
-    <#if media??>
+    <#if media?? && media.mediaEmbedContentBlock??>
         <#if media.mediaEmbedContentBlock.embedCode?has_content>
             <#assign embedSrc=getEmbedCodeAttrValue(media.mediaEmbedContentBlock.embedCode, 'src')>
             <#if embedSrc?has_content>
