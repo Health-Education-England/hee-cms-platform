@@ -1,7 +1,7 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"]>
 
 <#macro tabs tabs>
-    <#if tabs??>
+    <#if tabs?? && tabs.tabsContentBlock??>
         <#if tabs.tabsContentBlock.tabPanel?size gt 1>
             <#assign randPref = tabs.identifier?keep_before('-')>
 
