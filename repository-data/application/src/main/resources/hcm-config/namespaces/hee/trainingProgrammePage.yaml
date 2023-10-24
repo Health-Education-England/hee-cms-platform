@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: ca553a97-74ca-4d9a-932a-5a566a7c6b25
+          jcr:uuid: 661a829e-d085-48a2-9219-b6a510bc6cbc
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -230,7 +230,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammePage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 877ad04a-7b30-456c-bc0b-be412d1d43a1
+          jcr:uuid: 4b015dc4-d82c-4f33-ae71-6fd81e681993
           hee:summary: ''
           hee:title: ''
           hippostd:state: draft
@@ -466,13 +466,20 @@ definitions:
             field: opening
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
+            hint: Please note that a time of 12 AM is never displayed. When a date
+              is entered but the time field is left blank, the system automatically
+              adds a time of 12 AM to the date. This time, however, won't be displayed
+              when the page is rendered.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /closing:
             jcr:primaryType: frontend:plugin
             caption: Closing
             field: closing
-            hint: ''
+            hint: Please note that a time of 12 AM is never displayed. When a date
+              is entered but the time field is left blank, the system automatically
+              adds a time of 12 AM to the date. This time, however, won't be displayed
+              when the page is rendered.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
