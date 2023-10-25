@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 25004fb8-bf92-4f3d-87fd-81a76a38d0e0
+          jcr:uuid: da88abf9-15ff-44e0-a176-418eff4053d2
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -125,7 +125,7 @@ definitions:
         /hipposysedit:prototype:
           jcr:primaryType: hee:trainingProgrammesHomepage
           jcr:mixinTypes: ['mix:referenceable']
-          jcr:uuid: 17204e31-6ac4-4a3b-abbc-f8e13b581d1e
+          jcr:uuid: 3908ddb8-6bc9-4068-a733-417d797f6154
           hee:addToAZ: false
           hee:subtitle: ''
           hee:title: ''
@@ -211,7 +211,7 @@ definitions:
             field: programmeDescription
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            hint: Add a programme description (300 character limit)
+            hint: Enter programme description (300 character limit)
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               maxlength: '300'
