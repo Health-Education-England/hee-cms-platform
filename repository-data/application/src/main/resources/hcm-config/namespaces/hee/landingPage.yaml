@@ -118,9 +118,10 @@ definitions:
             field: summary
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: ''
+            hint: Enter summary (300 character limit)
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '300'
           /microHero:
             jcr:primaryType: frontend:plugin
             caption: Micro-hero image
