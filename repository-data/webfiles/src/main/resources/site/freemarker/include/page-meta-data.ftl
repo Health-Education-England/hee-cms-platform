@@ -19,7 +19,11 @@
         </#if>
     <#else>
         <#assign pageTitle="${hstRequestContext.resolvedSiteMapItem.pageTitle?has_content?then(hstRequestContext.resolvedSiteMapItem.pageTitle, document.title!)}">
-        <#assign pageSummary="${document.summary!}">
+        <#if document.contentType = 'hee:trainingProgrammesHomepage'>
+            <#assign pageSummary="${document.programmeDescription!}">
+        <#else>
+            <#assign pageSummary="${document.summary!}">
+        </#if>
         <@hst.link var="pageURL" hippobean=document canonical=true fullyQualified=true />
     </#if>
 </#if>
