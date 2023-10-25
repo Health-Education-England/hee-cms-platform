@@ -73,8 +73,9 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Summary
             field: text
-            hint: ''
+            hint: Enter summary (300 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
+            maxlength: '300'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig

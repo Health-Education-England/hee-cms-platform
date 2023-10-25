@@ -266,11 +266,12 @@ definitions:
             jcr:primaryType: frontend:plugin
             caption: Summary
             field: summary
-            hint: ''
+            hint: Enter summary (300 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '300'
           /logoGroup:
             jcr:primaryType: frontend:plugin
             caption: Logo group
