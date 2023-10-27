@@ -43,6 +43,11 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
+                    <#--  Summary  -->
+                    <#if document.summary?has_content>
+                        <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                    </#if>
+
                     <#--  Content list section: START  -->
                     <#if document.guidancePages?has_content>
                         <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
