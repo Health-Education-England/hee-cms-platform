@@ -2,7 +2,7 @@
 <#assign fmt=JspTaglibs ["http://java.sun.com/jsp/jstl/fmt"] >
 
 <#macro externalLinksCard card>
-    <#if card??>
+    <#if card?? && card?has_content>
         <div class="nhsuk-card">
             <div class="nhsuk-card__content">
                 <h3 class="nhsuk-card__heading">${card.title}</h3>
