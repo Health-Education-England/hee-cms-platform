@@ -8,14 +8,14 @@
     hst:label: Content Page Main
     hst:lastmodified: 2022-12-02T17:02:59.150Z
     hst:xtype: hst.vbox
-    /publication-listing:
+    /taxonomy-based-listing:
       jcr:primaryType: hst:containeritemcomponent
-      hst:componentclassname: uk.nhs.hee.web.components.PublicationListingPageComponent
+      hst:componentclassname: uk.nhs.hee.web.components.TaxonomyBasedListingPageComponent
       hst:iconpath: images/catalog-component-icons/generic-list.svg
-      hst:label: Publication Listing Page
+      hst:label: Taxonomy-based collection pages [blog, news & publication]
       hst:parameternames: [document]
       hst:parametervalues: [publications/publications]
-      hst:template: publicationlisting-main
+      hst:template: taxonomybasedlisting-main
   /header:
     jcr:primaryType: hst:component
     /top:

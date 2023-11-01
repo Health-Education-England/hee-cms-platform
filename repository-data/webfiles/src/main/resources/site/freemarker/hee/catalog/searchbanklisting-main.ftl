@@ -57,7 +57,7 @@
                             <@fmt.message key="filter.clear.label" var="clearLabel"/>
                             <a class="nhsuk-filter__group__clear" href="#">${clearLabel}</a>
 
-                            <@fmt.message key="filter.topic.label" var="topicLabel"/>
+                            <@fmt.message key="topic.label" var="topicLabel"/>
                             <@checkboxGroup title=topicLabel name="topic" items=topicMap selectedItemsList=selectedTopics />
                         </div>
                         <#--  Topic filter: END  -->

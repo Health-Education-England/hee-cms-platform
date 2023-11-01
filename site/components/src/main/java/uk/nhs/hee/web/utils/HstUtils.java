@@ -40,6 +40,9 @@ public class HstUtils {
      * Returns values of the given {@code parameter} as {@link List<String>}
      * if available in the {@code request} instance. Otherwise, returns an empty list.
      *
+     * <p>It also returns an empty list if the given {@code parameter} contains just one empty value
+     * which would be the case for parameters with no values.</p>
+     *
      * @param request   the {@link HstRequestContext} instance.
      * @param parameter the parameter whose values needs to be returned.
      * @return values of the given {@code parameter} as {@link List<String>}
@@ -47,7 +50,8 @@ public class HstUtils {
      */
     public static List<String> getQueryParameterValues(final HstRequest request, final String parameter) {
         final String[] parameterValues = request.getParameterValues(parameter);
-        if (parameterValues == null) {
+
+        if (parameterValues == null || (parameterValues.length == 1 && parameterValues[0].isEmpty())) {
             return Collections.emptyList();
         }
 

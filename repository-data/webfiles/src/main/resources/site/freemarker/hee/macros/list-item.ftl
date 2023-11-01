@@ -46,7 +46,7 @@
 </#macro>
 
 <#--  Lists blog post result items  -->
-<#macro blogListItem items categoriesMap>
+<#macro blogListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
@@ -59,16 +59,6 @@
 
                 <#--  Blog details: START  -->
                 <div class="hee-listing-item__details">
-                    <#--  Categories  -->
-                    <#assign categories="${item.categories?map(category -> categoriesMap[category]!)?join(', ')}">
-
-                    <#if categories?has_content>
-                        <@fmt.message key="categories.text" var="categoriesLabel"/>
-                        <@listItemRow key="${categoriesLabel}">
-                            ${categories}
-                        </@listItemRow>
-                    </#if>
-
                     <#--  Publication date  -->
                     <@fmt.message key="published_date.text" var="publishedDateLabel"/>
                     <@listItemRow key="${publishedDateLabel}">
@@ -100,7 +90,7 @@
 </#macro>
 
 <#--  Lists news article result items  -->
-<#macro newsListItem items categoriesMap>
+<#macro newsListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
@@ -113,16 +103,6 @@
 
                 <#--  News details: START  -->
                 <div class="hee-listing-item__details">
-                    <#--  Categories  -->
-                    <#assign categories="${item.categories?map(category -> categoriesMap[category]!)?join(', ')}">
-
-                    <#if categories?has_content>
-                        <@fmt.message key="categories.text" var="categoriesLabel"/>
-                        <@listItemRow key="${categoriesLabel}">
-                            ${categories}
-                        </@listItemRow>
-                    </#if>
-
                     <#--  Publication date  -->
                     <@fmt.message key="published_date.text" var="publishedDateLabel"/>
                     <@listItemRow key="${publishedDateLabel}">
