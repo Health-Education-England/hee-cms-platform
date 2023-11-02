@@ -108,19 +108,6 @@
                     <@listItemRow key="${publishedDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@listItemRow>
-
-                    <#--  Published by  -->
-                    <#if item.authors?has_content>
-                        <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(item.authors)}</#assign>
-                    <#else>
-                        <#assign commaSeparatedAuthorNames>${item.author!}</#assign>
-                    </#if>
-                    <#if commaSeparatedAuthorNames?has_content>
-                        <@fmt.message key="authors.text" var="authorsLabel"/>
-                        <@listItemRow key="${authorsLabel}">
-                            ${commaSeparatedAuthorNames}
-                        </@listItemRow>
-                    </#if>
                 </div>
                 <#--  News details: END  -->
 

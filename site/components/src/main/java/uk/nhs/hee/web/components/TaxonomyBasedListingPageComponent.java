@@ -129,11 +129,13 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
     }
 
     /**
-     * Adds channel-specific publication filter facets to model.
+     * Returns the target facet navigation by navigating through the configured facet navigation
+     * based on all the filter query parameters.
      *
      * @param request the {@link HstRequest} instance.
      */
     private HippoFacetNavigationBean getTargetFacetBean(final HstRequest request) {
+        // Get the configured facet navigation
         final HippoFacetNavigationBean facetNavigation = ContentBeanUtils.getFacetNavigationBean(
                 getListing(request).getRelativeFacetPath(), null);
 
@@ -141,16 +143,18 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
             return null;
         }
 
+        // Navigate through the facet navigation based on the filter query parameters
+        // to find the target facet navigation.
         HippoFacetNavigationBean targetFacetBean = facetNavigation;
         for (final ListingFilter filter : getListing(request).getListingFilters()) {
-            targetFacetBean = getTargetFacetBean(
+            targetFacetBean = navigateThroughFacetBeanByQueryParameters(
                     targetFacetBean,
                     filter.getField().getName(),
                     HstUtils.getQueryParameterValues(request, filter.getQueryParameter())
             );
 
             if (!filter.isFlatTaxonomy()) {
-                targetFacetBean = getTargetFacetBean(
+                targetFacetBean = navigateThroughFacetBeanByQueryParameters(
                         targetFacetBean,
                         filter.getField().getName(),
                         HstUtils.getQueryParameterValues(request, buildSubLevelQueryParameter(filter.getQueryParameter())));
@@ -161,26 +165,25 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
     }
 
     /**
-     * Returns the target facet bean by navigating through the given facet {@code currentTargetFolderBean}
-     * based on the given query parameters {@code queryParams}.
-     * Otherwise, returns the given {@code currentTargetFolderBean}.
+     * Navigates through the given {@code facetBean} based on the given {@code queryParams} (if path exists)
+     * and returns the target facet bean. Otherwise, returns the given {@code facetBean}.
      *
-     * @param currentTargetFacetBean the {@link HippoFolderBean} instance which needs to be navigated
-     *                               to find the target bean based on the given {@code queryParams}.
-     * @param taxonomyNodeName       the name of the taxonomy node under which the target facet bean needs to be searched for
-     *                               based on the given {@code queryParams}.
-     * @param queryParams            the {@link List} of query parameters for which the target facet bean needs to be found.
+     * @param facetBean        the {@link HippoFolderBean} instance which needs to be navigated
+     *                         to find the target bean based on the given {@code queryParams}.
+     * @param taxonomyNodeName the name of the taxonomy node under which the target facet bean needs to be searched for
+     *                         based on the given {@code queryParams}.
+     * @param queryParams      the {@link List} of query parameters for which the target facet bean needs to be found.
      * @return the target facet {@link HippoFolderBean}
      * by navigating through the given facet {@code currentTargetFolderBean}
      * based on the given query parameters {@code queryParams}.
      * Otherwise, returns the given {@code currentTargetFolderBean}.
      */
-    private HippoFacetNavigationBean getTargetFacetBean(
-            final HippoFacetNavigationBean currentTargetFacetBean,
+    private HippoFacetNavigationBean navigateThroughFacetBeanByQueryParameters(
+            final HippoFacetNavigationBean facetBean,
             final String taxonomyNodeName,
             final List<String> queryParams) {
         if (queryParams.isEmpty()) {
-            return currentTargetFacetBean;
+            return facetBean;
         } else {
             HippoFacetNavigationBean targetFacetBean = null;
 
@@ -189,11 +192,11 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
                     continue;
                 }
 
-                targetFacetBean = currentTargetFacetBean.getBean(taxonomyNodeName);
+                targetFacetBean = facetBean.getBean(taxonomyNodeName);
                 targetFacetBean = targetFacetBean.getBean(queryParam);
             }
 
-            return targetFacetBean == null ? currentTargetFacetBean : targetFacetBean;
+            return targetFacetBean == null ? facetBean : targetFacetBean;
         }
     }
 

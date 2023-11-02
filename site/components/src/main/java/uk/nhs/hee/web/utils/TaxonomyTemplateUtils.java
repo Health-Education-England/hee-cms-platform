@@ -65,7 +65,7 @@ public class TaxonomyTemplateUtils {
         final Map<String, String> catsMap = new HashMap<>();
 
         getChildren(categories, catsMap);
-        return catsMap;
+        return sortByValue(catsMap);
     }
 
     /**
@@ -81,8 +81,8 @@ public class TaxonomyTemplateUtils {
             return Collections.emptyMap();
         }
 
-        return taxonomy.getCategories().stream().collect(Collectors.toMap(
-                Category::getKey, category -> category.getInfo(Locale.ENGLISH).getName()));
+        return sortByValue(taxonomy.getCategories().stream().collect(Collectors.toMap(
+                Category::getKey, category -> category.getInfo(Locale.ENGLISH).getName())));
     }
 
     /**
@@ -98,12 +98,12 @@ public class TaxonomyTemplateUtils {
             return Collections.emptyMap();
         }
 
-        return taxonomy.getCategories().stream()
+        return sortByValue(taxonomy.getCategories().stream()
                 .filter(category -> category.getKey().equals(rootCategoryName))
                 .flatMap(category -> category.getChildren().stream())
                 .collect(Collectors.toMap(
                         Category::getKey, category -> category.getInfo(Locale.ENGLISH).getName())
-                );
+                ));
     }
 
     /**
@@ -134,5 +134,22 @@ public class TaxonomyTemplateUtils {
                 getChildren(childCats, catsMap);
             }
         }
+    }
+
+    /**
+     * Sorts the given {@code map} by {@code value}.
+     *
+     * @param map the {@link Map} that needs to be sorted by {@code value}.
+     * @return the map sorted by {@code value}.
+     */
+    private static Map<String, String> sortByValue(final Map<String, String> map) {
+        return map
+                .entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (oldValue, newValue) -> oldValue, LinkedHashMap::new));
     }
 }

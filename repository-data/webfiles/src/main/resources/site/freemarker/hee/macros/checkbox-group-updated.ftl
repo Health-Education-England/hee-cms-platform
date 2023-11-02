@@ -10,9 +10,9 @@
         <a class="nhsuk-filter__group__clear" href="#"><@fmt.message key="filter.clear.label"/></a>
 
         <div class="nhsuk-form-group">
-            <fieldset class="nhsuk-fieldset" aria-describedby="filter_${name} type-hint">
+            <fieldset class="nhsuk-fieldset" aria-describedby="filter_${name}-hint">
                 <legend class="nhsuk-fieldset__legend"><@fmt.message key="${titleKey}"/></legend>
-                <div class="nhsuk-hint" id="filter_${name} type-hint">${selectedItemsList?size} selected</div>
+                <div class="nhsuk-hint" id="filter_${name}-hint">${selectedItemsList?size} selected</div>
                 <div class="nhsuk-checkboxes">
                     <#if items?is_hash>
                         <#list items as value, text>
