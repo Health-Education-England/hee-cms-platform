@@ -83,7 +83,7 @@ public enum ListingFilter {
     }
 
     /**
-     * Returns the name of the taxonomy configured on the {@code field}.
+     * Returns {@link HEETaxonomy} the name of the taxonomy configured on the {@code field}.
      *
      * @return the name of the taxonomy configured on the {@code field}.
      */

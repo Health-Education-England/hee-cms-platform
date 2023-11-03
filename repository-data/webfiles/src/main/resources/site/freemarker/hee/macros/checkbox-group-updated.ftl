@@ -5,30 +5,32 @@
 
 <#--  Renders checkbox group filter based on the given parameters  -->
 <#macro checkboxGroup name titleKey items selectedItemsList>
-    <div class="nhsuk-filter__group">
-        <#--  Clear link  -->
-        <a class="nhsuk-filter__group__clear" href="#"><@fmt.message key="filter.clear.label"/></a>
+    <#if items?has_content>
+        <div class="nhsuk-filter__group">
+            <#--  Clear link  -->
+            <a class="nhsuk-filter__group__clear" href="#"><@fmt.message key="filter.clear.label"/></a>
 
-        <div class="nhsuk-form-group">
-            <fieldset class="nhsuk-fieldset" aria-describedby="filter_${name}-hint">
-                <legend class="nhsuk-fieldset__legend"><@fmt.message key="${titleKey}"/></legend>
-                <div class="nhsuk-hint" id="filter_${name}-hint">${selectedItemsList?size} selected</div>
-                <div class="nhsuk-checkboxes">
-                    <#if items?is_hash>
-                        <#list items as value, text>
-                            <@checkboxItem name=name value=value text=text selected=selectedItemsList?seq_contains("${value}") />
-                        </#list>
-                    <#elseif items?is_sequence>
-                        <#list items?sort as value>
-                            <#assign strValue="${(value?is_number)?then(value?c, value)}">
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="filter_${name}-hint">
+                    <legend class="nhsuk-fieldset__legend"><@fmt.message key="${titleKey}"/></legend>
+                    <div class="nhsuk-hint" id="filter_${name}-hint">${selectedItemsList?size} selected</div>
+                    <div class="nhsuk-checkboxes">
+                        <#if items?is_hash>
+                            <#list items as value, text>
+                                <@checkboxItem name=name value=value text=text selected=selectedItemsList?seq_contains("${value}") />
+                            </#list>
+                        <#elseif items?is_sequence>
+                            <#list items?sort as value>
+                                <#assign strValue="${(value?is_number)?then(value?c, value)}">
 
-                            <@checkboxItem name=name value=strValue text=strValue selected=selectedItemsList?seq_contains("${strValue}") />
-                        </#list>
-                    </#if>
-                </div>
-            </fieldset>
+                                <@checkboxItem name=name value=strValue text=strValue selected=selectedItemsList?seq_contains("${strValue}") />
+                            </#list>
+                        </#if>
+                    </div>
+                </fieldset>
+            </div>
         </div>
-    </div>
+    </#if>
 </#macro>
 
 <#--  Renders a checkbox item based on the given parameters  -->

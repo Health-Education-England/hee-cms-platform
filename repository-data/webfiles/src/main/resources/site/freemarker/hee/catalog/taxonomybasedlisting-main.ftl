@@ -82,16 +82,16 @@
                                         parentGroupDefaultOptionLabelKey="profession.filter.default.option.label"
                                         subGroupDefaultOptionLabelKey="sub_profession.filter.default.option.label"
                                         parentGroupMap=professionMap!
-                                        selectedParentGroupItems=selectedProfessionList!
+                                        selectedParentGroupItems=selectedProfessionList
                                         subGroupMap=subProfessionMap!
-                                        selectedSubGroupItems=selectedSubProfessionList! />
+                                        selectedSubGroupItems=selectedSubProfessionList />
                                     <#break>
                                 <#case "publicationType">
                                     <#--  Publication type filter  -->
                                     <@checkboxGroup
                                         name=filter.queryParameter
                                         titleKey="publication_type.label"
-                                        items=publicationTypeMap
+                                        items=publicationTypeMap!
                                         selectedItemsList=selectedPublicationTypeList />
                                     <#break>
                                 <#case "tag">
@@ -99,7 +99,7 @@
                                     <@checkboxGroup
                                         name=filter.queryParameter
                                         titleKey="tag.label"
-                                        items=tagMap
+                                        items=tagMap!
                                         selectedItemsList=selectedTagList />
                                     <#break>
                                 <#case "topic">
@@ -112,9 +112,9 @@
                                         parentGroupDefaultOptionLabelKey="topic.filter.default.option.label"
                                         subGroupDefaultOptionLabelKey="sub_topic.filter.default.option.label"
                                         parentGroupMap=topicMap!
-                                        selectedParentGroupItems=selectedTopicList!
+                                        selectedParentGroupItems=selectedTopicList
                                         subGroupMap=subTopicMap!
-                                        selectedSubGroupItems=selectedSubTopicList! />
+                                        selectedSubGroupItems=selectedSubTopicList />
                                     <#break>
                                 <#default>
                             </#switch>

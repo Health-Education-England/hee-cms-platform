@@ -213,7 +213,7 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
                 request.setModel(
                         buildFilterMapModelKey(filter.getQueryParameter(), false),
                         getFacetedTaxonomyAsMap(
-                                TaxonomyTemplateUtils.getTaxonomyAsMap(filter.getTaxonomyName().getName()),
+                                TaxonomyTemplateUtils.getTaxonomyAsMap(filter.getTaxonomyName()),
                                 filter.getField(),
                                 targetFacetBean
                         )
@@ -221,7 +221,7 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
             } else {
                 request.setModel(buildFilterMapModelKey(filter.getQueryParameter(), false),
                         getFacetedTaxonomyAsMap(
-                                TaxonomyTemplateUtils.getRootCategoriesAsMap(filter.getTaxonomyName().getName()),
+                                TaxonomyTemplateUtils.getRootCategoriesAsMap(filter.getTaxonomyName()),
                                 filter.getField(),
                                 targetFacetBean
                         )
@@ -232,7 +232,7 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
                 if (!queryParameterList.isEmpty()) {
                     request.setModel(buildFilterMapModelKey(filter.getQueryParameter(), true),
                             getFacetedTaxonomyAsMap(
-                                    TaxonomyTemplateUtils.getSubCategoriesAsMap(filter.getTaxonomyName().getName(),
+                                    TaxonomyTemplateUtils.getSubCategoriesAsMap(filter.getTaxonomyName(),
                                             queryParameterList.get(0)),
                                     filter.getField(),
                                     targetFacetBean

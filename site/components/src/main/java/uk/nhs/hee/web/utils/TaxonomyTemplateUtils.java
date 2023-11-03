@@ -29,7 +29,8 @@ public class TaxonomyTemplateUtils {
      * if available. Otherwise, returns {@code null}.
      *
      * @param taxonomyPropertyName the taxonomy field name.
-     * @param taxonomy             the taxonomy configured for the {@code taxonomyPropertyName} field.
+     * @param taxonomyEnum         the {@link HEETaxonomy} instance containing the taxonomy configured
+     *                             for the {@code taxonomyPropertyName} field.
      * @return the {@link TaxonomyClassification} for the given {@code taxonomyPropertyName} and {@code taxonomy}
      * if available. Otherwise, returns {@code null}.
      * @throws RepositoryException thrown when an error occurs while reading the {@code taxonomyPropertyName}
@@ -38,25 +39,25 @@ public class TaxonomyTemplateUtils {
     public static TaxonomyClassification getTaxonomyClassification(
             final Node documentNode,
             final String taxonomyPropertyName,
-            final HEETaxonomy taxonomy) throws RepositoryException {
+            final HEETaxonomy taxonomyEnum) throws RepositoryException {
         if (!documentNode.hasProperty(taxonomyPropertyName)) {
             return null;
         }
 
         return new TaxonomyClassification(
                 documentNode.getProperty(taxonomyPropertyName),
-                getTaxonomy(taxonomy.getName())
+                getTaxonomy(taxonomyEnum)
         );
     }
 
     /**
      * This initiates the loading of a map from the named taxonomy
      *
-     * @param taxonomyName that we are reading
+     * @param taxonomyEnum the {@link HEETaxonomy} instance that we are reading
      * @return a {@link Map} with keys and values for use in the template
      */
-    public static Map<String, String> getTaxonomyAsMap(final String taxonomyName) {
-        final Taxonomy taxonomy = getTaxonomy(taxonomyName);
+    public static Map<String, String> getTaxonomyAsMap(final HEETaxonomy taxonomyEnum) {
+        final Taxonomy taxonomy = getTaxonomy(taxonomyEnum);
         if (taxonomy == null) {
             return Collections.emptyMap();
         }
@@ -71,11 +72,12 @@ public class TaxonomyTemplateUtils {
     /**
      * Returns a {@link Map} of root categories key/name pairs of the taxonomy identified by {@code taxonomyName}.
      *
-     * @param taxonomyName the name of the taxonomy whose root categories needs to be returned as a {@link Map}.
+     * @param taxonomyEnum the {@link HEETaxonomy} instance containing the name of taxonomy
+     *                     whose root categories needs to be returned as a {@link Map}.
      * @return a {@link Map} of root categories key/name pairs of the taxonomy identified by {@code taxonomyName}.
      */
-    public static Map<String, String> getRootCategoriesAsMap(final String taxonomyName) {
-        final Taxonomy taxonomy = getTaxonomy(taxonomyName);
+    public static Map<String, String> getRootCategoriesAsMap(final HEETaxonomy taxonomyEnum) {
+        final Taxonomy taxonomy = getTaxonomy(taxonomyEnum);
 
         if (taxonomy == null) {
             return Collections.emptyMap();
@@ -88,11 +90,14 @@ public class TaxonomyTemplateUtils {
     /**
      * Returns a {@link Map} of root categories key/name pairs of the taxonomy identified by {@code taxonomyName}.
      *
-     * @param taxonomyName the name of the taxonomy whose root categories needs to be returned as a {@link Map}.
+     * @param taxonomyEnum the {@link HEETaxonomy} instance containing the name of taxonomy which needs to be loaded.
      * @return a {@link Map} of root categories key/name pairs of the taxonomy identified by {@code taxonomyName}.
      */
-    public static Map<String, String> getSubCategoriesAsMap(final String taxonomyName, final String rootCategoryName) {
-        final Taxonomy taxonomy = getTaxonomy(taxonomyName);
+    public static Map<String, String> getSubCategoriesAsMap(
+            final HEETaxonomy taxonomyEnum,
+            final String rootCategoryName
+    ) {
+        final Taxonomy taxonomy = getTaxonomy(taxonomyEnum);
 
         if (taxonomy == null) {
             return Collections.emptyMap();
@@ -107,15 +112,16 @@ public class TaxonomyTemplateUtils {
     }
 
     /**
-     * Returns {@link Taxonomy} identified by the given {@code taxonomyName}.
+     * Returns {@link Taxonomy} for the given taxonomy enumeration ({@code taxonomyEnum}).
      *
-     * @param taxonomyName the name of the taxonomy whose {@link Taxonomy} instance needs to be returned.
-     * @return the {@link Taxonomy} identified by the given {@code taxonomyName}.
+     * @param taxonomyEnum the {@link HEETaxonomy} instance containing the taxonomy name
+     *                     whose {@link Taxonomy} needs to be returned.
+     * @return {@link Taxonomy} for the given taxonomy enumeration ({@code taxonomyEnum}).
      */
-    private static Taxonomy getTaxonomy(final String taxonomyName) {
+    public static Taxonomy getTaxonomy(final HEETaxonomy taxonomyEnum) {
         final TaxonomyManager taxonomyManager = HstServices.getComponentManager().getComponent(
                 TaxonomyManager.class.getSimpleName(), "org.onehippo.taxonomy.contentbean");
-        return taxonomyManager.getTaxonomies().getTaxonomy(taxonomyName);
+        return taxonomyManager.getTaxonomies().getTaxonomy(taxonomyEnum.getName());
     }
 
     /**

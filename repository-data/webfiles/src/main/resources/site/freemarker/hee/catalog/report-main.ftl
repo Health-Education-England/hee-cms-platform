@@ -150,10 +150,11 @@
 
                     <#if landingPage??>
                         <#-- Publication info partial [publication type, professions and topics] -->
-                        <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
+                        <@publicationPartialInfo
                             publicationTypeTaxClass=landingPage.globalTaxonomyPublicationType!
                             professionTaxClass=landingPage.globalTaxonomyProfessions!
-                            topicTaxClass=landingPage.globalTaxonomyHealthcareTopics!/>
+                            topicTaxClass=landingPage.globalTaxonomyHealthcareTopics!
+                            publicationListingPageURL=publicationListingPageURL!/>
                     </#if>
                 </div>
                 <#--  Publication Info: END  -->

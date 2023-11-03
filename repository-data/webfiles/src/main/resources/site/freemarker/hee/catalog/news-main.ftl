@@ -3,9 +3,9 @@
 <#include "../../include/page-meta-data.ftl">
 <#include "../macros/micro-hero.ftl">
 <#include "../macros/author-cards.ftl">
-<#include "../macros/taxonomy-info.ftl">
 <#import "../macros/components.ftl" as hee>
 <#include "../utils/date-util.ftl">
+<#include "../macros/blog-and-news-partial-info.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
@@ -128,29 +128,12 @@
                             <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
                         </div>
 
-                        <#--  Professions  -->
-                        <@taxonomyInfo
-                            taxClass=document.globalTaxonomyProfessions!
-                            taxLabel='Professions'
-                            taxParameter='profession'
-                            multiValued=true
-                            collectionPageURL=newsListingPageURL/>
-
-                        <#--  Topics  -->
-                        <@taxonomyInfo
-                            taxClass=document.globalTaxonomyHealthcareTopics!
-                            taxLabel='Topics'
-                            taxParameter='topic'
-                            multiValued=true
-                            collectionPageURL=newsListingPageURL/>
-
-                        <#--  Tags  -->
-                        <@taxonomyInfo
-                            taxClass=document.globalTaxonomyTags!
-                            taxLabel='Tags'
-                            taxParameter='tag'
-                            multiValued=true
-                            collectionPageURL=newsListingPageURL/>
+                        <#-- News info partial [professions, topics and tags] -->
+                        <@blogAndNewsPartialInfo
+                            professionTaxClass=document.globalTaxonomyProfessions!
+                            topicTaxClass=document.globalTaxonomyHealthcareTopics!
+                            tagTaxClass=document.globalTaxonomyTags!
+                            listingPageURL=newsListingPageURL!/>
                     </div>
                     <#--  News info: END  -->
 

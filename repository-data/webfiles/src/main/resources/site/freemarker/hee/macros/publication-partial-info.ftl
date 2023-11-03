@@ -1,27 +1,19 @@
 <#include "../macros/taxonomy-info.ftl">
 
-<#macro publicationPartialInfo publicationListingPageURL publicationTypeTaxClass professionTaxClass topicTaxClass>
+<#--  Renders publication info partial for taxonomies  -->
+<#macro publicationPartialInfo publicationTypeTaxClass professionTaxClass topicTaxClass publicationListingPageURL>
     <#--  Publication type  -->
     <@taxonomyInfo
-        taxClass=publicationTypeTaxClass!
-        taxLabel='Publication type'
-        taxParameter='publicationType'
-        multiValued=false
+        taxClass=publicationTypeTaxClass
         collectionPageURL=publicationListingPageURL/>
 
-    <#--  Publication professions  -->
+    <#--  Professions  -->
     <@taxonomyInfo
-        taxClass=professionTaxClass!
-        taxLabel='Professions'
-        taxParameter='publicationProfession'
-        multiValued=true
+        taxClass=professionTaxClass
         collectionPageURL=publicationListingPageURL/>
 
-    <#--  Publication topics  -->
+    <#--  Topics  -->
     <@taxonomyInfo
-        taxClass=topicTaxClass!
-        taxLabel='Topics'
-        taxParameter='publicationTopic'
-        multiValued=true
+        taxClass=topicTaxClass
         collectionPageURL=publicationListingPageURL/>
 </#macro>

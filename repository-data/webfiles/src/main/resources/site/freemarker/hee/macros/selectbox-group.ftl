@@ -11,33 +11,35 @@
 
 <#--  Renders the given parent and sub filters as one group  -->
 <#macro selectboxGroup parentGroupTitleKey subGroupTitleKey parentGroupName subGroupName parentGroupDefaultOptionLabelKey subGroupDefaultOptionLabelKey parentGroupMap selectedParentGroupItems subGroupMap selectedSubGroupItems>
-    <div class="nhsuk-filter__group has-subgroup">
-        <#--  Clear link  -->
-        <a class="nhsuk-filter__group__clear" href="#"><@fmt.message key="filter.clear.label"/></a>
+    <#if parentGroupMap?has_content>
+        <div class="nhsuk-filter__group has-subgroup">
+            <#--  Clear link  -->
+            <a class="nhsuk-filter__group__clear" href="#"><@fmt.message key="filter.clear.label"/></a>
 
-        <#--  Parent select box group  -->
-        <div class="nhsuk-form-group parent-group">
-            <fieldset class="nhsuk-fieldset">
-                <legend class="nhsuk-fieldset__legend"><@fmt.message key="${parentGroupTitleKey}"/></legend>
+            <#--  Parent select box group  -->
+            <div class="nhsuk-form-group parent-group">
+                <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend"><@fmt.message key="${parentGroupTitleKey}"/></legend>
+                    <@selectBox
+                        titleKey=parentGroupTitleKey
+                        name=parentGroupName
+                        defaultOptionLabelKey=parentGroupDefaultOptionLabelKey
+                        optionMap=parentGroupMap
+                        selectedOptionItems=selectedParentGroupItems />
+                </fieldset>
+            </div>
+
+            <#--  Sub select box group  -->
+            <div class="nhsuk-form-group sub-group">
                 <@selectBox
-                    titleKey=parentGroupTitleKey
-                    name=parentGroupName
-                    defaultOptionLabelKey=parentGroupDefaultOptionLabelKey
-                    optionMap=parentGroupMap
-                    selectedOptionItems=selectedParentGroupItems />
-            </fieldset>
+                    titleKey=subGroupTitleKey
+                    name=subGroupName
+                    defaultOptionLabelKey=subGroupDefaultOptionLabelKey
+                    optionMap=subGroupMap
+                    selectedOptionItems=selectedSubGroupItems />
+            </div>
         </div>
-
-        <#--  Sub select box group  -->
-        <div class="nhsuk-form-group sub-group">
-            <@selectBox
-                titleKey=subGroupTitleKey
-                name=subGroupName
-                defaultOptionLabelKey=subGroupDefaultOptionLabelKey
-                optionMap=subGroupMap
-                selectedOptionItems=selectedSubGroupItems />
-        </div>
-    </div>
+    </#if>
 </#macro>
 
 <#--  Renders the given filter as a select box/dropdown  -->
