@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-7.0.0.min.css'/>" type="text/css"/>
     <link rel="stylesheet" href="<@hst.webfile path='/css/hee.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/nhse-global-menu.min.css'/>" type="text/css"/>
     <#if hstRequest.requestContext.channelManagerPreviewRequest>
       <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
     </#if>
@@ -42,6 +43,20 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <@hst.headContributions categoryIncludes="gtmNoScript" xhtml=true/>
+
+    <div id="nhse-global-menu" class="nhse-global-menu theme-blue">
+       <div class="nhse-global-menu__wrapper">
+          <div class="nhsuk-width-container nhse-global-menu__container" style="max-width: 960px;">
+             <a aria-label="Visit NHS England website" class="nhse-global-menu__logo" href="http://hee.nhs.uk" title="NHS England">
+                <div class="nhse-global-menu__logo__img"></div>
+                <span class="nhse-global-menu__logo__name">England</span>
+             </a>
+          </div>
+       </div>
+       <div class="nhse-global-menu__descriptor">
+          <div class="nhse-global-menu__descriptor__wrapper nhsuk-width-container">Workforce, training and education</div>
+       </div>
+    </div>
 
     <#--  Rendered below cookie consent, above header  -->
     <@hst.include ref="announcement-banner"/>
