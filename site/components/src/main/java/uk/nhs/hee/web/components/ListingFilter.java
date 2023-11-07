@@ -13,7 +13,7 @@ public enum ListingFilter {
      * {@code Profession} filter.
      */
     PROFESSION(
-            HEEField.HEE_GLOBAL_TAXONOMY_PROFESSIONS_WITH_ANCESTORS,
+            HEEField.GLOBAL_TAXONOMY_PROFESSIONS_WITH_ANCESTORS,
             HEETaxonomy.HEE_GLOBAL_PROFESSIONS,
             Boolean.FALSE,
             "profession"
@@ -23,7 +23,7 @@ public enum ListingFilter {
      * {@code Publication type} filter.
      */
     PUBLICATION_TYPE(
-            HEEField.HEE_GLOBAL_TAXONOMY_PUBLICATION_TYPE_WITH_ANCESTORS,
+            HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE_WITH_ANCESTORS,
             HEETaxonomy.HEE_GLOBAL_PUBLICATION_TYPES,
             Boolean.TRUE,
             "publicationType"
@@ -33,7 +33,7 @@ public enum ListingFilter {
      * {@code Tag} taxonomy filter.
      */
     TAG(
-            HEEField.HEE_GLOBAL_TAXONOMY_TAGS_WITH_ANCESTORS,
+            HEEField.GLOBAL_TAXONOMY_TAGS_WITH_ANCESTORS,
             HEETaxonomy.HEE_GLOBAL_TAGS,
             Boolean.TRUE,
             "tag"
@@ -43,7 +43,7 @@ public enum ListingFilter {
      * {@code Topic} taxonomy filter.
      */
     TOPIC(
-            HEEField.HEE_GLOBAL_TAXONOMY_HEALTHCARE_TOPICS_WITH_ANCESTORS,
+            HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS_WITH_ANCESTORS,
             HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS,
             Boolean.FALSE,
             "topic"
