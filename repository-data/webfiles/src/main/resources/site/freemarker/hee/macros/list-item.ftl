@@ -232,8 +232,6 @@
 <#--  Lists publication (landing) result items  -->
 <#macro publicationListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
-    <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
-    <@fmt.message key="publication.type" var="publicationTypeLabel"/>
 
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
@@ -244,11 +242,14 @@
 
                 <div class="hee-listing-item__details">
                     <#if item.globalTaxonomyPublicationType?? && item.globalTaxonomyPublicationType.taxonomyValues?has_content>
+                        <@fmt.message key="publication.type" var="publicationTypeLabel"/>
+
                         <@listItemRow key="${publicationTypeLabel}">
                             ${item.globalTaxonomyPublicationType.taxonomyValues[0].label}
                         </@listItemRow>
                     </#if>
 
+                    <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
                     <@listItemRow key="${publishDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@listItemRow>
@@ -509,6 +510,81 @@
                             </div>
                         </#if>
                 </#switch>
+            </div>
+        </#if>
+    </#list>
+</#macro>
+
+<#--  Lists training programme result items  -->
+<#macro trainingListItem items>
+    <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
+
+    <#list items as item>
+        <#assign pageURL=getInternalLinkURL(item)>
+
+        <#if pageURL != pageNotFoundURL>
+            <div class="hee-listing-item${(item.cardImage?has_content)?then(' has-image', '')}">
+                <#--  Card image  -->
+                <@hst.link var="cardImgLink" hippobean=item.cardImage/>
+                <div class="hee-listing-item__image" style="background-image:url('${cardImgLink}');"></div>
+
+                <#--  Title  -->
+                <h3><a href="${pageURL}">${item.title}</a></h3>
+
+                <#--  Training details: START  -->
+                <div class="hee-listing-item__details">
+                    <#--  Professions  -->
+                    <#if item.globalTaxonomyProfessions?? && item.globalTaxonomyProfessions.taxonomyValues?has_content>
+                        <@fmt.message key="profession.label" var="professionLabel"/>
+
+                        <@listItemRow key="${professionLabel}">
+                            <#list item.globalTaxonomyProfessions.taxonomyValues as profession>
+                                ${profession.label}<#sep>, </#sep>
+                            </#list>
+                        </@listItemRow>
+                    </#if>
+
+                    <#--  Topics  -->
+                    <#if item.globalTaxonomyHealthcareTopics?? && item.globalTaxonomyHealthcareTopics.taxonomyValues?has_content>
+                        <@fmt.message key="topic.label" var="topicLabel"/>
+
+                        <@listItemRow key="${topicLabel}">
+                            <#list item.globalTaxonomyHealthcareTopics.taxonomyValues as topic>
+                                ${topic.label}<#sep>, </#sep>
+                            </#list>
+                        </@listItemRow>
+                    </#if>
+
+                    <#--  Discipline  -->
+                    <#if item.globalTaxonomyClinicalDiscipline?? && item.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
+                        <@fmt.message key="discipline.label" var="disciplineLabel"/>
+
+                        <@listItemRow key="${disciplineLabel}">
+                            ${item.globalTaxonomyClinicalDiscipline.taxonomyValues[0].label}
+                        </@listItemRow>
+                    </#if>
+
+                    <#--  Training type  -->
+                    <#if item.globalTaxonomyTrainingType?? && item.globalTaxonomyTrainingType.taxonomyValues?has_content>
+                        <@fmt.message key="training_type.label" var="trainingTypeLabel"/>
+
+                        <@listItemRow key="${trainingTypeLabel}">
+                            ${item.globalTaxonomyTrainingType.taxonomyValues[0].label}
+                        </@listItemRow>
+                    </#if>
+
+                    <#--  Duration  -->
+                    <@fmt.message key="duration.label" var="durationLabel"/>
+                    <@listItemRow key="${durationLabel}">
+                        ${item.duration}
+                    </@listItemRow>
+                </div>
+                <#--  Training details: END   -->
+
+                <#--  Summary  -->
+                <div class="hee-listing-item__summary">
+                    <@hst.html formattedText="${item.summary!?replace('\n', '<br>')}"/>
+                </div>
             </div>
         </#if>
     </#list>

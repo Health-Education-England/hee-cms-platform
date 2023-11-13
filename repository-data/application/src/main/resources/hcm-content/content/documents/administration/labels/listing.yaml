@@ -20,7 +20,7 @@
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -34,7 +34,8 @@
       publication.publish_date, filter.clear.label, categories.text, published_date.text,
       authors.text, profession.label, sub_profession.label, sub_topic.label, profession.filter.default.option.label,
       sub_profession.filter.default.option.label, topic.filter.default.option.label,
-      sub_topic.filter.default.option.label, publication_type.label, tag.label]
+      sub_topic.filter.default.option.label, publication_type.label, tag.label, clinical_discipline.label,
+      recruitment_format.label, training_type.label, discipline.label, duration.label]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get strategy, Search, Get search, Completed on,
@@ -43,7 +44,8 @@
         - Newest, Date submitted - Oldest, Publication type, Publish date, Clear,
       Categories, Published date, Author(s), Profession, Sub profession, Sub topic,
       All professions, All sub professions, All topics, All sub topics, Publication
-        type, Tag]
+        type, Tag, Clinical discipline, Recruitment format, Training type, Discipline,
+      Duration]
   /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -59,7 +61,7 @@
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -73,7 +75,8 @@
       publication.publish_date, filter.clear.label, categories.text, published_date.text,
       authors.text, profession.label, sub_profession.label, sub_topic.label, profession.filter.default.option.label,
       sub_profession.filter.default.option.label, topic.filter.default.option.label,
-      sub_topic.filter.default.option.label, publication_type.label, tag.label]
+      sub_topic.filter.default.option.label, publication_type.label, tag.label, clinical_discipline.label,
+      recruitment_format.label, training_type.label, discipline.label, duration.label]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get strategy, Search, Get search, Completed on,
@@ -82,7 +85,8 @@
         - Newest, Date submitted - Oldest, Publication type, Publish date, Clear,
       Categories, Published date, Author(s), Profession, Sub profession, Sub topic,
       All professions, All sub professions, All topics, All sub topics, Publication
-        type, Tag]
+        type, Tag, Clinical discipline, Recruitment format, Training type, Discipline,
+      Duration]
   /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -99,7 +103,7 @@
         item overview., Used in a Bulletin component to show a bulletin item website.,
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '', '', '', '', '', '', '', '']
+      '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [bulletin.overview, bulletin.website, sort.label, sort.option.oldest,
       sort.option.newest, filter.category.label, filters.label, filter.content_type.label,
@@ -113,7 +117,8 @@
       publication.publish_date, filter.clear.label, categories.text, published_date.text,
       authors.text, profession.label, sub_profession.label, sub_topic.label, profession.filter.default.option.label,
       sub_profession.filter.default.option.label, topic.filter.default.option.label,
-      sub_topic.filter.default.option.label, publication_type.label, tag.label]
+      sub_topic.filter.default.option.label, publication_type.label, tag.label, clinical_discipline.label,
+      recruitment_format.label, training_type.label, discipline.label, duration.label]
     resourcebundle:messages: [Overview, Website, Sort by, Oldest, Newest, Category,
       Filters, Content type, Date, results, Published on, By, Sector, Region, Topic,
       Topics, Strings / Strategies, Get strategy, Search, Get search, Completed on,
@@ -122,4 +127,5 @@
         - Newest, Date submitted - Oldest, Publication type, Publish date, Clear,
       Categories, Published date, Author(s), Profession, Sub profession, Sub topic,
       All professions, All sub professions, All topics, All sub topics, Publication
-        type, Tag]
+        type, Tag, Clinical discipline, Recruitment format, Training type, Discipline,
+      Duration]

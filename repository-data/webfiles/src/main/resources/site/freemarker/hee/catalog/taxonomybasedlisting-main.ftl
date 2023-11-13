@@ -72,6 +72,14 @@
                     <div class="nhsuk-filter__groups">
                         <#list listingFilters as filter>
                             <#switch filter.queryParameter>
+                                <#case "clinicalDiscipline">
+                                    <#--  Clinical discipline filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="clinical_discipline.label"
+                                        items=clinicalDisciplineMap!
+                                        selectedItemsList=selectedClinicalDisciplineList />
+                                    <#break>
                                 <#case "profession">
                                     <#--  Profession filter  -->
                                     <@selectboxGroup
@@ -94,6 +102,14 @@
                                         items=publicationTypeMap!
                                         selectedItemsList=selectedPublicationTypeList />
                                     <#break>
+                                <#case "recruitmentFormat">
+                                    <#--  Recruitment format filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="recruitment_format.label"
+                                        items=recruitmentFormatMap!
+                                        selectedItemsList=selectedRecruitmentFormatList />
+                                    <#break>
                                 <#case "tag">
                                     <#--  Tag filter  -->
                                     <@checkboxGroup
@@ -115,6 +131,14 @@
                                         selectedParentGroupItems=selectedTopicList
                                         subGroupMap=subTopicMap!
                                         selectedSubGroupItems=selectedSubTopicList />
+                                    <#break>
+                                <#case "trainingType">
+                                    <#--  Training type filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="training_type.label"
+                                        items=trainingTypeMap!
+                                        selectedItemsList=selectedTrainingTypeList />
                                     <#break>
                                 <#default>
                             </#switch>
@@ -152,6 +176,10 @@
                                     <#--  Adds the selected filters as hidden inputs (to resubmit them during sort selection change)  -->
                                     <#list listingFilters as filter>
                                         <#switch filter.queryParameter>
+                                            <#case "clinicalDiscipline">
+                                                <#--  Selected clinical disciplines  -->
+                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedClinicalDisciplineList!/>
+                                                <#break>
                                             <#case "profession">
                                                 <#--  Selected professions  -->
                                                 <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedProfessionList!/>
@@ -166,6 +194,10 @@
                                                 <#--  Selected publication types  -->
                                                 <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedPublicationTypeList!/>
                                                 <#break>
+                                            <#case "recruitmentFormat">
+                                                <#--  Selected recruitment formats  -->
+                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedRecruitmentFormatList!/>
+                                                <#break>
                                             <#case "tag">
                                                 <#--  Selected tags  -->
                                                 <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTagList!/>
@@ -179,6 +211,10 @@
                                                     <@addSelectedFiltersAsHiddenInput name="sub${filter.queryParameter?cap_first}" selectedFilters=selectedSubTopicList!/>
                                                 </#if>
 
+                                                <#break>
+                                            <#case "trainingType">
+                                                <#--  Selected training types  -->
+                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTrainingTypeList!/>
                                                 <#break>
                                             <#default>
                                         </#switch>
@@ -206,6 +242,13 @@
                             <#-- Active filters: START -->
                             <#list listingFilters as filter>
                                 <#switch filter.queryParameter>
+                                    <#case "clinicalDiscipline">
+                                        <#-- Active clinical disciplines  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="clinical_discipline.label"
+                                            selectedFilters=selectedClinicalDisciplineList
+                                            filterMap=clinicalDisciplineMap! />
+                                        <#break>
                                     <#case "profession">
                                         <#-- Active profession & sub-profession -->
                                         <@activeFiltersForSelectboxGroup
@@ -221,6 +264,13 @@
                                             labelKey="publication_type.label"
                                             selectedFilters=selectedPublicationTypeList
                                             filterMap=publicationTypeMap! />
+                                        <#break>
+                                    <#case "recruitmentFormat">
+                                        <#-- Active recruitment formats  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="recruitment_format.label"
+                                            selectedFilters=selectedRecruitmentFormatList
+                                            filterMap=recruitmentFormatMap! />
                                         <#break>
                                     <#case "tag">
                                         <#-- Active tags  -->
@@ -238,6 +288,13 @@
                                             parentGroupFilterMap=topicMap!
                                             subGroupFilterMap=subTopicMap! />
                                         <#break>
+                                    <#case "trainingType">
+                                        <#-- Active training types  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="training_type.label"
+                                            selectedFilters=selectedTrainingTypeList
+                                            filterMap=trainingTypeMap! />
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
@@ -247,7 +304,7 @@
 
                         <#if pageable??>
                             <#--  Search results: START  -->
-                            <div class="hee-listing__results">
+                            <div class="hee-listing__results${(listingType='training')?then(' layout-two-col', '')}">
                                 <@.vars["${listingType}ListItem"] items=pageable.items/>
                             </div>
                             <#--  Search results: END  -->
