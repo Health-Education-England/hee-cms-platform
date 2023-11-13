@@ -53,9 +53,6 @@
              </a>
           </div>
        </div>
-       <div class="nhse-global-menu__descriptor">
-          <div class="nhse-global-menu__descriptor__wrapper nhsuk-width-container">Workforce, training and education</div>
-       </div>
     </div>
 
     <#--  Rendered below cookie consent, above header  -->
