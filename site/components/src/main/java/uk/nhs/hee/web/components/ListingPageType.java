@@ -152,7 +152,26 @@ public enum ListingPageType {
             Boolean.FALSE,
             StringUtils.EMPTY,
             Collections.emptyList()
-    );
+    ),
+
+    /**
+     * Training listing
+     */
+    TRAINING_LISTING(
+            "training",
+            new String[]{"hee:trainingProgrammePage"},
+            Boolean.TRUE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
+            StringUtils.EMPTY,
+            Boolean.FALSE,
+            "trainingfacets",
+            List.of(
+                    ListingFilter.TRAINING_TYPE,
+                    ListingFilter.PROFESSION,
+                    ListingFilter.TOPIC,
+                    ListingFilter.CLINICAL_DISCIPLINE,
+                    ListingFilter.RECRUITMENT_FORMAT
+            ));
 
 
     private final String type;
