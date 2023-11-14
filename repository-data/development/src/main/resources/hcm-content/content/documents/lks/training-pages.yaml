@@ -533,7 +533,7 @@
       jcr:uuid: 1f5a271f-d82b-4f4b-bea2-a224e66dacd7
       hee:applicationButtonLink: https://xmdocumentation.bloomreach.com/library/concepts/document-types/document-type-field-validators.html
       hee:applicationButtonTitle: Button title
-      hee:closing: 0001-01-01T12:00:00Z
+      hee:closing: 2023-11-13T00:00:00Z
       hee:discipline: dental
       hee:duration: 12
       hee:globalTaxonomyProfessions: [adult_nurse]
@@ -548,9 +548,10 @@
       hippo:availability: []
       hippostd:retainable: false
       hippostd:state: draft
+      hippostd:transferable: false
       hippostdpubwf:createdBy: admin
       hippostdpubwf:creationDate: 2023-06-23T10:53:34.569+01:00
-      hippostdpubwf:lastModificationDate: 2023-08-25T17:18:18.305+01:00
+      hippostdpubwf:lastModificationDate: 2023-11-13T15:18:03.699Z
       hippostdpubwf:lastModifiedBy: admin
       hippotranslation:id: 8d1c3744-f15d-4863-acec-f8cfc70158e5
       hippotranslation:locale: en
@@ -572,6 +573,13 @@
       /hee:overview:
         jcr:primaryType: hippostd:html
         hippostd:content: <p>An overview</p>
+      /hee:pageLastNextReview:
+        jcr:primaryType: hee:pageLastNextReview
+        hee:lastReviewed: 0001-01-01T12:00:00Z
+        hee:nextReviewed: 0001-01-01T12:00:00Z
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /training-programmes-page[2]:
       jcr:primaryType: hee:trainingProgrammePage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
