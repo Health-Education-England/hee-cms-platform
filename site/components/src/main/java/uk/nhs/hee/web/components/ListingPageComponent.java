@@ -41,6 +41,12 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
+        // To avoid component processing the request when it has just been dropped on a page (via experience manager)
+        // but, the listing page document hasn't been chosen yet.
+        if (getListingPageModel(request) == null) {
+            return;
+        }
+
         final Pageable<HippoBean> pageable;
         try {
             pageable = executeQuery(request);
@@ -151,7 +157,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             final HstRequest request, final HstQuery query) throws FilterException;
 
     /**
-     * Returns Query {@link Filter} built based on the given inputs.
+     * Returns an {@code OR} separated Query {@link Filter} built based on the given inputs.
      *
      * @param query         the {@link HstQuery} instance.
      * @param values        the Filter field values.
@@ -163,12 +169,50 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             final HstQuery query,
             final List<String> values,
             final String attributeName) throws FilterException {
+        return createFilter(query, values, attributeName, true);
+    }
+
+    /**
+     * Returns an {@code AND} separated Query {@link Filter} built based on the given inputs.
+     *
+     * @param query         the {@link HstQuery} instance.
+     * @param values        the Filter field values.
+     * @param attributeName the Filter field name.
+     * @return the Query {@link Filter} built based on the given inputs.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
+    protected Filter createAndFilter(
+            final HstQuery query,
+            final List<String> values,
+            final String attributeName) throws FilterException {
+        return createFilter(query, values, attributeName, false);
+    }
+
+    /**
+     * Returns Query {@link Filter} built based on the given inputs.
+     *
+     * @param query         the {@link HstQuery} instance.
+     * @param values        the Filter field values.
+     * @param attributeName the Filter field name.
+     * @param orFilter      the boolean indicating whether to create an {@code OR} or {@code AND} filter.
+     * @return the Query {@link Filter} built based on the given inputs.
+     * @throws FilterException thrown when an error occurs during Query Filter build.
+     */
+    private Filter createFilter(
+            final HstQuery query,
+            final List<String> values,
+            final String attributeName,
+            final boolean orFilter) throws FilterException {
         final Filter baseFilter = query.createFilter();
 
         for (final String value : values) {
             final Filter filter = query.createFilter();
             filter.addEqualTo(attributeName, value);
-            baseFilter.addOrFilter(filter);
+            if (orFilter) {
+                baseFilter.addOrFilter(filter);
+            } else {
+                baseFilter.addAndFilter(filter);
+            }
         }
 
         return baseFilter;
@@ -263,6 +307,17 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
      * @return the {@link ListingPageType} instance of the current {@code request}.
      */
     protected ListingPageType getListing(final HstRequest request) {
-        return ListingPageType.getByName(getListingPageModel(request).getListingPageType());
+        final String listingPageType = getListingPageModel(request).getListingPageType();
+
+        if (StringUtils.isNotEmpty(listingPageType)) {
+            return ListingPageType.getByName(listingPageType);
+        } else {
+            if ("hee:publicationListingPage".equals(getListingPageModel(request).getContentType())) {
+                return ListingPageType.PUBLICATION_LISTING;
+            }
+        }
+
+        throw new RuntimeException("Can't figure out the listing type of the document with path = " +
+                getListingPageModel(request).getPath());
     }
 }

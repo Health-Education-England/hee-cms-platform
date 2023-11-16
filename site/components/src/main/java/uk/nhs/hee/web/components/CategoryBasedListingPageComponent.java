@@ -24,6 +24,12 @@ public class CategoryBasedListingPageComponent extends ListingPageComponent {
     public void doBeforeRender(final HstRequest request, final HstResponse response) {
         super.doBeforeRender(request, response);
 
+        // To avoid component processing the request when it has just been dropped on a page (via experience manager)
+        // but, the listing page document hasn't been chosen yet.
+        if (getListingPageModel(request) == null) {
+            return;
+        }
+
         request.setModel("selectedCategories", HstUtils.getQueryParameterValues(request, CATEGORY_QUERY_PARAM));
         request.setModel("categoriesMap", getFilterValueListMap(request));
         request.setModel("selectedSortOrder", getSelectedSortOrder(request));

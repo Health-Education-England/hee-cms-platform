@@ -288,6 +288,7 @@ definitions:
             selectlist.maxrows: '10'
             valuelist.provider: service.valuelist.default
             wicket.id: ${cluster.id}.left.item
+            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               valueListBasePathFormat: /content/documents/administration/valuelists/${channel}

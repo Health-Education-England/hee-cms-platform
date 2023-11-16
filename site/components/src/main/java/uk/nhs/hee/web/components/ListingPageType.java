@@ -1,9 +1,12 @@
 package uk.nhs.hee.web.components;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.hippoecm.repository.HippoStdPubWfNodeType;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.repository.ValueListIdentifier;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * An enumeration of Listing Page Types and its document types, sort by date field & filter value-list identifier.
@@ -18,11 +21,14 @@ public enum ListingPageType {
      */
     ATOZ_LISTING(
             "atoz",
-            new String[]{"hee:guidance","hee:landingPage","hee:listingPage","hee:MiniHub"},
+            new String[]{"hee:guidance", "hee:landingPage", "hee:listingPage", "hee:MiniHub"},
             Boolean.FALSE,
             HEEField.PUBLICATION_DATE.getName(),
             StringUtils.EMPTY,
-            Boolean.FALSE),
+            Boolean.FALSE,
+            StringUtils.EMPTY,
+            Collections.emptyList()
+    ),
 
     /**
      * Blog listing
@@ -33,7 +39,14 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.PUBLICATION_DATE.getName(),
             ValueListIdentifier.BLOG_CATEGORIES.getName(),
-            Boolean.TRUE),
+            Boolean.TRUE,
+            "blogfacets",
+            List.of(
+                    ListingFilter.PROFESSION,
+                    ListingFilter.TOPIC,
+                    ListingFilter.TAG
+            )
+    ),
 
     /**
      * Bulletin listing
@@ -44,7 +57,10 @@ public enum ListingPageType {
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             ValueListIdentifier.BULLETIN_CATEGORIES.getName(),
-            Boolean.FALSE),
+            Boolean.FALSE,
+            StringUtils.EMPTY,
+            Collections.emptyList()
+    ),
 
     /**
      * Case study listing
@@ -55,7 +71,10 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.SUBMITTED_DATE.getName(),
             ValueListIdentifier.CASE_STUDY_IMPACT_GROUPS.getName(),
-            Boolean.FALSE),
+            Boolean.FALSE,
+            StringUtils.EMPTY,
+            Collections.emptyList()
+    ),
 
     /**
      * Event listing
@@ -66,7 +85,10 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.DATE.getName(),
             StringUtils.EMPTY,
-            Boolean.FALSE),
+            Boolean.FALSE,
+            StringUtils.EMPTY,
+            Collections.emptyList()
+    ),
 
     /**
      * News listing
@@ -77,7 +99,14 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.PUBLICATION_DATE.getName(),
             ValueListIdentifier.NEWS_CATEGORIES.getName(),
-            Boolean.TRUE),
+            Boolean.TRUE,
+            "newsfacets",
+            List.of(
+                    ListingFilter.PROFESSION,
+                    ListingFilter.TOPIC,
+                    ListingFilter.TAG
+            )
+    ),
 
     /**
      * Publication listing
@@ -88,7 +117,14 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.PUBLICATION_DATE.getName(),
             StringUtils.EMPTY,
-            Boolean.FALSE),
+            Boolean.FALSE,
+            "publicationfacets",
+            List.of(
+                    ListingFilter.PUBLICATION_TYPE,
+                    ListingFilter.PROFESSION,
+                    ListingFilter.TOPIC
+            )
+    ),
 
     /**
      * Search listing
@@ -99,7 +135,10 @@ public enum ListingPageType {
             Boolean.FALSE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             StringUtils.EMPTY,
-            Boolean.FALSE),
+            Boolean.FALSE,
+            StringUtils.EMPTY,
+            Collections.emptyList()
+    ),
 
     /**
      * Search bank Listing
@@ -110,7 +149,10 @@ public enum ListingPageType {
             Boolean.TRUE,
             HEEField.COMPLETED_DATE.getName(),
             ValueListIdentifier.SEARCH_BANK_TOPICS.getName(),
-            Boolean.FALSE);
+            Boolean.FALSE,
+            StringUtils.EMPTY,
+            Collections.emptyList()
+    );
 
 
     private final String type;
@@ -119,6 +161,8 @@ public enum ListingPageType {
     private final String sortByDateField;
     private final String filterValueListIdentifier;
     private final boolean channelSpecificValueListIdentifier;
+    private final String relativeFacetPath;
+    private final List<ListingFilter> listingFilters;
 
     /**
      * Constructor that initialises the Listing Type (Default) Information.
@@ -130,6 +174,9 @@ public enum ListingPageType {
      * @param filterValueListIdentifier          the value-list identifier for the listing filter.
      * @param channelSpecificValueListIdentifier the flag indicating whether channel specific
      *                                           {@code filterValueListIdentifier} is available.
+     * @param relativeFacetPath                  the facet path relative to the channel.
+     * @param listingFilters                     the list of (taxonomy-based) listing filters
+     *                                           that needs to be displayed on the listing page.
      */
     ListingPageType(
             final String type,
@@ -137,7 +184,9 @@ public enum ListingPageType {
             final boolean sortingEnabled,
             final String sortByDateField,
             final String filterValueListIdentifier,
-            final boolean channelSpecificValueListIdentifier
+            final boolean channelSpecificValueListIdentifier,
+            final String relativeFacetPath,
+            final List<ListingFilter> listingFilters
     ) {
         this.type = type;
         this.documentTypes = documentTypes;
@@ -145,6 +194,8 @@ public enum ListingPageType {
         this.sortByDateField = sortByDateField;
         this.filterValueListIdentifier = filterValueListIdentifier;
         this.channelSpecificValueListIdentifier = channelSpecificValueListIdentifier;
+        this.relativeFacetPath = relativeFacetPath;
+        this.listingFilters = listingFilters;
     }
 
     /**
@@ -222,5 +273,23 @@ public enum ListingPageType {
      */
     public boolean isChannelSpecificValueListIdentifier() {
         return channelSpecificValueListIdentifier;
+    }
+
+    /**
+     * Returns the facet path relative to the channel.
+     *
+     * @return the facet path relative to the channel.
+     */
+    public String getRelativeFacetPath() {
+        return relativeFacetPath;
+    }
+
+    /**
+     * Returns the list of (taxonomy-based) listing filters that needs to be displayed on the listing page.
+     *
+     * @return the list of (taxonomy-based) listing filters that needs to be displayed on the listing page.
+     */
+    public List<ListingFilter> getListingFilters() {
+        return listingFilters;
     }
 }

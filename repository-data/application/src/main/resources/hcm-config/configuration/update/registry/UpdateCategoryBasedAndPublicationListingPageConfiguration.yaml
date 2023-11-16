@@ -1,0 +1,39 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateCategoryBasedAndPublicationListingPageConfiguration:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Updates 'category-based-listing' and 'publication-listing'
+        page component configuration like hst:componentclassname, hst:template, etc
+        to use the new 'taxonomy-based-listing' page configuration.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(*,
+        hst:containeritemcomponent)[@hst:componentclassname='uk.nhs.hee.web.components.CategoryBasedListingPageComponent'
+        or @hst:componentclassname='uk.nhs.hee.web.components.PublicationListingPageComponent']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.hippoecm.hst.configuration.HstNodeTypes\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass UpdateCategoryBasedAndPublicationListingPageConfiguration\
+        \ extends BaseNodeUpdateVisitor {\r\n    boolean doUpdate(Node node) {\r\n\
+        \        log.debug \"Updating node ${node.path}\"\r\n\r\n        if (node.path.toLowerCase().contains(\"\
+        bulletin\")) {\r\n            // Apply 'Bulletin listing page' label for bulletin\
+        \ listing page components\r\n            node.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\
+        \ \"Bulletin listing page\")\r\n\r\n            log.debug \"Successfully updated\
+        \ bulletin page component config label \" +\r\n                    \"(${HstNodeTypes.COMPONENT_PROPERTY_LABEL})\
+        \ for '${node.path}' to 'Bulletin listing page'.\"\r\n        } else {\r\n\
+        \            // Apply taxonomy-based-listing page component configuration\
+        \ for blog, news\r\n            // and publication listing page components\r\
+        \n            node.setProperty(HstNodeTypes.COMPONENT_PROPERTY_COMPONENT_CLASSNAME,\r\
+        \n                    \"uk.nhs.hee.web.components.TaxonomyBasedListingPageComponent\"\
+        )\r\n            node.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\r\
+        \n                    \"Taxonomy-based collection pages [blog, news & publication]\"\
+        )\r\n            node.setProperty(HstNodeTypes.NODETYPE_HST_TEMPLATE,\r\n\
+        \                    \"taxonomybasedlisting-main\")\r\n            node.session.move(node.path,\
+        \ node.parent.path + \"/taxonomy-based-listing\")\r\n\r\n            log.debug\
+        \ \"Successfully applied the taxonomy-based-listing page component config\
+        \ for '${node.path}'\"\r\n        }\r\n\r\n        return true\r\n    }\r\n\
+        \r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000
