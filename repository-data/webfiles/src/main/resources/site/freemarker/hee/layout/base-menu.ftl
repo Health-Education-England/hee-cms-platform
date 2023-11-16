@@ -18,7 +18,7 @@
         <#return link>
     </#function>
 
-    <nav class="nhsuk-header__navigation${(menu.siteMenuItems?size gt 2)?string(' nhsuk-header__navigation--more-items', '')}" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
+    <nav class="nhsuk-header__navigation" id="header-navigation" role="navigation" aria-label="Primary navigation" aria-labelledby="label-navigation">
         <div class="nhsuk-width-container has-edit-button">
             <p class="nhsuk-header__navigation-title">
                 <span id="label-navigation">Menu</span>

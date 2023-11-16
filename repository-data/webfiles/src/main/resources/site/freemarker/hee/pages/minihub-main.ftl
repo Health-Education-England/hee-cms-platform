@@ -43,6 +43,11 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
+                    <#--  Summary  -->
+                    <#if document.summary?has_content>
+                        <p class="nhsuk-lede-text"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
+                    </#if>
+
                     <#--  Content list section: START  -->
                     <#if document.guidancePages?has_content>
                         <nav class="nhsuk-contents-list" role="navigation" aria-label="Pages in this guide">
@@ -215,7 +220,7 @@
                                 <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
-                                <@hee.externalLinksCard card=block.externalLinksCard/>
+                                <@hee.externalLinksCard card=block.externalLinksCard!/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
                                 <@hee.fileLinksCard card=block.fileLinksCard/>
