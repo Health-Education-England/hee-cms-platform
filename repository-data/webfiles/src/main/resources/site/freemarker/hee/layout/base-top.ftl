@@ -7,7 +7,7 @@
         <span class="nhsuk-header__logo nhsuk-header__logo-home">
             <#--  Logo & org name: START  -->
             <a class="nhsuk-header__link" href="https://www.hee.nhs.uk" aria-label="${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}">
-                <span class="nhsuk-organisation-name">${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</span>
+                <span class="nhsuk-organisation-name nhse-global-menu-descriptor">${hstRequestContext.resolvedMount.mount.channelInfo.organisationName}</span>
             </a>
             <#--  Logo & org name: END  -->
             <#--  Org descriptor: START  -->

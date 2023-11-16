@@ -44,16 +44,7 @@
 
     <@hst.headContributions categoryIncludes="gtmNoScript" xhtml=true/>
 
-    <div id="nhse-global-menu" class="nhse-global-menu theme-blue">
-       <div class="nhse-global-menu__wrapper">
-          <div class="nhsuk-width-container nhse-global-menu__container" style="max-width: 960px;">
-             <a aria-label="Visit NHS England website" class="nhse-global-menu__logo" href="http://hee.nhs.uk" title="NHS England">
-                <div class="nhse-global-menu__logo__img"></div>
-                <span class="nhse-global-menu__logo__name">England</span>
-             </a>
-          </div>
-       </div>
-    </div>
+    <@hst.include ref="global-header"/>
 
     <#--  Rendered below cookie consent, above header  -->
     <@hst.include ref="announcement-banner"/>
