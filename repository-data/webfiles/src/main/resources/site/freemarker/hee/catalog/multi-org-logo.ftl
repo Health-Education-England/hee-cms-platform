@@ -13,6 +13,7 @@
 
 <#if document?? && document.logoGroup?? && document.logoGroup.logos?size gt 0>
     <#--  Multi org logo: START  -->
+        <div class="nhsuk-header__multilogo__container">
         <#list document.logoGroup.logos as logo>
             <#--  Builds link  -->
             <#if logo.linkDocument??>
@@ -53,5 +54,6 @@
                 </#if>
             </span>
         </#list>
+        </div>
     <#--  Multi org logo: END  -->
 </#if>
