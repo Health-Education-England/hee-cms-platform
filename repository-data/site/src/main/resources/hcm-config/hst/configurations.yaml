@@ -131,6 +131,9 @@ definitions:
           /taxonomybasedlisting-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/taxonomybasedlisting-main.ftl
+          /notfoundpage-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/notFoundPage-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -235,6 +238,12 @@ definitions:
               hst:iconpath: _cmsinternal/images/catalog-component-icons/simple-content.svg
               hst:label: Training Programme Page
               hst:template: trainingprogrammepage-main
+            /notfound-page:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.NotFoundPageComponent
+              hst:iconpath: _cmsinternal/images/catalog-component-icons/simple-content.svg
+              hst:label: Not Found Page
+              hst:template: notfoundpage-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
