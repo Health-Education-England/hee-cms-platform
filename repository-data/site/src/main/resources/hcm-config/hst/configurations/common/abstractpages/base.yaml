@@ -7,6 +7,9 @@ definitions:
         jcr:primaryType: hst:component
         hst:componentclassname: uk.nhs.hee.web.components.CookiesBannerComponent
         hst:template: base-cookies-banner
+      /global-header:
+        jcr:primaryType: hst:component
+        hst:template: base-global-header
       /announcement-banner:
         jcr:primaryType: hst:component
         hst:componentclassname: uk.nhs.hee.web.components.BannerComponent
@@ -53,6 +56,3 @@ definitions:
         hst:parameternames: [selectedMenu, level, menu]
         hst:parametervalues: ['on', '1', footer]
         hst:template: base-footer
-      /global-header:
-        jcr:primaryType: hst:component
-        hst:template: base-global-header
