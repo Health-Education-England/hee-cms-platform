@@ -122,9 +122,6 @@ definitions:
           /publicationlandingpage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/publicationlandingpage-main.ftl
-          /publicationlisting-main:
-            jcr:primaryType: hst:template
-            hst:renderpath: webfile:/freemarker/hee/catalog/publicationlisting-main.ftl
           /trainingprogrammeshomepage-main:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/catalog/trainingProgrammesHomePage-main.ftl
@@ -134,6 +131,9 @@ definitions:
           /base-global-header:
             jcr:primaryType: hst:template
             hst:renderpath: webfile:/freemarker/hee/layout/base-global-header.ftl
+          /taxonomybasedlisting-main:
+            jcr:primaryType: hst:template
+            hst:renderpath: webfile:/freemarker/hee/catalog/taxonomybasedlisting-main.ftl
         /hst:sitemenus:
           jcr:primaryType: hst:sitemenus
         /hst:sitemapitemhandlers:
@@ -164,7 +164,7 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.CategoryBasedListingPageComponent
               hst:iconpath: _cmsinternal/images/catalog-component-icons/generic-list.svg
-              hst:label: Category based Listing Page [Bulletin, Blog & News]
+              hst:label: Bulletin listing page
               hst:template: categorybasedlisting-main
             /blogpost:
               jcr:primaryType: hst:containeritemcomponent
@@ -220,12 +220,12 @@ definitions:
               hst:iconpath: _cmsinternal/images/catalog-component-icons/simple-content.svg
               hst:label: Publication Landing Page
               hst:template: publicationlandingpage-main
-            /publication-listing:
+            /taxonomy-based-listing:
               jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: uk.nhs.hee.web.components.PublicationListingPageComponent
+              hst:componentclassname: uk.nhs.hee.web.components.TaxonomyBasedListingPageComponent
               hst:iconpath: _cmsinternal/images/catalog-component-icons/generic-list.svg
-              hst:label: Publication Collection Page
-              hst:template: publicationlisting-main
+              hst:label: Taxonomy-based collection pages [blog, news & publication]
+              hst:template: taxonomybasedlisting-main
             /trainingprogrammes-homepage:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.TrainingProgrammesHomepageComponent

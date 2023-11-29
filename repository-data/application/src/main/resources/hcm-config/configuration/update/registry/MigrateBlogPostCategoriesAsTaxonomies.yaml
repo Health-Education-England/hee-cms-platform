@@ -1,0 +1,257 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/MigrateBlogPostCategoriesAsTaxonomies:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 100
+      hipposys:description: Migrates blog post categories (hee:categories) as healthcare
+        topic (hee:globalTaxonomyHealthcareTopics), profession (hee:globalTaxonomyProfessions)
+        and tag (hee:globalTaxonomyTags) taxonomies.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:blogPost)[@hee:categories]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.commons.lang3.StringUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\nimport javax.jcr.Value\r\nimport java.util.regex.Matcher\r\
+        \nimport java.util.regex.Pattern\r\n\r\nclass MigrateBlogPostCategoriesAsTaxonomies\
+        \ extends BaseNodeUpdateVisitor {\r\n    // Document path REGEX pattern\r\n\
+        \    Pattern DOCUMENT_PATH_REGEX_PATTERN = Pattern.compile(\"/content/documents/(.*?)/.*\"\
+        );\r\n\r\n    // Blog post document type properties\r\n    String PROPERTY_CATEGORIES\
+        \ = \"hee:categories\"\r\n    String PROPERTY_HEALTHCARE_TOPICS = \"hee:globalTaxonomyHealthcareTopics\"\
+        \r\n    String PROPERTY_HEALTHCARE_TOPICS_WITH_ANCESTORS = \"hee:globalTaxonomyHealthcareTopics__with_ancestors\"\
+        \r\n    String PROPERTY_PROFESSIONS = \"hee:globalTaxonomyProfessions\"\r\n\
+        \    String PROPERTY_PROFESSIONS_WITH_ANCESTORS = \"hee:globalTaxonomyProfessions__with_ancestors\"\
+        \r\n    String PROPERTY_TAGS = \"hee:globalTaxonomyTags\"\r\n    String PROPERTY_TAGS_WITH_ANCESTORS\
+        \ = \"hee:globalTaxonomyTags__with_ancestors\"\r\n\r\n    // Blog post categories\
+        \ to healthcare topic/profession/tag taxonomies mapping\r\n    // (containing\
+        \ full taxonomy tree [e.g. health_informaticians >> clinical_informatics]\r\
+        \n    // of the term separated by ' >> ')\r\n    Map<String, Map<String, String>>\
+        \ CATEGORY_TO_TAXONOMY_MAPPING = [\r\n            \"advocacy\" : [\"tag\"\
+        : \"advocacy\"],\r\n            \"allied-health-professions-ahps\" : [\"profession\"\
+        : \"allied_health_professionals\"],\r\n            \"apprenticeship\" : [\"\
+        tag\": \"apprenticeship\"],\r\n            \"artificial-intelligence-and-robotics\"\
+        \ : [\"tag\": \"artificial_intelligence_and_robotics\"],\r\n            \"\
+        RD-Authentication\" : [\"tag\": \"authentication\"],\r\n            \"BP\"\
+        \ : [\"tag\": \"best_practice\"],\r\n            \"WPD-Bursaries\" : [\"tag\"\
+        : \"bursaries_grants_and_awards\"],\r\n            \"Circ\" : [\"tag\": \"\
+        circulation_and_counter_activities\"],\r\n            \"clinical-informatics\"\
+        \ : [\"profession\": \"health_informaticians >> clinical_informatics\"],\r\
+        \n            \"HLPI-Collaboration\" : [\"tag\": \"collaboration_and_partnership\"\
+        ],\r\n            \"Groups\" : [\"tag\": \"communities_of_practice\"],\r\n\
+        \            \"consultations-and-surveys\" : [\"tag\": \"consultation\"],\r\
+        \n            \"RD-Copyright\" : [\"tag\": \"copyright_and_licensing\"],\r\
+        \n            \"COVID-19\" : [\"tag\": \"covid_19\"],\r\n            \"CPD\"\
+        \ : [\"tag\": \"continuing_professional_development\"],\r\n            \"\
+        RD-Databases\" : [\"tag\": \"databases\"],\r\n            \"digital-health-leadership\"\
+        \ : [\"tag\": \"digital_health_leadership\"],\r\n            \"digital-literacy\"\
+        \ : [\"tag\": \"digital_literacy\"],\r\n            \"Digital\" : [\"tag\"\
+        : \"digital_literacy\"],\r\n            \"digital-roles-and-career-pathways\"\
+        \ : [\"tag\": \"digital_roles_and_career_pathways\"],\r\n            \"RD-Discovery\"\
+        \ : [\"tag\": \"discovery\"],\r\n            \"RD-eResources\" : [\"tag\"\
+        : \"electronic_resources\"],\r\n            \"RD-Emerging\" : [\"tag\": \"\
+        emerging_technology\"],\r\n            \"equality-and-diversity\" : [\"tag\"\
+        : \"equality_impact_and_diversity\"],\r\n            \"WPD-EDI\" : [\"tag\"\
+        : \"equality_impact_and_diversity\"],\r\n            \"WPD-Events\" : [\"\
+        tag\": \"events\"],\r\n            \"MEK-Self\" : [\"tag\": \"evidence_and_knowledge_self_assessments\"\
+        ],\r\n            \"fellowships-and-scholarships\" : [\"tag\": \"fellowships_and_scholarships\"\
+        ],\r\n            \"Finance\" : [\"tag\": \"finance\"],\r\n            \"\
+        graduates\" : [\"tag\": \"graduates\"],\r\n            \"HLPI-HL\" : [\"tag\"\
+        : \"health_literacy\"],\r\n            \"QI-Impact\" : [\"tag\": \"impact_and_value\"\
+        ],\r\n            \"RD-ILDS\" : [\"tag\": \"inter_library_loan_and_document_supply\"\
+        ],\r\n            \"KfH\" : [\"tag\": \"knowledge_for_healthcare\"],\r\n \
+        \           \"learning-and-development\" : [\"tag\": \"learning_and_development\"\
+        ],\r\n            \"RD-LibKey\" : [\"tag\": \"libkey_nomad\"],\r\n       \
+        \     \"RD-LMS\" : [\"tag\": \"library_management_systems\"],\r\n        \
+        \    \"literature_searching\" : [\"tag\": \"literature_searching\"],\r\n \
+        \           \"Marketing\" : [\"tag\": \"marketing_and_campaigns\"],\r\n  \
+        \          \"medical\" : [\"profession\": \"medical_doctors\"],\r\n      \
+        \      \"mentoring\" : [\"tag\": \"mentoring\"],\r\n            \"MEK-Mobilising\"\
+        \ : [\"tag\": \"mobilising_evidence_and_knowledge\"],\r\n            \"networking\"\
+        \ : [\"tag\": \"networking\"],\r\n            \"nhs_wider\" : [\"tag\": \"\
+        nhs_and_healthcare_systems\"],\r\n            \"nhs-digital-academy\" : [\"\
+        tag\": \"nhs_digital_academy\"],\r\n            \"RD-Open\" : [\"tag\": \"\
+        open_access\"],\r\n            \"HLPI-PI\" : [\"tag\": \"patient_information\"\
+        ],\r\n            \"pharmacy\" : [\"profession\": \"pharmacy_professionals\"\
+        ],\r\n            \"WPD-PKSB\" : [\"tag\": \"professional_knowledge_and_skills_base_pksb\"\
+        ],\r\n            \"Policies\" : [\"tag\": \"policy\"],\r\n            \"\
+        professional-networks\" : [\"tag\": \"professional_networks\"],\r\n      \
+        \      \"psychological-professions\" : [\"profession\": \"psychological_professionals\"\
+        ],\r\n            \"QI\" : [\"tag\": \"quality\"],\r\n            \"QI-QIOF\"\
+        \ : [\"tag\": \"quality_and_improvement_outcomes\"],\r\n            \"RD-Repositories\"\
+        \ : [\"tag\": \"repositories\"],\r\n            \"WPD-Research\" : [\"tag\"\
+        : \"research\"],\r\n            \"resource_discovery\" : [\"tag\": \"resource_discovery\"\
+        ],\r\n            \"school-leavers\" : [\"tag\": \"school_leavers\"],\r\n\
+        \            \"Deliver\" : [\"tag\": \"service_delivery\"],\r\n          \
+        \  \"social-care\" : [\"tag\": \"social_care\"],\r\n            \"Qi-Stats\"\
+        \ : [\"tag\": \"statistics_and_data\"],\r\n            \"strategic-workforce-planning-and-modelling\"\
+        \ : [\"tag\": \"strategy\"],\r\n            \"Stream\" : [\"tag\": \"streamlining\"\
+        ],\r\n            \"sustainability\" : [\"tag\": \"sustainability\"],\r\n\
+        \            \"Tools\" : [\"tag\": \"tools_and_techniques\"],\r\n        \
+        \    \"Train\" : [\"tag\": \"training\"],\r\n            \"use-of-technology\"\
+        \ : [\"tag\": \"use_of_technology\"],\r\n            \"User\" : [\"tag\":\
+        \ \"user_experience\"],\r\n            \"Well\" : [\"tag\": \"wellbeing\"\
+        ],\r\n            \"wider_profession\" : [\"tag\": \"wider_profession\"],\r\
+        \n            \"workforce\" : [\"tag\": \"workforce\"],\r\n            \"\
+        QI-Innovation\" : [\"tag\": \"innovation\"]\r\n    ]\r\n\r\n    // Channel\
+        \ to default healthcare topic/profession taxonomies mapping\r\n    // (containing\
+        \ full taxonomy tree [e.g. health_informaticians >> clinical_informatics]\r\
+        \n    // of the term separated by ' >> ')\r\n    Map<String, Map<String, List<String>>>\
+        \ CHANNEL_TO_DEFAULT_TAXONOMY_MAPPING = [\r\n            \"lks\" : [\"profession\"\
+        : [\"library_knowledge_and_information_services\"]],\r\n            \"kls\"\
+        \ : [\"profession\": [\"library_knowledge_and_information_services\"]],\r\n\
+        \            \"digital-transformation\" :\r\n                    [\"topic\"\
+        : [\"workforce_transformation >> digital_transformation\", \"digital_skills\"\
+        ]],\r\n            \"dental\" : [\"profession\": \"dental_professionals\"\
+        ],\r\n            \"medical\" : [\"profession\": \"medical_doctors\"]\r\n\
+        \    ]\r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Started\
+        \ processing the node '${node.path}'\"\r\n\r\n        // Ignore KLS archived\
+        \ blog posts ('/content/documents/lks/archived-blog-posts/*')\r\n        if\
+        \ (node.path.startsWith(\"/content/documents/lks/archived-blog-posts/\"))\
+        \ {\r\n            log.debug \"Ignoring '$node.path' as it is an archived\
+        \ blog post \" +\r\n                    \"(which are not being migrated as\
+        \ part of this work)\"\r\n            return false\r\n        }\r\n\r\n  \
+        \      // Ignore the blog posts which already has got healthcare topics/professions\r\
+        \n        if ((node.hasProperty(PROPERTY_HEALTHCARE_TOPICS)\r\n          \
+        \      && node.getProperty(PROPERTY_HEALTHCARE_TOPICS).values.length > 0)\r\
+        \n                || (node.hasProperty(PROPERTY_PROFESSIONS)\r\n         \
+        \       && node.getProperty(PROPERTY_PROFESSIONS).values.length > 0)) {\r\n\
+        \            if (node.getProperty(PROPERTY_CATEGORIES).values.length == 0)\
+        \ {\r\n                log.debug \"Ignoring '$node.path' (safely) as it already\
+        \ has got healthcare topics/professions \" +\r\n                        \"\
+        and contains no categories to be migrated!\"\r\n            } else {\r\n \
+        \               log.debug \"[MANUAL1] Skipping to migrate the categories of\
+        \ '$node.path' \" +\r\n                        \"as it already has got healthcare\
+        \ topics/professions. \" +\r\n                        \"Please try migrating\
+        \ it manually if needed!\"\r\n            }\r\n\r\n            return false\r\
+        \n        }\r\n\r\n        // Initialise values\r\n        List<String> healthCareTopicsWithFullPath\
+        \ = []\r\n        List<String> professionsWithFullPath = []\r\n        List<String>\
+        \ tagsWithFullPath = []\r\n        List<String> categories = []\r\n      \
+        \  boolean nodeUpdated = false\r\n\r\n        // Maps categories as healthcare\
+        \ topics, professions and tags\r\n        if (node.getProperty(PROPERTY_CATEGORIES).values.size()\
+        \ > 0) {\r\n            for (Value categoryValue : node.getProperty(PROPERTY_CATEGORIES).values)\
+        \ {\r\n                String category = categoryValue.string\r\n        \
+        \        categories << category\r\n\r\n                if (CATEGORY_TO_TAXONOMY_MAPPING.containsKey(category))\
+        \ {\r\n                    // Getting the first entry only as CATEGORY_TO_TAXONOMY_MAPPING\
+        \ values\r\n                    // contains singleton maps of [<type>:<term>]\r\
+        \n                    Map.Entry<String, String> taxonomyEntry =\r\n      \
+        \                      CATEGORY_TO_TAXONOMY_MAPPING.get(category).iterator().next()\r\
+        \n\r\n                    switch (taxonomyEntry.key) {\r\n               \
+        \         case \"topic\":\r\n                            healthCareTopicsWithFullPath\
+        \ << taxonomyEntry.value\r\n                            break\r\n        \
+        \                case \"profession\":\r\n                            professionsWithFullPath\
+        \ << taxonomyEntry.value\r\n                            break\r\n        \
+        \                case \"tag\":\r\n                            tagsWithFullPath\
+        \ << taxonomyEntry.value\r\n                            break\r\n        \
+        \                default:\r\n                            break\r\n       \
+        \             }\r\n                } else {\r\n                    // Ignore\
+        \ 'nursing-and-midwifery' category as it was already migrated on prod manually\r\
+        \n                    // as part of [NWPS-1695] ticket\r\n               \
+        \     if (\"nursing-and-midwifery\" != category) {\r\n                   \
+        \     log.error \"[MANUAL2] Can't migrate '$category' for '$node.path' \"\
+        \ +\r\n                                \"as no taxonomy mapping available\
+        \ for it. Please try migrating it manually!\"\r\n                    }\r\n\
+        \                }\r\n            }\r\n        } else {\r\n            log.debug\
+        \ \"'$node.path' doesn't have any categories ($PROPERTY_CATEGORIES) to be\
+        \ migrated!\"\r\n        }\r\n\r\n        // Including channel-specific healthcare\
+        \ topics/professions if none of the node categories (hee:categories)\r\n \
+        \       // can be mapped to healthcare topics/professions.\r\n        if (healthCareTopicsWithFullPath.empty\
+        \ && professionsWithFullPath.empty) {\r\n            String channel = getChannel(node.path)\r\
+        \n\r\n            if (CHANNEL_TO_DEFAULT_TAXONOMY_MAPPING.containsKey(channel))\
+        \ {\r\n                // Getting the first entry only as CHANNEL_TO_DEFAULT_TAXONOMY_MAPPING\
+        \ values\r\n                // contains singleton maps of [<type>:[<term1>,\
+        \ <term2>...<termN>]]\r\n                Map.Entry<String, List<String>> taxonomyEntry\
+        \ =\r\n                        CHANNEL_TO_DEFAULT_TAXONOMY_MAPPING.get(channel).iterator().next()\r\
+        \n\r\n                if (\"topic\" == taxonomyEntry.key) {\r\n          \
+        \          log.debug \"Including channel-specific default healthcare topics\
+        \ '$taxonomyEntry.value' \" +\r\n                            \"for '$node.path'\
+        \ as there are no healthcare topics/professions that needs to be migrated\"\
+        \r\n                    healthCareTopicsWithFullPath.addAll(taxonomyEntry.value)\r\
+        \n                }\r\n\r\n                if (\"profession\" == taxonomyEntry.key)\
+        \ {\r\n                    log.debug \"Including channel-specific default\
+        \ professions '$taxonomyEntry.value' for '$node.path' \" +\r\n           \
+        \                 \"as there are no healthcare topics/professions that needs\
+        \ to be migrated\"\r\n                    professionsWithFullPath.addAll(taxonomyEntry.value)\r\
+        \n                }\r\n            }\r\n        }\r\n\r\n        // Migrates\
+        \ categories as healthcare topics (if empty)\r\n        def (topicsSet, topicsFieldValues,\
+        \ topicsFieldValuesWithAncestors) = setTaxonomyFieldValues(node,\r\n     \
+        \           healthCareTopicsWithFullPath, PROPERTY_HEALTHCARE_TOPICS, PROPERTY_HEALTHCARE_TOPICS_WITH_ANCESTORS)\r\
+        \n        nodeUpdated = topicsSet || nodeUpdated\r\n\r\n        // Migrates\
+        \ categories as professions (if empty)\r\n        def (professionsSet, professionsFieldValues,\
+        \ professionsFieldValuesWithAncestors) = setTaxonomyFieldValues(node,\r\n\
+        \                professionsWithFullPath, PROPERTY_PROFESSIONS, PROPERTY_PROFESSIONS_WITH_ANCESTORS)\r\
+        \n        nodeUpdated = professionsSet || nodeUpdated\r\n\r\n        // Migrates\
+        \ categories as tags (if empty)\r\n        def (tagsSet, tagsFieldValues,\
+        \ tagsFieldValuesWithAncestors)  = setTaxonomyFieldValues(node,\r\n      \
+        \          tagsWithFullPath, PROPERTY_TAGS, PROPERTY_TAGS_WITH_ANCESTORS)\r\
+        \n        nodeUpdated = tagsSet || nodeUpdated\r\n\r\n        // Finally,\
+        \ logs the migration status\r\n        if (nodeUpdated) {\r\n            log.debug\
+        \ \"Successfully migrated {$PROPERTY_CATEGORIES: $categories} of '$node.path'\
+        \ \" +\r\n                    \"as {$PROPERTY_HEALTHCARE_TOPICS: $topicsFieldValues,\
+        \ \" +\r\n                    \"$PROPERTY_HEALTHCARE_TOPICS_WITH_ANCESTORS:\
+        \ $topicsFieldValuesWithAncestors}, \" +\r\n                    \"{$PROPERTY_PROFESSIONS:\
+        \ $professionsFieldValues, \" +\r\n                    \"$PROPERTY_PROFESSIONS_WITH_ANCESTORS:\
+        \ $professionsFieldValuesWithAncestors} \" +\r\n                    \"and\
+        \ {$PROPERTY_TAGS: $tagsFieldValues, \" +\r\n                    \"$PROPERTY_TAGS_WITH_ANCESTORS:\
+        \ $tagsFieldValuesWithAncestors}\"\r\n            return true\r\n        }\
+        \ else {\r\n            log.debug \"No categories >> taxonomies migration\
+        \ have been performed for '$node.path'. \" +\r\n                    \"Please\
+        \ consult the earlier log entries for additional information.\"\r\n      \
+        \      return false\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Sets {@code\
+        \ taxonomyPropertyName} and {@code taxonomyPropertyWithAncestorName} taxonomy\
+        \ properties\r\n     * on {@code node} based on the given {@code taxonomyKeyListWithFullPath}.\r\
+        \n     * \r\n     * @param node the {@link Node} instance.\r\n     * @param\
+        \ taxonomyKeyListWithFullPath the {@link List} of taxonomy term keys with\
+        \ full tree path\r\n     * containing ancestors which needs to be processed\
+        \ and persisted on {@code taxonomyPropertyName}\r\n     * and {@code taxonomyPropertyWithAncestorName}\
+        \ taxonomy properties.\r\n     * @param taxonomyPropertyName the name of taxonomy\
+        \ field/property.\r\n     * @param taxonomyPropertyNameWithAncestors the name\
+        \ of taxonomy field/property which persists with ancestors\r\n     * (i.e.\
+        \ the taxonomy property suffixed with '_with_ancestors').\r\n     * @return\
+        \ A {@link Tuple} containing the status of whether the given taxonomy properties\
+        \ have been set or not,\r\n     * taxonomy keys set for {@code taxonomyPropertyName}\r\
+        \n     * and finally, taxonomy keys set for {@code taxonomyPropertyNameWithAncestors}.\r\
+        \n     */\r\n    Tuple setTaxonomyFieldValues(Node node, List<String> taxonomyKeyListWithFullPath,\
+        \ String taxonomyPropertyName,\r\n                               String taxonomyPropertyNameWithAncestors)\
+        \ {\r\n        if (!taxonomyKeyListWithFullPath.empty) {\r\n            if\
+        \ (!node.hasProperty(taxonomyPropertyName)\r\n                    || node.getProperty(taxonomyPropertyName).getValues().length\
+        \ == 0) {\r\n                def (taxonomyFieldValues, taxonomyFieldValuesWithAncestors)\
+        \ =\r\n                buildTaxonomyFieldValues(taxonomyKeyListWithFullPath)\r\
+        \n\r\n                node.setProperty(taxonomyPropertyName, taxonomyFieldValues\
+        \ as String[])\r\n                node.setProperty(taxonomyPropertyNameWithAncestors,\
+        \ taxonomyFieldValuesWithAncestors as String[])\r\n\r\n                return\
+        \ new Tuple(true, taxonomyFieldValues, taxonomyFieldValuesWithAncestors)\r\
+        \n            } else {\r\n                log.warn \"[MANUAL3] Skipping the\
+        \ migration of '$PROPERTY_CATEGORIES' >> '$taxonomyPropertyName' \" +\r\n\
+        \                        \"for '$node.path' since it already has taxonomy\
+        \ values for '$taxonomyPropertyName'. Please \" +\r\n                    \
+        \    \"try migrating it manually if needed!\"\r\n            }\r\n       \
+        \ }\r\n\r\n        return new Tuple(false, [], [])\r\n    }\r\n\r\n    /**\r\
+        \n     * Processes the given {@code taxonomyKeyListWithFullPath} and builds\
+        \ taxonomy field values i.e. keys\r\n     * for the default taxonomy property\
+        \ as well one for taxonomy property with ancestors.\r\n     *\r\n     * @param\
+        \ taxonomyKeyListWithFullPath the {@link List} of taxonomy term keys with\
+        \ full tree path\r\n     * containing ancestors.\r\n     * @return A {@link\
+        \ Tuple} containing taxonomy values i.e. keys for the default taxonomy property\r\
+        \n     * as well one for taxonomy property with ancestors.\r\n     */\r\n\
+        \    static Tuple buildTaxonomyFieldValues(List<String> taxonomyKeyListWithFullPath)\
+        \ {\r\n        List<String> taxonomyFieldValues = []\r\n        List<String>\
+        \ taxonomyFieldValuesWithAncestor = []\r\n\r\n        for (String taxonomyTreeValue\
+        \ : taxonomyKeyListWithFullPath) {\r\n            String[] treeValues = taxonomyTreeValue.split(\"\
+        \ >> \")\r\n\r\n            taxonomyFieldValues << treeValues.last()\r\n \
+        \           taxonomyFieldValuesWithAncestor.addAll(treeValues)\r\n       \
+        \ }\r\n\r\n        return new Tuple(taxonomyFieldValues, taxonomyFieldValuesWithAncestor)\r\
+        \n    }\r\n\r\n    /**\r\n     * <p>Extracts channel from the given {@code\
+        \ documentPath} and returns it. Otherwise, returns an Empty String\r\n   \
+        \  * if channel can't be extracted from the given {@code documentPath} .</p>\r\
+        \n     *\r\n     * <p>It extracts channel from the document path using {@code\
+        \ /content/documents/<channel>/.*}</p> pattern.</p>\r\n     *\r\n     * @return\
+        \ the channel extracted from the given {@code documentPath}.\r\n     * Otherwise,\
+        \ returns an Empty String if channel can't be extracted from the given {@code\
+        \ documentPath}.\r\n     */\r\n    String getChannel(String documentPath)\
+        \ {\r\n        Matcher documentPathMatcher = DOCUMENT_PATH_REGEX_PATTERN.matcher(documentPath);\r\
+        \n\r\n        if (documentPathMatcher.find()) {\r\n            return documentPathMatcher.group(1);\r\
+        \n        }\r\n\r\n        return StringUtils.EMPTY;\r\n    }\r\n\r\n    boolean\
+        \ undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000

@@ -3,13 +3,13 @@
 <#include "../../include/page-meta-data.ftl">
 <#include "../macros/micro-hero.ftl">
 <#include "../macros/author-cards.ftl">
-<#include '../utils/author-util.ftl'>
 <#import "../macros/components.ftl" as hee>
+<#include "../utils/date-util.ftl">
+<#include "../macros/blog-and-news-partial-info.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.News" -->
-<#-- @ftlvariable name="categoriesValueListMap" type="java.util.Map" -->
 
 <#if document??>
     <main class="page page--rightbar" id="maincontent" role="main">
@@ -32,37 +32,6 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
-                    <#--  Author and published date: START  -->
-                    <p class="nhsuk-body-s nhsuk-u-secondary-text-color">
-                        <@fmt.message key="publication.by" var="byLabel" />
-                        <@fmt.message key="published.on" var="publishedOnLabel"/>
-
-                        <#if document.authors?has_content>
-                            <#assign commaSeparatedAuthorNames>${getCommaSeparatedAuthorNames(document.authors)}</#assign>
-                        <#else>
-                            <#assign commaSeparatedAuthorNames>${document.author!}</#assign>
-                        </#if>
-
-                        ${publishedOnLabel} ${document.publicationDate.time?datetime?string['dd MMMM yyyy']}<#if commaSeparatedAuthorNames?has_content>, ${byLabel} ${commaSeparatedAuthorNames}</#if>
-                    </p>
-                    <#--  Author and published date: END  -->
-
-                    <#--  News categories collection link(s): START  -->
-                    <#if categoriesValueListMap?has_content>
-                        <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-bottom-7">
-                            <#if newsListingPageURL?has_content>
-                                <#list categoriesValueListMap as key, value>
-                                    <a href=${newsListingPageURL}?category=${key}>${value}</a><#sep>, </#sep>
-                                </#list>
-                                <#else>
-                                    <#list categoriesValueListMap?values as value>
-                                    ${value}<#sep>, </#sep>
-                                </#list>
-                            </#if>
-                        </p>
-                    </#if>
-                    <#--  News categories collection link(s): END  -->
-
                     <#--  Summary  -->
                     <#if document.summary?has_content>
                         <p class="nhsuk-body-l">
@@ -147,39 +116,57 @@
             </div>
             <#--  Main sections: END  -->
 
-            <#--  Sidebar sections: START  -->
-            <#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>
-                <#--  Right hand content blocks: START  -->
-                <aside class="page__rightbar">
-                    <#list document.rightHandBlocks as block>
-                        <#switch block.getClass().getName()>
-                            <#case "uk.nhs.hee.web.beans.QuickLinks">
-                                <@hee.quickLinks quickLinks=block/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                <@hee.contactCard contact=block.content/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
-                                <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
-                                <@hee.externalLinksCard card=block.externalLinksCard!/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
-                                <@hee.fileLinksCard card=block.fileLinksCard/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.CtaCardReference">
-                                <@hee.ctaCard ctaCard=block/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
-                                <@hee.internalLinksCard card=block.internalLinksCard/>
-                                <#break>
-                            <#default>
-                        </#switch>
-                    </#list>
-                </aside>
-                <#--  Right hand content blocks: END  -->
-            </#if>
+            <#--  Sidebar sections: START  -->            
+			<aside class="page__rightbar">
+				<#--  News info: START  -->
+				<div class="hee-card hee-card--details">
+					<h3>News info</h3>
+
+					<#--  Published date  -->
+					<div class="hee-card--details__item">
+						<span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
+					</div>
+
+					<#-- News info partial [professions, topics and tags] -->
+					<@blogAndNewsPartialInfo
+						professionTaxClass=document.globalTaxonomyProfessions!
+						topicTaxClass=document.globalTaxonomyHealthcareTopics!
+						tagTaxClass=document.globalTaxonomyTags!
+						listingPageURL=newsListingPageURL!/>
+				</div>
+				<#--  News info: END  -->
+				<#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>
+					<#--  Right hand content blocks: START  -->
+					<#list document.rightHandBlocks as block>
+						<#switch block.getClass().getName()>
+							<#case "uk.nhs.hee.web.beans.QuickLinks">
+								<@hee.quickLinks quickLinks=block/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.ContactCardReference">
+								<@hee.contactCard contact=block.content/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
+								<@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
+								<@hee.externalLinksCard card=block.externalLinksCard!/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.FileLinksCardReference">
+								<@hee.fileLinksCard card=block.fileLinksCard/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.CtaCardReference">
+								<@hee.ctaCard ctaCard=block/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
+								<@hee.internalLinksCard card=block.internalLinksCard/>
+								<#break>
+							<#default>
+						</#switch>
+					</#list>
+					<#--  Right hand content blocks: END  -->
+				</#if>
+			</aside>
+            
             <#--  Sidebar sections: END  -->
         </div>
         <#--  Main content: END  -->

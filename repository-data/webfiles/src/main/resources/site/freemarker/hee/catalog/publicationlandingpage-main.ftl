@@ -5,7 +5,6 @@
 <#include "../macros/author-cards.ftl">
 <#include "../macros/internal-link.ftl">
 <#include "../macros/publication-partial-info.ftl">
-<#include '../utils/author-util.ftl'>
 <#include '../utils/date-util.ftl'>
 <#include "../utils/document-formats.ftl">
 
@@ -158,12 +157,12 @@
                         <span>Updated:</span> ${getDefaultFormattedDate(document.updatedDate)}
                     </div>
 
-
                     <#-- Publication info partial [publication type, professions and topics] -->
-                    <@publicationPartialInfo publicationListingPageURL=publicationListingPageURL!
+                    <@publicationPartialInfo
                         publicationTypeTaxClass=document.globalTaxonomyPublicationType!
                         professionTaxClass=document.globalTaxonomyProfessions!
-                        topicTaxClass=document.globalTaxonomyHealthcareTopics!/>
+                        topicTaxClass=document.globalTaxonomyHealthcareTopics!
+                        publicationListingPageURL=publicationListingPageURL!/>
 
                     <#--  Read time  -->
                     <div class="hee-card--details__item">
