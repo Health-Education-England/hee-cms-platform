@@ -2,6 +2,8 @@
 
 <#macro quote block>
     <div class="hee-quote">
+        <h2 class="nhsuk-u-visually-hidden">Quote</h2>
+
         <#--  Copy  -->
         <div class="hee-quote__text">
             <@hst.html formattedText="${block.quoteContentBlock.quoteCopy?replace('\n', '<br>')}"/>
