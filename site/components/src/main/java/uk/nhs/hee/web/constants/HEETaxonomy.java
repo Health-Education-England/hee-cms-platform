@@ -14,7 +14,11 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_RECRUITMENT_FORMAT ("GlobalRecruitmentFormat"),
 
-    HEE_GLOBAL_CLINICAL_DISCIPLINE ("GlobalClinicalDiscipline");
+    HEE_GLOBAL_CLINICAL_DISCIPLINE ("GlobalClinicalDiscipline"),
+
+    HEE_GLOBAL_EVENT_TYPE ("GlobalEventTypes"),
+
+    HEE_GLOBAL_DELIVERY_METHOD ("GlobalDeliveryMethod");
 
     private final String name;
 
