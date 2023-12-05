@@ -2,6 +2,7 @@
 <#assign hst=JspTaglibs["http://www.hippoecm.org/jsp/hst/core"] >
 <#include "internal-link.ftl">
 <#include '../utils/author-util.ftl'>
+<#include "../macros/taxonomy-info.ftl">
 
 <#--  Lists bulletin result items  -->
 <#macro bulletinListItem items categoriesMap>
@@ -516,17 +517,19 @@
 </#macro>
 
 <#--  Lists training programme result items  -->
-<#macro trainingListItem items>
+<#macro trainingListItem items trainingListingPageURL>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
-            <div class="hee-listing-item${(item.cardImage?has_content)?then(' has-image', '')}">
+            <div class="hee-listing-item${(item.cardImage??)?then(' has-image', '')}">
                 <#--  Card image  -->
-                <@hst.link var="cardImgLink" hippobean=item.cardImage/>
-                <div class="hee-listing-item__image" style="background-image:url('${cardImgLink}');"></div>
+                <#if item.cardImage??>
+                    <@hst.link var="cardImgLink" hippobean=item.cardImage/>
+                    <div class="hee-listing-item__image" style="background-image:url('${cardImgLink}');"></div>
+                </#if>
 
                 <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
@@ -536,48 +539,50 @@
                     <#--  Professions  -->
                     <#if item.globalTaxonomyProfessions?? && item.globalTaxonomyProfessions.taxonomyValues?has_content>
                         <@fmt.message key="profession.label" var="professionLabel"/>
-
-                        <@listItemRow key="${professionLabel}">
-                            <#list item.globalTaxonomyProfessions.taxonomyValues as profession>
-                                ${profession.label}<#sep>, </#sep>
-                            </#list>
-                        </@listItemRow>
+                        <@taxonomyInfo
+                            taxClass=item.globalTaxonomyProfessions!
+                            collectionPageURL=trainingListingPageURL
+                            taxLabel=professionLabel
+                            renderFor='trainingProgrammeCollection'/>
                     </#if>
 
                     <#--  Topics  -->
                     <#if item.globalTaxonomyHealthcareTopics?? && item.globalTaxonomyHealthcareTopics.taxonomyValues?has_content>
                         <@fmt.message key="topic.label" var="topicLabel"/>
-
-                        <@listItemRow key="${topicLabel}">
-                            <#list item.globalTaxonomyHealthcareTopics.taxonomyValues as topic>
-                                ${topic.label}<#sep>, </#sep>
-                            </#list>
-                        </@listItemRow>
+                        <@taxonomyInfo
+                            taxClass=item.globalTaxonomyHealthcareTopics!
+                            collectionPageURL=trainingListingPageURL
+                            taxLabel=topicLabel
+                            renderFor='trainingProgrammeCollection'/>
                     </#if>
 
-                    <#--  Discipline  -->
+                    <#--  Clinical discipline  -->
                     <#if item.globalTaxonomyClinicalDiscipline?? && item.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
-                        <@fmt.message key="discipline.label" var="disciplineLabel"/>
-
-                        <@listItemRow key="${disciplineLabel}">
-                            ${item.globalTaxonomyClinicalDiscipline.taxonomyValues[0].label}
-                        </@listItemRow>
+                        <@fmt.message key="clinical_discipline.label" var="clinicalDisciplineLabel"/>
+                        <@taxonomyInfo
+                            taxClass=item.globalTaxonomyClinicalDiscipline!
+                            collectionPageURL=trainingListingPageURL
+                            taxLabel=clinicalDisciplineLabel
+                            renderFor='trainingProgrammeCollection'/>
                     </#if>
 
                     <#--  Training type  -->
                     <#if item.globalTaxonomyTrainingType?? && item.globalTaxonomyTrainingType.taxonomyValues?has_content>
                         <@fmt.message key="training_type.label" var="trainingTypeLabel"/>
-
-                        <@listItemRow key="${trainingTypeLabel}">
-                            ${item.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                        </@listItemRow>
+                        <@taxonomyInfo
+                            taxClass=item.globalTaxonomyTrainingType!
+                            collectionPageURL=trainingListingPageURL
+                            taxLabel=trainingTypeLabel
+                            renderFor='trainingProgrammeCollection'/>
                     </#if>
 
                     <#--  Duration  -->
-                    <@fmt.message key="duration.label" var="durationLabel"/>
-                    <@listItemRow key="${durationLabel}">
-                        ${item.duration}
-                    </@listItemRow>
+                    <#if item.duration?has_content>
+                        <@fmt.message key="duration.label" var="durationLabel"/>
+                        <@listItemRow key="${durationLabel}">
+                            ${item.duration}
+                        </@listItemRow>
+                    </#if>
                 </div>
                 <#--  Training details: END   -->
 

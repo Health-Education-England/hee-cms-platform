@@ -20,6 +20,8 @@ public class ListingPageTypeTest {
         assertThat(aToZListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
         assertThat(aToZListing.getFilterValueListIdentifier()).isEmpty();
         assertThat(aToZListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(aToZListing.getRelativeFacetPath()).isEmpty();
+        assertThat(aToZListing.getListingFilters()).isEmpty();
     }
 
     @Test
@@ -32,6 +34,12 @@ public class ListingPageTypeTest {
         assertThat(blogListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
         assertThat(blogListing.getFilterValueListIdentifier()).isEqualTo("blogCategories");
         assertThat(blogListing.isChannelSpecificValueListIdentifier()).isTrue();
+        assertThat(blogListing.getRelativeFacetPath()).isEqualTo("blogfacets");
+        assertThat(blogListing.getListingFilters()).containsExactly(
+                ListingFilter.PROFESSION,
+                ListingFilter.TOPIC,
+                ListingFilter.TAG
+        );
     }
 
     @Test
@@ -44,6 +52,8 @@ public class ListingPageTypeTest {
         assertThat(bulletinListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
         assertThat(bulletinListing.getFilterValueListIdentifier()).isEqualTo("bulletinCategories");
         assertThat(bulletinListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(bulletinListing.getRelativeFacetPath()).isEmpty();
+        assertThat(bulletinListing.getListingFilters()).isEmpty();
     }
 
     @Test
@@ -56,6 +66,8 @@ public class ListingPageTypeTest {
         assertThat(caseStudyListing.getSortByDateField()).isEqualTo(HEEField.SUBMITTED_DATE.getName());
         assertThat(caseStudyListing.getFilterValueListIdentifier()).isEqualTo("caseStudyImpactGroups");
         assertThat(caseStudyListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(caseStudyListing.getRelativeFacetPath()).isEmpty();
+        assertThat(caseStudyListing.getListingFilters()).isEmpty();
     }
 
     @Test
@@ -68,6 +80,8 @@ public class ListingPageTypeTest {
         assertThat(eventListing.getSortByDateField()).isEqualTo(HEEField.DATE.getName());
         assertThat(eventListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
         assertThat(eventListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(eventListing.getRelativeFacetPath()).isEmpty();
+        assertThat(eventListing.getListingFilters()).isEmpty();
     }
 
     @Test
@@ -80,6 +94,12 @@ public class ListingPageTypeTest {
         assertThat(newsListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
         assertThat(newsListing.getFilterValueListIdentifier()).isEqualTo("newsCategories");
         assertThat(newsListing.isChannelSpecificValueListIdentifier()).isTrue();
+        assertThat(newsListing.getRelativeFacetPath()).isEqualTo("newsfacets");
+        assertThat(newsListing.getListingFilters()).containsExactly(
+                ListingFilter.PROFESSION,
+                ListingFilter.TOPIC,
+                ListingFilter.TAG
+        );
     }
 
     @Test
@@ -92,6 +112,12 @@ public class ListingPageTypeTest {
         assertThat(publicationListing.getSortByDateField()).isEqualTo(HEEField.PUBLICATION_DATE.getName());
         assertThat(publicationListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
         assertThat(publicationListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(publicationListing.getRelativeFacetPath()).isEqualTo("publicationfacets");
+        assertThat(publicationListing.getListingFilters()).containsExactly(
+                ListingFilter.PUBLICATION_TYPE,
+                ListingFilter.PROFESSION,
+                ListingFilter.TOPIC
+        );
     }
 
     @Test
@@ -104,6 +130,8 @@ public class ListingPageTypeTest {
         assertThat(searchListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
         assertThat(searchListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
         assertThat(searchListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(searchListing.getRelativeFacetPath()).isEmpty();
+        assertThat(searchListing.getListingFilters()).isEmpty();
     }
 
     @Test
@@ -117,17 +145,43 @@ public class ListingPageTypeTest {
                 .isEqualTo(HEEField.COMPLETED_DATE.getName());
         assertThat(searchBankListing.getFilterValueListIdentifier()).isEqualTo("searchBankTopics");
         assertThat(searchBankListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(searchBankListing.getRelativeFacetPath()).isEmpty();
+        assertThat(searchBankListing.getListingFilters()).isEmpty();
+    }
+
+    @Test
+    public void training() {
+        // Verify
+        final ListingPageType trainingListing = ListingPageType.TRAINING_LISTING;
+        assertThat(trainingListing.getType()).isEqualTo("training");
+        assertThat(trainingListing.getDocumentTypes()).isEqualTo(new String[]{"hee:trainingProgrammePage"});
+        assertThat(trainingListing.isSortingEnabled()).isTrue();
+        assertThat(trainingListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
+        assertThat(trainingListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
+        assertThat(trainingListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(trainingListing.getRelativeFacetPath()).isEqualTo("trainingfacets");
+        assertThat(trainingListing.getListingFilters()).containsExactly(
+                ListingFilter.TRAINING_TYPE,
+                ListingFilter.PROFESSION,
+                ListingFilter.TOPIC,
+                ListingFilter.CLINICAL_DISCIPLINE,
+                ListingFilter.RECRUITMENT_FORMAT
+        );
     }
 
     @Test
     public void getByName_WithValidType_ReturnsListingPageType() {
         // Verify
+        assertThat(ListingPageType.getByName("atoz")).isEqualTo(ListingPageType.ATOZ_LISTING);
         assertThat(ListingPageType.getByName("blog")).isEqualTo(ListingPageType.BLOG_LISTING);
         assertThat(ListingPageType.getByName("bulletin")).isEqualTo(ListingPageType.BULLETIN_LISTING);
         assertThat(ListingPageType.getByName("casestudy")).isEqualTo(ListingPageType.CASE_STUDY_LISTING);
         assertThat(ListingPageType.getByName("event")).isEqualTo(ListingPageType.EVENT_LISTING);
+        assertThat(ListingPageType.getByName("news")).isEqualTo(ListingPageType.NEWS_LISTING);
+        assertThat(ListingPageType.getByName("publication")).isEqualTo(ListingPageType.PUBLICATION_LISTING);
         assertThat(ListingPageType.getByName("search")).isEqualTo(ListingPageType.SEARCH_LISTING);
         assertThat(ListingPageType.getByName("searchbank")).isEqualTo(ListingPageType.SEARCH_BANK_LISTING);
+        assertThat(ListingPageType.getByName("training")).isEqualTo(ListingPageType.TRAINING_LISTING);
     }
 
     @Test(expected = IllegalArgumentException.class)

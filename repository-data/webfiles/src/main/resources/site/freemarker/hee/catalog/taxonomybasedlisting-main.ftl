@@ -308,7 +308,11 @@
                         <#if pageable??>
                             <#--  Search results: START  -->
                             <div class="hee-listing__results${(listingType='training')?then(' layout-two-col', '')}">
-                                <@.vars["${listingType}ListItem"] items=pageable.items/>
+                                <#if listingType='training'>
+                                    <@trainingListItem items=pageable.items trainingListingPageURL=trainingListingPageURL!/>
+                                <#else>
+                                    <@.vars["${listingType}ListItem"] items=pageable.items/>
+                                </#if>
                             </div>
                             <#--  Search results: END  -->
 
