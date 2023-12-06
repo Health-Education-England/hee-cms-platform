@@ -7,12 +7,10 @@ import org.hippoecm.hst.content.beans.query.exceptions.FilterException;
 import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.content.beans.standard.HippoFacetNavigationBean;
-import org.hippoecm.hst.content.beans.standard.HippoFolderBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.hippoecm.hst.util.ContentBeanUtils;
-import org.hippoecm.repository.api.HippoNodeType;
 import uk.nhs.hee.web.components.info.ListingPageComponentInfo;
 import uk.nhs.hee.web.repository.HEEField;
 import uk.nhs.hee.web.utils.HstUtils;
@@ -50,11 +48,11 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
         // Add selected filters to the model
         addSelectedFiltersToModel(request);
 
-        // Get the target facet based on the chosen filters
-        final HippoFacetNavigationBean targetFacetBean = getTargetFacetBean(request);
+        // Get the facet for the requested listing page
+        final HippoFacetNavigationBean facetBean = getFacetBean(request);
 
         // Finally, add the facet filtered taxonomy maps to the model
-        addFacetedFiltersToModel(request, targetFacetBean);
+        addFacetedFiltersToModel(request, facetBean);
     }
 
     /**
@@ -129,85 +127,23 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
     }
 
     /**
-     * Returns the target facet navigation by navigating through the configured facet navigation
-     * based on all the filter query parameters.
+     * Returns the {@link HippoFacetNavigationBean} for the requested listing page.
      *
      * @param request the {@link HstRequest} instance.
      */
-    private HippoFacetNavigationBean getTargetFacetBean(final HstRequest request) {
-        // Get the configured facet navigation
-        final HippoFacetNavigationBean facetNavigation = ContentBeanUtils.getFacetNavigationBean(
+    private HippoFacetNavigationBean getFacetBean(final HstRequest request) {
+        return ContentBeanUtils.getFacetNavigationBean(
                 getListing(request).getRelativeFacetPath(), null);
-
-        if (facetNavigation == null) {
-            return null;
-        }
-
-        // Navigate through the facet navigation based on the filter query parameters
-        // to find the target facet navigation.
-        HippoFacetNavigationBean targetFacetBean = facetNavigation;
-        for (final ListingFilter filter : getListing(request).getListingFilters()) {
-            targetFacetBean = navigateThroughFacetBeanByQueryParameters(
-                    targetFacetBean,
-                    filter.getField().getName(),
-                    HstUtils.getQueryParameterValues(request, filter.getQueryParameter())
-            );
-
-            if (!filter.isFlatTaxonomy()) {
-                targetFacetBean = navigateThroughFacetBeanByQueryParameters(
-                        targetFacetBean,
-                        filter.getField().getName(),
-                        HstUtils.getQueryParameterValues(request, buildSubLevelQueryParameter(filter.getQueryParameter())));
-            }
-        }
-
-        return targetFacetBean;
-    }
-
-    /**
-     * Navigates through the given {@code facetBean} based on the given {@code queryParams} (if path exists)
-     * and returns the target facet bean. Otherwise, returns the given {@code facetBean}.
-     *
-     * @param facetBean        the {@link HippoFolderBean} instance which needs to be navigated
-     *                         to find the target bean based on the given {@code queryParams}.
-     * @param taxonomyNodeName the name of the taxonomy node under which the target facet bean needs to be searched for
-     *                         based on the given {@code queryParams}.
-     * @param queryParams      the {@link List} of query parameters for which the target facet bean needs to be found.
-     * @return the target facet {@link HippoFolderBean}
-     * by navigating through the given facet {@code currentTargetFolderBean}
-     * based on the given query parameters {@code queryParams}.
-     * Otherwise, returns the given {@code currentTargetFolderBean}.
-     */
-    private HippoFacetNavigationBean navigateThroughFacetBeanByQueryParameters(
-            final HippoFacetNavigationBean facetBean,
-            final String taxonomyNodeName,
-            final List<String> queryParams) {
-        if (queryParams.isEmpty()) {
-            return facetBean;
-        } else {
-            HippoFacetNavigationBean targetFacetBean = null;
-
-            for (final String queryParam : queryParams) {
-                if (queryParam.isEmpty()) {
-                    continue;
-                }
-
-                targetFacetBean = facetBean.getBean(taxonomyNodeName);
-                targetFacetBean = targetFacetBean.getBean(queryParam);
-            }
-
-            return targetFacetBean == null ? facetBean : targetFacetBean;
-        }
     }
 
     /**
      * Adds faceted filter taxonomy maps (including sub-level) to the model.
      *
-     * @param request the {@link HstRequest} instance.
-     * @param targetFacetBean the target facet bean with which the actual taxonomy maps will be filtered
-     *                        (in order to render the ones containing results).
+     * @param request   the {@link HstRequest} instance.
+     * @param facetBean the facet bean with which the actual taxonomy maps will be filtered
+     *                  (in order to render the ones containing results).
      */
-    private void addFacetedFiltersToModel(final HstRequest request, final HippoFacetNavigationBean targetFacetBean) {
+    private void addFacetedFiltersToModel(final HstRequest request, final HippoFacetNavigationBean facetBean) {
         for (final ListingFilter filter : getListing(request).getListingFilters()) {
             if (filter.isFlatTaxonomy()) {
                 request.setModel(
@@ -215,7 +151,7 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
                         getFacetedTaxonomyAsMap(
                                 TaxonomyTemplateUtils.getTaxonomyAsMap(filter.getTaxonomyName()),
                                 filter.getField(),
-                                targetFacetBean
+                                facetBean
                         )
                 );
             } else {
@@ -223,7 +159,7 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
                         getFacetedTaxonomyAsMap(
                                 TaxonomyTemplateUtils.getRootCategoriesAsMap(filter.getTaxonomyName()),
                                 filter.getField(),
-                                targetFacetBean
+                                facetBean
                         )
                 );
 
@@ -235,7 +171,7 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
                                     TaxonomyTemplateUtils.getSubCategoriesAsMap(filter.getTaxonomyName(),
                                             queryParameterList.get(0)),
                                     filter.getField(),
-                                    targetFacetBean
+                                    facetBean
                             )
                     );
                 }
@@ -244,31 +180,30 @@ public class TaxonomyBasedListingPageComponent extends ListingPageComponent {
     }
 
     /**
-     * Returns a taxonomy map filtered by the taxonomies available under the given {@code targetFacetBean}.
+     * Returns a taxonomy map filtered by the taxonomies available under the given {@code facetBean}.
      *
-     * @param taxonomyMap the original taxonomy map which needs to be filtered by the given {@code targetFacetBean}.
+     * @param taxonomyMap the original taxonomy map which needs to be filtered by the given {@code facetBean}.
      * @param field the {@link HEEField} instance containing the faceted field.
-     * @param targetFacetBean the target facet bean with which {@code taxonomyMap} needs to be filtered
-     *                        (in order to render the ones containing results).
-     * @return a taxonomy map filtered by the taxonomies available under the given {@code targetFacetBean}.
+     * @param facetBean the facet bean with which {@code taxonomyMap} needs to be filtered
+     *                  (in order to render the ones containing results).
+     * @return a taxonomy map filtered by the taxonomies available under the given {@code facetBean}.
      */
     private Map<String, String> getFacetedTaxonomyAsMap(
             final Map<String, String> taxonomyMap,
             final HEEField field,
-            final HippoFacetNavigationBean targetFacetBean
+            final HippoFacetNavigationBean facetBean
     ) {
-        if (targetFacetBean == null) {
+        if (facetBean == null) {
             return taxonomyMap;
         }
 
-        final HippoFacetNavigationBean targetTaxonomyFacetBean = targetFacetBean.getBean(field.getName());
+        final HippoFacetNavigationBean targetTaxonomyFacetBean = facetBean.getBean(field.getName());
 
         return targetTaxonomyFacetBean.getFolders(true).stream()
                 .filter(facetFolderBean -> taxonomyMap.containsKey(facetFolderBean.getName()))
                 .collect(Collectors.toMap(
                         HippoBean::getName,
-                        facetFolderBean -> taxonomyMap.get(facetFolderBean.getName())
-                                + " [" + facetFolderBean.getSingleProperty(HippoNodeType.HIPPO_COUNT) + "]",
+                        facetFolderBean -> taxonomyMap.get(facetFolderBean.getName()),
                         (x, y) -> y,
                         LinkedHashMap::new)
                 );

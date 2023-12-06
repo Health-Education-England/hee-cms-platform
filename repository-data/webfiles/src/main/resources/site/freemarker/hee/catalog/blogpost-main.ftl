@@ -102,60 +102,68 @@
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
 
+                    <#list document.contentBlocks as block>
+                        <#switch block.getClass().getName()>
+                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                                <@hee.featuredContent block=block/>
+                                <#break>
+                            <#default>
+                        </#switch>
+                    </#list>
+
                     <#-- Last & next reviewed dates -->
                     <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
                 </div>
             </div>
             <#--  Main sections: END  -->
 
-            <#--  Sidebar sections: START  -->
-            <#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>
-                <aside class="page__rightbar">
-                    <#--  Blog info: START  -->
-                    <div class="hee-card hee-card--details">
-                        <h3>Blog info</h3>
+            <#--  Sidebar sections: START  -->            
+			<aside class="page__rightbar">
+				<#--  Blog info: START  -->
+				<div class="hee-card hee-card--details">
+					<h3>Blog info</h3>
 
-                        <#--  Published date  -->
-                        <div class="hee-card--details__item">
-                            <span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
-                        </div>
+					<#--  Published date  -->
+					<div class="hee-card--details__item">
+						<span>Published:</span> ${getDefaultFormattedDate(document.publicationDate)}
+					</div>
 
-                        <#-- Blog info partial [professions, topics and tags] -->
-                        <@blogAndNewsPartialInfo
-                            professionTaxClass=document.globalTaxonomyProfessions!
-                            topicTaxClass=document.globalTaxonomyHealthcareTopics!
-                            tagTaxClass=document.globalTaxonomyTags!
-                            listingPageURL=blogListingPageURL!/>
-                    </div>
-                    <#--  Blog info: END  -->
-
-                    <#--  Right hand content blocks: START  -->
-                    <#list document.rightHandBlocks as block>
-                        <#switch block.getClass().getName()>
-                            <#case "uk.nhs.hee.web.beans.QuickLinks">
-                                <@hee.quickLinks quickLinks=block/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardReference">
-                                <@hee.contactCard contact=block.content/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
-                                <@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
-                                <@hee.externalLinksCard card=block.externalLinksCard!/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.FileLinksCardReference">
-                                <@hee.fileLinksCard card=block.fileLinksCard/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
-                                <@hee.internalLinksCard card=block.internalLinksCard/>
-                                <#break>
-                            <#default>
-                        </#switch>
-                    </#list>
-                    <#--  Right hand content blocks: END  -->
-                </aside>
-            </#if>
+					<#-- Blog info partial [professions, topics and tags] -->
+					<@blogAndNewsPartialInfo
+						professionTaxClass=document.globalTaxonomyProfessions!
+						topicTaxClass=document.globalTaxonomyHealthcareTopics!
+						tagTaxClass=document.globalTaxonomyTags!
+						listingPageURL=blogListingPageURL!/>
+				</div>
+				<#--  Blog info: END  -->
+				<#--  Right hand content blocks: START  -->
+				<#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>
+					<#list document.rightHandBlocks as block>
+						<#switch block.getClass().getName()>
+							<#case "uk.nhs.hee.web.beans.QuickLinks">
+								<@hee.quickLinks quickLinks=block/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.ContactCardReference">
+								<@hee.contactCard contact=block.content/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.ContactCardWithDescriptionReference">
+								<@hee.contactCardWithDescription contactWithDescription=block.contactCardWithDescription/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.ExternalLinksCardReference">
+								<@hee.externalLinksCard card=block.externalLinksCard!/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.FileLinksCardReference">
+								<@hee.fileLinksCard card=block.fileLinksCard/>
+								<#break>
+							<#case "uk.nhs.hee.web.beans.InternalLinksCardReference">
+								<@hee.internalLinksCard card=block.internalLinksCard/>
+								<#break>
+							<#default>
+						</#switch>
+					</#list>
+				 </#if>
+				<#--  Right hand content blocks: END  -->
+			</aside>           
             <#--  Sidebar sections: END  -->
         </div>
         <#--  Main content: END  -->

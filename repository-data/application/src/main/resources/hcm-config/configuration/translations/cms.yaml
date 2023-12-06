@@ -79,6 +79,9 @@ definitions:
         embed tag
       hee:mandatory-featured-method-validator#no-taxonomy: Please clear '${taxonomy}'
         as it is not required for '${contentType}' content type
+      hee:open-close-datetime-validator: Please enter Opening and Closing dates
+      hee:open-close-datetime-validator#close-after-open: Closing datetime must be
+        after Opening datetime
     /hippo:configuration/hippo:translations/hippo:cms/advanced-search-filters:
       jcr:primaryType: hipposys:resourcebundles
       /en:

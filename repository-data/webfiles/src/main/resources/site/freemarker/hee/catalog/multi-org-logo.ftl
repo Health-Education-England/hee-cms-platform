@@ -13,45 +13,47 @@
 
 <#if document?? && document.logoGroup?? && document.logoGroup.logos?size gt 0>
     <#--  Multi org logo: START  -->
-        <#list document.logoGroup.logos as logo>
-            <#--  Builds link  -->
-            <#if logo.linkDocument??>
-                <#assign href=getInternalLinkURL(logo.linkDocument)>
-            <#else>
-                <#assign href="${logo.linkURL}">
-            </#if>
-
-            <#--  Builds logo source and alt text  -->
-            <#switch logo.logoType>
-                <#--
-                <#case "hee">
-                    <#assign logoFileName="hee-logo.png">
-                    <#break>
-                -->
-                <#case "nimdta">
-                    <#assign logoFileName="nimdta-logo.png">
-                    <#break>
-                <#case "nes">
-                    <#assign logoFileName="nhs-scotland-logo.png">
-                    <#break>
-                <#case "heiw">
-                    <#assign logoFileName="heiw-logo.png">
-                    <#break>
-            </#switch>
-
-            <@hst.link path="/static/assets/images/logos/${logoFileName}" var="logoSrc"/>
-            <#assign logoAltText="Logo for ${logoTypes[logo.logoType]}">
-
-            <#--  Renders logo  -->
-            <span class="nhsuk-header__logo">
-                <#if href?has_content>
-                    <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}">
-                        <img src="${logoSrc}" alt="${logoAltText}">
-                    </a>
+        <div class="nhsuk-header__multilogo__container">
+            <#list document.logoGroup.logos as logo>
+                <#--  Builds link  -->
+                <#if logo.linkDocument??>
+                    <#assign href=getInternalLinkURL(logo.linkDocument)>
                 <#else>
-                    <img src="${logoSrc}" alt="${logoAltText}">
+                    <#assign href="${logo.linkURL}">
                 </#if>
-            </span>
-        </#list>
+
+                <#--  Builds logo source and alt text  -->
+                <#switch logo.logoType>
+                    <#--
+                    <#case "hee">
+                        <#assign logoFileName="hee-logo.png">
+                        <#break>
+                    -->
+                    <#case "nimdta">
+                        <#assign logoFileName="nimdta-logo.png">
+                        <#break>
+                    <#case "nes">
+                        <#assign logoFileName="nhs-scotland-logo.png">
+                        <#break>
+                    <#case "heiw">
+                        <#assign logoFileName="heiw-logo.png">
+                        <#break>
+                </#switch>
+
+                <@hst.link path="/static/assets/images/logos/${logoFileName}" var="logoSrc"/>
+                <#assign logoAltText="Logo for ${logoTypes[logo.logoType]}">
+
+                <#--  Renders logo  -->
+                <span class="nhsuk-header__logo">
+                    <#if href?has_content>
+                        <a class="nhsuk-header__link" href="${href}" aria-label="${logo.linkTitle!}">
+                            <img src="${logoSrc}" alt="${logoAltText}">
+                        </a>
+                    <#else>
+                        <img src="${logoSrc}" alt="${logoAltText}">
+                    </#if>
+                </span>
+            </#list>
+        </div>
     <#--  Multi org logo: END  -->
 </#if>

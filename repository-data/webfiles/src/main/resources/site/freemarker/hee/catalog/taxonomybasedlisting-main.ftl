@@ -138,9 +138,12 @@
                         <div class="hee-listing__summary">
                             <#--  Result count: START  -->
                             <div class="hee-listing__count">
-                                <@fmt.message key="results.count.text" var="resultsCountText"/>
                                 <h2 class="hee-listing__title nhsuk-heading-l">
-                                    ${pageable.total} ${resultsCountText}
+                                    <#if pageable.total gt 0>
+                                        ${pageable.total} <@fmt.message key="results.count.text"/>
+                                    <#else>
+                                        <@fmt.message key="no_results.text"/>
+                                    </#if>
                                 </h2>
                             </div>
                             <#--  Result count: END  -->

@@ -1,0 +1,72 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/AddOrUpdateFacetsForChannels:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Adds or updates facet nodes like publicationfacets, blogfacets,
+        newsfacets, etc for all channels.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/element(*, hippostd:folder)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.commons.lang3.StringUtils\r\nimport org.hippoecm.repository.api.HippoNodeType\r\
+        \nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\nclass AddOrUpdateFacetsForChannels extends BaseNodeUpdateVisitor\
+        \ {\r\n    public static final String REL_PATH_BLOG_FACETS = \"blogfacets\"\
+        \r\n    public static final String REL_PATH_NEWS_FACETS = \"newsfacets\"\r\
+        \n    public static final String REL_PATH_PUBLICATION_FACETS = \"publicationfacets\"\
+        \r\n\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Started processing\
+        \ the node '${node.path}'\"\r\n\r\n        // Ignore 'administration' folder/node\r\
+        \n        if (\"administration\" == node.name) {\r\n            log.debug\
+        \ \"Ignoring '${node.path}'\"\r\n            return false\r\n        }\r\n\
+        \r\n        // Add 'blogfacets' node\r\n        addOrUpdateFacetNode(node,\
+        \ REL_PATH_BLOG_FACETS)\r\n\r\n        // Add 'newsfacets' node\r\n      \
+        \  addOrUpdateFacetNode(node, REL_PATH_NEWS_FACETS)\r\n\r\n        // Add\
+        \ 'publicationfacets' node\r\n        addOrUpdateFacetNode(node, REL_PATH_PUBLICATION_FACETS)\r\
+        \n\r\n        log.debug \"Successfully added/updated '${REL_PATH_BLOG_FACETS}',\
+        \ '${REL_PATH_NEWS_FACETS}' \" +\r\n                \"and '${REL_PATH_PUBLICATION_FACETS}'\
+        \ nodes under '${node.path}'\"\r\n        return true\r\n    }\r\n\r\n   \
+        \ /**\r\n     * Adds or updates the given {@code facetRelPath} for the channel\
+        \ identified by {@code channelNode}.\r\n     *\r\n     * @param channelNode\
+        \ the channel node (e.g. {@code /content/document/medical)\r\n     * under\
+        \ which the give {@code facetRelPath} needs to be added or updated.\r\n  \
+        \   * @param facetRelPath the facet relative path which needs to be added\
+        \ or updated.\r\n     */\r\n    void addOrUpdateFacetNode(Node channelNode,\
+        \ String facetRelPath) {\r\n        String documentType = StringUtils.EMPTY\r\
+        \n        String[] facetNodes = []\r\n        String[] facetNodeNames = []\r\
+        \n\r\n        switch (facetRelPath) {\r\n            case REL_PATH_BLOG_FACETS:\r\
+        \n            case REL_PATH_NEWS_FACETS:\r\n                if (facetRelPath\
+        \ == REL_PATH_BLOG_FACETS) {\r\n                    documentType = \"hee:blogPost\"\
+        \r\n                } else {\r\n                    documentType = \"hee:news\"\
+        \r\n                }\r\n\r\n                facetNodes = [\r\n          \
+        \              \"hee:globalTaxonomyProfessions__with_ancestors\",\r\n    \
+        \                    \"hee:globalTaxonomyHealthcareTopics__with_ancestors\"\
+        ,\r\n                        \"hee:globalTaxonomyTags__with_ancestors\"\r\n\
+        \                ]\r\n                facetNodeNames = [\r\n             \
+        \           'hee:globalTaxonomyProfessions__with_ancestors${sortby:\"facetvalue\"\
+        , sortorder:\"ascending\"}',\r\n                        'hee:globalTaxonomyHealthcareTopics__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                        'hee:globalTaxonomyTags__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}'\r\n                ]\r\n         \
+        \       break\r\n            case REL_PATH_PUBLICATION_FACETS:\r\n       \
+        \         documentType = \"hee:publicationLandingPage\"\r\n              \
+        \  facetNodes = [\r\n                        \"hee:globalTaxonomyPublicationType__with_ancestors\"\
+        ,\r\n                        \"hee:globalTaxonomyProfessions__with_ancestors\"\
+        ,\r\n                        \"hee:globalTaxonomyHealthcareTopics__with_ancestors\"\
+        \r\n                ]\r\n                facetNodeNames = [\r\n          \
+        \              'hee:globalTaxonomyPublicationType__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                        'hee:globalTaxonomyProfessions__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                        'hee:globalTaxonomyHealthcareTopics__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}'\r\n                ]\r\n         \
+        \       break\r\n            default:\r\n                break\r\n       \
+        \ }\r\n\r\n        final Node facetNode = channelNode.hasNode(facetRelPath)\
+        \ ? channelNode.getNode(facetRelPath) :\r\n                channelNode.addNode(facetRelPath,\
+        \ \"hippofacnav:facetnavigation\")\r\n        facetNode.setProperty(HippoNodeType.HIPPO_DOCBASE,\
+        \ channelNode.getIdentifier())\r\n        facetNode.setProperty(\"hippofacnav:facets\"\
+        , facetNodes)\r\n        facetNode.setProperty(\"hippofacnav:facetnodenames\"\
+        , facetNodeNames)\r\n        facetNode.setProperty(\"hippofacnav:filters\"\
+        , [\"jcr:primaryType=\" + documentType] as String[])\r\n    }\r\n\r\n    boolean\
+        \ undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000

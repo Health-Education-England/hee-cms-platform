@@ -92,9 +92,10 @@ definitions:
         \ : [\"tag\": \"use_of_technology\"],\r\n            \"User\" : [\"tag\":\
         \ \"user_experience\"],\r\n            \"Well\" : [\"tag\": \"wellbeing\"\
         ],\r\n            \"wider_profession\" : [\"tag\": \"wider_profession\"],\r\
-        \n            \"workforce\" : [\"tag\": \"workforce\"]\r\n    ]\r\n\r\n  \
-        \  // Channel to default healthcare topic/profession taxonomies mapping\r\n\
-        \    // (containing full taxonomy tree [e.g. health_informaticians >> clinical_informatics]\r\
+        \n            \"workforce\" : [\"tag\": \"workforce\"],\r\n            \"\
+        QI-Innovation\" : [\"tag\": \"innovation\"]\r\n    ]\r\n\r\n    // Channel\
+        \ to default healthcare topic/profession taxonomies mapping\r\n    // (containing\
+        \ full taxonomy tree [e.g. health_informaticians >> clinical_informatics]\r\
         \n    // of the term separated by ' >> ')\r\n    Map<String, Map<String, List<String>>>\
         \ CHANNEL_TO_DEFAULT_TAXONOMY_MAPPING = [\r\n            \"lks\" : [\"profession\"\
         : [\"library_knowledge_and_information_services\"]],\r\n            \"kls\"\
