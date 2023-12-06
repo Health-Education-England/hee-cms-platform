@@ -18,7 +18,9 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_EVENT_TYPE ("GlobalEventTypes"),
 
-    HEE_GLOBAL_DELIVERY_METHOD ("GlobalDeliveryMethod");
+    HEE_GLOBAL_DELIVERY_METHOD ("GlobalDeliveryMethod"),
+    
+    HEE_GLOBAL_REGIONS ("GlobalRegions");
 
     private final String name;
 
