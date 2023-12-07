@@ -16,7 +16,13 @@ public enum HEETaxonomy {
 
     HEE_GLOBAL_CLINICAL_DISCIPLINE ("GlobalClinicalDiscipline"),
 
-    HEE_GLOBAL_REGIONS ("GlobalRegions");
+    HEE_GLOBAL_EVENT_TYPE ("GlobalEventTypes"),
+
+    HEE_GLOBAL_DELIVERY_METHOD ("GlobalDeliveryMethod"),
+    
+    HEE_GLOBAL_REGIONS ("GlobalRegions"),
+
+    HEE_GLOBAL_NEWS_TYPES("GlobalNewsTypes");
 
     private final String name;
 
