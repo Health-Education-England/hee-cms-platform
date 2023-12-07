@@ -1,0 +1,50 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/AddOrUpdateTrainingProgrammeFacetForChannels:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Adds or updates 'trainingprogrammefacets' facet node for
+        all channels.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/element(*, hippostd:folder)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.hippoecm.repository.api.HippoNodeType\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass AddOrUpdateTrainingProgrammeFacetForChannels\
+        \ extends BaseNodeUpdateVisitor {\r\n    public static final String REL_PATH_TRAINING_PROGRAMME_FACETS\
+        \ = \"trainingprogrammefacets\"\r\n\r\n    boolean doUpdate(Node node) {\r\
+        \n        log.debug \"Started processing the node '${node.path}'\"\r\n\r\n\
+        \        // Ignore 'administration' folder/node\r\n        if (\"administration\"\
+        \ == node.name) {\r\n            log.debug \"Ignoring '${node.path}'\"\r\n\
+        \            return false\r\n        }\r\n\r\n        // Add 'trainingprogrammefacets'\
+        \ node\r\n        addTrainingProgrammeFacetNode(node)\r\n\r\n        log.debug\
+        \ \"Successfully added/updated '${REL_PATH_TRAINING_PROGRAMME_FACETS}' node\
+        \ under '${node.path}'\"\r\n        return true\r\n    }\r\n\r\n    /**\r\n\
+        \     * Adds or updates 'trainingprogrammefacets' node for the channel identified\
+        \ by {@code channelNode}.\r\n     *\r\n     * @param channelNode the channel\
+        \ node (e.g. {@code /content/document/medical)\r\n     * under which 'trainingprogrammefacets'\
+        \ node needs to be added or updated.\r\n     */\r\n    void addTrainingProgrammeFacetNode(Node\
+        \ channelNode) {\r\n        final Node facetNode = channelNode.hasNode(REL_PATH_TRAINING_PROGRAMME_FACETS)\
+        \ ?\r\n                channelNode.getNode(REL_PATH_TRAINING_PROGRAMME_FACETS)\
+        \ :\r\n                channelNode.addNode(REL_PATH_TRAINING_PROGRAMME_FACETS,\
+        \ \"hippofacnav:facetnavigation\")\r\n        facetNode.setProperty(HippoNodeType.HIPPO_DOCBASE,\
+        \ channelNode.getIdentifier())\r\n        facetNode.setProperty(\"hippofacnav:facets\"\
+        , [\r\n                \"hee:globalTaxonomyTrainingType__with_ancestors\"\
+        ,\r\n                \"hee:globalTaxonomyProfessions__with_ancestors\",\r\n\
+        \                \"hee:globalTaxonomyHealthcareTopics__with_ancestors\",\r\
+        \n                \"hee:globalTaxonomyClinicalDiscipline__with_ancestors\"\
+        ,\r\n                \"hee:globalRecruitmentFormat__with_ancestors\"\r\n \
+        \       ] as String[])\r\n        facetNode.setProperty(\"hippofacnav:facetnodenames\"\
+        , [\r\n                'hee:globalTaxonomyTrainingType__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyProfessions__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyHealthcareTopics__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyClinicalDiscipline__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalRecruitmentFormat__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n        ] as String[])\r\n   \
+        \     facetNode.setProperty(\"hippofacnav:filters\", [\"jcr:primaryType=hee:trainingProgrammePage\"\
+        ] as String[])\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n   \
+        \     throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000
