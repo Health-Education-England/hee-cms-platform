@@ -4,7 +4,6 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +13,7 @@ import uk.nhs.hee.web.components.info.ReportComponentInfo;
 import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
-import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ListingPageUtils;
 import uk.nhs.hee.web.utils.ReportAndPublicationUtils;
 
 import javax.jcr.RepositoryException;
@@ -47,7 +46,10 @@ public class ReportComponent extends EssentialsDocumentComponent {
             request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
 
             addRelatedPublicationLandingPageToModel(request, reportPage);
-            addPublicationListingPageURLToModel(request);
+
+            // Adds publication listing page URL to the model
+            ListingPageUtils.addListingPageURLToModel(request, ListingPageType.PUBLICATION_LISTING,
+                    Model.PUBLICATION_LISTING_PAGE_URL);
         }
     }
 
@@ -63,7 +65,7 @@ public class ReportComponent extends EssentialsDocumentComponent {
             final Locale locale = request.getLocale();
             final ReportAndPublicationUtils reportAndPublicationUtils = new ReportAndPublicationUtils();
 
-            PublicationLandingPage publicationLandingPage = reportAndPublicationUtils.findMyParent(reportPage, request.getRequestContext());
+            final PublicationLandingPage publicationLandingPage = reportAndPublicationUtils.findMyParent(reportPage, request.getRequestContext());
 
             if (publicationLandingPage != null) {
                 request.setModel("landingPage", publicationLandingPage);
@@ -73,26 +75,4 @@ public class ReportComponent extends EssentialsDocumentComponent {
                     "the Publication page document '{}' is associated to", e.getMessage(), reportPage.getPath(), e);
         }
     }
-
-    /**
-     * Adds Publication listing Page URL to model.
-     *
-     * <p>Adds the first publication listing/collection ({@code hee:publicationListingPage}) page
-     * that it finds in the current channel.</p>
-     *
-     * @param request the {@link HstRequest} instance.
-     */
-    private void addPublicationListingPageURLToModel(final HstRequest request) {
-        final HstRequestContext hstRequestContext = request.getRequestContext();
-        final HippoBean publicationListingPageBean = HstUtils.getPublicationListingPageBean(hstRequestContext);
-
-        if (publicationListingPageBean == null) {
-            return;
-        }
-
-        request.setModel(
-                "publicationListingPageURL",
-                HstUtils.getURLByBean(hstRequestContext, publicationListingPageBean, false));
-    }
-
 }

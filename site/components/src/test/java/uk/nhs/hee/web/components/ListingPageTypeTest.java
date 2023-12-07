@@ -150,17 +150,19 @@ public class ListingPageTypeTest {
     }
 
     @Test
-    public void training() {
+    public void trainingProgramme() {
         // Verify
-        final ListingPageType trainingListing = ListingPageType.TRAINING_LISTING;
-        assertThat(trainingListing.getType()).isEqualTo("training");
-        assertThat(trainingListing.getDocumentTypes()).isEqualTo(new String[]{"hee:trainingProgrammePage"});
-        assertThat(trainingListing.isSortingEnabled()).isTrue();
-        assertThat(trainingListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
-        assertThat(trainingListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
-        assertThat(trainingListing.isChannelSpecificValueListIdentifier()).isFalse();
-        assertThat(trainingListing.getRelativeFacetPath()).isEqualTo("trainingfacets");
-        assertThat(trainingListing.getListingFilters()).containsExactly(
+        final ListingPageType trainingtrainingProgrammeListingListing = ListingPageType.TRAINING_PROGRAMME_LISTING;
+        assertThat(trainingtrainingProgrammeListingListing.getType()).isEqualTo("trainingprogramme");
+        assertThat(trainingtrainingProgrammeListingListing.getDocumentTypes())
+                .isEqualTo(new String[]{"hee:trainingProgrammePage"});
+        assertThat(trainingtrainingProgrammeListingListing.isSortingEnabled()).isTrue();
+        assertThat(trainingtrainingProgrammeListingListing.getSortByDateField())
+                .isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
+        assertThat(trainingtrainingProgrammeListingListing.getFilterValueListIdentifier()).isEqualTo(StringUtils.EMPTY);
+        assertThat(trainingtrainingProgrammeListingListing.isChannelSpecificValueListIdentifier()).isFalse();
+        assertThat(trainingtrainingProgrammeListingListing.getRelativeFacetPath()).isEqualTo("trainingprogrammefacets");
+        assertThat(trainingtrainingProgrammeListingListing.getListingFilters()).containsExactly(
                 ListingFilter.TRAINING_TYPE,
                 ListingFilter.PROFESSION,
                 ListingFilter.TOPIC,
@@ -181,7 +183,7 @@ public class ListingPageTypeTest {
         assertThat(ListingPageType.getByName("publication")).isEqualTo(ListingPageType.PUBLICATION_LISTING);
         assertThat(ListingPageType.getByName("search")).isEqualTo(ListingPageType.SEARCH_LISTING);
         assertThat(ListingPageType.getByName("searchbank")).isEqualTo(ListingPageType.SEARCH_BANK_LISTING);
-        assertThat(ListingPageType.getByName("training")).isEqualTo(ListingPageType.TRAINING_LISTING);
+        assertThat(ListingPageType.getByName("trainingprogramme")).isEqualTo(ListingPageType.TRAINING_PROGRAMME_LISTING);
     }
 
     @Test(expected = IllegalArgumentException.class)

@@ -155,16 +155,16 @@ public enum ListingPageType {
     ),
 
     /**
-     * Training listing
+     * Training programme listing
      */
-    TRAINING_LISTING(
-            "training",
+    TRAINING_PROGRAMME_LISTING(
+            "trainingprogramme",
             new String[]{"hee:trainingProgrammePage"},
             Boolean.TRUE,
             HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
             StringUtils.EMPTY,
             Boolean.FALSE,
-            "trainingfacets",
+            "trainingprogrammefacets",
             List.of(
                     ListingFilter.TRAINING_TYPE,
                     ListingFilter.PROFESSION,

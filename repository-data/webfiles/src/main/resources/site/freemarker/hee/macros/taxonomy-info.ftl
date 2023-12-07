@@ -72,57 +72,69 @@
 <#--  Renders taxonomy info part (i.e. taxonomy collection links) of publication, blog, news, etc info sidebar sections
       as well as taxonomy links for the training programme collection results cards  -->
 <#macro renderTaxonomyInfo taxClass taxLabel taxParameter multiValued collectionPageURL renderFor>
-    <#if renderFor='trainingProgrammeCollection'>
-        <#--  For training programme collection results cards  -->
-        <div class="hee-listing-item__details__row">
-            <span class="hee-listing-item__details__label">${taxLabel}:</span>
-            <span>
+    <#if taxClass.taxonomyValues?has_content>
+        <#if renderFor='training-programme-summary'>
+            <#--  For training programme summary  -->
+            <li class="hee-card--summary__item">
+                <span class="hee-card--summary__item__label">${taxLabel}:</span>
+                <span class="hee-card--summary__item__value">
+                    <@renderTaxonomyInfoLink
+                        taxClass=taxClass
+                        taxParameter=taxParameter
+                        multiValued=multiValued
+                        collectionPageURL=collectionPageURL/>
+                </span>
+            </li>
+        <#elseif renderFor='training-programme-collection'>
+            <#--  For training programme collection results cards  -->
+            <div class="hee-listing-item__details__row">
+                <span class="hee-listing-item__details__label">${taxLabel}:</span>
+                <span>
+                    <@renderTaxonomyInfoLink
+                        taxClass=taxClass
+                        taxParameter=taxParameter
+                        multiValued=multiValued
+                        collectionPageURL=collectionPageURL/>
+                </span>
+            </div>
+        <#else>
+            <#--  For publication, blog, news, etc info sidebar sections  -->
+            <div class="hee-card--details__item">
+                <span>${taxLabel}:</span>
                 <@renderTaxonomyInfoLink
                     taxClass=taxClass
                     taxParameter=taxParameter
                     multiValued=multiValued
                     collectionPageURL=collectionPageURL/>
-            </span>
-        </div>
-    <#else>
-        <#--  For publication, blog, news, etc info sidebar sections  -->
-        <div class="hee-card--details__item">
-            <span>${taxLabel}:</span>
-            <@renderTaxonomyInfoLink
-                taxClass=taxClass
-                taxParameter=taxParameter
-                multiValued=multiValued
-                collectionPageURL=collectionPageURL/>
-        </div>
+            </div>
+        </#if>
     </#if>
 </#macro>
 
 <#--  Renders single and multi-valued taxonomy (e.g. professions, topics, publication type, etc) info links  -->
 <#macro renderTaxonomyInfoLink taxClass taxParameter multiValued collectionPageURL>
-    <#if taxClass.taxonomyValues?has_content>
-        <#if multiValued>
-            <#--  Multi-valued  -->
-            <#assign subTaxParameter="sub${taxParameter?capitalize}">
+    <#if multiValued>
+        <#--  Multi-valued  -->
+        <#assign subTaxParameter="sub${taxParameter?capitalize}">
 
-            <#if collectionPageURL?has_content>
-                <#list taxClass.taxonomyValues as category>
-                    <#assign keyPathElements=category.keyPath?split('/')>
+        <#if collectionPageURL?has_content>
+            <#list taxClass.taxonomyValues as category>
+                <#assign keyPathElements=category.keyPath?split('/')>
 
-                    <#--  Assumes two-level taxonomy hierarchy  -->
-                    <a href=${collectionPageURL}?${taxParameter}=${(keyPathElements[0]='0')?then(category.key, keyPathElements[1])}${(keyPathElements[0]='1')?then('&' + subTaxParameter + '=' + category.key, '')}>${category.label}</a><#sep>, </#sep>
-                </#list>
-            <#else>
-                <#list taxClass.taxonomyValues as category>
-                    ${category.label}<#sep>, </#sep>
-                </#list>
-            </#if>
+                <#--  Assumes two-level taxonomy hierarchy  -->
+                <a href=${collectionPageURL}?${taxParameter}=${(keyPathElements[0]='0')?then(category.key, keyPathElements[1])}${(keyPathElements[0]='1')?then('&' + subTaxParameter + '=' + category.key, '')}>${category.label}</a><#sep>, </#sep>
+            </#list>
         <#else>
-            <#--  Single-valued  -->
-            <#if collectionPageURL?has_content>
-                <a href=${collectionPageURL}?${taxParameter}=${taxClass.taxonomyValues[0].key}>${taxClass.taxonomyValues[0].label}</a>
-            <#else>
-                ${taxClass.taxonomyValues[0].label}
-            </#if>
+            <#list taxClass.taxonomyValues as category>
+                ${category.label}<#sep>, </#sep>
+            </#list>
+        </#if>
+    <#else>
+        <#--  Single-valued  -->
+        <#if collectionPageURL?has_content>
+            <a href=${collectionPageURL}?${taxParameter}=${taxClass.taxonomyValues[0].key}>${taxClass.taxonomyValues[0].label}</a>
+        <#else>
+            ${taxClass.taxonomyValues[0].label}
         </#if>
     </#if>
 </#macro>

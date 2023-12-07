@@ -4,6 +4,7 @@
 <#include "../../include/page-meta-data.ftl">
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/micro-hero.ftl">
+<#include "../macros/taxonomy-info.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -71,52 +72,38 @@
 
                             <#--  Training type  -->
                             <#if document.globalTaxonomyTrainingType?? && document.globalTaxonomyTrainingType.taxonomyValues?has_content>
-                                <@programmeSummaryRow rowTitle="Training type">
-                                    <#--  The following block can be used when training listing page is available  -->
-                                    <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?trainingType=${document.globalTaxonomyTrainingType.taxonomyValues[0].key}">
-                                        ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                                    </a>  -->
-                                    ${document.globalTaxonomyTrainingType.taxonomyValues[0].label}
-                                </@programmeSummaryRow>
+                                <@taxonomyInfo
+                                    taxClass=document.globalTaxonomyTrainingType!
+                                    collectionPageURL=trainingProgrammeListingPageURL
+                                    taxLabel='Training type'
+                                    renderFor='training-programme-summary'/>
                             </#if>
 
                             <#--  Professions  -->
                             <#if document.globalTaxonomyProfessions?? && document.globalTaxonomyProfessions.taxonomyValues?has_content>
-                                <@programmeSummaryRow rowTitle="Professions">
-                                    <#--  The following block can be used when training listing page is available  -->
-                                    <#--  <#list document.globalTaxonomyProfessions.taxonomyValues as category>
-                                        <a href=${publicationListingPageURL}?profession=${category.key}>${category.label}</a><#sep>, </#sep>
-                                    </#list>  -->
-                                    <#list document.globalTaxonomyProfessions.taxonomyValues as category>
-                                        ${category.label}<#sep>, </#sep>
-                                    </#list>
-                                </@programmeSummaryRow>
+                                <@taxonomyInfo
+                                    taxClass=document.globalTaxonomyProfessions!
+                                    collectionPageURL=trainingProgrammeListingPageURL
+                                    taxLabel='Professions'
+                                    renderFor='training-programme-summary'/>
                             </#if>
 
                             <#--  Healthcare topics  -->
                             <#if document.globalTaxonomyHealthcareTopics?? && document.globalTaxonomyHealthcareTopics.taxonomyValues?has_content>
-                                <@programmeSummaryRow rowTitle="Healthcare topics">
-                                    <#--  The following block can be used when training listing page is available  -->
-                                    <#--  <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
-                                        <a href=${publicationListingPageURL}?topic=${category.key}>${category.label}</a><#sep>, </#sep>
-                                    </#list>  -->
-                                    <#list document.globalTaxonomyHealthcareTopics.taxonomyValues as category>
-                                        ${category.label}<#sep>, </#sep>
-                                    </#list>
-                                </@programmeSummaryRow>
+                                <@taxonomyInfo
+                                    taxClass=document.globalTaxonomyHealthcareTopics!
+                                    collectionPageURL=trainingProgrammeListingPageURL
+                                    taxLabel='Healthcare topics'
+                                    renderFor='training-programme-summary'/>
                             </#if>
 
                             <#--  Discipline  -->
                             <#if document.globalTaxonomyClinicalDiscipline?? && document.globalTaxonomyClinicalDiscipline.taxonomyValues?has_content>
-                                <@programmeSummaryRow rowTitle="Clinical discipline">
-                                    <#--  The following block can be used when training listing page is available  -->
-                                    <#--  <a class="hee-card--summary__item__link" href="${trainingListingPageURL}?discipline=${document.discipline}">
-                                        ${clinicalDiscipline}
-                                    </a>  -->
-                                    <#list document.globalTaxonomyClinicalDiscipline.taxonomyValues as category>
-                                        ${category.label}<#sep>, </#sep>
-                                    </#list>
-                                </@programmeSummaryRow>
+                                <@taxonomyInfo
+                                    taxClass=document.globalTaxonomyClinicalDiscipline!
+                                    collectionPageURL=trainingProgrammeListingPageURL
+                                    taxLabel='Clinical discipline'
+                                    renderFor='training-programme-summary'/>
                             </#if>
 
                             <#--  Recruitment format  -->
@@ -169,7 +156,7 @@
                     </div>
 
                     <#if currentGuidance??>
-                        <h2  class="toc_h2" id="overview">${currentGuidance.title}</h2>
+                        <h2 class="toc_h2" id="overview">${currentGuidance.title}</h2>
 
                         <#--  Guidance content: START  -->
                         <@hee.guidanceDetail guidanceDocument=currentGuidance/>
@@ -266,7 +253,7 @@
                         </#if>
                     </#if>
                     <#if isOverview>
-                        <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
+                        <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview!/>
                     </#if>
                 </div>
             </div>

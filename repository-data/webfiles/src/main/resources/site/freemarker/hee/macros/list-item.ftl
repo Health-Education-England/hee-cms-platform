@@ -517,7 +517,7 @@
 </#macro>
 
 <#--  Lists training programme result items  -->
-<#macro trainingListItem items trainingListingPageURL>
+<#macro trainingListItem items trainingProgrammeListingPageURL>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
@@ -541,9 +541,9 @@
                         <@fmt.message key="profession.label" var="professionLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyProfessions!
-                            collectionPageURL=trainingListingPageURL
+                            collectionPageURL=trainingProgrammeListingPageURL
                             taxLabel=professionLabel
-                            renderFor='trainingProgrammeCollection'/>
+                            renderFor='training-programme-collection'/>
                     </#if>
 
                     <#--  Topics  -->
@@ -551,9 +551,9 @@
                         <@fmt.message key="topic.label" var="topicLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyHealthcareTopics!
-                            collectionPageURL=trainingListingPageURL
+                            collectionPageURL=trainingProgrammeListingPageURL
                             taxLabel=topicLabel
-                            renderFor='trainingProgrammeCollection'/>
+                            renderFor='training-programme-collection'/>
                     </#if>
 
                     <#--  Clinical discipline  -->
@@ -561,9 +561,9 @@
                         <@fmt.message key="clinical_discipline.label" var="clinicalDisciplineLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyClinicalDiscipline!
-                            collectionPageURL=trainingListingPageURL
+                            collectionPageURL=trainingProgrammeListingPageURL
                             taxLabel=clinicalDisciplineLabel
-                            renderFor='trainingProgrammeCollection'/>
+                            renderFor='training-programme-collection'/>
                     </#if>
 
                     <#--  Training type  -->
@@ -571,9 +571,9 @@
                         <@fmt.message key="training_type.label" var="trainingTypeLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyTrainingType!
-                            collectionPageURL=trainingListingPageURL
+                            collectionPageURL=trainingProgrammeListingPageURL
                             taxLabel=trainingTypeLabel
-                            renderFor='trainingProgrammeCollection'/>
+                            renderFor='training-programme-collection'/>
                     </#if>
 
                     <#--  Duration  -->
