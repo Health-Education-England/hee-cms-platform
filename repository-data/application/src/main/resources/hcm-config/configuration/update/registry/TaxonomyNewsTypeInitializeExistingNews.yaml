@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/TaxonomyNewsTypeInitializeExistingNews:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: It will initialized the existing Page, the new taxonomy
+        value 'News Type' to 'News'
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:news)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport\
+        \ javax.jcr.Node\r\nimport javax.jcr.RepositoryException\r\nimport javax.jcr.Session\r\
+        \nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport org.onehippo.taxonomy.plugin.TaxonomyClassificationDao\r\
+        \n\r\nclass TaxonomyNewsTypeInitializeExistingNews extends BaseNodeUpdateVisitor\
+        \ {\r\n\r\n\r\n  boolean doUpdate(Node node) {\r\n    \r\n    log.debug \"\
+        Updating node ${node.path}\"\r\n    \r\n    node.setProperty(\"hee:globalTaxonomyNewsType\"\
+        , [\"news\"] as String[])\r\n    node.setProperty(\"hee:globalTaxonomyNewsType\"\
+        \ + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX,\r\n        \
+        \            [\"news\"] as String[])\r\n\r\n\r\n    log.debug \"Taxonomy migration\
+        \ has been completed for '${node.path}'\"    \r\n    return false\r\n  }\r\
+        \n\r\n  boolean undoUpdate(Node node) {\r\n    throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n  }\r\n\r\n}"
+      hipposys:throttle: 1000
