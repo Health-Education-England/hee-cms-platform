@@ -125,6 +125,9 @@
                             <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
                                 <@hee.expander expander=block/>
                                 <#break>
+                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
+                                <@hee.featuredContent block=block/>
+                                <#break>
                             <#default>
                         </#switch>
                     </#list>
@@ -132,15 +135,6 @@
 
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
-
-                    <#list document.contentBlocks as block>
-                        <#switch block.getClass().getName()>
-                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
-                                <@hee.featuredContent block=block/>
-                                <#break>
-                            <#default>
-                        </#switch>
-                    </#list>
 
                     <#-- Last & next reviewed dates -->
                     <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
