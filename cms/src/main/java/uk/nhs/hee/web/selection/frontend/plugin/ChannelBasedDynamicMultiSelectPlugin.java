@@ -49,6 +49,7 @@ import org.hippoecm.frontend.types.IFieldDescriptor;
 import org.hippoecm.frontend.validation.IValidationResult;
 import org.hippoecm.frontend.validation.ValidatorUtils;
 import org.hippoecm.frontend.validation.ViolationUtils;
+import org.onehippo.cms.channelmanager.content.plugin.NotIgnoredFieldPlugin;
 import org.onehippo.forge.selection.frontend.model.ValueList;
 import org.onehippo.forge.selection.frontend.plugin.Config;
 import org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin;
@@ -81,7 +82,7 @@ import static org.hippoecm.frontend.validation.ViolationUtils.getFirstFieldViola
  * <p>Falls back to value-list provided by 'source' plugin config (if any) in case
  * if a {@link IValueListNameProvider} isn't configured.</p>
  */
-public class ChannelBasedDynamicMultiSelectPlugin extends RenderPlugin {
+public class ChannelBasedDynamicMultiSelectPlugin extends RenderPlugin implements NotIgnoredFieldPlugin {
 
     /**
      * Document path REGEX pattern
