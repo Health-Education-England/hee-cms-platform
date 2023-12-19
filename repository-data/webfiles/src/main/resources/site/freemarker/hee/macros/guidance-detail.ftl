@@ -7,6 +7,13 @@
         <p class="nhsuk-lede-text"><@hst.html formattedText="${guidanceDocument.summary!?replace('\n', '<br>')}"/></p>
     </#if>
 
+    <#--  TOC section: START  -->
+        <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js="true" data-headings>
+            <h2 data-anchorlinksignore="true">Table of Contents</h2>
+        </div>
+    <#--  TOC section: END  -->
+
+
     <#--  Main content blocks: START  -->
     <#if guidanceDocument.contentBlocks??>
         <#list guidanceDocument.contentBlocks as block>
@@ -82,6 +89,10 @@
                     <#break>
                 <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
                     <@hee.featuredContent block=block/>
+                    <#break>
+                <#case "uk.nhs.hee.web.beans.HeadingsTOC">
+                    <@hee.headingsTOC block=block/>
+                    <#assign isTOCHeading=true>
                     <#break>
                 <#default>
             </#switch>
