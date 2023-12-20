@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="<@hst.webfile path='/css/nhsuk-7.0.0.min.css'/>" type="text/css"/>
     <link rel="stylesheet" href="<@hst.webfile path='/css/hee.min.css'/>" type="text/css"/>
+    <link rel="stylesheet" href="<@hst.webfile path='/css/nhse-global-menu.min.css'/>" type="text/css"/>
     <#if hstRequest.requestContext.channelManagerPreviewRequest>
       <link rel="stylesheet" href="<@hst.webfile  path="/css/cms-request.css"/>" type="text/css"/>
     </#if>
@@ -42,6 +43,8 @@
     <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
 
     <@hst.headContributions categoryIncludes="gtmNoScript" xhtml=true/>
+
+    <@hst.include ref="global-header"/>
 
     <#--  Rendered below cookie consent, above header  -->
     <@hst.include ref="announcement-banner"/>

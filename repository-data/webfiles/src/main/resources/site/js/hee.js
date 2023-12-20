@@ -1463,6 +1463,15 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
         this.setUpdatedFlag(true);
         var parentGroup = evt.target.closest('.nhsuk-filter__group');
         this.updateActiveCount(parentGroup);
+
+        // Check whether select dropdown has child filter and reset that too.
+        if (parentGroup.classList.contains('has-subgroup') && evt.target.nodeName === 'SELECT') {
+          var wrapper = evt.target.closest('.parent-group');
+          if (wrapper) {
+            var childSelect = wrapper.nextElementSibling.querySelector('.sub-group select');
+            childSelect.selectedIndex = 0;
+          }
+        }
         this.container.submit();
       }
     }, {
