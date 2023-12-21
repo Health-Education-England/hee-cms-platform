@@ -1,0 +1,16 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:queries/hippo:templates/new-not-found-folder:
+      jcr:primaryType: hippostd:templatequery
+      hippostd:modify: [./_name, $name, './hippotranslation:id', $uuid, './hippotranslation:locale',
+        $inherited]
+      jcr:language: xpath
+      jcr:statement: /jcr:root/hippo:configuration/hippo:queries/hippo:templates/new-not-found-folder/hippostd:templates/node()
+      /hippostd:templates:
+        jcr:primaryType: hippostd:templates
+        /hippostd:folder:
+          jcr:primaryType: hippostd:folder
+          jcr:mixinTypes: ['hippotranslation:translated']
+          hippostd:foldertype: [new-not-found-document, new-not-found-folder]
+          hippotranslation:id: 31d00127-0bfa-4f08-b831-518e31c66813
+          hippotranslation:locale: inherited locale
