@@ -20,7 +20,7 @@ definitions:
         , [\"news\"] as String[])\r\n    node.setProperty(\"hee:globalTaxonomyNewsType\"\
         \ + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX,\r\n        \
         \            [\"news\"] as String[])\r\n\r\n\r\n    log.debug \"Taxonomy migration\
-        \ has been completed for '${node.path}'\"    \r\n    return false\r\n  }\r\
+        \ has been completed for '${node.path}'\"    \r\n    return true\r\n  }\r\
         \n\r\n  boolean undoUpdate(Node node) {\r\n    throw new UnsupportedOperationException('Updater\
         \ does not implement undoUpdate method')\r\n  }\r\n\r\n}"
       hipposys:throttle: 1000
