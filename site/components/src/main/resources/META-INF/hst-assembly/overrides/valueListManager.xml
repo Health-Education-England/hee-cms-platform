@@ -19,12 +19,6 @@
   <bean id="org.onehippo.forge.selection.hst.manager.ValueListManager" class="org.onehippo.forge.selection.hst.manager.DefaultValueListManager">
     <constructor-arg>
       <map>
-        <!-- Bulletin categories -->
-        <entry key="bulletinCategories" value="/content/documents/administration/valuelists/lks/bulletincategories"/>
-
-        <!-- Delete the other (above) 'bulletinCategories' entry and uncomment the following during KLS rebuid channel launch -->
-        <!-- <entry key="bulletinCategories" value="/content/documents/administration/valuelists/kls/bulletincategories"/> -->
-
         <!-- Case study valuelists -->
         <entry key="caseStudyImpactTypes" value="/content/documents/administration/valuelists/lks/casestudyimpacttypes"/>
         <entry key="caseStudyImpactGroups" value="/content/documents/administration/valuelists/lks/casestudyimpactgroups"/>

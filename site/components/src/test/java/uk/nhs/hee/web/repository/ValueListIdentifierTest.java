@@ -10,7 +10,6 @@ public class ValueListIdentifierTest {
     public void valueListIdentifiers() {
         // Verify
         assertThat(ValueListIdentifier.BLOG_CATEGORIES.getName()).isEqualTo("blogCategories");
-        assertThat(ValueListIdentifier.BULLETIN_CATEGORIES.getName()).isEqualTo("bulletinCategories");
         assertThat(ValueListIdentifier.CASE_STUDY_IMPACT_GROUPS.getName()).isEqualTo("caseStudyImpactGroups");
         assertThat(ValueListIdentifier.CASE_STUDY_IMPACT_TYPES.getName()).isEqualTo("caseStudyImpactTypes");
         assertThat(ValueListIdentifier.CASE_STUDY_SECTORS.getName()).isEqualTo("caseStudySectors");
