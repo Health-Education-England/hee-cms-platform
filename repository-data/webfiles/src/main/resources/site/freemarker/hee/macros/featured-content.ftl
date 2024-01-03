@@ -39,7 +39,7 @@
 
                                     <#--  Publication date  -->
                                     <#if featuredDoc.publicationDate??>
-                                        <@itemDetailRow label="Publish date:">
+                                        <@itemDetailRow label="Published date:">
                                             ${getDefaultFormattedDate(featuredDoc.publicationDate)}
                                         </@itemDetailRow>
                                     </#if>
