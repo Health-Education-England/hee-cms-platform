@@ -1,0 +1,35 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateMedicalDoctors:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Change the keys and value from 'medical_doctors' to 'medical_professionals'
+        from Professions Taxonomy
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, nt:base)/..[@jcr:primaryType
+        = 'hee:publicationLandingPage' or @jcr:primaryType = 'hee:news' or @jcr:primaryType
+        = 'hee:blogPost'][jcr:contains(., 'medical_doctors')]
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport\
+        \ javax.jcr.Node\r\nimport javax.jcr.RepositoryException\r\nimport javax.jcr.Session\r\
+        \nimport org.hippoecm.repository.util.JcrUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \nimport org.onehippo.taxonomy.plugin.TaxonomyClassificationDao\r\nimport\
+        \ org.onehippo.taxonomy.plugin.api.TaxonomyFieldTypeUtils\r\n\r\nclass UpdateMedicalDoctors\
+        \ extends BaseNodeUpdateVisitor {\r\n\r\n\r\n  boolean doUpdate(Node node)\
+        \ {\r\n    \r\n    log.debug \"Updating node ${node.path}\"\r\n\t\r\n    List<String>\
+        \ values = JcrUtils.getStringListProperty(node, 'hee:globalTaxonomyProfessions',\
+        \ Collections.emptyList())\r\n\t\r\n\tvalues += 'medical_professionals'\r\n\
+        \tvalues -= 'medical_doctors'\r\n\t\r\n\tSet<String> taxonomyWithAncestorKeys=\
+        \ TaxonomyFieldTypeUtils.getAncestorKeys(values,\r\n                    TaxonomyFieldTypeUtils.getTaxonomyNode('GlobalProfessions',\
+        \ node.getSession()))\r\n    \r\n    node.setProperty(\"hee:globalTaxonomyProfessions\"\
+        , values as String[])\r\n    node.setProperty(\"hee:globalTaxonomyProfessions\"\
+        \ + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX,\r\n        \
+        \            taxonomyWithAncestorKeys as String[])\r\n\t\r\n\r\n\r\n\r\n \
+        \   log.debug \"Taxonomy migration has been completed for '${node.path}'\"\
+        \    \r\n    return true\r\n  }\r\n\r\n  boolean undoUpdate(Node node) {\r\
+        \n    throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n  }\r\n\r\n}"
+      hipposys:throttle: 1000
