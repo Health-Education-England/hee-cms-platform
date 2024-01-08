@@ -45,7 +45,7 @@ jobs:
  
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]    
-    needs: [buildAndTest, deploy-to-dev]
+    needs: [buildAndTest]
     environment: test
 
     env:
