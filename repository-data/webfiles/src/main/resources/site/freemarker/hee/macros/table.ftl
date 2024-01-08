@@ -29,7 +29,7 @@
                         <#list row as cell>
                             <td role="cell" class="nhsuk-table__cell">
                                 <span class="nhsuk-table-responsive__heading">${tableData.getHeaderAt(cell?index)}</span>
-                                ${cell}
+                                    <div class="nhsuk-table__cell__container">${cell}</div>
                             </td>
                         </#list>
                     </tr>
