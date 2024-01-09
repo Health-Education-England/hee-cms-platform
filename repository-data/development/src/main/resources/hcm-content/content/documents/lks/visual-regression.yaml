@@ -4491,100 +4491,6 @@
     hippostd:foldertype: [new-translated-folder, new-document]
     hippotranslation:id: 3d2912bc-573e-4e75-8922-20187e4ad4ea
     hippotranslation:locale: en
-    /vr-bulletin-collection-page:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
-      hippo:name: '[VR] Bulletin collection page'
-      hippo:versionHistory: ac827742-5a89-4702-adaf-3b71a5ef4cc7
-      /vr-bulletin-collection-page[1]:
-        jcr:primaryType: hee:listingPage
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 7efd5daa-4308-49cc-8744-4a9b6680451e
-        hee:addToAZ: false
-        hee:documentTypes: []
-        hee:listingPageType: bulletin
-        hee:pageSize: 5
-        hee:summary: Cras mattis iudicium purus sit amet fermentum. Quo usque tandem
-          abutere, Catilina, patientia nostra?
-        hee:title: '[VR] A-Z Bulletin collection page'
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2023-06-26T13:14:11.012+05:30
-        hippostdpubwf:lastModificationDate: 2023-06-26T16:37:14.853+05:30
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: d5f48009-ab5e-4794-9027-69f6804904ff
-        hippotranslation:locale: en
-        /hee:logoGroup:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
-        /hee:microHero:
-          jcr:primaryType: hippogallerypicker:imagelink
-          hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
-          hippo:facets: []
-          hippo:modes: []
-          hippo:values: []
-      /vr-bulletin-collection-page[2]:
-        jcr:primaryType: hee:listingPage
-        jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-        jcr:uuid: 2deea17f-237e-465e-b600-d4872a7f51c5
-        hee:addToAZ: false
-        hee:documentTypes: []
-        hee:listingPageType: bulletin
-        hee:pageSize: 5
-        hee:summary: Cras mattis iudicium purus sit amet fermentum. Quo usque tandem
-          abutere, Catilina, patientia nostra?
-        hee:title: '[VR] A-Z Bulletin collection page'
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2023-06-26T13:14:11.012+05:30
-        hippostdpubwf:lastModificationDate: 2023-06-26T16:37:19.848+05:30
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: d5f48009-ab5e-4794-9027-69f6804904ff
-        hippotranslation:locale: en
-        /hee:logoGroup:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
-        /hee:microHero:
-          jcr:primaryType: hippogallerypicker:imagelink
-          hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
-          hippo:facets: []
-          hippo:modes: []
-          hippo:values: []
-      /vr-bulletin-collection-page[3]:
-        jcr:primaryType: hee:listingPage
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 4d44baca-6338-4d60-85b8-cdd329026e1b
-        hee:addToAZ: false
-        hee:documentTypes: []
-        hee:listingPageType: bulletin
-        hee:pageSize: 5
-        hee:summary: Cras mattis iudicium purus sit amet fermentum. Quo usque tandem
-          abutere, Catilina, patientia nostra?
-        hee:title: '[VR] A-Z Bulletin collection page'
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2023-06-26T13:14:11.012+05:30
-        hippostdpubwf:lastModificationDate: 2023-06-26T16:37:19.848+05:30
-        hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2023-06-26T16:37:21.375+05:30
-        hippotranslation:id: d5f48009-ab5e-4794-9027-69f6804904ff
-        hippotranslation:locale: en
-        /hee:logoGroup:
-          jcr:primaryType: hippo:mirror
-          hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
-        /hee:microHero:
-          jcr:primaryType: hippogallerypicker:imagelink
-          hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
-          hippo:facets: []
-          hippo:modes: []
-          hippo:values: []
     /vr-blog-post-collection-page:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -5219,8 +5125,8 @@
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: a4633c32-b498-4c75-a56c-4faea7ba9e77
         hee:addToAZ: false
-        hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',
-          'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+        hee:documentTypes: ['hee:blogPost', 'hee:caseStudy', 'hee:event', 'hee:landingPage',
+          'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
           'hee:searchBank', 'hee:guidance']
         hee:listingPageType: search
         hee:pageSize: 10
@@ -5250,8 +5156,8 @@
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 2bff9de3-a7bc-4a69-b040-ca0221a314a6
         hee:addToAZ: false
-        hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',
-          'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+        hee:documentTypes: ['hee:blogPost', 'hee:caseStudy', 'hee:event', 'hee:landingPage',
+          'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
           'hee:searchBank', 'hee:guidance']
         hee:listingPageType: search
         hee:pageSize: 10
@@ -5281,8 +5187,8 @@
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 39405acd-7070-4df8-8349-64e6cf20c627
         hee:addToAZ: false
-        hee:documentTypes: ['hee:blogPost', 'hee:bulletin', 'hee:caseStudy', 'hee:event',
-          'hee:landingPage', 'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
+        hee:documentTypes: ['hee:blogPost', 'hee:caseStudy', 'hee:event', 'hee:landingPage',
+          'hee:listingPage', 'hee:MiniHub', 'hee:news', 'hee:publicationLandingPage',
           'hee:searchBank', 'hee:guidance']
         hee:listingPageType: search
         hee:pageSize: 10

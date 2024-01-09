@@ -1,5 +1,4 @@
 /content/documents/lks/common:
-  .meta:order-before: bulletins
   jcr:primaryType: hippostd:folder
   jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
   jcr:uuid: bace2536-0ecc-4fde-b30e-2947e5e29300
@@ -1219,94 +1218,6 @@
           hippo:facets: []
           hippo:modes: []
           hippo:values: []
-    /bulletins:
-      jcr:primaryType: hippo:handle
-      jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-      jcr:uuid: 600320ec-ddf0-4a29-b76b-1250c598a907
-      hippo:name: Bulletins
-      hippo:versionHistory: c953e4e6-7d4c-4bcd-8a9b-0ac513f41606
-      /bulletins[1]:
-        jcr:primaryType: hee:ContentCard
-        jcr:mixinTypes: ['mix:versionable']
-        jcr:uuid: 9d2701de-dff7-4888-bbcc-365b6900b364
-        hee:description: Guidance on finding evidence sources from external sites.
-        hippo:availability: [preview]
-        hippostd:retainable: false
-        hippostd:state: unpublished
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:01.155+07:00
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 1405d377-7eb1-4ba2-9913-927fce025d02
-        hippotranslation:locale: en
-        /hee:header:
-          jcr:primaryType: hee:link
-          hee:text: Bulletins
-          hee:url: https://www.hee.nhs.uk
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /bulletins[2]:
-        jcr:primaryType: hee:ContentCard
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 5ee645e8-8ffe-452f-9a4e-86688e9e7fe5
-        hee:description: Guidance on finding evidence sources from external sites.
-        hippo:availability: []
-        hippostd:retainable: false
-        hippostd:state: draft
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-        hippostdpubwf:lastModificationDate: 2021-02-26T09:20:59.043+07:00
-        hippostdpubwf:lastModifiedBy: admin
-        hippotranslation:id: 1405d377-7eb1-4ba2-9913-927fce025d02
-        hippotranslation:locale: en
-        /hee:header:
-          jcr:primaryType: hee:link
-          hee:text: Bulletins
-          hee:url: https://www.hee.nhs.uk
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-      /bulletins[3]:
-        jcr:primaryType: hee:ContentCard
-        jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 804558de-5e89-4d3c-b9c9-326b2dafe23d
-        hee:description: Guidance on finding evidence sources from external sites.
-        hippo:availability: [live]
-        hippostd:retainable: false
-        hippostd:state: published
-        hippostdpubwf:createdBy: admin
-        hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-        hippostdpubwf:lastModificationDate: 2021-02-26T09:21:01.155+07:00
-        hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2021-02-26T09:21:02.789+07:00
-        hippotranslation:id: 1405d377-7eb1-4ba2-9913-927fce025d02
-        hippotranslation:locale: en
-        /hee:header:
-          jcr:primaryType: hee:link
-          hee:text: Bulletins
-          hee:url: https://www.hee.nhs.uk
-          hippostdpubwf:createdBy: ''
-          hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-          hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-          hippostdpubwf:lastModifiedBy: ''
-          hippotranslation:id: document-type-locale-id
-          hippotranslation:locale: document-type-locale
-          /hee:document:
-            jcr:primaryType: hippo:mirror
-            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
     /adapting-the-workplace:
       jcr:primaryType: hippo:handle
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -1423,7 +1334,7 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 1ddf2ba1-3fa3-432e-b6fa-52ec8bbd6f93
-        hee:description: Finding the latest evidence through bulletins, literature
+        hee:description: Finding the latest evidence through literature
           searching, using trusted sources like OpenAthens and collaboration.
         hippo:availability: []
         hippostd:retainable: false
@@ -1457,7 +1368,7 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 1c1bde78-cc95-431c-b627-f5e3bffc610c
-        hee:description: Finding the latest evidence through bulletins, literature
+        hee:description: Finding the latest evidence through literature
           searching, using trusted sources like OpenAthens and collaboration.
         hippo:availability: [preview]
         hippostd:retainable: false
@@ -1491,7 +1402,7 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 8937ee92-7163-42f4-97c9-b1eef12d698c
-        hee:description: Finding the latest evidence through bulletins, literature
+        hee:description: Finding the latest evidence through literature
           searching, using trusted sources like OpenAthens and collaboration.
         hippo:availability: [live]
         hippostd:retainable: false
@@ -1532,7 +1443,7 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: eb9bccb0-f4f0-4d2a-ab9b-e3b8c7d85660
-        hee:description: Finding the latest evidence through bulletins, literature
+        hee:description: Finding the latest evidence through literature
           searching, using trusted sources like OpenAthens and collaboration.
         hippo:availability: []
         hippostd:retainable: false
@@ -1566,7 +1477,7 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: ee818cd8-6c0a-4809-9811-3f8282f3b672
-        hee:description: Finding the latest evidence through bulletins, literature
+        hee:description: Finding the latest evidence through literature
           searching, using trusted sources like OpenAthens and collaboration.
         hippo:availability: [preview]
         hippostd:retainable: false
@@ -1600,7 +1511,7 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: ab1c2a59-8723-4f45-919b-07cba8e2a26b
-        hee:description: Finding the latest evidence through bulletins, literature
+        hee:description: Finding the latest evidence through literature
           searching, using trusted sources like OpenAthens and collaboration.
         hippo:availability: [live]
         hippostd:retainable: false
@@ -2652,97 +2563,6 @@
         jcr:uuid: b56c172a-d524-408a-91da-5f5046dc6e80
         hippo:name: Collection & listing page cards
         hippostd:foldertype: [new-document, new-folder]
-        /vr-bulletin-collection-page:
-          jcr:primaryType: hippo:handle
-          jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-          jcr:uuid: 11dbb4d5-0afb-4c4a-8625-ce8be4cd8650
-          hippo:name: '[VR] Bulletin collection page'
-          hippo:versionHistory: 4f7bb490-f71d-452f-bcf6-3630e543fef2
-          /vr-bulletin-collection-page[1]:
-            jcr:primaryType: hee:ContentCard
-            jcr:mixinTypes: ['mix:versionable']
-            jcr:uuid: 44277540-24ff-4329-874c-cd359b2ce26d
-            hee:description: 'Visual regression: Bulletin collection page'
-            hippo:availability: [preview]
-            hippostd:retainable: false
-            hippostd:state: unpublished
-            hippostdpubwf:createdBy: admin
-            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-            hippostdpubwf:lastModificationDate: 2023-06-26T13:23:52.221+05:30
-            hippostdpubwf:lastModifiedBy: admin
-            hippotranslation:id: 917e2d15-d781-427d-8036-9c149a9fb6c5
-            hippotranslation:locale: en
-            /hee:header:
-              jcr:primaryType: hee:link
-              hee:openLinkUrlNewWindow: false
-              hee:text: '[VR] Bulletin collection page'
-              hee:url: ''
-              hippostdpubwf:createdBy: ''
-              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-              hippostdpubwf:lastModifiedBy: ''
-              hippotranslation:id: document-type-locale-id
-              hippotranslation:locale: document-type-locale
-              /hee:document:
-                jcr:primaryType: hippo:mirror
-                hippo:docbase: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
-          /vr-bulletin-collection-page[2]:
-            jcr:primaryType: hee:ContentCard
-            jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: 0b0c2744-39ed-4734-9555-9ff9555f2893
-            hee:description: 'Visual regression: Bulletin collection page'
-            hippo:availability: []
-            hippostd:retainable: false
-            hippostd:state: draft
-            hippostdpubwf:createdBy: admin
-            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-            hippostdpubwf:lastModificationDate: 2023-06-26T13:23:04.544+05:30
-            hippostdpubwf:lastModifiedBy: admin
-            hippotranslation:id: 917e2d15-d781-427d-8036-9c149a9fb6c5
-            hippotranslation:locale: en
-            /hee:header:
-              jcr:primaryType: hee:link
-              hee:openLinkUrlNewWindow: false
-              hee:text: '[VR] Bulletin collection page'
-              hee:url: ''
-              hippostdpubwf:createdBy: ''
-              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-              hippostdpubwf:lastModifiedBy: ''
-              hippotranslation:id: document-type-locale-id
-              hippotranslation:locale: document-type-locale
-              /hee:document:
-                jcr:primaryType: hippo:mirror
-                hippo:docbase: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
-          /vr-bulletin-collection-page[3]:
-            jcr:primaryType: hee:ContentCard
-            jcr:mixinTypes: ['mix:referenceable']
-            jcr:uuid: d40603b2-0ba3-4196-b4f6-00bbd27df433
-            hee:description: 'Visual regression: Bulletin collection page'
-            hippo:availability: [live]
-            hippostd:retainable: false
-            hippostd:state: published
-            hippostdpubwf:createdBy: admin
-            hippostdpubwf:creationDate: 2021-02-25T15:35:51.787+07:00
-            hippostdpubwf:lastModificationDate: 2023-06-26T13:23:52.221+05:30
-            hippostdpubwf:lastModifiedBy: admin
-            hippostdpubwf:publicationDate: 2023-06-26T15:39:39.800+05:30
-            hippotranslation:id: 917e2d15-d781-427d-8036-9c149a9fb6c5
-            hippotranslation:locale: en
-            /hee:header:
-              jcr:primaryType: hee:link
-              hee:openLinkUrlNewWindow: false
-              hee:text: '[VR] Bulletin collection page'
-              hee:url: ''
-              hippostdpubwf:createdBy: ''
-              hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
-              hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
-              hippostdpubwf:lastModifiedBy: ''
-              hippotranslation:id: document-type-locale-id
-              hippotranslation:locale: document-type-locale
-              /hee:document:
-                jcr:primaryType: hippo:mirror
-                hippo:docbase: 2b8f3f81-419a-44d7-987d-3f1fe21bfb0d
         /vr-blog-post-collection-page:
           jcr:primaryType: hippo:handle
           jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']

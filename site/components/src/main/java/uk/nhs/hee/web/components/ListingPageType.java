@@ -49,20 +49,6 @@ public enum ListingPageType {
     ),
 
     /**
-     * Bulletin listing
-     */
-    BULLETIN_LISTING(
-            "bulletin",
-            new String[]{"hee:bulletin"},
-            Boolean.TRUE,
-            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
-            ValueListIdentifier.BULLETIN_CATEGORIES.getName(),
-            Boolean.FALSE,
-            StringUtils.EMPTY,
-            Collections.emptyList()
-    ),
-
-    /**
      * Case study listing
      */
     CASE_STUDY_LISTING(
