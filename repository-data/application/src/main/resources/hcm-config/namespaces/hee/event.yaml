@@ -11,10 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 03e260d7-21e5-4c15-9997-84627edc96e0
+          jcr:uuid: c97a51fc-eb77-449d-b6f0-230c4f5cfbf9
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-professions-or-topics-validator',
+            'hee:open-close-datetime-validator', 'hee:mandatory-booking-link-or-email-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -58,7 +60,7 @@ definitions:
             hipposysedit:path: hee:bookingEmail
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [email]
+            hipposysedit:validators: ['hee:optional-email-validator']
           /bookingLink:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -67,7 +69,7 @@ definitions:
             hipposysedit:path: hee:bookingLink
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [url]
+            hipposysedit:validators: ['hee:optional-url-validator']
           /date:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -144,7 +146,7 @@ definitions:
             hipposysedit:path: hee:officialEventWebsite
             hipposysedit:primary: false
             hipposysedit:type: String
-            hipposysedit:validators: [url]
+            hipposysedit:validators: ['hee:optional-url-validator']
           /contentBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -166,7 +168,7 @@ definitions:
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
           hee:location: ''
-          jcr:uuid: 5d75046e-83d0-4984-8124-3f5b2c771bb2
+          jcr:uuid: cfdf72d6-83e4-4a7f-bfaa-fa53ee3d3722
           hippostdpubwf:lastModificationDate: 2021-05-18T11:53:12.350+01:00
           hippostdpubwf:creationDate: 2021-05-18T11:53:12.350+01:00
           hee:bookingLink: ''
