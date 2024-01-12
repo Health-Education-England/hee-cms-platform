@@ -40,16 +40,6 @@ public enum ListingFilter {
     ),
 
     /**
-     * {@code Recruitment format} taxonomy filter.
-     */
-    RECRUITMENT_FORMAT(
-            HEEField.GLOBAL_TAXONOMY_RECRUITMENT_FORMAT_WITH_ANCESTORS,
-            HEETaxonomy.HEE_GLOBAL_RECRUITMENT_FORMAT,
-            Boolean.TRUE,
-            "recruitmentFormat"
-    ),
-
-    /**
      * {@code Tag} taxonomy filter.
      */
     TAG(

@@ -524,13 +524,7 @@
         <#assign pageURL=getInternalLinkURL(item)>
 
         <#if pageURL != pageNotFoundURL>
-            <div class="hee-listing-item${(item.cardImage??)?then(' has-image', '')}">
-                <#--  Card image  -->
-                <#if item.cardImage??>
-                    <@hst.link var="cardImgLink" hippobean=item.cardImage/>
-                    <div class="hee-listing-item__image" style="background-image:url('${cardImgLink}');"></div>
-                </#if>
-
+            <div class="hee-listing-item">
                 <#--  Title  -->
                 <h3><a href="${pageURL}">${item.title}</a></h3>
 
@@ -583,13 +577,16 @@
                             ${item.duration}
                         </@listItemRow>
                     </#if>
+
+                    <#--  Recruitment format  -->
+                    <#if item.globalRecruitmentFormat?? && item.globalRecruitmentFormat.taxonomyValues?has_content>
+                        <@fmt.message key="recruitment_format.label" var="recruitmentFormatLabel"/>
+                        <@listItemRow key="${recruitmentFormatLabel}">
+                            ${item.globalRecruitmentFormat.taxonomyValues[0].label}
+                        </@listItemRow>
+                    </#if>
                 </div>
                 <#--  Training details: END   -->
-
-                <#--  Summary  -->
-                <div class="hee-listing-item__summary">
-                    <@hst.html formattedText="${item.summary!?replace('\n', '<br>')}"/>
-                </div>
             </div>
         </#if>
     </#list>

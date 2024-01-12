@@ -27,9 +27,6 @@ public class HEEFieldTest {
         assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()).isEqualTo("hee:globalTaxonomyPublicationType");
         assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE_WITH_ANCESTORS.getName())
                 .isEqualTo("hee:globalTaxonomyPublicationType__with_ancestors");
-        assertThat(HEEField.GLOBAL_TAXONOMY_RECRUITMENT_FORMAT.getName()).isEqualTo("hee:globalRecruitmentFormat");
-        assertThat(HEEField.GLOBAL_TAXONOMY_RECRUITMENT_FORMAT_WITH_ANCESTORS.getName())
-                .isEqualTo("hee:globalRecruitmentFormat__with_ancestors");
         assertThat(HEEField.GLOBAL_TAXONOMY_TRAINING_TYPE.getName()).isEqualTo("hee:globalTaxonomyTrainingType");
         assertThat(HEEField.GLOBAL_TAXONOMY_TRAINING_TYPE_WITH_ANCESTORS.getName())
                 .isEqualTo("hee:globalTaxonomyTrainingType__with_ancestors");

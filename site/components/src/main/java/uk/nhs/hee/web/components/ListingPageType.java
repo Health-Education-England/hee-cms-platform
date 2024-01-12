@@ -166,11 +166,10 @@ public enum ListingPageType {
             Boolean.FALSE,
             "trainingprogrammefacets",
             List.of(
-                    ListingFilter.TRAINING_TYPE,
                     ListingFilter.PROFESSION,
                     ListingFilter.TOPIC,
                     ListingFilter.CLINICAL_DISCIPLINE,
-                    ListingFilter.RECRUITMENT_FORMAT
+                    ListingFilter.TRAINING_TYPE
             ));
 
 

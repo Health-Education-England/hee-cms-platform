@@ -163,11 +163,10 @@ public class ListingPageTypeTest {
         assertThat(trainingtrainingProgrammeListingListing.isChannelSpecificValueListIdentifier()).isFalse();
         assertThat(trainingtrainingProgrammeListingListing.getRelativeFacetPath()).isEqualTo("trainingprogrammefacets");
         assertThat(trainingtrainingProgrammeListingListing.getListingFilters()).containsExactly(
-                ListingFilter.TRAINING_TYPE,
                 ListingFilter.PROFESSION,
                 ListingFilter.TOPIC,
                 ListingFilter.CLINICAL_DISCIPLINE,
-                ListingFilter.RECRUITMENT_FORMAT
+                ListingFilter.TRAINING_TYPE
         );
     }
 
