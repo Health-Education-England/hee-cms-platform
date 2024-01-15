@@ -7,91 +7,6 @@
   hippostd:foldertype: [new-listing-document]
   hippotranslation:id: d7193be7-d74a-43fc-9c03-95775a2f35fe
   hippotranslation:locale: en
-  /bulletins:
-    jcr:primaryType: hippo:handle
-    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-    jcr:uuid: f426252f-bc13-45b3-975d-c4735c722333
-    hippo:name: Bulletins
-    hippo:versionHistory: 746e7695-18c1-4b0a-b9d4-6f2b17d80b86
-    /bulletins[1]:
-      jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 11868121-bc83-44fb-ae45-4764668ff356
-      hee:documentTypes: []
-      hee:listingPageType: bulletin
-      hee:pageSize: 2
-      hee:path: ''
-      hee:summary: Find current awareness from our libraries and trusts across the
-        NHS.
-      hee:title: Bulletins
-      hippo:availability: []
-      hippostd:retainable: false
-      hippostd:state: draft
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T01:01:02.340Z
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
-      hippotranslation:locale: en
-      /hee:heroImage:
-        jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        hippo:facets: []
-        hippo:modes: []
-        hippo:values: []
-    /bulletins[2]:
-      jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
-      jcr:uuid: 401ac712-a209-4a70-bbfc-376fb1b10682
-      hee:documentTypes: []
-      hee:listingPageType: bulletin
-      hee:pageSize: 2
-      hee:path: ''
-      hee:summary: Find current awareness from our libraries and trusts across the
-        NHS.
-      hee:title: Bulletins
-      hippo:availability: [preview]
-      hippostd:retainable: false
-      hippostd:state: unpublished
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T01:01:06.780Z
-      hippostdpubwf:lastModifiedBy: admin
-      hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
-      hippotranslation:locale: en
-      /hee:heroImage:
-        jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        hippo:facets: []
-        hippo:modes: []
-        hippo:values: []
-    /bulletins[3]:
-      jcr:primaryType: hee:listingPage
-      jcr:mixinTypes: ['mix:referenceable']
-      jcr:uuid: 945b5dd0-be7b-441d-b198-d46b6e34e2e4
-      hee:documentTypes: []
-      hee:listingPageType: bulletin
-      hee:pageSize: 2
-      hee:path: ''
-      hee:summary: Find current awareness from our libraries and trusts across the
-        NHS.
-      hee:title: Bulletins
-      hippo:availability: [live]
-      hippostd:retainable: false
-      hippostd:state: published
-      hippostdpubwf:createdBy: admin
-      hippostdpubwf:creationDate: 2021-03-30T16:41:15.087+07:00
-      hippostdpubwf:lastModificationDate: 2021-11-08T01:01:06.780Z
-      hippostdpubwf:lastModifiedBy: admin
-      hippostdpubwf:publicationDate: 2021-11-08T01:01:09.191Z
-      hippotranslation:id: 484bc2de-ecb5-44c5-943a-42c89ddd7750
-      hippotranslation:locale: en
-      /hee:heroImage:
-        jcr:primaryType: hippogallerypicker:imagelink
-        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
-        hippo:facets: []
-        hippo:modes: []
-        hippo:values: []
   /search-results:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
@@ -103,9 +18,8 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: e734ac17-0503-4c18-a111-7ea5d4ab8e9d
       hee:addToAZ: false
-      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
-        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank',
-        'hee:publicationLandingPage']
+      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:MiniHub', 'hee:blogPost',
+        'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank', 'hee:publicationLandingPage']
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
@@ -133,9 +47,8 @@
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: b843cfa2-5737-46f9-bba2-10d0d067a803
       hee:addToAZ: false
-      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
-        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank',
-        'hee:publicationLandingPage']
+      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:MiniHub', 'hee:blogPost',
+        'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank', 'hee:publicationLandingPage']
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
@@ -162,9 +75,8 @@
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: ac0dc40d-426f-4299-840e-929ebf3d6a53
       hee:addToAZ: false
-      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:bulletin', 'hee:MiniHub',
-        'hee:blogPost', 'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank',
-        'hee:publicationLandingPage']
+      hee:documentTypes: ['hee:guidance', 'hee:landingPage', 'hee:MiniHub', 'hee:blogPost',
+        'hee:event', 'hee:caseStudy', 'hee:listingPage', 'hee:searchBank', 'hee:publicationLandingPage']
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''

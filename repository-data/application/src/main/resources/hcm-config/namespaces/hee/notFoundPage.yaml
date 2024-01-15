@@ -1,17 +1,17 @@
 definitions:
   config:
-    /hippo:namespaces/hee/bulletin:
+    /hippo:namespaces/hee/notFoundPage:
       jcr:primaryType: hipposysedit:templatetype
       jcr:mixinTypes: ['editor:editable', 'mix:referenceable']
-      jcr:uuid: 88ea14b4-d792-4cba-8030-b7ee50da8678
+      jcr:uuid: b3c12d7a-416c-4da2-b0aa-d96f665dab79
       /hipposysedit:nodetype:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['mix:referenceable']
-        jcr:uuid: 6c1aa46b-83fc-42f9-b8f2-99144f0c3a55
+        jcr:uuid: dc5053dd-da84-4414-83a2-33162f3109e7
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 051a79e1-d218-4f6b-aee7-c6aaace87f14
+          jcr:uuid: e501dc85-28a8-4ec2-a460-5bec8e84ec3a
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -24,57 +24,74 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /overview:
+          /summary:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:overview
+            hipposysedit:path: hee:summary
             hipposysedit:primary: false
-            hipposysedit:type: String
-          /websiteText:
+            hipposysedit:type: Text
+            hipposysedit:validators: [required]
+          /heroImage:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:websiteTitle
+            hipposysedit:path: hee:microHero
             hipposysedit:primary: false
-            hipposysedit:type: String
-          /websiteUrl:
+            hipposysedit:type: hippogallerypicker:imagelink
+            hipposysedit:validators: [optional]
+          /contentBlocks:
             jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:websiteUrl
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /categories:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
             hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator, 'hee:content-card-content-block-validator']
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:categories
+            hipposysedit:path: hee:logoGroup
             hipposysedit:primary: false
-            hipposysedit:type: String
+            hipposysedit:type: hippo:mirror
+            hipposysedit:validators: [optional]
+          /boolean:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:addToAZ
+            hipposysedit:primary: false
+            hipposysedit:type: Boolean
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
-          jcr:primaryType: hee:bulletin
+          jcr:primaryType: hee:notFoundPage
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: d9a1be63-fa1a-4c8b-9302-4987167dfd1b
+          hee:addToAZ: false
+          hee:summary: ''
+          hee:title: ''
           hippostd:holder: holder
           hippostd:state: draft
           hippostdpubwf:createdBy: ''
+          hippostdpubwf:creationDate: 2021-02-05T11:01:21.185+07:00
+          hippostdpubwf:lastModificationDate: 2021-02-05T11:01:21.184+07:00
           hippostdpubwf:lastModifiedBy: ''
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
-          jcr:mixinTypes: ['mix:referenceable']
-          hee:title: ''
-          hee:overview: ''
-          jcr:uuid: 4e431281-e930-4221-b3df-234c9241e6a2
-          hippostdpubwf:lastModificationDate: 2021-02-07T19:04:36.287Z
-          hippostdpubwf:creationDate: 2021-02-07T19:04:36.287Z
-          hee:websiteUrl: ''
-          hee:websiteTitle: ''
-          hee:categories: []
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:microHero:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -88,50 +105,59 @@ definitions:
             plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /title:
             jcr:primaryType: frontend:plugin
-            caption: Title
+            caption: Page title
             field: title
+            hint: Page title must be 60 characters or fewer.
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /overview:
+          /summary:
             jcr:primaryType: frontend:plugin
-            caption: Overview
-            field: overview
+            caption: Summary
+            field: summary
+            hint: Enter summary (300 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /websiteTitle:
+              maxlength: '300'
+          /microHero:
             jcr:primaryType: frontend:plugin
-            caption: Website title
-            field: websiteText
+            caption: Micro-hero image
+            field: heroImage
+            hint: Add an image that's 260 pixels high and 1600 pixels wide.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /logoGroup:
+            jcr:primaryType: frontend:plugin
+            caption: Logo group
+            field: logoGroup
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:logoGroup']
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Main content blocks
+            compoundList: hee:ActionLink,hee:blockLinksReference,hee:contentCards,hee:featuredContentReference,hippostd:html,hee:richTextReference,hee:warningCalloutReference
+            contentPickerType: links
+            field: contentBlocks
+            hint: ''
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.field
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /addToAZ:
+            jcr:primaryType: frontend:plugin
+            caption: Add to A to Z
+            field: boolean
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /websiteUrl:
-            jcr:primaryType: frontend:plugin
-            caption: Website URL
-            field: websiteUrl
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /categories:
-            jcr:primaryType: frontend:plugin
-            caption: Categories
-            field: categories
-            multiselect.type: palette
-            palette.alloworder: true
-            palette.maxrows: '10'
-            plugin.class: org.onehippo.forge.selection.frontend.plugin.DynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              source: /content/documents/administration/valuelists/lks/bulletincategories
-              sortComparator: org.onehippo.forge.selection.frontend.plugin.sorting.DefaultListItemComparator

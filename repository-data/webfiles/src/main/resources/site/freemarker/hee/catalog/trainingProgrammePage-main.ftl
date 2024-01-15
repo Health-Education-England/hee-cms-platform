@@ -296,7 +296,7 @@
                 </div>
 
                 <#if document.applicationButtonLink?has_content>
-                    <div class="nhsuk-card nhsuk-card--clickable">
+                    <div class="nhsuk-card">
                         <div class="nhsuk-card__content">
                             <h3 class="nhsuk-card__heading">Apply now</h3>
                             <a class="nhsuk-button" href="${document.applicationButtonLink}" draggable="false">

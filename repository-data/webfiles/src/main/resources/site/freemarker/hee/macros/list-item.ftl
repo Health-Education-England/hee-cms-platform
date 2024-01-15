@@ -4,48 +4,6 @@
 <#include '../utils/author-util.ftl'>
 <#include "../macros/taxonomy-info.ftl">
 
-<#--  Lists bulletin result items  -->
-<#macro bulletinListItem items categoriesMap>
-    <#list items as item>
-        <div class="hee-listing-item">
-            <#--  Title  -->
-            <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
-
-            <#--  Bulletin details: START   -->
-            <div class="hee-listing-item__details">
-                <#--  Categories  -->
-                <#assign categories>${item.categories?map(category -> categoriesMap[category]!)?join(', ')}</#assign>
-                <#if categories?has_content>
-                    <@fmt.message key="category.text" var="categoryLabel"/>
-                    <@listItemRow key="${categoryLabel}">
-                        ${categories}
-                    </@listItemRow>
-                </#if>
-
-                <#--  Overview  -->
-                <#if item.overview?has_content>
-                    <@fmt.message key="bulletin.overview" var="overviewLabel"/>
-                    <@listItemRow key="${overviewLabel}">
-                        ${item.overview}
-                    </@listItemRow>
-                </#if>
-
-                <#--  Website URL  -->
-                <#if item.websiteUrl??>
-                    <#assign website>
-                        <a href="${item.websiteUrl}"> ${item.websiteTitle}</a>
-                    </#assign>
-                    <@fmt.message key="bulletin.website" var="websiteLabel"/>
-                    <@listItemRow key="${websiteLabel}">
-                        ${website}
-                    </@listItemRow>
-                </#if>
-            </div>
-            <#--  Bulletin details: END   -->
-        </div>
-    </#list>
-</#macro>
-
 <#--  Lists blog post result items  -->
 <#macro blogListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
@@ -358,7 +316,7 @@
     <#list items as item>
         <#assign pageURL=getInternalLinkURL(item)>
 
-        <#if ['Bulletin', 'CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || pageURL != pageNotFoundURL>
+        <#if ['CaseStudy', 'SearchBank', 'Event']?seq_contains(item.class.simpleName) || pageURL != pageNotFoundURL>
             <div class="hee-listing-item">
                 <#switch item.getClass().getName()>
                     <#case "uk.nhs.hee.web.beans.Event">
@@ -411,23 +369,6 @@
                             </@listItemRow>
                         </div>
                         <#--  Case study details: END   -->
-
-                        <#break>
-                    <#case "uk.nhs.hee.web.beans.Bulletin">
-                        <#--  Title  -->
-                        <h3><a href="${item.websiteUrl}">${item.title}</a></h3>
-
-                        <#--  Bulletin details: START   -->
-                        <div class="hee-listing-item__details">
-                            <#--  Overview  -->
-                            <#if item.overview?has_content>
-                                <@fmt.message key="bulletin.overview" var="overviewLabel"/>
-                                <@listItemRow key="${overviewLabel}">
-                                    ${item.overview}
-                                </@listItemRow>
-                            </#if>
-                        </div>
-                        <#--  Bulletin details: END   -->
 
                         <#break>
                     <#case "uk.nhs.hee.web.beans.SearchBank">

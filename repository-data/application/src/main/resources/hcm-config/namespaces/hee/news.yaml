@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: b1199670-ea66-47a3-8d77-ab290a424342
+          jcr:uuid: 85583c3c-2ec7-4c5f-bf13-129893354b32
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -82,14 +82,6 @@ definitions:
             hipposysedit:path: hee:author
             hipposysedit:primary: false
             hipposysedit:type: String
-          /categories:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:categories
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /publicationDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -148,6 +140,15 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyTags
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
+          /globalTaxonomyNewsTypes:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyNewsType
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -160,12 +161,11 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          jcr:uuid: 5de29c1f-0561-4e18-9798-5a351ee3b16c
+          jcr:uuid: 23763c08-299b-418c-a8f1-933149a014ff
           hippostdpubwf:lastModificationDate: 2021-01-27T11:49:03.685Z
           hippostdpubwf:creationDate: 2021-01-27T11:49:03.686Z
           hee:summary: ''
           hee:author: ''
-          hee:categories: []
           hee:hideAuthorContactDetails: false
           /hee:relatedContent:
             jcr:primaryType: hee:contentCards
@@ -334,23 +334,16 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalTags
-          /categories:
+          /globalTaxonomyNewsType:
             jcr:primaryType: frontend:plugin
-            caption: Categories
-            field: categories
-            multiselect.type: palette
-            palette.alloworder: false
-            palette.maxrows: '10'
-            plugin.class: uk.nhs.hee.web.selection.frontend.plugin.ChannelBasedDynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
+            caption: News Type
+            field: globalTaxonomyNewsTypes
+            hint: Select the appropriate news type
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
             wicket.id: ${cluster.id}.left.item
-            mode: view
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nameProvider: uk.nhs.hee.web.selection.frontend.provider.ChannelBasedValueListNameProvider
-              valueListBasePathFormat: /content/documents/administration/valuelists/${channel}
-              valueListName: newscategories
+              taxonomy.name: GlobalNewsTypes
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects

@@ -56,7 +56,8 @@ definitions:
             hipposysedit:ordered: true
             hipposysedit:path: hee:contentBlocks
             hipposysedit:type: hippo:compound
-            hipposysedit:validators: [contentblocks-validator, required, 'hee:content-card-content-block-validator', 'hee:html-content-block-validator']
+            hipposysedit:validators: [contentblocks-validator, required, 'hee:content-card-content-block-validator',
+              'hee:html-content-block-validator']
           /publicationDate:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -66,14 +67,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Date
             hipposysedit:validators: [required]
-          /categories:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: true
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:categories
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /rightHandBlocks:
             jcr:primaryType: hipposysedit:field
             hipposysedit:multiple: true
@@ -158,7 +151,6 @@ definitions:
           hee:summary: ''
           hee:author: ''
           hee:publicationDate: 0001-01-01T12:00:00Z
-          hee:categories: []
           hee:hideAuthorContactDetails: false
           /hee:pageLastNextReview:
             jcr:primaryType: hee:pageLastNextReview
@@ -277,23 +269,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalTags
-          /categories:
-            jcr:primaryType: frontend:plugin
-            caption: Categories
-            field: categories
-            multiselect.type: palette
-            palette.alloworder: true
-            palette.maxrows: '10'
-            plugin.class: uk.nhs.hee.web.selection.frontend.plugin.ChannelBasedDynamicMultiSelectPlugin
-            selectlist.maxrows: '10'
-            valuelist.provider: service.valuelist.default
-            wicket.id: ${cluster.id}.left.item
-            mode: view
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-              valueListBasePathFormat: /content/documents/administration/valuelists/${channel}
-              valueListName: blogcategories
-              nameProvider: uk.nhs.hee.web.selection.frontend.provider.ChannelBasedValueListNameProvider
           /publicationDate:
             jcr:primaryType: frontend:plugin
             caption: Publication date
@@ -337,7 +312,7 @@ definitions:
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hee:detailsReference,hee:expanderGroupReference,hee:featuredContentReference,hippostd:html,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
+            compoundList: hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin

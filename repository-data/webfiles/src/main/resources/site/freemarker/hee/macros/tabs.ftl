@@ -59,6 +59,9 @@
                 <#case "uk.nhs.hee.web.beans.RichTextReference">
                     <@hst.html hippohtml=block.richTextBlock.html/>
                     <#break>
+                <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
+                    <@hee.expanderTable table=block/>
+                    <#break>
                 <#case "uk.nhs.hee.web.beans.ActionLink">
                     <@hee.actionLink actionLink=block/>
                     <#break>
