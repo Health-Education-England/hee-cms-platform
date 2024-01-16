@@ -6,6 +6,7 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../utils/date-util.ftl">
 <#include "../macros/blog-and-news-partial-info.ftl">
+<#include "../macros/taxonomy-info.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.blogpost,uk.nhs.hee.web.global,uk.nhs.hee.web.contact"/>
 
@@ -123,7 +124,7 @@
             </div>
             <#--  Main sections: END  -->
 
-            <#--  Sidebar sections: START  -->            
+            <#--  Sidebar sections: START  -->
 			<aside class="page__rightbar">
 				<#--  News info: START  -->
 				<div class="hee-card hee-card--details">
@@ -140,6 +141,11 @@
 						topicTaxClass=document.globalTaxonomyHealthcareTopics!
 						tagTaxClass=document.globalTaxonomyTags!
 						listingPageURL=newsListingPageURL!/>
+
+                    <#--  News type  -->
+                    <@taxonomyInfo
+                        taxClass=document.globalTaxonomyNewsType!
+                        collectionPageURL=newsListingPageURL/>
 				</div>
 				<#--  News info: END  -->
 				<#if document.rightHandBlocks?? && document.rightHandBlocks?size gt 0>

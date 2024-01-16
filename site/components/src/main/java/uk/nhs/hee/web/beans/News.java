@@ -102,4 +102,12 @@ public class News extends BaseDocument {
                 "hee:globalTaxonomyTags",
                 HEETaxonomy.HEE_GLOBAL_TAGS);
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyNewsType", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyNewsType() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyNewsType",
+                HEETaxonomy.HEE_GLOBAL_NEWS_TYPES);
+    }
 }
