@@ -29,11 +29,6 @@ public class News extends BaseDocument {
         return getSingleProperty("hee:author");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:categories")
-    public String[] getCategories() {
-        return getMultipleProperty("hee:categories");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:publicationDate")
     public Calendar getPublicationDate() {
         return getSingleProperty("hee:publicationDate");

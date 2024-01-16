@@ -49,11 +49,6 @@ public class BlogPost extends BaseDocument {
         return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:categories")
-    public String[] getCategories() {
-        return getMultipleProperty("hee:categories");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:logoGroup")
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
