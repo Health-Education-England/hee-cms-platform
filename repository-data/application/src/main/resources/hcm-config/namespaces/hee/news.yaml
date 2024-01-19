@@ -313,6 +313,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalProfessions
+              category.sort.options: name
           /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
@@ -324,6 +325,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalHealthcareTopics
+              category.sort.options: name
           /globalTaxonomyTags:
             jcr:primaryType: frontend:plugin
             caption: Tags
@@ -334,9 +336,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalTags
+              category.sort.options: name
           /globalTaxonomyNewsType:
             jcr:primaryType: frontend:plugin
-            caption: News Type
+            caption: News type
             field: globalTaxonomyNewsTypes
             hint: Select the appropriate news type
             plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
@@ -344,6 +347,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalNewsTypes
+              category.sort.options: name
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects

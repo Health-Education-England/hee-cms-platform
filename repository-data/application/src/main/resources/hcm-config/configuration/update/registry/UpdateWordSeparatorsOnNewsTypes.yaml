@@ -1,0 +1,39 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateWordSeparatorsOnNewsTypes:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 100
+      hipposys:description: Replaces dash/hyphen (-) with underscore (_) on the News
+        type (hee:globalTaxonomyNewsType) property of News article documents.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents//element(*, hee:news)[@hee:globalTaxonomyNewsType]
+      hipposys:script: "import org.hippoecm.repository.util.JcrUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \nimport org.onehippo.taxonomy.plugin.TaxonomyClassificationDao\r\n\r\nimport\
+        \ javax.jcr.Node\r\n\r\n/**\r\n * Replaces dash/hyphen (-) with underscore\
+        \ (_) for the {@code News type}\r\n * ({@code hee:globalTaxonomyNewsType})\
+        \ property on News article ({@code hee:news}) nodes.\r\n * The script assumes\
+        \ the following on the target property ({@code hee:globalTaxonomyNewsType}\
+        \ in this case):\r\n * <ul>\r\n *     <li>The property is single-valued</li>\r\
+        \n *     <li>The property doesn't have dash intentional hyphens (e.g. COVID-19)</li>\r\
+        \n * </ul>\r\n */\r\nclass UpdateWordSeparatorsOnNewsTypes extends BaseNodeUpdateVisitor\
+        \ {\r\n    String PROPERTY = \"hee:globalTaxonomyNewsType\"\r\n\r\n    boolean\
+        \ doUpdate(Node node) {\r\n        log.debug \"Processing node ${node.path}\"\
+        \r\n\r\n        List<String> propertyValueList = JcrUtils.getStringListProperty(node,\
+        \ PROPERTY, Collections.emptyList())\r\n\r\n        if (propertyValueList.isEmpty())\
+        \ {\r\n            log.debug \"Node '${node.path}' doesn't have value for\
+        \ '${PROPERTY}' property\"\r\n            return false\r\n        }\r\n\r\n\
+        \        String currentValue = propertyValueList.get(0)\r\n        if (currentValue.contains('-'))\
+        \ {\r\n            String newValue = currentValue.replace('-', '_')\r\n  \
+        \          node.setProperty(PROPERTY, [newValue] as String[])\r\n        \
+        \    node.setProperty(PROPERTY + TaxonomyClassificationDao.PROPERTY_WITH_ANCESTORS_SUFFIX,\
+        \ [newValue] as String[])\r\n\r\n            log.debug \"The '${PROPERTY}'\
+        \ property value has been updated \" +\r\n                    \"from '${currentValue}'\
+        \ to '${newValue}' for the node '${node.path}'\"\r\n            return true\r\
+        \n        }\r\n\r\n        log.debug \"Node '${node.path}' doesn't have '${PROPERTY}'\
+        \ property value ('${currentValue}') containing '-'\"\r\n        return false\r\
+        \n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+        \ does not implement undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000
