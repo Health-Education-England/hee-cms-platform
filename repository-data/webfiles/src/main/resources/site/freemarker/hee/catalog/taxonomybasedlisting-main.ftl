@@ -139,11 +139,7 @@
                             <#--  Result count: START  -->
                             <div class="hee-listing__count">
                                 <h2 class="hee-listing__title nhsuk-heading-l">
-                                    <#if pageable.total gt 0>
-                                        ${pageable.total} <@fmt.message key="results.count.text"/>
-                                    <#else>
-                                        <@fmt.message key="no_results.text"/>
-                                    </#if>
+                                    ${pageable.total} <@fmt.message key="results.count.text"/>
                                 </h2>
                             </div>
                             <#--  Result count: END  -->
@@ -247,6 +243,12 @@
                             <#-- Active filters: END -->
                         </div>
                         <#--  Search result summary: END  -->
+
+                        <#--  No results found msg: START  -->
+                        <#if pageable.total=0>
+                            <p class="nhsuk-body nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4"><@fmt.message key="no_results.text"/></p>
+                        </#if>
+                        <#--  No results found msg: END  -->
 
                         <#if pageable??>
                             <#--  Search results: START  -->
