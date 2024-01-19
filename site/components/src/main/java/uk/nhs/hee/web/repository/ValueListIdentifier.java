@@ -11,11 +11,6 @@ public enum ValueListIdentifier {
     BLOG_CATEGORIES("blogCategories"),
 
     /**
-     * {@code bulletinCategories} value-list identifier.
-     */
-    BULLETIN_CATEGORIES("bulletinCategories"),
-
-    /**
      * {@code caseStudyImpactGroups} value-list identifier.
      */
     CASE_STUDY_IMPACT_GROUPS("caseStudyImpactGroups"),

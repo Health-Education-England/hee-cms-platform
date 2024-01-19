@@ -35,18 +35,6 @@ public class ListingPageTypeTest {
     }
 
     @Test
-    public void bulletin() {
-        // Verify
-        final ListingPageType bulletinListing = ListingPageType.BULLETIN_LISTING;
-        assertThat(bulletinListing.getType()).isEqualTo("bulletin");
-        assertThat(bulletinListing.getDocumentTypes()).isEqualTo(new String[]{"hee:bulletin"});
-        assertThat(bulletinListing.isSortingEnabled()).isTrue();
-        assertThat(bulletinListing.getSortByDateField()).isEqualTo(HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE);
-        assertThat(bulletinListing.getFilterValueListIdentifier()).isEqualTo("bulletinCategories");
-        assertThat(bulletinListing.isChannelSpecificValueListIdentifier()).isFalse();
-    }
-
-    @Test
     public void caseStudy() {
         // Verify
         final ListingPageType caseStudyListing = ListingPageType.CASE_STUDY_LISTING;
@@ -123,7 +111,6 @@ public class ListingPageTypeTest {
     public void getByName_WithValidType_ReturnsListingPageType() {
         // Verify
         assertThat(ListingPageType.getByName("blog")).isEqualTo(ListingPageType.BLOG_LISTING);
-        assertThat(ListingPageType.getByName("bulletin")).isEqualTo(ListingPageType.BULLETIN_LISTING);
         assertThat(ListingPageType.getByName("casestudy")).isEqualTo(ListingPageType.CASE_STUDY_LISTING);
         assertThat(ListingPageType.getByName("event")).isEqualTo(ListingPageType.EVENT_LISTING);
         assertThat(ListingPageType.getByName("search")).isEqualTo(ListingPageType.SEARCH_LISTING);

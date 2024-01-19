@@ -67,14 +67,6 @@ module.exports = {
       'url': `${local_uri}/visual-regression/vr-content-pages/vr-publication-landing-page/vr-publication-page`,
     },
     {
-      'label': 'bulletin_collection_page',
-      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-bulletin-collection-page`,
-    },
-    {
-      'label': 'bulletin_collection_page_with_filters_and_sorting_on',
-      'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-bulletin-collection-page?category=medical_oncology&sortBy=az`,
-    },
-    {
       'label': 'blog_post_collection_page',
       'url': `${local_uri}/visual-regression/vr-collection-and-listing-pages/vr-blog-post-collection-page`,
     },
