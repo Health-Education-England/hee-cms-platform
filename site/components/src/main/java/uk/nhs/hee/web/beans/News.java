@@ -74,6 +74,11 @@ public class News extends BaseDocument {
         return getSingleProperty("hee:hideAuthorContactDetails");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
         return TaxonomyTemplateUtils.getTaxonomyClassification(

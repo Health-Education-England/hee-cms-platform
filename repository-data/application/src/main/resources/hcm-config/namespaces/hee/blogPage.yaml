@@ -133,6 +133,14 @@ definitions:
             hipposysedit:path: hee:globalTaxonomyTags
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
+          /featuredContent:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:featuredContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -166,6 +174,9 @@ definitions:
             hippo:modes: []
             hippo:values: []
           /hee:authors:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:featuredContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -328,5 +339,14 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
             wicket.id: ${cluster.id}.left.item
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /featuredContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Featured content
+            field: featuredContent
+            hint: Select the featured content
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
