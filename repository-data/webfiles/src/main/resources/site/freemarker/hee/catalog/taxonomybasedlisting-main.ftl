@@ -244,21 +244,21 @@
                         </div>
                         <#--  Search result summary: END  -->
 
-                        <#--  No results found msg: START  -->
-                        <#if pageable.total=0>
-                            <p class="nhsuk-body nhsuk-u-font-weight-bold nhsuk-u-margin-bottom-4 nhsuk-u-margin-top-4"><@fmt.message key="no_results.text"/></p>
-                        </#if>
-                        <#--  No results found msg: END  -->
-
                         <#if pageable??>
-                            <#--  Search results: START  -->
+                            <#--  Collection/listing results: START  -->
                             <div class="hee-listing__results">
-                                <@.vars["${listingType}ListItem"] items=pageable.items/>
-                            </div>
-                            <#--  Search results: END  -->
+                                <#if pageable.total=0>
+                                    <#--  No results found msg  -->
+                                    <p><strong><@fmt.message key="no_results.text"/></strong></p>
+                                <#else>
+                                    <#--  Results cards  -->
+                                    <@.vars["${listingType}ListItem"] items=pageable.items/>
 
-                            <#--  Pagination  -->
-                            <#include "../../include/pagination-nhs.ftl">
+                                    <#--  Pagination  -->
+                                    <#include "../../include/pagination-nhs.ftl">
+                                </#if>
+                            </div>
+                            <#--  Collection/listing results: END  -->
                         </#if>
                     </div>
                 </div>
