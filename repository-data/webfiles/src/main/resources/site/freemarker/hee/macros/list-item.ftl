@@ -190,7 +190,7 @@
 <#--  Lists publication (landing) result items  -->
 <#macro publicationListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
-    <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
+    <@fmt.message key="published_date.text" var="publishedDateLabel"/>
     <@fmt.message key="publication.type" var="publicationTypeLabel"/>
 
     <#list items as item>
@@ -207,7 +207,7 @@
                         </@listItemRow>
                     </#if>
 
-                    <@listItemRow key="${publishDateLabel}">
+                    <@listItemRow key="${publishedDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@listItemRow>
                 </div>

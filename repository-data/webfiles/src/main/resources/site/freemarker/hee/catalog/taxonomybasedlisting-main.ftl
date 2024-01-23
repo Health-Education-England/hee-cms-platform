@@ -147,11 +147,7 @@
                             <#--  Result count: START  -->
                             <div class="hee-listing__count">
                                 <h2 class="hee-listing__title nhsuk-heading-l">
-                                    <#if pageable.total gt 0>
-                                        ${pageable.total} <@fmt.message key="results.count.text"/>
-                                    <#else>
-                                        <@fmt.message key="no_results.text"/>
-                                    </#if>
+                                    ${pageable.total} <@fmt.message key="results.count.text"/>
                                 </h2>
                             </div>
                             <#--  Result count: END  -->
@@ -268,14 +264,20 @@
                         <#--  Search result summary: END  -->
 
                         <#if pageable??>
-                            <#--  Search results: START  -->
+                            <#--  Collection/listing results: START  -->
                             <div class="hee-listing__results">
-                                <@.vars["${listingType}ListItem"] items=pageable.items/>
-                            </div>
-                            <#--  Search results: END  -->
+                                <#if pageable.total=0>
+                                    <#--  No results found msg  -->
+                                    <p><strong><@fmt.message key="no_results.text"/></strong></p>
+                                <#else>
+                                    <#--  Results cards  -->
+                                    <@.vars["${listingType}ListItem"] items=pageable.items/>
 
-                            <#--  Pagination  -->
-                            <#include "../../include/pagination-nhs.ftl">
+                                    <#--  Pagination  -->
+                                    <#include "../../include/pagination-nhs.ftl">
+                                </#if>
+                            </div>
+                            <#--  Collection/listing results: END  -->
                         </#if>
                     </div>
                 </div>
