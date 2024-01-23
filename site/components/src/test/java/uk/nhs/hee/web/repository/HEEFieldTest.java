@@ -18,6 +18,8 @@ public class HEEFieldTest {
         assertThat(HEEField.PUBLICATION_DATE.getName()).isEqualTo("hee:publicationDate");
         assertThat(HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName()).isEqualTo("hee:globalTaxonomyHealthcareTopics");
         assertThat(HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyHealthcareTopics__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_NEWS_TYPE.getName()).isEqualTo("hee:globalTaxonomyNewsType");
+        assertThat(HEEField.GLOBAL_TAXONOMY_NEWS_TYPE_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyNewsType__with_ancestors");
         assertThat(HEEField.GLOBAL_TAXONOMY_PROFESSIONS.getName()).isEqualTo("hee:globalTaxonomyProfessions");
         assertThat(HEEField.GLOBAL_TAXONOMY_PROFESSIONS_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyProfessions__with_ancestors");
         assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()).isEqualTo("hee:globalTaxonomyPublicationType");

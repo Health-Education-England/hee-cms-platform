@@ -90,6 +90,7 @@ public enum ListingPageType {
             List.of(
                     ListingFilter.PROFESSION,
                     ListingFilter.TOPIC,
+                    ListingFilter.NEWS_TYPE,
                     ListingFilter.TAG
             )
     ),

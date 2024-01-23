@@ -72,6 +72,14 @@
                     <div class="nhsuk-filter__groups">
                         <#list listingFilters as filter>
                             <#switch filter.queryParameter>
+                                <#case "newsType">
+                                    <#--  News type filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="news_type.label"
+                                        items=newsTypeMap!
+                                        selectedItemsList=selectedNewsTypeList />
+                                    <#break>
                                 <#case "profession">
                                     <#--  Profession filter  -->
                                     <@selectboxGroup
@@ -151,6 +159,10 @@
                                     <#--  Adds the selected filters as hidden inputs (to resubmit them during sort selection change)  -->
                                     <#list listingFilters as filter>
                                         <#switch filter.queryParameter>
+                                            <#case "newsType">
+                                                <#--  Selected news type  -->
+                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedNewsTypeList!/>
+                                                <#break>
                                             <#case "profession">
                                                 <#--  Selected professions  -->
                                                 <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedProfessionList!/>
@@ -205,6 +217,13 @@
                             <#-- Active filters: START -->
                             <#list listingFilters as filter>
                                 <#switch filter.queryParameter>
+                                    <#case "newsType">
+                                        <#-- Active news type  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="news_type.label"
+                                            selectedFilters=selectedNewsTypeList
+                                            filterMap=newsTypeMap! />
+                                        <#break>
                                     <#case "profession">
                                         <#-- Active profession & sub-profession -->
                                         <@activeFiltersForSelectboxGroup
