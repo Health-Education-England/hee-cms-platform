@@ -1,0 +1,48 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/AddNewsTypeTaxonomyPropertyToNewsFacets:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Updates 'newsfacets' facet node for all channels to include
+        'hee:globalTaxonomyNewsType__with_ancestors' taxonomy property
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/content/documents/element(*, hippostd:folder)
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\n\r\nimport org.hippoecm.repository.util.JcrUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass AddNewsTypeTaxonomyPropertyToNewsFacets\
+        \ extends BaseNodeUpdateVisitor {\r\n    public static final String REL_PATH_NEWS_FACETS\
+        \ = \"newsfacets\"\r\n    public static final String PROPERTY_NEWS_TYPE_WITH_ANCESTORS\
+        \ = \"hee:globalTaxonomyNewsType__with_ancestors\"\r\n\r\n    public static\
+        \ final String PROPERTY_FACETS = \"hippofacnav:facets\"\r\n    public static\
+        \ final String PROPERTY_FACET_NODE_NAMES = \"hippofacnav:facetnodenames\"\r\
+        \n\r\n    boolean doUpdate(Node node) {\r\n        log.debug \"Started processing\
+        \ the node '${node.path}'\"\r\n\r\n        // Ignore 'administration' folder/node\r\
+        \n        if (\"administration\" == node.name) {\r\n            log.debug\
+        \ \"Ignoring '${node.path}'\"\r\n            return false\r\n        }\r\n\
+        \r\n        // Do nothing if 'newsfacets' facet node isn't available for a\
+        \ channel\r\n        if (!node.hasNode(REL_PATH_NEWS_FACETS)) {\r\n      \
+        \      log.debug \"Ignoring '${node.path}' as '${REL_PATH_NEWS_FACETS}' node\
+        \ isn't available under it\"\r\n            return false\r\n        }\r\n\r\
+        \n        final Node facetNode = node.getNode(REL_PATH_NEWS_FACETS)\r\n  \
+        \      final List<String> facetList =\r\n                JcrUtils.getStringListProperty(facetNode,\
+        \ PROPERTY_FACETS, Collections.emptyList())\r\n\r\n        // Do nothing if\
+        \ 'hee:globalTaxonomyNewsType__with_ancestors' property\r\n        // is already\
+        \ available on the 'newsfacet' node\r\n        if (facetList.contains(PROPERTY_NEWS_TYPE_WITH_ANCESTORS))\
+        \ {\r\n            log.debug \"Ignoring '${node.path + \"/\" + REL_PATH_NEWS_FACETS}'\
+        \ node \" +\r\n                    \"as '${PROPERTY_NEWS_TYPE_WITH_ANCESTORS}'\
+        \ property has already been available\"\r\n            return false\r\n  \
+        \      }\r\n\r\n        facetList.add(PROPERTY_NEWS_TYPE_WITH_ANCESTORS)\r\
+        \n        final List<String> facetNodeNameList =\r\n                JcrUtils.getStringListProperty(facetNode,\
+        \ PROPERTY_FACET_NODE_NAMES, Collections.emptyList())\r\n        facetNodeNameList.add(PROPERTY_NEWS_TYPE_WITH_ANCESTORS\
+        \ + '${sortby:\"facetvalue\", sortorder:\"ascending\"}')\r\n\r\n        facetNode.setProperty(PROPERTY_FACETS,\
+        \ facetList as String[])\r\n        facetNode.setProperty(PROPERTY_FACET_NODE_NAMES,\
+        \ facetNodeNameList as String[])\r\n\r\n        log.debug \"Successfully added\
+        \ '${PROPERTY_NEWS_TYPE_WITH_ANCESTORS}' property \" +\r\n               \
+        \ \"to '${node.path + \"/\" + REL_PATH_NEWS_FACETS}' facet node\"\r\n    \
+        \    return true\r\n\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\
+        \n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000
