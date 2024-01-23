@@ -376,6 +376,15 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /relatedContent:
+            jcr:primaryType: frontend:plugin
+            caption: Related content
+            field: relatedContent
+            hint: ''
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
           /featuredContentBlock:
             jcr:primaryType: frontend:plugin
             caption: Featured content
@@ -386,12 +395,3 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               nodetypes: ['hee:featuredContent']
-          /relatedContent:
-            jcr:primaryType: frontend:plugin
-            caption: Related content
-            field: relatedContent
-            hint: ''
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
-            wicket.id: ${cluster.id}.left.item
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig

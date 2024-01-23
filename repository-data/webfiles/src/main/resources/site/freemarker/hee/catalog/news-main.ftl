@@ -175,19 +175,11 @@
         <#--  Main content: END  -->
 
         <#--  Main featured content: START  -->
-        <#assign isFeaturedContentAvailable=(document.featuredContentBlock??)?then(true, false)>
         <#assign isRelatedContentAvailable=(document.relatedContent?? && (document.relatedContent.header?has_content || document.relatedContent.cardGroupSummary?has_content || document.relatedContent.cards?size gt 0))?then(true, false)>
+        <#assign isFeaturedContentAvailable=(document.featuredContentBlock??)?then(true, false)>
 
-        <#if isFeaturedContentAvailable || isRelatedContentAvailable>
+        <#if isRelatedContentAvailable || isFeaturedContentAvailable>
             <section class="page__feature">
-                <#--  Featured content: START  -->
-                <#if isFeaturedContentAvailable>
-                    <div class="nhsuk-width-container">
-                        <@hee.featuredContent block=document maxCards=3/>
-                    </div>
-                </#if>
-                <#--  Featured content: END  -->
-
                 <#--  Related content: START  -->
                 <#if isRelatedContentAvailable>
                     <div class="nhsuk-width-container">
@@ -195,6 +187,14 @@
                     </div>
                 </#if>
                 <#--  Related content: END  -->
+
+                <#--  Featured content: START  -->
+                <#if isFeaturedContentAvailable>
+                    <div class="nhsuk-width-container">
+                        <@hee.featuredContent block=document maxCards=3/>
+                    </div>
+                </#if>
+                <#--  Featured content: END  -->
             </section>
         </#if>
         <#--  Main featured content: END  -->
