@@ -173,17 +173,17 @@
             </aside>
             <#--  Sidebar sections: END  -->
         </div>
+        <#--  Main content: END  -->
 
-        <#-- Related content -->
+        <#--  Main featured content: START  -->
         <#if document.featuredContentBlock??>
             <section class="page__feature">
+                <#--  Featured content  -->
                 <div class="nhsuk-width-container">
                     <@hee.featuredContent block=document maxCards=3/>
                 </div>
             </section>
         </#if>
-        <#-- Related content: END -->
-
-        <#--  Main content: END  -->
+        <#--  Main featured content: END  -->
     </main>
 </#if>
