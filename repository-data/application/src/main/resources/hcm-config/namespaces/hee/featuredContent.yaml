@@ -133,6 +133,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalPublicationTypes
+              category.sort.options: name
           /description:
             jcr:primaryType: frontend:plugin
             caption: Description
@@ -177,6 +178,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalHealthcareTopics
+              category.sort.options: name
           /globalTaxonomyProfessions:
             jcr:primaryType: frontend:plugin
             caption: Professions
@@ -189,6 +191,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalProfessions
+              category.sort.options: name
           /globalTaxonomyTags:
             jcr:primaryType: frontend:plugin
             caption: Tags
@@ -200,3 +203,4 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalTags
+              category.sort.options: name
