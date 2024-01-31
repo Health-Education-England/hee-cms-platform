@@ -1,13 +1,13 @@
 /content/documents/digital-transformation/settings/pages/page-not-found:
   jcr:primaryType: hippo:handle
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
-  jcr:uuid: 1f5772bb-51c2-439f-b12b-36d40bdf93c5
+  jcr:uuid: 13b737f0-b6e3-11ee-a87f-ad25b271dea1
   hippo:name: Page not found
-  hippo:versionHistory: b463e174-fcc9-4f3f-909d-4a7f97da3b1a
+  hippo:versionHistory: 85c7227b-0360-400f-ae6f-2a25d893acd6
   /page-not-found[1]:
-    jcr:primaryType: hee:landingPage
+    jcr:primaryType: hee:notFoundPage
     jcr:mixinTypes: ['mix:referenceable']
-    jcr:uuid: 8a99ed01-0b53-42b7-8fcb-3a006e837a06
+    jcr:uuid: 157dee30-b6e3-11ee-a87f-ad25b271dea1
     hee:addToAZ: false
     hee:summary: 'If you entered a web address, check it is correct. Error code:
       404'
@@ -16,15 +16,76 @@
     hippostd:retainable: false
     hippostd:state: draft
     hippostdpubwf:createdBy: admin
-    hippostdpubwf:creationDate: 2023-10-16T05:27:45.528+01:00
-    hippostdpubwf:lastModificationDate: 2023-10-16T07:17:01.178+01:00
+    hippostdpubwf:creationDate: 2023-12-20T12:43:32.481Z
+    hippostdpubwf:lastModificationDate: 2023-12-20T12:45:41.870Z
     hippostdpubwf:lastModifiedBy: admin
-    hippotranslation:id: 724207a7-366a-4821-9da9-e8a7585c933a
+    hippotranslation:id: 26fb2a10-b6e3-11ee-a87f-ad25b271dea1
     hippotranslation:locale: en
+    /hee:logoGroup:
+      jcr:primaryType: hippo:mirror
+      hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hee:microHero:
+      jcr:primaryType: hippogallerypicker:imagelink
+      hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      hippo:facets: []
+      hippo:modes: []
+      hippo:values: []
+    /hee:contentBlocks[1]:
+      jcr:primaryType: hee:ActionLink
+      /hee:link:
+        jcr:primaryType: hee:link
+        hee:openLinkUrlNewWindow: false
+        hee:text: Google IUrl
+        hee:url: https://google.co.uk
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hee:contentBlocks[2]:
+      jcr:primaryType: hee:blockLinksReference
+      /hee:blockLinksContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+    /hee:contentBlocks[3]:
+      jcr:primaryType: hee:contentCards
+      hee:cardGroupSummary: ''
+      hee:header: Navigation Header
+      /hee:cards[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
+      /hee:cards[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
+      /hee:cards[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+    /hee:contentBlocks[4]:
+      jcr:primaryType: hee:featuredContentReference
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
+    /hee:contentBlocks[5]:
+      jcr:primaryType: hippostd:html
+      hippostd:content: <p>Text box here</p>
+    /hee:contentBlocks[6]:
+      jcr:primaryType: hee:richTextReference
+      /hee:richTextBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /hee:contentBlocks[7]:
+      jcr:primaryType: hee:warningCalloutReference
+      /hee:warningCalloutContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
   /page-not-found[2]:
-    jcr:primaryType: hee:landingPage
-    jcr:mixinTypes: ['mix:versionable']
-    jcr:uuid: 967873c0-a6ef-45f9-ad05-196cb9ae3536
+    jcr:primaryType: hee:notFoundPage
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 189678d0-b6e3-11ee-a87f-ad25b271dea1
     hee:addToAZ: false
     hee:summary: 'If you entered a web address, check it is correct. Error code:
       404'
@@ -33,15 +94,76 @@
     hippostd:retainable: false
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
-    hippostdpubwf:creationDate: 2023-10-16T05:27:45.528+01:00
-    hippostdpubwf:lastModificationDate: 2023-10-16T07:17:39.411+01:00
+    hippostdpubwf:creationDate: 2023-12-20T12:43:32.481Z
+    hippostdpubwf:lastModificationDate: 2023-12-20T12:46:22.910Z
     hippostdpubwf:lastModifiedBy: admin
-    hippotranslation:id: 724207a7-366a-4821-9da9-e8a7585c933a
+    hippotranslation:id: 26fb2a10-b6e3-11ee-a87f-ad25b271dea1
     hippotranslation:locale: en
+    /hee:logoGroup:
+      jcr:primaryType: hippo:mirror
+      hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hee:microHero:
+      jcr:primaryType: hippogallerypicker:imagelink
+      hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      hippo:facets: []
+      hippo:modes: []
+      hippo:values: []
+    /hee:contentBlocks[1]:
+      jcr:primaryType: hee:ActionLink
+      /hee:link:
+        jcr:primaryType: hee:link
+        hee:openLinkUrlNewWindow: false
+        hee:text: Google IUrl
+        hee:url: https://google.co.uk
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hee:contentBlocks[2]:
+      jcr:primaryType: hee:blockLinksReference
+      /hee:blockLinksContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+    /hee:contentBlocks[3]:
+      jcr:primaryType: hee:contentCards
+      hee:cardGroupSummary: ''
+      hee:header: Navigation Header
+      /hee:cards[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
+      /hee:cards[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
+      /hee:cards[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+    /hee:contentBlocks[4]:
+      jcr:primaryType: hee:featuredContentReference
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
+    /hee:contentBlocks[5]:
+      jcr:primaryType: hippostd:html
+      hippostd:content: <p>Text box here</p>
+    /hee:contentBlocks[6]:
+      jcr:primaryType: hee:richTextReference
+      /hee:richTextBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /hee:contentBlocks[7]:
+      jcr:primaryType: hee:warningCalloutReference
+      /hee:warningCalloutContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f
   /page-not-found[3]:
-    jcr:primaryType: hee:landingPage
+    jcr:primaryType: hee:notFoundPage
     jcr:mixinTypes: ['mix:referenceable']
-    jcr:uuid: a2e7a54f-3ce0-471c-b6e7-ca3b968c1f80
+    jcr:uuid: 1b7ad410-b6e3-11ee-a87f-ad25b271dea1
     hee:addToAZ: false
     hee:summary: 'If you entered a web address, check it is correct. Error code:
       404'
@@ -50,9 +172,70 @@
     hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
-    hippostdpubwf:creationDate: 2023-10-16T05:27:45.528+01:00
-    hippostdpubwf:lastModificationDate: 2023-10-16T07:17:39.411+01:00
+    hippostdpubwf:creationDate: 2023-12-20T12:43:32.481Z
+    hippostdpubwf:lastModificationDate: 2023-12-20T12:46:22.910Z
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2023-10-16T07:17:41.596+01:00
-    hippotranslation:id: 724207a7-366a-4821-9da9-e8a7585c933a
+    hippostdpubwf:publicationDate: 2023-12-20T12:46:31.935Z
+    hippotranslation:id: 26fb2a10-b6e3-11ee-a87f-ad25b271dea1
     hippotranslation:locale: en
+    /hee:logoGroup:
+      jcr:primaryType: hippo:mirror
+      hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hee:microHero:
+      jcr:primaryType: hippogallerypicker:imagelink
+      hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+      hippo:facets: []
+      hippo:modes: []
+      hippo:values: []
+    /hee:contentBlocks[1]:
+      jcr:primaryType: hee:ActionLink
+      /hee:link:
+        jcr:primaryType: hee:link
+        hee:openLinkUrlNewWindow: false
+        hee:text: Google IUrl
+        hee:url: https://google.co.uk
+        hippostdpubwf:createdBy: ''
+        hippostdpubwf:creationDate: 2021-01-27T11:56:00.099Z
+        hippostdpubwf:lastModificationDate: 2021-01-27T11:56:00.098Z
+        hippostdpubwf:lastModifiedBy: ''
+        hippotranslation:id: document-type-locale-id
+        hippotranslation:locale: document-type-locale
+        /hee:document:
+          jcr:primaryType: hippo:mirror
+          hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+    /hee:contentBlocks[2]:
+      jcr:primaryType: hee:blockLinksReference
+      /hee:blockLinksContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 78aa33f3-b57c-446e-aaf2-a90858eb3b6f
+    /hee:contentBlocks[3]:
+      jcr:primaryType: hee:contentCards
+      hee:cardGroupSummary: ''
+      hee:header: Navigation Header
+      /hee:cards[1]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: fd8eeb5b-fdda-49ff-b62c-9ca1a4abe056
+      /hee:cards[2]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: c39788f5-a6b7-434c-9561-ab95c29a08f0
+      /hee:cards[3]:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 9a76f155-3a7e-41bb-8f6e-f053f3f1f107
+    /hee:contentBlocks[4]:
+      jcr:primaryType: hee:featuredContentReference
+      /hee:featuredContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 84a8a4db-d4bc-43c7-86b9-c4dd0dd26f33
+    /hee:contentBlocks[5]:
+      jcr:primaryType: hippostd:html
+      hippostd:content: <p>Text box here</p>
+    /hee:contentBlocks[6]:
+      jcr:primaryType: hee:richTextReference
+      /hee:richTextBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 533d8296-ed52-48fe-ab4c-b89e00268a68
+    /hee:contentBlocks[7]:
+      jcr:primaryType: hee:warningCalloutReference
+      /hee:warningCalloutContentBlock:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: a5d0aec9-f46e-4505-9c17-7fc6bf27403f

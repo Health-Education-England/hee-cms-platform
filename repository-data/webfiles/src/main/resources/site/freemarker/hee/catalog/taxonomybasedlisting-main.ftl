@@ -72,6 +72,14 @@
                     <div class="nhsuk-filter__groups">
                         <#list listingFilters as filter>
                             <#switch filter.queryParameter>
+                                <#case "newsType">
+                                    <#--  News type filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="news_type.label"
+                                        items=newsTypeMap!
+                                        selectedItemsList=selectedNewsTypeList />
+                                    <#break>
                                 <#case "profession">
                                     <#--  Profession filter  -->
                                     <@selectboxGroup
@@ -139,11 +147,7 @@
                             <#--  Result count: START  -->
                             <div class="hee-listing__count">
                                 <h2 class="hee-listing__title nhsuk-heading-l">
-                                    <#if pageable.total gt 0>
-                                        ${pageable.total} <@fmt.message key="results.count.text"/>
-                                    <#else>
-                                        <@fmt.message key="no_results.text"/>
-                                    </#if>
+                                    ${pageable.total} <@fmt.message key="results.count.text"/>
                                 </h2>
                             </div>
                             <#--  Result count: END  -->
@@ -155,6 +159,10 @@
                                     <#--  Adds the selected filters as hidden inputs (to resubmit them during sort selection change)  -->
                                     <#list listingFilters as filter>
                                         <#switch filter.queryParameter>
+                                            <#case "newsType">
+                                                <#--  Selected news type  -->
+                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedNewsTypeList!/>
+                                                <#break>
                                             <#case "profession">
                                                 <#--  Selected professions  -->
                                                 <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedProfessionList!/>
@@ -209,6 +217,13 @@
                             <#-- Active filters: START -->
                             <#list listingFilters as filter>
                                 <#switch filter.queryParameter>
+                                    <#case "newsType">
+                                        <#-- Active news type  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="news_type.label"
+                                            selectedFilters=selectedNewsTypeList
+                                            filterMap=newsTypeMap! />
+                                        <#break>
                                     <#case "profession">
                                         <#-- Active profession & sub-profession -->
                                         <@activeFiltersForSelectboxGroup
@@ -249,14 +264,20 @@
                         <#--  Search result summary: END  -->
 
                         <#if pageable??>
-                            <#--  Search results: START  -->
+                            <#--  Collection/listing results: START  -->
                             <div class="hee-listing__results">
-                                <@.vars["${listingType}ListItem"] items=pageable.items/>
-                            </div>
-                            <#--  Search results: END  -->
+                                <#if pageable.total=0>
+                                    <#--  No results found msg  -->
+                                    <p><strong><@fmt.message key="no_results.text"/></strong></p>
+                                <#else>
+                                    <#--  Results cards  -->
+                                    <@.vars["${listingType}ListItem"] items=pageable.items/>
 
-                            <#--  Pagination  -->
-                            <#include "../../include/pagination-nhs.ftl">
+                                    <#--  Pagination  -->
+                                    <#include "../../include/pagination-nhs.ftl">
+                                </#if>
+                            </div>
+                            <#--  Collection/listing results: END  -->
                         </#if>
                     </div>
                 </div>

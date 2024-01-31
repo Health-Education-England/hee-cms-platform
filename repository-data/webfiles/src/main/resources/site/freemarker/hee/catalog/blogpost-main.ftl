@@ -85,17 +85,11 @@
                             <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
                                 <@hee.warningCallout block=block/>
                                 <#break>
-                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
-                                <@hee.featuredContent block=block/>
-                                <#break>
                             <#case "uk.nhs.hee.web.beans.DetailsReference">
                                 <@hee.details block=block/>
                                 <#break>
                             <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
                                 <@hee.expander expander=block/>
-                                <#break>
-                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
-                                <@hee.featuredContent block=block/>
                                 <#break>
                             <#default>
                         </#switch>
@@ -105,22 +99,13 @@
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
 
-                    <#list document.contentBlocks as block>
-                        <#switch block.getClass().getName()>
-                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
-                                <@hee.featuredContent block=block/>
-                                <#break>
-                            <#default>
-                        </#switch>
-                    </#list>
-
                     <#-- Last & next reviewed dates -->
                     <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
                 </div>
             </div>
             <#--  Main sections: END  -->
 
-            <#--  Sidebar sections: START  -->            
+            <#--  Sidebar sections: START  -->
 			<aside class="page__rightbar">
 				<#--  Blog info: START  -->
 				<div class="hee-card hee-card--details">
@@ -166,9 +151,20 @@
 					</#list>
 				 </#if>
 				<#--  Right hand content blocks: END  -->
-			</aside>           
+			</aside>
             <#--  Sidebar sections: END  -->
         </div>
         <#--  Main content: END  -->
+
+        <#--  Main featured content: START  -->
+        <#if document.featuredContentBlock??>
+            <section class="page__feature">
+                <#--  Featured content  -->
+                <div class="nhsuk-width-container">
+                    <@hee.featuredContent block=document maxCards=3/>
+                </div>
+            </section>
+        </#if>
+        <#--  Main featured content: END  -->
     </main>
 </#if>

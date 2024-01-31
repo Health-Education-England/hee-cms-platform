@@ -29,6 +29,15 @@
                     multiValued=true
                     collectionPageURL=collectionPageURL/>
                 <#break>
+            <#case "GlobalNewsTypes">
+                <#--  News type  -->
+                <@renderTaxonomyInfo
+                    taxClass=taxClass
+                    taxLabel='Type'
+                    taxParameter='newsType'
+                    multiValued=true
+                    collectionPageURL=collectionPageURL/>
+                <#break>
             <#case "GlobalTags">
                 <#--  Tags  -->
                 <@renderTaxonomyInfo
