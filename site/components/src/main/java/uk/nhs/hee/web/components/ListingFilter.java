@@ -20,6 +20,16 @@ public enum ListingFilter {
     ),
 
     /**
+     * {@code News type} filter.
+     */
+    NEWS_TYPE(
+            HEEField.GLOBAL_TAXONOMY_NEWS_TYPE_WITH_ANCESTORS,
+            HEETaxonomy.HEE_GLOBAL_NEWS_TYPES,
+            Boolean.TRUE,
+            "newsType"
+    ),
+
+    /**
      * {@code Profession} filter.
      */
     PROFESSION(

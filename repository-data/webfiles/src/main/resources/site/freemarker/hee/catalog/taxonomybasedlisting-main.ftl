@@ -80,6 +80,14 @@
                                         items=clinicalDisciplineMap!
                                         selectedItemsList=selectedClinicalDisciplineList />
                                     <#break>
+                                <#case "newsType">
+                                    <#--  News type filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="news_type.label"
+                                        items=newsTypeMap!
+                                        selectedItemsList=selectedNewsTypeList />
+                                    <#break>
                                 <#case "profession">
                                     <#--  Profession filter  -->
                                     <@selectboxGroup
@@ -160,11 +168,7 @@
                             <#--  Result count: START  -->
                             <div class="hee-listing__count${(listingType='trainingprogramme')?then(' no-sort-filter', '')}">
                                 <h2 class="hee-listing__title nhsuk-heading-l">
-                                    <#if pageable.total gt 0>
-                                        ${pageable.total} <@fmt.message key="results.count.text"/>
-                                    <#else>
-                                        <@fmt.message key="no_results.text"/>
-                                    </#if>
+                                    ${pageable.total} <@fmt.message key="results.count.text"/>
                                 </h2>
                             </div>
                             <#--  Result count: END  -->
@@ -181,6 +185,10 @@
                                                     <#--  Selected clinical disciplines  -->
                                                     <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedClinicalDisciplineList!/>
                                                     <#break>
+                                                <#case "newsType">
+                                                    <#--  Selected news type  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedNewsTypeList!/>
+                                                    <#break>
                                                 <#case "profession">
                                                     <#--  Selected professions  -->
                                                     <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedProfessionList!/>
@@ -193,10 +201,6 @@
                                                 <#case "publicationType">
                                                     <#--  Selected publication types  -->
                                                     <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedPublicationTypeList!/>
-                                                    <#break>
-                                                <#case "recruitmentFormat">
-                                                    <#--  Selected recruitment formats  -->
-                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedRecruitmentFormatList!/>
                                                     <#break>
                                                 <#case "tag">
                                                     <#--  Selected tags  -->
@@ -249,6 +253,13 @@
                                             selectedFilters=selectedClinicalDisciplineList
                                             filterMap=clinicalDisciplineMap! />
                                         <#break>
+                                    <#case "newsType">
+                                        <#-- Active news type  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="news_type.label"
+                                            selectedFilters=selectedNewsTypeList
+                                            filterMap=newsTypeMap! />
+                                        <#break>
                                     <#case "profession">
                                         <#-- Active profession & sub-profession -->
                                         <@activeFiltersForSelectboxGroup
@@ -296,18 +307,28 @@
                         <#--  Search result summary: END  -->
 
                         <#if pageable??>
-                            <#--  Search results: START  -->
+                            <#--  Collection/listing results: START  -->
                             <div class="hee-listing__results">
-                                <#if listingType='trainingprogramme'>
-                                    <@trainingListItem items=pageable.items trainingProgrammeListingPageURL=trainingProgrammeListingPageURL!/>
+                                <#if pageable.total=0>
+                                    <#--  No results found msg  -->
+                                    <p><strong><@fmt.message key="no_results.text"/></strong></p>
                                 <#else>
-                                    <@.vars["${listingType}ListItem"] items=pageable.items/>
+                                    <#--  Results cards  -->
+                                    <#if listingType='trainingprogramme'>
+                                        <#--  For training programme collection  -->
+                                        <@trainingListItem
+                                            items=pageable.items
+                                            trainingProgrammeListingPageURL=trainingProgrammeListingPageURL!/>
+                                    <#else>
+                                        <#--  For other collections (blog post, news article, etc)  -->
+                                        <@.vars["${listingType}ListItem"] items=pageable.items/>
+                                    </#if>
+
+                                    <#--  Pagination  -->
+                                    <#include "../../include/pagination-nhs.ftl">
                                 </#if>
                             </div>
-                            <#--  Search results: END  -->
-
-                            <#--  Pagination  -->
-                            <#include "../../include/pagination-nhs.ftl">
+                            <#--  Collection/listing results: END  -->
                         </#if>
                     </div>
                 </div>

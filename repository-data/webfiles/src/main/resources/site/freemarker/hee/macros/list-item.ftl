@@ -208,8 +208,8 @@
                         </@listItemRow>
                     </#if>
 
-                    <@fmt.message key="publication.publish_date" var="publishDateLabel"/>
-                    <@listItemRow key="${publishDateLabel}">
+                    <@fmt.message key="published_date.text" var="publishedDateLabel"/>
+                    <@listItemRow key="${publishedDateLabel}">
                         ${item.publicationDate.time?string['dd MMMM yyyy']}
                     </@listItemRow>
                 </div>

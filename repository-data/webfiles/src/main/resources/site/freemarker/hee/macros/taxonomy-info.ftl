@@ -34,6 +34,16 @@
                     collectionPageURL=collectionPageURL
                     renderFor=renderFor/>
                 <#break>
+            <#case "GlobalNewsTypes">
+                <#--  News type  -->
+                <@renderTaxonomyInfo
+                    taxClass=taxClass
+                    taxLabel='Type'
+                    taxParameter='newsType'
+                    multiValued=true
+                    collectionPageURL=collectionPageURL
+                    renderFor=renderFor/>
+                <#break>
             <#case "GlobalTags">
                 <#--  Tags  -->
                 <@renderTaxonomyInfo

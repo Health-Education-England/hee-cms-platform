@@ -49,11 +49,6 @@ public class BlogPost extends BaseDocument {
         return getSingleProperty("hee:publicationDate");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:categories")
-    public String[] getCategories() {
-        return getMultipleProperty("hee:categories");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:logoGroup")
     public HippoBean getLogoGroup() {
         return getLinkedBean("hee:logoGroup", HippoBean.class);
@@ -72,6 +67,11 @@ public class BlogPost extends BaseDocument {
     @HippoEssentialsGenerated(internalName = "hee:hideAuthorContactDetails")
     public Boolean getHideAuthorContactDetails() {
         return getSingleProperty("hee:hideAuthorContactDetails");
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
     }
 
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)

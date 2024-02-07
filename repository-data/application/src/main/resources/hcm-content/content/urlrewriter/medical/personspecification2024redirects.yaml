@@ -1,0 +1,836 @@
+/content/urlrewriter/medical/personspecification2024redirects:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: e8b794fc-a8de-4f3f-8772-dbdaebc82632
+  hippo:name: PersonSpecification2024Redirects
+  hippo:versionHistory: f4db041f-1e3d-4b71-9f87-dd059d80887e
+  /personspecification2024redirects[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: 6518b48b-b12e-4a44-a589-c64507da1852
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2023-11-01T13:36:43.585Z
+    hippostdpubwf:lastModificationDate: 2024-01-30T10:55:02.333Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/?$</from>\r\n\
+      \  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-care-common-stem-accs-internal-medicine-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-care-common-stem-accs-internal-medicine-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-care-common-stem-accs-emergency-medicine-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-care-common-stem-accs-emergency-medicine-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-internal-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-internal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/allergy-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/allergy-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/anaesthetics-and-acute-care-common-stem-ACCS-anaesthetics-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/anaesthetics-and-acute-care-common-stem-accs-anaesthetics-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/anaesthetics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/anaesthetics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/audiovestibular-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/audiovestibular-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/aviation-and-space-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/aviation-and-space-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/broad-based-training-ct1-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/broad-based-training-ct1-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiothoracic-surgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiothoracic-surgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiothoracic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiothoracic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/thoracic-surgery-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/thoracic-surgery-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/chemical-pathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/chemical-pathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/child-and-adolescent-psychiatry-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/child-and-adolescent-psychiatry-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/child-and-adolescent-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/child-and-adolescent-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-genetics-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-genetics-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-neurophysiology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-neurophysiology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-oncology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-oncology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-pharmacology-and-therapeutics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-pharmacology-and-therapeutics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st2/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st2-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/combined-infection-training-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/combined-infection-training-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/combined-infection-training-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/combined-infection-training-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/community-sexual-and-reproductive-health-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/community-sexual-and-reproductive-health-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/core-psychiatry-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/core-psychiatry-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/core-surgical-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/core-surgical-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/dermatology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/dermatology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/diagnostic-neuropathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/diagnostic-neuropathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/emergency-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/emergency-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/emergency-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/emergency-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/endocrinology-and-diabetes-mellitus-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/endocrinology-and-diabetes-mellitus-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/forensic-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/forensic-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/gastroenterology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/gastroenterology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-adult-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-adult-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-internal-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-internal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-practice-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/medical-specialty-training/general-practice-gp/general-practice-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/medical-specialty-training/general-practice-gp/how-to-apply-for-gp-specialty-training/gp-person-specification/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/genitourinary-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/genitourinary-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/geriatric-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/geriatric-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/haematology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/haematology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/histopathology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/histopathology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/immunology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/immunology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/intensive-care-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/intensive-care-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/internal-medicine-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/internal-medicine-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/internal-medicine-training-ct3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/medical-oncology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/medical-oncology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/medical-ophthalmology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/medical-ophthalmology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurosurgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurosurgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurosurgery-st2/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurosurgery-st2-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/nuclear-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/nuclear-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/year-6---nuclear-medicine/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/nuclear-medicine-year-6-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/obstetrics-and-gynaecology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/obstetrics-and-gynaecology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/obstetrics-and-gynaecology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/obstetrics-and-gynaecology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/occupational-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/occupational-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/old-age-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/old-age-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/ophthalmology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/ophthalmology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/ophthalmology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/ophthalmology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/oral-and-maxillo-facial-surgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/oral-and-maxillofacial-surgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/oral-and-maxillo-facial-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/oral-and-maxillofacial-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/otolaryngology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/otolaryngology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-and-perinatal-pathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-and-perinatal-pathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-cardiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-cardiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics---level-1-for-st1-and-st2-entry/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/palliative-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/palliative-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/pharmaceutical-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/pharmaceutical-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/plastic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/plastic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/psychiatry-of-learning-disability-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/psychiatry-of-learning-disability-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/psychotherapy-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/psychotherapy-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/public-health-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/public-health-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/rehabilitation-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/rehabilitation-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/renal-medicine-st4-2022/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/renal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/respiratory-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/respiratory-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/rheumatology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/rheumatology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/sport-and-exercise-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/sport-and-exercise-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/trauma-and-orthopaedic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/trauma-and-orthopaedic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/urology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/urology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/vascular-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/vascular-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/nihr-academic-clinical-fellowship-acf/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/national-institute-for-health-research-(nihr)-academic-clinical-fellowship-(acf)-2024</to>\r\
+      \n</rule>"
+  /personspecification2024redirects[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 658d20d0-376f-414c-9de7-42a8fe8e401a
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostd:transferable: false
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2023-11-01T13:36:43.585Z
+    hippostdpubwf:lastModificationDate: 2024-01-30T10:56:00.114Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/?$</from>\r\n\
+      \  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-care-common-stem-accs-internal-medicine-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-care-common-stem-accs-internal-medicine-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-care-common-stem-accs-emergency-medicine-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-care-common-stem-accs-emergency-medicine-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-internal-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-internal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/allergy-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/allergy-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/anaesthetics-and-acute-care-common-stem-ACCS-anaesthetics-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/anaesthetics-and-acute-care-common-stem-accs-anaesthetics-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/anaesthetics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/anaesthetics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/audiovestibular-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/audiovestibular-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/aviation-and-space-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/aviation-and-space-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/broad-based-training-ct1-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/broad-based-training-ct1-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiothoracic-surgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiothoracic-surgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiothoracic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiothoracic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/thoracic-surgery-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/thoracic-surgery-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/chemical-pathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/chemical-pathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/child-and-adolescent-psychiatry-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/child-and-adolescent-psychiatry-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/child-and-adolescent-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/child-and-adolescent-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-genetics-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-genetics-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-neurophysiology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-neurophysiology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-oncology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-oncology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-pharmacology-and-therapeutics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-pharmacology-and-therapeutics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st2/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st2-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/combined-infection-training-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/combined-infection-training-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/combined-infection-training-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/combined-infection-training-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/community-sexual-and-reproductive-health-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/community-sexual-and-reproductive-health-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/core-psychiatry-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/core-psychiatry-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/core-surgical-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/core-surgical-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/dermatology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/dermatology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/diagnostic-neuropathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/diagnostic-neuropathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/emergency-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/emergency-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/emergency-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/emergency-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/endocrinology-and-diabetes-mellitus-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/endocrinology-and-diabetes-mellitus-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/forensic-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/forensic-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/gastroenterology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/gastroenterology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-adult-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-adult-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-internal-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-internal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-practice-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/medical-specialty-training/general-practice-gp/general-practice-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/medical-specialty-training/general-practice-gp/how-to-apply-for-gp-specialty-training/gp-person-specification/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/genitourinary-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/genitourinary-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/geriatric-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/geriatric-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/haematology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/haematology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/histopathology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/histopathology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/immunology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/immunology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/intensive-care-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/intensive-care-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/internal-medicine-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/internal-medicine-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/internal-medicine-training-ct3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/medical-oncology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/medical-oncology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/medical-ophthalmology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/medical-ophthalmology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurosurgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurosurgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurosurgery-st2/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurosurgery-st2-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/nuclear-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/nuclear-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/year-6---nuclear-medicine/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/nuclear-medicine-year-6-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/obstetrics-and-gynaecology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/obstetrics-and-gynaecology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/obstetrics-and-gynaecology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/obstetrics-and-gynaecology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/occupational-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/occupational-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/old-age-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/old-age-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/ophthalmology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/ophthalmology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/ophthalmology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/ophthalmology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/oral-and-maxillo-facial-surgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/oral-and-maxillofacial-surgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/oral-and-maxillo-facial-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/oral-and-maxillofacial-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/otolaryngology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/otolaryngology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-and-perinatal-pathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-and-perinatal-pathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-cardiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-cardiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics---level-1-for-st1-and-st2-entry/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/palliative-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/palliative-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/pharmaceutical-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/pharmaceutical-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/plastic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/plastic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/psychiatry-of-learning-disability-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/psychiatry-of-learning-disability-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/psychotherapy-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/psychotherapy-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/public-health-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/public-health-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/rehabilitation-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/rehabilitation-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/renal-medicine-st4-2022/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/renal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/respiratory-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/respiratory-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/rheumatology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/rheumatology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/sport-and-exercise-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/sport-and-exercise-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/trauma-and-orthopaedic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/trauma-and-orthopaedic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/urology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/urology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/vascular-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/vascular-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/nihr-academic-clinical-fellowship-acf/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/national-institute-for-health-research-(nihr)-academic-clinical-fellowship-(acf)-2024</to>\r\
+      \n</rule>"
+  /personspecification2024redirects[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: acc4d0c4-0553-42f0-aa09-860022efb210
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2023-11-01T13:36:43.585Z
+    hippostdpubwf:lastModificationDate: 2024-01-30T10:55:02.333Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2024-01-30T10:55:04.380Z
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/?$</from>\r\n\
+      \  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-care-common-stem-accs-internal-medicine-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-care-common-stem-accs-internal-medicine-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-care-common-stem-accs-emergency-medicine-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-care-common-stem-accs-emergency-medicine-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/acute-internal-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/acute-internal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/allergy-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/allergy-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/anaesthetics-and-acute-care-common-stem-ACCS-anaesthetics-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/anaesthetics-and-acute-care-common-stem-accs-anaesthetics-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/anaesthetics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/anaesthetics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/audiovestibular-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/audiovestibular-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/aviation-and-space-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/aviation-and-space-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/broad-based-training-ct1-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/broad-based-training-ct1-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiothoracic-surgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiothoracic-surgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/cardiothoracic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/cardiothoracic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/thoracic-surgery-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/thoracic-surgery-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/chemical-pathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/chemical-pathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/child-and-adolescent-psychiatry-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/child-and-adolescent-psychiatry-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/child-and-adolescent-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/child-and-adolescent-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-genetics-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-genetics-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-neurophysiology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-neurophysiology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-oncology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-oncology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-pharmacology-and-therapeutics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-pharmacology-and-therapeutics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st2/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st2-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/clinical-radiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/clinical-radiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/combined-infection-training-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/combined-infection-training-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/combined-infection-training-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/combined-infection-training-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/community-sexual-and-reproductive-health-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/community-sexual-and-reproductive-health-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/core-psychiatry-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/core-psychiatry-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/core-surgical-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/core-surgical-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/dermatology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/dermatology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/diagnostic-neuropathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/diagnostic-neuropathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/emergency-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/emergency-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/emergency-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/emergency-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/endocrinology-and-diabetes-mellitus-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/endocrinology-and-diabetes-mellitus-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/forensic-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/forensic-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/gastroenterology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/gastroenterology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-adult-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-adult-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-internal-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-internal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-practice-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/medical-specialty-training/general-practice-gp/general-practice-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/medical-specialty-training/general-practice-gp/how-to-apply-for-gp-specialty-training/gp-person-specification/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-practice-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/general-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/general-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/genitourinary-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/genitourinary-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/geriatric-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/geriatric-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/haematology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/haematology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/histopathology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/histopathology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/immunology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/immunology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/intensive-care-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/intensive-care-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/internal-medicine-training-ct1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/internal-medicine-training-ct1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/internal-medicine-training-ct3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/medical-oncology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/medical-oncology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/medical-ophthalmology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/medical-ophthalmology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurosurgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurosurgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/neurosurgery-st2/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/neurosurgery-st2-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/nuclear-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/nuclear-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/year-6---nuclear-medicine/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/nuclear-medicine-year-6-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/obstetrics-and-gynaecology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/obstetrics-and-gynaecology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/obstetrics-and-gynaecology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/obstetrics-and-gynaecology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/occupational-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/occupational-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/old-age-psychiatry-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/old-age-psychiatry-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/ophthalmology-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/ophthalmology-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/ophthalmology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/ophthalmology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/oral-and-maxillo-facial-surgery-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/oral-and-maxillofacial-surgery-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/oral-and-maxillo-facial-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/oral-and-maxillofacial-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/otolaryngology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/otolaryngology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-and-perinatal-pathology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-and-perinatal-pathology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-cardiology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-cardiology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatric-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatric-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics---level-1-for-st1-and-st2-entry/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/paediatrics-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/paediatrics-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/palliative-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/palliative-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/pharmaceutical-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/pharmaceutical-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/plastic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/plastic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/psychiatry-of-learning-disability-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/psychiatry-of-learning-disability-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/psychotherapy-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/psychotherapy-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/public-health-st1/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/public-health-st1-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/rehabilitation-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/rehabilitation-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/renal-medicine-st4-2022/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/renal-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/respiratory-medicine-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/respiratory-medicine-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/rheumatology-st4/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/rheumatology-st4-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/sport-and-exercise-medicine-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/sport-and-exercise-medicine-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/trauma-and-orthopaedic-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/trauma-and-orthopaedic-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/urology-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/urology-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/vascular-surgery-st3/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/vascular-surgery-st3-2024</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">medical.hee.nhs.uk</condition>\r\
+      \n  <from>^/medical-training-recruitment/person-specifications/nihr-academic-clinical-fellowship-acf/?$</from>\r\
+      \n  <to type=\"permanent-redirect\" last=\"true\">/medical-training-recruitment/medical-specialty-training/person-specifications/person-specifications-2024/national-institute-for-health-research-(nihr)-academic-clinical-fellowship-(acf)-2024</to>\r\
+      \n</rule>"

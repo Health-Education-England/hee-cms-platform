@@ -29,11 +29,6 @@ public class News extends BaseDocument {
         return getSingleProperty("hee:author");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:categories")
-    public String[] getCategories() {
-        return getMultipleProperty("hee:categories");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:publicationDate")
     public Calendar getPublicationDate() {
         return getSingleProperty("hee:publicationDate");
@@ -79,6 +74,11 @@ public class News extends BaseDocument {
         return getSingleProperty("hee:hideAuthorContactDetails");
     }
 
+    @HippoEssentialsGenerated(internalName = "hee:featuredContentBlock")
+    public HippoBean getFeaturedContentBlock() {
+        return getLinkedBean("hee:featuredContentBlock", HippoBean.class);
+    }
+
     @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyProfessions", allowModifications = false)
     public TaxonomyClassification getGlobalTaxonomyProfessions() throws RepositoryException {
         return TaxonomyTemplateUtils.getTaxonomyClassification(
@@ -101,5 +101,13 @@ public class News extends BaseDocument {
                 this.getNode(),
                 "hee:globalTaxonomyTags",
                 HEETaxonomy.HEE_GLOBAL_TAGS);
+    }
+
+    @HippoEssentialsGenerated(internalName = "hee:globalTaxonomyNewsType", allowModifications = false)
+    public TaxonomyClassification getGlobalTaxonomyNewsType() throws RepositoryException {
+        return TaxonomyTemplateUtils.getTaxonomyClassification(
+                this.getNode(),
+                "hee:globalTaxonomyNewsType",
+                HEETaxonomy.HEE_GLOBAL_NEWS_TYPES);
     }
 }
