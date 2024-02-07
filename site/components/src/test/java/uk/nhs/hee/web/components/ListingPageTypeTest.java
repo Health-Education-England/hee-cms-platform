@@ -84,6 +84,7 @@ public class ListingPageTypeTest {
         assertThat(newsListing.getListingFilters()).containsExactly(
                 ListingFilter.PROFESSION,
                 ListingFilter.TOPIC,
+                ListingFilter.NEWS_TYPE,
                 ListingFilter.TAG
         );
     }
