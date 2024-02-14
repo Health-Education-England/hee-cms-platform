@@ -79,7 +79,8 @@ public class NextReviewDateNotification implements RepositoryJob {
             if (!StringUtils.isBlank(documentTypes)) {
                 // Query documents to be next reviewed
                 final List<Node> documentsToBeReviewed = getDocumentsToBeReviewed(session, documentTypes);
-                LOGGER.info("Documents to be next reviewed = {}", documentsToBeReviewed);
+                LOGGER.debug("Documents to be reviewed = {}", documentsToBeReviewed.stream()
+                        .map(JcrUtils::getNodePathQuietly).collect(Collectors.toList()));
 
                 if (!documentsToBeReviewed.isEmpty()) {
                     // Notify content or channel team
@@ -243,8 +244,8 @@ public class NextReviewDateNotification implements RepositoryJob {
         }
         documentsWithLinksForHTMLBody.append("</ul>");
         // Remove the trailing new line (\n) from the built documents-to-be-reviewed
-        if (documentsWithLinksForPlainTextBody.length() >  0 &&
-                documentsWithLinksForPlainTextBody.charAt(documentsWithLinksForPlainTextBody.length() -  1) == '\n') {
+        if (documentsWithLinksForPlainTextBody.length() > 0 &&
+                documentsWithLinksForPlainTextBody.charAt(documentsWithLinksForPlainTextBody.length() - 1) == '\n') {
             documentsWithLinksForPlainTextBody.setLength(documentsWithLinksForPlainTextBody.length() - 1);
         }
 
@@ -253,6 +254,9 @@ public class NextReviewDateNotification implements RepositoryJob {
                 EMAIL_CONTENT_PLACEHOLDER_DOCUMENTS_WITH_LINKS, documentsWithLinksForHTMLBody.toString());
         formattedEmailBodyPlainText = formattedEmailBodyPlainText.replace(
                 EMAIL_CONTENT_PLACEHOLDER_DOCUMENTS_WITH_LINKS, documentsWithLinksForPlainTextBody.toString());
+
+        LOGGER.debug("Formatted email body HTML: {}", formattedEmailBodyHTML);
+        LOGGER.debug("Formatted email body plain text: {}", formattedEmailBodyPlainText);
 
         return Pair.of(formattedEmailBodyHTML, formattedEmailBodyPlainText);
     }
