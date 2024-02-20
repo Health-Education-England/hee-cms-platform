@@ -27,6 +27,11 @@
                 <#--  Title  -->
                 <h1>${document.title}</h1>
 
+                <#--  Subtitle  -->
+                <#if document.subtitle?has_content>
+                    <span class="nhsuk-caption-xl">${document.subtitle}</span>
+                </#if>
+
                 <#--  Summary  -->
                 <#if document.summary?has_content>
                     <p class="nhsuk-lede-text">

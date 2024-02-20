@@ -229,6 +229,12 @@ definitions:
               hst:iconpath: _cmsinternal/images/catalog-component-icons/simple-content.svg
               hst:label: Training Programme Page
               hst:template: trainingprogrammepage-main
+            /training-programme-listing:
+              jcr:primaryType: hst:containeritemcomponent
+              hst:componentclassname: uk.nhs.hee.web.components.TrainingProgrammeListingPageComponent
+              hst:iconpath: _cmsinternal/images/catalog-component-icons/generic-list.svg
+              hst:label: Training programme collection page
+              hst:template: taxonomybasedlisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]

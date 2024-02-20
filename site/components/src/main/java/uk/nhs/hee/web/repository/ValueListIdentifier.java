@@ -93,32 +93,7 @@ public enum ValueListIdentifier {
     /**
      * {@code newsletterProfessions} value-list identifier.
      */
-    NEWSLETTER_PROFESSIONS("newsletterProfessions"),
-
-    /**
-     * {@code recruitment-format} value-list identifier.
-     */
-    RECRUITMENT_FORMAT("recruitmentFormat"),
-
-    /**
-     * {@code trainingType} value-list identifier.
-     */
-    TRAINING_TYPE("trainingType"),
-
-    /**
-     * {@code topic} value-list identifier.
-     */
-    TOPIC("trainingTopic"),
-
-    /**
-     * {@code clinicleDiscipline} value-list identifier.
-     */
-    CLINICAL_DISCIPLINE("clinicalDiscipline"),
-
-    /**
-     * {@code profession} value-list identifier.
-     */
-    PROFESSION("trainingProfession");
+    NEWSLETTER_PROFESSIONS("newsletterProfessions");
 
 
     private final String name;
