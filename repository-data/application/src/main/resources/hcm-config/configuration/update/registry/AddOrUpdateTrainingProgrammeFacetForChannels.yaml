@@ -31,19 +31,17 @@ definitions:
         \ :\r\n                channelNode.addNode(REL_PATH_TRAINING_PROGRAMME_FACETS,\
         \ \"hippofacnav:facetnavigation\")\r\n        facetNode.setProperty(HippoNodeType.HIPPO_DOCBASE,\
         \ channelNode.getIdentifier())\r\n        facetNode.setProperty(\"hippofacnav:facets\"\
-        , [\r\n                \"hee:globalTaxonomyTrainingType__with_ancestors\"\
-        ,\r\n                \"hee:globalTaxonomyProfessions__with_ancestors\",\r\n\
-        \                \"hee:globalTaxonomyHealthcareTopics__with_ancestors\",\r\
+        , [\r\n                \"hee:globalTaxonomyProfessions__with_ancestors\",\r\
+        \n                \"hee:globalTaxonomyHealthcareTopics__with_ancestors\",\r\
         \n                \"hee:globalTaxonomyClinicalDiscipline__with_ancestors\"\
-        ,\r\n                \"hee:globalRecruitmentFormat__with_ancestors\"\r\n \
-        \       ] as String[])\r\n        facetNode.setProperty(\"hippofacnav:facetnodenames\"\
-        , [\r\n                'hee:globalTaxonomyTrainingType__with_ancestors${sortby:\"\
-        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyProfessions__with_ancestors${sortby:\"\
+        ,\r\n                \"hee:globalTaxonomyTrainingType__with_ancestors\"\r\n\
+        \        ] as String[])\r\n        facetNode.setProperty(\"hippofacnav:facetnodenames\"\
+        , [\r\n                'hee:globalTaxonomyProfessions__with_ancestors${sortby:\"\
         facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyHealthcareTopics__with_ancestors${sortby:\"\
         facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyClinicalDiscipline__with_ancestors${sortby:\"\
-        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalRecruitmentFormat__with_ancestors${sortby:\"\
-        facetvalue\", sortorder:\"ascending\"}',\r\n        ] as String[])\r\n   \
-        \     facetNode.setProperty(\"hippofacnav:filters\", [\"jcr:primaryType=hee:trainingProgrammePage\"\
+        facetvalue\", sortorder:\"ascending\"}',\r\n                'hee:globalTaxonomyTrainingType__with_ancestors${sortby:\"\
+        facetvalue\", sortorder:\"ascending\"}'\r\n        ] as String[])\r\n    \
+        \    facetNode.setProperty(\"hippofacnav:filters\", [\"jcr:primaryType=hee:trainingProgrammePage\"\
         ] as String[])\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n   \
         \     throw new UnsupportedOperationException('Updater does not implement\
         \ undoUpdate method')\r\n    }\r\n}"
