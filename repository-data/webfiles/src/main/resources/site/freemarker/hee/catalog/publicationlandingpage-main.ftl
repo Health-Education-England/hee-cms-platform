@@ -6,7 +6,6 @@
 <#include "../macros/internal-link.ftl">
 <#include "../macros/publication-partial-info.ftl">
 <#include '../utils/date-util.ftl'>
-<#include "../utils/document-formats.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
 
