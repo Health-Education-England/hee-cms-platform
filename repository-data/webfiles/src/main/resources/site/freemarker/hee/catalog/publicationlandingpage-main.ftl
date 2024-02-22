@@ -58,7 +58,7 @@
                 <div class="hee-publication-doc__icon__corner__triangle"></div>
             </div>
         </div>
-        <div class="hee-publication-doc__icon__title">${fileType}</div>
+        <div class="hee-publication-doc__icon__title" aria-hidden="true">${fileType}</div>
     </div>
 </#macro>
 
