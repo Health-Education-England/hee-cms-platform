@@ -143,6 +143,7 @@ definitions:
             hint: Page title must be 60 characters or fewer.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+              maxlength: '60'
           /subtitle:
             jcr:primaryType: frontend:plugin
             caption: Page subtitle
