@@ -2,6 +2,16 @@
 <#-- @ftlvariable name="selectedFilters" type="java.util.List" -->
 <#-- @ftlvariable name="filterMap" type="java.util.Map" -->
 
+<#--  Renders active/selected listing filter tags for legacy checkbox-based filters
+      (used on casestudy, searchbank, etc listing pages)  -->
+<#macro legacyActiveFiltersForCheckboxGroup selectedFilters filterMap>
+    <#if selectedFilters?has_content && doesFiltersContainsAnySelectedFilter(selectedFilters, filterMap)>
+        <div class="hee-listing__tags">
+            <@filterTags selectedFilters=selectedFilters filterMap=filterMap />
+        </div>
+    </#if>
+</#macro>
+
 <#--  Renders active/selected listing filter tags for checkbox-based filters  -->
 <#macro activeFiltersForCheckboxGroup labelKey selectedFilters filterMap>
     <#if selectedFilters?has_content && doesFiltersContainsAnySelectedFilter(selectedFilters, filterMap)>
