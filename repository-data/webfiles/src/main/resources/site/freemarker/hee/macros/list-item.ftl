@@ -3,6 +3,7 @@
 <#include "internal-link.ftl">
 <#include '../utils/author-util.ftl'>
 <#include "../macros/taxonomy-info.ftl">
+<#include "../utils/doc-util.ftl">
 
 <#--  Lists blog post result items  -->
 <#macro blogListItem items>
@@ -367,6 +368,14 @@
                             <@listItemRow key="${publishedDateLabel}">
                                 ${item.publishedDate}
                             </@listItemRow>
+
+                            <#--  File type  -->
+                            <@listItemRowForFileType file=item.document />
+
+                            <#--  File size  -->
+                            <@listItemRow key="File size">
+                                ${getDocSize(item.document)}
+                            </@listItemRow>
                         </div>
                         <#--  Case study details: END   -->
 
@@ -427,6 +436,16 @@
                             <@listItemRow key="${publishedDateLabel}">
                                 ${item.publishedDate}
                             </@listItemRow>
+
+                            <#if strategyDocumentURL?has_content>
+                                <#--  File type  -->
+                                <@listItemRowForFileType file=item.strategyDocument />
+
+                                <#--  File size  -->
+                                <@listItemRow key="File size">
+                                    ${getDocSize(item.strategyDocument)}
+                                </@listItemRow>
+                            </#if>
                         </div>
                         <#--  Search bank details: END  -->
 
@@ -540,5 +559,14 @@
             ${key}:
         </span>
         <span><#nested></span>
+    </div>
+</#macro>
+
+<#--  Renders a list item for file type  -->
+<#macro listItemRowForFileType file>
+    <#assign docExtn="${getDocExtn(file)}">
+    <div class="hee-listing-item__details__row">
+        <span class="hee-listing-item__details__label"><@fmt.message key="file_type"/>:</span>
+        <span class="hee-resources__tag hee-resources__${docExtn}">${docExtn?upper_case}</span>
     </div>
 </#macro>
