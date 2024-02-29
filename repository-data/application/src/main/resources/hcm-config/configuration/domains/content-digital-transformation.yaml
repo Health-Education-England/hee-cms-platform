@@ -16,6 +16,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/digital-transformation/settings
+        /exclude-digital-transformation-media-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/digital-transformation/components/national/media-embed
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:

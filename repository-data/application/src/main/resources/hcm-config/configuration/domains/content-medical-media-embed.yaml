@@ -1,0 +1,17 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-medical-media-embed:
+        jcr:primaryType: hipposys:domain
+        /content-domain:
+          jcr:primaryType: hipposys:domainrule
+          /media-embed-and-descendants:
+            jcr:primaryType: hipposys:facetrule
+            hipposys:equals: true
+            hipposys:facet: jcr:path
+            hipposys:type: Reference
+            hipposys:value: /content/documents/medical/components/national/media
+        /readonly:
+          jcr:primaryType: hipposys:authrole
+          hipposys:role: readonly
+          hipposys:userrole: xm.content.user
+          hipposys:users: [ ]
