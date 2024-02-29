@@ -20,7 +20,6 @@ import javax.jcr.Session;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryManager;
 import javax.mail.MessagingException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -28,7 +27,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * The repository job class which sends email notification with documents to be reviewed in the next 14 days.
+ * The repository job class which sends email notification with documents to be reviewed in the next 14 to 21 days.
  */
 public class NextReviewDateNotification implements RepositoryJob {
     // Logger
@@ -43,6 +42,7 @@ public class NextReviewDateNotification implements RepositoryJob {
     // Email attributes configured on the job
     public static final String ATTRIBUTE_EMAIL_FROM_ADDRESS = "emailFromAddress";
     public static final String ATTRIBUTE_EMAIL_FROM_NAME = "emailFromName";
+    public static final String ATTRIBUTE_EMAIL_REPLY_TO_ADDRESS = "emailReplyToAddress";
     public static final String ATTRIBUTE_EMAIL_TO_ADDRESSES = "emailToAddresses";
     public static final String ATTRIBUTE_EMAIL_SUBJECT = "emailSubject";
     public static final String ATTRIBUTE_EMAIL_BODY_PLAIN_TEXT_TEMPLATE = "emailBodyPlainTextTemplate";
@@ -60,10 +60,9 @@ public class NextReviewDateNotification implements RepositoryJob {
     private static final String DOCUMENTS_TO_BE_NEXT_REVIEWED_XPATH_QUERY =
             "/jcr:root/content/documents//element(*, hippo:handle)" +
                     "/*[(%s) and @hippostd:state='published']/element(hee:pageLastNextReview, hee:pageLastNextReview)" +
-                    "[@%s and @%s = %s]/../..";
+                    "[@%s and @%s >= %s and @%s < %s]/../..";
 
     // Email content/body text placeholders
-    public static final String EMAIL_CONTENT_PLACEHOLDER_NEXT_REVIEW_DATE = "{{next_review_date}}";
     public static final String EMAIL_CONTENT_PLACEHOLDER_DOCUMENTS_WITH_LINKS = "{{documents_with_links}}";
 
     @Override
@@ -79,14 +78,14 @@ public class NextReviewDateNotification implements RepositoryJob {
             if (!StringUtils.isBlank(documentTypes)) {
                 // Query documents to be next reviewed
                 final List<Node> documentsToBeReviewed = getDocumentsToBeReviewed(session, documentTypes);
-                LOGGER.debug("Documents to be reviewed = {}", documentsToBeReviewed.stream()
+                LOGGER.info("Documents to be reviewed = {}", documentsToBeReviewed.stream()
                         .map(JcrUtils::getNodePathQuietly).collect(Collectors.toList()));
 
                 if (!documentsToBeReviewed.isEmpty()) {
                     // Notify content or channel team
                     notify(context, documentsToBeReviewed);
                 } else {
-                    LOGGER.info("There are no documents to be reviewed in the next 14 days!");
+                    LOGGER.info("There are no documents to be reviewed in the next 14 to 21 days!");
                 }
             } else {
                 LOGGER.warn("Attribute '{}' seems to be either not set or empty. " +
@@ -102,22 +101,28 @@ public class NextReviewDateNotification implements RepositoryJob {
     }
 
     /**
-     * Returns the list of published documents (of {@code documentTypes}) which requires reviewing in the next 14 days.
+     * Returns the list of published documents (of {@code documentTypes}) which requires reviewing
+     * in the next 14 to 21 days.
      *
      * @param session       the {@link Session} instance.
      * @param documentTypes the comma separated list of document types whose documents require reviewing.
-     * @return the list of published documents (of {@code documentTypes}) which requires reviewing in the next 14 days.
+     * @return the list of published documents (of {@code documentTypes}) which requires reviewing
+     * in the next 14 to 21 days.
      * @throws RepositoryException thrown when an error occurs during document search.
      */
     private List<Node> getDocumentsToBeReviewed(final Session session, final String documentTypes)
             throws RepositoryException {
         final QueryManager queryManager = session.getWorkspace().getQueryManager();
+        final String nextReviewDateWithDayResolution =
+                DateTools.getPropertyForResolution(PROPERTY_NEXT_REVIEWED, DateTools.Resolution.DAY);
         final String formattedQueryString = String.format(
                 DOCUMENTS_TO_BE_NEXT_REVIEWED_XPATH_QUERY,
                 getFormattedPrimaryDocumentTypes(documentTypes),
                 PROPERTY_NEXT_REVIEWED,
-                DateTools.getPropertyForResolution(PROPERTY_NEXT_REVIEWED, DateTools.Resolution.DAY),
-                DateTools.createXPathConstraint(session, get14DaysFromToday(), DateTools.Resolution.DAY));
+                nextReviewDateWithDayResolution,
+                DateTools.createXPathConstraint(session, getXDaysFromToday(14), DateTools.Resolution.DAY),
+                nextReviewDateWithDayResolution,
+                DateTools.createXPathConstraint(session, getXDaysFromToday(21), DateTools.Resolution.DAY));
         LOGGER.debug("Formatted documents-to-be-next-reviewed query: {}", formattedQueryString);
 
         final Query query = queryManager.createQuery(formattedQueryString, Query.XPATH);
@@ -137,10 +142,16 @@ public class NextReviewDateNotification implements RepositoryJob {
                 .collect(Collectors.joining(" or "));
     }
 
-    private Calendar get14DaysFromToday() {
-        final Calendar fourteenDaysFromToday = Calendar.getInstance();
-        fourteenDaysFromToday.add(Calendar.DATE, 14);
-        return fourteenDaysFromToday;
+    /**
+     * Returns a {@link Calendar} instance of X {@code amount} of days from today.
+     *
+     * @param amount the amount of days (DAY_OF_MONTH) to be added from today.
+     * @return the {@link Calendar} instance of X {@code amount} of days from today.
+     */
+    private Calendar getXDaysFromToday(final int amount) {
+        final Calendar xDaysFromToday = Calendar.getInstance();
+        xDaysFromToday.add(Calendar.DATE, amount);
+        return xDaysFromToday;
     }
 
     /**
@@ -161,19 +172,21 @@ public class NextReviewDateNotification implements RepositoryJob {
             // Get email configurations/attributes
             final String fromEmail = StringUtils.trim(context.getAttribute(ATTRIBUTE_EMAIL_FROM_ADDRESS));
             final String fromName = StringUtils.defaultString(context.getAttribute(ATTRIBUTE_EMAIL_FROM_NAME));
+            final String replyToEmail = StringUtils.defaultString(context.getAttribute(ATTRIBUTE_EMAIL_REPLY_TO_ADDRESS));
             final String toEmails = StringUtils.trim(context.getAttribute(ATTRIBUTE_EMAIL_TO_ADDRESSES));
             final String subject = StringUtils.trim(context.getAttribute(ATTRIBUTE_EMAIL_SUBJECT));
             final String bodyHTMLTemplate = StringUtils.trim(context.getAttribute(ATTRIBUTE_EMAIL_BODY_HTML_TEMPLATE));
             final String bodyPlainTextTemplate =
                     StringUtils.trim(context.getAttribute(ATTRIBUTE_EMAIL_BODY_PLAIN_TEXT_TEMPLATE));
 
-            // Create message
+            // Create mail session
             final javax.mail.Session mailSession = MailUtils.getMailSession();
             if (mailSession == null) {
                 LOGGER.warn("Email session isn't available. Halting the job for now!");
                 return;
             }
 
+            // Prepare email message
             final MailAddress fromMailAddress = new MailAddressImpl(fromName, fromEmail);
             final MailSender mailSender = new MailSenderImpl(mailSession, fromMailAddress, fromMailAddress);
 
@@ -187,6 +200,11 @@ public class NextReviewDateNotification implements RepositoryJob {
                     formattedEmailBody.getLeft(),
                     formattedEmailBody.getRight());
 
+            if (StringUtils.isNotEmpty(replyToEmail)) {
+                mail.setReplyTo(MailUtils.createAddress(StringUtils.EMPTY, replyToEmail));
+            }
+
+            // Finally, send the email message
             mail.sendMessage();
         } catch (final MessagingException e) {
             LOGGER.error("Caught error '{}' while preparing and sending the email message", e.getMessage(), e);
@@ -195,28 +213,18 @@ public class NextReviewDateNotification implements RepositoryJob {
 
     /**
      * Returns the formatted email body HTML and plain text as a {@link Pair}
-     * by substituting the placeholders (e.g. {{next_review_date}}, {{documents_with_links}}, etc.)
-     * with appropriate values.
+     * by substituting the placeholders (e.g. {{documents_with_links}}, etc.) with appropriate values.
      *
      * @param emailBodyHTML         the email body HTML which needs to be formatted.
      * @param emailBodyPlainText    the email body plain text which needs to be formatted.
      * @param documentsToBeReviewed the {@link List} of documents which needs to be reviewed.
      * @return the formatted email body HTML and plain text as a {@link Pair}
-     * by substituting the placeholders (e.g. {{next_review_date}}, {{documents_with_links}}, etc.)
-     * with appropriate values.
+     * by substituting the placeholders (e.g. {{documents_with_links}}, etc.) with appropriate values.
      */
     private Pair<String, String> formatEmailBody(
             final String emailBodyHTML,
             final String emailBodyPlainText,
             final List<Node> documentsToBeReviewed) {
-        // Format/update '{{next_review_date}}' placeholder with 14 days from day in 'd MMMM yyyy' format
-        final String formatted14DaysFromToday =
-                new SimpleDateFormat("d MMMM yyyy").format(get14DaysFromToday().getTime());
-        String formattedEmailBodyHTML = emailBodyHTML.replace(
-                EMAIL_CONTENT_PLACEHOLDER_NEXT_REVIEW_DATE, formatted14DaysFromToday);
-        String formattedEmailBodyPlainText = emailBodyPlainText.replace(
-                EMAIL_CONTENT_PLACEHOLDER_NEXT_REVIEW_DATE, formatted14DaysFromToday);
-
         // Build documents-to-be-reviewed as a list of links
         final StringBuilder documentsWithLinksForHTMLBody = new StringBuilder("<ul>");
         final StringBuilder documentsWithLinksForPlainTextBody = new StringBuilder();
@@ -250,9 +258,9 @@ public class NextReviewDateNotification implements RepositoryJob {
         }
 
         // Finally, format/update '{{documents_with_links}}' placeholder with a list of document links to be reviewed.
-        formattedEmailBodyHTML = formattedEmailBodyHTML.replace(
+        final String formattedEmailBodyHTML = emailBodyHTML.replace(
                 EMAIL_CONTENT_PLACEHOLDER_DOCUMENTS_WITH_LINKS, documentsWithLinksForHTMLBody.toString());
-        formattedEmailBodyPlainText = formattedEmailBodyPlainText.replace(
+        final String formattedEmailBodyPlainText = emailBodyPlainText.replace(
                 EMAIL_CONTENT_PLACEHOLDER_DOCUMENTS_WITH_LINKS, documentsWithLinksForPlainTextBody.toString());
 
         LOGGER.debug("Formatted email body HTML: {}", formattedEmailBodyHTML);

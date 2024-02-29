@@ -5,13 +5,14 @@ definitions:
       /NextReviewDateNotification:
         jcr:primaryType: hipposched:repositoryjob
         hipposched:attributeNames: [documentTypes, emailFromAddress, emailFromName,
-          emailToAddresses, emailSubject, emailBodyHTMLTemplate, emailBodyPlainTextTemplate]
+          emailReplyToAddress, emailToAddresses, emailSubject, emailBodyHTMLTemplate,
+          emailBodyPlainTextTemplate]
         hipposched:attributeValues: ['hee:blogPost,hee:guidance,hee:report,hee:trainingProgrammePage',
-          nwpsupport@hee.nhs.uk, Do not reply, nwpsupport@hee.nhs.uk, '[Action required]
-            Documents review', "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n    <head>\r\
-            \n        <meta charset=\"UTF-8\">\r\n        <title>Documents next review\
-            \ date email notification</title>\r\n    </head>\r\n    <body>\r\n   \
-            \     <p>Dear Content Team,</p>\r\n        <p>This is a gentle reminder\
+          nwpsupport@hee.nhs.uk, Do not reply, nwpsupport@hee.nhs.uk, nwpsupport@hee.nhs.uk,
+          '[Action required] Documents review', "<!DOCTYPE html>\r\n<html lang=\"\
+            en\">\r\n    <head>\r\n        <meta charset=\"UTF-8\">\r\n        <title>Documents\
+            \ next review date email notification</title>\r\n    </head>\r\n    <body>\r\
+            \n        <p>Dear Content Team,</p>\r\n        <p>This is a gentle reminder\
             \ that the next review dates for the following documents are commencing\
             \ in 14 to 21 days.\r\n            Please make sure to review them.</p>\r\
             \n        {{documents_with_links}}\r\n        <p>Thank you,<br>NWP Support</p>\r\
