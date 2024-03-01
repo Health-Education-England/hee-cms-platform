@@ -16,6 +16,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/dental/settings
+        /exclude-medical-media-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/dental/components/national/media
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
