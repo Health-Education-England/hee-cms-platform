@@ -12,6 +12,15 @@ definitions:
             hipposys:value: /content/documents/website-testing/components/national/media
         /readonly:
           jcr:primaryType: hipposys:authrole
+          hipposys:groups:
+            .meta:category: system
+            .meta:add-new-system-values: true
+            type: string
+            value: [ website-testing-author, website-testing-editor ]
           hipposys:role: readonly
-          hipposys:userrole: xm.content.user
-          hipposys:users: [ ]
+          hipposys:users:
+            .meta:category: system
+            .meta:add-new-system-values: true
+            operation: override
+            type: string
+            value: [ ]
