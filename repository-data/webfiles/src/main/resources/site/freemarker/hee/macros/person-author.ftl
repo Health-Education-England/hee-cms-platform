@@ -50,9 +50,9 @@
 
                 <#--  Department  -->
                 <#if person.department??>
-                    <p class="hee-card__department" aria-label="Department">${person.department.name}</p>
+                    <p class="hee-card__department" aria-label="Department ${person.department.name}">${person.department.name}</p>
                 <#elseif person.departmentName?has_content>
-                    <p class="hee-card__department" aria-label="Department">${person.departmentName}</p>
+                    <p class="hee-card__department" aria-label="Department ${person.departmentName}">${person.departmentName}</p>
                 </#if>
 
                 <#--  Organisation  -->
