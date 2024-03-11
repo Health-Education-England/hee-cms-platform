@@ -13,19 +13,32 @@ public class HEEFieldTest {
         assertThat(HEEField.COMPLETED_DATE.getName()).isEqualTo("hee:completedDate");
         assertThat(HEEField.DATE.getName()).isEqualTo("hee:date");
         assertThat(HEEField.DOCUMENT_TITLE.getName()).isEqualTo("hee:title");
+        assertThat(HEEField.GLOBAL_TAXONOMY_CLINICAL_DISCIPLINE.getName())
+                .isEqualTo("hee:globalTaxonomyClinicalDiscipline");
+        assertThat(HEEField.GLOBAL_TAXONOMY_CLINICAL_DISCIPLINE_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyClinicalDiscipline__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName())
+                .isEqualTo("hee:globalTaxonomyHealthcareTopics");
+        assertThat(HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyHealthcareTopics__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_NEWS_TYPE.getName()).isEqualTo("hee:globalTaxonomyNewsType");
+        assertThat(HEEField.GLOBAL_TAXONOMY_NEWS_TYPE_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyNewsType__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_PROFESSIONS.getName()).isEqualTo("hee:globalTaxonomyProfessions");
+        assertThat(HEEField.GLOBAL_TAXONOMY_PROFESSIONS_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyProfessions__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()).isEqualTo("hee:globalTaxonomyPublicationType");
+        assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyPublicationType__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_TRAINING_TYPE.getName()).isEqualTo("hee:globalTaxonomyTrainingType");
+        assertThat(HEEField.GLOBAL_TAXONOMY_TRAINING_TYPE_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyTrainingType__with_ancestors");
+        assertThat(HEEField.GLOBAL_TAXONOMY_TAGS.getName()).isEqualTo("hee:globalTaxonomyTags");
+        assertThat(HEEField.GLOBAL_TAXONOMY_TAGS_WITH_ANCESTORS.getName())
+                .isEqualTo("hee:globalTaxonomyTags__with_ancestors");
         assertThat(HEEField.IMPACT_GROUP.getName()).isEqualTo("hee:impactGroup");
         assertThat(HEEField.LISTING_TYPE.getName()).isEqualTo("hee:listingPageType");
         assertThat(HEEField.PUBLICATION_DATE.getName()).isEqualTo("hee:publicationDate");
-        assertThat(HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS.getName()).isEqualTo("hee:globalTaxonomyHealthcareTopics");
-        assertThat(HEEField.GLOBAL_TAXONOMY_HEALTHCARE_TOPICS_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyHealthcareTopics__with_ancestors");
-        assertThat(HEEField.GLOBAL_TAXONOMY_NEWS_TYPE.getName()).isEqualTo("hee:globalTaxonomyNewsType");
-        assertThat(HEEField.GLOBAL_TAXONOMY_NEWS_TYPE_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyNewsType__with_ancestors");
-        assertThat(HEEField.GLOBAL_TAXONOMY_PROFESSIONS.getName()).isEqualTo("hee:globalTaxonomyProfessions");
-        assertThat(HEEField.GLOBAL_TAXONOMY_PROFESSIONS_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyProfessions__with_ancestors");
-        assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE.getName()).isEqualTo("hee:globalTaxonomyPublicationType");
-        assertThat(HEEField.GLOBAL_TAXONOMY_PUBLICATION_TYPE_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyPublicationType__with_ancestors");
-        assertThat(HEEField.GLOBAL_TAXONOMY_TAGS.getName()).isEqualTo("hee:globalTaxonomyTags");
-        assertThat(HEEField.GLOBAL_TAXONOMY_TAGS_WITH_ANCESTORS.getName()).isEqualTo("hee:globalTaxonomyTags__with_ancestors");
         assertThat(HEEField.SUBMITTED_DATE.getName()).isEqualTo("hee:submittedDate");
         assertThat(HEEField.TOPICS.getName()).isEqualTo("hee:topics");
     }

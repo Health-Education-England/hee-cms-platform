@@ -4,6 +4,7 @@
 <#import "../macros/components.ftl" as hee>
 <#include "../macros/publication-partial-info.ftl">
 <#include "../utils/date-util.ftl">
+<#include "../utils/doc-util.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
@@ -14,25 +15,20 @@
     </@hst.link>
 
     <div class="hee-card--details__item">
-        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.title}">
+        <#assign docExtn="${getDocExtn(assetLink.assetData.asset)}">
+        <#assign docSize="${getDocSize(assetLink.assetData.asset)}">
+
+        <a class="hee-resources__link" href="${fileURL}" title="${assetLink.title}" aria-label="${getDocAriaLabel(assetLink.title, docExtn, docSize)}">
             <div class="hee-resources__wrapper">
                 <#--  File name  -->
                 <span class="hee-resources__text">${assetLink.title}</span>
 
-                <#--  File size: START  -->
-                <#if (assetLink.assetData.asset.lengthMB > 1)>
-                    <#assign docSize="${assetLink.assetData.asset.lengthMB?string('0.00')}MB">
-                <#else>
-                    <#assign docSize="${assetLink.assetData.asset.lengthKB?string('0')}KB">
-                </#if>
+                <#--  File size  -->
                 <span class="hee-resources__docSize">${docSize}</span>
-                <#--  File size: END  -->
             </div>
 
-            <#--  File type/format: START  -->
-            <#assign fileExtn="${assetLink.assetData.asset.filename?keep_after_last('.')?lower_case}">
-            <span class="hee-resources__tag hee-resources__${fileExtn}">${fileExtn?upper_case}</span>
-            <#--  File type/format: END  -->
+            <#--  File type/format  -->
+            <span class="hee-resources__tag hee-resources__${docExtn}">${docExtn?upper_case}</span>
         </a>
     </div>
 </#macro>

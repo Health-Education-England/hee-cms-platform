@@ -10,6 +10,16 @@ import uk.nhs.hee.web.repository.HEEField;
 public enum ListingFilter {
 
     /**
+     * {@code Clinical discipline} taxonomy filter.
+     */
+    CLINICAL_DISCIPLINE(
+            HEEField.GLOBAL_TAXONOMY_CLINICAL_DISCIPLINE_WITH_ANCESTORS,
+            HEETaxonomy.HEE_GLOBAL_CLINICAL_DISCIPLINE,
+            Boolean.TRUE,
+            "clinicalDiscipline"
+    ),
+
+    /**
      * {@code News type} filter.
      */
     NEWS_TYPE(
@@ -57,6 +67,16 @@ public enum ListingFilter {
             HEETaxonomy.HEE_GLOBAL_HEALTHCARE_TOPICS,
             Boolean.FALSE,
             "topic"
+    ),
+
+    /**
+     * {@code Training type} taxonomy filter.
+     */
+    TRAINING_TYPE(
+            HEEField.GLOBAL_TAXONOMY_TRAINING_TYPE_WITH_ANCESTORS,
+            HEETaxonomy.HEE_GLOBAL_TRAINING_TYPES,
+            Boolean.TRUE,
+            "trainingType"
     );
 
 
@@ -66,10 +86,12 @@ public enum ListingFilter {
     private final String queryParameter;
 
     /**
-     * @param field
-     * @param taxonomyName
-     * @param flatTaxonomy
-     * @param queryParameter
+     * Constructor that initialises the listing filter details.
+     *
+     * @param field          the {@link HEEField} instance indicating the taxonomy field being filtered.
+     * @param taxonomyName   the name of the taxonomy that the {@code field} uses.
+     * @param flatTaxonomy   boolean indicating whether the taxonomy (described by {@code taxonomyName}) is flat or not.
+     * @param queryParameter the name of the query parameter with which the selected filter would be submitted.
      */
     ListingFilter(
             final HEEField field,
