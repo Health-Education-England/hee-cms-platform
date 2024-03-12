@@ -25,6 +25,7 @@ public class FeaturedContentBlockService {
 
     // Publication landing page document type
     public static final String DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE = "hee:publicationLandingPage";
+    public static final String DOCUMENT_TYPE_TRAINING_PROGRAMME_PAGE = "hee:trainingProgrammePage";
 
     private static final Map<String, String> CONTENT_TYPE_TO_LISTING_TYPE_MAP =
             Collections.unmodifiableMap(new HashMap<>() {
@@ -36,6 +37,7 @@ public class FeaturedContentBlockService {
                     put("hee:blogPost", "blog");
                     put("hee:news", "news");
                     put("hee:publicationLandingPage", "publication");
+                    put("hee:trainingProgrammePage", "trainingprogramme");
                 }
             });
 
@@ -65,6 +67,9 @@ public class FeaturedContentBlockService {
         } else {
             // Latest method
             try {
+
+                LOG.error("Caught error '{}'",
+                        CONTENT_TYPE_TO_LISTING_TYPE_MAP.get(featuredContentBlock.getFeaturedContentType()));
                 final QueryAndFiltersUtils queryAndFiltersUtils = new QueryAndFiltersUtils();
                 final HstQuery query = queryAndFiltersUtils.createQuery(
                         request.getRequestContext(),
@@ -109,7 +114,8 @@ public class FeaturedContentBlockService {
                         );
                     }
 
-                    if (!DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE.equals(featuredContentBlock.getFeaturedContentType())
+                    if ((!DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE.equals(featuredContentBlock.getFeaturedContentType()) ||
+                            !DOCUMENT_TYPE_TRAINING_PROGRAMME_PAGE.equals(featuredContentBlock.getFeaturedContentType()))
                             && !isEmpty(featuredContentBlock.getGlobalTaxonomyTags())) {
                         baseFilter.addAndFilter(
                                 queryAndFiltersUtils.createOrFilter(

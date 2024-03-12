@@ -24,7 +24,13 @@
                 <div class="hee-featured-content-wrapper${(maxCards = 2)?then(' double', '')}">
                     <#list featuredDocuments as featuredDoc>
                         <div class="hee-featured-content__item">
+
                             <div class="hee-listing-item">
+                                <#if fcBlock.featuredContentType== "hee:trainingProgrammePage">
+                                    <@hst.link var="imgLink" hippobean=featuredDoc.cardImage/>
+                                    <img class="nhsuk-image__img" src="${imgLink}">
+                                </#if>
+
                                 <#--  Item title  -->
                                 <h3><a href=${getInternalLinkURL(featuredDoc)}>${featuredDoc.title}</a></h3>
 
@@ -74,7 +80,8 @@
     <#assign contentTypeToTitleMap = {
         "hee:blogPost": "blogs",
         "hee:news": "news",
-        "hee:publicationLandingPage": "publications"}>
+        "hee:publicationLandingPage": "publications",
+        "hee:trainingProgrammePage": "training programmes"}>
 
     <#return "${((method = 'Latest'))?then('${method}', 'Related')} ${contentTypeToTitleMap[contentType]}">
 </#function>
