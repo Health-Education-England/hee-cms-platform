@@ -8,11 +8,10 @@ import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.beans.TrainingProgrammePage;
 import uk.nhs.hee.web.components.info.TrainingProgrammePageComponentInfo;
-import uk.nhs.hee.web.repository.ValueListIdentifier;
 import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
-import uk.nhs.hee.web.utils.ValueListUtils;
+import uk.nhs.hee.web.utils.ListingPageUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -28,16 +27,16 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
         final TrainingProgrammePage trainingProgramPage = request.getModel(REQUEST_ATTR_DOCUMENT);
         Guidance currentGuidance = null;
         if (trainingProgramPage != null) {
-            boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
+            final boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
             boolean isOverview = true;
             boolean accessFromRootHub = true;
 
             if (accessWithGuidancePath) {
                 accessFromRootHub = false;
-                List<Guidance> guidancePages = trainingProgramPage.getApplicationInformation();
+                final List<Guidance> guidancePages = trainingProgramPage.getApplicationInformation();
 
                 // The guidance name in URL will be resolved as "1" parameter name
-                String guidanceName = (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
+                final String guidanceName = (String) request.getRequestContext().getResolvedSiteMapItem().getLocalParameters().get("1");
 
                 if (!"overview".equals(guidanceName)) {
                     for (final Guidance guidance : guidancePages) {
@@ -58,7 +57,7 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             request.setModel("isOverview", isOverview);
 
             // the page content blocks needs valueLists to be set on the model
-            List<HippoBean> pageContentBlocks = (List<HippoBean>) trainingProgramPage.getOverviewBlocks();
+            final List<HippoBean> pageContentBlocks = (List<HippoBean>) trainingProgramPage.getOverviewBlocks();
             pageContentBlocks.addAll(trainingProgramPage.getRightHandBlocks());
 
             // Adding current (application information) guidance content blocks as well
@@ -69,26 +68,15 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             // Locate single fields and get their Values
 
             // Build the maps of repeating Values
-            Map<String, Map<String, String>> modelToValueListMap = ContentBlocksUtils.getValueListMaps(pageContentBlocks);
+            final Map<String, Map<String, String>> modelToValueListMap = ContentBlocksUtils.getValueListMaps(pageContentBlocks);
             modelToValueListMap.forEach(request::setModel);
 
             request.setAttribute("tableComponentService", new TableComponentService());
             request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
-        }
-    }
 
-    /**
-     * Find the VALUE from a ValueList based on its KEY
-     * @param keyFromField - is the key that we'll use to get the value
-     * @param request is the Hst Request object
-     * @param identifier is the attribute name in the Model
-     */
-    protected void doModelUpdateForValueListField(String keyFromField, HstRequest request, ValueListIdentifier identifier) {
-        if (keyFromField != null) {
-            Map<String, String> valueListMap = ValueListUtils.getValueListMap(identifier.getName());
-            String fieldValueLabel = valueListMap.get(keyFromField);
-
-            request.setModel(identifier.getName(), fieldValueLabel);
+            // Adds training programme listing page URL to the model
+            ListingPageUtils.addListingPageURLToModel(request, ListingPageType.TRAINING_PROGRAMME_LISTING,
+                    Model.TRAINING_PROGRAMME_LISTING_PAGE_URL);
         }
     }
 }

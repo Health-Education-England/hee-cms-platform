@@ -108,16 +108,6 @@
                     <#--  Author cards  -->
                     <@authorCards authors=document.authors hideAuthorContactDetails=document.hideAuthorContactDetails!false/>
 
-                    <#list document.contentBlocks as block>
-                        <#switch block.getClass().getName()>
-                            <#case "uk.nhs.hee.web.beans.FeaturedContentReference">
-                                <@hee.featuredContent block=block/>
-                                <#break>
-                            <#default>
-                        </#switch>
-                    </#list>
-
-
                     <#-- Last & next reviewed dates -->
                     <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview/>
                 </div>
@@ -179,20 +169,34 @@
 					<#--  Right hand content blocks: END  -->
 				</#if>
 			</aside>
-            
+
             <#--  Sidebar sections: END  -->
         </div>
         <#--  Main content: END  -->
 
-        <#if document.relatedContent?? && (document.relatedContent.header?has_content || document.relatedContent.cardGroupSummary?has_content || document.relatedContent.cards?size gt 0)>
-            <#--  Main featured content: START  -->
+        <#--  Main featured content: START  -->
+        <#assign isRelatedContentAvailable=(document.relatedContent?? && (document.relatedContent.header?has_content || document.relatedContent.cardGroupSummary?has_content || document.relatedContent.cards?size gt 0))?then(true, false)>
+        <#assign isFeaturedContentAvailable=(document.featuredContentBlock??)?then(true, false)>
+
+        <#if isRelatedContentAvailable || isFeaturedContentAvailable>
             <section class="page__feature">
-                <#--  Related content  -->
-                <div class="nhsuk-width-container">
-                    <@hee.contentCards contentCards=document.relatedContent/>
-                </div>
+                <#--  Related content: START  -->
+                <#if isRelatedContentAvailable>
+                    <div class="nhsuk-width-container">
+                        <@hee.contentCards contentCards=document.relatedContent/>
+                    </div>
+                </#if>
+                <#--  Related content: END  -->
+
+                <#--  Featured content: START  -->
+                <#if isFeaturedContentAvailable>
+                    <div class="nhsuk-width-container">
+                        <@hee.featuredContent block=document maxCards=3/>
+                    </div>
+                </#if>
+                <#--  Featured content: END  -->
             </section>
-            <#--  Main featured content: END  -->
         </#if>
+        <#--  Main featured content: END  -->
     </main>
 </#if>

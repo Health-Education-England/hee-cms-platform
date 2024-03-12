@@ -166,10 +166,16 @@ action-lists:
       /content/documents/administration/valuelists/kls/bulletincategories: delete
       /content/documents/administration/valuelists/lks/bulletincategories: delete
   - 1.0.64:
+      /content/taxonomies: reload
       /content/documents/administration/labels/listing: reload
   - 1.0.65:
       /content/documents/administration/labels/listing: reload
   - 1.0.66:
+      /content/taxonomies: reload
+  - 1.0.67:
+      /content/documents/administration/valuelists/listingpagetypes: reload
+      /content/documents/administration/labels/listing: reload
+  - 1.0.68:
       /content/urlrewriter/kls/kfhtolksredirects: reload
       /content/urlrewriter/medical/gpnrotomedicalgpredirects: reload
       /content/urlrewriter/medical/specialtytrainingtomedicaltrainingredirects: reload

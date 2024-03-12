@@ -149,6 +149,14 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: Taxonomy
             hipposysedit:validators: [required]
+          /featuredContentBlock:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:featuredContentBlock
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -191,6 +199,9 @@ definitions:
             hippo:modes: []
             hippo:values: []
           /hee:authors:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+          /hee:featuredContentBlock:
             jcr:primaryType: hippo:mirror
             hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
@@ -313,6 +324,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalProfessions
+              category.sort.options: name
           /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
@@ -324,6 +336,7 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalHealthcareTopics
+              category.sort.options: name
           /globalTaxonomyTags:
             jcr:primaryType: frontend:plugin
             caption: Tags
@@ -334,9 +347,10 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalTags
+              category.sort.options: name
           /globalTaxonomyNewsType:
             jcr:primaryType: frontend:plugin
-            caption: News Type
+            caption: News type
             field: globalTaxonomyNewsTypes
             hint: Select the appropriate news type
             plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
@@ -344,10 +358,11 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               taxonomy.name: GlobalNewsTypes
+              category.sort.options: name
           /contentBlocks:
             jcr:primaryType: frontend:plugin
             caption: Main content objects
-            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hee:statementCardReference,hee:detailsReference,hee:expanderGroupReference,hee:featuredContentReference,hippostd:html,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
+            compoundList: hee:ActionLink,hee:anchorLinks,hee:blockLinksReference,hee:contentCards,hee:statementCardReference,hee:detailsReference,hee:expanderGroupReference,hippostd:html,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:quoteReference,hee:tableReference,hee:expanderTableReference,hee:tabsReference,hee:richTextReference,hee:warningCalloutReference
             contentPickerType: links
             field: contentBlocks
             hint: ''
@@ -374,3 +389,13 @@ definitions:
             wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /featuredContentBlock:
+            jcr:primaryType: frontend:plugin
+            caption: Featured content
+            field: featuredContentBlock
+            hint: Select the featured content
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              nodetypes: ['hee:featuredContent']

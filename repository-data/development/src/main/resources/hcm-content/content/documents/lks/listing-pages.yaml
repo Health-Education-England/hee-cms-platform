@@ -23,6 +23,7 @@
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
+      hee:subtitle: Quisque ut dolor gravida, placerat libero vel, euismod.
       hee:summary: Search for terms within guidance pages and blog posts.
       hee:title: Search
       hippo:availability: []
@@ -51,6 +52,7 @@
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
+      hee:subtitle: Quisque ut dolor gravida, placerat libero vel, euismod.
       hee:summary: Search for terms within guidance pages and blog posts.
       hee:title: Search
       hippo:availability: [preview]
@@ -78,6 +80,7 @@
       hee:listingPageType: search
       hee:pageSize: 10
       hee:path: ''
+      hee:subtitle: Quisque ut dolor gravida, placerat libero vel, euismod.
       hee:summary: Search for terms within guidance pages and blog posts.
       hee:title: Search
       hippo:availability: [live]
@@ -106,9 +109,11 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 1eb4a342-0e50-4d7e-b05b-36b9ab162daf
+      hee:addToAZ: false
       hee:documentTypes: []
       hee:listingPageType: blog
       hee:pageSize: 2
+      hee:subtitle: Curabitur blandit tempus ardua ridiculus sed magna.
       hee:summary: Latest news and best practice from across NHS library work
       hee:title: Blogs
       hippo:availability: []
@@ -131,9 +136,11 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
       jcr:uuid: c03bd01e-1bac-4e0e-90a1-b9ed3d4fd66f
+      hee:addToAZ: false
       hee:documentTypes: []
       hee:listingPageType: blog
       hee:pageSize: 2
+      hee:subtitle: Curabitur blandit tempus ardua ridiculus sed magna.
       hee:summary: Latest news and best practice from across NHS library work
       hee:title: Blogs
       hippo:availability: [preview]
@@ -156,9 +163,11 @@
       jcr:primaryType: hee:listingPage
       jcr:mixinTypes: ['mix:referenceable']
       jcr:uuid: 124dfc1f-08cc-4d9b-8e32-108f0842348d
+      hee:addToAZ: false
       hee:documentTypes: []
       hee:listingPageType: blog
       hee:pageSize: 2
+      hee:subtitle: Curabitur blandit tempus ardua ridiculus sed magna.
       hee:summary: Latest news and best practice from across NHS library work
       hee:title: Blogs
       hippo:availability: [live]
@@ -192,6 +201,7 @@
       hee:documentTypes: []
       hee:listingPageType: casestudy
       hee:pageSize: 5
+      hee:subtitle: Quisque ut dolor gravida, placerat libero vel, euismod.
       hee:summary: Cras ultricies ligula sed magna dictum porta. Vivamus suscipit
         tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt
         nibh pulvinar a.
@@ -219,6 +229,7 @@
       hee:documentTypes: []
       hee:listingPageType: casestudy
       hee:pageSize: 5
+      hee:subtitle: Quisque ut dolor gravida, placerat libero vel, euismod.
       hee:summary: Cras ultricies ligula sed magna dictum porta. Vivamus suscipit
         tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt
         nibh pulvinar a.
@@ -246,6 +257,7 @@
       hee:documentTypes: []
       hee:listingPageType: casestudy
       hee:pageSize: 5
+      hee:subtitle: Quisque ut dolor gravida, placerat libero vel, euismod.
       hee:summary: Cras ultricies ligula sed magna dictum porta. Vivamus suscipit
         tortor eget felis porttitor volutpat. Mauris blandit aliquet elit, eget tincidunt
         nibh pulvinar a.
@@ -529,6 +541,127 @@
       /hee:heroImage:
         jcr:primaryType: hippogallerypicker:imagelink
         hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+  /training-programme:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+    jcr:uuid: a35a157b-c85d-471b-92e6-0116d45c1317
+    hippo:name: Training programme
+    hippo:versionHistory: dff45701-a588-4bfc-ba0e-843c6ffd7bcf
+    /training-programme[1]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:versionable']
+      jcr:uuid: f6551859-8a6e-44c6-9e5b-96e3031cad8d
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: trainingprogramme
+      hee:pageSize: 10
+      hee:subtitle: Phasellus laoreet lorem vel dolor tempus vehicula.
+      hee:summary: Ullamco laboris nisi ut aliquid ex ea commodi consequat. Lorem
+        ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
+        ut labore et dolore magna aliqua. Quisque ut dolor gravida, placerat libero
+        vel, euismod. A communi observantia non est recedendum.
+      hee:title: Training (programme) collection page
+      hippo:availability: [preview]
+      hippostd:retainable: false
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModificationDate: 2023-11-10T12:01:16.362Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: bb6f1e62-1807-44d3-85f7-ad26efcf0045
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /training-programme[2]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: f7f9a2b4-32d1-4811-a9d4-f796d997edc0
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: trainingprogramme
+      hee:pageSize: 10
+      hee:subtitle: Phasellus laoreet lorem vel dolor tempus vehicula.
+      hee:summary: Ullamco laboris nisi ut aliquid ex ea commodi consequat. Lorem
+        ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
+        ut labore et dolore magna aliqua. Quisque ut dolor gravida, placerat libero
+        vel, euismod. A communi observantia non est recedendum.
+      hee:title: Training (programme) collection page
+      hippo:availability: []
+      hippostd:retainable: false
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModificationDate: 2023-11-10T12:01:03.833Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: bb6f1e62-1807-44d3-85f7-ad26efcf0045
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+    /training-programme[3]:
+      jcr:primaryType: hee:listingPage
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: fac1c42c-e1c0-4ffd-9e3d-2a47eb283a2a
+      hee:addToAZ: false
+      hee:documentTypes: []
+      hee:listingPageType: trainingprogramme
+      hee:pageSize: 10
+      hee:subtitle: Phasellus laoreet lorem vel dolor tempus vehicula.
+      hee:summary: Ullamco laboris nisi ut aliquid ex ea commodi consequat. Lorem
+        ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt
+        ut labore et dolore magna aliqua. Quisque ut dolor gravida, placerat libero
+        vel, euismod. A communi observantia non est recedendum.
+      hee:title: Training (programme) collection page
+      hippo:availability: [live]
+      hippostd:retainable: false
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2021-12-15T02:38:30.810Z
+      hippostdpubwf:lastModificationDate: 2023-11-10T12:01:16.362Z
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2023-11-10T12:02:08.546Z
+      hippotranslation:id: bb6f1e62-1807-44d3-85f7-ad26efcf0045
+      hippotranslation:locale: en
+      /hee:heroImage:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
+        hippo:facets: []
+        hippo:modes: []
+        hippo:values: []
+      /hee:logoGroup:
+        jcr:primaryType: hippo:mirror
+        hippo:docbase: 40556fdc-a879-446a-ba43-11556315c17a
+      /hee:microHero:
+        jcr:primaryType: hippogallerypicker:imagelink
+        hippo:docbase: e0a61317-803a-40b0-b1d2-04c53c0c2267
         hippo:facets: []
         hippo:modes: []
         hippo:values: []

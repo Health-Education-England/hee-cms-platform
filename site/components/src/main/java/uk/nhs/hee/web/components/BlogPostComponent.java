@@ -4,14 +4,13 @@ import org.hippoecm.hst.content.beans.standard.HippoBean;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.component.HstResponse;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
-import org.hippoecm.hst.core.request.HstRequestContext;
 import org.onehippo.cms7.essentials.components.EssentialsDocumentComponent;
 import uk.nhs.hee.web.beans.BlogPost;
 import uk.nhs.hee.web.components.info.BlogPostComponentInfo;
 import uk.nhs.hee.web.services.FeaturedContentBlockService;
 import uk.nhs.hee.web.services.TableComponentService;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
-import uk.nhs.hee.web.utils.HstUtils;
+import uk.nhs.hee.web.utils.ListingPageUtils;
 
 import java.util.List;
 import java.util.Map;
@@ -25,30 +24,13 @@ public class BlogPostComponent extends EssentialsDocumentComponent {
         final BlogPost blogPost = request.getModel(REQUEST_ATTR_DOCUMENT);
         if (blogPost != null) {
             addValueListsForContentBlocks(request, blogPost);
-            addBlogListingPageURLToModel(request);
+
+            // Adds blog listing page URL to the model
+            ListingPageUtils.addListingPageURLToModel(request, ListingPageType.BLOG_LISTING, Model.BLOG_LISTING_PAGE_URL);
 
             request.setAttribute("tableComponentService", new TableComponentService());
             request.setModel("featuredContentBlockService", new FeaturedContentBlockService());
         }
-    }
-
-    /**
-     * Adds Blog Listing Page URL to model.
-     *
-     * @param request the {@link HstRequest} instance.
-     */
-    private void addBlogListingPageURLToModel(final HstRequest request) {
-        final HstRequestContext hstRequestContext = request.getRequestContext();
-        final HippoBean blogListingPageBean =
-                HstUtils.getListingPageBeanByType(hstRequestContext, ListingPageType.BLOG_LISTING.getType());
-
-        if (blogListingPageBean == null) {
-            return;
-        }
-
-        request.setModel(
-                Model.BLOG_LISTING_PAGE_URL.getKey(),
-                HstUtils.getURLByBean(hstRequestContext, blogListingPageBean, false));
     }
 
     /**

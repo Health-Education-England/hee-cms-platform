@@ -16,6 +16,12 @@ definitions:
           hipposys:facet: jcr:path
           hipposys:type: Reference
           hipposys:value: /content/documents/website-testing/settings
+        /exclude-website-testing-media-folder-and-descendants:
+          jcr:primaryType: hipposys:facetrule
+          hipposys:equals: false
+          hipposys:facet: jcr:path
+          hipposys:type: Reference
+          hipposys:value: /content/documents/website-testing/components/national/media
       /author:
         jcr:primaryType: hipposys:authrole
         hipposys:groups:
