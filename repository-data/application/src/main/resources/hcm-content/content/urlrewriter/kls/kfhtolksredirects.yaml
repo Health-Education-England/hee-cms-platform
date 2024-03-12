@@ -20,9 +20,11 @@
       \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
       \ in order to ensure that the domain level redirect happens first before any\
       \ of the following redirects are processed</note>\r\n  <condition name=\"host\"\
-      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <from>^(.*)$</from>\r\
-      \n  <to type=\"permanent-redirect\" last=\"true\">https://library.hee.nhs.uk$1</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <condition\
+      \ type=\"method\" next=\"or\">GET</condition>\r\n  <condition type=\"method\"\
+      >POST</condition>\r\n  <from>^(.*)$</from>\r\n  <to type=\"permanent-redirect\"\
+      \ last=\"true\">https://library.hee.nhs.uk$1</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/database/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
       true\">/quality-and-impact/value-and-impact/case-studies-impact</to>\r\n</rule>\r\
       \n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
@@ -1692,9 +1694,11 @@
       \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
       \ in order to ensure that the domain level redirect happens first before any\
       \ of the following redirects are processed</note>\r\n  <condition name=\"host\"\
-      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <from>^(.*)$</from>\r\
-      \n  <to type=\"permanent-redirect\" last=\"true\">https://library.hee.nhs.uk$1</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <condition\
+      \ type=\"method\" next=\"or\">GET</condition>\r\n  <condition type=\"method\"\
+      >POST</condition>\r\n  <from>^(.*)$</from>\r\n  <to type=\"permanent-redirect\"\
+      \ last=\"true\">https://library.hee.nhs.uk$1</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/database/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
       true\">/quality-and-impact/value-and-impact/case-studies-impact</to>\r\n</rule>\r\
       \n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
@@ -3365,9 +3369,11 @@
       \ Domain Level Redirect</name>\r\n  <note>This redirect added here intentionally\
       \ in order to ensure that the domain level redirect happens first before any\
       \ of the following redirects are processed</note>\r\n  <condition name=\"host\"\
-      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <from>^(.*)$</from>\r\
-      \n  <to type=\"permanent-redirect\" last=\"true\">https://library.hee.nhs.uk$1</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \ operator=\"equal\">kfh.libraryservices.nhs.uk</condition>\r\n  <condition\
+      \ type=\"method\" next=\"or\">GET</condition>\r\n  <condition type=\"method\"\
+      >POST</condition>\r\n  <from>^(.*)$</from>\r\n  <to type=\"permanent-redirect\"\
+      \ last=\"true\">https://library.hee.nhs.uk$1</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n  <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n  <from>^/database/?$</from>\r\n  <to type=\"permanent-redirect\" last=\"\
       true\">/quality-and-impact/value-and-impact/case-studies-impact</to>\r\n</rule>\r\
       \n<rule>\r\n  <condition name=\"host\" operator=\"notequal\">library.hee.nhs.uk</condition>\r\
