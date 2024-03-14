@@ -67,9 +67,7 @@ public class FeaturedContentBlockService {
         } else {
             // Latest method
             try {
-
-                LOG.error("Caught error '{}'",
-                        CONTENT_TYPE_TO_LISTING_TYPE_MAP.get(featuredContentBlock.getFeaturedContentType()));
+                
                 final QueryAndFiltersUtils queryAndFiltersUtils = new QueryAndFiltersUtils();
                 final HstQuery query = queryAndFiltersUtils.createQuery(
                         request.getRequestContext(),
