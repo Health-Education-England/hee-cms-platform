@@ -67,7 +67,6 @@ public class FeaturedContentBlockService {
         } else {
             // Latest method
             try {
-                
                 final QueryAndFiltersUtils queryAndFiltersUtils = new QueryAndFiltersUtils();
                 final HstQuery query = queryAndFiltersUtils.createQuery(
                         request.getRequestContext(),
