@@ -72,6 +72,22 @@
                     <div class="nhsuk-filter__groups">
                         <#list listingFilters as filter>
                             <#switch filter.queryParameter>
+                                <#case "clinicalDiscipline">
+                                    <#--  Clinical discipline filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="clinical_discipline.label"
+                                        items=clinicalDisciplineMap!
+                                        selectedItemsList=selectedClinicalDisciplineList />
+                                    <#break>
+                                <#case "newsType">
+                                    <#--  News type filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="news_type.label"
+                                        items=newsTypeMap!
+                                        selectedItemsList=selectedNewsTypeList />
+                                    <#break>
                                 <#case "profession">
                                     <#--  Profession filter  -->
                                     <@selectboxGroup
@@ -116,13 +132,26 @@
                                         subGroupMap=subTopicMap!
                                         selectedSubGroupItems=selectedSubTopicList />
                                     <#break>
+                                <#case "trainingType">
+                                    <#--  Training type filter  -->
+                                    <@checkboxGroup
+                                        name=filter.queryParameter
+                                        titleKey="training_type.label"
+                                        items=trainingTypeMap!
+                                        selectedItemsList=selectedTrainingTypeList />
+                                    <#break>
                                 <#default>
                             </#switch>
                         </#list>
                     </div>
                     <#--  Filter group: END  -->
 
-                    <input type="hidden" name="sortBy" value="${selectedSortOrder}">
+                    <#if listingType='trainingprogramme'>
+                        <input type="hidden" name="sortBy" value="az">
+                    <#else>
+                        <input type="hidden" name="sortBy" value="${selectedSortOrder}">
+                    </#if>
+
                     <button class="nhsuk-button nhsuk-filter__submit" data-module="nhsuk-button" type="submit" hidden> Update results </button>
                     <input data-update-flag="filter" name="results_updated" type="hidden" value="false">
                 </form>
@@ -137,78 +166,100 @@
                         <#--  Search result summary: START  -->
                         <div class="hee-listing__summary">
                             <#--  Result count: START  -->
-                            <div class="hee-listing__count">
+                            <div class="hee-listing__count${(listingType='trainingprogramme')?then(' no-sort-filter', '')}">
                                 <h2 class="hee-listing__title nhsuk-heading-l">
-                                    <#if pageable.total gt 0>
-                                        ${pageable.total} <@fmt.message key="results.count.text"/>
-                                    <#else>
-                                        <@fmt.message key="no_results.text"/>
-                                    </#if>
+                                    ${pageable.total} <@fmt.message key="results.count.text"/>
                                 </h2>
                             </div>
                             <#--  Result count: END  -->
 
                             <#--  Search sort dropdown: START  -->
-                            <div class="hee-listing__filter">
-                                <@hst.renderURL var="pageLink" />
-                                <form method="get" class="hee-listing__filter__sort" action="${pageLink}">
-                                    <#--  Adds the selected filters as hidden inputs (to resubmit them during sort selection change)  -->
-                                    <#list listingFilters as filter>
-                                        <#switch filter.queryParameter>
-                                            <#case "profession">
-                                                <#--  Selected professions  -->
-                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedProfessionList!/>
+                            <#if listingType!='trainingprogramme'>
+                                <div class="hee-listing__filter">
+                                    <@hst.renderURL var="pageLink" />
+                                    <form method="get" class="hee-listing__filter__sort" action="${pageLink}">
+                                        <#--  Adds the selected filters as hidden inputs (to resubmit them during sort selection change)  -->
+                                        <#list listingFilters as filter>
+                                            <#switch filter.queryParameter>
+                                                <#case "clinicalDiscipline">
+                                                    <#--  Selected clinical disciplines  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedClinicalDisciplineList!/>
+                                                    <#break>
+                                                <#case "newsType">
+                                                    <#--  Selected news type  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedNewsTypeList!/>
+                                                    <#break>
+                                                <#case "profession">
+                                                    <#--  Selected professions  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedProfessionList!/>
 
-                                                <#--  Selected sub professions  -->
-                                                <#if selectedSubProfessionList?has_content>
-                                                    <@addSelectedFiltersAsHiddenInput name="sub${filter.queryParameter?cap_first}" selectedFilters=selectedSubProfessionList!/>
-                                                </#if>
+                                                    <#--  Selected sub professions  -->
+                                                    <#if selectedSubProfessionList?has_content>
+                                                        <@addSelectedFiltersAsHiddenInput name="sub${filter.queryParameter?cap_first}" selectedFilters=selectedSubProfessionList!/>
+                                                    </#if>
+                                                    <#break>
+                                                <#case "publicationType">
+                                                    <#--  Selected publication types  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedPublicationTypeList!/>
+                                                    <#break>
+                                                <#case "tag">
+                                                    <#--  Selected tags  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTagList!/>
+                                                    <#break>
+                                                <#case "topic">
+                                                    <#--  Selected topics  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTopicList!/>
 
-                                                <#break>
-                                            <#case "publicationType">
-                                                <#--  Selected publication types  -->
-                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedPublicationTypeList!/>
-                                                <#break>
-                                            <#case "tag">
-                                                <#--  Selected tags  -->
-                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTagList!/>
-                                                <#break>
-                                            <#case "topic">
-                                                <#--  Selected topics  -->
-                                                <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTopicList!/>
+                                                    <#--  Selected sub topics  -->
+                                                    <#if selectedSubTopicList?has_content>
+                                                        <@addSelectedFiltersAsHiddenInput name="sub${filter.queryParameter?cap_first}" selectedFilters=selectedSubTopicList!/>
+                                                    </#if>
+                                                    <#break>
+                                                <#case "trainingType">
+                                                    <#--  Selected training types  -->
+                                                    <@addSelectedFiltersAsHiddenInput name=filter.queryParameter selectedFilters=selectedTrainingTypeList!/>
+                                                    <#break>
+                                                <#default>
+                                            </#switch>
 
-                                                <#--  Selected sub topics  -->
-                                                <#if selectedSubTopicList?has_content>
-                                                    <@addSelectedFiltersAsHiddenInput name="sub${filter.queryParameter?cap_first}" selectedFilters=selectedSubTopicList!/>
-                                                </#if>
+                                            <#if selectedFilters?has_content>
+                                                <#list selectedFilters as selectedFilter>
+                                                    <input type="hidden" name="${filter.queryParameter}" value="${selectedFilter}">
+                                                </#list>
+                                            </#if>
+                                        </#list>
 
-                                                <#break>
-                                            <#default>
-                                        </#switch>
+                                        <@fmt.message key="sort.label" var="sortLabel"/>
+                                        <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
+                                        <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
+                                        <@fmt.message key="sort.option.az" var="sortByAZ"/>
+                                        <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortByNewestLabel}", "asc":"${sortByOldestLabel}" } />
+                                        <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
 
-                                        <#if selectedFilters?has_content>
-                                            <#list selectedFilters as selectedFilter>
-                                                <input type="hidden" name="${filter.queryParameter}" value="${selectedFilter}">
-                                            </#list>
-                                        </#if>
-                                    </#list>
-
-                                    <@fmt.message key="sort.label" var="sortLabel"/>
-                                    <@fmt.message key="sort.option.oldest" var="sortByOldestLabel"/>
-                                    <@fmt.message key="sort.option.newest" var="sortByNewestLabel"/>
-                                    <@fmt.message key="sort.option.az" var="sortByAZ"/>
-                                    <#assign selectOptions= { "az":"${sortByAZ}", "desc":"${sortByNewestLabel}", "asc":"${sortByOldestLabel}" } />
-                                    <@select label="${sortLabel}" name="sortBy" optionsMap=selectOptions selectedValue=selectedSortOrder/>
-
-                                    <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit" hidden> Update </button>
-                                    <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
-                                </form>
-                            </div>
+                                        <button class="nhsuk-button hee-listing__filter__submit" data-module="nhsuk-button" type="submit" hidden> Update </button>
+                                        <input data-update-flag="listing" name="results_updated" type="hidden" value="false">
+                                    </form>
+                                </div>
+                            </#if>
                             <#--  Search sort dropdown: END  -->
 
                             <#-- Active filters: START -->
                             <#list listingFilters as filter>
                                 <#switch filter.queryParameter>
+                                    <#case "clinicalDiscipline">
+                                        <#-- Active clinical disciplines  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="clinical_discipline.label"
+                                            selectedFilters=selectedClinicalDisciplineList
+                                            filterMap=clinicalDisciplineMap! />
+                                        <#break>
+                                    <#case "newsType">
+                                        <#-- Active news type  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="news_type.label"
+                                            selectedFilters=selectedNewsTypeList
+                                            filterMap=newsTypeMap! />
+                                        <#break>
                                     <#case "profession">
                                         <#-- Active profession & sub-profession -->
                                         <@activeFiltersForSelectboxGroup
@@ -241,6 +292,13 @@
                                             parentGroupFilterMap=topicMap!
                                             subGroupFilterMap=subTopicMap! />
                                         <#break>
+                                    <#case "trainingType">
+                                        <#-- Active training types  -->
+                                        <@activeFiltersForCheckboxGroup
+                                            labelKey="training_type.label"
+                                            selectedFilters=selectedTrainingTypeList
+                                            filterMap=trainingTypeMap! />
+                                        <#break>
                                     <#default>
                                 </#switch>
                             </#list>
@@ -249,14 +307,28 @@
                         <#--  Search result summary: END  -->
 
                         <#if pageable??>
-                            <#--  Search results: START  -->
+                            <#--  Collection/listing results: START  -->
                             <div class="hee-listing__results">
-                                <@.vars["${listingType}ListItem"] items=pageable.items/>
-                            </div>
-                            <#--  Search results: END  -->
+                                <#if pageable.total=0>
+                                    <#--  No results found msg  -->
+                                    <p><strong><@fmt.message key="no_results.text"/></strong></p>
+                                <#else>
+                                    <#--  Results cards  -->
+                                    <#if listingType='trainingprogramme'>
+                                        <#--  For training programme collection  -->
+                                        <@trainingListItem
+                                            items=pageable.items
+                                            trainingProgrammeListingPageURL=trainingProgrammeListingPageURL!/>
+                                    <#else>
+                                        <#--  For other collections (blog post, news article, etc)  -->
+                                        <@.vars["${listingType}ListItem"] items=pageable.items/>
+                                    </#if>
 
-                            <#--  Pagination  -->
-                            <#include "../../include/pagination-nhs.ftl">
+                                    <#--  Pagination  -->
+                                    <#include "../../include/pagination-nhs.ftl">
+                                </#if>
+                            </div>
+                            <#--  Collection/listing results: END  -->
                         </#if>
                     </div>
                 </div>

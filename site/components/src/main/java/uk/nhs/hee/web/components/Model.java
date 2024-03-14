@@ -46,14 +46,15 @@ public enum Model {
     NEWSLETTER_PROFESSION_MAP("newsletterProfessionMap"),
 
     /**
-     * Model key for Topic Valuelist map
+     * Model key for Publication Listing Page URL
      */
-    TOPIC_MAP("topicMap"),
+    PUBLICATION_LISTING_PAGE_URL("publicationListingPageURL"),
 
     /**
-     * Model key for Profession Valuelist map
+     * Model key for Training Programme Listing Page URL
      */
-    PROFESSION_MAP("professionMap");
+    TRAINING_PROGRAMME_LISTING_PAGE_URL("trainingProgrammeListingPageURL");
+
 
     private final String key;
 

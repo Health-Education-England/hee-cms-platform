@@ -90,6 +90,7 @@ public enum ListingPageType {
             List.of(
                     ListingFilter.PROFESSION,
                     ListingFilter.TOPIC,
+                    ListingFilter.NEWS_TYPE,
                     ListingFilter.TAG
             )
     ),
@@ -138,7 +139,25 @@ public enum ListingPageType {
             Boolean.FALSE,
             StringUtils.EMPTY,
             Collections.emptyList()
-    );
+    ),
+
+    /**
+     * Training programme listing
+     */
+    TRAINING_PROGRAMME_LISTING(
+            "trainingprogramme",
+            new String[]{"hee:trainingProgrammePage"},
+            Boolean.TRUE,
+            HippoStdPubWfNodeType.HIPPOSTDPUBWF_PUBLICATION_DATE,
+            StringUtils.EMPTY,
+            Boolean.FALSE,
+            "trainingprogrammefacets",
+            List.of(
+                    ListingFilter.PROFESSION,
+                    ListingFilter.TOPIC,
+                    ListingFilter.CLINICAL_DISCIPLINE,
+                    ListingFilter.TRAINING_TYPE
+            ));
 
 
     private final String type;

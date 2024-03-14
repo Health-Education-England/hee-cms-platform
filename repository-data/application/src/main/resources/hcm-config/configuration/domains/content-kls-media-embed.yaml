@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-kls-media-embed:
+        jcr:primaryType: hipposys:domain
+        /content-domain:
+          jcr:primaryType: hipposys:domainrule
+          /media-embed-and-descendants:
+            jcr:primaryType: hipposys:facetrule
+            hipposys:equals: true
+            hipposys:facet: jcr:path
+            hipposys:type: Reference
+            hipposys:value: /content/documents/kls/components/national/media
+        /readonly:
+          jcr:primaryType: hipposys:authrole
+          hipposys:groups:
+            .meta:category: system
+            .meta:add-new-system-values: true
+            type: string
+            value: [ kls-author, kls-editor, kls-viewer ]
+          hipposys:role: readonly
+          hipposys:users:
+            .meta:category: system
+            .meta:add-new-system-values: true
+            operation: override
+            type: string
+            value: [ ]

@@ -6,7 +6,6 @@
 <#include "../macros/internal-link.ftl">
 <#include "../macros/publication-partial-info.ftl">
 <#include '../utils/date-util.ftl'>
-<#include "../utils/document-formats.ftl">
 
 <#-- @ftlvariable name="document" type="uk.nhs.hee.web.beans.PublicationLandingPage" -->
 
@@ -59,7 +58,7 @@
                 <div class="hee-publication-doc__icon__corner__triangle"></div>
             </div>
         </div>
-        <div class="hee-publication-doc__icon__title">${fileType}</div>
+        <div class="hee-publication-doc__icon__title" aria-hidden="true">${fileType}</div>
     </div>
 </#macro>
 
@@ -173,17 +172,17 @@
             </aside>
             <#--  Sidebar sections: END  -->
         </div>
+        <#--  Main content: END  -->
 
-        <#-- Related content -->
+        <#--  Main featured content: START  -->
         <#if document.featuredContentBlock??>
             <section class="page__feature">
+                <#--  Featured content  -->
                 <div class="nhsuk-width-container">
                     <@hee.featuredContent block=document maxCards=3/>
                 </div>
             </section>
         </#if>
-        <#-- Related content: END -->
-
-        <#--  Main content: END  -->
+        <#--  Main featured content: END  -->
     </main>
 </#if>

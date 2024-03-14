@@ -1,0 +1,304 @@
+/content/urlrewriter/digital-transformation/digitaltransformationprogrammeredirects:
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: 13e342cc-0a26-4912-957a-0bcb97a0ba7b
+  hippo:name: DigitalTransformationProgrammeRedirects
+  hippo:versionHistory: 60c14e1e-b02a-4e34-a721-34c481922218
+  /digitaltransformationprogrammeredirects[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:versionable']
+    jcr:uuid: ce457914-a783-4340-853c-2d9e72b51c7e
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2022-11-09T15:29:28.256Z
+    hippostdpubwf:lastModificationDate: 2024-01-29T16:18:25.087Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/about-the-hip-pilot-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/structure-of-the-hip-pilot/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/divine-azange/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/francesca-testa/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/gayle-dellow/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/iain-oneill/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/jacob-koris/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/malathi-reddy/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/nisha-sharma/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/sandra-eismann/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/shaun-burke/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/?$</from>\r\n  <to type=\"\
+      temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/how-to-apply-for-the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/what-people-are-saying-about-the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/?$</from>\r\n  <to\
+      \ type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/about-the-cnio-masterclass-series/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/book-your-place-on-a-masterclass/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-1-well-led/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-2-smart-foundations/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-3-safe-practice/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-4-support-nurses/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-5-empower-people/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-6-improve-care-and-healthy-populations/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>"
+  /digitaltransformationprogrammeredirects[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 8722dd70-0b14-4d9d-8a13-bcc86473fc7b
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2022-11-09T15:29:28.256Z
+    hippostdpubwf:lastModificationDate: 2024-01-29T16:18:22.572Z
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/about-the-hip-pilot-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/structure-of-the-hip-pilot/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/divine-azange/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/francesca-testa/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/gayle-dellow/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/iain-oneill/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/jacob-koris/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/malathi-reddy/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/nisha-sharma/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/sandra-eismann/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/shaun-burke/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/?$</from>\r\n  <to type=\"\
+      temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/how-to-apply-for-the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/what-people-are-saying-about-the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/?$</from>\r\n  <to\
+      \ type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/about-the-cnio-masterclass-series/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/book-your-place-on-a-masterclass/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-1-well-led/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-2-smart-foundations/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-3-safe-practice/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-4-support-nurses/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-5-empower-people/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-6-improve-care-and-healthy-populations/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>"
+  /digitaltransformationprogrammeredirects[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: ea42f161-e19f-4a81-9878-4735c21a90ab
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2022-11-09T15:29:28.256Z
+    hippostdpubwf:lastModificationDate: 2024-01-29T16:18:25.087Z
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2024-01-29T16:18:26.430Z
+    urlrewriter:rule: "<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/about-the-hip-pilot-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/health-innovation-placement-hip-programme/structure-of-the-hip-pilot/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/divine-azange/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/francesca-testa/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/gayle-dellow/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/iain-oneill/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/jacob-koris/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/malathi-reddy/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/nisha-sharma/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/sandra-eismann/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/health-innovation-placement-hip-pilot/meet-cohort-1-of-the-hip-programme/shaun-burke/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/?$</from>\r\n  <to type=\"\
+      temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/how-to-apply-for-the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/digital-futures/the-digital-futures-programme/what-people-are-saying-about-the-digital-futures-programme/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/?$</from>\r\n  <to\
+      \ type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/about-the-cnio-masterclass-series/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/chief-nursing-information-officer-cnio-masterclasses/book-your-place-on-a-masterclass/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-1-well-led/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-2-smart-foundations/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-3-safe-practice/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-4-support-nurses/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-5-empower-people/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n  <condition name=\"host\" operator=\"equal\">digital-transformation.hee.nhs.uk</condition>\r\
+      \n  <from>^/digital-academy/programmes/cnio-masterclasses/masterclass-6-improve-care-and-healthy-populations/?$</from>\r\
+      \n  <to type=\"temporary-redirect\" last=\"true\">/digital-academy/programmes</to>\r\
+      \n</rule>"
