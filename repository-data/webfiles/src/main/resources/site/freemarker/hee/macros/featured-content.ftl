@@ -24,15 +24,12 @@
                 <div class="hee-featured-content-wrapper${(maxCards = 2)?then(' double', '')}">
                     <#list featuredDocuments as featuredDoc>
                         <div class="hee-featured-content__item">
-
-
-                        <#if fcBlock.featuredContentType== "hee:trainingProgrammePage">
-                            <div class="hee-listing-item has-image">
-                                <@hst.link var="imgLink" hippobean=featuredDoc.cardImage/>
-                                <div class="hee-listing-item__image" style="background-image:url(${imgLink});"></div>
-                        <#else>
-                            <div class="hee-listing-item">
-                        </#if>
+                            <div class="hee-listing-item${(fcBlock.featuredContentType=='hee:trainingProgrammePage')?then(' has-image', '')}">
+                                <#--  Card image (for training programme pages)  -->
+                                <#if fcBlock.featuredContentType=="hee:trainingProgrammePage">
+                                    <@hst.link var="imgLink" hippobean=featuredDoc.cardImage/>
+                                    <div class="hee-listing-item__image" style="background-image:url(${imgLink});"></div>
+                                </#if>
 
                                 <#--  Item title  -->
                                 <h3><a href=${getInternalLinkURL(featuredDoc)}>${featuredDoc.title}</a></h3>
