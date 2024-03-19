@@ -24,11 +24,6 @@
 
                 <#--  Builds logo source and alt text  -->
                 <#switch logo.logoType>
-                    <#--
-                    <#case "hee">
-                        <#assign logoFileName="hee-logo.png">
-                        <#break>
-                    -->
                     <#case "nimdta">
                         <#assign logoFileName="nimdta-logo.png">
                         <#break>
