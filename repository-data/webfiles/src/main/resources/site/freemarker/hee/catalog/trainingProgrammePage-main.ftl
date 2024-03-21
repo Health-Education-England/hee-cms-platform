@@ -58,8 +58,11 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
-
+                  <#if currentGuidance??>
+                    <div class="hee-card hee-card--summary">
+                  <#else>
                     <div class="hee-card hee-card--summary default">
+                  </#if>
                         <a aria-label="Toggle Programme summary" class="hee-card--summary__toggle" href="#">
                             <span class="nhsuk-u-visually-hidden">Toggle Programme summary</span>
                         </a>
