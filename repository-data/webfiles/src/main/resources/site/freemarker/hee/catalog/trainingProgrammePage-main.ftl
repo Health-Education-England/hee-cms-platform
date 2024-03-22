@@ -58,11 +58,8 @@
             <#--  Main sections: START  -->
             <div class="page__main">
                 <div class="page__content">
-                  <#if currentGuidance??>
-                    <div class="hee-card hee-card--summary">
-                  <#else>
-                    <div class="hee-card hee-card--summary default">
-                  </#if>
+                    <#--  Programme summary: START  -->
+                    <div class="hee-card hee-card--summary${(currentGuidance??)?then('', ' default')}">
                         <a aria-label="Toggle Programme summary" class="hee-card--summary__toggle" href="#">
                             <span class="nhsuk-u-visually-hidden">Toggle Programme summary</span>
                         </a>
@@ -157,6 +154,7 @@
                             </#if>
                         </ul>
                     </div>
+                    <#--  Programme summary: END  -->
 
                     <#if currentGuidance??>
                         <h2 class="toc_h2" id="overview">${currentGuidance.title}</h2>
@@ -255,7 +253,7 @@
                             </div>
                         </#if>
                     </#if>
-                    <#if isOverview>
+                    <#if !currentGuidance??>
                         <@hee.lastNextReviewedDate lastNextReviewedDate=document.pageLastNextReview!/>
                     </#if>
                 </div>
@@ -272,7 +270,7 @@
                         <ul class="hee-card--programme-info__list">
                             <#assign accessWithEndSlash=hstRequestContext.servletRequest.requestURI?ends_with("/")/>
                             <#--  Overview link  -->
-                            <#if isOverview>
+                            <#if !currentGuidance??>
                                 <li aria-current="page">
                                     <span aria-current="page" class="hee-card--programme-info__link active">Overview</span>
                                 </li>
