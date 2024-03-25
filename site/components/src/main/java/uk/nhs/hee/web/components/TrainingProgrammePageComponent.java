@@ -28,7 +28,6 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
         Guidance currentGuidance = null;
         if (trainingProgramPage != null) {
             final boolean accessWithGuidancePath = request.getRequestContext().getResolvedSiteMapItem().getHstSiteMapItem().isWildCard();
-            boolean isOverview = true;
             boolean accessFromRootHub = true;
 
             if (accessWithGuidancePath) {
@@ -41,7 +40,6 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
                 if (!"overview".equals(guidanceName)) {
                     for (final Guidance guidance : guidancePages) {
                         if (guidance.getName().equalsIgnoreCase(guidanceName)) {
-                            isOverview = false;
                             currentGuidance = guidance;
                             request.setModel("currentGuidance", guidance);
                             break;
@@ -54,7 +52,6 @@ public class TrainingProgrammePageComponent extends EssentialsDocumentComponent 
             }
 
             request.setModel("accessFromRootHub", accessFromRootHub);
-            request.setModel("isOverview", isOverview);
 
             // the page content blocks needs valueLists to be set on the model
             final List<HippoBean> pageContentBlocks = (List<HippoBean>) trainingProgramPage.getOverviewBlocks();
