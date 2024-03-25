@@ -45,7 +45,7 @@ jobs:
         run: mvn -B clean test -Pdefault --file pom.xml
 
   deploy-to-dev:
-    name: Deploy to Dev Env. [on brCloud]    
+    name: Deploy to Dev Env. [on brCloud]
     needs: buildAndTest
     environment: development
 
