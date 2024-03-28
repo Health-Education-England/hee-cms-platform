@@ -215,7 +215,8 @@ definitions:
               jcr:primaryType: hst:containeritemcomponent
               hst:componentclassname: uk.nhs.hee.web.components.TaxonomyBasedListingPageComponent
               hst:iconpath: _cmsinternal/images/catalog-component-icons/generic-list.svg
-              hst:label: Taxonomy-based collection pages [blog, news & publication]
+              hst:label: Taxonomy-based collection pages [blog, news, publication
+                and training programme]
               hst:template: taxonomybasedlisting-main
             /trainingprogrammes-homepage:
               jcr:primaryType: hst:containeritemcomponent
@@ -229,12 +230,6 @@ definitions:
               hst:iconpath: _cmsinternal/images/catalog-component-icons/simple-content.svg
               hst:label: Training Programme Page
               hst:template: trainingprogrammepage-main
-            /training-programme-listing:
-              jcr:primaryType: hst:containeritemcomponent
-              hst:componentclassname: uk.nhs.hee.web.components.TrainingProgrammeListingPageComponent
-              hst:iconpath: _cmsinternal/images/catalog-component-icons/generic-list.svg
-              hst:label: Training programme collection page
-              hst:template: taxonomybasedlisting-main
       /lks:
         jcr:primaryType: hst:configuration
         hst:inheritsfrom: [../common]
