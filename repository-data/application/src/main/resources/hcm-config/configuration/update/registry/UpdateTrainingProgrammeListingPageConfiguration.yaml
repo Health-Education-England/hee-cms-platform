@@ -1,0 +1,31 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:registry/UpdateTrainingProgrammeListingPageConfiguration:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 10
+      hipposys:description: Updates 'training-programme-listing' page component configuration
+        like hst:componentclassname, hst:label, etc to use the new 'taxonomy-based-listing'
+        page configuration.
+      hipposys:dryrun: false
+      hipposys:loglevel: DEBUG
+      hipposys:logtarget: REPOSITORY
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hst:hee/hst:configurations/element(*, hst:configuration)/hst:workspace/hst:pages//element(*,
+        hst:containeritemcomponent)[@hst:componentclassname='uk.nhs.hee.web.components.TrainingProgrammeListingPageComponent']
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.hippoecm.hst.configuration.HstNodeTypes\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass UpdateTrainingProgrammeListingPageConfiguration\
+        \ extends BaseNodeUpdateVisitor {\r\n    boolean doUpdate(Node node) {\r\n\
+        \        log.debug \"Updating node ${node.path}\"\r\n\r\n        // Apply\
+        \ taxonomy-based-listing page component configuration for training programme\
+        \ listing page components\r\n        node.setProperty(HstNodeTypes.COMPONENT_PROPERTY_COMPONENT_CLASSNAME,\r\
+        \n                \"uk.nhs.hee.web.components.TaxonomyBasedListingPageComponent\"\
+        )\r\n        node.setProperty(HstNodeTypes.COMPONENT_PROPERTY_LABEL,\r\n \
+        \               \"Taxonomy-based collection pages [blog, news, publication\
+        \ & training programme]\")\r\n        node.session.move(node.path, node.parent.path\
+        \ + \"/taxonomy-based-listing\")\r\n\r\n        log.debug \"Successfully applied\
+        \ the taxonomy-based-listing page component config for '${node.path}'\"\r\n\
+        \r\n        return true\r\n    }\r\n\r\n    boolean undoUpdate(Node node)\
+        \ {\r\n        throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n}"
+      hipposys:throttle: 1000
