@@ -45,7 +45,7 @@ jobs:
 
   deploy-to-dev:
     name: Deploy to Dev Env. [on brCloud]
-    if: ${{ false }}
+    # if: ${{ false }}
     needs: buildAndTest
     environment: development
 
@@ -114,7 +114,7 @@ jobs:
 
   deploy-to-test:
     name: Deploy to Test Env. [on brCloud]
-    # if: ${{ false }}
+    if: ${{ false }}
     needs: [buildAndTest, deploy-to-dev]
     environment: test
 
