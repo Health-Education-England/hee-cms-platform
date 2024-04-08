@@ -59,7 +59,7 @@
             <div class="page__main">
                 <div class="page__content">
                     <#--  Programme summary: START  -->
-                    <div class="hee-card hee-card--summary${(currentGuidance??)?then('', ' default')}">
+                    <div class="hee-card hee-card--summary${(currentGuidance??)?then(' default', '')}">
                         <a aria-label="Toggle Programme summary" class="hee-card--summary__toggle" href="#">
                             <span class="nhsuk-u-visually-hidden">Toggle Programme summary</span>
                         </a>
