@@ -24,7 +24,7 @@
                 <#assign imgBgClass=' has-bg'>
             </#if>
             <div class="hee-card__image${imgBgClass}">
-                <div class="hee-card__initials"${imgBgStyle}>
+                <div class="hee-card__initials"${imgBgStyle} role="img" aria-label="${person.image.description!}">
                     <span>${initials}</span>
                 </div>
             </div>
