@@ -1,0 +1,26 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:domains/content-digital-transformation-media-embed:
+        jcr:primaryType: hipposys:domain
+        /content-domain:
+          jcr:primaryType: hipposys:domainrule
+          /media-embed-and-descendants:
+            jcr:primaryType: hipposys:facetrule
+            hipposys:equals: true
+            hipposys:facet: jcr:path
+            hipposys:type: Reference
+            hipposys:value: /content/documents/digital-transformation/components/national/media-embed
+        /readonly:
+          jcr:primaryType: hipposys:authrole
+          hipposys:groups:
+            .meta:category: system
+            .meta:add-new-system-values: true
+            type: string
+            value: [ digital-transformation-author, digital-transformation-editor, digital-transformation-viewer ]
+          hipposys:role: readonly
+          hipposys:users:
+            .meta:category: system
+            .meta:add-new-system-values: true
+            operation: override
+            type: string
+            value: [ ]

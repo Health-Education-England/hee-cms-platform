@@ -40,6 +40,8 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
     private static final String METHOD_VALUE_RELATED = "Related";
     // Publication landing page content type value
     private static final String CONTENT_TYPE_VALUE_PUBLICATION_LANDING_PAGE = "hee:publicationLandingPage";
+    // Training programme page content type value
+    private static final String CONTENT_TYPE_VALUE_TRAINING_PROGRAMME_PAGE = "hee:trainingProgrammePage";
 
     @Override
     public Optional<Violation> validate(final ValidationContext context, final Node node) {
@@ -70,7 +72,15 @@ public class MandatoryFeaturedMethodValidator implements Validator<Node> {
                 if (isAnyAvailable(node, List.of(PROPERTY_HEE_PUBLICATION_TYPE_TAXONOMY))) {
                     return Optional.of(context.createViolation("no-taxonomy",
                             Map.of("taxonomy", "Publication type",
-                                    "contentType", "News article or Blogs post")));
+                                    "contentType", "News article, Blogs post and Training programme pages")));
+                }
+
+                // For Training programme page, inapplicable tags field validation
+                if (CONTENT_TYPE_VALUE_TRAINING_PROGRAMME_PAGE.equals(
+                        node.getProperty(PROPERTY_HEE_FEATURED_CONTENT_TYPE).getString())
+                        && isAnyAvailable(node, List.of(PROPERTY_HEE_TAGS_TAXONOMY))) {
+                    return Optional.of(context.createViolation("no-taxonomy",
+                            Map.of("taxonomy", "Tags", "contentType", "Training programme page")));
                 }
             }
         } catch (final RepositoryException e) {

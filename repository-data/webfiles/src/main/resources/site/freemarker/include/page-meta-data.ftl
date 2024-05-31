@@ -40,7 +40,7 @@
 <#--  Title  -->
 <#if metaTitle?has_content>
     <@hst.headContribution category="pageMetaData">
-        <meta name="title" content="${metaTitle}" />
+        <meta name="title" content="${metaTitle} | NHS England" />
     </@hst.headContribution>
 </#if>
 
@@ -63,7 +63,7 @@
 <#--  Title  -->
 <#if metaTitle?has_content>
     <@hst.headContribution category="pageMetaData">
-        <meta property="og:title" content="${metaTitle}" />
+        <meta property="og:title" content="${metaTitle} | NHS England" />
     </@hst.headContribution>
 </#if>
 
@@ -88,12 +88,12 @@
 
 <#--  Image  -->
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:image" content="<@hst.link path='/static/assets/images/logos/hee-logo.png' fullyQualified=true/>" />
+    <meta property="og:image" content="<@hst.link path='/static/assets/images/logos/nhse-logo.jpg' fullyQualified=true/>" />
 </@hst.headContribution>
 
 <#--  Site name  -->
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:site_name" content="${hstRequestContext.resolvedMount.mount.channelInfo.organisationName} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}" />
+    <meta property="og:site_name" content="NHS England | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationName} | ${hstRequestContext.resolvedMount.mount.channelInfo.organisationDescriptor}" />
 </@hst.headContribution>
 <#--  Open Graph meta tags: END  -->
 
