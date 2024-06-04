@@ -232,7 +232,7 @@ public class NextReviewDateNotification implements RepositoryJob {
         for (final Node documentToBeReviewed: documentsToBeReviewed) {
             try {
                 documentsWithLinksForHTMLBody
-                        .append("<li><a href=\">")
+                        .append("<li><a href=\"")
                         .append(cmsBaseContentURL.isEmpty() ? documentToBeReviewed.getPath() :
                                 cmsBaseContentURL + documentToBeReviewed.getPath())
                         .append("\">")
