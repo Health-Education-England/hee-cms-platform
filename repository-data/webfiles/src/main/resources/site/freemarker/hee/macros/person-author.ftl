@@ -24,7 +24,7 @@
                 <#assign imgBgClass=' has-bg'>
             </#if>
             <div class="hee-card__image${imgBgClass}">
-                <div class="hee-card__initials"${imgBgStyle}>
+                <div class="hee-card__initials"${imgBgStyle} role="img" aria-label="${person.image.description!}">
                     <span>${initials}</span>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 <#else>
                     <#assign nameWithTitle> ${person.name} </#assign>
                 </#if>
-                <h2 data-anchorlinksignore="true" class="hee-card__name" aria-label="Name">${nameWithTitle}</h2>
+                <h2 data-anchorlinksignore="true" class="hee-card__name" aria-label="Name ${nameWithTitle}">${nameWithTitle}</h2>
 
                 <#--  Pronouns  -->
                 <#if person.pronouns?has_content>
@@ -45,14 +45,14 @@
 
                 <#--  Job title  -->
                 <#if person.jobTitle?has_content>
-                    <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title">${person.jobTitle}</h3>
+                    <h3 class="nhsuk-heading-m hee-card__jobtitle" aria-label="Job Title ${person.jobTitle}">${person.jobTitle}</h3>
                 </#if>
 
                 <#--  Department  -->
                 <#if person.department??>
-                    <p class="hee-card__department" aria-label="Department">${person.department.name}</p>
+                    <p class="hee-card__department" aria-label="Department ${person.department.name}">${person.department.name}</p>
                 <#elseif person.departmentName?has_content>
-                    <p class="hee-card__department" aria-label="Department">${person.departmentName}</p>
+                    <p class="hee-card__department" aria-label="Department ${person.departmentName}">${person.departmentName}</p>
                 </#if>
 
                 <#--  Organisation  -->

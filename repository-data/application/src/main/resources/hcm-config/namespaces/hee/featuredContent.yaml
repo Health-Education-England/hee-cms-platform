@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: be75cb1b-5fc3-4946-b920-9196352f5718
+          jcr:uuid: 94db3c44-53e6-40e4-88ce-2db7ad2377b3
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -95,7 +95,7 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:description: ''
-          jcr:uuid: 93097ac4-901f-4a37-8d0e-6545e6feb0dc
+          jcr:uuid: 3ab9bd64-27f2-4c3e-8a4b-39a4709254e1
           hippostdpubwf:lastModificationDate: 2023-04-03T12:38:57.821+01:00
           hippostdpubwf:creationDate: 2023-04-03T12:38:57.821+01:00
           hee:featuredContentType: ''
@@ -165,7 +165,8 @@ definitions:
             maxitems: '3'
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-              nodetypes: ['hee:publicationLandingPage', 'hee:blogPost', 'hee:news']
+              nodetypes: ['hee:publicationLandingPage', 'hee:blogPost', 'hee:news',
+                'hee:trainingProgrammePage']
           /globalTaxonomyHealthcareTopics:
             jcr:primaryType: frontend:plugin
             caption: Healthcare topics
