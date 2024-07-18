@@ -1,0 +1,43 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:update/hippo:queue/DisableNextReviewDateNotificationJobOnNonProdEnvironments:
+      jcr:primaryType: hipposys:updaterinfo
+      hipposys:batchsize: 1
+      hipposys:description: Disables 'NextReviewDateNotification' repository job on
+        non-prod environments after repository data bootstrapping.
+      hipposys:dryrun: false
+      hipposys:loglevel: INFO
+      hipposys:logtarget: LOG FILES
+      hipposys:parameters: ''
+      hipposys:query: /jcr:root/hippo:configuration/hippo:modules/scheduler/hippo:moduleconfig/custom/NextReviewDateNotification
+      hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
+        \r\nimport org.apache.commons.lang3.StringUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
+        \n\r\nimport javax.jcr.Node\r\n\r\nclass DisableNextReviewDateNotificationJobOnNonProdEnvironments\
+        \ extends BaseNodeUpdateVisitor {\r\n    // 'brc.environmentname' system property\r\
+        \n    public static final String SYSTEM_PROPERTY_BRC_ENV_NAME = \"brc.environmentname\"\
+        ;\r\n\r\n    // 'brc.environmentname' system property value on prod environment\r\
+        \n    public static final String PROD_BRC_ENV_NAME_VALUE = \"production\"\
+        ;\r\n\r\n    // 'hipposched:enabled' hippo scheduler property\r\n    public\
+        \ static final String PROPERTY_HIPPO_SCHEDULER_ENABLED = \"hipposched:enabled\"\
+        ;\r\n\r\n    // cron trigger node path for 'NextReviewDateNotification' custom\
+        \ repository job\r\n    public static final String NODE_NEXT_REVIEW_DATE_NOTIFICATION_CRON_TRIGGER\
+        \ = \"hipposched:triggers/nightly\";\r\n\r\n    boolean doUpdate(Node node)\
+        \ {\r\n        node.setProperty(PROPERTY_HIPPO_SCHEDULER_ENABLED, Boolean.FALSE)\r\
+        \n        node.getNode(NODE_NEXT_REVIEW_DATE_NOTIFICATION_CRON_TRIGGER)\r\n\
+        \                .setProperty(PROPERTY_HIPPO_SCHEDULER_ENABLED, Boolean.FALSE)\r\
+        \n\r\n        // Disables both 'NextReviewDateNotification' custom repository\
+        \ job and its trigger for non-prod environments.\r\n        if (StringUtils.isBlank(System.getProperty(SYSTEM_PROPERTY_BRC_ENV_NAME))\r\
+        \n                || PROD_BRC_ENV_NAME_VALUE != System.getProperty(SYSTEM_PROPERTY_BRC_ENV_NAME))\
+        \ {\r\n            log.info \"It's a non-prod environment \" +\r\n       \
+        \             \"and so disabling 'NextReviewDateNotification' (/hippo:configuration/hippo:modules/scheduler\"\
+        \ +\r\n                    \"/hippo:moduleconfig/custom/NextReviewDateNotification)\
+        \ custom repository job and its (cron) trigger\"\r\n            // Disabling\
+        \ the job\r\n            node.setProperty(PROPERTY_HIPPO_SCHEDULER_ENABLED,\
+        \ Boolean.FALSE)\r\n\r\n            if (node.hasNode(NODE_NEXT_REVIEW_DATE_NOTIFICATION_CRON_TRIGGER))\
+        \ {\r\n                // Disabling the trigger\r\n                node.getNode(NODE_NEXT_REVIEW_DATE_NOTIFICATION_CRON_TRIGGER)\r\
+        \n                        .setProperty(PROPERTY_HIPPO_SCHEDULER_ENABLED, Boolean.FALSE)\r\
+        \n            }\r\n\r\n            return true\r\n        }\r\n\r\n      \
+        \  return false\r\n    }\r\n\r\n    boolean undoUpdate(Node node) {\r\n  \
+        \      throw new UnsupportedOperationException('Updater does not implement\
+        \ undoUpdate method')\r\n    }\r\n\r\n}"
+      hipposys:throttle: 1000

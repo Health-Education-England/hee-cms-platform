@@ -60,7 +60,7 @@
 
   <properties>
     <!-- Maven CI Friendly Version -->
-    <revision>1.0.69</revision>
+    <revision>1.0.70</revision>
     <env>local</env>
 
     <!--***START temporary override of versions*** -->
@@ -493,11 +493,11 @@
 
                   <!-- Example to pass JavaMail connection factory JNDI resource attribute values as system properties -->
                   <!-- Alternatively these could directly be configured on 'conf/context-dev.xml'  -->
-                  <!-- <mail.smtp.host><<mail.smtp.host>></mail.smtp.host></mail.smtp.host>
+                  <!-- <mail.smtp.host><<mail.smtp.host>></mail.smtp.host>
                   <mail.smtp.port><<mail.smtp.port>></mail.smtp.port>
                   <mail.smtp.user><<mail.smtp.user>></mail.smtp.user>
                   <mail.smtp.password><<mail.smtp.password>></mail.smtp.password>
-                  <mail.smtp.auth><<mail.smtp.authv</mail.smtp.auth>
+                  <mail.smtp.auth><<mail.smtp.auth>></mail.smtp.auth>
                   <mail.smtp.starttls.enable><<mail.smtp.starttls.enable>></mail.smtp.starttls.enable> -->
                 </systemProperties>
               </container>
