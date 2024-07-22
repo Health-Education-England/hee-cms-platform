@@ -19,7 +19,7 @@
     resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [sort.label, sort.option.oldest, sort.option.newest, filter.category.label,
       filters.label, filter.content_type.label, filter.date.label, results.count.text,
@@ -34,7 +34,7 @@
       profession.filter.default.option.label, sub_profession.filter.default.option.label,
       topic.filter.default.option.label, sub_topic.filter.default.option.label, publication_type.label,
       tag.label, no_results.text, news_type.label, clinical_discipline.label, recruitment_format.label,
-      training_type.label, duration.label]
+      training_type.label, duration.label, file_size, file_type]
     resourcebundle:messages: [Sort by, Oldest, Newest, Category, Filters, Content
         type, Date, results, Published on, By, Sector, Region, Topic, Topics, Strings
         / Strategies, Get strategy, Search, Get search, Completed on, Provider, Category,
@@ -43,7 +43,8 @@
         submitted - Oldest, Publication type, Clear, Categories, Published date, Author(s),
       Profession, Sub profession, Sub topic, All professions, All sub professions,
       All topics, All sub topics, Publication type, Tag, There are no matching results.,
-      Type, Clinical discipline, Recruitment format, Training type, Duration]
+      Type, Clinical discipline, Recruitment format, Training type, Duration, File
+        type, File type]
   /listing[2]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
@@ -58,7 +59,7 @@
     resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [sort.label, sort.option.oldest, sort.option.newest, filter.category.label,
       filters.label, filter.content_type.label, filter.date.label, results.count.text,
@@ -73,7 +74,7 @@
       profession.filter.default.option.label, sub_profession.filter.default.option.label,
       topic.filter.default.option.label, sub_topic.filter.default.option.label, publication_type.label,
       tag.label, no_results.text, news_type.label, clinical_discipline.label, recruitment_format.label,
-      training_type.label, duration.label]
+      training_type.label, duration.label, file_size, file_type]
     resourcebundle:messages: [Sort by, Oldest, Newest, Category, Filters, Content
         type, Date, results, Published on, By, Sector, Region, Topic, Topics, Strings
         / Strategies, Get strategy, Search, Get search, Completed on, Provider, Category,
@@ -82,7 +83,8 @@
         submitted - Oldest, Publication type, Clear, Categories, Published date, Author(s),
       Profession, Sub profession, Sub topic, All professions, All sub professions,
       All topics, All sub topics, Publication type, Tag, There are no matching results.,
-      Type, Clinical discipline, Recruitment format, Training type, Duration]
+      Type, Clinical discipline, Recruitment format, Training type, Duration, File
+        type, File type]
   /listing[3]:
     jcr:primaryType: resourcebundle:resourcebundle
     jcr:mixinTypes: ['mix:referenceable']
@@ -98,7 +100,7 @@
     resourcebundle:descriptions: ['', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-      '', '', '', '']
+      '', '', '', '', '', '']
     resourcebundle:id: uk.nhs.hee.web.listing
     resourcebundle:keys: [sort.label, sort.option.oldest, sort.option.newest, filter.category.label,
       filters.label, filter.content_type.label, filter.date.label, results.count.text,
@@ -113,7 +115,7 @@
       profession.filter.default.option.label, sub_profession.filter.default.option.label,
       topic.filter.default.option.label, sub_topic.filter.default.option.label, publication_type.label,
       tag.label, no_results.text, news_type.label, clinical_discipline.label, recruitment_format.label,
-      training_type.label, duration.label]
+      training_type.label, duration.label, file_size, file_type]
     resourcebundle:messages: [Sort by, Oldest, Newest, Category, Filters, Content
         type, Date, results, Published on, By, Sector, Region, Topic, Topics, Strings
         / Strategies, Get strategy, Search, Get search, Completed on, Provider, Category,
@@ -122,4 +124,5 @@
         submitted - Oldest, Publication type, Clear, Categories, Published date, Author(s),
       Profession, Sub profession, Sub topic, All professions, All sub professions,
       All topics, All sub topics, Publication type, Tag, There are no matching results.,
-      Type, Clinical discipline, Recruitment format, Training type, Duration]
+      Type, Clinical discipline, Recruitment format, Training type, Duration, File
+        type, File type]
