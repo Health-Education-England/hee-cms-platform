@@ -18,7 +18,7 @@
                 <@hst.link var="personImage" hippobean=person.image/>
                 <img class="nhsuk-contact__img" src="${personImage}" alt="${person.image.description!}">
              <#else>
-                ${initials}
+                <span aria-hidden="true">${initials}</span>
             </#if>
         </div>
 
