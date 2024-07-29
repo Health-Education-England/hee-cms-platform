@@ -14,10 +14,11 @@
         <#-- End Get Person Initials -->
 
         <div class="nhsuk-contact__img-container">
-            ${initials}
             <#if person.image??>
                 <@hst.link var="personImage" hippobean=person.image/>
                 <img class="nhsuk-contact__img" src="${personImage}" alt="${person.image.description!}">
+             <#else>
+                ${initials}
             </#if>
         </div>
 
@@ -26,7 +27,7 @@
         <#else>
             <#assign nameWithTitle> ${person.name} </#assign>
         </#if>
-        <h2 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name">${nameWithTitle}</h2>
+        <h2 data-anchorlinksignore="true" class="nhsuk-contact__name" aria-label="Name ${nameWithTitle}">${nameWithTitle}</h2>
 
         <#if person.pronouns?has_content>
             <p class="nhsuk-contact__pronoun">${person.pronouns}</p>
