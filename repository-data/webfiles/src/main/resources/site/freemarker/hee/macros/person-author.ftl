@@ -25,7 +25,7 @@
                 <#assign imgBgStyle=' style="background-image: url(\'${personImage}\')"'>
                 <#assign imgBgClass=' has-bg'>
                 <#assign imgBgAltTxt=' role="img" aria-label="${person.image.description!}"'>
-                <#ariaHideInitials=' aria-hidden="true"'>
+                <#assign ariaHideInitials=' aria-hidden="true"'>
             </#if>
             <div class="hee-card__image${imgBgClass}">
                 <div class="hee-card__initials"${imgBgStyle}${imgBgAltTxt}>
