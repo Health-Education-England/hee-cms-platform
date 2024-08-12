@@ -16,7 +16,7 @@
         <div class="nhsuk-contact__img-container">
             <#if person.image??>
                 <@hst.link var="personImage" hippobean=person.image/>
-                <img class="nhsuk-contact__img" src="${personImage}" alt="${person.image.description!}">
+                <img class="nhsuk-contact__img" src="${personImage}" alt="${person.image.description}">
              <#else>
                 <span aria-hidden="true">${initials}</span>
             </#if>
