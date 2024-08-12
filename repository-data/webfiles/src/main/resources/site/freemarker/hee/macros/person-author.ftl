@@ -29,7 +29,7 @@
             </#if>
             <div class="hee-card__image${imgBgClass}">
                 <div class="hee-card__initials"${imgBgStyle}${imgBgAltTxt}>
-                    <span ${ariaHideInitials}>${initials}</span>
+                    <span aria-hidden="true">${initials}</span>
                 </div>
             </div>
 
