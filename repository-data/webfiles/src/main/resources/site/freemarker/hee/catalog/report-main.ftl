@@ -6,17 +6,6 @@
 <#include "../utils/date-util.ftl">
 <#include "../utils/doc-util.ftl">
 
-<style>
-    .sr-only:not(:focus):not(:active) {
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-    }
-</style>
 <@hst.setBundle basename="uk.nhs.hee.web.global"/>
 
 <#macro docDetailBlockForDocLink assetLink>
