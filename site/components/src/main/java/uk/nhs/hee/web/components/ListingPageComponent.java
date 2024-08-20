@@ -234,7 +234,7 @@ public abstract class ListingPageComponent extends EssentialsDocumentComponent {
             return;
         }
 
-        String sortOrder = DESCENDING_SORT_ORDER;
+        String sortOrder = listingPageType.getType().equals("trainingprogramme")?ATOZ_SORT_ORDER: DESCENDING_SORT_ORDER;
 
         final List<String> sortByDateQueryParamValues =
                 HstUtils.getQueryParameterValues(request, SORT_BY_QUERY_PARAM);
