@@ -57,60 +57,67 @@
                     <#if document.summary?has_content>
                         <p class="nhsuk-body-l"><@hst.html formattedText="${document.summary!?replace('\n', '<br>')}"/></p>
                     </#if>
-
+                    <#--  TOC section: START  -->
+                    <div class="nhsuk-anchor-links hee-anchorlinks sr-only" data-toc-js="true" data-headings>
+                        <h2 data-anchorlinksignore="true">Table of Contents</h2>
+                        <a href=#mainblocks>Skip table of contents</a>
+                    </div>
+                    <#--  TOC section: END  -->
                     <#--  Main content blocks: START  -->
-                    <#if document.contentBlocks??>
-                        <#list document.contentBlocks as block>
-                            <#switch block.getClass().getName()>
-                                <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
-                                    <@hst.html hippohtml=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.ImageBlock">
-                                    <@hee.imageBlock imageBlock=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.RichTextReference">
-                                    <@hst.html hippohtml=block.richTextBlock.html/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
-                                    <@hee.media media=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.QuoteReference">
-                                    <@hee.quote block=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.TableReference">
-                                    <@hee.table table=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
-                                    <@hee.expanderTable table=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.TabsReference">
-                                    <@hee.tabs tabs=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.InsetReference">
-                                    <@hee.inset inset=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
-                                    <@hee.expander expander=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
-                                    <@hee.warningCallout block=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.StatementCardReference">
-                                    <@hee.statementCard block=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.HeadingsTOC">
-                                    <@hee.headingsTOC block=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.GoogleMapReference">
-                                    <@hee.googleMap block=block/>
-                                    <#break>
-                                <#case "uk.nhs.hee.web.beans.DetailsReference">
-                                    <@hee.details block=block/>
-                                    <#break>
-                                <#default>
-                            </#switch>
-                        </#list>
-                    </#if>
+                    <div id="mainblocks">
+                        <#if document.contentBlocks??>
+                            <#list document.contentBlocks as block>
+                                <#switch block.getClass().getName()>
+                                    <#case "org.hippoecm.hst.content.beans.standard.HippoHtml">
+                                        <@hst.html hippohtml=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.ImageBlock">
+                                        <@hee.imageBlock imageBlock=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.RichTextReference">
+                                        <@hst.html hippohtml=block.richTextBlock.html/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.MediaEmbedReference">
+                                        <@hee.media media=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.QuoteReference">
+                                        <@hee.quote block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.TableReference">
+                                        <@hee.table table=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.ExpanderTableReference">
+                                        <@hee.expanderTable table=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.TabsReference">
+                                        <@hee.tabs tabs=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.InsetReference">
+                                        <@hee.inset inset=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.ExpanderGroupReference">
+                                        <@hee.expander expander=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.WarningCalloutReference">
+                                        <@hee.warningCallout block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.StatementCardReference">
+                                        <@hee.statementCard block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.HeadingsTOC">
+                                        <@hee.headingsTOC block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.GoogleMapReference">
+                                        <@hee.googleMap block=block/>
+                                        <#break>
+                                    <#case "uk.nhs.hee.web.beans.DetailsReference">
+                                        <@hee.details block=block/>
+                                        <#break>
+                                    <#default>
+                                </#switch>
+                            </#list>
+                        </#if>
+                    </div>
                     <#--  Main content blocks: END  -->
                 </div>
             </div>
@@ -119,7 +126,7 @@
             <#--  Right hand content blocks: START  -->
             <aside class="page__rightbar">
                 <#--  TOC section: START  -->
-                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js="true" data-headings>
+                <div class="nhsuk-anchor-links hee-anchorlinks" data-toc-js="true" data-headings aria-hidden="true">
                     <h2 data-anchorlinksignore="true">Table of Contents</h2>
                 </div>
                 <#--  TOC section: END  -->

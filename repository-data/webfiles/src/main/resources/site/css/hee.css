@@ -1974,6 +1974,15 @@ table caption {
   padding: 24px;
   margin-bottom: 24px;
 }
+.hee-anchorlinks.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
 .hee-anchorlinks h2 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -2116,6 +2125,20 @@ table caption {
 @media (min-width: 40.0625em) {
   .hee-anchorlinks ul ul {
     margin-left: 32px;
+  }
+}
+
+#mainblocks {
+  padding-top: 4px;
+}
+@media (min-width: 48.0625em) {
+  #mainblocks {
+    padding-top: 8px;
+  }
+}
+@media (min-width: 40.0625em) {
+  #mainblocks {
+    padding-top: 8px;
   }
 }
 
@@ -3553,6 +3576,16 @@ table caption {
   margin-top: 8px;
   width: 12px;
 }
+@media (min-width: 48.0625em) {
+  .hee-card--summary .hee-card--summary__toggle {
+    transform: rotate(180deg);
+  }
+}
+@media (min-width: 48.0625em) {
+  .hee-card--summary .hee-card--summary__heading {
+    margin: 0;
+  }
+}
 .hee-card--summary .hee-card--summary__list {
   font-size: 16px;
   font-size: 1rem;
@@ -3572,6 +3605,11 @@ table caption {
   .hee-card--summary .hee-card--summary__list {
     font-size: 14pt;
     line-height: 1.15;
+  }
+}
+@media (min-width: 48.0625em) {
+  .hee-card--summary .hee-card--summary__list {
+    display: none;
   }
 }
 .hee-card--summary .hee-card--summary__item {
@@ -3623,11 +3661,31 @@ table caption {
 .hee-card--summary.default .hee-card--summary__heading {
   margin-bottom: 0;
 }
+@media (min-width: 48.0625em) {
+  .hee-card--summary.default .hee-card--summary__heading {
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 48.0625em) and (min-width: 40.0625em) {
+  .hee-card--summary.default .hee-card--summary__heading {
+    margin-bottom: 24px;
+  }
+}
 .hee-card--summary.default .hee-card--summary__list {
   display: none;
 }
+@media (min-width: 48.0625em) {
+  .hee-card--summary.default .hee-card--summary__list {
+    display: block;
+  }
+}
 .hee-card--summary.default .hee-card--summary__toggle {
   transform: rotate(180deg);
+}
+@media (min-width: 48.0625em) {
+  .hee-card--summary.default .hee-card--summary__toggle {
+    transform: none;
+  }
 }
 
 .hee-card--author {
