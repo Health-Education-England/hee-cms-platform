@@ -25,6 +25,11 @@ public class FeaturedContentBlockService {
 
     // Publication landing page document type
     public static final String DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE = "hee:publicationLandingPage";
+    public static final String DOCUMENT_TYPE_TRAINING_PROGRAMME_PAGE = "hee:trainingProgrammePage";
+
+    // Document types not containing tags (hee:globalTaxonomyTags) taxonomy field
+    private static final List<String> DOCUMENT_TYPES_WITHOUT_TAGS_FIELD =
+            Arrays.asList(DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE, DOCUMENT_TYPE_TRAINING_PROGRAMME_PAGE);
 
     private static final Map<String, String> CONTENT_TYPE_TO_LISTING_TYPE_MAP =
             Collections.unmodifiableMap(new HashMap<>() {
@@ -35,7 +40,8 @@ public class FeaturedContentBlockService {
                     //put("hee:caseStudy", "casestudy");
                     put("hee:blogPost", "blog");
                     put("hee:news", "news");
-                    put("hee:publicationLandingPage", "publication");
+                    put(DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE, "publication");
+                    put(DOCUMENT_TYPE_TRAINING_PROGRAMME_PAGE, "trainingprogramme");
                 }
             });
 
@@ -109,7 +115,7 @@ public class FeaturedContentBlockService {
                         );
                     }
 
-                    if (!DOCUMENT_TYPE_PUBLICATION_LANDING_PAGE.equals(featuredContentBlock.getFeaturedContentType())
+                    if (!DOCUMENT_TYPES_WITHOUT_TAGS_FIELD.contains(featuredContentBlock.getFeaturedContentType())
                             && !isEmpty(featuredContentBlock.getGlobalTaxonomyTags())) {
                         baseFilter.addAndFilter(
                                 queryAndFiltersUtils.createOrFilter(

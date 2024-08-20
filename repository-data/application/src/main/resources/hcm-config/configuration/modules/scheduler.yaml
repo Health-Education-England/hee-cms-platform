@@ -1,0 +1,35 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:modules/scheduler/hippo:moduleconfig/custom:
+      jcr:primaryType: hipposched:jobgroup
+      /NextReviewDateNotification:
+        jcr:primaryType: hipposched:repositoryjob
+        hipposched:attributeNames: [documentTypes, emailFromAddress, emailFromName,
+          emailReplyToAddress, emailToAddresses, emailSubject, emailBodyHTMLTemplate,
+          emailBodyPlainTextTemplate]
+        hipposched:attributeValues: ['hee:blogPost,hee:guidance,hee:report,hee:trainingProgrammePage',
+          nwpsupport@hee.nhs.uk, Do not reply, nwpsupport@hee.nhs.uk, nwpsupport@hee.nhs.uk,
+          '[Action required] Documents review', "<!DOCTYPE html>\r\n<html lang=\"\
+            en\">\r\n    <head>\r\n        <meta charset=\"UTF-8\">\r\n        <title>Documents\
+            \ next review date email notification</title>\r\n    </head>\r\n    <body>\r\
+            \n        <p>Dear Content Team,</p>\r\n        <p>This is a gentle reminder\
+            \ that the next review dates for the following documents are commencing\
+            \ in 14 to 21 days.\r\n            Please make sure to review them.</p>\r\
+            \n        {{documents_with_links}}\r\n        <p>Thank you,<br>NWP Support</p>\r\
+            \n        <p><small>Note: This is an automated email. Please do not reply.</small></p>\r\
+            \n    </body>\r\n</html>", "Dear Content Team,\r\n\r\nThis is a gentle\
+            \ reminder that the next review dates for the following documents are\
+            \ commencing in 14 to 21 days. Please make sure to review them.\r\n\r\n\
+            {{documents_with_links}}\r\n\r\nThank you,\r\nNWP Support\r\n\r\nNote:\
+            \ This is an automated email. Please do not reply."]
+        hipposched:enabled: true
+        hipposched:repositoryJobClass: uk.nhs.hee.web.repository.scheduling.NextReviewDateNotification
+        /hipposched:triggers:
+          jcr:primaryType: hipposched:triggers
+          /nightly:
+            jcr:primaryType: hipposched:crontrigger
+            jcr:mixinTypes: ['mix:lockable']
+            jcr:uuid: 40869f2d-3f45-4710-a125-db5c0d8bad36
+            hipposched:cronExpression: 0 0 4 ? * FRI *
+            hipposched:enabled: true
+            hipposched:nextFireTime: 2024-03-01T04:00:00Z

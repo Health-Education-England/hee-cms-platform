@@ -18,13 +18,15 @@
             <#--  Image/initial  -->
             <#assign imgBgStyle=''>
             <#assign imgBgClass=''>
+            <#assign imgBgAltTxt=''>
             <#if person.image??>
                 <@hst.link var="personImage" hippobean=person.image/>
                 <#assign imgBgStyle=' style="background-image: url(\'${personImage}\')"'>
                 <#assign imgBgClass=' has-bg'>
+                <#assign imgBgAltTxt=' role="img" aria-label="${person.image.description!}"'>
             </#if>
             <div class="hee-card__image${imgBgClass}">
-                <div class="hee-card__initials"${imgBgStyle}>
+                <div class="hee-card__initials"${imgBgStyle}${imgBgAltTxt}>
                     <span>${initials}</span>
                 </div>
             </div>

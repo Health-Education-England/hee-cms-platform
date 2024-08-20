@@ -5,6 +5,7 @@
 <#include "../macros/list-item.ftl">
 <#include "../macros/select.ftl">
 <#include "../macros/checkbox-group.ftl">
+<#include "../macros/active-filters.ftl">
 <#include "../macros/micro-hero.ftl">
 
 <@hst.setBundle basename="uk.nhs.hee.web.listing"/>
@@ -116,18 +117,8 @@
                             </div>
                             <#--  Search sort dropdown: END  -->
 
-                            <#-- Active filters: START -->
-                            <#if selectedImpactGroups?has_content>
-                                <div class="hee-listing__tags">
-                                    <#list selectedImpactGroups as impactGroup>
-                                        <div class="nhsuk-filter-tag nhsuk-tag" data-filter="${impactGroup}">
-                                            <span>${impactGroupMap[impactGroup]}</span>
-                                            <a class="nhsuk-filter-tag__icon">Remove</a>
-                                        </div>
-                                    </#list>
-                                </div>
-                            </#if>
-                            <#-- Active filters: END -->
+                            <#-- Active filters -->
+                            <@legacyActiveFiltersForCheckboxGroup selectedFilters=selectedImpactGroups filterMap=impactGroupMap! />
                         </div>
                         <#--  Search result summary: END  -->
 

@@ -88,7 +88,7 @@
 
 <#--  Image  -->
 <@hst.headContribution category="pageMetaData">
-    <meta property="og:image" content="<@hst.link path='/static/assets/images/logos/hee-logo.png' fullyQualified=true/>" />
+    <meta property="og:image" content="<@hst.link path='/static/assets/images/logos/nhse-logo.jpg' fullyQualified=true/>" />
 </@hst.headContribution>
 
 <#--  Site name  -->
