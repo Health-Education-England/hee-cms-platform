@@ -19,15 +19,17 @@
             <#assign imgBgStyle=''>
             <#assign imgBgClass=''>
             <#assign imgBgAltTxt=''>
+            <#assign ariaHideInitials=''>
             <#if person.image??>
                 <@hst.link var="personImage" hippobean=person.image/>
                 <#assign imgBgStyle=' style="background-image: url(\'${personImage}\')"'>
                 <#assign imgBgClass=' has-bg'>
-                <#assign imgBgAltTxt=' role="img" aria-label="${person.image.description!}"'>
+                <#assign imgBgAltTxt=' role="img" aria-label="${person.image.description}"'>
+                <#assign ariaHideInitials=' aria-hidden="true"'>
             </#if>
             <div class="hee-card__image${imgBgClass}">
                 <div class="hee-card__initials"${imgBgStyle}${imgBgAltTxt}>
-                    <span>${initials}</span>
+                    <span aria-hidden="true">${initials}</span>
                 </div>
             </div>
 
