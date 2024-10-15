@@ -13,11 +13,8 @@
                     </h2>
                     <div class="nhsuk-error-summary__body">
                         <ul class="nhsuk-list nhsuk-error-summary__list">
-                            <li id="error-summary-firstname" style="display: none;">
-                                <a href="#errors-firstname"><@fmt.message key="error.firstname"/></a>
-                            </li>
-                            <li id="error-summary-lastname" style="display: none;">
-                                <a href="#errors-lastname"><@fmt.message key="error.lastname"/></a>
+                            <li id="error-summary-name" style="display: none;">
+                                <a href="#errors-name"><@fmt.message key="error.name"/></a>
                             </li>
                             <li id="error-summary-email" style="display: none;">
                                 <a href="#errors-email"><@fmt.message key="error.email"/></a>
@@ -31,24 +28,14 @@
 
                 <fieldset class="nhsuk-fieldset">
 
-                    <span class="nhsuk-error-message" id="errors-firstname" style="display: none;">
-                        <span class="nhsuk-u-visually-hidden">Error:</span> <@fmt.message key="error.firstname"/>
+                    <span class="nhsuk-error-message" id="errors-name" style="display: none;">
+                        <span class="nhsuk-u-visually-hidden">Error:</span> <@fmt.message key="error.name"/>
                     </span>
                     <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="firstname">
-                            <@fmt.message key="label.firstname"/>
+                        <label class="nhsuk-label" for="name">
+                            <@fmt.message key="label.name"/>
                         </label>
-                        <input class="nhsuk-input" id="firstname" name="firstname" type="text" required>
-                    </div>
-
-                    <span class="nhsuk-error-message" id="errors-lastname" style="display: none;">
-                        <span class="nhsuk-u-visually-hidden">Error:</span> <@fmt.message key="error.lastname"/>
-                    </span>
-                    <div class="nhsuk-form-group">
-                        <label class="nhsuk-label" for="lastname">
-                            <@fmt.message key="label.lastname"/>
-                        </label>
-                        <input class="nhsuk-input" id="lastname" name="lastname" type="text" required>
+                        <input class="nhsuk-input" id="name" name="name" type="text" required>
                     </div>
 
                     <span class="nhsuk-error-message" id="errors-email" style="display: none;">
