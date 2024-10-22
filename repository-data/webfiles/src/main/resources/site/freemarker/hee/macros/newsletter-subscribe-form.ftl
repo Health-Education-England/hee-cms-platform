@@ -6,7 +6,8 @@
     <#if block.newsletterSubscribeFormContentBlock.postSubmitUrl?? && block.newsletterSubscribeFormContentBlock.accName??
             && block.newsletterSubscribeFormContentBlock.listName?? && block.newsletterSubscribeFormContentBlock.consentText??>
         <div class="nhsuk-newsletter-form">
-            <form id="newsletter-form" method="POST" action=${block.newsletterSubscribeFormContentBlock.postSubmitUrl}>
+            <form id="newsletter-form"  class="js-cm-form" method="POST" action=${block.newsletterSubscribeFormContentBlock.postSubmitUrl}
+                  data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E">
                 <div id="error-summary" class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
                     <h2 class="nhsuk-error-summary__title" id="error-summary-title">
                         <@fmt.message key="error.title"/>
@@ -35,10 +36,10 @@
                         <label class="nhsuk-label" for="name">
                             <@fmt.message key="label.name"/>
                         </label>
-                        <input class="nhsuk-input" id="name" name="name" type="text" required>
+                        <input class="nhsuk-input" id="name" name="cm-name" type="text" required>
                     </div>
 
-                    <span class="nhsuk-error-message" id="errors-email" style="display: none;">
+                    <span class="nhsuk-error-message js-cm-email-input" id="errors-email" style="display: none;">
                         <span class="nhsuk-u-visually-hidden">Error:</span> <@fmt.message key="error.email"/>
                     </span>
                     <div class="nhsuk-form-group">
@@ -53,7 +54,7 @@
                             <label class="nhsuk-label" for="region">
                                 <@fmt.message key="label.region"/>
                             </label>
-                            <select class="nhsuk-select" id="region" name="region">
+                            <select class="nhsuk-select" id="region" name="cm-f-tdhjkdy">
                                 <option selected="selected" value=""><@fmt.message key="select.region"/></option>
                                 <#list newsletterRegionMap?keys as region>
                                     <option value="${newsletterRegionMap[region]}">${newsletterRegionMap[region]}</option>
@@ -67,7 +68,7 @@
                             <label class="nhsuk-label" for="organisation">
                                 <@fmt.message key="label.organisation"/>
                             </label>
-                            <select class="nhsuk-select" id="organisation" name="organisation">
+                            <select class="nhsuk-select" id="organisation" name="cm-f-tdhjkdr">
                                 <option selected="selected" value=""><@fmt.message key="select.organisation"/></option>
                                 <#list newsletterOrganisationMap?keys as organisation>
                                     <option value="${newsletterOrganisationMap[organisation]}">${newsletterOrganisationMap[organisation]}</option>
@@ -81,7 +82,7 @@
                             <label class="nhsuk-label" for="profession">
                                 <@fmt.message key="label.profession"/>
                             </label>
-                            <select class="nhsuk-select" id="profession" name="profession">
+                            <select class="nhsuk-select" id="profession" name="cm-f-tdhjkdl">
                                 <option selected="selected" value=""><@fmt.message key="select.profession"/></option>
                                 <#list newsletterProfessionMap?keys as profession>
                                     <#if newsletterProfessionMap[profession]?starts_with("~~")>
@@ -104,7 +105,7 @@
                     <div class="nhsuk-form-group">
                         <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item">
-                                <input class="nhsuk-checkboxes__input" id="consent" name="consent" type="checkbox" required>
+                                <input class="nhsuk-checkboxes__input" id="consent" name="cm-privacy-email" type="checkbox" required>
                                 <label class="nhsuk-label nhsuk-checkboxes__label" for="consent">
                                     <@hst.html hippohtml=block.newsletterSubscribeFormContentBlock.consentText/>
                                 </label>
@@ -131,5 +132,6 @@
                 </button>
             </form>
         </div>
+        <script type="text/javascript" src=https://js.createsend1.com/javascript/copypastesubscribeformlogic.js></script>
     </#if>
 </#macro>
