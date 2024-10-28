@@ -102,7 +102,7 @@
                     <span class="nhsuk-error-message" id="errors-consent" style="display: none;">
                         <span class="nhsuk-u-visually-hidden">Error:</span> <@fmt.message key="error.consent"/>
                     </span>
-                    <#--<div class="nhsuk-form-group">
+                    <div class="nhsuk-form-group">
                         <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item">
                                 <input class="nhsuk-checkboxes__input" id="consent" name="cm-privacy-email" type="checkbox" required>
@@ -110,8 +110,11 @@
                                     <@hst.html hippohtml=block.newsletterSubscribeFormContentBlock.consentText/>
                                 </label>
                             </div>
+                            <p>
+                                <input id="cm-privacy-email-hidden" name="cm-privacy-email-hidden" type="hidden" value="true">
+                            </p>
                         </div>
-                    </div>-->
+                    </div>
                     <#if block.newsletterSubscribeFormContentBlock.enableCaptcha>
                         <div class="nhsuk-form-group">
                             <script src=https://www.google.com/recaptcha/api.js></script>
