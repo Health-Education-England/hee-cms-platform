@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: cb80f98e-40a2-4658-a59f-e44a26cb426f
+          jcr:uuid: cf28affa-18c7-4eaf-96a9-c6bfcc39bc18
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -116,6 +116,15 @@ definitions:
             hipposysedit:path: hee:enableCaptcha
             hipposysedit:primary: false
             hipposysedit:type: Boolean
+          /dataId:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:dataId
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: [required]
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -127,13 +136,13 @@ definitions:
           hippotranslation:id: document-type-locale-id
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
-          hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+          hee:postSubmitUrl: https://www.createsend.com/t/subscribeerror?description=
           hee:accName: NationalWebsitePlatform
           hee:listName: e.g. NWP Stakeholders and Users - Jan 2021
           hee:successUrl: NO-REDIRECT
           hee:errorUrl: ''
           hee:submitButtonText: Subscribe
-          jcr:uuid: 4b8ae5e7-1a4f-4743-ae5e-21dd4d3f2e7d
+          jcr:uuid: 5496b40d-a9c6-4a9a-9ca8-3132ef376c5c
           hippostdpubwf:lastModificationDate: 2022-03-03T14:51:00.347Z
           hippostdpubwf:creationDate: 2022-03-03T14:51:00.347Z
           hee:showProfessionField: false
@@ -141,12 +150,11 @@ definitions:
           hee:showOrganisationField: false
           hee:enableDoubleOptIn: false
           hee:enableCaptcha: false
+          hee:dataId: ''
           /hee:consentText:
             jcr:primaryType: hippostd:html
-            hippostd:content: |-
-              <p>By signing up here, you are agreeing to receive marketing and update emails from Health Education England (HEE) about our work, in line with our Privacy Notice.</p>
-
-              <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+            hippostd:content: <p>Are you happy for us to track activity on the emails
+              we send (such as links clicked or viewing images)?</p>
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -164,7 +172,7 @@ definitions:
             field: postSubmitUrl
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
-            hint: Currently only supports Pure360.
+            hint: Currently only supports Createsend.
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /accName:
@@ -182,6 +190,15 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /dataId:
+            jcr:primaryType: frontend:plugin
+            caption: Data ID
+            field: dataId
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.field
+            hint: ID sequence of the form (e.g. 92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E)
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /consentText:

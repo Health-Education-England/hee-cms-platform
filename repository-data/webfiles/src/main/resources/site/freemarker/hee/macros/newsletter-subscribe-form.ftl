@@ -4,10 +4,11 @@
 
 <#macro newsletterSubscribeForm block>
     <#if block.newsletterSubscribeFormContentBlock.postSubmitUrl?? && block.newsletterSubscribeFormContentBlock.accName??
-            && block.newsletterSubscribeFormContentBlock.listName?? && block.newsletterSubscribeFormContentBlock.consentText??>
+            && block.newsletterSubscribeFormContentBlock.listName?? && block.newsletterSubscribeFormContentBlock.consentText??
+            && block.newsletterSubscribeFormContentBlock.dataId??>
         <div class="nhsuk-newsletter-form">
             <form id="newsletter-form"  class="js-cm-form" method="POST" action=${block.newsletterSubscribeFormContentBlock.postSubmitUrl}
-                  data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E">
+                  data-id=${block.newsletterSubscribeFormContentBlock.dataId}>
                 <div id="error-summary" class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
                     <h2 class="nhsuk-error-summary__title" id="error-summary-title">
                         <@fmt.message key="error.title"/>

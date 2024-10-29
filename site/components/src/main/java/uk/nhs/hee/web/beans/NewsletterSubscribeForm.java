@@ -66,4 +66,7 @@ public class NewsletterSubscribeForm extends BaseDocument {
     public Boolean getEnableCaptcha() {
         return getSingleProperty("hee:enableCaptcha");
     }
+
+    @HippoEssentialsGenerated(internalName = "hee:dataId")
+    public String getDataId() { return getSingleProperty("hee:dataId"); }
 }
