@@ -7,8 +7,7 @@
             && block.newsletterSubscribeFormContentBlock.listName?? && block.newsletterSubscribeFormContentBlock.consentText??
             && block.newsletterSubscribeFormContentBlock.dataId??>
         <div class="nhsuk-newsletter-form">
-            <form id="newsletter-form"  class="js-cm-form" method="POST" action=${block.newsletterSubscribeFormContentBlock.postSubmitUrl}
-                  data-id=${block.newsletterSubscribeFormContentBlock.dataId}>
+            <form id="newsletter-form"  class="js-cm-form" method="POST" action=${block.newsletterSubscribeFormContentBlock.postSubmitUrl} data-id=${block.newsletterSubscribeFormContentBlock.dataId}>
                 <div id="error-summary" class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
                     <h2 class="nhsuk-error-summary__title" id="error-summary-title">
                         <@fmt.message key="error.title"/>
@@ -106,7 +105,7 @@
                     <div class="nhsuk-form-group">
                         <div class="nhsuk-checkboxes">
                             <div class="nhsuk-checkboxes__item">
-                                <input class="nhsuk-checkboxes__input" id="consent" name="cm-privacy-email" type="checkbox" required>
+                                <input class="nhsuk-checkboxes__input" id="consent" name="cm-privacy-email" type="checkbox">
                                 <label class="nhsuk-label nhsuk-checkboxes__label" for="consent">
                                     <@hst.html hippohtml=block.newsletterSubscribeFormContentBlock.consentText/>
                                 </label>
@@ -116,22 +115,9 @@
                             </p>
                         </div>
                     </div>
-                    <#if block.newsletterSubscribeFormContentBlock.enableCaptcha>
-                        <div class="nhsuk-form-group">
-                            <script src=https://www.google.com/recaptcha/api.js></script>
-                            <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6Lda1BAUAAAAABeemGvQod8rVNQQUSM2y9pFK_gS"></div>
-			    Please tick the reCAPTCHA box to enable the subscribe button	
-                        </div>
-                    </#if>
-
-                    <input type="hidden" name="accName" value="${block.newsletterSubscribeFormContentBlock.accName}"/>
-                    <input type="hidden" name="listName" value="${block.newsletterSubscribeFormContentBlock.listName}"/>
-                    <input type="hidden" name="successUrl" value="${block.newsletterSubscribeFormContentBlock.successUrl}"/>
-                    <input type="hidden" name="errorUrl" value="${block.newsletterSubscribeFormContentBlock.errorUrl}"/>
-                    <input type="hidden" name="doubleOptin" value="${block.newsletterSubscribeFormContentBlock.enableDoubleOptIn?c}" />
                 </fieldset>
 
-                <button class="nhsuk-button" disabled="disabled" type="submit" data-module="nhsuk-button">
+                <button class="nhsuk-button" type="submit" data-module="nhsuk-button">
                     ${block.newsletterSubscribeFormContentBlock.submitButtonText}
                 </button>
             </form>

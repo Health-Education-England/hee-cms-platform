@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: cf28affa-18c7-4eaf-96a9-c6bfcc39bc18
+          jcr:uuid: d6302c91-7685-47ce-bacb-98375f435ff9
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -42,22 +42,6 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
-          /successUrl:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:successUrl
-            hipposysedit:primary: false
-            hipposysedit:type: String
-          /errorUrl:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:errorUrl
-            hipposysedit:primary: false
-            hipposysedit:type: String
           /submitButtonText:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -100,22 +84,6 @@ definitions:
             hipposysedit:path: hee:showProfessionField
             hipposysedit:primary: false
             hipposysedit:type: Boolean
-          /enableDoubleOptIn:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:enableDoubleOptIn
-            hipposysedit:primary: false
-            hipposysedit:type: Boolean
-          /enableCaptcha:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:enableCaptcha
-            hipposysedit:primary: false
-            hipposysedit:type: Boolean
           /dataId:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -139,17 +107,13 @@ definitions:
           hee:postSubmitUrl: https://www.createsend.com/t/subscribeerror?description=
           hee:accName: NationalWebsitePlatform
           hee:listName: e.g. NWP Stakeholders and Users - Jan 2021
-          hee:successUrl: NO-REDIRECT
-          hee:errorUrl: ''
           hee:submitButtonText: Subscribe
-          jcr:uuid: 5496b40d-a9c6-4a9a-9ca8-3132ef376c5c
+          jcr:uuid: 4bcee5c1-0ed4-46d1-95fb-03edf87f67b1
           hippostdpubwf:lastModificationDate: 2022-03-03T14:51:00.347Z
           hippostdpubwf:creationDate: 2022-03-03T14:51:00.347Z
           hee:showProfessionField: false
           hee:showRegionField: false
           hee:showOrganisationField: false
-          hee:enableDoubleOptIn: false
-          hee:enableCaptcha: false
           hee:dataId: ''
           /hee:consentText:
             jcr:primaryType: hippostd:html
@@ -211,24 +175,6 @@ definitions:
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
               ckeditor.config.overlayed.json: '{ forcePasteAsPlainText: true }'
-          /successUrl:
-            jcr:primaryType: frontend:plugin
-            caption: Success url
-            field: successUrl
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /errorUrl:
-            jcr:primaryType: frontend:plugin
-            caption: Error url
-            field: errorUrl
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
           /showRegionField:
             jcr:primaryType: frontend:plugin
             caption: Show region field
@@ -253,23 +199,6 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /enableDoubleOptIn:
-            jcr:primaryType: frontend:plugin
-            caption: Enable double opt in
-            field: enableDoubleOptIn
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /enableCaptcha:
-            jcr:primaryType: frontend:plugin
-            caption: Enable captcha
-            field: enableCaptcha
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /submitButtonText:
