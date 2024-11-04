@@ -11,7 +11,7 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: d6302c91-7685-47ce-bacb-98375f435ff9
+          jcr:uuid: 1fb98fcd-992a-4af3-9cb9-5d2b80c7d497
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
@@ -21,24 +21,6 @@ definitions:
             hipposysedit:multiple: false
             hipposysedit:ordered: false
             hipposysedit:path: hee:postSubmitUrl
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /accName:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:accName
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [required]
-          /listName:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:listName
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
@@ -105,10 +87,8 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:postSubmitUrl: https://www.createsend.com/t/subscribeerror?description=
-          hee:accName: NationalWebsitePlatform
-          hee:listName: e.g. NWP Stakeholders and Users - Jan 2021
           hee:submitButtonText: Subscribe
-          jcr:uuid: 4bcee5c1-0ed4-46d1-95fb-03edf87f67b1
+          jcr:uuid: 2c27f609-d8e9-4ee4-bd7c-af90f5051a3c
           hippostdpubwf:lastModificationDate: 2022-03-03T14:51:00.347Z
           hippostdpubwf:creationDate: 2022-03-03T14:51:00.347Z
           hee:showProfessionField: false
@@ -118,7 +98,7 @@ definitions:
           /hee:consentText:
             jcr:primaryType: hippostd:html
             hippostd:content: <p>Are you happy for us to track activity on the emails
-              we send (such as links clicked or viewing images)?</p>
+              we send (such as links clicked or viewing images) ?</p>
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -137,23 +117,6 @@ definitions:
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
             wicket.id: ${cluster.id}.field
             hint: Currently only supports Createsend.
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /accName:
-            jcr:primaryType: frontend:plugin
-            caption: Account name
-            field: accName
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            /cluster.options:
-              jcr:primaryType: frontend:pluginconfig
-          /listName:
-            jcr:primaryType: frontend:plugin
-            caption: List name
-            field: listName
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
-            hint: ''
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /dataId:

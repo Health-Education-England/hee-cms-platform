@@ -12,16 +12,6 @@ public class NewsletterSubscribeForm extends BaseDocument {
         return getSingleProperty("hee:postSubmitUrl");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:accName")
-    public String getAccName() {
-        return getSingleProperty("hee:accName");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:listName")
-    public String getListName() {
-        return getSingleProperty("hee:listName");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:submitButtonText")
     public String getSubmitButtonText() {
         return getSingleProperty("hee:submitButtonText");

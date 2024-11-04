@@ -3,9 +3,7 @@
 <@hst.setBundle basename="uk.nhs.hee.web.newsletter" scope="request"/>
 
 <#macro newsletterSubscribeForm block>
-    <#if block.newsletterSubscribeFormContentBlock.postSubmitUrl?? && block.newsletterSubscribeFormContentBlock.accName??
-            && block.newsletterSubscribeFormContentBlock.listName?? && block.newsletterSubscribeFormContentBlock.consentText??
-            && block.newsletterSubscribeFormContentBlock.dataId??>
+    <#if block.newsletterSubscribeFormContentBlock.postSubmitUrl?? && block.newsletterSubscribeFormContentBlock.dataId??>
         <div class="nhsuk-newsletter-form">
             <form id="newsletter-form"  class="js-cm-form" method="POST" action=${block.newsletterSubscribeFormContentBlock.postSubmitUrl} data-id=${block.newsletterSubscribeFormContentBlock.dataId}>
                 <div id="error-summary" class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" style="display: none;">
@@ -39,14 +37,14 @@
                         <input class="nhsuk-input" id="name" name="cm-name" type="text" required>
                     </div>
 
-                    <span class="nhsuk-error-message js-cm-email-input" id="errors-email" style="display: none;">
+                    <span class="nhsuk-error-message" id="errors-email" style="display: none;">
                         <span class="nhsuk-u-visually-hidden">Error:</span> <@fmt.message key="error.email"/>
                     </span>
                     <div class="nhsuk-form-group">
                         <label class="nhsuk-label" for="email">
                             <@fmt.message key="label.email"/>
                         </label>
-                        <input class="nhsuk-input" id="email" name="email" type="email" required>
+                        <input class="nhsuk-input js-cm-email-input" id="email" name="cm-ttjturl-ttjturl" type="email" required>
                     </div>
 
                     <#if block.newsletterSubscribeFormContentBlock.showRegionField>
