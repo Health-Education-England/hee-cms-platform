@@ -1334,8 +1334,8 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 1ddf2ba1-3fa3-432e-b6fa-52ec8bbd6f93
-        hee:description: Finding the latest evidence through literature
-          searching, using trusted sources like OpenAthens and collaboration.
+        hee:description: Finding the latest evidence through literature searching,
+          using trusted sources like OpenAthens and collaboration.
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
@@ -1368,8 +1368,8 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: 1c1bde78-cc95-431c-b627-f5e3bffc610c
-        hee:description: Finding the latest evidence through literature
-          searching, using trusted sources like OpenAthens and collaboration.
+        hee:description: Finding the latest evidence through literature searching,
+          using trusted sources like OpenAthens and collaboration.
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
@@ -1402,8 +1402,8 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 8937ee92-7163-42f4-97c9-b1eef12d698c
-        hee:description: Finding the latest evidence through literature
-          searching, using trusted sources like OpenAthens and collaboration.
+        hee:description: Finding the latest evidence through literature searching,
+          using trusted sources like OpenAthens and collaboration.
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
@@ -1443,8 +1443,8 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: eb9bccb0-f4f0-4d2a-ab9b-e3b8c7d85660
-        hee:description: Finding the latest evidence through literature
-          searching, using trusted sources like OpenAthens and collaboration.
+        hee:description: Finding the latest evidence through literature searching,
+          using trusted sources like OpenAthens and collaboration.
         hippo:availability: []
         hippostd:retainable: false
         hippostd:state: draft
@@ -1477,8 +1477,8 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: ee818cd8-6c0a-4809-9811-3f8282f3b672
-        hee:description: Finding the latest evidence through literature
-          searching, using trusted sources like OpenAthens and collaboration.
+        hee:description: Finding the latest evidence through literature searching,
+          using trusted sources like OpenAthens and collaboration.
         hippo:availability: [preview]
         hippostd:retainable: false
         hippostd:state: unpublished
@@ -1511,8 +1511,8 @@
         jcr:primaryType: hee:ContentCard
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: ab1c2a59-8723-4f45-919b-07cba8e2a26b
-        hee:description: Finding the latest evidence through literature
-          searching, using trusted sources like OpenAthens and collaboration.
+        hee:description: Finding the latest evidence through literature searching,
+          using trusted sources like OpenAthens and collaboration.
         hippo:availability: [live]
         hippostd:retainable: false
         hippostd:state: published
@@ -7475,17 +7475,18 @@
       jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
       jcr:uuid: d65410bd-94b0-48f5-8a57-95c385d75d59
       hippo:name: NWP Stakeholders and Users - Jan 2021
-      hippo:versionHistory: 3f676d59-28eb-4896-9348-8b3b7680829a
+      hippo:versionHistory: a799903d-2fd0-4983-bb6c-d3e7e9f63050
       /nwp-stakeholders-and-users---jan-2021[1]:
         jcr:primaryType: hee:newsletterSubscribeForm
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: b3df4b74-5172-4341-a303-ab2d7d9dc92e
         hee:accName: NationalWebsitePlatform
+        hee:dataId: ''
         hee:enableCaptcha: true
         hee:enableDoubleOptIn: true
         hee:errorUrl: https://library.hee.nhs.uk/cookies
-        hee:listName: NWP Stakeholders and Users - Jan 2021
-        hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+        hee:listName: ''
+        hee:postSubmitUrl: https://www.createsend.com/t/subscribeerror?description=
         hee:showOrganisationField: true
         hee:showProfessionField: true
         hee:showRegionField: true
@@ -7497,26 +7498,25 @@
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-03-03T16:26:04.584Z
-        hippostdpubwf:lastModificationDate: 2022-03-15T11:23:14.069Z
+        hippostdpubwf:lastModificationDate: 2024-10-31T14:47:08.405Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: ab138b31-92a0-4f36-94fc-2dbb1ec6f9e9
         hippotranslation:locale: document-type-locale
         /hee:consentText:
           jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
-
-            <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+          hippostd:content: <p>Are you happy for us to track activity on the emails
+            we send (such as links clicked or viewing images)?</p>
       /nwp-stakeholders-and-users---jan-2021[2]:
         jcr:primaryType: hee:newsletterSubscribeForm
         jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
         jcr:uuid: d8ed5b65-453a-4f13-a90e-97fef725e2fa
         hee:accName: NationalWebsitePlatform
+        hee:dataId: 92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E
         hee:enableCaptcha: true
         hee:enableDoubleOptIn: true
         hee:errorUrl: https://library.hee.nhs.uk/cookies
         hee:listName: NWP Stakeholders and Users - Jan 2021
-        hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+        hee:postSubmitUrl: https://www.createsend.com/t/subscribeerror?description=
         hee:showOrganisationField: true
         hee:showProfessionField: true
         hee:showRegionField: true
@@ -7528,26 +7528,25 @@
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-03-03T16:26:04.584Z
-        hippostdpubwf:lastModificationDate: 2022-03-15T01:09:27.610Z
+        hippostdpubwf:lastModificationDate: 2024-10-31T14:36:38.806Z
         hippostdpubwf:lastModifiedBy: admin
         hippotranslation:id: ab138b31-92a0-4f36-94fc-2dbb1ec6f9e9
         hippotranslation:locale: document-type-locale
         /hee:consentText:
           jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
-
-            <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+          hippostd:content: <p>Are you happy for us to track activity on the emails
+            we send (such as links clicked or viewing images)?</p>
       /nwp-stakeholders-and-users---jan-2021[3]:
         jcr:primaryType: hee:newsletterSubscribeForm
         jcr:mixinTypes: ['mix:referenceable']
         jcr:uuid: 8addf1c8-39b7-455e-a9eb-41082ad38793
         hee:accName: NationalWebsitePlatform
+        hee:dataId: 92D4C54F0FEC16E5ADC2B1904DE9ED1A508DB0E3577570F12F1BEA7077EF99C95C8869BD43B2B1BE8A600F4AB4140ADD2AC8BD79012A23F860CEB089AE1F7E2E
         hee:enableCaptcha: true
         hee:enableDoubleOptIn: true
         hee:errorUrl: https://library.hee.nhs.uk/cookies
         hee:listName: NWP Stakeholders and Users - Jan 2021
-        hee:postSubmitUrl: https://response.pure360.com/interface/list.php
+        hee:postSubmitUrl: https://www.createsend.com/t/subscribeerror?description=
         hee:showOrganisationField: true
         hee:showProfessionField: true
         hee:showRegionField: true
@@ -7559,17 +7558,15 @@
         hippostd:transferable: false
         hippostdpubwf:createdBy: admin
         hippostdpubwf:creationDate: 2022-03-03T16:26:04.584Z
-        hippostdpubwf:lastModificationDate: 2022-03-15T01:09:27.610Z
+        hippostdpubwf:lastModificationDate: 2024-10-31T14:36:38.806Z
         hippostdpubwf:lastModifiedBy: admin
-        hippostdpubwf:publicationDate: 2022-03-15T01:09:29.600Z
+        hippostdpubwf:publicationDate: 2024-10-31T14:36:49.506Z
         hippotranslation:id: ab138b31-92a0-4f36-94fc-2dbb1ec6f9e9
         hippotranslation:locale: document-type-locale
         /hee:consentText:
           jcr:primaryType: hippostd:html
-          hippostd:content: |-
-            <p>By signing up here you agree to receive marketing and update emails from Health Education England regarding our work.</p>
-
-            <p>You can unsubscribe at any time by clicking the link in the email you receive.</p>
+          hippostd:content: <p>Are you happy for us to track activity on the emails
+            we send (such as links clicked or viewing images)?</p>
   /tables:
     jcr:primaryType: hippostd:folder
     jcr:mixinTypes: ['hippo:named', 'mix:versionable']

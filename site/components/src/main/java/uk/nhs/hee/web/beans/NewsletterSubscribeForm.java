@@ -12,26 +12,6 @@ public class NewsletterSubscribeForm extends BaseDocument {
         return getSingleProperty("hee:postSubmitUrl");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:accName")
-    public String getAccName() {
-        return getSingleProperty("hee:accName");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:listName")
-    public String getListName() {
-        return getSingleProperty("hee:listName");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:successUrl")
-    public String getSuccessUrl() {
-        return getSingleProperty("hee:successUrl");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:errorUrl")
-    public String getErrorUrl() {
-        return getSingleProperty("hee:errorUrl");
-    }
-
     @HippoEssentialsGenerated(internalName = "hee:submitButtonText")
     public String getSubmitButtonText() {
         return getSingleProperty("hee:submitButtonText");
@@ -57,13 +37,8 @@ public class NewsletterSubscribeForm extends BaseDocument {
         return getHippoHtml("hee:consentText");
     }
 
-    @HippoEssentialsGenerated(internalName = "hee:enableDoubleOptIn")
-    public Boolean getEnableDoubleOptIn() {
-        return getSingleProperty("hee:enableDoubleOptIn");
-    }
-
-    @HippoEssentialsGenerated(internalName = "hee:enableCaptcha")
-    public Boolean getEnableCaptcha() {
-        return getSingleProperty("hee:enableCaptcha");
+    @HippoEssentialsGenerated(internalName = "hee:dataId")
+    public String getDataId() {
+        return getSingleProperty("hee:dataId");
     }
 }
