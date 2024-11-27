@@ -314,15 +314,7 @@
                                     <p><strong><@fmt.message key="no_results.text"/></strong></p>
                                 <#else>
                                     <#--  Results cards  -->
-                                    <#if listingType='trainingprogramme'>
-                                        <#--  For training programme collection  -->
-                                        <@trainingListItem
-                                            items=pageable.items
-                                            trainingProgrammeListingPageURL=trainingProgrammeListingPageURL!/>
-                                    <#else>
-                                        <#--  For other collections (blog post, news article, etc)  -->
-                                        <@.vars["${listingType}ListItem"] items=pageable.items/>
-                                    </#if>
+                                    <@.vars["${listingType}ListItem"] items=pageable.items/>
 
                                     <#--  Pagination  -->
                                     <#include "../../include/pagination-nhs.ftl">
