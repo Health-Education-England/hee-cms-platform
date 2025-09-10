@@ -3,7 +3,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: a33dc2d3-f333-41ab-985c-7fd127758eac
   hippo:name: HomeToKnowledgeStaffRedirect
-  hippo:versionHistory: 773a90ef-b8ff-4955-a14c-ad9cf3b09748
+  hippo:versionHistory: 4ca251a4-d20e-404e-9934-672dd580063c
   /hometoknowledgestaffredirect[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -11,16 +11,20 @@
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:07:54.302+01:00
-    hippostdpubwf:lastModificationDate: 2023-03-08T12:07:49.220Z
+    hippostdpubwf:lastModificationDate: 2025-09-10T13:38:28.641+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
     urlrewriter:rule: "<rule>\r\n    <name>Home to Knowledge Staff Redirect for hosts\
       \ other than 'hee.nhs.uk'</name>\r\n    <condition name=\"host\" operator=\"\
       notequal\">hee.nhs.uk</condition>\r\n    <from>^/kls-rebuild[/]?$</from>\r\n\
       \    <to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/knowledge-staff</to>\r\
-      \n</rule>"
+      \n</rule>\r\n\r\n<rule>\r\n    <name>Home to Knowledge Staff Redirect for 'library.hee.nhs.uk'\
+      \ host</name>\r\n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/$</from>\r\n    <to type=\"temporary-redirect\" last=\"true\"\
+      >/knowledge-staff</to>\r\n</rule>"
   /hometoknowledgestaffredirect[2]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:versionable']
@@ -41,7 +45,7 @@
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 8141af87-98f6-430d-a02d-fbd024073329
-    hippo:availability: [live]
+    hippo:availability: []
     hippostd:retainable: false
     hippostd:state: published
     hippostdpubwf:createdBy: admin
