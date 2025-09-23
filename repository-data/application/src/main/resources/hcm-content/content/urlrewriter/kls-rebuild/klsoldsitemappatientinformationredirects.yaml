@@ -1,0 +1,453 @@
+/content/urlrewriter/kls-rebuild/klsoldsitemappatientinformationredirects:
+  .meta:order-before: klsoldsitemapknowledgemobilisationredirects
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: ea5a832a-7bdf-4c84-b358-f7e83993ecb9
+  hippo:name: KLSOldSitemapPatientInformationRedirects
+  hippo:versionHistory: 94a5b07f-9b8c-4e57-9698-f4a8a77aee7a
+  /klsoldsitemappatientinformationredirects[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: ef9e23da-b73b-418a-8518-c32d1d6a9b46
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T12:24:31.452+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T12:24:31.453+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/patient-information/types-of-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-resources/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/patient-information/patient-information/health-literacy-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/making-the-case/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/patient-information/patient-information/making-the-case</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/working-with-partners-to-increase-skills-of-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/working-with-partners-to-increase-skills-of-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-and-patient-information/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/ideas-bank/health-literacy-patient-information</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-and-digital-literacy-pilot-sites/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/heath-and-digital-literacy-pilots</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/ideas-bank/developing-health-literacy-champions-network/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/ideas-bank/developing-a-health-literacy-champions-network</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/information-for-patients-and-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/coronavirus-covid-19-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/covid-19-misinformation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/covid-19-misinformation</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/websites-you-can-trust/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/websites-you-can-trust</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/how-to-start-your-search/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/how-to-start-your-search</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/dealing-with-enquiries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/dealing-with-enquiries</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/walk-in-access/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/walk-in-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/enquiry-service/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/enquiry-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/facilitate-health-literacy/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/facilitate-health-literacy</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/helping-healthcare-staff/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/helping-healthcare-staff</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/collaboration-with-public-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/collaboration-with-public-libraries</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/library-open-to-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/library-open-to-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-and-patient-information-workstream/health-literacy-and-patient-information-workstream-strategic-drivers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-literacy-and-patient-information-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/open-access-resources-for-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/open-access-resources-for-non-nhs-staff-patients-and-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/resources-for-partnerships-and-networking/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/ice-breakers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/ice-breakers</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/barriers-and-drivers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/barriers-and-drivers-game</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/regional-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/regional-case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/developing-local-partnerships-and-networks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/developing-local-partnerships-and-networks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/six-thinking-hats/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/six-thinking-hats</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/training-resources/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/training-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/fresh-eyes-exercise/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/fresh-eyes-exercise</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/priority-matrix-exercise/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/prioritisation-matrix</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/consumer-health-information-slides/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/consumer-health-information-slides</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-resources/guidance-for-library-assistants/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/health-literacy-resources</to>\r\
+      \n</rule>"
+  /klsoldsitemappatientinformationredirects[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: ffdc0d2e-d676-40e3-abc8-c71a940c8a3b
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T12:24:31.452+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T12:24:39.052+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/patient-information/types-of-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-resources/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/patient-information/patient-information/health-literacy-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/making-the-case/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/patient-information/patient-information/making-the-case</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/working-with-partners-to-increase-skills-of-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/working-with-partners-to-increase-skills-of-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-and-patient-information/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/ideas-bank/health-literacy-patient-information</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-and-digital-literacy-pilot-sites/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/heath-and-digital-literacy-pilots</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/ideas-bank/developing-health-literacy-champions-network/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/ideas-bank/developing-a-health-literacy-champions-network</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/information-for-patients-and-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/coronavirus-covid-19-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/covid-19-misinformation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/covid-19-misinformation</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/websites-you-can-trust/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/websites-you-can-trust</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/how-to-start-your-search/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/how-to-start-your-search</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/dealing-with-enquiries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/dealing-with-enquiries</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/walk-in-access/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/walk-in-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/enquiry-service/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/enquiry-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/facilitate-health-literacy/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/facilitate-health-literacy</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/helping-healthcare-staff/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/helping-healthcare-staff</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/collaboration-with-public-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/collaboration-with-public-libraries</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/library-open-to-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/library-open-to-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-and-patient-information-workstream/health-literacy-and-patient-information-workstream-strategic-drivers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-literacy-and-patient-information-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/open-access-resources-for-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/open-access-resources-for-non-nhs-staff-patients-and-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/resources-for-partnerships-and-networking/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/ice-breakers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/ice-breakers</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/barriers-and-drivers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/barriers-and-drivers-game</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/regional-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/regional-case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/developing-local-partnerships-and-networks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/developing-local-partnerships-and-networks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/six-thinking-hats/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/six-thinking-hats</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/training-resources/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/training-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/fresh-eyes-exercise/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/fresh-eyes-exercise</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/priority-matrix-exercise/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/prioritisation-matrix</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/consumer-health-information-slides/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/consumer-health-information-slides</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-resources/guidance-for-library-assistants/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/health-literacy-resources</to>\r\
+      \n</rule>"
+  /klsoldsitemappatientinformationredirects[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 6eac5cde-e90f-4cba-a4fa-e22f3f056102
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T12:24:31.452+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T12:24:39.052+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2025-07-17T12:24:41.378+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/patient-information/types-of-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-resources/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/patient-information/patient-information/health-literacy-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/making-the-case/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/patient-information/patient-information/making-the-case</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/working-with-partners-to-increase-skills-of-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/working-with-partners-to-increase-skills-of-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-and-patient-information/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/ideas-bank/health-literacy-patient-information</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-and-digital-literacy-pilot-sites/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/heath-and-digital-literacy-pilots</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/ideas-bank/developing-health-literacy-champions-network/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/ideas-bank/developing-a-health-literacy-champions-network</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/information-for-patients-and-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/coronavirus-covid-19-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/covid-19-misinformation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/covid-19-misinformation</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/websites-you-can-trust/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/websites-you-can-trust</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-information-online/how-to-start-your-search/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-information-online/health-information-online/how-to-start-your-search</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/dealing-with-enquiries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/dealing-with-enquiries</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/walk-in-access/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/walk-in-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/enquiry-service/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/enquiry-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/facilitate-health-literacy/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/facilitate-health-literacy</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/helping-healthcare-staff/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/helping-healthcare-staff</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/collaboration-with-public-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/collaboration-with-public-libraries</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/types-of-library-service/library-open-to-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/types-of-library-services/types-of-library-services/library-open-to-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-and-patient-information-workstream/health-literacy-and-patient-information-workstream-strategic-drivers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-literacy-and-patient-information-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/open-access-resources-for-the-public/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/open-access-resources-for-non-nhs-staff-patients-and-the-public</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/resources-for-partnerships-and-networking/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/ice-breakers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/ice-breakers</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/barriers-and-drivers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/barriers-and-drivers-game</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/regional-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/regional-case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/developing-local-partnerships-and-networks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/developing-local-partnerships-and-networks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/six-thinking-hats/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/six-thinking-hats</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/patient-information-workshop-pack-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/resources-for-partnerships-and-networking</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/training-resources/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/training-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/fresh-eyes-exercise/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/fresh-eyes-exercise</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/priority-matrix-exercise/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/prioritisation-matrix</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/patient-information-resources/consumer-health-information-slides/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information-resources/patient-information-resources/consumer-health-information-slides</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/patient-information/health-literacy-resources/guidance-for-library-assistants/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/patient-information/health-literacy-resources</to>\r\
+      \n</rule>"

@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: f57632b1-5840-452a-8558-3765fd6ec562
   hippo:name: SearchToSearchResultsRedirect
-  hippo:versionHistory: d830349d-2f6e-47aa-afbf-f489774a6dc0
+  hippo:versionHistory: 20fe3002-15b3-4b4d-abd5-74e6fdddcc96
   /searchtosearchresultsredirect[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -12,20 +12,19 @@
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
-    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
-    hippostdpubwf:lastModificationDate: 2023-03-08T12:07:51.557Z
+    hippostdpubwf:lastModificationDate: 2025-09-10T13:37:32.052+01:00
     hippostdpubwf:lastModifiedBy: admin
     hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
       true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>\r\n\r\
-      \n<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
-      \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
-      \n    <from>^/medical/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
-      true\">/site/medical/search/results?%{query-string}</to>\r\n</rule>"
+      \n<rule>\r\n    <name>Search Redirect for 'library.hee.nhs.uk' host</name>\r\
+      \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>"
   /searchtosearchresultsredirect[2]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:versionable']
@@ -35,12 +34,16 @@
     hippostd:state: unpublished
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
-    hippostdpubwf:lastModificationDate: 2023-03-08T09:28:48.395Z
+    hippostdpubwf:lastModificationDate: 2025-09-10T13:38:01.266+01:00
     hippostdpubwf:lastModifiedBy: admin
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
-      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>"
+      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>\r\n\r\
+      \n<rule>\r\n    <name>Search Redirect for 'library.hee.nhs.uk' host</name>\r\
+      \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>"
   /searchtosearchresultsredirect[3]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -50,10 +53,14 @@
     hippostd:state: published
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
-    hippostdpubwf:lastModificationDate: 2023-03-08T09:28:48.395Z
+    hippostdpubwf:lastModificationDate: 2025-09-10T13:38:01.266+01:00
     hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2023-03-08T10:59:26.419Z
+    hippostdpubwf:publicationDate: 2025-09-10T13:38:03.838+01:00
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
-      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>"
+      true\">/site/kls-rebuild/search/results?%{query-string}</to>\r\n</rule>\r\n\r\
+      \n<rule>\r\n    <name>Search Redirect for 'library.hee.nhs.uk' host</name>\r\
+      \n    <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n    <from>^/search/?$</from>\r\n    <to type=\"redirect\" last=\"true\">/search/results?%{query-string}</to>\r\
+      \n</rule>"

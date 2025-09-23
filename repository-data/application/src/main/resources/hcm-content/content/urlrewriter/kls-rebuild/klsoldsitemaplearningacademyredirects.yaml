@@ -1,0 +1,718 @@
+/content/urlrewriter/kls-rebuild/klsoldsitemaplearningacademyredirects:
+  .meta:order-before: klsoldsitemapaboutredirects
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: e4be9440-776d-42bf-ba24-e1889c7356fe
+  hippo:name: KLSOldSitemapLearningAcademyRedirects
+  hippo:versionHistory: 93693cb3-9b4b-48d8-9a3e-07320a0d4c39
+  /klsoldsitemaplearningacademyredirects[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 9cb5a9e6-b2f6-4dd9-98cd-90779345c7a9
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostd:transferable: false
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T11:39:22.112+01:00
+    hippostdpubwf:lastModificationDate: 2025-09-11T10:52:44.751+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-and-library-services-policies/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/accessibility-statement/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/accessibility-statement</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-for-healthcare-board/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/knowledge-for-healthcare/knowledge-for-healthcare/kfh-board</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-for-healthcare/levers-for-change/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/about/knowledge-for-healthcare/knowledge-for-healthcare/levers-for-change</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/regional-meetings/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/national-meetings</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect\
+      \ old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\"\
+      >library.hee.nhs.uk</condition>\r\n<from>^/about/mailing-lists/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/about/contact-us</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/introducing-the-HEE-KLS-team/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/contact-us</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/knowledge-and-library-services-policies/staff-ratio-policy/staff-ratio-policy-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/knowledge-and-library-services-policies/staff-ratio-policy/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/sustainability/sustainability-in-nhs-organisations/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/greener-digital/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/nhs-carbon-footprint-plus/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/kls-and-sustainability/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy/learning-zone/sustainability-in-nhs-knowledge-and-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/professional-skills-and-knowledge-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition\
+      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n<from>^/kls-rebuild/learning-academy/learning-zone/professional-skills-and-knowledge-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/evidence-searching/national-searching-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/evidence-searching/evidence-searching-and-national-guidance/national-searching-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/summarising-and-synthesising-evidence/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/synthesising-and-summarising</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/sustainability-in-kls/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/sustainability-in-nhs-knowledge-and-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-10/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/putting-your-findings-into-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-6/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/obtaining-ethical-and-trust-approval</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-8/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/analysing-and-interpreting-your-data</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-7/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/collecting-and-collating-your-data</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-5/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/writing-your-research-proposal</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/reviewing-the-literature</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/turning-your-idea-into-a-research-question</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-4/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/funding-your-research</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/designing-your-study</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-9/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/writing-up-and-disseminating-your-findings</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/welcome-to-the-research-toolkit/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/overview-of-the-research-toolkit</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-academy-library/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy</to>\r\n</rule>\r\n\r\n\
+      <rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/learning-academy/wpd-overview/wpd-driver-diagram/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/about-the-learning-academy/learning-academy-launch/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-learning-academy/the-learning-academy</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/diversity-ebook-collection/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/overview-of-equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/lgbt/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/lgbt-history-month</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/equality,-diversity,-and-inclusion-information/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/overview-of-equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/librarianship,-the-profession-and-the-workplace/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/people-and-organisations/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/healthcare-and-the-nhs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-books/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-long-reads/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-audiovisual/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-short-reads/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-resources/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-management-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-conversation-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-conversation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-conversation</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-process/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-management-process</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-guide-for-staff/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-guide-for-managers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/what-is-talent-management/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/overview-of-talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/faqs-on-the-talent-management-conversation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/60-ways-to-learn-and-develop/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/60-ways-to-learn-and-develop</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/professional-knowledge-and-skills-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>"
+  /klsoldsitemaplearningacademyredirects[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: afc81308-457d-474b-9f62-7d49b0e3ae60
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T11:39:22.112+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T11:39:31.200+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-and-library-services-policies/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/accessibility-statement/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/accessibility-statement</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-for-healthcare-board/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/knowledge-for-healthcare/knowledge-for-healthcare/kfh-board</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-for-healthcare/levers-for-change/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/about/knowledge-for-healthcare/knowledge-for-healthcare/levers-for-change</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/regional-meetings/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/national-meetings</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect\
+      \ old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\"\
+      >library.hee.nhs.uk</condition>\r\n<from>^/about/mailing-lists/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/about/contact-us</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/introducing-the-HEE-KLS-team/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/contact-us</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/knowledge-and-library-services-policies/staff-ratio-policy/staff-ratio-policy-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/knowledge-and-library-services-policies/staff-ratio-policy/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/sustainability/sustainability-in-nhs-organisations/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/greener-digital/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/nhs-carbon-footprint-plus/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/kls-and-sustainability/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy/learning-zone/sustainability-in-nhs-knowledge-and-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/professional-skills-and-knowledge-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition\
+      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n<from>^/kls-rebuild/learning-academy/learning-zone/professional-skills-and-knowledge-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/evidence-searching/national-searching-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/evidence-searching/evidence-searching-and-national-guidance/national-searching-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/summarising-and-synthesising-evidence/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/synthesising-and-summarising</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/sustainability-in-kls/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/sustainability-in-nhs-knowledge-and-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-10/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/putting-your-findings-into-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-6/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/obtaining-ethical-and-trust-approval</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-8/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/analysing-and-interpreting-your-data</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-7/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/collecting-and-collating-your-data</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-5/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/writing-your-research-proposal</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/reviewing-the-literature</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/turning-your-idea-into-a-research-question</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-4/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/funding-your-research</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/designing-your-study</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-9/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/writing-up-and-disseminating-your-findings</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/welcome-to-the-research-toolkit/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/overview-of-the-research-toolkit</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-academy-library/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy</to>\r\n</rule>\r\n\r\n\
+      <rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/learning-academy/wpd-overview/wpd-driver-diagram/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/about-the-learning-academy/learning-academy-launch/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-learning-academy/the-learning-academy</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/diversity-ebook-collection/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/overview-of-equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/lgbt/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/lgbt-history-month</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/equality,-diversity,-and-inclusion-information/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/overview-of-equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/librarianship,-the-profession-and-the-workplace/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/people-and-organisations/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/healthcare-and-the-nhs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-books/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-long-reads/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-audiovisual/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-short-reads/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-resources/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-management-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-conversation-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-conversation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-conversation</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-process/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-management-process</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-guide-for-staff/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-guide-for-managers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/what-is-talent-management/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/overview-of-talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/faqs-on-the-talent-management-conversation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/60-ways-to-learn-and-develop/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/60-ways-to-learn-and-develop</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/professional-knowledge-and-skills-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>"
+  /klsoldsitemaplearningacademyredirects[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 6c4c41eb-7c16-4330-a201-5869de93d5bd
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T11:39:22.112+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T11:39:31.200+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2025-07-17T11:39:40.345+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-and-library-services-policies/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\n\r\n<rule>\r\
+      \n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/accessibility-statement/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/accessibility-statement</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-for-healthcare-board/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/knowledge-for-healthcare/knowledge-for-healthcare/kfh-board</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/knowledge-for-healthcare/levers-for-change/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/about/knowledge-for-healthcare/knowledge-for-healthcare/levers-for-change</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/regional-meetings/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/national-meetings</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect\
+      \ old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\"\
+      >library.hee.nhs.uk</condition>\r\n<from>^/about/mailing-lists/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/about/contact-us</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/introducing-the-HEE-KLS-team/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/contact-us</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/knowledge-and-library-services-policies/staff-ratio-policy/staff-ratio-policy-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/knowledge-and-library-services-policies/staff-ratio-policy/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/policies</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/about/sustainability/sustainability-in-nhs-organisations/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/greener-digital/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/nhs-carbon-footprint-plus/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/about/sustainability/sustainability/nhs-and-sustainability</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/about/sustainability/kls-and-sustainability/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy/learning-zone/sustainability-in-nhs-knowledge-and-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/professional-skills-and-knowledge-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition\
+      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n<from>^/kls-rebuild/learning-academy/learning-zone/professional-skills-and-knowledge-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/evidence-searching/national-searching-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/evidence-searching/evidence-searching-and-national-guidance/national-searching-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/summarising-and-synthesising-evidence/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/synthesising-and-summarising</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/sustainability-in-kls/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/sustainability-in-nhs-knowledge-and-library-services</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-10/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/putting-your-findings-into-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-6/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/obtaining-ethical-and-trust-approval</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-8/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/analysing-and-interpreting-your-data</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-7/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/collecting-and-collating-your-data</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-5/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/writing-your-research-proposal</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/reviewing-the-literature</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/turning-your-idea-into-a-research-question</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-4/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/funding-your-research</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/designing-your-study</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/research-toolkit-step-9/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/writing-up-and-disseminating-your-findings</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-zone/research-toolkit/welcome-to-the-research-toolkit/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/research-toolkit/overview-of-the-research-toolkit</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/learning-academy-library/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy</to>\r\n</rule>\r\n\r\n\
+      <rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/learning-academy/wpd-overview/wpd-driver-diagram/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/about-the-learning-academy/learning-academy-launch/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-learning-academy/the-learning-academy</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/diversity-ebook-collection/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/overview-of-equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/lgbt/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/lgbt-history-month</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/equality,-diversity,-and-inclusion-information/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/overview-of-equality-diversity-and-inclusion</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/librarianship,-the-profession-and-the-workplace/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/people-and-organisations/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/black-lives-matter/healthcare-and-the-nhs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-books/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-long-reads/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-audiovisual/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/equality,-diversity-and-inclusion/anti-racism/anti-racism-short-reads/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/equality-diversity-and-inclusion/equality-diversity-and-inclusion-resources-and-information/black-lives-matter</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-resources/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-management-resources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-conversation-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-conversation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-conversation</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-process/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/talent-management-process</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-guide-for-staff/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/talent-management-guide-for-managers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/what-is-talent-management/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/talent-management-toolkit/overview-of-talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/faqs-on-the-talent-management-conversation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/talent-management-toolkit/60-ways-to-learn-and-develop/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/talent-management/60-ways-to-learn-and-develop</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/learning-academy/professional-knowledge-and-skills-base/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/learning-academy/learning-zone/professional-knowledge-and-skills-base-pksb</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
+      \n</rule>"

@@ -1,0 +1,1203 @@
+/content/urlrewriter/kls-rebuild/klsoldsitemapresourcesredirects:
+  .meta:order-before: kfhtolksredirects
+  jcr:primaryType: hippo:handle
+  jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
+  jcr:uuid: ef4a81e4-14e9-47a7-8401-c026e6d5ecd2
+  hippo:name: KLSOldSitemapResourcesRedirects
+  hippo:versionHistory: 11400d8b-9aac-4df6-b55e-9249b5dc1893
+  /klsoldsitemapresourcesredirects[1]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: ead0c13f-394d-4984-b8a7-ea5bb7d3c1b6
+    hippo:availability: []
+    hippostd:retainable: false
+    hippostd:state: draft
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T12:37:20.827+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T12:37:20.827+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-hub/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      <name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/resource-discovery-quick-guide/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/resource-discovery-training/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      <name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/resource-discovery-promotions/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/marketing-and-campaigns</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/collection-development-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/collections-development-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-list/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/national-and-regional-ebook-content/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/psychological-therapies-collection/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/primary-care-ebooks/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/resilience-and-wellbeing-ebooks/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-user-research/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-call-for-action/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/sustainability-ebooks/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/regional-library-management-systems/wessex-classification-scheme/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/wessex-classification-scheme</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/procurement/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/procurement</to>\r\n</rule>\r\n\
+      \r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/core-content/what-is-bought-nationally/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-pocts/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/national-core-content-databases/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-ejournals/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/full-text-ejournals</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-ebooks/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/service-desk-and-support/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/service-desk-and-support</to>\r\n\
+      </rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition\
+      \ name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/regional-library-management-systems/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/authentication-and-identity-management/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/national-systems/authentication-and-identity-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresources-usage-recommendations/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-background/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-libkey-nomad/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/libkey-products</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/components-discovery-service/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/discovery-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/components-link-resolver/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/link-resolver-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-implementation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/implementation-timeline</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/resource-discovery-workstream/rd-driver-diagram/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-literacy-and-patient-information-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/sinc/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/strategic-inter-network-collaboration-group</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-training-aid/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/processing-requests</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/eden-member-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-network-collaboration-schemes-and-tools</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-4/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/input-from-the-eoe-and-kss-‘\
+      gains-and-pains’-workshops/?$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+      true\">/resources/inter-lending-and-document-supply</to>\r\n</rule>\r\n\r\n\
+      <rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/extract-from-rapidill-documentation-on-the-ex-libris-website/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/eoe-kss-article-request-process/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-responsibilities/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/library-responsibilities</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidlines-appendices/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-customers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/library-responsibilities</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-principles/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/your-audience</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/cfp-articles-process/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/copyright-fee-paid-cfp-articles</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-declarations-and-statements/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/declarations-and-statements</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-summary/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-references/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-at-a-glance-own-users/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-at-a-glance-other-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training-images/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/finding-and-using-images</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training-opl/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/open-government-licence</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/your-audience</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-crossover/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-basics/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/quick-guide/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/roles-and-responsibilities/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/expert-searching/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/?$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+      true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/hints-and-tips-for-implementation-of-an-ir/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/creating-an-institutional-repository</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-examples/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories-database</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/considerations-before-setting-up-an-institutional-repository/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/creating-an-institutional-repository</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/resources-quick-links-and-publicity/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/open-access-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/open-access-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/copyright-and-intellectual-property-rights-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/open-access-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/the-christie-hospital/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/royal-devon-and-exeter/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/derbyshire-and-ORDA/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/worcester-health-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/openathens/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/openathens</to>\r\n</rule>\r\n\r\
+      \n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/eresource-usage/eresources-usage/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/recommendations/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/report-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/usage-metric/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/report-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/glossary/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/glossary</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/emerging-technologies/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/knowledge-and-library-hub/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/national-core-content-databases/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/core-content-ebooks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/core-content-ejournals/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/full-text-ejournals</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/content-usage/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/ebooks/resilience-and-wellbeing-ebooks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/emerging-technologies/artificial-intelligence-in-specialist-search-and-knowledge-management/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/national-systems/expert-searching/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/national-systems/supplier-databases/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/national-systems/national-discovery-service/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/discovery-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance</to>\r\
+      \n</rule>"
+  /klsoldsitemapresourcesredirects[2]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+    jcr:uuid: 09418bfa-1e27-4f97-bba2-671470549fa0
+    hippo:availability: [preview]
+    hippostd:retainable: false
+    hippostd:state: unpublished
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T12:37:20.827+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T12:37:24.845+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-hub/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      <name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/resource-discovery-quick-guide/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/resource-discovery-training/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      <name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/resource-discovery-promotions/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/marketing-and-campaigns</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/collection-development-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/collections-development-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-list/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/national-and-regional-ebook-content/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/psychological-therapies-collection/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/primary-care-ebooks/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/resilience-and-wellbeing-ebooks/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-user-research/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-call-for-action/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/sustainability-ebooks/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/regional-library-management-systems/wessex-classification-scheme/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/wessex-classification-scheme</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/procurement/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/procurement</to>\r\n</rule>\r\n\
+      \r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/core-content/what-is-bought-nationally/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-pocts/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/national-core-content-databases/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-ejournals/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/full-text-ejournals</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-ebooks/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/service-desk-and-support/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/service-desk-and-support</to>\r\n\
+      </rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition\
+      \ name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/regional-library-management-systems/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/authentication-and-identity-management/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/national-systems/authentication-and-identity-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresources-usage-recommendations/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-background/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-libkey-nomad/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/libkey-products</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/components-discovery-service/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/discovery-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/components-link-resolver/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/link-resolver-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-implementation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/implementation-timeline</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/resource-discovery-workstream/rd-driver-diagram/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-literacy-and-patient-information-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/sinc/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/strategic-inter-network-collaboration-group</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-training-aid/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/processing-requests</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/eden-member-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-network-collaboration-schemes-and-tools</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-4/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/input-from-the-eoe-and-kss-‘\
+      gains-and-pains’-workshops/?$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+      true\">/resources/inter-lending-and-document-supply</to>\r\n</rule>\r\n\r\n\
+      <rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/extract-from-rapidill-documentation-on-the-ex-libris-website/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/eoe-kss-article-request-process/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-responsibilities/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/library-responsibilities</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidlines-appendices/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-customers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/library-responsibilities</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-principles/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/your-audience</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/cfp-articles-process/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/copyright-fee-paid-cfp-articles</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-declarations-and-statements/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/declarations-and-statements</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-summary/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-references/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-at-a-glance-own-users/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-at-a-glance-other-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training-images/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/finding-and-using-images</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training-opl/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/open-government-licence</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/your-audience</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-crossover/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-basics/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/quick-guide/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/roles-and-responsibilities/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/expert-searching/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/?$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+      true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/hints-and-tips-for-implementation-of-an-ir/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/creating-an-institutional-repository</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-examples/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories-database</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/considerations-before-setting-up-an-institutional-repository/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/creating-an-institutional-repository</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/resources-quick-links-and-publicity/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/open-access-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/open-access-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/copyright-and-intellectual-property-rights-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/open-access-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/the-christie-hospital/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/royal-devon-and-exeter/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/derbyshire-and-ORDA/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/worcester-health-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/openathens/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/openathens</to>\r\n</rule>\r\n\r\
+      \n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/eresource-usage/eresources-usage/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/recommendations/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/report-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/usage-metric/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/report-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/glossary/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/glossary</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/emerging-technologies/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/knowledge-and-library-hub/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/national-core-content-databases/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/core-content-ebooks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/core-content-ejournals/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/full-text-ejournals</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/content-usage/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/ebooks/resilience-and-wellbeing-ebooks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/emerging-technologies/artificial-intelligence-in-specialist-search-and-knowledge-management/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/national-systems/expert-searching/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/national-systems/supplier-databases/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/national-systems/national-discovery-service/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/discovery-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance</to>\r\
+      \n</rule>"
+  /klsoldsitemapresourcesredirects[3]:
+    jcr:primaryType: urlrewriter:xmlrule
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 64ea9a1b-2bb0-4fe0-a556-afee2aae0b3a
+    hippo:availability: [live]
+    hippostd:retainable: false
+    hippostd:state: published
+    hippostdpubwf:createdBy: admin
+    hippostdpubwf:creationDate: 2025-07-17T12:37:20.827+01:00
+    hippostdpubwf:lastModificationDate: 2025-07-17T12:37:24.845+01:00
+    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:publicationDate: 2025-07-17T12:37:26.542+01:00
+    urlrewriter:rule: "<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-hub/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      <name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/resource-discovery-quick-guide/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/resource-discovery-training/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems</to>\r\n</rule>\r\n\r\n<rule>\r\n\
+      <name>Redirect old sitemap to the new</name>\r\n<condition name=\"host\" operator=\"\
+      equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/resource-discovery-promotions/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/about/marketing-and-campaigns</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/collection-development-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/collections-development-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-list/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/national-and-regional-ebook-content/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/psychological-therapies-collection/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/primary-care-ebooks/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/resilience-and-wellbeing-ebooks/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-user-research/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/ebook-call-for-action/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/sustainability-ebooks/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/regional-library-management-systems/wessex-classification-scheme/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/wessex-classification-scheme</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/procurement/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/procurement</to>\r\n</rule>\r\n\
+      \r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/core-content/what-is-bought-nationally/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-pocts/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/national-core-content-databases/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-ejournals/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/full-text-ejournals</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/core-content-ebooks/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/service-desk-and-support/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/service-desk-and-support</to>\r\n\
+      </rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition\
+      \ name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/regional-library-management-systems/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/authentication-and-identity-management/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/national-systems/authentication-and-identity-management</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresources-usage-recommendations/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-background/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-libkey-nomad/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/libkey-products</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/components-discovery-service/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/discovery-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/components-link-resolver/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/link-resolver-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/nhsklh-implementation/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/implementation-timeline</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/resource-discovery-workstream/rd-driver-diagram/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/patient-information/health-literacy-and-patient-information-workstream</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/sinc/?$</from>\r\n<to\
+      \ type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/strategic-inter-network-collaboration-group</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-training-aid/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/processing-requests</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/eden-member-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-network-collaboration-schemes-and-tools</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-4/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/input-from-the-eoe-and-kss-‘\
+      gains-and-pains’-workshops/?$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+      true\">/resources/inter-lending-and-document-supply</to>\r\n</rule>\r\n\r\n\
+      <rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/extract-from-rapidill-documentation-on-the-ex-libris-website/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/eoe-kss-article-request-process/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/resource-sharing-market-review-and-options-appraisal/kls-resource-sharing-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-responsibilities/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/library-responsibilities</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidlines-appendices/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-customers/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/library-responsibilities</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/inter-lending-and-document-supply/ilds-good-practice-guidelines/ilds-guidelines-principles/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/inter-lending-and-document-supply/inter-lending-and-document-supply-best-practice/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/your-audience</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/cfp-articles-process/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/copyright-fee-paid-cfp-articles</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-declarations-and-statements/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/declarations-and-statements</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-summary/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-references/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-at-a-glance-own-users/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/guidance-for-kls-staff-at-a-glance-other-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/ilds-copyright-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/inter-lending-and-document-supply-copyright-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training-images/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/finding-and-using-images</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training-opl/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/open-government-licence</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/using-copyright-materials-in-presentations-and-training/using-copyright-materials-in-presentations-and-training/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/using-copyright-materials/your-audience</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-crossover/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-faqs/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/copyright/nhs-he-crossover-copyright-guidance/hei-crossover-guidance-for-kls-staff-basics/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/nhs-higher-education-copyright</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/quick-guide/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/roles-and-responsibilities/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/expert-searching/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/ebooks/?$</from>\r\n<to type=\"temporary-redirect\" last=\"\
+      true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/core-content/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/national-purchases</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-3/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-2/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/nhs-shared-repository-british-library-pilot/shared-repository-pilot-report-1/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/hints-and-tips-for-implementation-of-an-ir/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/creating-an-institutional-repository</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-examples/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories-database</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/considerations-before-setting-up-an-institutional-repository/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/creating-an-institutional-repository</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/resources-quick-links-and-publicity/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/open-access-guidance/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/copyright/open-access-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/copyright-and-intellectual-property-rights-guidance/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/copyright/open-access-copyright-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/the-christie-hospital/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/royal-devon-and-exeter/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/derbyshire-and-ORDA/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/open-access/institutional-repository-case-studies/worcester-health-libraries/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/open-access/institutional-repositories/case-studies</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/openathens/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/openathens</to>\r\n</rule>\r\n\r\
+      \n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/eresource-usage/eresources-usage/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/recommendations/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/report-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/usage-metric/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/report-guidance</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/glossary/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance/glossary</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/emerging-technologies/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources</to>\r\n</rule>\r\n\r\n<rule>\r\n<name>Redirect old\
+      \ sitemap to the new</name>\r\n<condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/nhs-knowledge-and-library-hub/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/national-systems/knowledge-and-library-hub/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/national-core-content-databases/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/databases</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/core-content-ebooks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/core-content-ejournals/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/full-text-ejournals</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/core-content/content-usage/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/overview</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/content-and-usage/ebooks/resilience-and-wellbeing-ebooks/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/content-and-usage/national-purchases/nationally-purchased-content/ebooks</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/emerging-technologies/artificial-intelligence-in-specialist-search-and-knowledge-management/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources</to>\r\n</rule>\r\
+      \n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n<condition name=\"\
+      host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\n<from>^/resources/national-systems/expert-searching/?$</from>\r\
+      \n<to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/national-systems/supplier-databases/?$</from>\r\n<to type=\"\
+      temporary-redirect\" last=\"true\">/resources/national-systems/expert-search-and-support</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/national-systems/national-discovery-service/?$</from>\r\n\
+      <to type=\"temporary-redirect\" last=\"true\">/resources/national-systems/knowledge-and-library-hub/discovery-service</to>\r\
+      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
+      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
+      \n<from>^/resources/eresource-usage/?$</from>\r\n<to type=\"temporary-redirect\"\
+      \ last=\"true\">/resources/content-and-usage/eresources/eresource-usage-guidance</to>\r\
+      \n</rule>"
