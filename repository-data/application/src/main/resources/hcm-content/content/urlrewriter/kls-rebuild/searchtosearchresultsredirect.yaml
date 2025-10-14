@@ -4,7 +4,7 @@
   jcr:mixinTypes: ['hippo:named', 'hippo:versionInfo', 'mix:referenceable']
   jcr:uuid: f57632b1-5840-452a-8558-3765fd6ec562
   hippo:name: SearchToSearchResultsRedirect
-  hippo:versionHistory: 20fe3002-15b3-4b4d-abd5-74e6fdddcc96
+  hippo:versionHistory: 8e079f78-97f5-42d9-8247-bd4bd6b10b19
   /searchtosearchresultsredirect[1]:
     jcr:primaryType: urlrewriter:xmlrule
     jcr:mixinTypes: ['mix:referenceable']
@@ -12,10 +12,11 @@
     hippo:availability: []
     hippostd:retainable: false
     hippostd:state: draft
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
-    hippostdpubwf:lastModificationDate: 2025-09-10T13:37:32.052+01:00
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2025-09-24T13:30:17.729+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     hippostdpubwf:publicationDate: 2008-03-26T12:03:00+01:00
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
@@ -32,10 +33,11 @@
     hippo:availability: [preview]
     hippostd:retainable: false
     hippostd:state: unpublished
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
-    hippostdpubwf:lastModificationDate: 2025-09-10T13:38:01.266+01:00
-    hippostdpubwf:lastModifiedBy: admin
+    hippostdpubwf:lastModificationDate: 2025-09-24T13:30:31.260+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
@@ -51,11 +53,12 @@
     hippo:availability: [live]
     hippostd:retainable: false
     hippostd:state: published
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2021-05-25T15:06:55.832+01:00
-    hippostdpubwf:lastModificationDate: 2025-09-10T13:38:01.266+01:00
-    hippostdpubwf:lastModifiedBy: admin
-    hippostdpubwf:publicationDate: 2025-09-10T13:38:03.838+01:00
+    hippostdpubwf:lastModificationDate: 2025-09-24T13:30:31.260+02:00
+    hippostdpubwf:lastModifiedBy: sankar.shunmuga
+    hippostdpubwf:publicationDate: 2025-09-24T13:30:33.276+02:00
     urlrewriter:rule: "<rule>\r\n    <name>Search Redirect for hosts other than 'hee.nhs.uk'</name>\r\
       \n    <condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n    <from>^/kls-rebuild/search/?$</from>\r\n    <to type=\"redirect\" last=\"\
