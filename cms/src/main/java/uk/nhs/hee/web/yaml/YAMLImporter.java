@@ -130,21 +130,21 @@ public class YAMLImporter {
                 parentNode);
     }
 
-    private String getParentNodePath(final String plainYaml) throws IOException {
-        try {
-            // Get the first line of the YAML which should essentially contain the node path.
-            final String nodePath = IOUtils.readLines(new StringReader(plainYaml)).get(0);
-
-            // Returns parent node path of the node
-            return nodePath.substring(0, nodePath.lastIndexOf('/'));
-        } catch (final IOException e) {
-            LOGGER.error(
-                    "Caught error {} while retrieving parent node path from YAML: {}",
-                    e.getMessage(),
-                    plainYaml,
-                    e);
-            throw e;
+    private String getParentNodePath(final String plainYaml)  {
+        // Get the first line of the YAML which should essentially contain the node path.
+        final List<String> lines = IOUtils.readLines(new StringReader(plainYaml));
+        if (lines.isEmpty()) {
+            throw new IllegalArgumentException("YAML is empty; cannot determine parent node path");
         }
+
+        final String nodePath = lines.get(0);
+
+        final int lastSlash = nodePath.lastIndexOf('/');
+        if (lastSlash <= 0) {
+            throw new IllegalArgumentException("Invalid node path in YAML first line: " + nodePath);
+        }
+
+        return nodePath.substring(0, lastSlash);
     }
 
     /**
