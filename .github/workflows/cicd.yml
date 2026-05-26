@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v6  # Node24-capable major 【2-a6cf69】
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v4  # Updated to Node24 internally 【4-e6304f】
+        uses: actions/setup-java@v5  # Updated to Node24 internally 【4-e6304f】
         with:
           distribution: 'zulu'
           java-version: 11
@@ -67,7 +67,7 @@ jobs:
         uses: actions/checkout@v6 【2-a6cf69】
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v4 【4-e6304f】
+        uses: actions/setup-java@v5 【4-e6304f】
         with:
           distribution: 'zulu'
           java-version: 11
@@ -138,7 +138,7 @@ jobs:
         uses: actions/checkout@v6 【2-a6cf69】
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v4 【4-e6304f】
+        uses: actions/setup-java@v5 【4-e6304f】
         with:
           distribution: 'zulu'
           java-version: 11
@@ -207,7 +207,7 @@ jobs:
         uses: actions/checkout@v6 【2-a6cf69】
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v4 【4-e6304f】
+        uses: actions/setup-java@v5 【4-e6304f】
         with:
           distribution: 'zulu'
           java-version: 11
