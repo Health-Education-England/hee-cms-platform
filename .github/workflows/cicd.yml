@@ -64,10 +64,10 @@ jobs:
 
     steps:
       - name: Check out repo.
-        uses: actions/checkout@v6 【2-a6cf69】
+        uses: actions/checkout@v6
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5 【4-e6304f】
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
           java-version: 11
@@ -76,7 +76,7 @@ jobs:
           server-password: BLOOMREACH_MVN_PASSWORD
 
       - name: Cache maven packages
-        uses: actions/cache@v5 【3-608c06】
+        uses: actions/cache@v5
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -135,10 +135,10 @@ jobs:
 
     steps:
       - name: Check out repo.
-        uses: actions/checkout@v6 【2-a6cf69】
+        uses: actions/checkout@v6
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5 【4-e6304f】
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
           java-version: 11
@@ -147,7 +147,7 @@ jobs:
           server-password: BLOOMREACH_MVN_PASSWORD
 
       - name: Cache maven packages
-        uses: actions/cache@v5 【3-608c06】
+        uses: actions/cache@v5
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
@@ -204,10 +204,10 @@ jobs:
 
     steps:
       - name: Check out repo.
-        uses: actions/checkout@v6 【2-a6cf69】
+        uses: actions/checkout@v6
 
       - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5 【4-e6304f】
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
           java-version: 11
@@ -216,7 +216,7 @@ jobs:
           server-password: BLOOMREACH_MVN_PASSWORD
 
       - name: Cache maven packages
-        uses: actions/cache@v5 【3-608c06】
+        uses: actions/cache@v5
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
