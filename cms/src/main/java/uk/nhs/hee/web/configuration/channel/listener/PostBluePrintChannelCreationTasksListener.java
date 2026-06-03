@@ -10,6 +10,7 @@ import uk.nhs.hee.web.yaml.YAMLImporter;
 
 import javax.jcr.RepositoryException;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.util.AbstractMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -46,7 +47,7 @@ public class PostBluePrintChannelCreationTasksListener implements ChannelManager
                     )
             );
             yamlImporter.importFiles();
-        } catch (final RepositoryException | IOException e) {
+        } catch (final RepositoryException | IOException | UncheckedIOException e) {
             LOGGER.error(
                     "Caught error {} while performing post blueprint channel creation tasks",
                     e.getMessage(),
