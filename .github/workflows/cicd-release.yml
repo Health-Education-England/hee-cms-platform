@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - release-**
+
 env:
   BRC_STACK_NAME: hee
   # BRC_MAX_DISTRIBUTIONS: 90
@@ -12,72 +13,71 @@ env:
 jobs:
   buildAndTest:
     name: Build & Test
-
     runs-on: ubuntu-latest
+
+    env:
+      BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
+      BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
     steps:
       - name: Check out repo.
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6  # Node24-capable major 【2-3c4523】
 
-      - name: Set up JDK 11
-        uses: actions/setup-java@v4
+      - name: Set up JDK 11 (with Maven auth)
+        uses: actions/setup-java@v5  # Updated to Node24 internally 【3-2487d8】
         with:
           distribution: 'zulu'
           java-version: 11
+          # Creates ~/.m2/settings.xml server entry for auth 【4-fb1b8b】
+          server-id: hippo-maven2-enterprise
+          server-username: BLOOMREACH_MVN_USERNAME
+          server-password: BLOOMREACH_MVN_PASSWORD
 
       - name: Cache maven packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5  # Runs on Node24 runtime 【5-8d4d17】
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-
-      - name: Configure maven settings
-        uses: whelk-io/maven-settings-xml-action@v22
-        with:
-          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
-          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Compile
         run: mvn -B clean compile -Pdefault --file pom.xml
 
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
+
   deploy:
     name: Deploy to Production Env. [on brCloud]
     environment: production
-
     needs: buildAndTest
 
     env:
       BRC_ENV_NAME: production
+      BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
+      BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repo.
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6  # Node24-capable major 【2-3c4523】
 
-      - name: Set up JDK 11
-        uses: actions/setup-java@v4
+      - name: Set up JDK 11 (with Maven auth)
+        uses: actions/setup-java@v5  # Updated to Node24 internally 【3-2487d8】
         with:
           distribution: 'zulu'
           java-version: 11
+          # Creates ~/.m2/settings.xml server entry for auth 【4-fb1b8b】
+          server-id: hippo-maven2-enterprise
+          server-username: BLOOMREACH_MVN_USERNAME
+          server-password: BLOOMREACH_MVN_PASSWORD
 
       - name: Cache maven packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5  # Runs on Node24 runtime 【5-8d4d17】
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
-
-      - name: Configure maven settings
-        uses: whelk-io/maven-settings-xml-action@v22
-        with:
-          repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
-          plugin_repositories: '[{ "id": "hippo-maven2-enterprise", "url": "https://maven.bloomreach.com/repository/maven2-enterprise/" }]'
-          servers: '[{ "id": "hippo-maven2-enterprise", "username": "${{ secrets.BLOOMREACH_MVN_USERNAME }}", "password": "${{ secrets.BLOOMREACH_MVN_PASSWORD }}" }]'
 
       - name: Package
         run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
@@ -87,7 +87,7 @@ jobs:
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
-        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.5
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.6
         id: cleanup
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -97,7 +97,7 @@ jobs:
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
 
       - name: Upload distribution to Bloomreach Cloud
-        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.5
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.6
         id: upload
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -106,7 +106,7 @@ jobs:
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'production' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.6
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
