@@ -6,11 +6,6 @@ on:
     branches-ignore:
       - 'master'
 
-env:
-  # Force all JavaScript actions to execute using Node.js 24 (early testing / future-proof)
-  # GitHub notes runners will default to Node24 from 16 June 2026. 【1-6a9ec4】
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   buildAndTest:
     name: Build & Test

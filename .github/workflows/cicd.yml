@@ -10,10 +10,6 @@ env:
   # BRC_MAX_DISTRIBUTIONS: 90
   BRC_DISTRIBUTION_DELETE_COUNT: 10
 
-  # Force all JavaScript actions to execute using Node.js 24 (early testing / future-proof)
-  # GitHub notes runners will default to Node24 from 16 June 2026. 【1-6c55ee】
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   buildAndTest:
     name: Build & Test
