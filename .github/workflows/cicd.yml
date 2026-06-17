@@ -23,11 +23,11 @@ jobs:
       - name: Check out repo.
         uses: actions/checkout@v6  # Node24-capable major 【2-a6cf69】
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 (with Maven auth)
         uses: actions/setup-java@v5  # Updated to Node24 internally 【4-e6304f】
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 17
           server-id: hippo-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
@@ -62,11 +62,11 @@ jobs:
       - name: Check out repo.
         uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 (with Maven auth)
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 17
           server-id: hippo-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
@@ -133,11 +133,11 @@ jobs:
       - name: Check out repo.
         uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 (with Maven auth)
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 17
           server-id: hippo-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
@@ -202,11 +202,11 @@ jobs:
       - name: Check out repo.
         uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 (with Maven auth)
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
+          java-version: 17
           server-id: hippo-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD

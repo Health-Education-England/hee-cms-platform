@@ -8,7 +8,7 @@ The HEE CMS Platform used to manage and deliver the website at https://www.hee.n
 
 ## Built With
 
-* [BloomReach DXP 15.7.0](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
+* [BloomReach DXP 16.0.0](http://www.bloomreach.com) - BloomReach is the content management system platform used in this project
 * [brCloud](https://www.bloomreach.com/en/products/experience-manager/cloud-cms) - Bloomreach Cloud Managed Hosting
 
 ## Getting Started
@@ -21,7 +21,7 @@ In order to develop on this platform you will need to have the following tools i
 
 - IntelliJ IDEA
 - Docker
-- Java 11
+- Java 17
 - Maven >= 3.5.0 (For `Maven CI Friendly Versions` Support)
 
 
@@ -178,7 +178,7 @@ Please check the following diagram for a better understanding of the development
 
 The GitHub action workflows that handle the CICD process require the following secrets to be setup on Github:
 
-- Secrets for `hippo-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
+- Secrets for `bloomreach-maven2-enterprise` maven repository (https://maven.onehippo.com/maven2-enterprise)
    - BLOOMREACH_MVN_USERNAME - brXM Maven Repository username
    - BLOOMREACH_MVN_PASSWORD - brXM Maven Repository password
 
