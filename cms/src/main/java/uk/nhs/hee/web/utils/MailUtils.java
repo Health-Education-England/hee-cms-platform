@@ -4,10 +4,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.mail.Address;
-import javax.mail.Session;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
+import jakarta.mail.Address;
+import jakarta.mail.Session;
+import jakarta.mail.internet.AddressException;
+import jakarta.mail.internet.InternetAddress;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -77,7 +77,7 @@ public class MailUtils {
         try {
             initialContext = new InitialContext();
             final Context context = (Context) initialContext.lookup("java:comp/env");
-            return (javax.mail.Session) context.lookup(MAIL_SESSION_NAME);
+            return (jakarta.mail.Session) context.lookup(MAIL_SESSION_NAME);
         } catch (final NamingException e) {
             LOGGER.error("Error creating email session: {}", MAIL_SESSION_NAME, e);
             try {

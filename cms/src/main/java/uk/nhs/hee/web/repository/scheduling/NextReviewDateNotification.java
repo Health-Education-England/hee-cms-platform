@@ -19,7 +19,7 @@ import javax.jcr.RepositoryException;
 import javax.jcr.Session;
 import javax.jcr.query.Query;
 import javax.jcr.query.QueryManager;
-import javax.mail.MessagingException;
+import jakarta.mail.MessagingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
@@ -180,7 +180,7 @@ public class NextReviewDateNotification implements RepositoryJob {
                     StringUtils.trim(context.getAttribute(ATTRIBUTE_EMAIL_BODY_PLAIN_TEXT_TEMPLATE));
 
             // Create mail session
-            final javax.mail.Session mailSession = MailUtils.getMailSession();
+            final jakarta.mail.Session mailSession = MailUtils.getMailSession();
             if (mailSession == null) {
                 LOGGER.warn("Email session isn't available. Halting the job for now!");
                 return;

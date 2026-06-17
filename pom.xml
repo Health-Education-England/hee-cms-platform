@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-enterprise-release</artifactId>
-    <version>15.7.8</version>
+    <version>16.0.0</version>
   </parent>
 
   <name>HEE CMS Platform</name>
@@ -67,10 +67,8 @@
     <!-- ***END temporary override of versions*** -->
 
     <essentials.version>${hippo.essentials-components.version}</essentials.version>
-    <jsp-api.version>2.2</jsp-api.version>
-    <taglibs.version>1.2.5</taglibs.version>
-    <bloomreach.text-search-replace.version>3.0.1</bloomreach.text-search-replace.version>
-    <jsoup.version>1.15.3</jsoup.version>
+    <bloomreach.text-search-replace.version>4.0.0</bloomreach.text-search-replace.version>
+    <jsoup.version>1.17.2</jsoup.version>
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
     <docker.postgres.bind.1>${project.basedir}/target/postgres-data:/var/lib/postgresql/data</docker.postgres.bind.1>
     <hippo.cms.locales>nl,de,fr,es,zh</hippo.cms.locales>
@@ -79,26 +77,38 @@
 
   <repositories>
     <repository>
-      <id>hippo</id>
-      <name>Hippo maven 2 repository.</name>
+      <id>bloomreach-maven2</id>
+      <name>Bloomreach Maven 2</name>
       <url>https://maven.bloomreach.com/repository/maven2/</url>
+      <snapshots>
+          <enabled>false</enabled>
+      </snapshots>
+      <releases>
+          <updatePolicy>never</updatePolicy>
+          <checksumPolicy>fail</checksumPolicy>
+      </releases>
     </repository>
     <repository>
       <releases>
         <updatePolicy>never</updatePolicy>
         <checksumPolicy>fail</checksumPolicy>
       </releases>
-      <id>hippo-maven2-enterprise</id>
-      <name>Hippo Enterprise Maven 2</name>
+      <id>bloomreach-maven2-enterprise</id>
+      <name>Bloomreach Enterprise Maven 2</name>
       <url>https://maven.bloomreach.com/repository/maven2-enterprise/</url>
+    </repository>
+    <repository>
+        <id>bloomreach-maven2-forge</id>
+        <name>Bloomreach Maven 2 Forge Repository</name>
+        <url>https://maven.bloomreach.com/repository/maven2-forge</url>
     </repository>
   </repositories>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>javax.servlet.jsp</groupId>
-        <artifactId>jsp-api</artifactId>
+        <groupId>jakarta.servlet.jsp</groupId>
+        <artifactId>jakarta.servlet.jsp-api</artifactId>
         <version>${jsp-api.version}</version>
         <scope>provided</scope>
       </dependency>
@@ -390,8 +400,8 @@
           <scope>compile</scope>
         </dependency>
         <dependency>
-          <groupId>javax.annotation</groupId>
-          <artifactId>javax.annotation-api</artifactId>
+          <groupId>jakarta.annotation</groupId>
+          <artifactId>jakarta.annotation-api</artifactId>
           <scope>compile</scope>
         </dependency>
         <dependency>
@@ -533,8 +543,8 @@
           <scope>provided</scope>
         </dependency>
         <dependency>
-          <groupId>javax.annotation</groupId>
-          <artifactId>javax.annotation-api</artifactId>
+          <groupId>jakarta.annotation</groupId>
+          <artifactId>jakarta.annotation-api</artifactId>
           <scope>provided</scope>
         </dependency>
         <dependency>
