@@ -15,25 +15,22 @@ import org.hippoecm.hst.core.request.ResolvedMount;
 import org.hippoecm.hst.core.request.ResolvedSiteMapItem;
 import org.hippoecm.hst.mock.core.component.MockHstRequest;
 import org.hippoecm.hst.site.HstServices;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.onehippo.cms7.essentials.components.ext.DoBeforeRenderExtension;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 import uk.nhs.hee.web.components.beans.BreadcrumbLinkTest;
 
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
-@RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"jakarta.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "jakarta.script.*"})
-@PrepareForTest({HstServices.class, RequestContextProvider.class})
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class BreadcrumbComponentTest {
     // Home Page Title and URL
     private static final String homePageTitle = "Home";
@@ -53,6 +50,9 @@ public class BreadcrumbComponentTest {
     private HstLinkCreator hstLinkCreator;
     @Mock
     private Mount mount;
+
+    private MockedStatic<HstServices> mockedHstServices;
+    private MockedStatic<RequestContextProvider> mockedRequestContextProvider;
 
     private BreadcrumbComponent systemUnderTest;
 
@@ -75,10 +75,11 @@ public class BreadcrumbComponentTest {
 
         // Do nothing when org.onehippo.cms7.essentials.components.CommonComponent#doBeforeRender
         // has been called from BreadcrumbComponent via super.doBeforeRender(request, response).
-        mockStatic(HstServices.class, RequestContextProvider.class);
-        when(HstServices.getComponentManager()).thenReturn(componentManager);
+        mockedHstServices = mockStatic(HstServices.class);
+        mockedRequestContextProvider = mockStatic(RequestContextProvider.class);
+        mockedHstServices.when(HstServices::getComponentManager).thenReturn(componentManager);
         when(componentManager.getComponent(DoBeforeRenderExtension.class.getName())).thenReturn(null);
-        when(RequestContextProvider.get()).thenReturn(hstRequestContext);
+        mockedRequestContextProvider.when(RequestContextProvider::get).thenReturn(hstRequestContext);
         when(hstRequestContext.isChannelManagerPreviewRequest()).thenReturn(false);
 
         // Home SiteMapItem
@@ -86,6 +87,12 @@ public class BreadcrumbComponentTest {
         when(hstSiteMap.getSiteMapItemByRefId("root")).thenReturn(homeHstSiteMapItem);
 
         systemUnderTest = spy(new BreadcrumbComponent());
+    }
+
+    @After
+    public void tearDown() {
+        mockedHstServices.close();
+        mockedRequestContextProvider.close();
     }
 
     @Test
