@@ -2,15 +2,15 @@ package uk.nhs.hee.web.utils;
 
 import org.hippoecm.hst.container.RequestContextProvider;
 import org.hippoecm.hst.core.request.HstRequestContext;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.onehippo.forge.selection.hst.contentbean.ValueList;
 import org.onehippo.forge.selection.hst.util.SelectionUtil;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -18,15 +18,9 @@ import java.util.Map;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.eq;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
-import static org.powermock.api.mockito.PowerMockito.when;
+import static org.mockito.Mockito.*;
 
-@RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"jakarta.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "jakarta.script.*"})
-@PrepareForTest({
-        RequestContextProvider.class,
-        SelectionUtil.class
-})
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class ValueListUtilsTest {
 
     @Mock
@@ -35,10 +29,20 @@ public class ValueListUtilsTest {
     @Mock
     private HstRequestContext mockHstRequestContext;
 
+    private MockedStatic<RequestContextProvider> mockedRequestContextProvider;
+    private MockedStatic<SelectionUtil> mockedSelectionUtil;
+
     @Before
     public void setUp() {
-        mockStatic(RequestContextProvider.class, SelectionUtil.class);
-        when(RequestContextProvider.get()).thenReturn(mockHstRequestContext);
+        mockedRequestContextProvider = mockStatic(RequestContextProvider.class);
+        mockedSelectionUtil = mockStatic(SelectionUtil.class);
+        mockedRequestContextProvider.when(RequestContextProvider::get).thenReturn(mockHstRequestContext);
+    }
+
+    @After
+    public void tearDown() {
+        mockedRequestContextProvider.close();
+        mockedSelectionUtil.close();
     }
 
     @Test
@@ -56,9 +60,9 @@ public class ValueListUtilsTest {
             }
         });
 
-        when(SelectionUtil.getValueListByIdentifier(eq(valueListIdentifier + "_" + channel),
-                eq(mockHstRequestContext))).thenReturn(mockValueList);
-        when(SelectionUtil.valueListAsMap(mockValueList)).thenReturn(blogCategoriesMap);
+        mockedSelectionUtil.when(() -> SelectionUtil.getValueListByIdentifier(
+                eq(valueListIdentifier + "_" + channel), eq(mockHstRequestContext))).thenReturn(mockValueList);
+        mockedSelectionUtil.when(() -> SelectionUtil.valueListAsMap(mockValueList)).thenReturn(blogCategoriesMap);
 
         // Execute the method to be tested
         final Map<String, String> actualBlogCategoriesMap =
@@ -82,9 +86,9 @@ public class ValueListUtilsTest {
             }
         });
 
-        when(SelectionUtil.getValueListByIdentifier(eq(valueListIdentifier), eq(mockHstRequestContext)))
-                .thenReturn(mockValueList);
-        when(SelectionUtil.valueListAsMap(mockValueList)).thenReturn(navMapRegionsMap);
+        mockedSelectionUtil.when(() -> SelectionUtil.getValueListByIdentifier(
+                eq(valueListIdentifier), eq(mockHstRequestContext))).thenReturn(mockValueList);
+        mockedSelectionUtil.when(() -> SelectionUtil.valueListAsMap(mockValueList)).thenReturn(navMapRegionsMap);
 
         // Execute the method to be tested
         final Map<String, String> actualNavMapRegionsMap = ValueListUtils.getValueListMap(valueListIdentifier);
@@ -98,8 +102,8 @@ public class ValueListUtilsTest {
         // Mocks & stubs
         final String valueListIdentifier = "non-existent-value-list";
 
-        when(SelectionUtil.getValueListByIdentifier(eq(valueListIdentifier), eq(mockHstRequestContext)))
-                .thenReturn(mockValueList);
+        mockedSelectionUtil.when(() -> SelectionUtil.getValueListByIdentifier(
+                eq(valueListIdentifier), eq(mockHstRequestContext))).thenReturn(mockValueList);
 
         // Execute the method to be tested
         final Map<String, String> actualNavMapRegionsMap = ValueListUtils.getValueListMap(valueListIdentifier);

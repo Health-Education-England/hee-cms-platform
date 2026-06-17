@@ -9,16 +9,16 @@ import org.hippoecm.hst.core.container.ComponentManager;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.hst.mock.core.component.MockHstRequest;
 import org.hippoecm.hst.site.HstServices;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
 import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.onehippo.cms7.essentials.components.ext.DoBeforeRenderExtension;
 import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentInfo;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 import uk.nhs.hee.web.beans.Guidance;
 import uk.nhs.hee.web.utils.ContentBlocksUtils;
 
@@ -26,11 +26,8 @@ import java.util.Collections;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
-@RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"jakarta.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "jakarta.script.*"})
-@PrepareForTest({HstServices.class, RequestContextProvider.class, ContentBlocksUtils.class})
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class CookiesPageComponentTest {
 
     private static final String COMPONENT_PARAMETER_NAME_DOCUMENT = "document";
@@ -62,6 +59,10 @@ public class CookiesPageComponentTest {
     @Mock
     private Guidance mockFallbackChannelCookieGuidance;
 
+    private MockedStatic<HstServices> mockedHstServices;
+    private MockedStatic<RequestContextProvider> mockedRequestContextProvider;
+    private MockedStatic<ContentBlocksUtils> mockedContentBlocksUtils;
+
     private CookiesPageComponent systemUnderTest;
 
     @Before
@@ -69,14 +70,16 @@ public class CookiesPageComponentTest {
         // Mocks & stubs
         // Do nothing when org.onehippo.cms7.essentials.components.CommonComponent#doBeforeRender
         // has been called from CookiesPageComponent via super.doBeforeRender(request, response).
-        mockStatic(HstServices.class, RequestContextProvider.class);
-        when(HstServices.getComponentManager()).thenReturn(mockComponentManager);
+        mockedHstServices = mockStatic(HstServices.class);
+        mockedRequestContextProvider = mockStatic(RequestContextProvider.class);
+        mockedHstServices.when(HstServices::getComponentManager).thenReturn(mockComponentManager);
         when(mockComponentManager.getComponent(DoBeforeRenderExtension.class.getName())).thenReturn(null);
-        when(RequestContextProvider.get()).thenReturn(mockHstRequestContext);
+        mockedRequestContextProvider.when(RequestContextProvider::get).thenReturn(mockHstRequestContext);
         when(mockHstRequestContext.isChannelManagerPreviewRequest()).thenReturn(false);
 
-        mockStatic(ContentBlocksUtils.class);
-        when(ContentBlocksUtils.getValueListMaps(Mockito.anyList())).thenReturn(Collections.emptyMap());
+        mockedContentBlocksUtils = mockStatic(ContentBlocksUtils.class);
+        mockedContentBlocksUtils.when(() -> ContentBlocksUtils.getValueListMaps(Mockito.anyList()))
+                .thenReturn(Collections.emptyMap());
 
         // Stubbing for org.onehippo.cms7.essentials.components.EssentialsDocumentComponent.doBeforeRender call
         when(mockEssentialsDocumentComponentInfo.getDocument()).thenReturn(COMPONENT_PARAMETER_VALUE_DOCUMENT);
@@ -103,6 +106,13 @@ public class CookiesPageComponentTest {
                 return null;
             }
         });
+    }
+
+    @After
+    public void tearDown() {
+        mockedHstServices.close();
+        mockedRequestContextProvider.close();
+        mockedContentBlocksUtils.close();
     }
 
     @Test
