@@ -1,0 +1,116 @@
+name: CI & CD [MASTER]
+
+on:
+  push:
+    branches:
+      - WSP-1158_upgrade_prerequisite
+
+env:
+  BRC_STACK_NAME: hee
+  # BRC_MAX_DISTRIBUTIONS: 90
+  BRC_DISTRIBUTION_DELETE_COUNT: 10
+
+jobs:
+  buildAndTest:
+    name: Build & Test
+    runs-on: ubuntu-latest
+
+    env:
+      BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
+      BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
+
+    steps:
+      - name: Check out repo.
+        uses: actions/checkout@v6  # Node24-capable major 【2-a6cf69】
+
+      - name: Set up JDK 11 (with Maven auth)
+        uses: actions/setup-java@v5  # Updated to Node24 internally 【4-e6304f】
+        with:
+          distribution: 'zulu'
+          java-version: 11
+          server-id: hippo-maven2-enterprise
+          server-username: BLOOMREACH_MVN_USERNAME
+          server-password: BLOOMREACH_MVN_PASSWORD
+
+      - name: Cache maven packages
+        uses: actions/cache@v5  # Runs on Node24 runtime 【3-608c06】
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Compile
+        run: mvn -B clean compile -Pdefault --file pom.xml
+
+      - name: Test
+        run: mvn -B clean test -Pdefault --file pom.xml
+
+
+
+  deploy-to-test:
+    name: Deploy to Test Env. [on brCloud]
+    needs: [buildAndTest]
+    environment: test
+
+    env:
+      BRC_ENV_NAME: test
+      BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
+      BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo.
+        uses: actions/checkout@v6
+
+      - name: Set up JDK 11 (with Maven auth)
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'zulu'
+          java-version: 11
+          server-id: hippo-maven2-enterprise
+          server-username: BLOOMREACH_MVN_USERNAME
+          server-password: BLOOMREACH_MVN_PASSWORD
+
+      - name: Cache maven packages
+        uses: actions/cache@v5
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Package
+        run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
+
+      - name: Setting distribution path (distPath) as an output parameter
+        id: dist
+        run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
+
+      - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
+        uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.6
+        id: cleanup
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
+
+      - name: Upload distribution to Bloomreach Cloud
+        uses: Health-Education-England/upload-distribution-to-BR-Cloud-action@v1.6
+        id: upload
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distPath: ${{ steps.dist.outputs.distPath }}
+
+      - name: Deploy distribution to 'test' env
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
+        id: deploy
+        with:
+          brcStack: ${{ env.BRC_STACK_NAME }}
+          username: ${{ secrets.BRC_USERNAME }}
+          password: ${{ secrets.BRC_PASSWORD }}
+          distId: ${{ steps.upload.outputs.distId }}
+          envName: ${{ env.BRC_ENV_NAME }}
+          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'
