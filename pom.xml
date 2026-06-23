@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.onehippo.cms7</groupId>
     <artifactId>hippo-cms7-enterprise-release</artifactId>
-    <version>16.0.0</version>
+    <version>16.9.1</version>
   </parent>
 
   <name>HEE CMS Platform</name>
@@ -68,7 +68,6 @@
 
     <essentials.version>${hippo.essentials-components.version}</essentials.version>
     <bloomreach.text-search-replace.version>4.0.0</bloomreach.text-search-replace.version>
-    <jsoup.version>1.17.2</jsoup.version>
     <development-module-deploy-dir>shared/lib</development-module-deploy-dir>
     <docker.postgres.bind.1>${project.basedir}/target/postgres-data:/var/lib/postgresql/data</docker.postgres.bind.1>
     <hippo.cms.locales>nl,de,fr,es,zh</hippo.cms.locales>
@@ -130,15 +129,15 @@
 
       <!-- other predefined compile scope versioned dependencies -->
       <dependency>
-        <groupId>org.freemarker</groupId>
-        <artifactId>freemarker</artifactId>
-        <version>${freemarker.version}</version>
-      </dependency>
-
-      <dependency>
         <artifactId>jsoup</artifactId>
         <groupId>org.jsoup</groupId>
         <version>${jsoup.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>${freemarker.version}</version>
       </dependency>
 
       <dependency>
@@ -537,7 +536,7 @@
         </dependency>
         <dependency>
           <groupId>org.apache.logging.log4j</groupId>
-          <artifactId>log4j-slf4j-impl</artifactId>
+          <artifactId>log4j-slf4j2-impl</artifactId>
           <scope>provided</scope>
         </dependency>
         <dependency>
@@ -587,7 +586,7 @@
       <dependencies>
         <dependency>
           <groupId>org.apache.logging.log4j</groupId>
-          <artifactId>log4j-slf4j-impl</artifactId>
+          <artifactId>log4j-slf4j2-impl</artifactId>
           <scope>provided</scope>
         </dependency>
         <dependency>
