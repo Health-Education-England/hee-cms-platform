@@ -11,10 +11,12 @@ definitions:
         /hipposysedit:nodetype:
           jcr:primaryType: hipposysedit:nodetype
           jcr:mixinTypes: ['mix:referenceable', 'hipposysedit:remodel']
-          jcr:uuid: 19d64104-f915-4b8e-b6cb-0eff5160985f
+          jcr:uuid: c97a51fc-eb77-449d-b6f0-230c4f5cfbf9
           hipposysedit:node: true
           hipposysedit:supertype: ['hee:basedocument', 'hippostd:relaxed', 'hippotranslation:translated']
           hipposysedit:uri: http://www.heecmsplatform.com/hee/nt/1.0
+          hipposysedit:validators: ['hee:mandatory-professions-or-topics-validator',
+            'hee:open-close-datetime-validator', 'hee:mandatory-booking-link-or-email-validator']
           /title:
             jcr:primaryType: hipposysedit:field
             hipposysedit:mandatory: false
@@ -29,27 +31,9 @@ definitions:
             hipposysedit:mandatory: false
             hipposysedit:multiple: false
             hipposysedit:ordered: false
-            hipposysedit:path: hee:description
+            hipposysedit:path: hee:summary
             hipposysedit:primary: false
             hipposysedit:type: Text
-            hipposysedit:validators: [required]
-          /link:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:link
-            hipposysedit:primary: false
-            hipposysedit:type: String
-            hipposysedit:validators: [optional]
-          /date:
-            jcr:primaryType: hipposysedit:field
-            hipposysedit:mandatory: false
-            hipposysedit:multiple: false
-            hipposysedit:ordered: false
-            hipposysedit:path: hee:date
-            hipposysedit:primary: false
-            hipposysedit:type: Date
             hipposysedit:validators: [required]
           /location:
             jcr:primaryType: hipposysedit:field
@@ -60,6 +44,117 @@ definitions:
             hipposysedit:primary: false
             hipposysedit:type: String
             hipposysedit:validators: [required]
+          /logoGroup:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:logoGroup
+            hipposysedit:primary: false
+            hipposysedit:type: hippo:mirror
+          /bookingEmail:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:bookingEmail
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-email-validator']
+          /bookingLink:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:bookingLink
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-url-validator']
+          /date:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:opening
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+            hipposysedit:validators: [required]
+          /endDate:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:closing
+            hipposysedit:primary: false
+            hipposysedit:type: Date
+            hipposysedit:validators: [required]
+          /globalTaxonomyProfessions:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyProfessions
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyHealthcareTopics
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /taxonomy:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyRegion
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+            hipposysedit:validators: [required]
+          /globalTaxonomyEventType:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyEventType
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+            hipposysedit:validators: [required]
+          /globalTaxonomyDeliveryMethod:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:globalTaxonomyDeliveryMethod
+            hipposysedit:primary: false
+            hipposysedit:type: Taxonomy
+          /cost:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:cost
+            hipposysedit:primary: false
+            hipposysedit:type: Long
+          /officialEventWebsite:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:mandatory: false
+            hipposysedit:multiple: false
+            hipposysedit:ordered: false
+            hipposysedit:path: hee:officialEventWebsite
+            hipposysedit:primary: false
+            hipposysedit:type: String
+            hipposysedit:validators: ['hee:optional-url-validator']
+          /contentBlocks:
+            jcr:primaryType: hipposysedit:field
+            hipposysedit:multiple: true
+            hipposysedit:ordered: true
+            hipposysedit:path: hee:contentBlocks
+            hipposysedit:type: hippo:compound
+            hipposysedit:validators: [contentblocks-validator, 'hee:content-card-content-block-validator',
+              'hee:html-content-block-validator']
       /hipposysedit:prototypes:
         jcr:primaryType: hipposysedit:prototypeset
         /hipposysedit:prototype:
@@ -72,13 +167,20 @@ definitions:
           hippotranslation:locale: document-type-locale
           jcr:mixinTypes: ['mix:referenceable']
           hee:title: ''
-          hee:description: ''
-          hee:link: ''
-          hee:date: 0001-01-01T12:00:00Z
           hee:location: ''
-          jcr:uuid: 7ab31fb7-1720-445c-9ca3-0ff2ce4e11ab
+          jcr:uuid: cfdf72d6-83e4-4a7f-bfaa-fa53ee3d3722
           hippostdpubwf:lastModificationDate: 2021-05-18T11:53:12.350+01:00
           hippostdpubwf:creationDate: 2021-05-18T11:53:12.350+01:00
+          hee:bookingLink: ''
+          hee:bookingEmail: ''
+          hee:summary: ''
+          hee:officialEventWebsite: ''
+          hee:cost: 0
+          hee:closing: 0001-01-01T12:00:00Z
+          hee:opening: 0001-01-01T12:00:00Z
+          /hee:logoGroup:
+            jcr:primaryType: hippo:mirror
+            hippo:docbase: cafebabe-cafe-babe-cafe-babecafebabe
       /editor:templates:
         jcr:primaryType: editor:templateset
         /_default_:
@@ -86,40 +188,70 @@ definitions:
           frontend:properties: [mode]
           frontend:references: [wicket.model, model.compareTo, engine, validator.id]
           frontend:services: [wicket.id, validator.id]
-          /root:
-            jcr:primaryType: frontend:plugin
-            item: ${cluster.id}.field
-            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
           /title:
             jcr:primaryType: frontend:plugin
             caption: Title
             field: title
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
+            hint: Enter the event title (60 character limit)
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /description:
+              maxlength: '60'
+          /summary:
             jcr:primaryType: frontend:plugin
-            caption: Description
+            caption: Summary
             field: description
+            hint: Summarise your event (300 character limit)
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /link:
+              maxlength: '300'
+          /logoGroup:
             jcr:primaryType: frontend:plugin
-            caption: Link
-            field: link
-            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            caption: Logo group
+            field: logoGroup
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.NodeFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Browse for the logos to override the default header
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
-          /date:
+          /bookingLink:
             jcr:primaryType: frontend:plugin
-            caption: Date
+            caption: Booking link
+            field: bookingLink
+            hint: Enter either a booking link or booking email to inform users on
+              how they can book this event.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /bookingEmail:
+            jcr:primaryType: frontend:plugin
+            caption: Booking email
+            field: bookingEmail
+            hint: Enter either a booking link or booking email to inform users on
+              how they can book this event.
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /opening:
+            jcr:primaryType: frontend:plugin
+            caption: Start date
             field: date
+            hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /closing:
+            jcr:primaryType: frontend:plugin
+            caption: End date
+            field: endDate
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
           /location:
@@ -128,6 +260,105 @@ definitions:
             field: location
             hint: ''
             plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
-            wicket.id: ${cluster.id}.field
+            wicket.id: ${cluster.id}.left.item
             /cluster.options:
               jcr:primaryType: frontend:pluginconfig
+          /globalTaxonomyProfessions:
+            jcr:primaryType: frontend:plugin
+            caption: Professions
+            field: globalTaxonomyProfessions
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content.
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalProfessions
+          /globalTaxonomyHealthcareTopics:
+            jcr:primaryType: frontend:plugin
+            caption: Healthcare Topics
+            field: globalTaxonomyHealthcareTopics
+            hint: Choose at least one relevant profession and/or healthcare topic
+              for this content.
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalHealthcareTopics
+          /globalTaxonomyEventType:
+            jcr:primaryType: frontend:plugin
+            caption: Event type
+            field: globalTaxonomyEventType
+            hint: Select the event type
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalEventTypes
+          /globalTaxonomyRegion:
+            jcr:primaryType: frontend:plugin
+            caption: Regiond
+            field: taxonomy
+            hint: Select regions relevant to this event
+            plugin.class: org.onehippo.taxonomy.plugin.TaxonomyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalRegions
+          /globalTaxonomyDeliveryMethod:
+            jcr:primaryType: frontend:plugin
+            caption: Delivery method
+            field: globalTaxonomyDeliveryMethod
+            hint: Select the delivery method for this event
+            plugin.class: uk.nhs.hee.web.taxonomy.TaxonomySingleFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              taxonomy.name: GlobalDeliveryMethod
+          /left:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.left.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.left
+          /right:
+            jcr:primaryType: frontend:plugin
+            item: ${cluster.id}.right.item
+            plugin.class: org.hippoecm.frontend.service.render.ListViewPlugin
+            wicket.id: ${cluster.id}.right
+          /root:
+            jcr:primaryType: frontend:plugin
+            extension.left: ${cluster.id}.left
+            extension.right: ${cluster.id}.right
+            plugin.class: org.hippoecm.frontend.editor.layout.TwoColumn
+            wicket.extensions: [extension.left, extension.right]
+          /cost:
+            jcr:primaryType: frontend:plugin
+            caption: Cost
+            field: cost
+            hint: 'Note: If the cost value is zero or left blank, this will be indicated
+              as a free event.'
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /officialEventWebsite:
+            jcr:primaryType: frontend:plugin
+            caption: Official event website
+            field: officialEventWebsite
+            hint: Enter the official event website URL
+            plugin.class: org.hippoecm.frontend.editor.plugins.field.PropertyFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+          /contentBlocks:
+            jcr:primaryType: frontend:plugin
+            caption: Main content objects
+            compoundList: hee:statementCardReference,hee:googleMapReference,hee:imageBlock,hee:insetReference,hee:mediaEmbedReference,hee:richTextReference,hee:warningCalloutReference
+            contentPickerType: links
+            field: contentBlocks
+            hint: ''
+            plugin.class: org.onehippo.forge.contentblocks.ContentBlocksFieldPlugin
+            wicket.id: ${cluster.id}.left.item
+            /cluster.options:
+              jcr:primaryType: frontend:pluginconfig
+              showCompoundNames: 'true'
