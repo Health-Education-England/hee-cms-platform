@@ -7,7 +7,7 @@
 
   <DataSources>
     <DataSource name="repositoryDS">
-      <param name="driver" value="javax.naming.InitialContext"/>
+      <param name="driver" value="jakarta.naming.InitialContext"/>
       <param name="url" value="java:comp/env/jdbc/@mysql.repo.db@"/>
       <param name="databaseType" value="mysql"/>
     </DataSource>

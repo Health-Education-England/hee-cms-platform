@@ -48,7 +48,7 @@ public class DocumentWorkflowImplWithoutCopyOperation extends DocumentWorkflowIm
      * @throws WorkflowException thrown when a workflow implementation disallows
      *                           the workflow step to be taken for some reason.
      */
-    private Map<String, Serializable> getHints(final String branchId) throws WorkflowException {
+    protected Map<String, Serializable> getHints(final String branchId) throws WorkflowException {
         return super.hints(branchId);
     }
 }
