@@ -4,14 +4,14 @@ import org.hippoecm.hst.configuration.hosting.Mount;
 import org.hippoecm.hst.core.linking.HstLink;
 import org.hippoecm.hst.core.request.HstRequestContext;
 import org.hippoecm.repository.api.HippoNodeType;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
 import org.mockito.Spy;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
+import org.mockito.junit.MockitoJUnitRunner;
 import uk.nhs.hee.web.utils.HstUtils;
 import uk.nhs.hee.web.utils.MiniHubGuidanceLinkUtils;
 
@@ -19,17 +19,10 @@ import javax.jcr.*;
 import javax.jcr.nodetype.NodeType;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyBoolean;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.*;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
-@RunWith(PowerMockRunner.class)
-@PrepareForTest({
-        MiniHubGuidanceLinkUtils.class,
-        HstUtils.class
-})
-@PowerMockIgnore({"javax.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "javax.script.*"})
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class MiniHubGuidanceLinkRewriterTest {
     @Mock
     private Session mockJCRSession;
@@ -66,10 +59,15 @@ public class MiniHubGuidanceLinkRewriterTest {
     @Mock
     private NodeIterator mockMiniHubNodeIterator;
 
+    private MockedStatic<MiniHubGuidanceLinkUtils> mockedMiniHubGuidanceLinkUtils;
+    private MockedStatic<HstUtils> mockedHstUtils;
+
     @Before
     public void setUp() throws Exception {
-        mockStatic(MiniHubGuidanceLinkUtils.class, HstUtils.class);
-        when(HstUtils.isPageNotFound(any(HstLink.class), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
+        mockedMiniHubGuidanceLinkUtils = mockStatic(MiniHubGuidanceLinkUtils.class);
+        mockedHstUtils = mockStatic(HstUtils.class);
+        mockedHstUtils.when(() -> HstUtils.isPageNotFound(
+                any(HstLink.class), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
                 .thenReturn(true);
 
         when(mockSuperClassLink.getPath()).thenReturn("pagenotfound");
@@ -96,11 +94,18 @@ public class MiniHubGuidanceLinkRewriterTest {
         when(mockReferencedNode.hasNode(referencedNodeName)).thenReturn(true);
     }
 
+    @After
+    public void tearDown() {
+        mockedMiniHubGuidanceLinkUtils.close();
+        mockedHstUtils.close();
+    }
+
     @Test
     public void getLink_WithLinkFromSuperClassIsNotPageNotFound_ReturnsLinkFromSuperClass() {
         // Mocks & stubs
         when(mockSuperClassLink.getPath()).thenReturn("copyright");
-        when(HstUtils.isPageNotFound(any(HstLink.class), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
+        mockedHstUtils.when(() -> HstUtils.isPageNotFound(
+                any(HstLink.class), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
                 .thenReturn(false);
 
         // Execute the method to be tested
@@ -186,8 +191,9 @@ public class MiniHubGuidanceLinkRewriterTest {
             throws RepositoryException {
         // Mocks & stubs
         when(mockDocumentNode.isNodeType("hee:guidance")).thenReturn(false);
-        when(MiniHubGuidanceLinkUtils.getLink(eq(mockReferencedNode), anyBoolean(), eq(mockHstRequestContext),
-                any(Mount.class))).thenReturn(null);
+        mockedMiniHubGuidanceLinkUtils.when(() -> MiniHubGuidanceLinkUtils.getLink(
+                eq(mockReferencedNode), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
+                .thenReturn(null);
 
         // Execute the method to be tested
         final HstLink hstLink = systemUnderTest.getLink(
@@ -204,8 +210,9 @@ public class MiniHubGuidanceLinkRewriterTest {
     public void getLink_WithReferencedGuidanceNodeNotAssociatedToAnyMiniHubDocument_ReturnsLinkFromSuperClass() {
         // Mocks & stubs
         when(mockMiniHubNodeIterator.hasNext()).thenReturn(false);
-        when(MiniHubGuidanceLinkUtils.getLink(eq(mockReferencedNode), anyBoolean(), eq(mockHstRequestContext),
-                any(Mount.class))).thenReturn(null);
+        mockedMiniHubGuidanceLinkUtils.when(() -> MiniHubGuidanceLinkUtils.getLink(
+                eq(mockReferencedNode), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
+                .thenReturn(null);
 
         // Execute the method to be tested
         final HstLink hstLink = systemUnderTest.getLink(
@@ -221,8 +228,9 @@ public class MiniHubGuidanceLinkRewriterTest {
     @Test
     public void getLink_WithReferencedGuidanceNodeAssociatedToAMiniHubDocument_ReturnsLinkFromSuperClass() {
         // Mocks & stubs
-        when(MiniHubGuidanceLinkUtils.getLink(eq(mockReferencedNode), anyBoolean(), eq(mockHstRequestContext),
-                any(Mount.class))).thenReturn(mockMiniHubGuidanceLink);
+        mockedMiniHubGuidanceLinkUtils.when(() -> MiniHubGuidanceLinkUtils.getLink(
+                eq(mockReferencedNode), anyBoolean(), eq(mockHstRequestContext), any(Mount.class)))
+                .thenReturn(mockMiniHubGuidanceLink);
 
         // Execute the method to be tested
         final HstLink hstLink = systemUnderTest.getLink(
