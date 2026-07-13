@@ -477,7 +477,7 @@
 </#macro>
 
 <#--  Lists training programme result items  -->
-<#macro trainingListItem items trainingProgrammeListingPageURL>
+<#macro trainingprogrammeListItem items>
     <@hst.link var="pageNotFoundURL" siteMapItemRefId="pagenotfound"/>
 
     <#list items as item>
@@ -495,7 +495,7 @@
                         <@fmt.message key="profession.label" var="professionLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyProfessions!
-                            collectionPageURL=trainingProgrammeListingPageURL
+                            collectionPageURL=hstRequestContext.servletRequest.requestURI
                             taxLabel=professionLabel
                             renderFor='training-programme-collection'/>
                     </#if>
@@ -505,7 +505,7 @@
                         <@fmt.message key="topic.label" var="topicLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyHealthcareTopics!
-                            collectionPageURL=trainingProgrammeListingPageURL
+                            collectionPageURL=hstRequestContext.servletRequest.requestURI
                             taxLabel=topicLabel
                             renderFor='training-programme-collection'/>
                     </#if>
@@ -515,7 +515,7 @@
                         <@fmt.message key="clinical_discipline.label" var="clinicalDisciplineLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyClinicalDiscipline!
-                            collectionPageURL=trainingProgrammeListingPageURL
+                            collectionPageURL=hstRequestContext.servletRequest.requestURI
                             taxLabel=clinicalDisciplineLabel
                             renderFor='training-programme-collection'/>
                     </#if>
@@ -525,7 +525,7 @@
                         <@fmt.message key="training_type.label" var="trainingTypeLabel"/>
                         <@taxonomyInfo
                             taxClass=item.globalTaxonomyTrainingType!
-                            collectionPageURL=trainingProgrammeListingPageURL
+                            collectionPageURL=hstRequestContext.servletRequest.requestURI
                             taxLabel=trainingTypeLabel
                             renderFor='training-programme-collection'/>
                     </#if>
