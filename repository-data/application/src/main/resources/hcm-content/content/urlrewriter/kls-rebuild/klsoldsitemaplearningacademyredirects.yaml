@@ -10,9 +10,9 @@
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 9cb5a9e6-b2f6-4dd9-98cd-90779345c7a9
     hippo:availability: []
-    hippostd:holder: admin
     hippostd:retainable: false
     hippostd:state: draft
+    hippostd:transferable: false
     hippostdpubwf:createdBy: admin
     hippostdpubwf:creationDate: 2025-07-17T11:39:22.112+01:00
     hippostdpubwf:lastModificationDate: 2026-05-27T13:47:02.253+01:00
@@ -146,13 +146,6 @@
       \ </name>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n<from>^/learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
       \ last=\"true\">/site/kls-rebuild/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
-      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n<from>^/learning-academy/learning-academy-library/?$</from>\r\n<to type=\"\
-      temporary-redirect\" last=\"true\">/learning-academy</to>\r\n</rule>\r\n<rule>\r\
-      \n<name>Redirect old sitemapfor hosts other than 'hee.nhs.uk' </name>\r\n<condition\
-      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n<from>^/learning-academy/learning-academy-library/?$</from>\r\
-      \n<to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/learning-academy</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
       <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n<from>^/learning-academy/wpd-overview/wpd-driver-diagram/?$</from>\r\n<to\
@@ -519,13 +512,6 @@
       \ last=\"true\">/site/kls-rebuild/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
       <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n<from>^/learning-academy/learning-academy-library/?$</from>\r\n<to type=\"\
-      temporary-redirect\" last=\"true\">/learning-academy</to>\r\n</rule>\r\n<rule>\r\
-      \n<name>Redirect old sitemapfor hosts other than 'hee.nhs.uk' </name>\r\n<condition\
-      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n<from>^/learning-academy/learning-academy-library/?$</from>\r\
-      \n<to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/learning-academy</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
-      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n<from>^/learning-academy/wpd-overview/wpd-driver-diagram/?$</from>\r\n<to\
       \ type=\"temporary-redirect\" last=\"true\">/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
       \n</rule>\r\n<rule>\r\n<name>Redirect old sitemapfor hosts other than 'hee.nhs.uk'\
@@ -889,13 +875,6 @@
       \ </name>\r\n<condition name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\
       \n<from>^/learning-academy/wpd-overview/?$</from>\r\n<to type=\"temporary-redirect\"\
       \ last=\"true\">/site/kls-rebuild/learning-academy/about-the-workforce-planning-and-development-workstream</to>\r\
-      \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
-      <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
-      \n<from>^/learning-academy/learning-academy-library/?$</from>\r\n<to type=\"\
-      temporary-redirect\" last=\"true\">/learning-academy</to>\r\n</rule>\r\n<rule>\r\
-      \n<name>Redirect old sitemapfor hosts other than 'hee.nhs.uk' </name>\r\n<condition\
-      \ name=\"host\" operator=\"notequal\">hee.nhs.uk</condition>\r\n<from>^/learning-academy/learning-academy-library/?$</from>\r\
-      \n<to type=\"temporary-redirect\" last=\"true\">/site/kls-rebuild/learning-academy</to>\r\
       \n</rule>\r\n\r\n<rule>\r\n<name>Redirect old sitemap to the new</name>\r\n\
       <condition name=\"host\" operator=\"equal\">library.hee.nhs.uk</condition>\r\
       \n<from>^/learning-academy/wpd-overview/wpd-driver-diagram/?$</from>\r\n<to\
