@@ -1,9 +1,9 @@
-name: CI & CD [RELEASE]
+name: CI & CD [MASTER]
 
 on:
   push:
-    tags:
-      - release-**
+    branches:
+      - upgrade/brxm-cms-upgrade-16.9.2
 
 env:
   BRC_STACK_NAME: hee
@@ -39,14 +39,15 @@ jobs:
       - name: Test
         run: mvn -B clean test -Pdefault --file pom.xml
 
-  deploy:
-    name: Deploy to Production Env. [on brCloud]
-    environment: production
-    needs: buildAndTest
+
+  deploy-to-test:
+    name: Deploy to Test Env. [on brCloud]
+    needs: [buildAndTest]
+    environment: test
     runs-on: ubuntu-latest
 
     env:
-      BRC_ENV_NAME: production
+      BRC_ENV_NAME: test
       BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
@@ -78,7 +79,6 @@ jobs:
           brcStack: ${{ env.BRC_STACK_NAME }}
           username: ${{ secrets.BRC_USERNAME }}
           password: ${{ secrets.BRC_PASSWORD }}
-          # maxDistributions: ${{ env.BRC_MAX_DISTRIBUTIONS }}
           distributionsDeleteCount: ${{ env.BRC_DISTRIBUTION_DELETE_COUNT }}
 
       - name: Upload distribution to Bloomreach Cloud
@@ -90,7 +90,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to production env
+      - name: Deploy distribution to test env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
         id: deploy
         with:
@@ -99,4 +99,4 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties,hee-new-relic.properties'
+          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties'

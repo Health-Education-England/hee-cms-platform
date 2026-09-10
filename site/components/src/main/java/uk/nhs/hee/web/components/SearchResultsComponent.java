@@ -11,7 +11,7 @@ import org.onehippo.cms7.essentials.components.info.EssentialsDocumentComponentI
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;

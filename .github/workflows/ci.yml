@@ -1,6 +1,5 @@
 name: CI
 
-# Continuous Integration on develop, release/** & master branches will be done part of Continuous Deployment workflow
 on:
   push:
     branches-ignore:
@@ -16,25 +15,18 @@ jobs:
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
     steps:
-      - name: Check out repo.
-        uses: actions/checkout@v6  # Node24-capable major 【3-6a53d0】
+      - name: Check out repo
+        uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5  # Updated to Node24 internally 【4-65ce2e】
+      - name: Set up JDK 17 with Maven auth
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          # Creates ~/.m2/settings.xml server entry for auth 【5-4ce7fa】
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5  # Runs on Node24 runtime 【2-6e95d6】
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Compile
         run: mvn -B clean compile -Pdefault --file pom.xml

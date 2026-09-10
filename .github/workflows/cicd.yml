@@ -20,24 +20,18 @@ jobs:
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
     steps:
-      - name: Check out repo.
-        uses: actions/checkout@v6  # Node24-capable major 【2-a6cf69】
+      - name: Check out repo
+        uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5  # Updated to Node24 internally 【4-e6304f】
+      - name: Set up JDK 17 with Maven auth
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5  # Runs on Node24 runtime 【3-608c06】
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Compile
         run: mvn -B clean compile -Pdefault --file pom.xml
@@ -50,38 +44,31 @@ jobs:
     name: Deploy to Dev Env. [on brCloud]
     needs: buildAndTest
     environment: development
+    runs-on: ubuntu-latest
 
     env:
       BRC_ENV_NAME: development
       BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
-    runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repo.
+      - name: Check out repo
         uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 with Maven auth
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Package
         run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
-      - name: Setting distribution path (distPath) as an output parameter
+      - name: Setting distribution path distPath as an output parameter
         id: dist
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
@@ -104,7 +91,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to 'development' env
+      - name: Deploy distribution to development env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
         id: deploy
         with:
@@ -121,38 +108,31 @@ jobs:
     if: ${{ false }}
     needs: [buildAndTest, deploy-to-dev]
     environment: test
+    runs-on: ubuntu-latest
 
     env:
       BRC_ENV_NAME: test
       BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
-    runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repo.
+      - name: Check out repo
         uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 with Maven auth
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Package
         run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
-      - name: Setting distribution path (distPath) as an output parameter
+      - name: Setting distribution path distPath as an output parameter
         id: dist
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
@@ -174,7 +154,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to 'test' env
+      - name: Deploy distribution to test env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
         id: deploy
         with:
@@ -190,38 +170,31 @@ jobs:
     name: Deploy to Staging Env. [on brCloud]
     needs: [buildAndTest]
     environment: staging
+    runs-on: ubuntu-latest
 
     env:
       BRC_ENV_NAME: staging
       BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
-    runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repo.
+      - name: Check out repo
         uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
+      - name: Set up JDK 17 with Maven auth
         uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Package
         run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
-      - name: Setting distribution path (distPath) as an output parameter
+      - name: Setting distribution path distPath as an output parameter
         id: dist
         run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
 
@@ -243,7 +216,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to 'staging' env
+      - name: Deploy distribution to staging env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
         id: deploy
         with:
