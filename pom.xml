@@ -225,7 +225,7 @@
         <configuration>
           <skipPoms>false</skipPoms>
           <includeOnlyProperties>
-            <includeOnlyProperty>git.commit.id.describe</includeOnlyProperty>
+            <includeOnlyProperty>git.commit.id.abbrev</includeOnlyProperty>
           </includeOnlyProperties>
         </configuration>
       </plugin>
@@ -582,7 +582,7 @@
                 </goals>
                 <configuration>
                   <!-- `git.commit.id.describe` could be replaced with `git.commit.id.abbrev` if we are interested in only the CommitId -->
-                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}-${env}</finalName>
+                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.abbrev}-${env}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution.xml</descriptor>
                   </descriptors>
@@ -632,7 +632,7 @@
                 </goals>
                 <configuration>
                   <!-- `git.commit.id.describe` could be replaced with `git.commit.id.abbrev` if we are interested in only the CommitId -->
-                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.describe}-${env}</finalName>
+                  <finalName>${project.artifactId}-${project.version}-${git.commit.id.abbrev}-${env}</finalName>
                   <descriptors>
                     <descriptor>${project.basedir}/src/main/assembly/distribution-with-development-data.xml</descriptor>
                   </descriptors>
