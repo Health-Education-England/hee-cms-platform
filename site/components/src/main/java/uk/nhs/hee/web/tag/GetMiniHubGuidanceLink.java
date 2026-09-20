@@ -12,8 +12,8 @@ import uk.nhs.hee.web.utils.MiniHubGuidanceLinkUtils;
 
 import javax.jcr.Node;
 import javax.jcr.RepositoryException;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.jsp.JspException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.jsp.JspException;
 
 import static org.hippoecm.hst.utils.TagUtils.writeOrSetVar;
 
@@ -33,7 +33,7 @@ public class GetMiniHubGuidanceLink extends HstLinkTag {
     private static final Logger log = LoggerFactory.getLogger(GetMiniHubGuidanceLink.class);
 
     /* (non-Javadoc)
-     * @see javax.servlet.jsp.tagext.TagSupport#doEndTag()
+     * @see jakarta.servlet.jsp.tagext.TagSupport#doEndTag()
      */
     @Override
     public int doEndTag() throws JspException {

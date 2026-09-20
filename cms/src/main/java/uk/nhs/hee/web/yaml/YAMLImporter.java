@@ -16,6 +16,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
+import java.io.UncheckedIOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.security.CodeSource;
@@ -97,7 +98,7 @@ public class YAMLImporter {
                 }
 
                 importYAML(yaml, getParentNodePath(yaml));
-            } catch (final RepositoryException | IOException e) {
+            } catch (final RepositoryException | IOException | UncheckedIOException e) {
                 LOGGER.error(
                         "Caught error '{}' while importing the Yaml file '{}'",
                         e.getMessage(),
@@ -130,14 +131,14 @@ public class YAMLImporter {
                 parentNode);
     }
 
-    private String getParentNodePath(final String plainYaml) throws IOException {
+    private String getParentNodePath(final String plainYaml) {
         try {
             // Get the first line of the YAML which should essentially contain the node path.
             final String nodePath = IOUtils.readLines(new StringReader(plainYaml)).get(0);
 
             // Returns parent node path of the node
             return nodePath.substring(0, nodePath.lastIndexOf('/'));
-        } catch (final IOException e) {
+        } catch (final UncheckedIOException e) {
             LOGGER.error(
                     "Caught error {} while retrieving parent node path from YAML: {}",
                     e.getMessage(),
