@@ -1,0 +1,33 @@
+definitions:
+  config:
+    /hst:hst/hst:hosts/test-live/uk:
+      .meta:residual-child-node-category: content
+      jcr:primaryType: hst:virtualhost
+      hst:responseheaders: ['Content-Security-Policy: frame-ancestors ''self''', 'X-Frame-Options:
+          SAMEORIGIN']
+      hst:scheme: https
+      hst:showcontextpath: false
+      hst:showport: false
+      /nhs:
+        .meta:residual-child-node-category: content
+        jcr:primaryType: hst:virtualhost
+        /hee:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:virtualhost
+          /staging:
+            .meta:residual-child-node-category: content
+            jcr:primaryType: hst:virtualhost
+            /hst:root:
+              .meta:residual-child-node-category: content
+              jcr:primaryType: hst:mount
+              hst:authenticated: true
+              hst:homepage: root
+              hst:locale: en
+              hst:mountpoint: /hst:hee/hst:sites/kls
+              hst:responseheaders: ['robots: noindex, nofollow', 'Content-Security-Policy:
+                  frame-ancestors ''self''', 'X-Frame-Options: SAMEORIGIN']
+              hst:roles: [site.viewer]
+              /preview:
+                .meta:residual-child-node-category: content
+                jcr:primaryType: hst:mount
+                hst:type: preview

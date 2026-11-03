@@ -26,8 +26,8 @@ public class TableUtilsTest {
     private static final String COMPLETE_ELEMENT_THEAD = "<table>" +
             "<thead>" +
             "<tr>" +
-            "<th>Head 1</th" +
-            "<th>Head 2</th" +
+            "<th>Head 1</th>" +
+            "<th>Head 2</th>" +
             "</tr>" +
             "</thead>" +
             "<tbody>" +
@@ -45,8 +45,8 @@ public class TableUtilsTest {
             "<caption>I am a caption</caption>"+
             "<thead>"+
             "<tr>" +
-            "<th>Head 1</th" +
-            "<th>Head 2</th" +
+            "<th>Head 1</th>" +
+            "<th>Head 2</th>" +
             "</tr>" +
             "</thead>" +
             "<tbody>" +

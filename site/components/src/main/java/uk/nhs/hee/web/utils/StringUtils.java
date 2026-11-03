@@ -1,6 +1,6 @@
 package uk.nhs.hee.web.utils;
 
-import org.apache.commons.lang.WordUtils;
+import org.apache.commons.lang3.text.WordUtils;
 import uk.nhs.hee.web.constants.HeeNodeType;
 
 public class StringUtils extends org.apache.commons.lang3.StringUtils {

@@ -20,25 +20,18 @@ jobs:
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
     steps:
-      - name: Check out repo.
-        uses: actions/checkout@v6  # Node24-capable major 【2-3c4523】
+      - name: Check out repo
+        uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5  # Updated to Node24 internally 【3-2487d8】
+      - name: Set up JDK 17 with Maven auth
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          # Creates ~/.m2/settings.xml server entry for auth 【4-fb1b8b】
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5  # Runs on Node24 runtime 【5-8d4d17】
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Compile
         run: mvn -B clean compile -Pdefault --file pom.xml
@@ -50,39 +43,31 @@ jobs:
     name: Deploy to Production Env. [on brCloud]
     environment: production
     needs: buildAndTest
+    runs-on: ubuntu-latest
 
     env:
       BRC_ENV_NAME: production
       BLOOMREACH_MVN_USERNAME: ${{ secrets.BLOOMREACH_MVN_USERNAME }}
       BLOOMREACH_MVN_PASSWORD: ${{ secrets.BLOOMREACH_MVN_PASSWORD }}
 
-    runs-on: ubuntu-latest
-
     steps:
-      - name: Check out repo.
-        uses: actions/checkout@v6  # Node24-capable major 【2-3c4523】
+      - name: Check out repo
+        uses: actions/checkout@v6
 
-      - name: Set up JDK 11 (with Maven auth)
-        uses: actions/setup-java@v5  # Updated to Node24 internally 【3-2487d8】
+      - name: Set up JDK 17 with Maven auth
+        uses: actions/setup-java@v5
         with:
           distribution: 'zulu'
-          java-version: 11
-          # Creates ~/.m2/settings.xml server entry for auth 【4-fb1b8b】
-          server-id: hippo-maven2-enterprise
+          java-version: 17
+          cache: 'maven'
+          server-id: bloomreach-maven2-enterprise
           server-username: BLOOMREACH_MVN_USERNAME
           server-password: BLOOMREACH_MVN_PASSWORD
-
-      - name: Cache maven packages
-        uses: actions/cache@v5  # Runs on Node24 runtime 【5-8d4d17】
-        with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
 
       - name: Package
         run: mvn -B verify && mvn -Pdist -Denv=${{ env.BRC_ENV_NAME }} --file pom.xml
 
-      - name: Setting distribution path (distPath) as an output parameter
+      - name: Setting distribution path distPath as an output parameter
         id: dist
         run: echo "distPath=$(find "${{ github.workspace }}/target" -maxdepth 1 -name "*-${{ env.BRC_ENV_NAME }}-distribution.tar.gz" | head -1)" >> "$GITHUB_OUTPUT"
 
@@ -105,7 +90,7 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to 'production' env
+      - name: Deploy distribution to production env
         uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
         id: deploy
         with:
