@@ -105,7 +105,7 @@ jobs:
           distPath: ${{ steps.dist.outputs.distPath }}
 
       - name: Deploy distribution to 'development' env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@WSP-1532-Security-Fix
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.8
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
