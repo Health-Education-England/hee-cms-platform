@@ -115,4 +115,4 @@ jobs:
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
           configFilesAsSystemProperties: 'hee-platform.properties'
-          configFilesAsFileProperties: 'hee-smtp.properties,hee-new-relic.properties'
+          configFilesAsFileProperties: 'brc-mail-smtp.properties,hee-new-relic.properties'

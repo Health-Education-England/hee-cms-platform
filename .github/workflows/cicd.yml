@@ -114,7 +114,7 @@ jobs:
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
           configFilesAsSystemProperties: 'hee-platform.properties'
-          configFilesAsFileProperties: 'hee-smtp.properties'
+          configFilesAsFileProperties: 'brc-mail-smtp.properties'
 
 
   deploy-to-test:
@@ -185,7 +185,7 @@ jobs:
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
           configFilesAsSystemProperties: 'hee-platform.properties'
-          configFilesAsFileProperties: 'hee-smtp.properties'
+          configFilesAsFileProperties: 'brc-mail-smtp.properties'
 
 
   deploy-to-staging:
@@ -255,4 +255,4 @@ jobs:
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
           configFilesAsSystemProperties: 'hee-platform.properties'
-          configFilesAsFileProperties: 'hee-smtp.properties'
+          configFilesAsFileProperties: 'brc-mail-smtp.properties'
