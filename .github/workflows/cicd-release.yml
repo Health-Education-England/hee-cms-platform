@@ -69,7 +69,7 @@ jobs:
 
       - name: Setting distribution path distPath as an output parameter
         id: dist
-        run: echo "distPath=$(ls -1 ${{ github.workspace }}/target/$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)-$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)-$(git rev-parse --short "$GITHUB_SHA")-${{ env.BRC_ENV_NAME }}-*.tar.gz)" >> $GITHUB_OUTPUT
+        run: echo "distPath=$(find "${{ github.workspace }}/target" -maxdepth 1 -name "*-${{ env.BRC_ENV_NAME }}-distribution.tar.gz" | head -1)" >> "$GITHUB_OUTPUT"
 
       - name: Clean up/delete distributions when Bloomreach Cloud hits maximum distributions
         uses: Health-Education-England/cleanup-distributions-from-BR-Cloud-action@v1.6
@@ -90,8 +90,8 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distPath: ${{ steps.dist.outputs.distPath }}
 
-      - name: Deploy distribution to production env
-        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.7
+      - name: Deploy distribution to 'production' env
+        uses: Health-Education-England/deploy-distribution-to-BR-Cloud-action@v1.8
         id: deploy
         with:
           brcStack: ${{ env.BRC_STACK_NAME }}
@@ -99,4 +99,5 @@ jobs:
           password: ${{ secrets.BRC_PASSWORD }}
           distId: ${{ steps.upload.outputs.distId }}
           envName: ${{ env.BRC_ENV_NAME }}
-          configFilesAsSystemProperties: 'hee-smtp.properties,hee-platform.properties,hee-new-relic.properties'
+          configFilesAsSystemProperties: 'hee-platform.properties'
+          configFilesAsFileProperties: 'brc-mail-smtp.properties,hee-new-relic.properties'
