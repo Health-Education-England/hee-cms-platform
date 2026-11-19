@@ -51,6 +51,30 @@
       <artifactId>jakarta.activation-api</artifactId>
       <scope>compile</scope>
     </dependency>
+
+    <!--
+      Required at runtime by CMS repository scheduler jobs.
+      The brXM dependencies resolve these as provided, but the custom
+      scheduler directly uses Jakarta Mail classes.
+    -->
+    <dependency>
+      <groupId>jakarta.mail</groupId>
+      <artifactId>jakarta.mail-api</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.angus</groupId>
+      <artifactId>angus-mail</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.eclipse.angus</groupId>
+      <artifactId>angus-activation</artifactId>
+      <scope>compile</scope>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>cms</finalName>
