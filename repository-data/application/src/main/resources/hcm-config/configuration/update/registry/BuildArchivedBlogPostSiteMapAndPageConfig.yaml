@@ -12,7 +12,7 @@ definitions:
         hee:blogPost)[(@hippo:availability='live') and not(@jcr:primaryType='nt:frozenNode')
         and (@hee:publicationDate____hour >= xs:dateTime('2020-08-04T13:00:00.000Z'))]/..
       hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\
-        \r\nimport org.apache.commons.lang.StringUtils\r\nimport org.apache.jackrabbit.util.ISO8601\r\
+        \r\nimport org.apache.commons.lang3.StringUtils\r\nimport org.apache.jackrabbit.util.ISO8601\r\
         \nimport org.hippoecm.hst.configuration.HstNodeTypes\r\nimport org.hippoecm.repository.api.HippoNodeType\r\
         \nimport org.hippoecm.repository.util.JcrUtils\r\nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\
         \n\r\nimport javax.jcr.Node\r\n\r\nclass BuildArchivedBlogPostSiteMapAndPageConfig\

@@ -16,7 +16,7 @@ import java.util.Map;
 
 
 
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;
 
 /**
  * An extension of {@link LandingPageComponent} class to render {@code Page not found}.

@@ -1,16 +1,16 @@
 package uk.nhs.hee.web.validation.validator;
 
 import org.hippoecm.repository.api.HippoNodeType;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
+import org.mockito.MockedStatic;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.onehippo.cms.services.validation.api.ValidationContext;
 import org.onehippo.cms.services.validation.api.Violation;
 import org.onehippo.repository.util.JcrConstants;
-import org.powermock.core.classloader.annotations.PowerMockIgnore;
-import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.junit4.PowerMockRunner;
 import uk.nhs.hee.web.utils.DocumentUtils;
 
 import javax.jcr.*;
@@ -21,11 +21,8 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.powermock.api.mockito.PowerMockito.mockStatic;
 
-@RunWith(PowerMockRunner.class)
-@PowerMockIgnore({"javax.management.*", "com.sun.org.apache.xerces.*", "javax.xml.*", "org.xml.*", "org.w3c.dom.*", "javax.script.*"})
-@PrepareForTest({DocumentUtils.class})
+@RunWith(MockitoJUnitRunner.Silent.class)
 public class UniqueWebPublicationsValidatorTest {
 
     // Publication landing page document node type
@@ -47,6 +44,8 @@ public class UniqueWebPublicationsValidatorTest {
     private static final String NON_REUSED_PUB_PAGE_DOC_ID = "c5ab67ca-b8b5-4802-9dd9-ee9b4c6b86f0";
 
     private final UniqueWebPublicationsValidator systemUnderTest = new UniqueWebPublicationsValidator();
+
+    private MockedStatic<DocumentUtils> mockedDocumentUtils;
 
     @Mock
     private ValidationContext mockValidationContext;
@@ -70,7 +69,7 @@ public class UniqueWebPublicationsValidatorTest {
     @Before
     public void setUp() throws Exception {
         // Mocks & stubs
-        mockStatic(DocumentUtils.class);
+        mockedDocumentUtils = mockStatic(DocumentUtils.class);
 
         // Publication landing page doc node
         final Node mockPubLandingPageDocHandleNode = mock(Node.class);
@@ -99,7 +98,7 @@ public class UniqueWebPublicationsValidatorTest {
                 .thenReturn(mockNonUniqueWebPubNodeHippoBaseProperty);
         when(mockNonUniqueWebPubNodeHippoBaseProperty.getString()).thenReturn(REUSED_PUB_PAGE_DOC_ID);
 
-        when(DocumentUtils.getDocumentDisplayName(mockSession, REUSED_PUB_PAGE_DOC_ID))
+        mockedDocumentUtils.when(() -> DocumentUtils.getDocumentDisplayName(mockSession, REUSED_PUB_PAGE_DOC_ID))
                 .thenReturn(PUBLICATION_PAGE_HIPPO_NAME);
 
         // Referenced Publication landing page doc query
@@ -126,6 +125,11 @@ public class UniqueWebPublicationsValidatorTest {
         final Violation mockNonUniquePubPageViolation = mock(Violation.class);
         when(mockValidationContext.createViolation(anyMap())).thenReturn(mockNonUniquePubPageViolation);
         when(mockNonUniquePubPageViolation.getMessage()).thenReturn(NON_UNIQUE_PUB_PAGE_VIOLATION_MSG);
+    }
+
+    @After
+    public void tearDown() {
+        mockedDocumentUtils.close();
     }
 
     @Test
